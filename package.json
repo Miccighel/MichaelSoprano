@@ -1,0 +1,12 @@
+{
+  "name": "michaelsoprano-cv",
+  "version": "1.0.0",
+  "description": "Packages for Michael Soprano curriculum vitae",
+  "repository": "https://github.com/Miccighel/CV.git",
+  "author": "Miccighel <miccighel@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fancybox": "^3.0.1",
+    "jquery": "^3.3.1"
+  }
+}
