@@ -113,11 +113,6 @@ ul {
     list-style: none;
 }
 
-table {
-    border-collapse: separate;
-    border-spacing: 0;
-}
-
 caption,
 th,
 td {
@@ -392,19 +387,9 @@ dd {
     margin-bottom: 10px;
 }
 
-table,
 th,
 td {
     border: 1px solid #e5e5e5;
-}
-
-table {
-    border-collapse: separate;
-    border-spacing: 0;
-    border-width: 1px 0 0 1px;
-    margin: 0 0 25px 0;
-    table-layout: fixed;
-    width: 100%;
 }
 
 caption,

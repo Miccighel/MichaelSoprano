@@ -35,9 +35,9 @@ fizzy-ui-utils@^2.0.0, fizzy-ui-utils@^2.0.4:
     desandro-matches-selector "^2.0.0"
 
 flag-icon-css@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/flag-icon-css/-/flag-icon-css-3.2.1.tgz#ff269388e25e29d54b39699e88d76c3141a7cc70"
-  integrity sha512-0t7zPm2crM2cBIm3epZQ+EmiHuzgFNTTSMUMkWlrztDDGL+y31D+eY8zaB9zYCzJGAsn4KEMAKY+jCU1mt9jwg==
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/flag-icon-css/-/flag-icon-css-3.3.0.tgz#7772461e4480d3d86da5962f02120a2825688433"
+  integrity sha512-u5lCGVExrJJRykNGd//ZrBU5Bkt0LTZJFSuG+Az/pwcHgzDeFwomwFbsgVtI1aJd6ysyHsx+5UGrA+nhSGd4yw==
 
 get-size@^2.0.0, get-size@^2.0.2:
   version "2.0.3"
