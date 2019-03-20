@@ -2,7 +2,7 @@ $(document).ready(() => {
 
     let contactMailFormFirst = $("#contact-mail-form-first");
 
-    let publicationsTable = $("#publications-table-first");
+    let publicationsTable = $("#publications-table");
 
     let contactMailButtonFirst = $("#contact-mail-button-first");
     let contactMailResultFirst = $("#contact-mail-result-first");
