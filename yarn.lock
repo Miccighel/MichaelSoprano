@@ -35,9 +35,11 @@ fizzy-ui-utils@^2.0.0, fizzy-ui-utils@^2.0.4:
     desandro-matches-selector "^2.0.0"
 
 flag-icon-css@^3.2.1:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/flag-icon-css/-/flag-icon-css-3.3.0.tgz#7772461e4480d3d86da5962f02120a2825688433"
-  integrity sha512-u5lCGVExrJJRykNGd//ZrBU5Bkt0LTZJFSuG+Az/pwcHgzDeFwomwFbsgVtI1aJd6ysyHsx+5UGrA+nhSGd4yw==
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/flag-icon-css/-/flag-icon-css-3.4.2.tgz#9d76e2ce96bee87bd65ef241c238fff5ab7dac93"
+  integrity sha512-x/Tw0qx7V2zut50GTeeJbvo9EiWtv+TPxI3fi1OiicbI8esZ1s4G2LnR1EJ96pDQlWqEVuD17sDPf/ZLifZeIg==
+  dependencies:
+    opencollective-postinstall "2.0.2"
 
 get-size@^2.0.0, get-size@^2.0.2:
   version "2.0.3"
@@ -114,9 +116,9 @@ mediaelement-plugins@^2.5.0:
     mediaelement "^4.0.7"
 
 mediaelement@^4.0.7:
-  version "4.2.10"
-  resolved "https://registry.yarnpkg.com/mediaelement/-/mediaelement-4.2.10.tgz#09e4b8a76e01911e45722ef0554864f597fc478a"
-  integrity sha512-3YdKhoDfARAWZVz2526sgI/dD5c4+31CDfFwWdnnGRQxgpzu1whcNu4DptGXez3zMyNR2L9KcWITVtUqSQMtng==
+  version "4.2.12"
+  resolved "https://registry.yarnpkg.com/mediaelement/-/mediaelement-4.2.12.tgz#904ad1088a65b216f9c19ac3b47b6d2c0fb0dea9"
+  integrity sha512-nKeV55tDTsKY5ZUkSWW9dBQdF6CjCkW00VyzbXmP1KhEtDApNmm77CAnCJIaFcco/hfAzQrCd8IevL0y9YVPGg==
   dependencies:
     global "^4.3.1"
 
@@ -126,6 +128,11 @@ min-document@^2.19.0:
   integrity sha1-e9KC4/WELtKVu3SM3Z8f+iyCRoU=
   dependencies:
     dom-walk "^0.1.0"
+
+opencollective-postinstall@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.2.tgz#5657f1bede69b6e33a45939b061eb53d3c6c3a89"
+  integrity sha512-pVOEP16TrAO2/fjej1IdOyupJY8KDUM1CvsaScRbw6oddvpQoOfGk4ywha0HKKVAD6RkW4x6Q+tNBwhf3Bgpuw==
 
 outlayer@^2.1.0:
   version "2.1.1"
