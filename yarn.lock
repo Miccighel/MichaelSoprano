@@ -13,9 +13,9 @@ desandro-matches-selector@^2.0.0:
   integrity sha1-cXvu1NwT59jzdi9wem1YpndCGOE=
 
 dom-walk@^0.1.0:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.1.tgz#672226dc74c8f799ad35307df936aba11acd6018"
-  integrity sha1-ZyIm3HTI95mtNTB9+TaroRrNYBg=
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.2.tgz#0c548bef048f4d1f2a97249002236060daa3fd84"
+  integrity sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==
 
 ev-emitter@^1.0.0:
   version "1.1.1"
@@ -35,11 +35,9 @@ fizzy-ui-utils@^2.0.0, fizzy-ui-utils@^2.0.4:
     desandro-matches-selector "^2.0.0"
 
 flag-icon-css@^3.2.1:
-  version "3.4.5"
-  resolved "https://registry.yarnpkg.com/flag-icon-css/-/flag-icon-css-3.4.5.tgz#584d618563034e69cb9a5b7a7c8477ec8c029a49"
-  integrity sha512-COo/PuJY/JddBLkdi7jL3gWF0z/hcvBRA4kfMXUjLeLglFf5IsyAzKZuXaXfCubVrkraVizmEp7Bn05upTXofA==
-  dependencies:
-    opencollective-postinstall "2.0.2"
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/flag-icon-css/-/flag-icon-css-3.5.0.tgz#430747d5cb91e60babf85494de99173c16dc7cf2"
+  integrity sha512-pgJnJLrtb0tcDgU1fzGaQXmR8h++nXvILJ+r5SmOXaaL/2pocunQo2a8TAXhjQnBpRLPtZ1KCz/TYpqeNuE2ew==
 
 get-size@^2.0.0, get-size@^2.0.2:
   version "2.0.3"
@@ -73,9 +71,9 @@ isotope-layout@^3.0.6:
     outlayer "^2.1.0"
 
 jquery-migrate@^3.0.1:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/jquery-migrate/-/jquery-migrate-3.1.0.tgz#8158de74cca39fb7fc2635db570151ae7ce3ddea"
-  integrity sha512-u/MtE1ST2pCr3rCyouJG2xMiw/k3OzLNeRKprjKTeHUezCGr0DyEgeXFdqFLmQfxfR5EsVu+mGo/sCcYdiYcIQ==
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/jquery-migrate/-/jquery-migrate-3.3.0.tgz#a8414c2be293460abe970a7a6beeb9c49fd7e5ad"
+  integrity sha512-9YhxHLmZZW3neoTw+MAbHV7geQYbnj4dnLuLphjbhDv/QKfxXNQ/pFoUjEsHNZnLH+k8pe+RFFBbORtwC2wzvA==
 
 jquery-mousewheel@>=3.0.6, jquery-mousewheel@^3.1.13:
   version "3.1.13"
@@ -88,9 +86,9 @@ jquery.appear@^1.0.1:
   integrity sha1-tWlP2sa7q62vR9j+vFSu3PdhlUU=
 
 jquery@>=1.8.0, jquery@>=1.8.3, jquery@^3.3.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
-  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
+  integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==
 
 malihu-custom-scrollbar-plugin@^3.1.5:
   version "3.1.5"
@@ -108,17 +106,17 @@ masonry-layout@^4.1.0:
     outlayer "^2.1.0"
 
 mediaelement-plugins@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/mediaelement-plugins/-/mediaelement-plugins-2.5.0.tgz#e48b499a57510431bb61a3ec00335f4bc4d1eb25"
-  integrity sha512-MokCToMlroarsOPOrsRcWXM8IGJrSPf2jZrd+Pr3I5xzCFVb9L3VNfq3Ts2MiIaxGZwB5OaWNQ4b1A7Z6zGFug==
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/mediaelement-plugins/-/mediaelement-plugins-2.5.1.tgz#7af73988c76d35193d5774ef54289cbfa67ca9eb"
+  integrity sha512-I4gcdmSDkfutKGV8WOat5NW60pnv4OdYNDfmWtRTJ3hGTxzJpRUNFL/qaHWv7ueTschzSPoYgZj1kc4f/4UjLw==
   dependencies:
     global "^4.3.1"
     mediaelement "^4.0.7"
 
 mediaelement@^4.0.7:
-  version "4.2.14"
-  resolved "https://registry.yarnpkg.com/mediaelement/-/mediaelement-4.2.14.tgz#87ad17e3926224b5273b438360f23052c6af8790"
-  integrity sha512-mUs01DCJzE1A3mYBUqswqINkqaxy2G/pbWveE04OLM5AqvJAL0v5K3vIGBdBfo5MbfQuaZknVFMfi+bpxyiz3w==
+  version "4.2.16"
+  resolved "https://registry.yarnpkg.com/mediaelement/-/mediaelement-4.2.16.tgz#399a41815478134bbaf0f8f5a216f444de244d72"
+  integrity sha512-5GinxsRpVA36w6tAD6nTqVSiZ0LzIhqUrzD8wzOAtZPPM7NOwOBtz6Oa85VemS+3Jvoo38jM1RvNqwKYJBBxtQ==
   dependencies:
     global "^4.3.1"
 
@@ -128,11 +126,6 @@ min-document@^2.19.0:
   integrity sha1-e9KC4/WELtKVu3SM3Z8f+iyCRoU=
   dependencies:
     dom-walk "^0.1.0"
-
-opencollective-postinstall@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.2.tgz#5657f1bede69b6e33a45939b061eb53d3c6c3a89"
-  integrity sha512-pVOEP16TrAO2/fjej1IdOyupJY8KDUM1CvsaScRbw6oddvpQoOfGk4ywha0HKKVAD6RkW4x6Q+tNBwhf3Bgpuw==
 
 outlayer@^2.1.0:
   version "2.1.1"
@@ -151,9 +144,9 @@ owl.carousel@^2.3.4:
     jquery ">=1.8.3"
 
 parsleyjs@^2.8.1:
-  version "2.9.1"
-  resolved "https://registry.yarnpkg.com/parsleyjs/-/parsleyjs-2.9.1.tgz#fd79f7a1b1fe9138993b5e82f9bbc3e38fd3763d"
-  integrity sha512-2WSe+HsOZEPqXh9bFdi/vgWNQtGRRnAgS3v12qesMAabxVdLE7Oj7b+2UzcZ80eG23g1SxiMUH978Dk/wSkt+w==
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/parsleyjs/-/parsleyjs-2.9.2.tgz#67c96961d371821f2623965fa2cc81a4522874cb"
+  integrity sha512-DKS2XXTjEUZ1BJWUzgXAr+550kFBZrom2WYweubqdV7WzdNC1hjOajZDfeBPoAZMkXumJPlB3v37IKatbiW8zQ==
   dependencies:
     jquery ">=1.8.0"
 

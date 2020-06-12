@@ -48,6 +48,11 @@ td, th {
     background-color: blueviolet;
 }
 
+.badge-green {
+    color: #fff;
+    background-color: forestgreen;
+}
+
 .badge-orangered {
     color: #fff;
     background-color: orangered;

@@ -40,6 +40,7 @@ $(document).ready(() => {
             "targets": 5,
             "orderable": false
         }],
+        "order": [[ 4, "desc" ]]
     });
 
     // CONTACT MAIL
