@@ -71,9 +71,9 @@ isotope-layout@^3.0.6:
     outlayer "^2.1.0"
 
 jquery-migrate@^3.0.1:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/jquery-migrate/-/jquery-migrate-3.3.0.tgz#a8414c2be293460abe970a7a6beeb9c49fd7e5ad"
-  integrity sha512-9YhxHLmZZW3neoTw+MAbHV7geQYbnj4dnLuLphjbhDv/QKfxXNQ/pFoUjEsHNZnLH+k8pe+RFFBbORtwC2wzvA==
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jquery-migrate/-/jquery-migrate-3.3.1.tgz#0f8e2b7531228fda5d88be58dc0e7d5848e52fd1"
+  integrity sha512-QAXfshB6xqaANDX8OPExKnnooLtX0cSDCKfRnqhdv+3CVEVD9L1v3zNAhZum/4AukKlWUWUoxM6ywJJcLMXLSA==
 
 jquery-mousewheel@>=3.0.6, jquery-mousewheel@^3.1.13:
   version "3.1.13"
