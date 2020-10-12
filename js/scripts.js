@@ -69,7 +69,7 @@ $(document).ready(() => {
            `;
             Email.send({
                 SecureToken: "3c5978bf-7dc5-438d-8ea4-732cca054b0f",
-                To: "michael.soprano@outlook.com",
+                To: "soprano.michael@spes.uniud.it",
                 From: `MichaelSoprano.com <${email}>`,
                 Subject: subject,
                 Body: body
