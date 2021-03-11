@@ -1,5 +1,5 @@
 backend:
-  branch: master
+  branch: hugo-version
   name: git-gateway
   squash_merges: true
 collections:
