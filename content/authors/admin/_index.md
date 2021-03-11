@@ -1,39 +1,42 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: Michael Soprano
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position/tagline
-role: Professor of Artificial Intelligence
+role: PhD Student
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: Stanford University
-  url: https://www.stanford.edu/
+- name: Universiy of Udine
+  url: https://www.uniud.it/en/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: University Life, Computer Science, Photography, Reading, Gaming, Comics. PhD Student at the University of Udine. That's me.
 
 # Interests to show in About widget
 interests:
-- Artificial Intelligence
-- Computational Linguistics
+- Crowdsourcing
+- Machine Learning
 - Information Retrieval
 
 # Education to show in About widget
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: PhD in Computer Science, Mathematics and Physics, 35th cycle.
+    institution: University of Udine
+    year: Nov. 2019 - Today
+  - course: Master Degree in Computer Science
+    institution: University of Udine
+    year: Mar. 2015 - Mar. 2018
+  - course: Bachelor Degree in Web Technologies and Multimedia
+    institution: University of Udine
+    year: Oct. 2011 - Mar. 2015
+  - course: High School Diploma in Computer Science
+    institution: I.S.I.S. Raimondo D’Aronco
+    year: Oct. 2011 - Mar. 2015
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -45,23 +48,20 @@ social:
   link: '/#contact'
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
-- icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
-  icon_pack: fas
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
-- icon: github
-  icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://twitter.com/Miccighel_
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/
+  link: https://www.linkedin.com/in/michaelsoprano/
+- icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
+  icon_pack: ai
+  link: https://scholar.google.it/citations?user=ocK0qRUAAAAJ&hl=en
+- icon: researchgate  # Alternatively, use `google-scholar` icon from `ai` icon pack
+  icon_pack: fab
+  link: https://www.researchgate.net/profile/Michael-Soprano
+- icon: github
+  icon_pack: fab
+  link: https://github.com/Miccighel
 
-# Link to a PDF of your resume/CV.
-# To use: copy your resume to `static/media/resume.pdf`, enable `ai` icons in `params.toml`, 
-# and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: media/resume.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -70,8 +70,8 @@ email: ""
 highlight_name: false
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Hello! I am Michael Soprano. Currently, i am working as a PhD Student at the University of Udine. 
+I have worked there also as a Research Fellow. I got my Master Degree in Computer Science on 15th March 2018 
+and my Bachelor Degree in Multimedia and Web Technologies on 19th March 2015.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my Curriculum Vitae in {{< staticref "media/curriculum-en.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/curriculum-it.pdf" "newtab" >}}Italian{{< /staticref >}}.

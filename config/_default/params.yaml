@@ -7,21 +7,21 @@
 
 theme: minimal
 day_night: true
-font: ''
+font: 'minimal'
 font_size: L
 
 # SEO
 
 site_type: Person
 local_business_type: ''
-org_name: ''
+org_name: 'University of Udine'
 description: ''
 twitter: ''
 
 # Contact (edit or remove options as required)
 
-email: test@example.org
-phone: 888 888 88 88
+email: michael.soprano@uniud.it
+#phone: 888 888 88 88
 address:
   street: 450 Serra Mall
   city: Stanford
@@ -37,23 +37,6 @@ office_hours:
   - 'Monday 10:00 to 13:00'
   - 'Wednesday 09:00 to 10:00'
 appointment_url: 'https://calendly.com'
-contact_links:
-  - icon: twitter
-    icon_pack: fab
-    name: DM Me
-    link: 'https://twitter.com/Twitter'
-  - icon: skype
-    icon_pack: fab
-    name: Skype Me
-    link: 'skype:echo123?call'
-  - icon: keybase
-    icon_pack: fab
-    name: Chat on Keybase
-    link: 'https://keybase.io/'
-  - icon: comments
-    icon_pack: fas
-    name: Discuss on Forum
-    link: 'https://discourse.gohugo.io'
 
 # Site header
 
@@ -69,16 +52,16 @@ main_menu:
 # Localization
 
 date_format: 'Jan 2, 2006'
-time_format: '3:04 PM'
+time_format: '15:04'
 address_format: en-us
 
 # Site features
 
 highlight: true
-highlight_languages:
-  - r
-math: false
-diagram: false
+#highlight_languages:
+#  - r
+math: true
+diagram: true
 privacy_pack: false
 edit_page:
   repo_url: ''
@@ -112,7 +95,7 @@ avatar:
   shape: circle
 publications:
   date_format: January 2006
-  citation_style: apa
+  citation_style: chicago-b
 projects:
   post_view: 2
   publication_view: 2
@@ -151,7 +134,7 @@ marketing:
   baidu_site_verification: ''
   baidu_tongji: ''
 cms:
-  branch: master
+  branch: hugo-version
   local_backend: false
 icon:
   pack:
