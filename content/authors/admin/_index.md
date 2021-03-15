@@ -18,9 +18,11 @@ bio: University Life, Computer Science, Photography, Reading, Gaming, Comics. Ph
 
 # Interests to show in About widget
 interests:
-- Crowdsourcing
-- Machine Learning
-- Information Retrieval
+- Computer Science
+- Gaming
+- Reading
+- Comics
+- Digital Photography
 
 # Education to show in About widget
 education:
@@ -46,21 +48,44 @@ social:
 - icon: envelope
   icon_pack: fas
   link: '/#contact'
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/Miccighel_
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/in/michaelsoprano/
 - icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
   icon_pack: ai
   link: https://scholar.google.it/citations?user=ocK0qRUAAAAJ&hl=en
-- icon: researchgate  # Alternatively, use `google-scholar` icon from `ai` icon pack
+- icon: orcid
+  icon_pack: fab
+  link: https://orcid.org/0000-0002-7337-7592
+- icon: researchgate
   icon_pack: fab
   link: https://www.researchgate.net/profile/Michael-Soprano
 - icon: github
   icon_pack: fab
   link: https://github.com/Miccighel
+- icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/Miccighel_
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/michaelsoprano/  
+- icon: goodreads
+  icon_pack: fab
+  link: https://www.goodreads.com/user/show/53180193-michael-soprano
+- icon: lastfm 
+  icon_pack: fab 
+  link: https://www.last.fm/it/user/Miccighel
+- icon: instagram
+  icon_pack: fab
+  link: https://www.instagram.com/miccighel/
+- icon: 500px
+  icon_pack: fab
+  link: https://500px.com/p/miccighel
+- icon: flickr
+  icon_pack: fab
+  link: https://www.flickr.com/people/jooforge/  
+- icon: steam
+  icon_pack: fab
+  link: https://steamcommunity.com/id/miccighel
+
+
 
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
@@ -74,4 +99,4 @@ Hello! I am Michael Soprano. Currently, i am working as a PhD Student at the Uni
 I have worked there also as a Research Fellow. I got my Master Degree in Computer Science on 15th March 2018 
 and my Bachelor Degree in Multimedia and Web Technologies on 19th March 2015.
 
-{{< icon name="download" pack="fas" >}} Download my Curriculum Vitae in {{< staticref "media/curriculum-en.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/curriculum-it.pdf" "newtab" >}}Italian{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my Curriculum Vitae in {{< staticref "media/curriculum-en.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/curriculum-it.pdf" "newtab" >}}Italian{{< /staticref >}} and have a look at my {{< staticref "media/masterThesis.pdf" "newtab" >}}Master{{< /staticref >}}, {{< staticref "media/bachelorThesis.pdf" "newtab" >}}Bachelor{{< /staticref >}}, or {{< staticref "media/highSchoolThesis.pdf" "newtab" >}}High School{{< /staticref >}} Thesis.

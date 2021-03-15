@@ -5,7 +5,7 @@
 
 # Appearance
 
-theme: minimal
+theme: ocean
 day_night: true
 font: 'minimal'
 font_size: L
@@ -23,20 +23,19 @@ twitter: ''
 email: michael.soprano@uniud.it
 #phone: 888 888 88 88
 address:
-  street: 450 Serra Mall
-  city: Stanford
-  region: CA
-  postcode: '94305'
-  country: United States
-  country_code: US
+  street: "Department of Mathematics, Computer Science and Physics, Via delle Scienze 206"
+  city: Udine (Italy)
+  region:
+  postcode: '33010'
+  country: Italy
+  country_code: IT
 coordinates:
-  latitude: '37.4275'
-  longitude: '-122.1697'
-directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
-office_hours:
-  - 'Monday 10:00 to 13:00'
-  - 'Wednesday 09:00 to 10:00'
-appointment_url: 'https://calendly.com'
+  latitude: '46.08008535022743'
+  longitude: '13.211890024964413'
+directions:
+  Rizzi Building, 2° Floor, South Node, Lab SMDC (LC2-04-DE)
+office_hours: ''
+appointment_url: ''
 
 # Site header
 
@@ -124,8 +123,8 @@ search:
     index_name: ''
     show_logo: false
 map:
-  provider: ''
-  api_key: ''
+  provider: 'mapbox'
+  api_key: 'pk.eyJ1IjoibWljY2lnaGVsIiwiYSI6ImNrbWFzcjV3ZDF2MDIybnAxeTJ0MXo4MWEifQ.9e440PAeUo_ExG9Q7FEPbg'
   zoom: 15
 marketing:
   google_analytics: ''
