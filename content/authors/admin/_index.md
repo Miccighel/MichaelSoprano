@@ -54,6 +54,15 @@ social:
 - icon: orcid
   icon_pack: fab
   link: https://orcid.org/0000-0002-7337-7592
+- icon: acm
+  icon_pack: ai
+  link: https://dl.acm.org/profile/99659280921
+- icon: scopus
+  icon_pack: ai
+  link: https://www.scopus.com/authid/detail.uri?authorId=57203392311
+- icon: dblp
+  icon_pack: ai
+  link: https://dblp.org/pid/222/1241.html
 - icon: researchgate
   icon_pack: fab
   link: https://www.researchgate.net/profile/Michael-Soprano
