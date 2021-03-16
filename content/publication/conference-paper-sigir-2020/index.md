@@ -13,9 +13,9 @@ authors:
 - Stefano Mizzaro
 - Gianluca Demartini
 tags:
-- '"classification"'
-- '"crowdsourcing"'
-- '"information credibility"'
+- classification
+- crowdsourcing
+- information credibility
 categories: []
 date: '2020-01-01'
 lastmod: 2021-03-15T15:36:36+01:00
@@ -55,6 +55,5 @@ abstract: 'Truthfulness judgments are a fundamental step in the process of fight
 publication: '*Proceedings of the 43st International ACM SIGIR Conference on Research
   and Development in Information Retrieval (SIGIR 2020). Xi’an, China (Online). July
   25-30, 2020. Conference Rank: GGS A++, Core A**'
-url_pdf: https://doi.org/10.1145/3397271.3401112
 doi: 10.1145/3397271.3401112
 ---

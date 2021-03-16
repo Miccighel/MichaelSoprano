@@ -5,9 +5,9 @@
 
 # Appearance
 
-theme: ocean
+theme: personal
 day_night: true
-font: 'minimal'
+font: 'personal'
 font_size: L
 
 # SEO
@@ -15,13 +15,12 @@ font_size: L
 site_type: Person
 local_business_type: ''
 org_name: 'University of Udine'
-description: ''
-twitter: ''
+description: 'Personal Website of Michael Soprano'
+twitter: 'https://twitter.com/#!/Miccighel_'
 
 # Contact (edit or remove options as required)
 
 email: michael.soprano@uniud.it
-#phone: 888 888 88 88
 address:
   street: "Department of Mathematics, Computer Science and Physics, Via delle Scienze 206"
   city: Udine (Italy)
@@ -61,7 +60,7 @@ highlight: true
 #  - r
 math: true
 diagram: true
-privacy_pack: false
+privacy_pack: true
 edit_page:
   repo_url: ''
   content_dir: ''
@@ -77,14 +76,14 @@ show_related:
   project: true
   publication: true
   event: true
-reading_time: true
+reading_time: false
 section_pager: false
 docs_section_pager: true
 sharing: true
 copyright_license:
   enable: false
   allow_derivatives: false
-  share_alike: true
+  share_alike: false
   allow_commercial: false
   notice: 'This work is licensed under {license}'
 abstract_length: 135

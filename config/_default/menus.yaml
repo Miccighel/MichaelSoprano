@@ -25,9 +25,18 @@ main:
   - name: Review Activity
     url: '#review_activity'
     weight: 8
+  - name: Teaching
+    url: '#teaching'
+    weight: 9
+  - name: Mentoring
+    url: '#mentoring'
+    weight: 10
+  - name: Honors
+    url: '#honors'
+    weight: 11
   - name: Contact
     url: '#contact'
-    weight: 9
-  - name: Curriculum Vitae
+    weight: 12
+  - name: CV
     url: media/curriculum-en.pdf
-    weight: 70
+    weight: 13

@@ -9,10 +9,10 @@ authors:
 - Michael Soprano
 - Stefano Mizzaro
 tags:
-- '"topic selection"'
-- '"trec"'
-- '"few topics"'
-- '"test collections"'
+- topic selection
+- trec
+- few topics
+- test collections
 categories: []
 date: '2018-01-01'
 lastmod: 2021-03-15T15:36:38+01:00
@@ -48,6 +48,5 @@ abstract: 'Several researchers have proposed to reduce the number of topics used
 publication: '*Proceedings of the 41st International ACM SIGIR Conference on Research
   and Development in Information Retrieval (SIGIR 2018). Ann Arbor Michigan, U.S.A,
   July 8-12, 2018. Conference Rank: GGS A++, Core A**'
-url_pdf: https://doi.org/10.1145/3209978.3210108
 doi: 10.1145/3209978.3210108
 ---

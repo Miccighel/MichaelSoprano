@@ -14,11 +14,11 @@ authors:
 - Stefano Mizzaro
 - Gianluca Demartini
 tags:
-- '"ordinal classification"'
-- '"infodemic"'
-- '"information behavior"'
-- '"covid-19"'
-- '"crowdsourcing"'
+- ordinal classification
+- infodemic
+- information behavior
+- covid-19
+- crowdsourcing
 categories: []
 date: '2020-01-01'
 lastmod: 2021-03-15T15:36:35+01:00
@@ -66,6 +66,6 @@ abstract: 'Misinformation is an ever increasing problem that is difficult to sol
 publication: '*Proceedings of the 29th ACM International Conference on Information
   and Knowledge Management (CIKM2020). Galway, Ireland (Online). October 19-23, 2020.
   Conference Rank: GGS A+, Core A*'
-url_pdf: https://doi.org/10.1145/3340531.3412048
-doi: 10.1145/3340531.3412048
+doi: 10.1145/3340531.3412048  
+#url_pdf: https://doi.org/10.1145/3340531.3412048
 ---

@@ -9,7 +9,10 @@ authors:
 - Michael Soprano
 - Kevin Roitero
 - Stefano Mizzaro
-tags: []
+tags:
+- peer review
+- network analysis
+- hits
 categories: []
 date: '2019-01-01'
 lastmod: 2021-03-15T15:36:37+01:00
@@ -33,7 +36,7 @@ projects: []
 publishDate: '2021-03-15T14:36:36.889530Z'
 publication_types:
 - '1'
-abstract: ''
+abstract: 'Peer review is a well known mechanism exploited within the scholarly publishing process to ensure the quality of scientific literature. Such a mechanism, despite being well established and reasonable, is not free from problems, and alternative approaches to peer review have been developed. Such approaches exploit the readers of scientific publications and their opinions, and thus outsource the peer review activity to the scholar community; an example of this approach has been formalized in the Readersourcing model [5]. Our contribution is two-fold:(i) we propose a stochastic validation of the Readersourcing model, and (ii) we employ network analysis techniques to study the bias of the model, and in particular the interactions between readers and papers and their goodness and effectiveness scores. Our results show that by using network analysis interesting model properties can be derived.'
 publication: '*Proceedings of the 4th Joint Workshop on Bibliometric-enhanced Information
   Retrieval and Natural Language Processing for Digital Libraries (BIRNDL 2019) co-located
   with the 42nd International ACM SIGIR Conference on Research and Development in
