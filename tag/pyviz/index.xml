@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PyViz | Michael Soprano</title><link>https://michaelsoprano.com/tag/pyviz/</link><atom:link href="https://michaelsoprano.com/tag/pyviz/index.xml" rel="self" type="application/rss+xml"/><description>PyViz</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 16 Mar 2021 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu112de011e0020bec116adb050630324a_3777_512x512_fill_lanczos_center_2.png</url><title>PyViz</title><link>https://michaelsoprano.com/tag/pyviz/</link></image><item><title>Social Computing - 2020/2021</title><link>https://michaelsoprano.com/post/social-computing-2020_2021/</link><pubDate>Tue, 16 Mar 2021 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/social-computing-2020_2021/</guid><description>&lt;h2 id="teachers">Teachers&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Theory&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Laboratory&lt;/li>
+&lt;/ul>
+&lt;h2 id="aims">Aims&lt;/h2>
+&lt;p>The aim of the course is to provide to the student the foundational knowledge and the
+practical skills concerning the area of social informatics.
+The course discusses both the so-called Social Media (Facebook, Twitter, etc.)
+and the Crowdsourcing phenomenon. In the first case, social behavior is supported by
+computational systems; in the second case, computational systems are supported by social behavior.
+The course deals with conceptual topics, theoretical foundations, and practical applications.&lt;/p>
+&lt;h2 id="table-of-contents">Table of Contents&lt;/h2>
+&lt;p>My contribution to the course consisted in teaching practical applications of the concepts outlined by prof. Stefano Mizzaro
+for a total of 6 lectures (12 hours). The course&amp;rsquo;s language is Italian.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Lesson 1&lt;/strong>: &lt;a href="https://www.dropbox.com/s/m71dwyjtk3uimvv/SC_MS_1_Twitter_API_Intro_Ric.pptx?dl=0" target="_blank" rel="noopener">Twitter API: Introduzione &amp;amp; Richiami&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lesson 2&lt;/strong>: &lt;a href="https://www.dropbox.com/s/qmei4q5rauxqaxv/SC_MS_2-Twitter_API_Tweepy_Req.pptx?dl=0" target="_blank" rel="noopener">Twitter API: Tweepy &amp;amp; Requests&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lesson 3&lt;/strong>: &lt;a href="https://www.dropbox.com/s/cufccvjko8g7fw7/SC_MS_3_Grafi_NetworkX.pptx?dl=0" target="_blank" rel="noopener">Grafi: NetworkX&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lesson 4&lt;/strong>: &lt;a href="https://www.dropbox.com/s/pj6jlhkw5nwe6vy/SC_MS_4_Crowd_Frame.pptx?dl=0" target="_blank" rel="noopener">Crowd_Frame: How To&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>
