@@ -126,7 +126,7 @@ map:
   api_key: 'pk.eyJ1IjoibWljY2lnaGVsIiwiYSI6ImNrbWFzcjV3ZDF2MDIybnAxeTJ0MXo4MWEifQ.9e440PAeUo_ExG9Q7FEPbg'
   zoom: 15
 marketing:
-  google_analytics: ''
+  google_analytics: 'G-J52BXPBPGD'
   google_tag_manager: ''
   google_site_verification: ''
   baidu_site_verification: ''
