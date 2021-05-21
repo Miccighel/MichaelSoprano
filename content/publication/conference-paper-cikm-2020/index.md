@@ -20,7 +20,7 @@ tags:
 - covid-19
 - crowdsourcing
 categories: []
-date: '2020-01-01'
+date: '2020-10-19'
 lastmod: 2021-03-15T15:36:35+01:00
 featured: false
 draft: false

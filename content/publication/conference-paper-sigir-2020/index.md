@@ -17,7 +17,7 @@ tags:
 - crowdsourcing
 - information credibility
 categories: []
-date: '2020-01-01'
+date: '2020-07-25'
 lastmod: 2021-03-15T15:36:36+01:00
 featured: false
 draft: false

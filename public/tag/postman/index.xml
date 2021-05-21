@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Postman | Michael Soprano</title>
+    <link>https://michaelsoprano.com/tag/postman/</link>
+      <atom:link href="https://michaelsoprano.com/tag/postman/index.xml" rel="self" type="application/rss+xml" />
+    <description>Postman</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 16 Mar 2021 11:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://michaelsoprano.com/media/icon_hu112de011e0020bec116adb050630324a_3777_512x512_fill_lanczos_center_2.png</url>
+      <title>Postman</title>
+      <link>https://michaelsoprano.com/tag/postman/</link>
+    </image>
+    
+    <item>
+      <title>Social Computing - 2020/2021</title>
+      <link>https://michaelsoprano.com/post/social-computing-2020_2021/</link>
+      <pubDate>Tue, 16 Mar 2021 11:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/post/social-computing-2020_2021/</guid>
+      <description>&lt;h2 id=&#34;teachers&#34;&gt;Teachers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://users.dimi.uniud.it/~stefano.mizzaro/&#34; title=&#34;Stefano Mizzaro&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stefano Mizzaro&lt;/a&gt; - Theory&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Michael Soprano&lt;/strong&gt; - Laboratory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;aims&#34;&gt;Aims&lt;/h2&gt;
+&lt;p&gt;The aim of the course is to provide to the student the foundational knowledge and the
+practical skills concerning the area of social informatics.
+The course discusses both the so-called Social Media (Facebook, Twitter, etc.)
+and the Crowdsourcing phenomenon. In the first case, social behavior is supported by
+computational systems; in the second case, computational systems are supported by social behavior.
+The course deals with conceptual topics, theoretical foundations, and practical applications.&lt;/p&gt;
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
+&lt;p&gt;My contribution to the course consisted in teaching practical applications of the concepts outlined by prof. Stefano Mizzaro
+for a total of 6 lectures (12 hours). The course&amp;rsquo;s language is Italian.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Lesson 1&lt;/strong&gt;: &lt;a href=&#34;https://www.dropbox.com/s/m71dwyjtk3uimvv/SC_MS_1_Twitter_API_Intro_Ric.pptx?dl=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Twitter API: Introduzione &amp;amp; Richiami&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lesson 2&lt;/strong&gt;: &lt;a href=&#34;https://www.dropbox.com/s/qmei4q5rauxqaxv/SC_MS_2-Twitter_API_Tweepy_Req.pptx?dl=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Twitter API: Tweepy &amp;amp; Requests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lesson 3&lt;/strong&gt;: &lt;a href=&#34;https://www.dropbox.com/s/cufccvjko8g7fw7/SC_MS_3_Grafi_NetworkX.pptx?dl=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Grafi: NetworkX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lesson 4&lt;/strong&gt;: &lt;a href=&#34;https://www.dropbox.com/s/pj6jlhkw5nwe6vy/SC_MS_4_Crowd_Frame.pptx?dl=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Crowd_Frame: How To&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

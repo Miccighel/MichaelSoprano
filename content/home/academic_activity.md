@@ -12,14 +12,22 @@ headless: true
 # Order that this section appears on the page.
 weight: 70
 
-title: Review Activity
+title: Academic Activity
 subtitle:
 
 design:
   columns: "2"
 ---
 
-- **Sub-reviewer** at the:
+- **Reviewer** at the:
   - 29th ACM International Conference On Information And Knowledge Management (CIKM 2020), Galway, Ireland (Online).
   - 23st ACM Conference on Hypertext and Social Media (HT 2020), Online.
   - 15th Italian Research Conference On Digital Libraries (IRCDL 2019), Pisa.
+
+- **Mentoring**:
+  - Supervisions of one Bachelor (BSC) student’s thesis and various advanced laboratory
+    projects of Master (MSC) students
+
+- **Affiliations**:
+  - Member of the [SMDC Laboratory (Social, Mobile, Data, Crowd)](http://smdc.uniud.it/smdc/membri/?lang=en)
+     

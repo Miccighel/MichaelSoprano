@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michael Soprano</title>
+    <link>https://michaelsoprano.com/</link>
+      <atom:link href="https://michaelsoprano.com/index.xml" rel="self" type="application/rss+xml" />
+    <description>Michael Soprano</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 11 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://michaelsoprano.com/media/icon_hu112de011e0020bec116adb050630324a_3777_512x512_fill_lanczos_center_2.png</url>
+      <title>Michael Soprano</title>
+      <link>https://michaelsoprano.com/</link>
+    </image>
+    
+    <item>
+      <title>Assessing the Quality of Online Reviews Using Formal Argumentation Theory</title>
+      <link>https://michaelsoprano.com/publication/conference-paper-icwe-2021/</link>
+      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/publication/conference-paper-icwe-2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Social Computing - 2020/2021</title>
+      <link>https://michaelsoprano.com/post/social-computing-2020_2021/</link>
+      <pubDate>Tue, 16 Mar 2021 11:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/post/social-computing-2020_2021/</guid>
+      <description>&lt;h2 id=&#34;teachers&#34;&gt;Teachers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://users.dimi.uniud.it/~stefano.mizzaro/&#34; title=&#34;Stefano Mizzaro&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stefano Mizzaro&lt;/a&gt; - Theory&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Michael Soprano&lt;/strong&gt; - Laboratory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;aims&#34;&gt;Aims&lt;/h2&gt;
+&lt;p&gt;The aim of the course is to provide to the student the foundational knowledge and the
+practical skills concerning the area of social informatics.
+The course discusses both the so-called Social Media (Facebook, Twitter, etc.)
+and the Crowdsourcing phenomenon. In the first case, social behavior is supported by
+computational systems; in the second case, computational systems are supported by social behavior.
+The course deals with conceptual topics, theoretical foundations, and practical applications.&lt;/p&gt;
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
+&lt;p&gt;My contribution to the course consisted in teaching practical applications of the concepts outlined by prof. Stefano Mizzaro
+for a total of 6 lectures (12 hours). The course&amp;rsquo;s language is Italian.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Lesson 1&lt;/strong&gt;: &lt;a href=&#34;https://www.dropbox.com/s/m71dwyjtk3uimvv/SC_MS_1_Twitter_API_Intro_Ric.pptx?dl=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Twitter API: Introduzione &amp;amp; Richiami&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lesson 2&lt;/strong&gt;: &lt;a href=&#34;https://www.dropbox.com/s/qmei4q5rauxqaxv/SC_MS_2-Twitter_API_Tweepy_Req.pptx?dl=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Twitter API: Tweepy &amp;amp; Requests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lesson 3&lt;/strong&gt;: &lt;a href=&#34;https://www.dropbox.com/s/cufccvjko8g7fw7/SC_MS_3_Grafi_NetworkX.pptx?dl=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Grafi: NetworkX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lesson 4&lt;/strong&gt;: &lt;a href=&#34;https://www.dropbox.com/s/pj6jlhkw5nwe6vy/SC_MS_4_Crowd_Frame.pptx?dl=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Crowd_Frame: How To&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The COVID-19 Infodemic: Can the Crowd Judge Recent Misinformation Objectively?</title>
+      <link>https://michaelsoprano.com/talk/the-covid-19-infodemic-can-the-crowd-judge-recent-misinformation-objectively/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/talk/the-covid-19-infodemic-can-the-crowd-judge-recent-misinformation-objectively/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The COVID-19 Infodemic: Can the Crowd Judge Recent Misinformation Objectively?</title>
+      <link>https://michaelsoprano.com/publication/conference-paper-cikm-2020/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/publication/conference-paper-cikm-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Can The Crowd Identify Misinformation Objectively? The Effects of Judgment Scale and Assessor&#39;s Background</title>
+      <link>https://michaelsoprano.com/publication/conference-paper-sigir-2020/</link>
+      <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/publication/conference-paper-sigir-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Can The Crowd Identify Misinformation Objectively? The Effects of Judgment Scale and Assessor’s Background.</title>
+      <link>https://michaelsoprano.com/talk/can-the-crowd-identify-misinformation-objectively-the-effects-of-judgment-scale-and-assessors-background./</link>
+      <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/talk/can-the-crowd-identify-misinformation-objectively-the-effects-of-judgment-scale-and-assessors-background./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bias and Fairness in Effectiveness Evaluation by Means of Network Analysis and Mixture Model</title>
+      <link>https://michaelsoprano.com/talk/bias-and-fairness-in-effectiveness-evaluation-by-means-of-network-analysis-and-mixture-model/</link>
+      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/talk/bias-and-fairness-in-effectiveness-evaluation-by-means-of-network-analysis-and-mixture-model/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bias and Fairness in Effectiveness Evaluation by Means of Network Analysis and Mixture Models</title>
+      <link>https://michaelsoprano.com/publication/workshop-paper-iir-2019/</link>
+      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/publication/workshop-paper-iir-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HITS Hits Readersourcing: Validating Peer Review Alternatives Using Network Analysis</title>
+      <link>https://michaelsoprano.com/publication/workshop-paper-birnld-2019/</link>
+      <pubDate>Thu, 25 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/publication/workshop-paper-birnld-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Crowdsourcing Peer Review: As We May Do</title>
+      <link>https://michaelsoprano.com/publication/conference-paper-ircdl-2019/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/publication/conference-paper-ircdl-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Crowdsourcing Peer Review in the Digital Humanities?</title>
+      <link>https://michaelsoprano.com/publication/conference-paper-aiudc-2019/</link>
+      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/publication/conference-paper-aiudc-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reproduce and Improve: An Evolutionary Approach to Select a Few Good Topics for Information Retrieval Evaluation</title>
+      <link>https://michaelsoprano.com/publication/journal-paper-jdiq-2018/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/publication/journal-paper-jdiq-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effectiveness Evaluation with a Subset of Topics: A Practical Approach</title>
+      <link>https://michaelsoprano.com/publication/conference-paper-sigir-2018/</link>
+      <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/publication/conference-paper-sigir-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://michaelsoprano.com/admin/config.yml</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/admin/config.yml</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://michaelsoprano.com/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://michaelsoprano.com/privacy/</guid>
+      <description>&lt;p&gt;The site is completely static, no use of server-side cookies is made and the only information that might be stored is your choice to see the page in the night mode.&lt;/p&gt;
+&lt;p&gt;Therefore there’s no harm to your privacy, unless you explicitly contact me by email or through a social network.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

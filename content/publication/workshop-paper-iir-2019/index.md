@@ -15,7 +15,7 @@ tags:
 - fairness
 - network analysis
 categories: []
-date: '2019-01-01'
+date: '2019-09-16'
 lastmod: 2021-03-15T15:36:36+01:00
 featured: false
 draft: false
