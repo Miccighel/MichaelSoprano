@@ -51,6 +51,5 @@ abstract: 'Review scores collect users opinions in a simple and intuitive manner
   truthful by online users and does so in an unsupervised manner, and (2) it provides an explanation of quality assessments.' 
 publication: '*Proceedings of the 21st International Conference on Web Engineering (ICWE 2021). Biarritz, France (Online).
   May 18-21, 2021. Conference Rank: GGS B, Core B*'
-#url_pdf: https://doi.org/10.1007/978-3-030-11226-4_21
-doi: 10.1007/978-3-030-11226-4_21
+doi: 10.1007/978-3-030-74296-6_6
 ---
