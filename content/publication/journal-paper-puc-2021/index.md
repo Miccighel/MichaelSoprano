@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: 'The Many Dimensions of Truthfulness: Crowdsourcing Misinformation Assessments on a Multidimensional Scale'
+title: 'Can The Crowd Judge Truthfulness? A Longitudinal Study on Recent Misinformation About COVID-19'
 subtitle: ''
 summary: ''
 authors:
