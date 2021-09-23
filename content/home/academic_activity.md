@@ -27,8 +27,7 @@ design:
   - 15th Italian Research Conference On Digital Libraries (IRCDL 2019), Pisa.
 
 - **Mentoring**:
-  - Supervisions of one Bachelor (BSC) student’s thesis and various advanced laboratory
-    projects of Master (MSC) students
+  - Supervision of various student theses and advanced laboratory projects.
 
 - **Affiliations**:
   - Member of the [SMDC Laboratory (Social, Mobile, Data, Crowd)](http://smdc.uniud.it/smdc/membri/?lang=en)
