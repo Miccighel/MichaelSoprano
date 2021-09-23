@@ -17,7 +17,7 @@ tags:
 - truthfulness
 - crowdsourcing
 - misinformation
-- covid-19
+- covid
 categories: []
 date: '2021-09-16'
 lastmod: 2021-09-15T15:00:00+01:00
@@ -28,9 +28,9 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-caption: ''
-focal_point: ''
-preview_only: false
+  caption: ''
+  focal_point: ''
+  preview_only: false
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
