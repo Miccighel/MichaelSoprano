@@ -19,5 +19,6 @@ design:
 columns: "2"
 ---
 
-- **Student Grant**  to attend the 29th ACM International Conference On Information And Knowledge Management (CIKM 2020), Galway, Ireland. Online (Held remotely due to COVID-19). Provided by CIKM. Free conference subscription.
+- **Student Grant** to attend the 15th ACM International Conference on Web Search and Data Mining. Online (Held remotely due to COVID-19). Provided by WSDM. Free conference subscription.
+- **Student Grant** to attend the 29th ACM International Conference On Information And Knowledge Management (CIKM 2020), Galway, Ireland. Online (Held remotely due to COVID-19). Provided by CIKM. Free conference subscription.
 - **Volunteer** at the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2020), Xi'an, China. Online (Held remotely due to COVID-19). Free conference subscription.

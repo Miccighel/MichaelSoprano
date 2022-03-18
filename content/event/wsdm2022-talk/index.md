@@ -1,25 +1,25 @@
 ---
-title: "Can The Crowd Identify Misinformation Objectively? The Effects of Judgment Scale and Assessor’s Background."
+title: "Crowd_Frame: A Simple and Complete Framework to Deploy Complex Crowdsourcing Tasks Off-the-Shelf"
 
-event: The 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval
+event: The 15th ACM International Conference on Web Search and Data Mining
 event_url: https://sigir.org/sigir2020/
 
 location: Phoenix, U.S.A.
 
-summary: "Conference Talk - The 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval. Held remotely due to COVID-19 (pre-recorded contribution)."
+summary: "Conference Talk - The 15th ACM International Conference on Web Search and Data Mining. Held remotely due to COVID-19 (pre-recorded contribution)."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2020-07-25"
-date_end: "2020-07-30"
+date: "2022-02-23"
+date_end: "2022-02-23"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
 #publishDate: "2017-01-01T00:00:00Z"
 
 authors: [Michael Soprano]
-tags: [disinformation, misinformation, crowdsourcing]
+tags: [crowdsourcing, framework, user behavior]
 
 # Is this a featured talk? (true/false)
 featured: false
@@ -36,7 +36,7 @@ image:
 #url_code: ""
 #url_pdf: ""
 url_slides: "https://docs.google.com/presentation/d/1JOFP2TaAibYcHEoJtjR5GNysGNBEgEo0j_z6JAoIr00/edit?usp=sharing"
-url_video: "https://www.youtube.com/watch?v=D10EtrThvbc"
+url_video: "https://dl.acm.org/doi/abs/10.1145/3488560.3502182"
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.

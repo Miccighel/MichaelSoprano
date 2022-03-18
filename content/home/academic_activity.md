@@ -20,7 +20,8 @@ design:
 ---
 
 - **Program Committee Roles**:
-  - Third Symposium on Biases in Human Computation and Crowdsourcing, (BHCC 2021), Online.
+  - 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2022), Madrid, Spain.
+  - Third Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2021), Online.
 
 - **Reviewer** at the:
   - 44th European Conference on Information Retrieval (ECIR 2022), Stavanger, Norway.

@@ -38,6 +38,6 @@ abstract: 'This paper describes Readersourcing 2.0, an ecosystem providing an im
 publication: '*Digital Libraries: Supporting Open Science - 15th Italian Research
   Conference on Digital Libraries, IRCDL 2019, Pisa, Italy, January 31 - February
   1, 2019, Proceedings*'
-#url_pdf: https://doi.org/10.1007/978-3-030-11226-4_21
+url_pdf: https://doi.org/10.1007/978-3-030-11226-4_21
 doi: 10.1007/978-3-030-11226-4_21
 ---
