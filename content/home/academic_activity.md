@@ -18,12 +18,15 @@ subtitle:
 design:
   columns: "2"
 ---
+- **Organizational Roles**:
+  - Proceedings and Website Chair at the 4th Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2022), Rome, Italy.
 
 - **Program Committee Roles**:
   - 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2022), Madrid, Spain.
   - Third Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2021), Online.
 
 - **Reviewer** at the:
+  - Conference and Labs of the Evaluation Forum (CLEF 2022), Bologna, Italy.
   - 44th European Conference on Information Retrieval (ECIR 2022), Stavanger, Norway.
   - 30st ACM International Conference On Information And Knowledge Management (CIKM 2021), Online.
   - 32nd ACM Conference on Hypertext and Social Media (HT 2021), Online.
@@ -32,7 +35,7 @@ design:
   - 15th Italian Research Conference On Digital Libraries (IRCDL 2019), Pisa.
 
 - **Mentoring**:
-  - Co-supervision of the thesis of 1 Master (MSC), 8 Bachelor (BSC) Students, and various students advanced projects
+  - Co-supervision of the theses of 1 Master (MSC), 9 Bachelor (BSC) Students, and various students advanced projects
     and seminars
 
 - **Affiliations**:

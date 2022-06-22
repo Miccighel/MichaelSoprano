@@ -26,7 +26,7 @@ experience:
   - title: Research Fellow
     company: University of Udine
     company_url: 'https://www.uniud.it/it'
-    location: Udine
+    location: Udine, Italy
     date_start: '2018-06-15'
     date_end: '2019-10-30'
     description: |1-
@@ -34,7 +34,7 @@ experience:
   - title: Full Stack Web Developer
     company: Datamantix S.r.l.
     company_url: 'https://datamantix.com/'
-    location: Udine
+    location: Udine, Italy
     date_start: '2017-06-01'
     date_end: '2019-02-25'
     description: |1-
@@ -42,14 +42,14 @@ experience:
   - title: Full Stack Web Developer
     company: Archeido S.r.l.
     company_url: 'https://archeido.com/'
-    location: Udine
+    location: Udine, Italy
     date_start: '2017-08-01'
     date_end: '2018-02-25'
     description: |1-
       Development of a web application concerning management and visualization of financial assets.
   - title: Full Stack Web Developer
     company: Troublezine
-    location: Udine
+    location: Udine, Italy
     date_start: '2015-11-01'
     date_end: '2016-02-25'
     description: |1-
