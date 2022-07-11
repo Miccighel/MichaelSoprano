@@ -26,6 +26,7 @@ design:
   - Third Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2021), Online.
 
 - **Reviewer** at the:
+  - The Tenth AAAI Conference on Human Computation and Crowdsourcing (HCOMP 2022), Online.
   - Conference and Labs of the Evaluation Forum (CLEF 2022), Bologna, Italy.
   - 44th European Conference on Information Retrieval (ECIR 2022), Stavanger, Norway.
   - 30st ACM International Conference On Information And Knowledge Management (CIKM 2021), Online.
