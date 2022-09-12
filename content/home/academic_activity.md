@@ -22,8 +22,8 @@ design:
   - Proceedings and Website Chair at the 4th Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2022), Rome, Italy.
 
 - **Program Committee Roles**:
-  - 45th European Conference on Information Retrieval (ECIR 2023), Dublin, Ireland. <b>Short Paper Track</>.
-  - 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2022), Madrid, Spain. <b>Short Paper Track</>.
+  - 45th European Conference on Information Retrieval (ECIR 2023), Dublin, Ireland. <b>Short Paper Track</b>.
+  - 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2022), Madrid, Spain. <b>Short Paper Track</b>.
   - Third Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2021), Online.
 
 - **Reviewer** at the:
