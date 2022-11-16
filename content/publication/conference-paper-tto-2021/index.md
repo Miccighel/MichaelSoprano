@@ -10,7 +10,7 @@ authors:
 - Michael Soprano
 - Kevin Roitero
 - Michael Soprano
-- Gianluca Demartini 
+- Gianluca Demartini
 categories: []
 date: '2021-10-16' 
 lastmod: 2022-03-18T17:46:00+01:00 
@@ -47,7 +47,7 @@ abstract: 'Automated fact-checking (AFC) systems exist to combat disinformation,
   e-FEVER and e-SNLI tasks. In addition, we validate the joint-prediction architecture by showing 1) that generating explanations does not significantly impede the model from performing well in its main task of veracity prediction, and 2)
   that predicted veracity and explanations are more internally coherent when generated jointly than separately. Finally, we also conduct human evaluations on the impact of generated explanations and observe that explanations increase human
   ability to spot misinformation and make people more skeptical about claims.' 
-publication: '*Proceedings of the 2021 Truth and Trust Online Conference (TTO 2021). Virtual Event, October 7-8, 2021*'
+publication: '*Proceedings of the 2021 Truth and Trust Online Conference*'
 url_pdf: https://truthandtrustonline.com/wp-content/uploads/2021/10/TTO2021_paper_16-1.pdf
 
 ---
