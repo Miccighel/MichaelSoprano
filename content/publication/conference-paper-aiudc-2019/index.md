@@ -44,7 +44,6 @@ abstract: We propose an alternative approach to the standard peer review activit
   We describe an ecosystem called Readersourcing 2.0 which provides an implementation
   for two Readersourcing models [2, 3] by outlining its goals and requirements. Readersourcing
   2.0 will be used in the future to gather fresh data to analyze and validate.
-publication: '*Book of Abstracts, 8th AIUCD Conference 2019 – Pedagogy, Teaching,
-  and Research in the Age of Digital Humanities, page 251. Udine, Italy, 2019*'
+publication: '*Book of Abstracts, 8th AIUCD Conference 2019 – Pedagogy, Teaching, and Research in the Age of Digital Humanities*'
 url_pdf: http://aiucd2019.uniud.it/wp-content/uploads/2020/03/AIUCD2019-BoA_DEF.pdf
 ---
