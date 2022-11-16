@@ -1,5 +1,5 @@
 ---
-title: Social Computing - 2022/2023
+title: Social Computing - 2021/2022
 subtitle: Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine, Academic Year 2022/2023
 
 # Summary for listings and search engines
@@ -33,9 +33,9 @@ authors:
 
 tags:
 - Amazon Mechanical Turk
+- Angular
 - Prolific
 - Toloka
-- Angular
 - Crowdsourcing
 - Data Analysis
 
@@ -46,7 +46,7 @@ categories:
 ## Teachers
 
 - [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Theory
-- - **David La Barbera** - Laboratory
+- **David La Barbera** - Laboratory
 - **Michael Soprano** - Laboratory
 
 ## Aims
