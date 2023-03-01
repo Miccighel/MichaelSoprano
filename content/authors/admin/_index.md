@@ -22,6 +22,9 @@ interests:
 - Gaming
 - Reading
 - Comics
+- Running
+- Skiing
+- Biking
 - Digital Photography
 
 # Education to show in About widget
@@ -29,7 +32,7 @@ education:
   courses:
   - course: PhD in Computer Science, Mathematics and Physics, 35th cycle.
     institution: University of Udine
-    year: Nov. 2019 - Today
+    year: Nov. 2019 - Jan. 2023
   - course: Master Degree in Computer Science
     institution: University of Udine
     year: Mar. 2015 - Mar. 2018
