@@ -27,6 +27,14 @@ experience:
     company: University of Udine
     company_url: 'https://www.uniud.it/it'
     location: Udine, Italy
+    date_start: '2023-03-01'
+    date_end: '2025-02-28'
+    description: |1-
+      Research project concerning the usage of conversational agents in the public administration.
+  - title: Research Fellow
+    company: University of Udine
+    company_url: 'https://www.uniud.it/it'
+    location: Udine, Italy
     date_start: '2018-06-15'
     date_end: '2019-10-30'
     description: |1-

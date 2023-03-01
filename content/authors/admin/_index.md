@@ -104,9 +104,9 @@ email: ""
 highlight_name: false
 ---
 
-Hello! I am Michael Soprano. Currently, I am working as a PhD Student at the University of Udine. 
-I have worked there also as a Research Fellow. I got my Master Degree in Computer Science on 15th March 2018 
-and my Bachelor Degree in Multimedia and Web Technologies on 19th March 2015.
+Hello! I am Michael Soprano. Currently, I am working as a Post Doctoral Research Fellow at the University of Udine.
+
+I am waiting to discuss my PhD thesis. I got my Master's Degree in Computer Science on 15th March 2018 and my Bachelor's Degree in Multimedia and Web Technologies on 19th March 2015. I wish to make the most of my skills in Computer Science to carry out research in this field and leave a small trace in the scientific world.
 
 My research interests consist in Information Retrieval and Crowdsourcing. In particular, the use of crowdsourcing based approaches to address the increasing amount of misinformation that is spreading online. 
 My long term goal is to build a human-in-the-loop system to cope with misinformation by measuring information truthfulness in real-time using crowd-powered data, human intelligence, and machine learning techniques.
