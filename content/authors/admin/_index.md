@@ -18,13 +18,10 @@ bio: University Life, Computer Science, Photography, Reading, Gaming, Comics. Ph
 
 # Interests to show in About widget
 interests:
-- Computer Science
-- Gaming
-- Reading
-- Comics
-- Running
-- Skiing
-- Biking
+- Academic Research & Computer Science
+- Video-games
+- Literature & Comics
+- Running, Hiking, Skiing and Biking
 - Digital Photography
 
 # Education to show in About widget
