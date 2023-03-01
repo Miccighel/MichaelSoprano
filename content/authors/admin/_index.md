@@ -106,11 +106,10 @@ highlight_name: false
 
 Hello! I am Michael Soprano. Currently, I am working as a Post Doctoral Research Fellow at the University of Udine.
 
-I am waiting to discuss my PhD thesis. I got my Master's Degree in Computer Science on 15th March 2018 and my Bachelor's Degree in Multimedia and Web Technologies on 19th March 2015. I wish to make the most of my skills in Computer Science to carry out research in this field and leave a small trace in the scientific world.
+I am waiting to defend my PhD thesis. I got my Master’s Degree in Computer Science on 15th March 2018 and my Bachelor’s Degree in Multimedia and Web Technologies on 19th March 2015. I wish to make the most of my skills in Computer Science to carry out research in this field and leave a tiny trace in the scientific world.
 
-My research interests consist in Information Retrieval and Crowdsourcing. In particular, the use of crowdsourcing based approaches to address the increasing amount of misinformation that is spreading online. 
-My long term goal is to build a human-in-the-loop system to cope with misinformation by measuring information truthfulness in real-time using crowd-powered data, human intelligence, and machine learning techniques.
+My research interests consist of Information Retrieval and Crowdsourcing. In particular, the use of crowdsourcing-based approaches to address the increasing amount of misinformation that is spreading online. My long-term goal is to build a human-in-the-loop system to cope with misinformation by measuring information truthfulness in real-time using crowd-powered data, human intelligence, and machine learning techniques.
 
-More details can be found in my {{< staticref "media/research-statement.pdf" "newtab" >}}Research Statement{{< /staticref >}}.
+More details can be found in my {{< staticref "media/research-statement.pdf" "newtab" >}}Research Statement{{< /staticref >}} (even though I wrote it in 2021...).
 
 {{< icon name="download" pack="fas" >}} Download my Curriculum Vitae in {{< staticref "media/Curriculum_EN.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/Curriculum_IT.pdf" "newtab" >}}Italian{{< /staticref >}} and have a look at my {{< staticref "media/masterThesis.pdf" "newtab" >}}Master{{< /staticref >}}, {{< staticref "media/bachelorThesis.pdf" "newtab" >}}Bachelor{{< /staticref >}}, or {{< staticref "media/highSchoolThesis.pdf" "newtab" >}}High School{{< /staticref >}} Thesis.
