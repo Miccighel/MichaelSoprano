@@ -61,6 +61,6 @@ experience:
     date_start: '2015-11-01'
     date_end: '2016-02-25'
     description: |1-
-      Design, development and maintenance of a web application.
+      Design, development and maintenance of a blog which proposed news and events about music.
 
 ---
