@@ -23,7 +23,7 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 
 experience:
-  - title: Research Fellow
+  - title: Post Doctoral Research Fellow
     company: University of Udine
     company_url: 'https://www.uniud.it/it'
     location: Udine, Italy

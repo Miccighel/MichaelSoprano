@@ -11,7 +11,7 @@ role: Post Doctoral Research Fellow
 # Organizations/Affiliations to show in About widget
 organizations:
 - name: Universiy of Udine
-  url: https://www.uniud.it/en/
+  url: https://www.uniud.it/
 
 # Short bio (displayed in user profile at end of posts)
 bio: University Life, Computer Science, Photography, Reading, Gaming, Comics. PhD Student at the University of Udine. That's me.
