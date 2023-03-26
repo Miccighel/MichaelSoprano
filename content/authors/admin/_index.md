@@ -38,7 +38,7 @@ education:
     year: Oct. 2011 - Mar. 2015
   - course: High School Diploma in Computer Science
     institution: I.S.I.S. Raimondo D’Aronco
-    year: Oct. 2011 - Mar. 2015
+    year: Oct. 2006 - Jun. 2011
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
