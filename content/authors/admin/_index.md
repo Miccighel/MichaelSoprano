@@ -104,12 +104,12 @@ email: ""
 highlight_name: false
 ---
 
-Hello! I am Michael Soprano. Currently, I am working as a Post Doctoral Research Fellow at the University of Udine.
+Hello! I am a Post Doctoral Research Fellow at the University of Udine.
 
-I am waiting to defend my PhD thesis. I got my Master’s Degree in Computer Science on 15th March 2018 and my Bachelor’s Degree in Multimedia and Web Technologies on 19th March 2015. I wish to make the most of my skills in Computer Science to carry out research in this field and leave a tiny trace in the scientific world.
+I successfully defended my PhD dissertation on May 22nd, 2023. I will publicly release it soon.
 
-My research interests consist of Information Retrieval and Crowdsourcing. In particular, the use of crowdsourcing-based approaches to address the increasing amount of misinformation that is spreading online. My long-term goal is to build a human-in-the-loop system to cope with misinformation by measuring information truthfulness in real-time using crowd-powered data, human intelligence, and machine learning techniques.
+My research interest consists in using crowdsourcing-based approaches to cope with the ever-increasing amount of misinformation which is spreading online. As a long-term goal, I would like to keep making the most out of my skills in Computer Science to carry out novel research and leave a tiny trace in the scientific world.
 
-More details can be found in my {{< staticref "media/research-statement.pdf" "newtab" >}}Research Statement{{< /staticref >}} (even though I wrote it in 2021...).
+Back in 2021, I wrote a short {{< staticref "media/research-statement.pdf" "newtab" >}}research statement{{< /staticref >}}.
 
 {{< icon name="download" pack="fas" >}} Download my Curriculum Vitae in {{< staticref "media/Curriculum_EN.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/Curriculum_IT.pdf" "newtab" >}}Italian{{< /staticref >}} and have a look at my {{< staticref "media/masterThesis.pdf" "newtab" >}}Master{{< /staticref >}}, {{< staticref "media/bachelorThesis.pdf" "newtab" >}}Bachelor{{< /staticref >}}, or {{< staticref "media/highSchoolThesis.pdf" "newtab" >}}High School{{< /staticref >}} theses.
