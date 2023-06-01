@@ -49,6 +49,6 @@ abstract: 'Review scores collect users opinions in a simple and intuitive manner
   reviews and comparing it to the argumentation assessment. Lastly, we perform a user study to evaluate the explainability
   of our method. Our method achieves two goals: (1) it identifies reviews that are considered useful, comprehensible,
   truthful by online users and does so in an unsupervised manner, and (2) it provides an explanation of quality assessments.' 
-publication: '*Proceedings of the 21st International Conference on Web Engineering. Conference Rank: GGS B, Core B*'
+publication: '*Proceedings of the 21st International Conference on Web Engineering. Conference Ranks (2021): GGS B-, Core B.*'
 doi: 10.1007/978-3-030-74296-6_6
 ---

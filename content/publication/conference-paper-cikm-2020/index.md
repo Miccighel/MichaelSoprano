@@ -64,7 +64,7 @@ abstract: 'Misinformation is an ever increasing problem that is difficult to sol
   submitted, URLs found / selected, text justifications, and other behavioral data
   like clicks and mouse actions collected by means of an ad hoc logger.'
 publication: '*Proceedings of the 29th ACM International Conference on Information
-  and Knowledge Management. Conference Rank: GGS A+, Core A*'
+  and Knowledge Management. Conference Ranks: GGS A+, Core A.'
 doi: 10.1145/3340531.3412048  
 #url_pdf: https://doi.org/10.1145/3340531.3412048
 ---

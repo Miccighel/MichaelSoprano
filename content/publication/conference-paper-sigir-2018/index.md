@@ -46,6 +46,6 @@ abstract: 'Several researchers have proposed to reduce the number of topics used
   several TREC collections we show that the topics selected on the basis of those
   evaluations are indeed more informative than random topics.'
 publication: '*Proceedings of the 41st International ACM SIGIR Conference on Research
-  and Development in Information Retrieval. Conference Rank: GGS A++, Core A**'
+  and Development in Information Retrieval. Conference Rank: GGS A++, Core A*'
 doi: 10.1145/3209978.3210108
 ---
