@@ -18,10 +18,11 @@ bio: University Life, Computer Science, Photography, Reading, Gaming, Comics. Ph
 
 # Interests to show in About widget
 interests:
-- Academic Research & Computer Science
-- Video-games
-- Literature & Comics
-- Running, Hiking, Skiing and Biking
+- Academic Research
+- Computer Science
+- Video Games
+- Books, Comics, and Literature
+- Running, Hiking, Skiing, and Biking
 - Digital Photography
 
 # Education to show in About widget
@@ -89,7 +90,7 @@ social:
   link: https://500px.com/p/miccighel
 - icon: flickr
   icon_pack: fab
-  link: https://www.flickr.com/people/jooforge/  
+  link: https://www.flickr.com/photos/jooforge/
 - icon: steam
   icon_pack: fab
   link: https://steamcommunity.com/id/miccighel

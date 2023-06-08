@@ -52,6 +52,6 @@ abstract: 'Truthfulness judgments are a fundamental step in the process of fight
   crowd judgments, expressed on scales with various granularity levels. We also measure
   the political bias and the cognitive background of the workers, and quantify their
   effect on the reliability of the data provided by the crowd.'
-publication: '*Proceedings of the 43st International ACM SIGIR Conference on Research and Development in Information Retrieval. Conference Rank: GGS A++, Core A.*'
+publication: '*Proceedings of the 43st International ACM SIGIR Conference on Research and Development in Information Retrieval. Conference Rank: GGS A++, Core A*.*'
 doi: 10.1145/3397271.3401112
 ---
