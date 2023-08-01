@@ -28,6 +28,7 @@ design:
   - Third Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2022), Online.
 
 - **Reviewer For**:
+  - Information Processing & Management (2023). 
   - Springer Nature Scientific Report (2023).
   - 13th Italian Information Retrieval Workshop (IIR 2023), Pisa, Italy.
   - Information Processing & Management (2022).
@@ -36,7 +37,7 @@ design:
   - 44th European Conference on Information Retrieval (ECIR 2022), Stavanger, Norway.
   - Second Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2021), Delft, Netherlands (Online).
   - 30st ACM International Conference On Information And Knowledge Management (CIKM 2021), Online.
-  - ~~32nd ACM Conference on Hypertext and Social Media (HT 2021), Online.~~
+  - 32nd ACM Conference on Hypertext and Social Media (HT 2021), Online.
   - 29th ACM International Conference On Information And Knowledge Management (CIKM 2020), Galway, Ireland (Online).
   - 31st ACM Conference on Hypertext and Social Media (HT 2020), Online.
   - 15th Italian Research Conference On Digital Libraries (IRCDL 2019), Pisa.
