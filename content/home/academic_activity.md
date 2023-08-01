@@ -19,6 +19,7 @@ design:
   columns: "2"
 ---
 - **Organizational Roles**:
+  - CARE: The first Workshop on Conversational Agents and Responsible Ethics in Healthcare at The European Federation of Medical Informatics  Special Topic Conference (EFMI STC 2023). October 25--26, 2023, Torino, Italy. <b>Organizer</b>.
   - Fourth Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2022), Online. <b>Proceedings and Website Chair</b>.
 
 - **Program Committee Roles**:
