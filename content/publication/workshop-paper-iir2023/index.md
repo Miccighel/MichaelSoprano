@@ -8,6 +8,7 @@ authors:
 - David La Barbera
 - Michael Soprano
 - Kevin Roitero
+- Eddy Maddalena
 - Stefano Mizzaro
 tags:
 - crowdsourcing
