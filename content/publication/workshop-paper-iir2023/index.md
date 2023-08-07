@@ -38,7 +38,7 @@ image:
 projects: []
 publishDate: '2023-08-05T15:30:30+01:00'
 publication_types:
-- '4'
+- '5'
 abstract: 'In this paper, we present our journey in exploring the use of crowdsourcing for fact-checking. We discuss our early experiments aimed towards the identification of the best possible setting for misinformation assessment using crowdsourcing. Our results indicate that the crowd can effectively address misinformation at scale, showing some degree of correlation with experts. We also highlight the influence of worker background on the quality of truthfulness assessments.'
 publication: '*Proceedings of the 13th Italian Information Retrieval Workshop.*'
 url_pdf: https://ceur-ws.org/Vol-3448/paper-18.pdf
