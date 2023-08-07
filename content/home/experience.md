@@ -30,7 +30,7 @@ experience:
     date_start: '2023-03-01'
     date_end: '2025-02-28'
     description: |1-
-      Research project concerning the usage of conversational agents in the public administration.
+      Research project concerning the usage of conversational agents to combat the digital divide in the interaction with public administration.
   - title: Research Fellow
     company: University of Udine
     company_url: 'https://www.uniud.it/it'
