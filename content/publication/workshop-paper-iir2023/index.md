@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: Fact-Checking at Scale with Crowdsourcing\: Experiments and Lessons Learned
+title: Fact-Checking at Scale with Crowdsourcing Experiments and Lessons Learned
 subtitle: ''
 summary: ''
 authors:
