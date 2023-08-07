@@ -28,7 +28,7 @@ design:
   - Third Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2022), Online.
 
 - **Reviewer For**:
-  - Information Processing & Management (2023). 
+  - Information Processing & Management (2023). [Journal ISSN](https://portal.issn.org/resource/ISSN/0306-4573). Contribution registered on ORCID profile.
   - Springer Nature Scientific Report (2023).
   - 13th Italian Information Retrieval Workshop (IIR 2023), Pisa, Italy.
   - Information Processing & Management (2022).
