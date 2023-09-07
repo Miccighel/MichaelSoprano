@@ -19,7 +19,6 @@ design:
   columns: "2"
 ---
 - **Organizational Roles**:
-  - CARE: The first Workshop on Conversational Agents and Responsible Ethics in Healthcare at The European Federation of Medical Informatics  Special Topic Conference (EFMI STC 2023). October 25--26, 2023, Torino, Italy. <b>Organizer</b>.
   - Fourth Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2022), Online. <b>Proceedings and Website Chair</b>.
 
 - **Program Committee Roles**:
@@ -28,7 +27,7 @@ design:
   - Third Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2022), Online.
 
 - **Reviewer For**:
-  - Information Processing & Management (2023). [Journal ISSN](https://portal.issn.org/resource/ISSN/0306-4573). Contribution registered on ORCID profile.
+  - Information Processing & Management (2023). [Journal ISSN: 0306-4573](https://portal.issn.org/resource/ISSN/0306-4573). Contribution registered on ORCID profile.
   - Springer Nature Scientific Report (2023).
   - 13th Italian Information Retrieval Workshop (IIR 2023), Pisa, Italy.
   - Information Processing & Management (2022).
