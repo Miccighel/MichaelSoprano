@@ -61,6 +61,9 @@ social:
 - icon: scopus
   icon_pack: ai
   link: https://www.scopus.com/authid/detail.uri?authorId=57203392311
+- icon: clarivate
+  icon_pack: ai
+  link: https://www.webofscience.com/wos/author/record/JDD-6660-2023
 - icon: dblp
   icon_pack: ai
   link: https://dblp.org/pid/222/1241.html
