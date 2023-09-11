@@ -6,7 +6,7 @@ event_url: https://sigir.org/sigir2020/
 
 location: Phoenix, U.S.A.
 
-summary: "Conference Talk - The 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval. Held remotely due to COVID-19 (pre-recorded contribution)."
+summary: "Conference Talk - The 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval. July 25th, 2020. Xi'an, China. Held remotely as a pre-recorded contribution due to the COVID-19 pandemic."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.

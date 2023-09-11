@@ -6,7 +6,7 @@ event_url: https://sigir.org/sigir2020/
 
 location: Phoenix, U.S.A.
 
-summary: "Conference Talk - The 15th ACM International Conference on Web Search and Data Mining. Held remotely due to COVID-19 (pre-recorded contribution)."
+summary: "Conference Talk - The 15th ACM International Conference on Web Search and Data Mining. February 15th, 2022. Phoenix, U.S.A. Held remotely as a pre-recorded contribution due to the COVID-19 pandemic."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.

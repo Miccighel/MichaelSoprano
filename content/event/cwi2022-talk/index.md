@@ -1,25 +1,25 @@
 ---
-title: "The COVID-19 Infodemic: Can The Crowd Judge Recent Misinformation Objectively?"
+title: "Longitudinal Loyalty: Understanding the Barriers to Running Longitudinal Studies on Crowdsourcing Platforms"
 
-event: The 29th ACM International Conference on Information and Knowledge Management
-event_url: https://www.cikm2020.org/
+event: The 15th ACM International Conference on Web Search and Data Mining
+event_url: https://sigir.org/sigir2020/
 
-location:  Galway, Ireland.
+location: Centrum Wiskunde & Informatica, Amsterdam, The Netherlands.
 
-summary: "Conference Talk - The 29th ACM International Conference on Information and Knowledge Management (CIKM 2020). October 19th, 2020. Galway, Ireland. Held remotely as a pre-recorded contribution due to the COVID-19 pandemic."
+summary: "Internal Talk - Centrum Wiskunde & Informatica. June 14th, Amsterdam, The Netherlands."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2020-10-19"
-date_end: "2020-10-23"
+date: "2022-06-15"
+date_end: "2022-06-15"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
 #publishDate: "2017-01-01T00:00:00Z"
 
 authors: [Michael Soprano]
-tags: [covid-19, crowdsourcing]
+tags: [crowdsourcing, longitudinal study, survey]
 
 # Is this a featured talk? (true/false)
 featured: false
@@ -35,8 +35,8 @@ image:
 #  url: https://twitter.com/georgecushen
 #url_code: ""
 #url_pdf: ""
-url_slides: "https://docs.google.com/presentation/d/1JOFP2TaAibYcHEoJtjR5GNysGNBEgEo0j_z6JAoIr00/edit?usp=sharing"
-url_video: "https://dl.acm.org/doi/10.1145/3340531.3412048"
+url_slides: "https://docs.google.com/presentation/d/1YBHKOKY_TdaCfwO9-pqm_jDGKYUiyXaKXj35pR3pSoM/edit?usp=sharing"
+#url_video: "https://dl.acm.org/doi/abs/10.1145/3488560.3502182"
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.

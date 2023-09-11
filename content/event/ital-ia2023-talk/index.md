@@ -6,7 +6,7 @@ event_url: https://www.ital-ia2023.it/
 
 location: Pisa, Italy.
   T
-summary: "Workshop Talk - Terzo Convegno Nazionale CINI sull'Intelligenza Artificiale (Ital-IA 2023). May 29-31, 2023. Pisa, Italy."
+summary: "Workshop Talk - Terzo Convegno Nazionale CINI sull'Intelligenza Artificiale (Ital-IA 2023). May 29th, 2023. Pisa, Italy."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.

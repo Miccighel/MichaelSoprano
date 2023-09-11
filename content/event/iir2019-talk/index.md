@@ -6,7 +6,7 @@ event_url: https://iir2019.dei.unipd.it/
 
 location:  Padova, Italy.
 
-summary: "Workshop Talk - Italian Information Retrieval Workshop (IIR 2019). September 16-18, 2019. Padova, Italy."
+summary: "Workshop Talk - Italian Information Retrieval Workshop (IIR 2019). September 16th, 2019. Padova, Italy."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.
