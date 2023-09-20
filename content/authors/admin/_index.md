@@ -108,7 +108,7 @@ highlight_name: false
 
 Hello! I am a Postdoctoral Research Fellow at the University of Udine.
 
-I successfully defended my Ph.D. dissertation on May 22nd, 2023, and I plan to release it publicly soon. In 2021, I wrote a brief research statement {{< staticref "media/research-statement.pdf" "newtab" >}}research statement{{< /staticref >}}.
+I successfully defended my Ph.D. dissertation on May 22nd, 2023, and I plan to release it publicly soon. In 2021, I wrote a brief {{< staticref "media/research-statement.pdf" "newtab" >}}research statement{{< /staticref >}}.
 
 My research interest centers around utilizing crowdsourcing-based approaches to address the ever-increasing problem of misinformation spread. As a long-term goal, I would like to leverage my skills in Computer Science to make a lasting contribution to the scientific community.
 
