@@ -21,8 +21,9 @@ interests:
 - Academic Research
 - Computer Science
 - Video Games
-- Books, Comics, and Literature
-- Running, Hiking, Skiing, and Biking
+- Literature
+- Running & Hiking
+- Skiing
 - Digital Photography
 
 # Education to show in About widget
@@ -105,10 +106,10 @@ email: ""
 highlight_name: false
 ---
 
-Hello! I am a Post Doctoral Research Fellow at the University of Udine.
+Hello! I am a Postdoctoral Research Fellow at the University of Udine.
 
-I successfully defended my PhD dissertation on May 22nd, 2023. I will release it publicly soon. Back in 2021, I wrote a short {{< staticref "media/research-statement.pdf" "newtab" >}}research statement{{< /staticref >}}.
+I successfully defended my Ph.D. dissertation on May 22nd, 2023, and I plan to release it publicly soon. In 2021, I wrote a brief research statement {{< staticref "media/research-statement.pdf" "newtab" >}}research statement{{< /staticref >}}.
 
-My research interest consists in using crowdsourcing-based approaches to cope with the ever-increasing amount of misinformation which is spreading online. As a long-term goal, I would like to keep making the most out of my skills in Computer Science to carry out novel research and leave a tiny trace in the scientific world.
+My research interest centers around utilizing crowdsourcing-based approaches to address the ever-increasing problem of misinformation spread. As a long-term goal, I would like to leverage my skills in Computer Science to make a lasting contribution to the scientific community.
 
-{{< icon name="download" pack="fas" >}} Download my Curriculum Vitae in {{< staticref "media/Curriculum_EN.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/Curriculum_IT.pdf" "newtab" >}}Italian{{< /staticref >}} and have a look at my {{< staticref "media/masterThesis.pdf" "newtab" >}}Master{{< /staticref >}}, {{< staticref "media/bachelorThesis.pdf" "newtab" >}}Bachelor{{< /staticref >}}, or {{< staticref "media/highSchoolThesis.pdf" "newtab" >}}High School{{< /staticref >}} theses.
+{{< icon name="download" pack="fas" >}} Download my Curriculum Vitae in {{< staticref "media/Curriculum_EN.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/Curriculum_IT.pdf" "newtab" >}}Italian{{< /staticref >}}, and feel free to explore my {{< staticref "media/masterThesis.pdf" "newtab" >}}Master's{{< /staticref >}}, {{< staticref "media/bachelorThesis.pdf" "newtab" >}}Bachelor's{{< /staticref >}}, or {{< staticref "media/highSchoolThesis.pdf" "newtab" >}}High School{{< /staticref >}} theses.
