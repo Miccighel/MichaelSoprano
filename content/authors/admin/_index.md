@@ -6,7 +6,7 @@ title: Michael Soprano
 superuser: true
 
 # Role/position/tagline
-role: Post Doctoral Research Fellow
+role: Postdoctoral Research Fellow
 
 # Organizations/Affiliations to show in About widget
 organizations:
