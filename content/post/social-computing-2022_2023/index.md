@@ -1,5 +1,5 @@
 ---
-title: Social Computing - 2021/2022
+title: Social Computing - 2022/2023
 subtitle: Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine, Academic Year 2022/2023
 
 # Summary for listings and search engines
@@ -46,8 +46,8 @@ categories:
 ## Teachers
 
 - [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Theory
-- - **David La Barbera** - Laboratory
-- **Michael Soprano** - Laboratory
+- **David La Barbera** - Laboratory (Part 1)
+- **Michael Soprano** - Laboratory (Part 2)
 
 ## Aims
 
