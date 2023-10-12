@@ -36,7 +36,7 @@ projects: []
 publishDate: '2023-09-20T17:40:00+01:00'
 publication_types:
 - '1'
-abstract: 'In this paper, we present our journey in exploring the use of crowdsourcing for fact-checking. We discuss our early experiments aimed towards the identification of the best possible setting for misinformation assessment using crowdsourcing. Our results indicate that the crowd can effectively address misinformation at scale, showing some degree of correlation with experts. We also highlight the influence of worker background on the quality of truthfulness assessments.'
+abstract: "Conversational agents provide new modalities to access and interact with services and applications. Recently, they saw a backfire in their popularity, due to the recent advancements in language models. Such agents have been adopted in various fields such as healthcare and education, yet they received little attention in public administration. We describe as a practical use case a service of the portal that provides citizens of the Italian region of Friuli-Venezia Giulia with services related to their own Electronic Health Records. The service considered allows them to search for the available doctors and pediatricians in the region's municipalities. We rely on the use case described to propose a model for a conversational agent-based access modality. The model proposed allows us to lay the foundation for more advanced chatbot-like implementations which will use also alternative input modalities, such as voice-based communication."
 publication: '*Proceedings of the Italia Intelligenza Artificiale - Thematic Workshops co-located with the 3rd CINI National Lab AIIS Conference on Artificial Intelligence.*'
 url_pdf: https://ceur-ws.org/Vol-3486/96.pdf
 ---
