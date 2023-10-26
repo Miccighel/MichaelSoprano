@@ -1,7 +1,7 @@
 ---
 title: "Towards a Conversational-Based Agent for Healthcare"
 
-event: CARE\: Conversational Agents and Responsible Ethics in Healthcare Workshop at the European Federation of Medical Informatics Special Topic Conference 2023
+event: CARE - Conversational Agents and Responsible Ethics in Healthcare Workshop at the European Federation of Medical Informatics Special Topic Conference 2023
 event_url: https://www.stc2023.org/
 
 location: Turin, Italy.
