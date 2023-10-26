@@ -19,6 +19,7 @@ design:
   columns: "2"
 ---
 - **Organizational Roles**:
+  - CARE: Conversational Agents and Responsible Ethics in Healthcare - Workshop at the European Federation of Medical Informatics Special Topic Conference 2023 (EFMI STC 2023), Turin, October 27, 2023. <b>Organizer</b>.
   - Fourth Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2022), Online. <b>Proceedings and Website Chair</b>.
 
 - **Program Committee Roles**:
@@ -28,9 +29,9 @@ design:
 
 - **Reviewer For**:
   - Information Processing & Management (2023). [Journal ISSN: 0306-4573](https://portal.issn.org/resource/ISSN/0306-4573). Contribution registered on ORCID profile.
-  - Springer Nature Scientific Report (2023).
+  - Springer Nature Scientific Report (2023). [Journal ISSN: 2045-2322](https://portal.issn.org/resource/ISSN/2045-2322).
   - 13th Italian Information Retrieval Workshop (IIR 2023), Pisa, Italy.
-  - Information Processing & Management (2022).
+  - Information Processing & Management (2022). [Journal ISSN: 0306-4573](https://portal.issn.org/resource/ISSN/0306-4573).
   - Tenth AAAI Conference on Human Computation and Crowdsourcing (HCOMP 2022), Online.
   - Conference and Labs of the Evaluation Forum (CLEF 2022), Bologna, Italy.
   - 44th European Conference on Information Retrieval (ECIR 2022), Stavanger, Norway.
@@ -42,9 +43,9 @@ design:
   - 15th Italian Research Conference On Digital Libraries (IRCDL 2019), Pisa.
 
 - **Mentoring**:
-  - Co-supervision of the theses of 2 Master (MSC), 11 Bachelor (BSC) Students, and various students advanced projects
+  - Co-supervision of the theses of 3 Master (MSC), 11 Bachelor (BSC) Students, and various students advanced projects
     and seminars
 
 - **Affiliations**:
-  - Member of the [SMDC Laboratory (Social, Mobile, Data, Crowd)](http://smdc.uniud.it/smdc/membri-2/)
+  - Member of the [Social, Mobile, Data, & Crowd Laboratory](http://smdc.uniud.it/smdc/membri-2/) (SMDC).
      

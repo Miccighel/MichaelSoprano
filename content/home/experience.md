@@ -23,9 +23,9 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 
 experience:
-  - title: Post Doctoral Research Fellow
+  - title: Postdoctoral Research Fellow
     company: University of Udine
-    company_url: 'https://www.uniud.it/it'
+    company_url: 'https://www.uniud.it/en'
     location: Udine, Italy
     date_start: '2023-03-01'
     date_end: '2025-02-28'
@@ -33,7 +33,7 @@ experience:
       Research project concerning the usage of conversational agents to combat the digital divide in the interaction with public administration.
   - title: Research Fellow
     company: University of Udine
-    company_url: 'https://www.uniud.it/it'
+    company_url: 'https://www.uniud.it/en'
     location: Udine, Italy
     date_start: '2018-06-15'
     date_end: '2019-10-30'

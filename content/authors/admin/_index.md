@@ -29,16 +29,16 @@ interests:
 # Education to show in About widget
 education:
   courses:
-  - course: PhD in Computer Science, Mathematics and Physics, 35th cycle.
+  - course: PhD in Computer Science, Mathematics and Physics, Cum Laude. 35th cycle.
     institution: University of Udine
     year: Nov. 2019 - Jan. 2023
-  - course: Master Degree in Computer Science
+  - course: Master Degree in Computer Science, 109/110.
     institution: University of Udine
     year: Mar. 2015 - Mar. 2018
-  - course: Bachelor Degree in Web Technologies and Multimedia
+  - course: Bachelor Degree in Web Technologies and Multimedia, 101/110.
     institution: University of Udine
     year: Oct. 2011 - Mar. 2015
-  - course: High School Diploma in Computer Science
+  - course: High School Diploma in Computer Science, 77/100.
     institution: I.S.I.S. Raimondo D’Aronco
     year: Oct. 2006 - Jun. 2011
 
