@@ -1,25 +1,25 @@
 ---
-title: "Towards a Conversational-Based Agent for Healthcare"
+title: "Bias and Fairness in Effectiveness Evaluation by Means of Network Analysis and Mixture Model"
 
-event: CARE - Conversational Agents and Responsible Ethics in Healthcare Workshop at the European Federation of Medical Informatics Special Topic Conference 2023
-event_url: https://www.stc2023.org/
+event: Italian Information Retrieval Workshop
+event_url: https://iir2019.dei.unipd.it/
 
-location: Turin, Italy.
+location:  Padova, Italy.
 
-summary: "Workshop Talk - European Federation of Medical Informatics Special Topic Conference 2023 (EFMI STC 2023). Turin, Italy."
+summary: "Workshop Talk - Italian Information Retrieval Workshop (IIR 2019). September 16th, 2019. Padova, Italy."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2023-10-27"
-date_end: "2023-10-27"
+date: "2023-09-16"
+date_end: "2023-09-18"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
 #publishDate: "2017-01-01T00:00:00Z"
 
 authors: [Michael Soprano]
-tags: [conversational agent, electronic health record, large language models, public administration]
+tags: [bias, fairness, evaluation]
 
 # Is this a featured talk? (true/false)
 featured: false
@@ -35,8 +35,8 @@ image:
 #  url: https://twitter.com/georgecushen
 #url_code: ""
 #url_pdf: ""
-url_slides: "https://docs.google.com/presentation/d/1IZaI38oOJ3FktP79dINPOL_9lqXmQf-a3TC7vf5qmfU/edit?usp=sharing"
-#url_video: "https://dl.acm.org/doi/abs/10.1145/3488560.3502182"
+url_slides: "https://docs.google.com/presentation/d/1F751FzwnxZjA0y0ctZy91BWEJzlCV19L9fF5OCn20Lo/edit?usp=sharing"
+#url_video: ""
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
