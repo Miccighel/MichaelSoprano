@@ -11,8 +11,8 @@ summary: "Workshop Talk - European Federation of Medical Informatics Special Top
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2023-10-26"
-date_end: "2023-10-26"
+date: "2023-10-26T08:30:00"
+date_end: "2023-10-26T09:10:00"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
