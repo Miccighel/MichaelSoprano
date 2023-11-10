@@ -30,7 +30,7 @@ experience:
     date_start: '2023-03-01'
     date_end: '2025-02-28'
     description: |1-
-      Research project concerning the usage of conversational agents to combat the digital divide in the interaction with public administration.
+      Research project on using conversational agents to address the digital divide in interactions with public administration.
   - title: Research Fellow
     company: University of Udine
     company_url: 'https://www.uniud.it/en'
@@ -38,7 +38,7 @@ experience:
     date_start: '2018-06-15'
     date_end: '2019-10-30'
     description: |1-
-      Research project funded by SISSA Medialab dedicated to the study (definition, design, implementation and evaluation) of Readersourcing 2.0, an ecosystem providing an implementation of an approach called Readersourcing, which is proposed as an alternative to the standard peer review activity that aims to exploit the otherwise lost opinions of readers. The general objective is to verify the effectiveness of crowdsourcing for quality measurement in scholarly publishing. 
+      Research project co-funded by SISSA Medialab dedicated to the design, implementation, and evaluation an ecosystem that provides an alternative to the standard peer review activity in the scholarly publishing process.
   - title: Full Stack Web Developer
     company: Datamantix S.r.l.
     company_url: 'https://datamantix.com/'
@@ -46,7 +46,7 @@ experience:
     date_start: '2017-06-01'
     date_end: '2019-02-25'
     description: |1-
-      Design, development and maintenance of various kinds of web applications and chatbots.
+      Design, development and maintenance of various types of web applications and chatbots.
   - title: Full Stack Web Developer
     company: Archeido S.r.l.
     company_url: 'https://archeido.com/'
@@ -54,13 +54,13 @@ experience:
     date_start: '2017-08-01'
     date_end: '2018-02-25'
     description: |1-
-      Development of a web application concerning management and visualization of financial assets.
+      Development of a web application for the management and visualization of financial assets.
   - title: Full Stack Web Developer
     company: Troublezine
     location: Udine, Italy
     date_start: '2015-11-01'
     date_end: '2016-02-25'
     description: |1-
-      Design, development and maintenance of a blog which proposed news and events about music.
+      Design, development and maintenance of a blog that offers news and events related to music.
 
 ---
