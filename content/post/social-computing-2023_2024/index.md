@@ -6,7 +6,7 @@ subtitle: Bachelor's Degree in Internet of Things, Big Data & Web at the Univers
 summary: "Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine. Academic Year 2022/2023. Lectures: 2. Hours: 4"
 
 # Link this post with a project
-projects: []
+projects: [ ]
 
 # Date published
 date: "2022-03-18T11:00:00Z"
@@ -29,18 +29,18 @@ image:
   preview_only: false
 
 authors:
-- admin
+  - admin
 
 tags:
-- Amazon Mechanical Turk
-- Toloka
-- Prolific
-- Angular
-- Crowdsourcing
-- Data Analysis
+  - Amazon Mechanical Turk
+  - Toloka
+  - Prolific
+  - Angular
+  - Crowdsourcing
+  - Data Analysis
 
 categories:
-- teaching
+  - teaching
 ---
 
 ## Teachers

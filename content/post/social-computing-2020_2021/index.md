@@ -56,17 +56,14 @@ categories:
 
 ## Aims
 
-The aim of the course is to provide to the student the foundational knowledge and the 
-practical skills concerning the area of social informatics. 
-The course discusses both the so-called Social Media (Facebook, Twitter, etc.) 
-and the Crowdsourcing phenomenon. In the first case, social behavior is supported by 
-computational systems; in the second case, computational systems are supported by social behavior. 
-The course deals with conceptual topics, theoretical foundations, and practical applications.
+The aim of the course is to provide to the student the foundational knowledge and the practical skills concerning the area of social informatics. The course discusses both the so-called Social Media (
+Facebook, Twitter, etc.)and the Crowdsourcing phenomenon. In the first case, social behavior is supported by computational systems; in the second case, computational systems are supported by social
+behavior. The course deals with conceptual topics, theoretical foundations, and practical applications.
 
 ## Table of Contents
 
-My contribution to the course consisted in teaching practical applications of the concepts outlined by prof. Stefano Mizzaro 
-for a total of 6 lectures (12 hours). The course's language is Italian.
+I contributed to the course by teaching practical applications of the concepts outlined by Professor Stefano Mizzaro in a total of 6 lectures (12 hours). Additionally, I assigned course assignment to
+the students. The course is conducted in Italian.
 
 - **Lesson 1**: [Twitter API: Introduzione & Richiami](https://www.dropbox.com/s/m71dwyjtk3uimvv/SC_MS_1_Twitter_API_Intro_Ric.pptx?dl=0)  
 - **Lesson 2**: [Twitter API: Tweepy & Requests](https://www.dropbox.com/s/qmei4q5rauxqaxv/SC_MS_2-Twitter_API_Tweepy_Req.pptx?dl=0)  
