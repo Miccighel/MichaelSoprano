@@ -28,7 +28,6 @@ experience:
     company_url: 'https://www.dmif.uniud.it/en/'
     location: Udine, Italy
     date_start: '2023-12-01'
-    date_end: 'Today'
     description: |1-
       Definition of an evaluation framework for misinformation detection systems, considering various aspects such as the creation of appropriately labeled datasets, addressing biases in dataset definition, and establishing suitable evaluation measures that specifically consider the concept of truthfulness in information.
   - title: Postdoctoral Research Fellow
