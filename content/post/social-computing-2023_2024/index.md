@@ -59,3 +59,5 @@ behavior. The course deals with conceptual topics, theoretical foundations, and 
 
 My contribution to the course included teaching practical applications of the concepts outlined by Professor Stefano Mizzaro for a total of 2 lectures (4 hours). Additionally, I provided the students
 with their second course assignment. The course is conducted in Italian.
+
+- **Lesson 4-5**: [Crowd_Frame](https://www.dropbox.com/scl/fi/4rmiryatmpzhyrcmejuyb/SC_MS_4_Crowd_Frame.pptx?rlkey=1cd5jhx1n2fi491qvkagau3un&dl=0)  

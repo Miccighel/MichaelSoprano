@@ -65,8 +65,8 @@ behavior. The course deals with conceptual topics, theoretical foundations, and 
 I contributed to the course by teaching practical applications of the concepts outlined by Professor Stefano Mizzaro in a total of 6 lectures (12 hours). Additionally, I assigned course assignment to
 the students. The course is conducted in Italian.
 
-- **Lesson 1**: [Python / Rest: Richiami](https://www.dropbox.com/s/0wqaeayj7waf2ov/SC_MS_1_Python_Rest_Richiami.pptx?dl=0)
-- **Lesson 2**: [Twitter API: Tweepy](https://www.dropbox.com/s/97nktbsh5drvooe/SC_MS_2-Twitter_API_Tweepy.pptx?dl=0)
-- **Lesson 3**: [Twitter API: Endpoint V2](https://www.dropbox.com/s/1gjh87hxgismfsg/SC_MS_3-EndpointV2_Req.pptx?dl=0)
-- **Lesson 4**: [Grafi: NetworkX](https://www.dropbox.com/s/las3nhr438s2z70/SC_MS_4_Grafi_NetworkX.pptx?dl=0)
-- **Lesson 5**: [Crowd_Frame](https://www.dropbox.com/s/ngjvuueqiqk8skb/SC_MS_5_Crowd_Frame.pptx?dl=0)  
+- **Lesson 1**: [Python / Rest: Richiami](https://www.dropbox.com/scl/fi/az4z8x0zu3ysajpjsfs0h/SC_MS_1_Python_Rest_Richiami.pptx?rlkey=ozxl5bwwpp56wjgp3ty01v7tf&dl=0)
+- **Lesson 2**: [Twitter API: Tweepy](https://www.dropbox.com/scl/fi/xrtha37m67zob5k7sresz/SC_MS_2-Twitter_API_Tweepy.pptx?rlkey=i54k7eha11f59ies21pyn9u16&dl=0)
+- **Lesson 3**: [Twitter API: Endpoint V2](https://www.dropbox.com/scl/fi/93umif7xa71woszewr5zo/SC_MS_3-EndpointV2_Req.pptx?rlkey=zp1vux6vjp1x6xc7evip6l0d4&dl=0)
+- **Lesson 4**: [Grafi: NetworkX](https://www.dropbox.com/scl/fi/d22udpapqnitwuc32ban4/SC_MS_4_Grafi_NetworkX.pptx?rlkey=3r949h14dqxsnzwoffprdgaz7&dl=0)
+- **Lesson 5-6**: [Crowd_Frame](https://www.dropbox.com/scl/fi/tmgtqxt3ihnvtgj5r0150/SC_MS_5_Crowd_Frame.pptx?rlkey=prdahfpu3u0y7k48dzi2mc1fk&dl=0)  

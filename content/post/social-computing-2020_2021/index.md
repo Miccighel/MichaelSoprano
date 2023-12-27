@@ -65,7 +65,7 @@ behavior. The course deals with conceptual topics, theoretical foundations, and 
 I contributed to the course by teaching practical applications of the concepts outlined by Professor Stefano Mizzaro in a total of 6 lectures (12 hours). Additionally, I assigned course assignment to
 the students. The course is conducted in Italian.
 
-- **Lesson 1**: [Twitter API: Introduzione & Richiami](https://www.dropbox.com/s/m71dwyjtk3uimvv/SC_MS_1_Twitter_API_Intro_Ric.pptx?dl=0)  
-- **Lesson 2**: [Twitter API: Tweepy & Requests](https://www.dropbox.com/s/qmei4q5rauxqaxv/SC_MS_2-Twitter_API_Tweepy_Req.pptx?dl=0)  
-- **Lesson 3**: [Grafi: NetworkX](https://www.dropbox.com/s/cufccvjko8g7fw7/SC_MS_3_Grafi_NetworkX.pptx?dl=0)  
-- **Lesson 4**: [Crowd_Frame: How To](https://www.dropbox.com/s/pj6jlhkw5nwe6vy/SC_MS_4_Crowd_Frame.pptx?dl=0)  
+- **Lesson 1**: [Twitter API: Introduzione & Richiami](https://www.dropbox.com/scl/fi/xpq3b6zhzf3zpczqkwn9g/SC_MS_1_Twitter_API_Intro_Ric.pptx?rlkey=trdwm6yxgohyktj79c0bu3xsx&dl=0)  
+- **Lesson 2-3**: [Twitter API: Tweepy & Requests](https://www.dropbox.com/scl/fi/rtdvumim9mzuihlu3zlxu/SC_MS_2-Twitter_API_Tweepy_Req.pptx?rlkey=t7rms0spo58a612oniuda1vey&dl=0)  
+- **Lesson 4**: [Grafi: NetworkX](https://www.dropbox.com/scl/fi/0e8iz71e45mxix4cmxiam/SC_MS_3_Grafi_NetworkX.pptx?rlkey=ab76koii4j1we6zpwatihhh10&dl=0)  
+- **Lesson 4-5**: [Crowd_Frame: How To](https://www.dropbox.com/scl/fi/56egim1ixzm1bm4tn988x/SC_MS_4_Crowd_Frame.pptx?rlkey=yl0z8mqxb6q6n4u1h2etfuz5e&dl=0)  
