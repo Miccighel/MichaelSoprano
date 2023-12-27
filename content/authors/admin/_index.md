@@ -29,7 +29,7 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course: PhD in Computer Science, Mathematics and Physics, Cum Laude.
+    - course: PhD in Computer Science, Mathematics and Physics, Cum Laude
       institution: University of Udine, Udine, Italy.
       year: Nov. 2019 - Jan. 2023
     - course: Master Degree in Computer Science, 109/110
