@@ -24,43 +24,58 @@ date_format: Jan 2006
 
 experience:
   - title: Postdoctoral Research Fellow
-    company: University of Udine
-    company_url: 'https://www.uniud.it/en'
+    company: Department of Mathematics, Computer Science and Physics (DMIF), University of Udine.
+    company_url: 'https://www.dmif.uniud.it/en/'
+    location: Udine, Italy
+    date_start: '2023-12-01'
+    date_end: 'Today'
+    description: |1-
+      Definition of an evaluation framework for misinformation detection systems, considering various aspects such as the creation of appropriately labeled datasets, addressing biases in dataset definition, and establishing suitable evaluation measures that specifically consider the concept of truthfulness in information.
+  - title: Postdoctoral Research Fellow
+    company: Department of Economic and Statistical Sciences (DIES), University of Udine.
+    company_url: 'https://dies.uniud.it/it'
     location: Udine, Italy
     date_start: '2023-03-01'
-    date_end: '2025-02-28'
+    date_end: '2023-11-30'
     description: |1-
-      Research project on using conversational agents to address the digital divide in interactions with public administration.
+      Research project focused on exploring conversational agent-based eGovernment applications for the Italian public administration, with a particular emphasis on healthcare.
+  - title: Self-employed Worker
+    company: Polytechnic Department of Engineering and Architecture (DPIA), University of Udine, University of Udine.
+    company_url: 'https://dpia.uniud.it/it'
+    location: Udine, Italy
+    date_start: '2022-01-01'
+    date_end: '2022-03-15'
+    description: |1-
+      Development of a web application dedicated to the comparability and reproducibility of research results in the field of combinatorial optimization.
   - title: Research Fellow
-    company: University of Udine
+    company: Department of Mathematics, Computer Science and Physics (DMIF), University of Udine.
     company_url: 'https://www.uniud.it/en'
     location: Udine, Italy
     date_start: '2018-06-15'
     date_end: '2019-10-30'
     description: |1-
-      Research project co-funded by SISSA Medialab dedicated to the design, implementation, and evaluation an ecosystem that provides an alternative to the standard peer review activity in the scholarly publishing process.
-  - title: Full Stack Web Developer
+      Research project co-funded by SISSA Medialab is dedicated to the design, implementation, and evaluation of an ecosystem that provides an alternative to the standard peer review activity in the scholarly publishing process.
+  - title: Self-employed Worker
     company: Datamantix S.r.l.
     company_url: 'https://datamantix.com/'
     location: Udine, Italy
     date_start: '2017-06-01'
     date_end: '2019-02-25'
     description: |1-
-      Design, development and maintenance of various types of web applications and chatbots.
-  - title: Full Stack Web Developer
+      Design, development, and maintenance as a full-stack web developer of various types of web applications and a chatbot.
+  - title: Self-employed Worker
     company: Archeido S.r.l.
     company_url: 'https://archeido.com/'
     location: Udine, Italy
     date_start: '2017-08-01'
     date_end: '2018-02-25'
     description: |1-
-      Development of a web application for the management and visualization of financial assets.
-  - title: Full Stack Web Developer
+      Development as a full-stack web developer of a web application for managing and visualizing financial assets.
+  - title: Self-employed Worker
     company: Troublezine
     location: Udine, Italy
     date_start: '2015-11-01'
     date_end: '2016-02-25'
     description: |1-
-      Design, development and maintenance of a blog that offers news and events related to music.
-
+      Design, development, and maintenance as a full-stack web developer of a blog that offers news and events related to music.
 ---
