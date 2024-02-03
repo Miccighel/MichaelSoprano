@@ -106,7 +106,7 @@ email: ""
 highlight_name: false
 ---
 
-Hello! I am a Postdoctoral Research Fellow at the University of Udine.
+I hold a Ph.D. in Computer Science. I am an avid reader and find enjoyment in running, skiing, hiking, playing video games, and more.
 
 I successfully defended my Ph.D. dissertation on May 22nd, 2023, and plan to release it publicly soon. In 2021, I wrote a brief {{< staticref "media/research-statement.pdf" "newtab" >}}research statement{{< /staticref >}}.
 
