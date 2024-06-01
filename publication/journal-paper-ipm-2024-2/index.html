@@ -5,8 +5,8 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=generator content="Wowchemy 5.1.0 for Hugo">
 <meta name=author content="Michael Soprano">
-<meta name=description content="Due to the increasing amount of information shared online every day, the need for sound and reliable ways of distinguishing between trustworthy and non-trustworthy information is as present as ever. One technique for performing fact-checking at scale is to employ human intelligence in the form of crowd workers. Although earlier work has suggested that crowd workers can reliably identify misinformation, cognitive biases of crowd workers may reduce the quality of truthfulness judgments in this context. We performed a systematic exploratory analysis of publicly available crowdsourced data to identify a set of potential systematic biases that may occur when crowd workers perform fact-checking tasks. Following this exploratory study, we collected a novel data set of crowdsourced truthfulness judgments to validate our hypotheses. Our findings suggest that workers generally overestimate the truthfulness of statements and that different individual characteristics (i.e., their belief in science) and cognitive biases (i.e., the affect heuristic and overconfidence) can affect their annotations. Interestingly, we find that, depending on the general judgment tendencies of workers, their biases may sometimes lead to more accurate judgments.">
-<link rel=alternate hreflang=en-us href=https://michaelsoprano.com/publication/conference-paper-facct-2022/>
+<meta name=description content="There is an important ongoing effort aimed to tackle misinformation and to perform reliable fact-checking by employing human assessors at scale, with a crowdsourcing-based approach. Previous studies on the feasibility of employing crowdsourcing for the task of misinformation detection have provided inconsistent results: some of them seem to confirm the effectiveness of crowdsourcing for assessing the truthfulness of statements and claims, whereas others fail to reach an effectiveness level higher than automatic machine learning approaches, which are still unsatisfactory. In this paper, we aim at addressing such inconsistency and understand if truthfulness assessment can indeed be crowdsourced effectively. To do so, we build on top of previous studies; we select some of those reporting low effectiveness levels, we highlight their potential limitations, and we then reproduce their work attempting to improve their setup to address those limitations. We employ various approaches, data quality levels, and agreement measures to assess the reliability of crowd workers when assessing the truthfulness of (mis)information. Furthermore, we explore different worker features and compare the results obtained with different crowds. According to our findings, crowdsourcing can be used as an effective methodology to tackle misinformation at scale. When compared to previous studies, our results indicate that a significantly higher agreement between crowd workers and experts can be obtained by using a different, higher-quality, crowdsourcing platform and by improving the design of the crowdsourcing task. Also, we find differences concerning task and worker features and how workers provide truthfulness assessments.">
+<link rel=alternate hreflang=en-us href=https://michaelsoprano.com/publication/journal-paper-ipm-2024-2/>
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <meta name=theme-color content="#3f51b5">
 <script src=/js/mathjax-config.js></script>
@@ -24,24 +24,24 @@
 <link rel=manifest href=/index.webmanifest>
 <link rel=icon type=image/png href=/media/icon_hu3f4af4fb4ea5fd5fd33591028ccc9677_29877_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/media/icon_hu3f4af4fb4ea5fd5fd33591028ccc9677_29877_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://michaelsoprano.com/publication/conference-paper-facct-2022/>
+<link rel=canonical href=https://michaelsoprano.com/publication/journal-paper-ipm-2024-2/>
 <meta property="twitter:card" content="summary">
 <meta property="twitter:site" content="@https://twitter.com/#!/Miccighel_">
 <meta property="twitter:creator" content="@https://twitter.com/#!/Miccighel_">
 <meta property="og:site_name" content="Michael Soprano">
-<meta property="og:url" content="https://michaelsoprano.com/publication/conference-paper-facct-2022/">
-<meta property="og:title" content="The Effects of Crowd Worker Biases in Fact-Checking Tasks | Michael Soprano">
-<meta property="og:description" content="Due to the increasing amount of information shared online every day, the need for sound and reliable ways of distinguishing between trustworthy and non-trustworthy information is as present as ever. One technique for performing fact-checking at scale is to employ human intelligence in the form of crowd workers. Although earlier work has suggested that crowd workers can reliably identify misinformation, cognitive biases of crowd workers may reduce the quality of truthfulness judgments in this context. We performed a systematic exploratory analysis of publicly available crowdsourced data to identify a set of potential systematic biases that may occur when crowd workers perform fact-checking tasks. Following this exploratory study, we collected a novel data set of crowdsourced truthfulness judgments to validate our hypotheses. Our findings suggest that workers generally overestimate the truthfulness of statements and that different individual characteristics (i.e., their belief in science) and cognitive biases (i.e., the affect heuristic and overconfidence) can affect their annotations. Interestingly, we find that, depending on the general judgment tendencies of workers, their biases may sometimes lead to more accurate judgments."><meta property="og:image" content="https://michaelsoprano.com/media/icon_hu3f4af4fb4ea5fd5fd33591028ccc9677_29877_512x512_fill_lanczos_center_3.png">
+<meta property="og:url" content="https://michaelsoprano.com/publication/journal-paper-ipm-2024-2/">
+<meta property="og:title" content="Crowdsourced Fact-checking: Does It Actually Work? | Michael Soprano">
+<meta property="og:description" content="There is an important ongoing effort aimed to tackle misinformation and to perform reliable fact-checking by employing human assessors at scale, with a crowdsourcing-based approach. Previous studies on the feasibility of employing crowdsourcing for the task of misinformation detection have provided inconsistent results: some of them seem to confirm the effectiveness of crowdsourcing for assessing the truthfulness of statements and claims, whereas others fail to reach an effectiveness level higher than automatic machine learning approaches, which are still unsatisfactory. In this paper, we aim at addressing such inconsistency and understand if truthfulness assessment can indeed be crowdsourced effectively. To do so, we build on top of previous studies; we select some of those reporting low effectiveness levels, we highlight their potential limitations, and we then reproduce their work attempting to improve their setup to address those limitations. We employ various approaches, data quality levels, and agreement measures to assess the reliability of crowd workers when assessing the truthfulness of (mis)information. Furthermore, we explore different worker features and compare the results obtained with different crowds. According to our findings, crowdsourcing can be used as an effective methodology to tackle misinformation at scale. When compared to previous studies, our results indicate that a significantly higher agreement between crowd workers and experts can be obtained by using a different, higher-quality, crowdsourcing platform and by improving the design of the crowdsourcing task. Also, we find differences concerning task and worker features and how workers provide truthfulness assessments."><meta property="og:image" content="https://michaelsoprano.com/media/icon_hu3f4af4fb4ea5fd5fd33591028ccc9677_29877_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://michaelsoprano.com/media/icon_hu3f4af4fb4ea5fd5fd33591028ccc9677_29877_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:published_time" content="2021-03-15T14:36:35+00:00">
-<meta property="article:modified_time" content="2023-06-01T15:59:36+02:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://michaelsoprano.com/publication/conference-paper-facct-2022/"},"headline":"The Effects of Crowd Worker Biases in Fact-Checking Tasks","datePublished":"2021-03-15T14:36:35Z","dateModified":"2023-06-01T15:59:36+02:00","author":{"@type":"Person","name":"Tim Draws"},"publisher":{"@type":"Organization","name":"University of Udine","logo":{"@type":"ImageObject","url":"https://michaelsoprano.com/media/icon_hu3f4af4fb4ea5fd5fd33591028ccc9677_29877_192x192_fill_lanczos_center_3.png"}},"description":"Due to the increasing amount of information shared online every day, the need for sound and reliable ways of distinguishing between trustworthy and non-trustworthy information is as present as ever. One technique for performing fact-checking at scale is to employ human intelligence in the form of crowd workers. Although earlier work has suggested that crowd workers can reliably identify misinformation, cognitive biases of crowd workers may reduce the quality of truthfulness judgments in this context. We performed a systematic exploratory analysis of publicly available crowdsourced data to identify a set of potential systematic biases that may occur when crowd workers perform fact-checking tasks. Following this exploratory study, we collected a novel data set of crowdsourced truthfulness judgments to validate our hypotheses. Our findings suggest that workers generally overestimate the truthfulness of statements and that different individual characteristics (i.e., their belief in science) and cognitive biases (i.e., the affect heuristic and overconfidence) can affect their annotations. Interestingly, we find that, depending on the general judgment tendencies of workers, their biases may sometimes lead to more accurate judgments."}</script>
+<meta property="article:published_time" content="2024-05-31T15:00:00+01:00">
+<meta property="article:modified_time" content="2024-06-01T14:26:26+02:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://michaelsoprano.com/publication/journal-paper-ipm-2024-2/"},"headline":"Crowdsourced Fact-checking: Does It Actually Work?","datePublished":"2024-05-31T15:00:00+01:00","dateModified":"2024-06-01T14:26:26+02:00","author":{"@type":"Person","name":"David La Barbera"},"publisher":{"@type":"Organization","name":"University of Udine","logo":{"@type":"ImageObject","url":"https://michaelsoprano.com/media/icon_hu3f4af4fb4ea5fd5fd33591028ccc9677_29877_192x192_fill_lanczos_center_3.png"}},"description":"There is an important ongoing effort aimed to tackle misinformation and to perform reliable fact-checking by employing human assessors at scale, with a crowdsourcing-based approach. Previous studies on the feasibility of employing crowdsourcing for the task of misinformation detection have provided inconsistent results: some of them seem to confirm the effectiveness of crowdsourcing for assessing the truthfulness of statements and claims, whereas others fail to reach an effectiveness level higher than automatic machine learning approaches, which are still unsatisfactory. In this paper, we aim at addressing such inconsistency and understand if truthfulness assessment can indeed be crowdsourced effectively. To do so, we build on top of previous studies; we select some of those reporting low effectiveness levels, we highlight their potential limitations, and we then reproduce their work attempting to improve their setup to address those limitations. We employ various approaches, data quality levels, and agreement measures to assess the reliability of crowd workers when assessing the truthfulness of (mis)information. Furthermore, we explore different worker features and compare the results obtained with different crowds. According to our findings, crowdsourcing can be used as an effective methodology to tackle misinformation at scale. When compared to previous studies, our results indicate that a significantly higher agreement between crowd workers and experts can be obtained by using a different, higher-quality, crowdsourcing platform and by improving the design of the crowdsourcing task. Also, we find differences concerning task and worker features and how workers provide truthfulness assessments."}</script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#3f51b5",text:"rgb(255, 255, 255)"},button:{background:"rgb(255, 255, 255)",text:"#3f51b5"}},theme:"classic",content:{message:"This website uses cookies to ensure you get the best experience on our website.",dismiss:"Got it!",link:"Learn more",href:"/privacy/"}})})</script>
-<title>The Effects of Crowd Worker Biases in Fact-Checking Tasks | Michael Soprano</title>
+<title>Crowdsourced Fact-checking: Does It Actually Work? | Michael Soprano</title>
 </head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=e9991656c12f02af2ce45a24adb3515d>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=a51d41f7a834b97be079ca417f213722>
 <script src=/js/wowchemy-init.min.a8a181ea67095ef9fbb0e99ffbf585a0.js></script>
 <aside class=search-modal id=search>
 <div class=container>
@@ -137,42 +137,43 @@
 <div class=page-body>
 <div class=pub>
 <div class="article-container pt-3">
-<h1>The Effects of Crowd Worker Biases in Fact-Checking Tasks</h1>
+<h1>Crowdsourced Fact-checking: Does It Actually Work?</h1>
 <div class=article-metadata>
 <div>
 <span>
-Tim Draws</span>, <span>
 David La Barbera</span>, <span>
+Eddy Maddalena</span>, <span>
 Michael Soprano</span>, <span>
 Kevin Roitero</span>, <span>
+Gianluca Demartini</span>, <span>
 Davide Ceolin</span>, <span>
-Alessandro Checco</span>, <span>
+Damiano Spina</span>, <span>
 Stefano Mizzaro</span>
 </div>
 <span class=article-date>
-June 2022
+May 2024
 </span>
 </div>
 <div class="btn-links mb-3">
-<a href=# class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename=/publication/conference-paper-facct-2022/cite.bib>
+<a href=# class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename=/publication/journal-paper-ipm-2024-2/cite.bib>
 Cite
 </a>
-<a class="btn btn-outline-primary btn-page-header" href=https://doi.org/10.1145/3531146.3534629 target=_blank rel=noopener>
+<a class="btn btn-outline-primary btn-page-header" href=https://doi.org/10.1016/j.ipm.2024.103792 target=_blank rel=noopener>
 DOI
 </a>
 </div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>Due to the increasing amount of information shared online every day, the need for sound and reliable ways of distinguishing between trustworthy and non-trustworthy information is as present as ever. One technique for performing fact-checking at scale is to employ human intelligence in the form of crowd workers. Although earlier work has suggested that crowd workers can reliably identify misinformation, cognitive biases of crowd workers may reduce the quality of truthfulness judgments in this context. We performed a systematic exploratory analysis of publicly available crowdsourced data to identify a set of potential systematic biases that may occur when crowd workers perform fact-checking tasks. Following this exploratory study, we collected a novel data set of crowdsourced truthfulness judgments to validate our hypotheses. Our findings suggest that workers generally overestimate the truthfulness of statements and that different individual characteristics (i.e., their belief in science) and cognitive biases (i.e., the affect heuristic and overconfidence) can affect their annotations. Interestingly, we find that, depending on the general judgment tendencies of workers, their biases may sometimes lead to more accurate judgments.</p>
+<p class=pub-abstract>There is an important ongoing effort aimed to tackle misinformation and to perform reliable fact-checking by employing human assessors at scale, with a crowdsourcing-based approach. Previous studies on the feasibility of employing crowdsourcing for the task of misinformation detection have provided inconsistent results: some of them seem to confirm the effectiveness of crowdsourcing for assessing the truthfulness of statements and claims, whereas others fail to reach an effectiveness level higher than automatic machine learning approaches, which are still unsatisfactory. In this paper, we aim at addressing such inconsistency and understand if truthfulness assessment can indeed be crowdsourced effectively. To do so, we build on top of previous studies; we select some of those reporting low effectiveness levels, we highlight their potential limitations, and we then reproduce their work attempting to improve their setup to address those limitations. We employ various approaches, data quality levels, and agreement measures to assess the reliability of crowd workers when assessing the truthfulness of (mis)information. Furthermore, we explore different worker features and compare the results obtained with different crowds. According to our findings, crowdsourcing can be used as an effective methodology to tackle misinformation at scale. When compared to previous studies, our results indicate that a significantly higher agreement between crowd workers and experts can be obtained by using a different, higher-quality, crowdsourcing platform and by improving the design of the crowdsourcing task. Also, we find differences concerning task and worker features and how workers provide truthfulness assessments.</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Type</div>
 <div class="col-12 col-md-9">
-<a href=/publication/#1>
-Conference paper
+<a href=/publication/#2>
+Journal article
 </a>
 </div>
 </div>
@@ -185,7 +186,7 @@ Conference paper
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-<div class="col-12 col-md-9"><em>Proceedings of the ACM Conference on Fairness, Accountability, and Transparency.</em></div>
+<div class="col-12 col-md-9"><em>Information Processing & Management. Journal Ranks: Journal Citation Reports (JCR) Q1 (2023), Scimago (SJR) Q1 (2023).</em></div>
 </div>
 </div>
 <div class=col-md-1></div>
@@ -194,36 +195,35 @@ Conference paper
 <div class=space-below></div>
 <div class=article-style></div>
 <div class=article-tags>
-<a class="badge badge-light" href=/tag/bias/>bias</a>
 <a class="badge badge-light" href=/tag/crowdsourcing/>crowdsourcing</a>
 <a class="badge badge-light" href=/tag/misinformation/>misinformation</a>
-<a class="badge badge-light" href=/tag/explainability/>explainability</a>
-<a class="badge badge-light" href=/tag/truthfulness/>truthfulness</a>
+<a class="badge badge-light" href=/tag/fact-checking/>fact-checking</a>
+<a class="badge badge-light" href=/tag/truthfulness-assessment/>truthfulness assessment</a>
 </div>
 <div class=share-box aria-hidden=true>
 <ul class=share>
 <li>
-<a href="https://twitter.com/intent/tweet?url=https://michaelsoprano.com/publication/conference-paper-facct-2022/&text=The%20Effects%20of%20Crowd%20Worker%20Biases%20in%20Fact-Checking%20Tasks" target=_blank rel=noopener class=share-btn-twitter>
+<a href="https://twitter.com/intent/tweet?url=https://michaelsoprano.com/publication/journal-paper-ipm-2024-2/&text=Crowdsourced%20Fact-checking:%20Does%20It%20Actually%20Work?" target=_blank rel=noopener class=share-btn-twitter>
 <i class="fab fa-twitter"></i>
 </a>
 </li>
 <li>
-<a href="https://www.facebook.com/sharer.php?u=https://michaelsoprano.com/publication/conference-paper-facct-2022/&t=The%20Effects%20of%20Crowd%20Worker%20Biases%20in%20Fact-Checking%20Tasks" target=_blank rel=noopener class=share-btn-facebook>
+<a href="https://www.facebook.com/sharer.php?u=https://michaelsoprano.com/publication/journal-paper-ipm-2024-2/&t=Crowdsourced%20Fact-checking:%20Does%20It%20Actually%20Work?" target=_blank rel=noopener class=share-btn-facebook>
 <i class="fab fa-facebook"></i>
 </a>
 </li>
 <li>
-<a href="mailto:?subject=The%20Effects%20of%20Crowd%20Worker%20Biases%20in%20Fact-Checking%20Tasks&body=https://michaelsoprano.com/publication/conference-paper-facct-2022/" target=_blank rel=noopener class=share-btn-email>
+<a href="mailto:?subject=Crowdsourced%20Fact-checking:%20Does%20It%20Actually%20Work?&body=https://michaelsoprano.com/publication/journal-paper-ipm-2024-2/" target=_blank rel=noopener class=share-btn-email>
 <i class="fas fa-envelope"></i>
 </a>
 </li>
 <li>
-<a href="https://www.linkedin.com/shareArticle?url=https://michaelsoprano.com/publication/conference-paper-facct-2022/&title=The%20Effects%20of%20Crowd%20Worker%20Biases%20in%20Fact-Checking%20Tasks" target=_blank rel=noopener class=share-btn-linkedin>
+<a href="https://www.linkedin.com/shareArticle?url=https://michaelsoprano.com/publication/journal-paper-ipm-2024-2/&title=Crowdsourced%20Fact-checking:%20Does%20It%20Actually%20Work?" target=_blank rel=noopener class=share-btn-linkedin>
 <i class="fab fa-linkedin-in"></i>
 </a>
 </li>
 <li>
-<a href="whatsapp://send?text=The%20Effects%20of%20Crowd%20Worker%20Biases%20in%20Fact-Checking%20Tasks%20https://michaelsoprano.com/publication/conference-paper-facct-2022/" target=_blank rel=noopener class=share-btn-whatsapp>
+<a href="whatsapp://send?text=Crowdsourced%20Fact-checking:%20Does%20It%20Actually%20Work?%20https://michaelsoprano.com/publication/journal-paper-ipm-2024-2/" target=_blank rel=noopener class=share-btn-whatsapp>
 <i class="fab fa-whatsapp"></i>
 </a>
 </li>
@@ -232,11 +232,11 @@ Conference paper
 <div class="article-widget content-widget-hr">
 <h3>Related</h3>
 <ul>
+<li><a href=/publication/workshop-paper-iir-2023/>Fact-Checking at Scale with Crowdsourcing Experiments and Lessons Learned</a></li>
+<li><a href=/publication/journal-paper-ipm-2024/>Cognitive Biases in Fact-Checking and Their Countermeasures: A Review</a></li>
 <li><a href=/publication/journal-paper-ipm-2021/>The Many Dimensions of Truthfulness: Crowdsourcing Misinformation Assessments on a Multidimensional Scale</a></li>
 <li><a href=/publication/journal-paper-puc-2021/>Can The Crowd Judge Truthfulness? A Longitudinal Study on Recent Misinformation About COVID-19</a></li>
-<li><a href=/publication/journal-paper-ipm-2024-2/>Crowdsourced Fact-checking: Does It Actually Work?</a></li>
-<li><a href=/publication/workshop-paper-iir-2023/>Fact-Checking at Scale with Crowdsourcing Experiments and Lessons Learned</a></li>
-<li><a href=/talk/can-the-crowd-identify-misinformation-objectively-the-effects-of-judgment-scale-and-assessors-background./>Can The Crowd Identify Misinformation Objectively? The Effects of Judgment Scale and Assessor’s Background.</a></li>
+<li><a href=/publication/conference-paper-facct-2022/>The Effects of Crowd Worker Biases in Fact-Checking Tasks</a></li>
 </ul>
 </div>
 </div>
