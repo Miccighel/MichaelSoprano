@@ -1,5 +1,5 @@
 ---
-title: Social Computing - 2022/2023
+title: Social Computing - 2023/2024
 subtitle: Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine, Academic Year 2022/2023
 
 # Summary for listings and search engines
