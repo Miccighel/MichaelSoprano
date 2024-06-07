@@ -24,6 +24,7 @@ design:
   - Fourth Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2022), Online. <b>Proceedings and Website Chair</b>.
 
 - **Program Committee Roles**:
+  - 12th AAAI Conference on Human Computation and Crowdsourcing (HCOMP 2024), Pittsburgh, Pennsylvania, USA. <b>Full Track</b>.
   - 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2024), Washington D.C., USA. <b>Full and Short Paper Tracks</b>.
   - 45th European Conference on Information Retrieval (ECIR 2023), Dublin, Ireland. <b>Short Paper Track</b>.
   - 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2022), Madrid, Spain. <b>Short Paper Track</b>.
