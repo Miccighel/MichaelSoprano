@@ -1,15 +1,15 @@
 ---
 title: Social Computing - 2023/2024
-subtitle: Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine, Academic Year 2022/2023
+subtitle: Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine, Academic Year 2023/2024
 
 # Summary for listings and search engines
-summary: "Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine. Academic Year 2022/2023. Lectures: 2. Hours: 4"
+summary: "Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine. Academic Year 2022/2024. Lectures: 2. Hours: 4"
 
 # Link this post with a project
 projects: [ ]
 
 # Date published
-date: "2022-03-18T11:00:00Z"
+date: "2024-03-18T11:00:00Z"
 
 # Date updated
 #lastmod: "2020-12-13T00:00:00Z"
