@@ -9,7 +9,7 @@ summary: "Bachelor's Degree in Internet of Things, Big Data & Web at the Univers
 projects: []
 
 # Date published
-date: "2022-03-18T11:00:00Z"
+date: "2023-03-18T11:00:00Z"
 
 # Date updated
 #lastmod: "2020-12-13T00:00:00Z"
