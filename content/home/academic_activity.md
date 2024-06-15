@@ -50,5 +50,5 @@ design:
     and seminars
 
 - **Affiliations**:
-  - Member of the [Social, Mobile, Data, & Crowd Laboratory](http://smdc.uniud.it/smdc/membri-2/) (SMDC).
+  - Member of the [Social, Mobile, Data, & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/) (SMDC).
      
