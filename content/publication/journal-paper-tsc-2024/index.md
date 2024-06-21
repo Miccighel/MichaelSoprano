@@ -42,5 +42,5 @@ publishDate: '2024-06-11T15:00:00+01:00'
 publication_types:
 - '2'
 abstract: ''
-publication: '*ACM Transactions On Social Computing. Journal Ranks: Journal Citation Reports (JCR) Q2 (2023), Scimago (SJR) Q2 (2023). Under Publication.*'
+publication: '*ACM Transactions on Social Computing. Journal Ranks: Journal Citation Reports (JCR) Q2 (2023), Scimago (SJR) Q2 (2023). Under Publication.*'
 ---
