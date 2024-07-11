@@ -19,7 +19,7 @@ design:
   columns: "2"
 ---
 - **Organizational Roles**:
-  - 21th Italian Research Conference on Digital Libraries (IRCDL 2025), Udine. <b>Website Chair</b>.
+  - 21th Italian Research Conference on Digital Libraries (IRCDL 2025), Udine. <b>Website Chair</b>. [https://ircdl2025.uniud.it/](https://ircdl2025.uniud.it/)
   - 14th Italian Information Retrieval Workshop (IIR 2024), Udine, September 5-6, 2024. <b>Website Chair</b>. [https://iir2024.uniud.it/](https://iir2024.uniud.it/)
   - CARE: Conversational Agents and Responsible Ethics in Healthcare - Workshop at the European Federation of Medical Informatics Special Topic Conference 2023 (EFMI STC 2023), Turin, October 27, 2023. <b>Organizer</b>. [https://bhcc2022.org/](https://bhcc2022.org/)
   - Fourth Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2022), Online. <b>Proceedings and Website Chair</b>.
