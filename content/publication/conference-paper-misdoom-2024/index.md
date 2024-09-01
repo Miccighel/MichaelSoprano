@@ -14,8 +14,8 @@ tags:
 - information quality assessment
 - argument type identification
 categories: []
-date: '2024-06-22'
-lastmod: 2024-06-22T17:46:00+01:00
+date: '2024-09-01'
+lastmod: 2024-09-01T10:00:00+01:00
 featured: false
 draft: false
 
@@ -33,9 +33,9 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2024-06-22T14:36:35.998652Z'
+publishDate: '2024-09-01T10:00:00:35.998652Z'
 publication_types:
 - '1'
-abstract: 'Due to their relatively low cost and ability to scale, crowdsourcing based approaches are widely used to collect a large amount of human annotated data. To this aim, multiple crowdsourcing platforms exist, where requesters can upload tasks and workers can carry them out and obtain payment in return. Such platforms share a task design and deploy workflow that is often counter-intuitive and cumbersome. To address this issue, we propose Crowd_Frame, a simple and complete framework which allows to develop and deploy diverse types of complex crowdsourcing tasks in an easy and customizable way. We show the abilities of the proposed framework and we make it available to researchers and practitioners.'
-publication: '*Proceedings of the 6th Multidisciplinary International Symposium on Disinformation in Online Open Media (MISDOOM 2024). Münster, Germany. Accepted for publication on June 21, 2024.*'
+abstract: 'This paper explores the use of crowdsourcing to classify statement types in film reviews to assess their information quality. Employing the Argument Type Identification Procedure which uses the Periodic Table of Arguments to categorize arguments, the study aims to connect statement types to the overall argument strength and information reliability. Focusing on non-expert annotators in a crowdsourcing environment, the research assesses their reliability based on various factors including language proficiency and annotation experience. Results indicate the importance of careful annotator selection and training to achieve high inter-annotator agreement and highlight challenges in crowdsourcing statement classification for information quality assessment.'
+publication: '*Disinformation in Open Online Media - 6th Multidisciplinary International Symposium (MISDOOM 2024). Münster, Germany.*'
 ---
