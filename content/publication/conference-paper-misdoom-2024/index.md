@@ -38,4 +38,5 @@ publication_types:
 - '1'
 abstract: 'This paper explores the use of crowdsourcing to classify statement types in film reviews to assess their information quality. Employing the Argument Type Identification Procedure which uses the Periodic Table of Arguments to categorize arguments, the study aims to connect statement types to the overall argument strength and information reliability. Focusing on non-expert annotators in a crowdsourcing environment, the research assesses their reliability based on various factors including language proficiency and annotation experience. Results indicate the importance of careful annotator selection and training to achieve high inter-annotator agreement and highlight challenges in crowdsourcing statement classification for information quality assessment.'
 publication: '*Disinformation in Open Online Media - 6th Multidisciplinary International Symposium (MISDOOM 2024). Münster, Germany.*'
+doi: 10.1007/978-3-031-71210-4_5
 ---
