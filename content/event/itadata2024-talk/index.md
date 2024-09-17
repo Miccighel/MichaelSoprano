@@ -11,8 +11,8 @@ summary: "Demo Presentation - The 3rd Italian Conference on Big Data and Data Sc
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2024-09-16T11:30:00"
-date_end: "2024-09-16T12:30:00"
+date: "2023-10-26T08:30:00"
+date_end: "2023-10-26T09:10:00"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
