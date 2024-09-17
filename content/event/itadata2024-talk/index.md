@@ -35,7 +35,7 @@ image:
 #  url: https://twitter.com/georgecushen
 #url_code: ""
 #url_pdf: ""
-#url_slides: "https://docs.google.com/presentation/d/1IZaI38oOJ3FktP79dINPOL_9lqXmQf-a3TC7vf5qmfU/edit?usp=sharing"
+url_slides: "https://michaelsoprano.com/media/talks/An-Introduction-To-Crowd_Frame.pdf"
 #url_video: "https://dl.acm.org/doi/abs/10.1145/3488560.3502182"
 
 # Markdown Slides (optional).
