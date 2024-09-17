@@ -6,3 +6,4 @@
 jsconfig.json
 node_modules/
 assets/media/.DS_Store
+content/event/.DS_Store
