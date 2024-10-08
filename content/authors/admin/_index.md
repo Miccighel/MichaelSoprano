@@ -14,13 +14,13 @@ organizations:
     url: https://www.uniud.it/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Postdoctoral Research Fellow at the University of Udine.
+bio: PostDoc @ University of Udine.
 
 # Interests to show in About widget
 interests:
-  - Academic Research
-  - Computer Science
-  - Video Games
+  - Human Computation
+  - Crowdsourcing
+  - Information Retrieval
   - Literature
   - Running & Hiking
   - Skiing
@@ -106,9 +106,7 @@ email: ""
 highlight_name: false
 ---
 
-**Benvignût!** Welcome to my personal webpage. Here, you can find information about my background, publications, and academic activities.
-
-Currently, I am a PostDoc at the University of Udine, affiliated with the [Social, Media, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/).
+**Benvignût!** This is my personal webpage.  I am a PostDoc at the University of Udine, affiliated with the [Social, Media, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/).
 
 I hold a Ph.D. in Computer Science, Mathematics, and Physics, and my main research interests are Human Computation, Crowdsourcing, and Information Retrieval. 
 I currently work on using crowdsourcing to address the ever-increasing challenge of misinformation spread.
