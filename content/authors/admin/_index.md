@@ -50,18 +50,18 @@ social:
   - icon: envelope
     icon_pack: fas
     link: '/#contact'
-  - icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
-    icon_pack: ai
-    link: https://scholar.google.it/citations?user=ocK0qRUAAAAJ&hl=en
   - icon: orcid
     icon_pack: fab
     link: https://orcid.org/0000-0002-7337-7592
-  - icon: acm
+  - icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
     icon_pack: ai
-    link: https://dl.acm.org/profile/99659280921
+    link: https://scholar.google.it/citations?user=ocK0qRUAAAAJ&hl=en
   - icon: scopus
     icon_pack: ai
     link: https://www.scopus.com/authid/detail.uri?authorId=57203392311
+  - icon: acm
+    icon_pack: ai
+    link: https://dl.acm.org/profile/99659280921
   - icon: dblp
     icon_pack: ai
     link: https://dblp.org/pid/222/1241.html
@@ -106,12 +106,11 @@ email: ""
 highlight_name: false
 ---
 
-**Benvignût!** This is my personal webpage.  I am a PostDoc at the University of Udine, affiliated with the [Social, Media, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/).
+**Benvignût!** This is my personal webpage. I am a PostDoc at the University of Udine, affiliated with the [Social, Media, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/), and I hold a Ph.D. in Computer Science, Mathematics, and Physics.
 
-I hold a Ph.D. in Computer Science, Mathematics, and Physics, and my main research interests are Human Computation, Crowdsourcing, and Information Retrieval. 
-I currently work on using crowdsourcing to address the ever-increasing challenge of misinformation spread.
+My main research interests include Human Computation, Crowdsourcing, and Information Retrieval. Currently, I am focused on leveraging crowdsourcing to address the growing challenge of misinformation spread.
 
-In my free time, I enjoy discovering new literature and strive to be a decent runner and skier.
+In my free time, I enjoy discovering new literature and work towards being a decent runner, hiker, and skier.
 
 {{< icon name="download" pack="fas" >}} Download my Curriculum Vitae in {{< staticref "media/Curriculum_EN.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/Curriculum_IT.pdf" "newtab" >}}Italian{{< /staticref >}}. 
 Feel free to explore my {{< staticref "media/masterThesis.pdf" "newtab" >}}Master's{{< /staticref >}}, {{< staticref "media/bachelorThesis.pdf" "newtab" >}}Bachelor's{{< /staticref >}}, and {{< staticref "media/highSchoolThesis.pdf" "newtab" >}}High School{{< /staticref >}} theses (in Italian).
