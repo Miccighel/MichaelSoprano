@@ -9,10 +9,10 @@ summary: "Bachelor's Degree in Sciences and Techniques of Preventive and Adaptiv
 projects: [ ]
 
 # Date published
-date: "2024-07-18T11:00:00Z"
+date: "2024-08-07T11:00:00Z"
 
 # Date updated
-#lastmod: "2020-12-13T00:00:00Z"
+lastmod: "2024-08-07T11:00:00Z"
 
 # Is this an unpublished draft?
 draft: false

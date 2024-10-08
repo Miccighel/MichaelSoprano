@@ -9,10 +9,10 @@ summary: "Bachelor's Degree in Internet of Things, Big Data & Web at the Univers
 projects: [ ]
 
 # Date published
-date: "2024-06-18T11:00:00Z"
+date: "2024-08-06T11:00:00Z"
 
 # Date updated
-#lastmod: "2020-12-13T00:00:00Z"
+lastmod: "2024-08-06T11:00:00Z"
 
 # Is this an unpublished draft?
 draft: false
