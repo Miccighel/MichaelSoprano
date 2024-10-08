@@ -1,15 +1,15 @@
 ---
-title: Social Computing - 2022/2023
-subtitle: Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine, Academic Year 2022/2023
+title: Social Computing - 2024/2025
+subtitle: Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine, Academic Year 2024/2025
 
 # Summary for listings and search engines
-summary: "Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine. Academic Year 2022/2023. Lectures: 2. Hours: 4"
+summary: "Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine. Academic Year 2022/2024. Lectures: 1. Hours: 2"
 
 # Link this post with a project
 projects: [ ]
 
 # Date published
-date: "2024-08-18T11:00:00Z"
+date: "2024-07-10T11:00:00Z"
 
 # Date updated
 #lastmod: "2020-12-13T00:00:00Z"
@@ -46,7 +46,8 @@ categories:
 ## Teachers
 
 - [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Theory
-- **David La Barbera** - Laboratory (Part 1)
+- **Hafska Akebli** - Laboratory (Part 1-2)
+- **Michele Lizzit** - Laboratory (Part 1-2)
 - **Michael Soprano** - Laboratory (Part 2)
 
 ## Aims
@@ -61,5 +62,3 @@ theoretical foundations, and practical applications.
 
 I contributed to the course by providing a lecture on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours). Additionally, I provided the students with
 their second course assignment. The course is conducted in Italian.
-
-- **Lesson 4-5**: [Crowd_Frame](https://www.dropbox.com/scl/fi/4rmiryatmpzhyrcmejuyb/SC_MS_4_Crowd_Frame.pptx?rlkey=1cd5jhx1n2fi491qvkagau3un&dl=0)  

@@ -9,7 +9,7 @@ summary: "Bachelor's Degree in Internet of Things, Big Data & Web at the Univers
 projects: []
 
 # Date published
-date: "2021-03-16T11:00:00Z"
+date: "2020-10-10T11:00:00Z"
 
 # Date updated
 #lastmod: "2020-12-13T00:00:00Z"
@@ -56,14 +56,13 @@ categories:
 
 ## Aims
 
-The aim of the course is to provide to the student the foundational knowledge and the practical skills concerning the area of social informatics. The course discusses both the so-called Social Media (
-Facebook, Twitter, etc.)and the Crowdsourcing phenomenon. In the first case, social behavior is supported by computational systems; in the second case, computational systems are supported by social
-behavior. The course deals with conceptual topics, theoretical foundations, and practical applications.
+The aim of the course is to provide students with foundational knowledge and practical skills in the area of social informatics. The course discusses both the so-called social media (Facebook, Twitter, etc.) and the crowdsourcing phenomenon.
 
-## Table of Contents
+In the first case, social behavior is supported by computational systems; in the second case, computational systems are supported by social behavior. The course addresses conceptual topics, theoretical foundations, and practical applications.
 
-I contributed to the course by teaching practical applications of the concepts outlined by Professor Stefano Mizzaro in a total of 6 lectures (12 hours). Additionally, I assigned course assignment to
-the students. The course is conducted in Italian.
+## Table of contents
+
+I contributed to the course by teaching the practical applications of the concepts outlined by Professor Stefano Mizzaro in a total of six lectures (12 hours). Additionally, I assigned course assignments to the students. The course is conducted in Italian.
 
 - **Lesson 1**: [Twitter API: Introduzione & Richiami](https://www.dropbox.com/scl/fi/xpq3b6zhzf3zpczqkwn9g/SC_MS_1_Twitter_API_Intro_Ric.pptx?rlkey=trdwm6yxgohyktj79c0bu3xsx&dl=0)  
 - **Lesson 2-3**: [Twitter API: Tweepy & Requests](https://www.dropbox.com/scl/fi/rtdvumim9mzuihlu3zlxu/SC_MS_2-Twitter_API_Tweepy_Req.pptx?rlkey=t7rms0spo58a612oniuda1vey&dl=0)  

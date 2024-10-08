@@ -9,7 +9,7 @@ summary: "Bachelor's Degree in Internet of Things, Big Data & Web at the Univers
 projects: [ ]
 
 # Date published
-date: "2024-03-18T11:00:00Z"
+date: "2023-10-10T11:00:00Z"
 
 # Date updated
 #lastmod: "2020-12-13T00:00:00Z"
@@ -51,13 +51,15 @@ categories:
 
 ## Aims
 
-The aim of the course is to provide to the student the foundational knowledge and the practical skills concerning the area of social informatics. The course discusses both the so-called Social Media (
-Facebook, Twitter, etc.)and the Crowdsourcing phenomenon. In the first case, social behavior is supported by computational systems; in the second case, computational systems are supported by social
-behavior. The course deals with conceptual topics, theoretical foundations, and practical applications.
+The aim of the course is to provide students with foundational knowledge and practical skills in the area of social informatics. The course discusses both the so-called social media (Facebook,
+Twitter, etc.) and the crowdsourcing phenomenon.
 
-## Table of Contents
+In the first case, social behavior is supported by computational systems; in the second case, computational systems are supported by social behavior. The course addresses conceptual topics,
+theoretical foundations, and practical applications.
 
-My contribution to the course included teaching practical applications of the concepts outlined by Professor Stefano Mizzaro for a total of 2 lectures (4 hours). Additionally, I provided the students
-with their second course assignment. The course is conducted in Italian.
+## Table of contents
+
+I contributed to the course by providing two lectures on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (4 hours). Additionally, I provided the students with
+their second course assignment. The course is conducted in Italian.
 
 - **Lesson 4-5**: [Crowd_Frame](https://www.dropbox.com/scl/fi/4rmiryatmpzhyrcmejuyb/SC_MS_4_Crowd_Frame.pptx?rlkey=1cd5jhx1n2fi491qvkagau3un&dl=0)  

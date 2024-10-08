@@ -25,12 +25,15 @@ main:
   - name: Academic Activity
     url: '#academic_activity'
     weight: 7
+  - name: Teaching
+    url: '#teaching'
+    weight: 8
   - name: Honors
     url: '#honors'
-    weight: 8
+    weight: 9
   - name: Contact
     url: '#contact'
-    weight: 9
+    weight: 10
   - name: CV
     url: media/Curriculum_EN.pdf
-    weight: 10
+    weight: 11
