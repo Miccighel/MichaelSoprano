@@ -1,1 +1,70 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jupyter | Michael Soprano</title><link>https://michaelsoprano.com/tag/jupyter/</link><atom:link href="https://michaelsoprano.com/tag/jupyter/index.xml" rel="self" type="application/rss+xml"/><description>Jupyter</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 18 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>Jupyter</title><link>https://michaelsoprano.com/tag/jupyter/</link></image></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jupyter | Michael Soprano</title><link>https://michaelsoprano.com/tag/jupyter/</link><atom:link href="https://michaelsoprano.com/tag/jupyter/index.xml" rel="self" type="application/rss+xml"/><description>Jupyter</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 18 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>Jupyter</title><link>https://michaelsoprano.com/tag/jupyter/</link></image><item><title>Social Computing (2020/2021-2024/2025)</title><link>https://michaelsoprano.com/post/social-computing_2020-2024/</link><pubDate>Sun, 18 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/social-computing_2020-2024/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
+&lt;p>The aim of the course is to provide students with foundational knowledge and practical skills in the area of social informatics. The course discusses both the so-called social media (Facebook,
+Twitter, etc.) and the crowdsourcing phenomenon.&lt;/p>
+&lt;p>In the first case, social behavior is supported by computational systems; in the second case, computational systems are supported by social behavior. The course addresses conceptual topics,
+theoretical foundations, and practical applications.&lt;/p>
+&lt;h2 id="aa-20202021">A.A. 2020/2021&lt;/h2>
+&lt;h3 id="teachers">Teachers&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Theory&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Laboratory&lt;/li>
+&lt;/ul>
+&lt;h3 id="contribution">Contribution&lt;/h3>
+&lt;p>I contributed to the course by teaching the practical applications of the concepts outlined by Professor Stefano Mizzaro in a total of six lectures (12 hours). Additionally, I assigned course assignments to the students. The course is conducted in Italian.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Lesson 1&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/xpq3b6zhzf3zpczqkwn9g/SC_MS_1_Twitter_API_Intro_Ric.pptx?rlkey=trdwm6yxgohyktj79c0bu3xsx&amp;amp;dl=0" target="_blank" rel="noopener">Twitter API: Introduzione &amp;amp; Richiami&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lesson 2-3&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/rtdvumim9mzuihlu3zlxu/SC_MS_2-Twitter_API_Tweepy_Req.pptx?rlkey=t7rms0spo58a612oniuda1vey&amp;amp;dl=0" target="_blank" rel="noopener">Twitter API: Tweepy &amp;amp; Requests&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lesson 4&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/0e8iz71e45mxix4cmxiam/SC_MS_3_Grafi_NetworkX.pptx?rlkey=ab76koii4j1we6zpwatihhh10&amp;amp;dl=0" target="_blank" rel="noopener">Grafi: NetworkX&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lesson 4-5&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/56egim1ixzm1bm4tn988x/SC_MS_4_Crowd_Frame.pptx?rlkey=yl0z8mqxb6q6n4u1h2etfuz5e&amp;amp;dl=0" target="_blank" rel="noopener">Crowd_Frame: How To&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="aa-20212022">A.A. 2021/2022&lt;/h2>
+&lt;h3 id="teachers-1">Teachers&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Theory&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Laboratory&lt;/li>
+&lt;/ul>
+&lt;h3 id="contribution-1">Contribution&lt;/h3>
+&lt;p>I contributed to the course by teaching the practical applications of the concepts outlined by Professor Stefano Mizzaro in a total of six lectures (12 hours). Additionally, I assigned course assignments to the students. The course is conducted in Italian.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Lesson 1&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/az4z8x0zu3ysajpjsfs0h/SC_MS_1_Python_Rest_Richiami.pptx?rlkey=ozxl5bwwpp56wjgp3ty01v7tf&amp;amp;dl=0" target="_blank" rel="noopener">Python / Rest: Richiami&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lesson 2&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/xrtha37m67zob5k7sresz/SC_MS_2-Twitter_API_Tweepy.pptx?rlkey=i54k7eha11f59ies21pyn9u16&amp;amp;dl=0" target="_blank" rel="noopener">Twitter API: Tweepy&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lesson 3&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/93umif7xa71woszewr5zo/SC_MS_3-EndpointV2_Req.pptx?rlkey=zp1vux6vjp1x6xc7evip6l0d4&amp;amp;dl=0" target="_blank" rel="noopener">Twitter API: Endpoint V2&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lesson 4&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/d22udpapqnitwuc32ban4/SC_MS_4_Grafi_NetworkX.pptx?rlkey=3r949h14dqxsnzwoffprdgaz7&amp;amp;dl=0" target="_blank" rel="noopener">Grafi: NetworkX&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lesson 5-6&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/tmgtqxt3ihnvtgj5r0150/SC_MS_5_Crowd_Frame.pptx?rlkey=prdahfpu3u0y7k48dzi2mc1fk&amp;amp;dl=0" target="_blank" rel="noopener">Crowd_Frame&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="aa-20222023">A.A. 2022/2023&lt;/h2>
+&lt;h2 id="teachers-2">Teachers&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Theory&lt;/li>
+&lt;li>&lt;strong>David La Barbera&lt;/strong> - Laboratory (Part 1)&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Laboratory (Part 2)&lt;/li>
+&lt;/ul>
+&lt;h2 id="contribution-2">Contribution&lt;/h2>
+&lt;p>I contributed to the course by providing two lectures on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (4 hours). Additionally, I provided the students with
+their second course assignment. The course is conducted in Italian.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Lesson 4-5&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/ez7aanl9b9vn4m6zt6ckw/22-23.Crowd_Frame.pdf?rlkey=95kkc3nrf9ejy6r17s5i44y7w&amp;amp;st=b24tubx6&amp;amp;dl=0" target="_blank" rel="noopener">Crowd_Frame&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="aa-20232024">A.A. 2023/2024&lt;/h2>
+&lt;h3 id="teachers-3">Teachers&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Theory&lt;/li>
+&lt;li>&lt;strong>David La Barbera&lt;/strong> - Laboratory (Part 1)&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Laboratory (Part 2)&lt;/li>
+&lt;/ul>
+&lt;h3 id="contribution-3">Contribution&lt;/h3>
+&lt;p>I contributed to the course by providing two lectures on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (4 hours). Additionally, I provided the students with
+their second course assignment. The course is conducted in Italian.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Lesson 4-5&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/4rmiryatmpzhyrcmejuyb/SC_MS_4_Crowd_Frame.pptx?rlkey=1cd5jhx1n2fi491qvkagau3un&amp;amp;dl=0" target="_blank" rel="noopener">Crowd_Frame&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="aa-20242028">A.A. 2024/2028&lt;/h2>
+&lt;h2 id="teachers-4">Teachers&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Theory&lt;/li>
+&lt;li>&lt;strong>Hafska Akebli&lt;/strong> - Laboratory (Part 1-2)&lt;/li>
+&lt;li>&lt;strong>Michele Lizzit&lt;/strong> - Laboratory (Part 1-2)&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Laboratory (Part 2)&lt;/li>
+&lt;/ul>
+&lt;h3 id="contribution-4">Contribution&lt;/h3>
+&lt;p>I will be contributing to the course by providing a lecture on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours). The course will be conducted in Italian.&lt;/p></description></item></channel></rss>
