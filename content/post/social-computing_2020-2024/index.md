@@ -1,9 +1,9 @@
 ---
-title: Social Computing (2020/2021-2024/2025)
+title: Social Computing (2020-2024)
 subtitle: Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine
 
 # Summary for listings and search engines
-summary: "Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine. Academic Years 2020/2021 - 2024/2025"
+summary: "Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine. Academic Years: 2020-2024"
 
 # Link this post with a project
 projects: [ ]
@@ -123,7 +123,7 @@ their second course assignment. The course is conducted in Italian.
 
 - **Lesson 4-5**: [Crowd_Frame](https://www.dropbox.com/scl/fi/4rmiryatmpzhyrcmejuyb/SC_MS_4_Crowd_Frame.pptx?rlkey=1cd5jhx1n2fi491qvkagau3un&dl=0)  
 
-## A.A. 2024/2028
+## A.A. 2024/2025
 
 ## Teachers
 
