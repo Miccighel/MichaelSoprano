@@ -21,10 +21,6 @@ interests:
   - Human Computation
   - Crowdsourcing
   - Information Retrieval
-  - Literature
-  - Running & Hiking
-  - Skiing
-  - Digital Photography
 
 # Education to show in About widget
 education:
