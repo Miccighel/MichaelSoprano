@@ -15,24 +15,24 @@ font_size: L
 site_type: Person
 local_business_type: ''
 org_name: 'University of Udine'
-description: 'Personal Website of Michael Soprano'
+description: 'Personal webpage of Michael Soprano'
 twitter: 'https://twitter.com/#!/Miccighel_'
 
 # Contact (edit or remove options as required)
 
 email: michael.soprano@uniud.it
 address:
-  street: "Department of Mathematics, Computer Science and Physics, Via delle Scienze 206"
+  street: "Via delle Scienze 206"
   city: Udine (Italy)
   region:
-  postcode: '33010'
+  postcode: '33100'
   country: Italy
   country_code: IT
 coordinates:
   latitude: '46.08008535022743'
   longitude: '13.211890024964413'
 directions:
-  Rizzi Building, 2° Floor, South Node, Lab SMDC (LC2-04-DE)
+  Rizzi Building, 2° Floor, South Node, Lab SMDC (LC2-04-DE), A2 32 Room
 office_hours: ''
 appointment_url: ''
 
