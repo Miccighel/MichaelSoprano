@@ -53,7 +53,7 @@ various contexts.
 
 ### Contribution
 
-I am designing and instructing the course, which consists of lectures with evaluation based on a written exam. The course has a total duration of 24 hours
+I am designing and instructing the course, which consists of lectures with evaluation based on a written exam. The course has a total duration of 24 hours.
 
 
 

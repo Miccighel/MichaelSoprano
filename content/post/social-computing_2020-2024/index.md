@@ -64,8 +64,8 @@ theoretical foundations, and practical applications.
 
 ### Teachers
 
-- [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Theory
-- **Michael Soprano** - Laboratory
+- [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Course Leader
+- **Michael Soprano** - Teaching Assistant
 
 ### Contribution
 
@@ -80,7 +80,7 @@ I contributed to the course by teaching the practical applications of the concep
 
 ### Teachers
 
-- [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Theory
+- [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Course Leader
 - **Michael Soprano** - Laboratory
 
 ### Contribution
@@ -97,10 +97,10 @@ I contributed to the course by teaching the practical applications of the concep
 
 ## Teachers
 
-- [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Theory
-- **David La Barbera** - Laboratory (Part 1)
-- **Michael Soprano** - Laboratory (Part 2)
-
+- [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Course Leader
+- **David La Barbera** - Teaching Assistant
+- **Michael Soprano** - Teaching Assistant
+- 
 ## Contribution
 
 I contributed to the course by providing two lectures on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (4 hours). Additionally, I provided the students with
@@ -112,9 +112,9 @@ their second course assignment. The course is conducted in Italian.
 
 ### Teachers
 
-- [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Theory
-- **David La Barbera** - Laboratory (Part 1)
-- **Michael Soprano** - Laboratory (Part 2)
+- [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Course Leader
+- **David La Barbera** - Teaching Assistant
+- **Michael Soprano** - Teaching Assistant
 
 ### Contribution
 
@@ -127,10 +127,10 @@ their second course assignment. The course is conducted in Italian.
 
 ## Teachers
 
-- [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Theory
-- **Hafska Akebli** - Laboratory (Part 1-2)
-- **Michele Lizzit** - Laboratory (Part 1-2)
-- **Michael Soprano** - Laboratory (Part 2)
+- [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Course Leader
+- **Hafska Akebli** - Teaching Assistant
+- **Michele Lizzit** - Teaching Assistant
+- **Michael Soprano** - Teaching Assistant
 
 ### Contribution
 
