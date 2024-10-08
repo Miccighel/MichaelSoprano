@@ -106,10 +106,14 @@ email: ""
 highlight_name: false
 ---
 
-I hold a Ph.D. in Computer Science. I am an avid reader and find enjoyment in running, skiing, hiking, playing video games, and more.
+**Benvignût!** Welcome to my personal webpage. Here, you can find information about my background, publications, and academic activities.
 
-I successfully defended my Ph.D. dissertation on May 22, 2023. I plan to release it publicly soon. In 2021, I wrote a brief {{< staticref "media/research-statement.pdf" "newtab" >}}research statement{{< /staticref >}}.
+Currently, I am a PostDoc at the University of Udine, affiliated with the [Social, Media, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/).
 
-My research interest centers around utilizing crowdsourcing-based approaches to address the ever-increasing problem of misinformation spread. As a long-term goal, I would like to leverage my skills in Computer Science to make a lasting contribution to the scientific community.
+I hold a Ph.D. in Computer Science, Mathematics, and Physics, and my main research interests are Human Computation, Crowdsourcing, and Information Retrieval. 
+I currently work on using crowdsourcing to address the ever-increasing challenge of misinformation spread.
 
-{{< icon name="download" pack="fas" >}} Download my Curriculum Vitae in {{< staticref "media/Curriculum_EN.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/Curriculum_IT.pdf" "newtab" >}}Italian{{< /staticref >}}, and feel free to explore my {{< staticref "media/masterThesis.pdf" "newtab" >}}Master's{{< /staticref >}}, {{< staticref "media/bachelorThesis.pdf" "newtab" >}}Bachelor's{{< /staticref >}}, or {{< staticref "media/highSchoolThesis.pdf" "newtab" >}}High School{{< /staticref >}} theses (in Italian).
+In my free time, I enjoy discovering new literature and strive to be a decent runner and skier.
+
+{{< icon name="download" pack="fas" >}} Download my Curriculum Vitae in {{< staticref "media/Curriculum_EN.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/Curriculum_IT.pdf" "newtab" >}}Italian{{< /staticref >}}. 
+Feel free to explore my {{< staticref "media/masterThesis.pdf" "newtab" >}}Master's{{< /staticref >}}, {{< staticref "media/bachelorThesis.pdf" "newtab" >}}Bachelor's{{< /staticref >}}, and {{< staticref "media/highSchoolThesis.pdf" "newtab" >}}High School{{< /staticref >}} theses (in Italian).
