@@ -102,7 +102,7 @@ email: ""
 highlight_name: false
 ---
 
-**Benvignût!** This is my personal webpage. I am a PostDoc at the University of Udine, affiliated with the [Social, Media, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/), and I hold a Ph.D. in Computer Science, Mathematics, and Physics.
+**Benvenuto!** This is my personal webpage. I am a PostDoc at the University of Udine, affiliated with the [Social, Media, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/), and I hold a Ph.D. in Computer Science, Mathematics, and Physics.
 
 My main research interests include Human Computation, Crowdsourcing, and Information Retrieval. Currently, I am focused on leveraging crowdsourcing to address the growing challenge of misinformation spread.
 
