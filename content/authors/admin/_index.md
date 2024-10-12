@@ -102,11 +102,14 @@ email: ""
 highlight_name: false
 ---
 
-**Benvenuto!** This is my personal webpage. I am a PostDoc at the University of Udine, affiliated with the [Social, Media, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/), and I hold a Ph.D. in Computer Science, Mathematics, and Physics.
+Welcome to my personal webpage. 
+I am a PostDoc at the University of Udine, affiliated with the [Social, Media, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/). 
+I hold a Ph.D. in Computer Science, Mathematics, and Physics.
 
-My main research interests include Human Computation, Crowdsourcing, and Information Retrieval. Currently, I am focused on leveraging crowdsourcing to address the growing challenge of misinformation spread.
+My research interests center around Human Computation, Crowdsourcing, and Information Retrieval.
+At present, I am focusing on using crowdsourcing to address the ever-increasing challenge of misinformation spread.
 
-In my free time, I enjoy discovering new literature and work towards being a decent runner, hiker, and skier.
+In my free time, I enjoy discovering new books and working toward becoming a better runner, hiker, and skier.
 
-{{< icon name="download" pack="fas" >}} Download my Curriculum Vitae in {{< staticref "media/Curriculum_EN.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/Curriculum_IT.pdf" "newtab" >}}Italian{{< /staticref >}}. 
-Feel free to explore my {{< staticref "media/masterThesis.pdf" "newtab" >}}Master's{{< /staticref >}}, {{< staticref "media/bachelorThesis.pdf" "newtab" >}}Bachelor's{{< /staticref >}}, and {{< staticref "media/highSchoolThesis.pdf" "newtab" >}}High School{{< /staticref >}} theses (in Italian).
+You can download my {{< icon name="download" pack="fas" >}} Curriculum Vitae in {{< staticref "media/Curriculum_EN.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/Curriculum_IT.pdf" "newtab" >}}Italian{{< /staticref >}}.
+Feel free to also check out my {{< staticref "media/masterThesis.pdf" "newtab" >}}Master's{{< /staticref >}}, {{< staticref "media/bachelorThesis.pdf" "newtab" >}}Bachelor's{{< /staticref >}}, and {{< staticref "media/highSchoolThesis.pdf" "newtab" >}}High School{{< /staticref >}} theses (in Italian).
