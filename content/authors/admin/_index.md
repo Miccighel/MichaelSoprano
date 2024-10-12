@@ -111,5 +111,5 @@ At present, I am focusing on using crowdsourcing to address the ever-increasing 
 
 In my free time, I enjoy discovering new books and working toward becoming a better runner, hiker, and skier.
 
-You can download my {{< icon name="download" pack="fas" >}} Curriculum Vitae in {{< staticref "media/Curriculum_EN.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/Curriculum_IT.pdf" "newtab" >}}Italian{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} You can download my Curriculum Vitae in {{< staticref "media/Curriculum_EN.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/Curriculum_IT.pdf" "newtab" >}}Italian{{< /staticref >}}.
 Feel free to also check out my {{< staticref "media/masterThesis.pdf" "newtab" >}}Master's{{< /staticref >}}, {{< staticref "media/bachelorThesis.pdf" "newtab" >}}Bachelor's{{< /staticref >}}, and {{< staticref "media/highSchoolThesis.pdf" "newtab" >}}High School{{< /staticref >}} theses (in Italian).
