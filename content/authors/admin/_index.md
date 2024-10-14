@@ -52,9 +52,6 @@ social:
   - icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
     icon_pack: ai
     link: https://scholar.google.it/citations?user=ocK0qRUAAAAJ&hl=en
-  - icon: scopus
-    icon_pack: ai
-    link: https://www.scopus.com/authid/detail.uri?authorId=57203392311
   - icon: acm
     icon_pack: ai
     link: https://dl.acm.org/profile/99659280921
