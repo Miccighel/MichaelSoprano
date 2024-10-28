@@ -23,14 +23,14 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 
 experience:
-  - title: Postdoctoral Research Fellow
+  - title: Postdoctoral Researcher
     company: Department of Mathematics, Computer Science and Physics (DMIF), University of Udine.
     company_url: 'https://www.dmif.uniud.it/en/'
     location: Udine, Italy
     date_start: '2023-12-01'
     description: |1-
       Definition of an evaluation framework for misinformation detection systems, considering various aspects such as the creation of appropriately labeled datasets, addressing biases in dataset definition, and establishing suitable evaluation measures that specifically consider the concept of truthfulness in information.
-  - title: Postdoctoral Research Fellow
+  - title: Postdoctoral Researcher
     company: Department of Economic and Statistical Sciences (DIES), University of Udine.
     company_url: 'https://dies.uniud.it/it'
     location: Udine, Italy
