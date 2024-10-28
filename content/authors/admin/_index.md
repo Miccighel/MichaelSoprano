@@ -6,7 +6,7 @@ title: Michael Soprano
 superuser: true
 
 # Role/position/tagline
-role: Postdoctoral Research Fellow
+role: Postdoctoral Researcher
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -100,7 +100,7 @@ highlight_name: false
 ---
 
 Welcome to my personal webpage. 
-I am a PostDoc at the University of Udine, affiliated with the [Social, Media, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/). 
+I am a Postdoctoral Researcher at the University of Udine, affiliated with the [Social, Media, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/). 
 I hold a Ph.D. in Computer Science, Mathematics, and Physics.
 
 My research interests center around Human Computation, Crowdsourcing, and Information Retrieval.
