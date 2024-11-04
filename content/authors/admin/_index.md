@@ -106,7 +106,5 @@ I hold a Ph.D. in Computer Science, Mathematics, and Physics.
 My research interests center around Human Computation, Crowdsourcing, and Information Retrieval.
 At present, I am focusing on using crowdsourcing to address the ever-increasing challenge of misinformation spread.
 
-In my free time, I enjoy discovering new books and working toward becoming a better runner, hiker, and skier.
-
 {{< icon name="download" pack="fas" >}} You can download my Curriculum Vitae in {{< staticref "media/Curriculum_EN.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/Curriculum_IT.pdf" "newtab" >}}Italian{{< /staticref >}}.
 Feel free to also check out my {{< staticref "media/masterThesis.pdf" "newtab" >}}Master's{{< /staticref >}}, {{< staticref "media/bachelorThesis.pdf" "newtab" >}}Bachelor's{{< /staticref >}}, and {{< staticref "media/highSchoolThesis.pdf" "newtab" >}}High School{{< /staticref >}} theses (in Italian).
