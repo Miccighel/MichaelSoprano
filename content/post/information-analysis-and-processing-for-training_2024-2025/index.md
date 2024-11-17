@@ -1,6 +1,6 @@
 ---
 title: Information Analysis and Processing for Training (2024-2025)
-subtitle: Bachelor's Degree in Sciences and Techniques of Preventive and Adaptive Physical Activities at the University of Udine
+subtitle: Bachelor's Degree in Sports Science at the University of Udine
 
 # Summary for listings and search engines
 summary: "Bachelor's Degree in Sciences and Techniques of Preventive and Adaptive Physical Activities. Academic Year: 2024-2025"
