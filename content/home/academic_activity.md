@@ -32,6 +32,7 @@ design:
   - Third Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2022), Online.
 
 - **Reviewer**:
+  - Data Science and Engineering (2025). [Journal ISSN: 0306-4573](https://portal.issn.org/resource/ISSN/23641541). 
   - Information Processing & Management (2023). [Journal ISSN: 0306-4573](https://portal.issn.org/resource/ISSN/0306-4573). Contribution registered on ORCID profile.
   - Springer Nature Scientific Report (2023). [Journal ISSN: 2045-2322](https://portal.issn.org/resource/ISSN/2045-2322).
   - 13th Italian Information Retrieval Workshop (IIR 2023), Pisa, Italy.
