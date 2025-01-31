@@ -19,9 +19,9 @@ title: Metrics
 |                     | Google Scholar | Scopus | ACM Digital Library |
 |---------------------|----------------|--------|---------------------|
 | Articles            | 26             | 20	    | 15                  |
-| Citations           | 343            | 187    | 98                  |
-| Citations / Article | 13.19          | 9.35   | 6.12                |
+| Citations           | 347            | 187    | 98                  |
+| Citations / Article | 13.34          | 9.35   | 6.12                |
 | h-index             | 10             | 7      | -                   |
 | i10-index           | 10             | -      | -                   |
 
-*Last update: January 21, 2025*
+*Last update: January 31, 2025*
