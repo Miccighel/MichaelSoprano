@@ -3,7 +3,7 @@ title: Information Analysis and Processing for Training (2024-2025)
 subtitle: Bachelor's Degree in Sports Science at the University of Udine
 
 # Summary for listings and search engines
-summary: "Bachelor's Degree in Sciences and Techniques of Preventive and Adaptive Physical Activities. Academic Year: 2024-2025"
+summary: "Bachelor's Degree in Sport Science. Academic Year: 2024-2025"
 
 # Link this post with a project
 projects: [ ]
@@ -43,9 +43,7 @@ categories:
 
 # Aims
 
-The aim of the course is to equip students with the skills, terminology, and methodologies needed for data analysis and processing, with a particular focus on sports-related applications. The course
-prepares students for advanced studies at the master's level by providing practical skills that extend beyond the sports domain and fostering a broader understanding of data analysis techniques in
-various contexts.
+The course aims to provide fundamental knowledge for understanding, representing, and analyzing data, with a particular focus on the sports domain and the use of Microsoft Excel. Students will develop a clear distinction between data and information, understanding the process of transforming raw data into structured information. The course will cover key data representation methods, exploring storage techniques, encoding, compression, and concepts such as entropy and redundancy. Finally, students will gain practical skills in using Excel for data management, processing, and visualization through tools such as formulas, functions, charts, and PivotTables.
 
 ## Teacher
 
@@ -53,7 +51,7 @@ various contexts.
 
 ### Contribution
 
-I am designing and instructing the course, which consists of lectures with evaluation based on a written exam. The course has a total duration of 24 hours.
+I designed and instructed the course, which consisted of 12 lectures with evaluation based on a written exam. The course had a total duration of 24 hours.
 
 
 
