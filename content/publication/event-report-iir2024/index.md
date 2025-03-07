@@ -43,6 +43,6 @@ publication_types:
 - '2'
 abstract: "IIR 2024, the 14th Italian Information Retrieval Workshop, served as the annual event for the IR and RS communities both in Italy and collaborating with Italian research institutions. This year's event spanned two days and featured studies on various topics within IR, RS, and Large Language Models (LLMs). Key focus areas included enhanced retrieval models, personalized information systems, conversational interfaces and user-centric systems, comparative evaluations and metrics, and practical applications in specific fields. IIR 2024 was jointly organized by the University of Udine and the University of Milano-Bicocca and was held in Udine, Italy."
 publication: '*SIGIR Forum*'
-url_pdf: https://sigir.org/wp-content/uploads/2025/01/p15.pdf
+url_pdf: https://dl.acm.org/doi/pdf/10.1145/3722449.3722464
 doi: 10.1145/3722449.3722464
 ---
