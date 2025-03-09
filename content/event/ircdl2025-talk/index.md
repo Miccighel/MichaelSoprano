@@ -6,7 +6,7 @@ event_url: https://ircdl2025.uniud.it/
 
 location: Udine, Italy.
 
-summary: "Demo Presentation - 21st Conference on Information and Research Science Connecting to Digital and Library Science. Udine, Italy."
+summary: "Conference Talk - 21st Conference on Information and Research Science Connecting to Digital and Library Science. Udine, Italy."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.
