@@ -48,7 +48,7 @@ design:
   - 15th Italian Research Conference On Digital Libraries (IRCDL 2019), Pisa.
 
 - **Mentoring**:
-  - <b>Co-supervision</b> of the theses of 7 Master's (MSc) and 13 Bachelor's (BSc) students, as well as various advanced projects and seminars.
+  - <b>Co-supervision</b> of the theses of 10 Master's (MSc) and 15 Bachelor's (BSc) students, as well as various advanced projects and seminars.
 
 - **Affiliations**:
   - Member of the [Social, Mobile, Data, & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/) (SMDC).
