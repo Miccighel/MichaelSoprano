@@ -46,7 +46,6 @@ tags:
   - Data Analysis
   - Toloka
   - Prolific
-  - Data Analysis
 
 categories:
   - teaching
@@ -54,11 +53,16 @@ categories:
 
 # Aims
 
-The aim of the course is to provide students with foundational knowledge and practical skills in the area of social informatics. The course discusses both the so-called social media (Facebook,
-Twitter, etc.) and the crowdsourcing phenomenon.
+The aim of the course is to provide students with foundational knowledge and practical skills in the area of social informatics. The course discusses both the so-called social media (Facebook, Twitter, etc.) and the crowdsourcing phenomenon.
 
-In the first case, social behavior is supported by computational systems; in the second case, computational systems are supported by social behavior. The course addresses conceptual topics,
-theoretical foundations, and practical applications.
+In the first case, social behavior is supported by computational systems; in the second case, computational systems are supported by social behavior. The course addresses conceptual topics, theoretical foundations, and practical applications.
+
+## Key Topics
+
+- Social media APIs and data access (Twitter API, REST)
+- Network analysis and graph structures (NetworkX)
+- Crowdsourcing tools and platforms (Toloka, Prolific)
+- Practical tools (Jupyter, Postman, Angular)
 
 ## A.A. 2020/2021
 
@@ -95,16 +99,15 @@ I contributed to the course by teaching the practical applications of the concep
 
 ## A.A. 2022/2023
 
-## Teachers
+### Teachers
 
 - [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Course Leader
 - **David La Barbera** - Teaching Assistant
 - **Michael Soprano** - Teaching Assistant
-- 
-## Contribution
 
-I contributed to the course by providing two lectures on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (4 hours). Additionally, I provided the students with
-their second course assignment. The course is conducted in Italian.
+### Contribution
+
+I contributed to the course by providing two lectures on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (4 hours). Additionally, I provided the students with their second course assignment. The course is conducted in Italian.
 
 - **Lesson 4-5**: [Crowd_Frame](https://www.dropbox.com/scl/fi/ez7aanl9b9vn4m6zt6ckw/22-23.Crowd_Frame.pdf?rlkey=95kkc3nrf9ejy6r17s5i44y7w&st=b24tubx6&dl=0)
 
@@ -118,14 +121,13 @@ their second course assignment. The course is conducted in Italian.
 
 ### Contribution
 
-I contributed to the course by providing two lectures on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (4 hours). Additionally, I provided the students with
-their second course assignment. The course is conducted in Italian.
+I contributed to the course by providing two lectures on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (4 hours). Additionally, I provided the students with their second course assignment. The course is conducted in Italian.
 
 - **Lesson 4-5**: [Crowd_Frame](https://www.dropbox.com/scl/fi/4rmiryatmpzhyrcmejuyb/SC_MS_4_Crowd_Frame.pptx?rlkey=1cd5jhx1n2fi491qvkagau3un&dl=0)  
 
 ## A.A. 2024/2025
 
-## Teachers
+### Teachers
 
 - [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Course Leader
 - **Hafska Akebli** - Teaching Assistant
@@ -134,7 +136,10 @@ their second course assignment. The course is conducted in Italian.
 
 ### Contribution
 
-I will be contributing to the course by providing a lecture on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours). The course will be conducted in Italian.
+I contribute to the course by providing a lecture on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours). The course is conducted in Italian.
 
+- **Lesson 4-5**: Crowd_Frame: in-class activity
 
+## Additional Materials
 
+- Crowd_Frame: [GitHub Repository](https://github.com/yourusername/crowd_frame)
