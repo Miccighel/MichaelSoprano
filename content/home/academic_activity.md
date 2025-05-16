@@ -21,27 +21,29 @@ design:
 - **Organizational Roles**:
   - 21th Italian Research Conference on Digital Libraries (IRCDL 2025), Udine, February 20-21, 2025. <b>Website Chair</b>. [https://ircdl2025.uniud.it/](https://ircdl2025.uniud.it/)
   - 14th Italian Information Retrieval Workshop (IIR 2024), Udine, September 5-6, 2024. <b>Organizer and Website Chair</b>. [https://iir2024.uniud.it/](https://iir2024.uniud.it/)
-  - CARE: Conversational Agents and Responsible Ethics in Healthcare - Workshop at the European Federation of Medical Informatics Special Topic Conference 2023 (EFMI STC 2023), Turin, October 27, 2023. <b>Organizer</b>. 
+  - CARE: Conversational Agents and Responsible Ethics in Healthcare - Workshop at the European Federation of Medical Informatics Special Topic Conference 2023 (EFMI STC 2023), Turin, October 27, 2023. <b>Organizer</b>.
   - Fourth Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2022), Online. <b>Organizer, Proceedings Chair, and Website Chair</b>. [https://bhcc2022.org/](https://bhcc2022.org/)
 
 - **Program Committee Roles**:
+  - 15th Italian Information Retrieval Workshop (IIR 2025), Cagliari, September 3-5, 2025. <b>Full and Short Papers Tracks</b>.
   - 12th AAAI Conference on Human Computation and Crowdsourcing (HCOMP 2024), Pittsburgh, Pennsylvania, USA. <b>Full Papers Track</b>.
   - 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2024), Washington D.C., USA. <b>Full and Short Papers Tracks</b>.
   - 45th European Conference on Information Retrieval (ECIR 2023), Dublin, Ireland. <b>Short Papers Track</b>.
   - 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2022), Madrid, Spain. <b>Short Papers Track</b>.
-  - Third Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2022), Online.
+  - Third Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2021), Online.
 
 - **Reviewer**:
-  - Data Science and Engineering (2025). [Journal ISSN: 0306-4573](https://portal.issn.org/resource/ISSN/23641541). 
+  - International Journal on Digital Libraries (2025). [Journal ISSN: 0378-2484](https://portal.issn.org/resource/ISSN/0378-2484)
+  - Data Science and Engineering (2025). [Journal ISSN: 2364-1541](https://portal.issn.org/resource/ISSN/23641541)
   - Information Processing & Management (2023). [Journal ISSN: 0306-4573](https://portal.issn.org/resource/ISSN/0306-4573). Contribution registered on ORCID profile.
-  - Springer Nature Scientific Report (2023). [Journal ISSN: 2045-2322](https://portal.issn.org/resource/ISSN/2045-2322).
+  - Springer Nature Scientific Report (2023). [Journal ISSN: 2045-2322](https://portal.issn.org/resource/ISSN/2045-2322)
   - 13th Italian Information Retrieval Workshop (IIR 2023), Pisa, Italy.
-  - Information Processing & Management (2022). [Journal ISSN: 0306-4573](https://portal.issn.org/resource/ISSN/0306-4573).
+  - Information Processing & Management (2022). [Journal ISSN: 0306-4573](https://portal.issn.org/resource/ISSN/0306-4573)
   - Tenth AAAI Conference on Human Computation and Crowdsourcing (HCOMP 2022), Online.
   - Conference and Labs of the Evaluation Forum (CLEF 2022), Bologna, Italy.
   - 44th European Conference on Information Retrieval (ECIR 2022), Stavanger, Norway.
   - Second Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2021), Delft, Netherlands (Online).
-  - 30st ACM International Conference On Information And Knowledge Management (CIKM 2021), Online.
+  - 30th ACM International Conference On Information And Knowledge Management (CIKM 2021), Online.
   - 32nd ACM Conference on Hypertext and Social Media (HT 2021), Online.
   - 29th ACM International Conference On Information And Knowledge Management (CIKM 2020), Galway, Ireland (Online).
   - 31st ACM Conference on Hypertext and Social Media (HT 2020), Online.
@@ -52,4 +54,3 @@ design:
 
 - **Affiliations**:
   - Member of the [Social, Mobile, Data, & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/) (SMDC).
-     
