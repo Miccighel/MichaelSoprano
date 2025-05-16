@@ -23,7 +23,7 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 
 experience:
-  - title: Fixed-term Researcher (Art. 22 Law 240/2010)
+  - title: Fixed-term Researcher
     company: Department of Mathematics, Computer Science and Physics (DMIF), University of Udine
     company_url: 'https://www.dmif.uniud.it/en/'
     location: Udine, Italy
