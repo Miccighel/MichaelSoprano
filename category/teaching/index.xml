@@ -1,11 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>teaching | Michael Soprano</title><link>https://michaelsoprano.com/category/teaching/</link><atom:link href="https://michaelsoprano.com/category/teaching/index.xml" rel="self" type="application/rss+xml"/><description>teaching</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 08 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>teaching</title><link>https://michaelsoprano.com/category/teaching/</link></image><item><title>Web Applications (2024-2025)</title><link>https://michaelsoprano.com/post/web-applications_2024-2025/</link><pubDate>Thu, 08 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/web-applications_2024-2025/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
-&lt;p>The aim of the course is to equip students with skills, terminology, and methodologies for client and server-side web programming.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>teaching | Michael Soprano</title><link>https://michaelsoprano.com/category/teaching/</link><atom:link href="https://michaelsoprano.com/category/teaching/index.xml" rel="self" type="application/rss+xml"/><description>teaching</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 08 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>teaching</title><link>https://michaelsoprano.com/category/teaching/</link></image><item><title>Web Applications (2024–2025)</title><link>https://michaelsoprano.com/post/web-applications_2024-2025/</link><pubDate>Thu, 08 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/web-applications_2024-2025/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
+&lt;p>The course equips students with fundamental skills and knowledge in both client-side and server-side web programming. It covers the architecture of the web, core web protocols and technologies, and introduces frontend and backend development practices.&lt;/p>
 &lt;h2 id="teacher">Teacher&lt;/h2>
 &lt;ul>
-&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Course Leader&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> — Course Leader&lt;/li>
 &lt;/ul>
-&lt;h3 id="contribution">Contribution&lt;/h3>
-&lt;p>I will be instructing the course in the first half of 2025. The course will have a total duration of 48 hours.&lt;/p></description></item><item><title>Information Analysis and Processing for Training (2024-2025)</title><link>https://michaelsoprano.com/post/information-analysis-and-processing-for-training_2024-2025/</link><pubDate>Wed, 07 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/information-analysis-and-processing-for-training_2024-2025/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
+&lt;p>I design and teach the course, which consists of 24 lectures for a total of 48 hours. The assessment is based on a practical project. The course runs in the first half of 2025.&lt;/p>
+&lt;h2 id="topics-covered">Topics Covered&lt;/h2>
+&lt;ul>
+&lt;li>Fundamentals of the World Wide Web and Client-Server Architecture&lt;/li>
+&lt;li>HTTP Protocol, Methods, Headers, and Status Codes&lt;/li>
+&lt;li>URI, URLs, and parameter passing&lt;/li>
+&lt;li>Tools for Web Communication: cURL and Postman&lt;/li>
+&lt;li>Introduction to HTML and the Document Object Model (DOM)&lt;/li>
+&lt;li>Text, lists, tables, links, and images in HTML&lt;/li>
+&lt;li>Forms and client-side validation&lt;/li>
+&lt;li>HTML layout and responsive design with semantic elements&lt;/li>
+&lt;li>Embedding external media: &lt;code>&amp;lt;iframe&amp;gt;&lt;/code>, &lt;code>&amp;lt;video&amp;gt;&lt;/code>, &lt;code>&amp;lt;audio&amp;gt;&lt;/code>&lt;/li>
+&lt;li>CSS: syntax, selectors, box model, typography, spacing, layout&lt;/li>
+&lt;li>Flexbox layout and positioning&lt;/li>
+&lt;li>Introduction to JavaScript: syntax, DOM interaction, async programming, modules&lt;/li>
+&lt;/ul>
+&lt;h2 id="learning-approach">Learning Approach&lt;/h2>
+&lt;p>The course emphasizes hands-on learning with guided exercises, quizzes, and two structured assignments focused on real-world frontend development scenarios.&lt;/p></description></item><item><title>Information Analysis and Processing for Training (2024-2025)</title><link>https://michaelsoprano.com/post/information-analysis-and-processing-for-training_2024-2025/</link><pubDate>Wed, 07 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/information-analysis-and-processing-for-training_2024-2025/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
 &lt;p>The course aims to provide fundamental knowledge for understanding, representing, and analyzing data, with a particular focus on the sports domain and the use of Microsoft Excel. Students will develop a clear distinction between data and information, understanding the process of transforming raw data into structured information. The course will cover key data representation methods, exploring storage techniques, encoding, compression, and concepts such as entropy and redundancy. Finally, students will gain practical skills in using Excel for data management, processing, and visualization through tools such as formulas, functions, charts, and PivotTables.&lt;/p>
 &lt;h2 id="teacher">Teacher&lt;/h2>
 &lt;ul>
