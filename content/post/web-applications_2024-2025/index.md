@@ -1,5 +1,5 @@
 ---
-title: Web Applications (2024–2025)
+title: Web Applications (A.A. 2024-2025)
 subtitle: Master's Degree in Management Engineering at the University of Udine
 
 summary: "Master's Degree in Management Engineering at the University of Udine. Academic Year: 2024–2025"

@@ -1,5 +1,5 @@
 ---
-title: Information Analysis and Processing for Training (2024–2025)
+title: Information Analysis and Processing for Training (A.A. 2024–2025)
 subtitle: Bachelor's Degree in Sports Science at the University of Udine
 
 summary: "Bachelor's Degree in Sports Science. Academic Year: 2024–2025"

@@ -1,5 +1,5 @@
 ---
-title: Social Computing (2020-2024)
+title: Social Computing (A.A. 2020-2021/2024-2025)
 subtitle: Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine
 
 # Summary for listings and search engines
