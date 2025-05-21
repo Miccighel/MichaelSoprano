@@ -19,6 +19,7 @@ design:
   columns: "2"
 ---
 - **Organizational Roles**:
+  - Workshop "AI, Misinformazione e Disinformazione" – Ital-IA 2025, Trieste, June 23, 2025. <b>Organizer</b>. [https://www.ital-ia2025.it/workshop/ai-misinformazione-e-disinformazione.html](https://www.ital-ia2025.it/workshop/ai-misinformazione-e-disinformazione.html)
   - 21th Italian Research Conference on Digital Libraries (IRCDL 2025), Udine, February 20-21, 2025. <b>Website Chair</b>. [https://ircdl2025.uniud.it/](https://ircdl2025.uniud.it/)
   - 14th Italian Information Retrieval Workshop (IIR 2024), Udine, September 5-6, 2024. <b>Organizer and Website Chair</b>. [https://iir2024.uniud.it/](https://iir2024.uniud.it/)
   - CARE: Conversational Agents and Responsible Ethics in Healthcare - Workshop at the European Federation of Medical Informatics Special Topic Conference 2023 (EFMI STC 2023), Turin, October 27, 2023. <b>Organizer</b>.
