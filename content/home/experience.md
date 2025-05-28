@@ -36,8 +36,8 @@ experience:
     company: Department of Economic and Statistical Sciences (DIES), University of Udine
     company_url: 'https://dies.uniud.it/it'
     location: Udine, Italy
-    date_start: '2024-12-01'
-    date_end: '2025-02-28'
+    date_start: '2025-03-15'
+    date_end: '2025-05-15'
     description: |2-
       Design, implementation, and evaluation of a conversational system for accessing regional public health services. 
       Activities included prototype development, experimental evaluation, and data analysis, carried out within the interdepartmental project "Governance and Digital Public Administration".
