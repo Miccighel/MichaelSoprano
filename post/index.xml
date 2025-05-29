@@ -1,51 +1,144 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Michael Soprano</title><link>https://michaelsoprano.com/post/</link><atom:link href="https://michaelsoprano.com/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>Posts</title><link>https://michaelsoprano.com/post/</link></image><item><title>Web Applications (A.A. 2024-2025)</title><link>https://michaelsoprano.com/post/web-applications_2024-2025/</link><pubDate>Thu, 08 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/web-applications_2024-2025/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
-&lt;p>The course equips students with fundamental skills and knowledge in both client-side and server-side web programming. It covers the architecture of the web, core web protocols and technologies, and introduces frontend and backend development practices.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Michael Soprano</title><link>https://michaelsoprano.com/post/</link><atom:link href="https://michaelsoprano.com/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>Posts</title><link>https://michaelsoprano.com/post/</link></image><item><title>Web Applications (A.A. 2024–2025)</title><link>https://michaelsoprano.com/post/web-applications_2024-2025/</link><pubDate>Thu, 08 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/web-applications_2024-2025/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
+&lt;p>The course provides a comprehensive introduction to full-stack web application development, structured in two major domains: &lt;strong>Frontend Development&lt;/strong> and &lt;strong>Backend Development&lt;/strong>.&lt;/p>
+&lt;p>On the &lt;strong>frontend&lt;/strong>, students learn to create structured, interactive, and accessible user interfaces using HTML, CSS, and JavaScript. Topics include semantic markup, responsive layout, form handling, client-side validation, and media embedding. Students progressively acquire skills in DOM manipulation, event-driven programming, and asynchronous operations.&lt;/p>
+&lt;p>On the &lt;strong>backend&lt;/strong>, the course introduces Node.js and the Express.js framework to design RESTful services, manage middleware, and handle persistence with SQLite. By the end of the course, students are able to build full-stack applications that integrate client-side interfaces with server-side logic and data storage.&lt;/p>
+&lt;p>Hands-on activities using cURL, Postman, and structured assignments support practical learning.&lt;/p>
 &lt;h2 id="teacher">Teacher&lt;/h2>
 &lt;ul>
 &lt;li>&lt;strong>Michael Soprano&lt;/strong> — Course Leader&lt;/li>
 &lt;/ul>
-&lt;p>I design and teach the course, which consists of 24 lectures for a total of 48 hours. The assessment is based on a practical project. The course runs in the first half of 2025.&lt;/p>
+&lt;p>The course includes 24 lectures for a total of 48 hours. The assessment is based on a practical project. The course is delivered in the second semester.&lt;/p>
 &lt;h2 id="topics-covered">Topics Covered&lt;/h2>
+&lt;h3 id="web-fundamentals-and-communication">Web Fundamentals and Communication&lt;/h3>
 &lt;ul>
-&lt;li>Fundamentals of the World Wide Web and Client-Server Architecture&lt;/li>
-&lt;li>HTTP Protocol, Methods, Headers, and Status Codes&lt;/li>
-&lt;li>URI, URLs, and parameter passing&lt;/li>
-&lt;li>Tools for Web Communication: cURL and Postman&lt;/li>
-&lt;li>Introduction to HTML and the Document Object Model (DOM)&lt;/li>
-&lt;li>Text, lists, tables, links, and images in HTML&lt;/li>
-&lt;li>Forms and client-side validation&lt;/li>
-&lt;li>HTML layout and responsive design with semantic elements&lt;/li>
-&lt;li>Embedding external media: &lt;code>&amp;lt;iframe&amp;gt;&lt;/code>, &lt;code>&amp;lt;video&amp;gt;&lt;/code>, &lt;code>&amp;lt;audio&amp;gt;&lt;/code>&lt;/li>
-&lt;li>CSS: syntax, selectors, box model, typography, spacing, layout&lt;/li>
-&lt;li>Flexbox layout and positioning&lt;/li>
-&lt;li>Introduction to JavaScript: syntax, DOM interaction, async programming, modules&lt;/li>
+&lt;li>Architecture of the World Wide Web&lt;/li>
+&lt;li>Client-server model and user agents&lt;/li>
+&lt;li>Domain names, IP addressing, and URLs&lt;/li>
+&lt;li>The HTTP protocol: request/response lifecycle&lt;/li>
+&lt;li>Methods, status codes, headers, and metadata&lt;/li>
+&lt;li>URL query strings and GET parameter passing&lt;/li>
+&lt;li>Data exchange with JSON&lt;/li>
+&lt;li>Practical use of cURL and Postman&lt;/li>
+&lt;/ul>
+&lt;h3 id="frontend-development">Frontend Development&lt;/h3>
+&lt;p>&lt;strong>HTML: Structure and Semantics&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Core syntax and document structure&lt;/li>
+&lt;li>Headings, paragraphs, text-level semantics&lt;/li>
+&lt;li>Lists, tables, links, and images&lt;/li>
+&lt;li>The DOM and HTML parsing model&lt;/li>
+&lt;li>Embedding external and multimedia content: &lt;code>&amp;lt;iframe&amp;gt;&lt;/code>, &lt;code>&amp;lt;video&amp;gt;&lt;/code>, &lt;code>&amp;lt;audio&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>HTML Forms and Validation&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Input types: text, email, number, date, checkbox, radio&lt;/li>
+&lt;li>Structural and grouping elements in forms&lt;/li>
+&lt;li>&lt;code>&amp;lt;textarea&amp;gt;&lt;/code>, &lt;code>&amp;lt;select&amp;gt;&lt;/code>, and option handling&lt;/li>
+&lt;li>HTML5 validation attributes and input constraints&lt;/li>
+&lt;li>Form design best practices&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>CSS: Styling and Layout&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Basic syntax, selectors, and combinators&lt;/li>
+&lt;li>Cascading rules, specificity, inheritance&lt;/li>
+&lt;li>The box model: margin, padding, border, sizing, overflow&lt;/li>
+&lt;li>Typography: fonts, spacing, line height&lt;/li>
+&lt;li>Color management and transparency&lt;/li>
+&lt;li>Responsive layout with Flexbox&lt;/li>
+&lt;li>Positioning, layout strategies, and component patterns&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>JavaScript: Behavior and Interaction&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Core language constructs and syntax&lt;/li>
+&lt;li>Script inclusion and module structure&lt;/li>
+&lt;li>DOM selection, traversal, and manipulation&lt;/li>
+&lt;li>Event handling and listener registration&lt;/li>
+&lt;li>Event flow: bubbling and capture&lt;/li>
+&lt;li>Asynchronous JavaScript: callbacks, promises, fetch API&lt;/li>
+&lt;li>Case study: calling a public API (e.g., Random Brewery API)&lt;/li>
+&lt;/ul>
+&lt;h3 id="backend-development">Backend Development&lt;/h3>
+&lt;p>&lt;strong>Node.js and Express.js&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Introduction to Node.js and non-blocking I/O&lt;/li>
+&lt;li>Setting up an Express.js server&lt;/li>
+&lt;li>Defining routes and handling HTTP methods&lt;/li>
+&lt;li>Sending responses and managing request data&lt;/li>
+&lt;li>Middleware architecture and request pipelines&lt;/li>
+&lt;li>Building RESTful endpoints&lt;/li>
+&lt;li>Interfacing with SQLite for data persistence&lt;/li>
+&lt;li>Final integration project: full-stack CRUD operations&lt;/li>
 &lt;/ul>
 &lt;h2 id="learning-approach">Learning Approach&lt;/h2>
-&lt;p>The course emphasizes hands-on learning with guided exercises, quizzes, and two structured assignments focused on real-world frontend development scenarios.&lt;/p></description></item><item><title>Information Analysis and Processing for Training (A.A. 2024–2025)</title><link>https://michaelsoprano.com/post/information-analysis-and-processing-for-training_2024-2025/</link><pubDate>Wed, 07 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/information-analysis-and-processing-for-training_2024-2025/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
-&lt;p>The course provides foundational knowledge for understanding, representing, and analyzing data, with a focus on the sports domain and applied use of Microsoft Excel. Students distinguish between raw data and structured information, explore how data is stored, encoded, and compressed, and apply this knowledge to real-world cases using spreadsheets.&lt;/p>
+&lt;p>The course emphasizes learning through:&lt;/p>
+&lt;ul>
+&lt;li>Guided exercises and interactive quizzes&lt;/li>
+&lt;li>Tool-assisted exploration of HTTP, APIs, and web protocols&lt;/li>
+&lt;li>Two structured assignments focused on frontend development and interface behavior&lt;/li>
+&lt;li>Progressive backend development with routing and persistence&lt;/li>
+&lt;li>A final project demonstrating complete full-stack integration&lt;/li>
+&lt;/ul>
+&lt;h2 id="reading-material">Reading Material&lt;/h2>
+&lt;ul>
+&lt;li>J. Duckett, &lt;em>HTML e CSS. Progettare e costruire siti web&lt;/em>. Apogeo Education, 2017&lt;/li>
+&lt;li>J. Duckett, &lt;em>JavaScript &amp;amp; JQuery. Sviluppare interfacce web interattive&lt;/em>. Apogeo Education, 2017&lt;/li>
+&lt;li>J. Duckett, &lt;em>PHP &amp;amp; MySQL. Sviluppare applicazioni web lato server&lt;/em>. Apogeo Education, 2022&lt;/li>
+&lt;li>E. Holmes, D. Harms, &lt;em>Express in Action. Sviluppare applicazioni web con Node.js e Express&lt;/em>. Apogeo Education, 2017&lt;/li>
+&lt;/ul></description></item><item><title>Information Analysis and Processing for Training (A.A. 2024–2025)</title><link>https://michaelsoprano.com/post/information-analysis-and-processing-for-training_2024-2025/</link><pubDate>Wed, 07 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/information-analysis-and-processing-for-training_2024-2025/</guid><description>&lt;hr>
+&lt;h1 id="aims">Aims&lt;/h1>
+&lt;p>The course introduces the fundamental principles of data representation and processing, with a focus on real-world applications in the field of sports science. It provides students with the ability to recognize, structure, and interpret different types of data—textual, visual, audio, and numeric—and to use Microsoft Excel for practical analysis, visualization, and reporting.&lt;/p>
+&lt;p>By exploring how raw data is encoded, stored, compressed, and transformed into usable information, students acquire both conceptual tools and technical skills to support decision-making and communication in training contexts.&lt;/p>
 &lt;h2 id="teacher">Teacher&lt;/h2>
 &lt;ul>
 &lt;li>&lt;strong>Michael Soprano&lt;/strong> — Course Leader&lt;/li>
 &lt;/ul>
-&lt;p>I design and teach the course, which includes 12 lectures totaling 24 hours. Assessment is based on a written exam.&lt;/p>
+&lt;p>The course includes 12 lectures totaling 24 hours. Assessment is based on a written exam with applied components. The course is delivered in the first semester.&lt;/p>
 &lt;h2 id="topics-covered">Topics Covered&lt;/h2>
+&lt;h3 id="module-1--introduction-to-data-science-2h">Module 1 — Introduction to Data Science (2h)&lt;/h3>
 &lt;ul>
-&lt;li>Data and information in the context of sports&lt;/li>
-&lt;li>Populations, variables, and scales of measurement&lt;/li>
-&lt;li>Data storage, encoding, and representation&lt;/li>
-&lt;li>Representing text, images, audio, and video&lt;/li>
-&lt;li>Shannon-Weaver model, entropy, redundancy&lt;/li>
-&lt;li>Data compression: lossless and lossy&lt;/li>
-&lt;li>Excel: interface, data entry, formatting&lt;/li>
-&lt;li>Managing cells, ranges, rows, and columns&lt;/li>
-&lt;li>Tables, references, navigation shortcuts&lt;/li>
-&lt;li>Formulas and functions in Excel&lt;/li>
-&lt;li>Data import and manipulation&lt;/li>
-&lt;li>Creating and managing line, area, and scatter charts&lt;/li>
-&lt;li>Introduction to PivotTables for structured analysis&lt;/li>
+&lt;li>What is data?&lt;/li>
+&lt;li>Data in the context of sport&lt;/li>
+&lt;li>From raw data to information&lt;/li>
+&lt;li>Populations, variables, and levels of measurement&lt;/li>
+&lt;li>Specific data types and practical relevance&lt;/li>
+&lt;/ul>
+&lt;h3 id="module-2--data-representation-and-encoding-8h">Module 2 — Data Representation and Encoding (8h)&lt;/h3>
+&lt;ul>
+&lt;li>How data is stored in the filesystem&lt;/li>
+&lt;li>Representing data in different formats&lt;/li>
+&lt;li>Introduction to semiotics and symbolic systems&lt;/li>
+&lt;li>Text: characters and encoding standards (ASCII, Unicode)&lt;/li>
+&lt;li>Images: bitmap vs vector graphics, formats and compression&lt;/li>
+&lt;li>Sound: sampling, MIDI messages, audio file formats&lt;/li>
+&lt;li>Video: digitization, frame rate, codecs&lt;/li>
+&lt;li>The Shannon-Weaver model of communication&lt;/li>
+&lt;li>Entropy and redundancy&lt;/li>
+&lt;li>Principles of data compression&lt;/li>
+&lt;li>Lossless compression methods (e.g. ZIP, RLE)&lt;/li>
+&lt;li>Lossy compression methods (e.g. JPEG, MP3)&lt;/li>
+&lt;/ul>
+&lt;h3 id="module-3--data-analysis-with-microsoft-excel-14h">Module 3 — Data Analysis with Microsoft Excel (14h)&lt;/h3>
+&lt;ul>
+&lt;li>Overview of the spreadsheet interface&lt;/li>
+&lt;li>Navigating and editing cells, rows, and columns&lt;/li>
+&lt;li>Entering and formatting data in a workbook&lt;/li>
+&lt;li>Case study: fitness center budget&lt;/li>
+&lt;li>Working with ranges and data blocks&lt;/li>
+&lt;li>Introduction to formulas and functions&lt;/li>
+&lt;li>Formula syntax, operators, and common errors&lt;/li>
+&lt;li>Function types: mathematical, logical, statistical&lt;/li>
+&lt;li>Importing structured data from text files (CSV, TSV)&lt;/li>
+&lt;li>Creating and customizing charts (line, area, scatter)&lt;/li>
+&lt;li>Introduction to PivotTables&lt;/li>
+&lt;li>Building and managing PivotTables for structured analysis&lt;/li>
 &lt;/ul>
 &lt;h2 id="learning-approach">Learning Approach&lt;/h2>
-&lt;p>The course emphasizes clarity and practical understanding through examples and case studies from the sports domain. Students work directly with Excel to apply key concepts in data representation, transformation, and visualization.&lt;/p></description></item><item><title>Social Computing (A.A. 2020-2021/2024-2025)</title><link>https://michaelsoprano.com/post/social-computing_2020-2024/</link><pubDate>Tue, 06 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/social-computing_2020-2024/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
+&lt;p>The course emphasizes clarity, relevance, and hands-on application. Through examples and case studies drawn from the domain of sports, students progressively build the ability to describe data, apply encoding models, and work effectively with spreadsheet tools for analysis and reporting. Active use of Excel is integrated in all practical modules.&lt;/p>
+&lt;h2 id="reading-material">Reading Material&lt;/h2>
+&lt;ul>
+&lt;li>Peter O&amp;rsquo;Donoghue, Lucy Holmes, &lt;em>Data Analysis in Sport&lt;/em>. Routledge Studies in Sports Performance Analysis, First edition, 2014&lt;/li>
+&lt;li>Michael Alexander, Dick Kusleika, &lt;em>Excel 365 Bible&lt;/em>. Wiley, First edition, 2022&lt;/li>
+&lt;/ul></description></item><item><title>Social Computing (A.A. 2020-2021/2024-2025)</title><link>https://michaelsoprano.com/post/social-computing_2020-2024/</link><pubDate>Tue, 06 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/social-computing_2020-2024/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
 &lt;p>The aim of the course is to provide students with foundational knowledge and practical skills in the area of social informatics. The course discusses both the so-called social media (Facebook, Twitter, etc.) and the crowdsourcing phenomenon.&lt;/p>
 &lt;p>In the first case, social behavior is supported by computational systems; in the second case, computational systems are supported by social behavior. The course addresses conceptual topics, theoretical foundations, and practical applications.&lt;/p>
 &lt;h2 id="key-topics">Key Topics&lt;/h2>
