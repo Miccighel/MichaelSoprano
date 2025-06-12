@@ -17,11 +17,11 @@ title: Metrics
 ---
 
 |                     | Google Scholar | Scopus | ACM Digital Library |
-|---------------------|----------------|--------|--------------------|
-| Articles            | 29             | 22	    | 19                 |
-| Citations           | 404            | 208    | 124                |
-| Citations / Article | 13.39          | 9.45   | 6.52               |
-| h-index             | 11             | 7      | -                  |
-| i10-index           | 11             | -      | -                  |
+|---------------------|----------------|--------|---------------------|
+| Articles            | 31             | 23	    | 19                  |
+| Citations           | 415            | 220    | 126                 |
+| Citations / Article | 13.38          | 9.56   | 6.63                |
+| h-index             | 11             | 7      | -                   |
+| i10-index           | 11             | -      | -                   |
 
-*Last update: May 21, 2025*
+*Last update: June 12, 2025*
