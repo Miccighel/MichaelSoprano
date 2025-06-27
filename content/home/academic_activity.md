@@ -1,57 +1,51 @@
 ---
-# An instance of the Blank widget.
-# Documentation: https://wowchemy.com/docs/getting-started/page-builder/
+# Blank section widget (Wowchemy Page Builder)
 widget: blank
-
-# Activate this widget? true/false
 active: true
-
-# This file represents a page section.
 headless: true
-
-# Order that this section appears on the page.
 weight: 70
 
 title: Academic Activity
 subtitle:
-
 design:
   columns: "2"
 ---
-- **Organizational Roles**:
-  - Workshop "AI, Misinformazione e Disinformazione" – Ital-IA 2025, Trieste, June 23, 2025. <b>Organizer</b>. [https://www.ital-ia2025.it/workshop/ai-misinformazione-e-disinformazione.html](https://www.ital-ia2025.it/workshop/ai-misinformazione-e-disinformazione.html)
-  - 21th Italian Research Conference on Digital Libraries (IRCDL 2025), Udine, February 20-21, 2025. <b>Website Chair</b>. [https://ircdl2025.uniud.it/](https://ircdl2025.uniud.it/)
-  - 14th Italian Information Retrieval Workshop (IIR 2024), Udine, September 5-6, 2024. <b>Organizer and Website Chair</b>. [https://iir2024.uniud.it/](https://iir2024.uniud.it/)
-  - CARE: Conversational Agents and Responsible Ethics in Healthcare - Workshop at the European Federation of Medical Informatics Special Topic Conference 2023 (EFMI STC 2023), Turin, October 27, 2023. <b>Organizer</b>.
-  - Fourth Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2022), Online. <b>Organizer, Proceedings Chair, and Website Chair</b>. [https://bhcc2022.org/](https://bhcc2022.org/)
 
-- **Program Committee Roles**:
-  - 15th Italian Information Retrieval Workshop (IIR 2025), Cagliari, September 3-5, 2025. <b>Full and Short Papers Tracks</b>.
-  - 12th AAAI Conference on Human Computation and Crowdsourcing (HCOMP 2024), Pittsburgh, Pennsylvania, USA. <b>Full Papers Track</b>.
-  - 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2024), Washington D.C., USA. <b>Full and Short Papers Tracks</b>.
-  - 45th European Conference on Information Retrieval (ECIR 2023), Dublin, Ireland. <b>Short Papers Track</b>.
-  - 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2022), Madrid, Spain. <b>Short Papers Track</b>.
-  - Third Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2021), Online.
+- **Organizational Roles**  
+  - Workshop “AI, Misinformation and Disinformation” – *Ital-IA 2025*, Trieste, **23 Jun 2025**. **Organizer**. <https://www.ital-ia2025.it/workshop/ai-misinformation-and-disinformation.html>  
+  - 21ᵗʰ Italian Research Conference on Digital Libraries (*IRCDL 2025*), Udine, **20 – 21 Feb 2025**. **Website Chair**. <https://ircdl2025.uniud.it/>  
+  - 14ᵗʰ Italian Information Retrieval Workshop (*IIR 2024*), Udine, **5 – 6 Sep 2024**. **Organizer & Website Chair**. <https://iir2024.uniud.it/>  
+  - **CARE** – Conversational Agents and Responsible Ethics in Healthcare (Workshop @ *EFMI STC 2023*), Turin, **27 Oct 2023**. **Organizer**  
+  - Fourth Symposium on Biases in Human Computation and Crowdsourcing (*BHCC 2022*), Online, **12 – 13 Oct 2022**. **Organizer, Proceedings Chair & Website Chair**. <https://bhcc2022.org/>
 
-- **Reviewer**:
-  - International Journal on Digital Libraries (2025). [Journal ISSN: 0378-2484](https://portal.issn.org/resource/ISSN/0378-2484)
-  - Data Science and Engineering (2025). [Journal ISSN: 2364-1541](https://portal.issn.org/resource/ISSN/23641541)
-  - Information Processing & Management (2023). [Journal ISSN: 0306-4573](https://portal.issn.org/resource/ISSN/0306-4573). Contribution registered on ORCID profile.
-  - Springer Nature Scientific Report (2023). [Journal ISSN: 2045-2322](https://portal.issn.org/resource/ISSN/2045-2322)
-  - 13th Italian Information Retrieval Workshop (IIR 2023), Pisa, Italy.
-  - Information Processing & Management (2022). [Journal ISSN: 0306-4573](https://portal.issn.org/resource/ISSN/0306-4573)
-  - Tenth AAAI Conference on Human Computation and Crowdsourcing (HCOMP 2022), Online.
-  - Conference and Labs of the Evaluation Forum (CLEF 2022), Bologna, Italy.
-  - 44th European Conference on Information Retrieval (ECIR 2022), Stavanger, Norway.
-  - Second Symposium on Biases in Human Computation and Crowdsourcing (BHCC 2021), Delft, Netherlands (Online).
-  - 30th ACM International Conference On Information And Knowledge Management (CIKM 2021), Online.
-  - 32nd ACM Conference on Hypertext and Social Media (HT 2021), Online.
-  - 29th ACM International Conference On Information And Knowledge Management (CIKM 2020), Galway, Ireland (Online).
-  - 31st ACM Conference on Hypertext and Social Media (HT 2020), Online.
-  - 15th Italian Research Conference On Digital Libraries (IRCDL 2019), Pisa.
+- **Program Committee Roles**  
+  - 15ᵗʰ *IIR 2025*, Cagliari, **3 – 5 Sep 2025** — *Full & Short Papers Tracks*  
+  - 12ᵗʰ AAAI Conference on Human Computation and Crowdsourcing (*HCOMP 2024*), Pittsburgh (PA), USA — *Full Papers Track*  
+  - 47ᵗʰ ACM SIGIR 2024, Washington DC, USA — *Full & Short Papers Tracks*  
+  - 45ᵗʰ ECIR 2023, Dublin, Ireland — *Short Papers Track*  
+  - 45ᵗʰ ACM SIGIR 2022, Madrid, Spain — *Short Papers Track*  
+  - Third *BHCC 2021*, Online — **Program Committee Member**
 
-- **Mentoring**:
-  - <b>Co-supervision</b> of the theses of 10 Master's (MSc) and 15 Bachelor's (BSc) students, as well as various advanced projects and seminars.
+- **Reviewer**  
+  - *Umanistica Digitale – Italian Journal of Digital Humanities* (ISSN 2532-8816), **2025** — <https://umanisticadigitale.unibo.it/>  
+  - *International Journal on Digital Libraries* (ISSN 1432-5012), **2025** — <https://www.springer.com/journal/799>  
+  - *Data Science and Engineering* (ISSN 2364-1541), **2025** — <https://www.springer.com/journal/41019>  
+  - *Information Processing & Management* (ISSN 0306-4573), **2023** — contribution recorded on ORCID — <https://www.sciencedirect.com/journal/information-processing-and-management>  
+  - *Scientific Reports* (ISSN 2045-2322), **2023** — <https://www.nature.com/srep/>  
+  - 13ᵗʰ *IIR 2023*, Pisa, Italy  
+  - *Information Processing & Management* (ISSN 0306-4573), **2022**  
+  - 10ᵗʰ *HCOMP 2022*, Online  
+  - *CLEF 2022*, Bologna, Italy  
+  - 44ᵗʰ *ECIR 2022*, Stavanger, Norway  
+  - Second *BHCC 2021*, Delft, Netherlands — Online  
+  - 30ᵗʰ ACM CIKM 2021, Online  
+  - 32ⁿᵈ ACM Hypertext 2021, Online  
+  - 29ᵗʰ ACM CIKM 2020, Galway, Ireland — Online  
+  - 31ˢᵗ ACM Hypertext 2020, Online  
+  - 15ᵗʰ IRCDL 2019, Pisa, Italy
 
-- **Affiliations**:
-  - Member of the [Social, Mobile, Data, & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/) (SMDC).
+- **Mentoring**  
+  - **Co-supervision** of **11 MSc** and **16 BSc** theses, plus several advanced projects and seminars (2020 – today)
+
+- **Affiliations**  
+  - Member, **Social, Mobile, Data & Crowd Laboratory (SMDC)** — <https://smdc.uniud.it/smdc/en/members/>
