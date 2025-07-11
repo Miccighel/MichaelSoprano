@@ -1,8 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Agent-Based Healthcare Chatbots for Regional System Services:"
-subtitle: 'A Case Study in the Friuli-Venezia Giulia Region'
+title: "Agent-Based Healthcare Chatbots for Regional System Services: A Case Study in the Friuli-Venezia Giulia Region"
 summary: ''
 authors:
 - Riccardo Lunardi
