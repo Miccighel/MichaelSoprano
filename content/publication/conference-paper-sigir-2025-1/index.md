@@ -1,19 +1,20 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: 'Efficiency and Effectiveness of LLM-Based Summarization of Evidence in Crowdsourced Fact-Checking'
+title: 'The Magnitude of Truth: On Using Magnitude Estimation for Truthfulness Assessment'
 subtitle: ''
 summary: ''
 authors:
-- Kevin Roitero
-- Dustin Wright
 - Michael Soprano
-- Isabelle Augenstein
+- Denis Eduard Tapu
+- David La Barbera
+- Kevin Roitero
 - Stefano Mizzaro
 tags:
-- crowdsourcing annotation
-- information quality assessment
-- argument type identification
+- crowdsourcing 
+- fact-checking
+- misinformation
+- magnitude estimation
 categories: []
 date: '2025-07-14'
 lastmod: 2025-07-14T06:00:00+01:00
