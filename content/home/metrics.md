@@ -23,4 +23,4 @@ title: Metrics
 | h-index             | 11             | 7      | -                   |
 | i10-index           | 12             | -      | -                   |
 
-*Last update: July 14, 2025*
+*Last update: July 17, 2025*
