@@ -34,7 +34,7 @@ image:
 #  name: Follow
 #  url: https://twitter.com/georgecushen
 #url_code: ""
-url_pdf: "https://michaelsoprano.com/media/talks/AIDME-Framework_ICTIR-2025.pdf"
+url_pdf: "https://michaelsoprano.com/media/posters/AIDME-Framework_ICTIR-2025.pdf"
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
