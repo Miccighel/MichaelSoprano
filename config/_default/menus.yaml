@@ -35,5 +35,5 @@ main:
     url: '#contact'
     weight: 10
   - name: CV
-    url: media/Curriculum_EN.pdf
+    url: media/Curriculum_Vitae_EN.pdf
     weight: 11
