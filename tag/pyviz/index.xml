@@ -5,7 +5,7 @@
 &lt;ul>
 &lt;li>Social media APIs and data access (Twitter API, REST)&lt;/li>
 &lt;li>Network analysis and graph structures (NetworkX)&lt;/li>
-&lt;li>Crowdsourcing tools and platforms (Toloka, Prolific)&lt;/li>
+&lt;li>Crowdsourcing tools and platforms (Amazon Mechanical Turk)&lt;/li>
 &lt;li>Practical tools (Jupyter, Postman, Angular)&lt;/li>
 &lt;/ul>
 &lt;h2 id="aa-20202021">A.A. 2020/2021&lt;/h2>
@@ -70,7 +70,7 @@
 &lt;li>&lt;strong>Michael Soprano&lt;/strong> - Teaching Assistant&lt;/li>
 &lt;/ul>
 &lt;h3 id="contribution-4">Contribution&lt;/h3>
-&lt;p>I contribute to the course by providing a lecture on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours). The course is conducted in Italian.&lt;/p>
+&lt;p>I contributed to the course by providing a lecture on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours). The course is conducted in Italian.&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Lesson 4-5&lt;/strong>: Crowd_Frame: in-class activity&lt;/li>
 &lt;/ul>

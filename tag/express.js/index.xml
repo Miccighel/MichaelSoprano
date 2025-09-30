@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Express.js | Michael Soprano</title><link>https://michaelsoprano.com/tag/express.js/</link><atom:link href="https://michaelsoprano.com/tag/express.js/index.xml" rel="self" type="application/rss+xml"/><description>Express.js</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 08 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>Express.js</title><link>https://michaelsoprano.com/tag/express.js/</link></image><item><title>Web Applications (A.A. 2024–2025)</title><link>https://michaelsoprano.com/post/web-applications_2024-2025/</link><pubDate>Thu, 08 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/web-applications_2024-2025/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Express.js | Michael Soprano</title><link>https://michaelsoprano.com/tag/express.js/</link><atom:link href="https://michaelsoprano.com/tag/express.js/index.xml" rel="self" type="application/rss+xml"/><description>Express.js</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 08 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>Express.js</title><link>https://michaelsoprano.com/tag/express.js/</link></image><item><title>Web Applications (A.A. 2024–2025/2025-2026)</title><link>https://michaelsoprano.com/post/web-applications_2024-2025/</link><pubDate>Thu, 08 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/web-applications_2024-2025/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
 &lt;p>The course provides a comprehensive introduction to full-stack web application development, structured in two major domains: &lt;strong>Frontend Development&lt;/strong> and &lt;strong>Backend Development&lt;/strong>.&lt;/p>
 &lt;p>On the &lt;strong>frontend&lt;/strong>, students learn to create structured, interactive, and accessible user interfaces using HTML, CSS, and JavaScript. Topics include semantic markup, responsive layout, form handling, client-side validation, and media embedding. Students progressively acquire skills in DOM manipulation, event-driven programming, and asynchronous operations.&lt;/p>
 &lt;p>On the &lt;strong>backend&lt;/strong>, the course introduces Node.js and the Express.js framework to design RESTful services, manage middleware, and handle persistence with SQLite. By the end of the course, students are able to build full-stack applications that integrate client-side interfaces with server-side logic and data storage.&lt;/p>
@@ -70,18 +70,15 @@
 &lt;li>Final integration project: full-stack CRUD operations&lt;/li>
 &lt;/ul>
 &lt;h2 id="learning-approach">Learning Approach&lt;/h2>
-&lt;p>The course emphasizes learning through:&lt;/p>
 &lt;ul>
-&lt;li>Guided exercises and interactive quizzes&lt;/li>
+&lt;li>Hands-on activities and interactive quizzes&lt;/li>
 &lt;li>Tool-assisted exploration of HTTP, APIs, and web protocols&lt;/li>
-&lt;li>Two structured assignments focused on frontend development and interface behavior&lt;/li>
-&lt;li>Progressive backend development with routing and persistence&lt;/li>
+&lt;li>Assignments focused on frontend and backed development&lt;/li>
 &lt;li>A final project demonstrating complete full-stack integration&lt;/li>
 &lt;/ul>
 &lt;h2 id="reading-material">Reading Material&lt;/h2>
 &lt;ul>
-&lt;li>J. Duckett, &lt;em>HTML e CSS. Progettare e costruire siti web&lt;/em>. Apogeo Education, 2017&lt;/li>
-&lt;li>J. Duckett, &lt;em>JavaScript &amp;amp; JQuery. Sviluppare interfacce web interattive&lt;/em>. Apogeo Education, 2017&lt;/li>
-&lt;li>J. Duckett, &lt;em>PHP &amp;amp; MySQL. Sviluppare applicazioni web lato server&lt;/em>. Apogeo Education, 2022&lt;/li>
-&lt;li>E. Holmes, D. Harms, &lt;em>Express in Action. Sviluppare applicazioni web con Node.js e Express&lt;/em>. Apogeo Education, 2017&lt;/li>
+&lt;li>J. Duckett, &lt;em>HTML &amp;amp; CSS: Design and Build Websites&lt;/em>. Wiley, 2011&lt;/li>
+&lt;li>J. Duckett, &lt;em>JavaScript &amp;amp; jQuery: Interactive Front-End Web Development&lt;/em>. Wiley, 2014&lt;/li>
+&lt;li>E. Holmes, D. Harms, &lt;em>Express in Action: Writing, Building, and Testing Node.js Applications&lt;/em>. Manning Publications, 2016&lt;/li>
 &lt;/ul></description></item></channel></rss>

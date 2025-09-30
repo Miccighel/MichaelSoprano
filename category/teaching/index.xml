@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>teaching | Michael Soprano</title><link>https://michaelsoprano.com/category/teaching/</link><atom:link href="https://michaelsoprano.com/category/teaching/index.xml" rel="self" type="application/rss+xml"/><description>teaching</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 08 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>teaching</title><link>https://michaelsoprano.com/category/teaching/</link></image><item><title>Web Applications (A.A. 2024–2025)</title><link>https://michaelsoprano.com/post/web-applications_2024-2025/</link><pubDate>Thu, 08 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/web-applications_2024-2025/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>teaching | Michael Soprano</title><link>https://michaelsoprano.com/category/teaching/</link><atom:link href="https://michaelsoprano.com/category/teaching/index.xml" rel="self" type="application/rss+xml"/><description>teaching</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 08 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>teaching</title><link>https://michaelsoprano.com/category/teaching/</link></image><item><title>Web Applications (A.A. 2024–2025/2025-2026)</title><link>https://michaelsoprano.com/post/web-applications_2024-2025/</link><pubDate>Thu, 08 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/web-applications_2024-2025/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
 &lt;p>The course provides a comprehensive introduction to full-stack web application development, structured in two major domains: &lt;strong>Frontend Development&lt;/strong> and &lt;strong>Backend Development&lt;/strong>.&lt;/p>
 &lt;p>On the &lt;strong>frontend&lt;/strong>, students learn to create structured, interactive, and accessible user interfaces using HTML, CSS, and JavaScript. Topics include semantic markup, responsive layout, form handling, client-side validation, and media embedding. Students progressively acquire skills in DOM manipulation, event-driven programming, and asynchronous operations.&lt;/p>
 &lt;p>On the &lt;strong>backend&lt;/strong>, the course introduces Node.js and the Express.js framework to design RESTful services, manage middleware, and handle persistence with SQLite. By the end of the course, students are able to build full-stack applications that integrate client-side interfaces with server-side logic and data storage.&lt;/p>
@@ -70,21 +70,18 @@
 &lt;li>Final integration project: full-stack CRUD operations&lt;/li>
 &lt;/ul>
 &lt;h2 id="learning-approach">Learning Approach&lt;/h2>
-&lt;p>The course emphasizes learning through:&lt;/p>
 &lt;ul>
-&lt;li>Guided exercises and interactive quizzes&lt;/li>
+&lt;li>Hands-on activities and interactive quizzes&lt;/li>
 &lt;li>Tool-assisted exploration of HTTP, APIs, and web protocols&lt;/li>
-&lt;li>Two structured assignments focused on frontend development and interface behavior&lt;/li>
-&lt;li>Progressive backend development with routing and persistence&lt;/li>
+&lt;li>Assignments focused on frontend and backed development&lt;/li>
 &lt;li>A final project demonstrating complete full-stack integration&lt;/li>
 &lt;/ul>
 &lt;h2 id="reading-material">Reading Material&lt;/h2>
 &lt;ul>
-&lt;li>J. Duckett, &lt;em>HTML e CSS. Progettare e costruire siti web&lt;/em>. Apogeo Education, 2017&lt;/li>
-&lt;li>J. Duckett, &lt;em>JavaScript &amp;amp; JQuery. Sviluppare interfacce web interattive&lt;/em>. Apogeo Education, 2017&lt;/li>
-&lt;li>J. Duckett, &lt;em>PHP &amp;amp; MySQL. Sviluppare applicazioni web lato server&lt;/em>. Apogeo Education, 2022&lt;/li>
-&lt;li>E. Holmes, D. Harms, &lt;em>Express in Action. Sviluppare applicazioni web con Node.js e Express&lt;/em>. Apogeo Education, 2017&lt;/li>
-&lt;/ul></description></item><item><title>Information Analysis and Processing for Training (A.A. 2024–2025)</title><link>https://michaelsoprano.com/post/information-analysis-and-processing-for-training_2024-2025/</link><pubDate>Wed, 07 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/information-analysis-and-processing-for-training_2024-2025/</guid><description>&lt;hr>
+&lt;li>J. Duckett, &lt;em>HTML &amp;amp; CSS: Design and Build Websites&lt;/em>. Wiley, 2011&lt;/li>
+&lt;li>J. Duckett, &lt;em>JavaScript &amp;amp; jQuery: Interactive Front-End Web Development&lt;/em>. Wiley, 2014&lt;/li>
+&lt;li>E. Holmes, D. Harms, &lt;em>Express in Action: Writing, Building, and Testing Node.js Applications&lt;/em>. Manning Publications, 2016&lt;/li>
+&lt;/ul></description></item><item><title>Information Analysis and Processing for Training (A.A. 2024–2025/2025-2026)</title><link>https://michaelsoprano.com/post/information-analysis-and-processing-for-training_2024-2025/</link><pubDate>Wed, 07 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/information-analysis-and-processing-for-training_2024-2025/</guid><description>&lt;hr>
 &lt;h1 id="aims">Aims&lt;/h1>
 &lt;p>The course introduces the fundamental principles of data representation and processing, with a focus on real-world applications in the field of sports science. It provides students with the ability to recognize, structure, and interpret different types of data—textual, visual, audio, and numeric—and to use Microsoft Excel for practical analysis, visualization, and reporting.&lt;/p>
 &lt;p>By exploring how raw data is encoded, stored, compressed, and transformed into usable information, students acquire both conceptual tools and technical skills to support decision-making and communication in training contexts.&lt;/p>
@@ -94,7 +91,7 @@
 &lt;/ul>
 &lt;p>The course includes 12 lectures totaling 24 hours. Assessment is based on a written exam with applied components. The course is delivered in the first semester.&lt;/p>
 &lt;h2 id="topics-covered">Topics Covered&lt;/h2>
-&lt;h3 id="module-1--introduction-to-data-science-2h">Module 1 — Introduction to Data Science (2h)&lt;/h3>
+&lt;h3 id="module-1--introduction-to-data-science">Module 1 — Introduction to Data Science&lt;/h3>
 &lt;ul>
 &lt;li>What is data?&lt;/li>
 &lt;li>Data in the context of sport&lt;/li>
@@ -102,7 +99,7 @@
 &lt;li>Populations, variables, and levels of measurement&lt;/li>
 &lt;li>Specific data types and practical relevance&lt;/li>
 &lt;/ul>
-&lt;h3 id="module-2--data-representation-and-encoding-8h">Module 2 — Data Representation and Encoding (8h)&lt;/h3>
+&lt;h3 id="module-2--data-representation-and-encoding">Module 2 — Data Representation and Encoding&lt;/h3>
 &lt;ul>
 &lt;li>How data is stored in the filesystem&lt;/li>
 &lt;li>Representing data in different formats&lt;/li>
@@ -117,7 +114,7 @@
 &lt;li>Lossless compression methods (e.g. ZIP, RLE)&lt;/li>
 &lt;li>Lossy compression methods (e.g. JPEG, MP3)&lt;/li>
 &lt;/ul>
-&lt;h3 id="module-3--data-analysis-with-microsoft-excel-14h">Module 3 — Data Analysis with Microsoft Excel (14h)&lt;/h3>
+&lt;h3 id="module-3--data-analysis-with-microsoft-excel">Module 3 — Data Analysis with Microsoft Excel&lt;/h3>
 &lt;ul>
 &lt;li>Overview of the spreadsheet interface&lt;/li>
 &lt;li>Navigating and editing cells, rows, and columns&lt;/li>
@@ -133,7 +130,7 @@
 &lt;li>Building and managing PivotTables for structured analysis&lt;/li>
 &lt;/ul>
 &lt;h2 id="learning-approach">Learning Approach&lt;/h2>
-&lt;p>The course emphasizes clarity, relevance, and hands-on application. Through examples and case studies drawn from the domain of sports, students progressively build the ability to describe data, apply encoding models, and work effectively with spreadsheet tools for analysis and reporting. Active use of Excel is integrated in all practical modules.&lt;/p>
+&lt;p>Through examples and case studies drawn from the domain of sports, students progressively build the ability to describe data, apply encoding models, and work effectively with spreadsheet tools for analysis and reporting. Active use of Excel is integrated in all practical modules.&lt;/p>
 &lt;h2 id="reading-material">Reading Material&lt;/h2>
 &lt;ul>
 &lt;li>Peter O&amp;rsquo;Donoghue, Lucy Holmes, &lt;em>Data Analysis in Sport&lt;/em>. Routledge Studies in Sports Performance Analysis, First edition, 2014&lt;/li>
@@ -145,7 +142,7 @@
 &lt;ul>
 &lt;li>Social media APIs and data access (Twitter API, REST)&lt;/li>
 &lt;li>Network analysis and graph structures (NetworkX)&lt;/li>
-&lt;li>Crowdsourcing tools and platforms (Toloka, Prolific)&lt;/li>
+&lt;li>Crowdsourcing tools and platforms (Amazon Mechanical Turk)&lt;/li>
 &lt;li>Practical tools (Jupyter, Postman, Angular)&lt;/li>
 &lt;/ul>
 &lt;h2 id="aa-20202021">A.A. 2020/2021&lt;/h2>
@@ -210,7 +207,7 @@
 &lt;li>&lt;strong>Michael Soprano&lt;/strong> - Teaching Assistant&lt;/li>
 &lt;/ul>
 &lt;h3 id="contribution-4">Contribution&lt;/h3>
-&lt;p>I contribute to the course by providing a lecture on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours). The course is conducted in Italian.&lt;/p>
+&lt;p>I contributed to the course by providing a lecture on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours). The course is conducted in Italian.&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Lesson 4-5&lt;/strong>: Crowd_Frame: in-class activity&lt;/li>
 &lt;/ul>
