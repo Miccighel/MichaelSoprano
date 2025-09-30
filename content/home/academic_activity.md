@@ -27,6 +27,7 @@ design:
   - Third *BHCC 2021*, Online — **Program Committee Member**
 
 - **Reviewer**  
+  - 19ᵗʰ ACM WSDM 2026 — Web Search and Data Mining
   - *Umanistica Digitale – Italian Journal of Digital Humanities* (ISSN 2532-8816), **2025** — <https://umanisticadigitale.unibo.it/>  
   - *International Journal on Digital Libraries* (ISSN 1432-5012), **2025** — <https://www.springer.com/journal/799>  
   - *Data Science and Engineering* (ISSN 2364-1541), **2025** — <https://www.springer.com/journal/41019>  
@@ -45,7 +46,7 @@ design:
   - 15ᵗʰ IRCDL 2019, Pisa, Italy
 
 - **Mentoring**  
-  - **Co-supervision** of **11 MSc** and **16 BSc** theses, plus several advanced projects and seminars (2020 – today)
+  - **Co-supervision** of **11 MSc** and **17 BSc** theses, plus several advanced projects and seminars (2020 – today)
 
 - **Affiliations**  
   - Member, **Social, Mobile, Data & Crowd Laboratory (SMDC)** — <https://smdc.uniud.it/smdc/en/members/>

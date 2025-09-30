@@ -61,7 +61,7 @@ In the first case, social behavior is supported by computational systems; in the
 
 - Social media APIs and data access (Twitter API, REST)
 - Network analysis and graph structures (NetworkX)
-- Crowdsourcing tools and platforms (Toloka, Prolific)
+- Crowdsourcing tools and platforms (Amazon Mechanical Turk)
 - Practical tools (Jupyter, Postman, Angular)
 
 ## A.A. 2020/2021
@@ -136,7 +136,7 @@ I contributed to the course by providing two lectures on Crowd_Frame, a framewor
 
 ### Contribution
 
-I contribute to the course by providing a lecture on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours). The course is conducted in Italian.
+I contributed to the course by providing a lecture on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours). The course is conducted in Italian.
 
 - **Lesson 4-5**: Crowd_Frame: in-class activity
 

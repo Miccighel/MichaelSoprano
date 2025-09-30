@@ -1,13 +1,13 @@
 ---
-title: Information Analysis and Processing for Training (A.A. 2024–2025)
+title: Information Analysis and Processing for Training (A.A. 2024–2025/2025-2026)
 subtitle: Bachelor's Degree in Sports Science at the University of Udine
 
-summary: "Bachelor's Degree in Sports Science. Academic Year: 2024–2025"
+summary: "Bachelor's Degree in Sports Science. Academic Years: 2024–2025/2025-2026"
 
 projects: [ ]
 
 date: "2024-08-07T11:00:00Z"
-lastmod: "2025-05-16T15:30:00Z"
+lastmod: "2025-09-30T15:30:00Z"
 draft: false
 featured: false
 
@@ -50,7 +50,7 @@ The course includes 12 lectures totaling 24 hours. Assessment is based on a writ
 
 ## Topics Covered
 
-### Module 1 — Introduction to Data Science (2h)
+### Module 1 — Introduction to Data Science
 
 - What is data?  
 - Data in the context of sport  
@@ -58,7 +58,7 @@ The course includes 12 lectures totaling 24 hours. Assessment is based on a writ
 - Populations, variables, and levels of measurement  
 - Specific data types and practical relevance  
 
-### Module 2 — Data Representation and Encoding (8h)
+### Module 2 — Data Representation and Encoding
 
 - How data is stored in the filesystem  
 - Representing data in different formats  
@@ -73,7 +73,7 @@ The course includes 12 lectures totaling 24 hours. Assessment is based on a writ
 - Lossless compression methods (e.g. ZIP, RLE)  
 - Lossy compression methods (e.g. JPEG, MP3)
 
-### Module 3 — Data Analysis with Microsoft Excel (14h)
+### Module 3 — Data Analysis with Microsoft Excel
 
 - Overview of the spreadsheet interface  
 - Navigating and editing cells, rows, and columns  
@@ -90,7 +90,7 @@ The course includes 12 lectures totaling 24 hours. Assessment is based on a writ
 
 ## Learning Approach
 
-The course emphasizes clarity, relevance, and hands-on application. Through examples and case studies drawn from the domain of sports, students progressively build the ability to describe data, apply encoding models, and work effectively with spreadsheet tools for analysis and reporting. Active use of Excel is integrated in all practical modules.
+Through examples and case studies drawn from the domain of sports, students progressively build the ability to describe data, apply encoding models, and work effectively with spreadsheet tools for analysis and reporting. Active use of Excel is integrated in all practical modules.
 
 
 ## Reading Material

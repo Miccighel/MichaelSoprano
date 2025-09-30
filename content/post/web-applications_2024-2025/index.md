@@ -1,13 +1,13 @@
 ---
-title: Web Applications (A.A. 2024–2025)
+title: Web Applications (A.A. 2024–2025/2025-2026)
 subtitle: Master's Degree in Management Engineering at the University of Udine
 
-summary: "Master's Degree in Management Engineering at the University of Udine. Academic Year: 2024–2025"
+summary: "Master's Degree in Management Engineering at the University of Udine. Academic Years: 2024–2025/2025-2026"
 
 projects: [ ]
 
 date: "2024-08-08T11:00:00Z"
-lastmod: "2025-05-29T14:30:00Z"
+lastmod: "2025-09-30T14:30:00Z"
 draft: false
 featured: false
 
@@ -121,16 +121,13 @@ The course includes 24 lectures for a total of 48 hours. The assessment is based
 
 ## Learning Approach
 
-The course emphasizes learning through:
-- Guided exercises and interactive quizzes  
+- Hands-on activities and interactive quizzes  
 - Tool-assisted exploration of HTTP, APIs, and web protocols  
-- Two structured assignments focused on frontend development and interface behavior  
-- Progressive backend development with routing and persistence  
+- Assignments focused on frontend and backed development
 - A final project demonstrating complete full-stack integration
 
 ## Reading Material
 
-- J. Duckett, *HTML e CSS. Progettare e costruire siti web*. Apogeo Education, 2017  
-- J. Duckett, *JavaScript & JQuery. Sviluppare interfacce web interattive*. Apogeo Education, 2017  
-- J. Duckett, *PHP & MySQL. Sviluppare applicazioni web lato server*. Apogeo Education, 2022  
-- E. Holmes, D. Harms, *Express in Action. Sviluppare applicazioni web con Node.js e Express*. Apogeo Education, 2017
+- J. Duckett, *HTML & CSS: Design and Build Websites*. Wiley, 2011  
+- J. Duckett, *JavaScript & jQuery: Interactive Front-End Web Development*. Wiley, 2014  
+- E. Holmes, D. Harms, *Express in Action: Writing, Building, and Testing Node.js Applications*. Manning Publications, 2016  
