@@ -1,53 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Compression | Michael Soprano</title><link>https://michaelsoprano.com/tag/compression/</link><atom:link href="https://michaelsoprano.com/tag/compression/index.xml" rel="self" type="application/rss+xml"/><description>Compression</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 07 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>Compression</title><link>https://michaelsoprano.com/tag/compression/</link></image><item><title>Information Analysis and Processing for Training (A.A. 2024–2025/2025-2026)</title><link>https://michaelsoprano.com/post/information-analysis-and-processing-for-training_2024-2025/</link><pubDate>Wed, 07 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/information-analysis-and-processing-for-training_2024-2025/</guid><description>&lt;hr>
-&lt;h1 id="aims">Aims&lt;/h1>
-&lt;p>The course introduces the fundamental principles of data representation and processing, with a focus on real-world applications in the field of sports science. It provides students with the ability to recognize, structure, and interpret different types of data—textual, visual, audio, and numeric—and to use Microsoft Excel for practical analysis, visualization, and reporting.&lt;/p>
-&lt;p>By exploring how raw data is encoded, stored, compressed, and transformed into usable information, students acquire both conceptual tools and technical skills to support decision-making and communication in training contexts.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Compression | Michael Soprano</title><link>https://michaelsoprano.com/tag/compression/</link><atom:link href="https://michaelsoprano.com/tag/compression/index.xml" rel="self" type="application/rss+xml"/><description>Compression</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 07 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>Compression</title><link>https://michaelsoprano.com/tag/compression/</link></image><item><title>Information Analysis and Processing for Training</title><link>https://michaelsoprano.com/post/information-analysis-and-processing-for-training/</link><pubDate>Wed, 07 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/information-analysis-and-processing-for-training/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
+&lt;p>This course introduces the fundamental principles of data representation, management, and analysis, with a focus on applications in sports science. Students learn how to interpret different kinds of data, understand how digital information is represented and processed, and use Microsoft Excel for practical analysis, visualization, and reporting.&lt;/p>
+&lt;p>By combining conceptual foundations with hands-on activities, the course helps students develop the skills needed to organize data, extract useful information, and support decision-making in training contexts.&lt;/p>
 &lt;h2 id="teacher">Teacher&lt;/h2>
 &lt;ul>
-&lt;li>&lt;strong>Michael Soprano&lt;/strong> — Course Leader&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Course Leader&lt;/li>
 &lt;/ul>
-&lt;p>The course includes 12 lectures totaling 24 hours. Assessment is based on a written exam with applied components. The course is delivered in the first semester.&lt;/p>
+&lt;p>The course consists of 12 lectures for a total of 24 hours. Assessment is based on a written exam with applied components. The course is delivered in the first semester.&lt;/p>
 &lt;h2 id="topics-covered">Topics Covered&lt;/h2>
-&lt;h3 id="module-1--introduction-to-data-science">Module 1 — Introduction to Data Science&lt;/h3>
+&lt;h3 id="module-1---introduction-to-data-science">Module 1 - Introduction to Data Science&lt;/h3>
 &lt;ul>
-&lt;li>What is data?&lt;/li>
-&lt;li>Data in the context of sport&lt;/li>
+&lt;li>Data and information in the context of sport&lt;/li>
 &lt;li>From raw data to information&lt;/li>
 &lt;li>Populations, variables, and levels of measurement&lt;/li>
-&lt;li>Specific data types and practical relevance&lt;/li>
+&lt;li>Types of variables and types of data&lt;/li>
 &lt;/ul>
-&lt;h3 id="module-2--data-representation-and-encoding">Module 2 — Data Representation and Encoding&lt;/h3>
+&lt;h3 id="module-2---representation-and-management-of-data">Module 2 - Representation and Management of Data&lt;/h3>
 &lt;ul>
-&lt;li>How data is stored in the filesystem&lt;/li>
-&lt;li>Representing data in different formats&lt;/li>
-&lt;li>Introduction to semiotics and symbolic systems&lt;/li>
-&lt;li>Text: characters and encoding standards (ASCII, Unicode)&lt;/li>
-&lt;li>Images: bitmap vs vector graphics, formats and compression&lt;/li>
-&lt;li>Sound: sampling, MIDI messages, audio file formats&lt;/li>
-&lt;li>Video: digitization, frame rate, codecs&lt;/li>
+&lt;li>Data storage in the filesystem&lt;/li>
+&lt;li>How data is represented in digital form&lt;/li>
+&lt;li>Text: character sets and encoding&lt;/li>
+&lt;li>Images: raster and vector graphics, and main file formats&lt;/li>
+&lt;li>Sound: sampling, frequency, and bit depth&lt;/li>
+&lt;li>Video: sequences of images, key characteristics, and formats&lt;/li>
 &lt;li>The Shannon-Weaver model of communication&lt;/li>
-&lt;li>Entropy and redundancy&lt;/li>
-&lt;li>Principles of data compression&lt;/li>
-&lt;li>Lossless compression methods (e.g. ZIP, RLE)&lt;/li>
-&lt;li>Lossy compression methods (e.g. JPEG, MP3)&lt;/li>
+&lt;li>Entropy and redundancy of information&lt;/li>
+&lt;li>Why data compression is useful&lt;/li>
+&lt;li>Lossless compression&lt;/li>
+&lt;li>Lossy compression&lt;/li>
 &lt;/ul>
-&lt;h3 id="module-3--data-analysis-with-microsoft-excel">Module 3 — Data Analysis with Microsoft Excel&lt;/h3>
+&lt;h3 id="module-3---data-analysis-with-microsoft-excel">Module 3 - Data Analysis with Microsoft Excel&lt;/h3>
 &lt;ul>
-&lt;li>Overview of the spreadsheet interface&lt;/li>
-&lt;li>Navigating and editing cells, rows, and columns&lt;/li>
-&lt;li>Entering and formatting data in a workbook&lt;/li>
-&lt;li>Case study: fitness center budget&lt;/li>
-&lt;li>Working with ranges and data blocks&lt;/li>
+&lt;li>Elements of the Excel interface and workbooks&lt;/li>
+&lt;li>Managing cells, rows, columns, and ranges&lt;/li>
+&lt;li>Entering, editing, and formatting data&lt;/li>
+&lt;li>Applying numeric, date, and text formats&lt;/li>
+&lt;li>Working with ranges and data tables&lt;/li>
 &lt;li>Introduction to formulas and functions&lt;/li>
-&lt;li>Formula syntax, operators, and common errors&lt;/li>
-&lt;li>Function types: mathematical, logical, statistical&lt;/li>
-&lt;li>Importing structured data from text files (CSV, TSV)&lt;/li>
-&lt;li>Creating and customizing charts (line, area, scatter)&lt;/li>
+&lt;li>Formula syntax: references, operators, and errors&lt;/li>
+&lt;li>Function syntax: arguments, result types, and nesting&lt;/li>
+&lt;li>Importing structured data from text files&lt;/li>
+&lt;li>Creating and managing charts&lt;/li>
+&lt;li>Examples: line, scatter, and area charts&lt;/li>
 &lt;li>Introduction to PivotTables&lt;/li>
-&lt;li>Building and managing PivotTables for structured analysis&lt;/li>
+&lt;li>Practical activities on real datasets, including FitBit data and the Boston Marathon 2025&lt;/li>
 &lt;/ul>
 &lt;h2 id="learning-approach">Learning Approach&lt;/h2>
-&lt;p>Through examples and case studies drawn from the domain of sports, students progressively build the ability to describe data, apply encoding models, and work effectively with spreadsheet tools for analysis and reporting. Active use of Excel is integrated in all practical modules.&lt;/p>
+&lt;p>The course is organized into three modules that progressively introduce students to the role of data in sports science, the representation and management of multimedia data, and the practical use of Excel for data analysis. Through examples and applied activities, students develop both conceptual understanding and operational skills.&lt;/p>
 &lt;h2 id="reading-material">Reading Material&lt;/h2>
 &lt;ul>
 &lt;li>Peter O&amp;rsquo;Donoghue, Lucy Holmes, &lt;em>Data Analysis in Sport&lt;/em>. Routledge Studies in Sports Performance Analysis, First edition, 2014&lt;/li>

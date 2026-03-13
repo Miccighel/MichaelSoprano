@@ -1,64 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SQLite | Michael Soprano</title><link>https://michaelsoprano.com/tag/sqlite/</link><atom:link href="https://michaelsoprano.com/tag/sqlite/index.xml" rel="self" type="application/rss+xml"/><description>SQLite</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 08 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>SQLite</title><link>https://michaelsoprano.com/tag/sqlite/</link></image><item><title>Web Applications (A.A. 2024–2025/2025-2026)</title><link>https://michaelsoprano.com/post/web-applications_2024-2025/</link><pubDate>Thu, 08 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/web-applications_2024-2025/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
-&lt;p>The course provides a comprehensive introduction to full-stack web application development, structured in two major domains: &lt;strong>Frontend Development&lt;/strong> and &lt;strong>Backend Development&lt;/strong>.&lt;/p>
-&lt;p>On the &lt;strong>frontend&lt;/strong>, students learn to create structured, interactive, and accessible user interfaces using HTML, CSS, and JavaScript. Topics include semantic markup, responsive layout, form handling, client-side validation, and media embedding. Students progressively acquire skills in DOM manipulation, event-driven programming, and asynchronous operations.&lt;/p>
-&lt;p>On the &lt;strong>backend&lt;/strong>, the course introduces Node.js and the Express.js framework to design RESTful services, manage middleware, and handle persistence with SQLite. By the end of the course, students are able to build full-stack applications that integrate client-side interfaces with server-side logic and data storage.&lt;/p>
-&lt;p>Hands-on activities using cURL, Postman, and structured assignments support practical learning.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SQLite | Michael Soprano</title><link>https://michaelsoprano.com/tag/sqlite/</link><atom:link href="https://michaelsoprano.com/tag/sqlite/index.xml" rel="self" type="application/rss+xml"/><description>SQLite</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 08 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>SQLite</title><link>https://michaelsoprano.com/tag/sqlite/</link></image><item><title>Web Applications</title><link>https://michaelsoprano.com/post/web-applications/</link><pubDate>Thu, 08 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/web-applications/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
+&lt;p>This course introduces the foundations of full-stack web application development through two complementary areas: &lt;strong>Frontend Development&lt;/strong> and &lt;strong>Backend Development&lt;/strong>.&lt;/p>
+&lt;p>On the &lt;strong>frontend&lt;/strong>, students learn how to create structured, interactive, and accessible user interfaces using HTML, CSS, and JavaScript. Topics include semantic markup, responsive layout, form handling, client-side validation, and media embedding. Students progressively develop skills in DOM manipulation, event-driven programming, and asynchronous operations.&lt;/p>
+&lt;p>On the &lt;strong>backend&lt;/strong>, the course introduces Node.js and the Express.js framework for building RESTful services, managing middleware, and handling persistence with SQLite. By the end of the course, students are able to design and implement full-stack applications that integrate client-side interfaces with server-side logic and data storage.&lt;/p>
+&lt;p>Hands-on activities with cURL, Postman, and structured assignments support practical learning throughout the course.&lt;/p>
 &lt;h2 id="teacher">Teacher&lt;/h2>
 &lt;ul>
-&lt;li>&lt;strong>Michael Soprano&lt;/strong> — Course Leader&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Course Leader&lt;/li>
 &lt;/ul>
-&lt;p>The course includes 24 lectures for a total of 48 hours. The assessment is based on a practical project. The course is delivered in the second semester.&lt;/p>
+&lt;p>The course consists of 24 lectures for a total of 48 hours. Assessment is based on project work. The course is delivered in the second semester.&lt;/p>
 &lt;h2 id="topics-covered">Topics Covered&lt;/h2>
 &lt;h3 id="web-fundamentals-and-communication">Web Fundamentals and Communication&lt;/h3>
 &lt;ul>
 &lt;li>Architecture of the World Wide Web&lt;/li>
 &lt;li>Client-server model and user agents&lt;/li>
 &lt;li>Domain names, IP addressing, and URLs&lt;/li>
-&lt;li>The HTTP protocol: request/response lifecycle&lt;/li>
+&lt;li>The HTTP protocol and the request-response lifecycle&lt;/li>
 &lt;li>Methods, status codes, headers, and metadata&lt;/li>
 &lt;li>URL query strings and GET parameter passing&lt;/li>
 &lt;li>Data exchange with JSON&lt;/li>
 &lt;li>Practical use of cURL and Postman&lt;/li>
 &lt;/ul>
 &lt;h3 id="frontend-development">Frontend Development&lt;/h3>
-&lt;p>&lt;strong>HTML: Structure and Semantics&lt;/strong>&lt;/p>
+&lt;h4 id="html-structure-and-semantics">HTML: Structure and Semantics&lt;/h4>
 &lt;ul>
 &lt;li>Core syntax and document structure&lt;/li>
-&lt;li>Headings, paragraphs, text-level semantics&lt;/li>
+&lt;li>Headings, paragraphs, and text-level semantics&lt;/li>
 &lt;li>Lists, tables, links, and images&lt;/li>
-&lt;li>The DOM and HTML parsing model&lt;/li>
-&lt;li>Embedding external and multimedia content: &lt;code>&amp;lt;iframe&amp;gt;&lt;/code>, &lt;code>&amp;lt;video&amp;gt;&lt;/code>, &lt;code>&amp;lt;audio&amp;gt;&lt;/code>&lt;/li>
+&lt;li>The DOM and the HTML parsing model&lt;/li>
+&lt;li>Embedding external and multimedia content with &lt;code>&amp;lt;iframe&amp;gt;&lt;/code>, &lt;code>&amp;lt;video&amp;gt;&lt;/code>, and &lt;code>&amp;lt;audio&amp;gt;&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>HTML Forms and Validation&lt;/strong>&lt;/p>
+&lt;h4 id="html-forms-and-validation">HTML Forms and Validation&lt;/h4>
 &lt;ul>
-&lt;li>Input types: text, email, number, date, checkbox, radio&lt;/li>
+&lt;li>Input types such as text, email, number, date, checkbox, and radio&lt;/li>
 &lt;li>Structural and grouping elements in forms&lt;/li>
 &lt;li>&lt;code>&amp;lt;textarea&amp;gt;&lt;/code>, &lt;code>&amp;lt;select&amp;gt;&lt;/code>, and option handling&lt;/li>
 &lt;li>HTML5 validation attributes and input constraints&lt;/li>
 &lt;li>Form design best practices&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>CSS: Styling and Layout&lt;/strong>&lt;/p>
+&lt;h4 id="css-styling-and-layout">CSS: Styling and Layout&lt;/h4>
 &lt;ul>
 &lt;li>Basic syntax, selectors, and combinators&lt;/li>
-&lt;li>Cascading rules, specificity, inheritance&lt;/li>
-&lt;li>The box model: margin, padding, border, sizing, overflow&lt;/li>
-&lt;li>Typography: fonts, spacing, line height&lt;/li>
+&lt;li>Cascading rules, specificity, and inheritance&lt;/li>
+&lt;li>The box model: margin, padding, border, sizing, and overflow&lt;/li>
+&lt;li>Typography: fonts, spacing, and line height&lt;/li>
 &lt;li>Color management and transparency&lt;/li>
 &lt;li>Responsive layout with Flexbox&lt;/li>
 &lt;li>Positioning, layout strategies, and component patterns&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>JavaScript: Behavior and Interaction&lt;/strong>&lt;/p>
+&lt;h4 id="javascript-behavior-and-interaction">JavaScript: Behavior and Interaction&lt;/h4>
 &lt;ul>
 &lt;li>Core language constructs and syntax&lt;/li>
 &lt;li>Script inclusion and module structure&lt;/li>
 &lt;li>DOM selection, traversal, and manipulation&lt;/li>
 &lt;li>Event handling and listener registration&lt;/li>
 &lt;li>Event flow: bubbling and capture&lt;/li>
-&lt;li>Asynchronous JavaScript: callbacks, promises, fetch API&lt;/li>
-&lt;li>Case study: calling a public API (e.g., Random Brewery API)&lt;/li>
+&lt;li>Asynchronous JavaScript with callbacks, promises, and the Fetch API&lt;/li>
+&lt;li>Case study: calling a public API&lt;/li>
 &lt;/ul>
 &lt;h3 id="backend-development">Backend Development&lt;/h3>
-&lt;p>&lt;strong>Node.js and Express.js&lt;/strong>&lt;/p>
+&lt;h4 id="nodejs-and-expressjs">Node.js and Express.js&lt;/h4>
 &lt;ul>
 &lt;li>Introduction to Node.js and non-blocking I/O&lt;/li>
 &lt;li>Setting up an Express.js server&lt;/li>
@@ -67,14 +67,14 @@
 &lt;li>Middleware architecture and request pipelines&lt;/li>
 &lt;li>Building RESTful endpoints&lt;/li>
 &lt;li>Interfacing with SQLite for data persistence&lt;/li>
-&lt;li>Final integration project: full-stack CRUD operations&lt;/li>
+&lt;li>Final integration project with full-stack CRUD operations&lt;/li>
 &lt;/ul>
 &lt;h2 id="learning-approach">Learning Approach&lt;/h2>
 &lt;ul>
 &lt;li>Hands-on activities and interactive quizzes&lt;/li>
 &lt;li>Tool-assisted exploration of HTTP, APIs, and web protocols&lt;/li>
-&lt;li>Assignments focused on frontend and backed development&lt;/li>
-&lt;li>A final project demonstrating complete full-stack integration&lt;/li>
+&lt;li>Assignments focused on frontend and backend development&lt;/li>
+&lt;li>A final project showing complete full-stack integration&lt;/li>
 &lt;/ul>
 &lt;h2 id="reading-material">Reading Material&lt;/h2>
 &lt;ul>

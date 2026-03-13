@@ -1,1 +1,81 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>network analysis | Michael Soprano</title><link>https://michaelsoprano.com/tag/network-analysis/</link><atom:link href="https://michaelsoprano.com/tag/network-analysis/index.xml" rel="self" type="application/rss+xml"/><description>network analysis</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 16 Sep 2019 00:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>network analysis</title><link>https://michaelsoprano.com/tag/network-analysis/</link></image><item><title>Bias and Fairness in Effectiveness Evaluation by Means of Network Analysis and Mixture Models</title><link>https://michaelsoprano.com/publication/workshop-paper-iir-2019/</link><pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate><guid>https://michaelsoprano.com/publication/workshop-paper-iir-2019/</guid><description/></item><item><title>HITS Hits Readersourcing: Validating Peer Review Alternatives Using Network Analysis</title><link>https://michaelsoprano.com/publication/workshop-paper-birnld-2019/</link><pubDate>Thu, 25 Jul 2019 00:00:00 +0000</pubDate><guid>https://michaelsoprano.com/publication/workshop-paper-birnld-2019/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Network Analysis | Michael Soprano</title><link>https://michaelsoprano.com/tag/network-analysis/</link><atom:link href="https://michaelsoprano.com/tag/network-analysis/index.xml" rel="self" type="application/rss+xml"/><description>Network Analysis</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 06 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>Network Analysis</title><link>https://michaelsoprano.com/tag/network-analysis/</link></image><item><title>Social Computing</title><link>https://michaelsoprano.com/post/social-computing/</link><pubDate>Tue, 06 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/social-computing/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
+&lt;p>This course introduces the foundations of social computing through two complementary perspectives: social behavior supported by computational systems, and computational systems supported by coordinated human activity. It covers both social media platforms and crowdsourcing environments, combining conceptual foundations with practical tools and hands-on activities.&lt;/p>
+&lt;p>Students are introduced to social media APIs, network analysis, crowdsourcing systems, and practical tools for experimentation and data analysis. The course is taught in Italian.&lt;/p>
+&lt;h2 id="main-topics">Main Topics&lt;/h2>
+&lt;ul>
+&lt;li>Social media APIs and data access&lt;/li>
+&lt;li>Network analysis and graph structures&lt;/li>
+&lt;li>Crowdsourcing platforms and task design&lt;/li>
+&lt;li>Practical tools such as Python, Jupyter, Postman, Angular, and Crowd_Frame&lt;/li>
+&lt;/ul>
+&lt;h2 id="teaching-team-and-contribution-by-academic-year">Teaching Team and Contribution by Academic Year&lt;/h2>
+&lt;h3 id="academic-year-20202021">Academic Year 2020/2021&lt;/h3>
+&lt;h4 id="teaching-team">Teaching Team&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Course Leader&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Teaching Assistant&lt;/li>
+&lt;/ul>
+&lt;h4 id="my-contribution">My Contribution&lt;/h4>
+&lt;p>I contributed to the course by teaching the practical applications of the concepts introduced by Professor Stefano Mizzaro in six lectures (12 hours). I also prepared and assigned course work for the students.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Lesson 1&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/xpq3b6zhzf3zpczqkwn9g/SC_MS_1_Twitter_API_Intro_Ric.pptx?rlkey=trdwm6yxgohyktj79c0bu3xsx&amp;amp;dl=0" target="_blank" rel="noopener">Twitter API: Introduzione &amp;amp; Richiami&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lessons 2-3&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/rtdvumim9mzuihlu3zlxu/SC_MS_2-Twitter_API_Tweepy_Req.pptx?rlkey=t7rms0spo58a612oniuda1vey&amp;amp;dl=0" target="_blank" rel="noopener">Twitter API: Tweepy &amp;amp; Requests&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lesson 4&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/0e8iz71e45mxix4cmxiam/SC_MS_3_Grafi_NetworkX.pptx?rlkey=ab76koii4j1we6zpwatihhh10&amp;amp;dl=0" target="_blank" rel="noopener">Grafi: NetworkX&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lessons 5-6&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/56egim1ixzm1bm4tn988x/SC_MS_4_Crowd_Frame.pptx?rlkey=yl0z8mqxb6q6n4u1h2etfuz5e&amp;amp;dl=0" target="_blank" rel="noopener">Crowd_Frame: How To&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="academic-year-20212022">Academic Year 2021/2022&lt;/h3>
+&lt;h4 id="teaching-team-1">Teaching Team&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Course Leader&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Teaching Assistant&lt;/li>
+&lt;/ul>
+&lt;h4 id="my-contribution-1">My Contribution&lt;/h4>
+&lt;p>I contributed to the course by teaching the practical applications of the concepts introduced by Professor Stefano Mizzaro in six lectures (12 hours). I also prepared and assigned course work for the students.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Lesson 1&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/az4z8x0zu3ysajpjsfs0h/SC_MS_1_Python_Rest_Richiami.pptx?rlkey=ozxl5bwwpp56wjgp3ty01v7tf&amp;amp;dl=0" target="_blank" rel="noopener">Python / REST: Richiami&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lesson 2&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/xrtha37m67zob5k7sresz/SC_MS_2-Twitter_API_Tweepy.pptx?rlkey=i54k7eha11f59ies21pyn9u16&amp;amp;dl=0" target="_blank" rel="noopener">Twitter API: Tweepy&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lesson 3&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/93umif7xa71woszewr5zo/SC_MS_3-EndpointV2_Req.pptx?rlkey=zp1vux6vjp1x6xc7evip6l0d4&amp;amp;dl=0" target="_blank" rel="noopener">Twitter API: Endpoint V2&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lesson 4&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/d22udpapqnitwuc32ban4/SC_MS_4_Grafi_NetworkX.pptx?rlkey=3r949h14dqxsnzwoffprdgaz7&amp;amp;dl=0" target="_blank" rel="noopener">Grafi: NetworkX&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Lessons 5-6&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/tmgtqxt3ihnvtgj5r0150/SC_MS_5_Crowd_Frame.pptx?rlkey=prdahfpu3u0y7k48dzi2mc1fk&amp;amp;dl=0" target="_blank" rel="noopener">Crowd_Frame&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="academic-year-20222023">Academic Year 2022/2023&lt;/h3>
+&lt;h4 id="teaching-team-2">Teaching Team&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Course Leader&lt;/li>
+&lt;li>&lt;strong>David La Barbera&lt;/strong> - Teaching Assistant&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Teaching Assistant&lt;/li>
+&lt;/ul>
+&lt;h4 id="my-contribution-2">My Contribution&lt;/h4>
+&lt;p>I contributed to the course by delivering two lectures on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (4 hours). I also prepared the second course assignment for the students.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Lessons 4-5&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/ez7aanl9b9vn4m6zt6ckw/22-23.Crowd_Frame.pdf?rlkey=95kkc3nrf9ejy6r17s5i44y7w&amp;amp;st=b24tubx6&amp;amp;dl=0" target="_blank" rel="noopener">Crowd_Frame&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="academic-year-20232024">Academic Year 2023/2024&lt;/h3>
+&lt;h4 id="teaching-team-3">Teaching Team&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Course Leader&lt;/li>
+&lt;li>&lt;strong>David La Barbera&lt;/strong> - Teaching Assistant&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Teaching Assistant&lt;/li>
+&lt;/ul>
+&lt;h4 id="my-contribution-3">My Contribution&lt;/h4>
+&lt;p>I contributed to the course by delivering two lectures on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (4 hours). I also prepared the second course assignment for the students.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Lessons 4-5&lt;/strong>: &lt;a href="https://www.dropbox.com/scl/fi/4rmiryatmpzhyrcmejuyb/SC_MS_4_Crowd_Frame.pptx?rlkey=1cd5jhx1n2fi491qvkagau3un&amp;amp;dl=0" target="_blank" rel="noopener">Crowd_Frame&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="academic-year-20242025">Academic Year 2024/2025&lt;/h3>
+&lt;h4 id="teaching-team-4">Teaching Team&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Course Leader&lt;/li>
+&lt;li>&lt;strong>Hafska Akebli&lt;/strong> - Teaching Assistant&lt;/li>
+&lt;li>&lt;strong>Michele Lizzit&lt;/strong> - Teaching Assistant&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Teaching Assistant&lt;/li>
+&lt;/ul>
+&lt;h4 id="my-contribution-4">My Contribution&lt;/h4>
+&lt;p>I contributed to the course by delivering a lecture and in-class activity on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours).&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Lesson 4-5&lt;/strong>: Crowd_Frame: in-class activity&lt;/li>
+&lt;/ul>
+&lt;h2 id="additional-materials">Additional Materials&lt;/h2>
+&lt;ul>
+&lt;li>Crowd_Frame: &lt;a href="https://github.com/Miccighel/crowd_frame" target="_blank" rel="noopener">GitHub Repository&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Bias and Fairness in Effectiveness Evaluation by Means of Network Analysis and Mixture Models</title><link>https://michaelsoprano.com/publication/workshop-paper-iir-2019/</link><pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate><guid>https://michaelsoprano.com/publication/workshop-paper-iir-2019/</guid><description/></item><item><title>HITS Hits Readersourcing: Validating Peer Review Alternatives Using Network Analysis</title><link>https://michaelsoprano.com/publication/workshop-paper-birnld-2019/</link><pubDate>Thu, 25 Jul 2019 00:00:00 +0000</pubDate><guid>https://michaelsoprano.com/publication/workshop-paper-birnld-2019/</guid><description/></item></channel></rss>
