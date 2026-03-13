@@ -16,10 +16,10 @@ title: Honors & Grants
 subtitle:
 
 design:
-columns: "2"
+  columns: "2"
 ---
 
-- **PhD Award 2024** Recipient of an award from the University of Udine for the best PhD thesis in the scientific area for 2023. Thesis title: _In Crowd Veritas: Leveraging Human Intelligence to Fight Misinformation_.
-- **Student Grant** to attend the 15th ACM International Conference on Web Search and Data Mining. Online (Held remotely due to COVID-19). Provided by WSDM. Free conference subscription.
-- **Student Grant** to attend the 29th ACM International Conference On Information And Knowledge Management (CIKM 2020), Galway, Ireland. Online (Held remotely due to COVID-19). Provided by CIKM. Free conference subscription.
-- **Volunteer** at the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2020), Xi'an, China. Online (Held remotely due to COVID-19). Provided by SIGIR. Free conference subscription.
+- **PhD Award 2024**. Awarded by the University of Udine for the best PhD thesis in the scientific area for 2023. Thesis title: _In Crowd Veritas: Leveraging Human Intelligence to Fight Misinformation_.
+- **Student Grant**. 15th ACM International Conference on Web Search and Data Mining (*WSDM 2022*), Phoenix, USA. Granted by WSDM. Free conference registration. Conference attended remotely due to the COVID-19 pandemic.
+- **Student Grant**. 29th ACM International Conference on Information and Knowledge Management (*CIKM 2020*), Galway, Ireland. Granted by CIKM. Free conference registration. Conference attended remotely due to the COVID-19 pandemic.
+- **Student Volunteer**. 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval (*SIGIR 2020*), Xi'an, China. Selected by SIGIR. Free conference registration. Conference attended remotely due to the COVID-19 pandemic.

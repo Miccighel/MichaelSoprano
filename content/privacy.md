@@ -1,8 +1,8 @@
 ---
 title: "Privacy Policy"
-subtitle: Last updated on 16th March 2021
+subtitle: Last updated on March 13, 2026
 ---
 
-The site is completely static, no use of server-side cookies is made and the only information that might be stored is your choice to see the page in the night mode.
+This website is entirely static. It does not use server-side cookies, and the only information that may be stored is your preference for viewing the site in dark mode.
 
-Therefore there’s no harm to your privacy, unless you explicitly contact me by email or through a social network.
+Therefore, this website does not pose any particular risk to your privacy, unless you choose to contact me by email or through a social network.

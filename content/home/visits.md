@@ -23,13 +23,13 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 
 experience:
-- title: Visiting Student
-  company: Centrum Wiskunde & Informatica, Human-Centered Data Analytics (HCDA) Group.
-  company_url: 'https://www.cwi.nl/'
-  location: Amsterdam, The Netherlands
-  date_start: '2022-03-20'
-  date_end: '2022-07-20'
-  description: |1-
-    Visiting period during PhD studies.
+  - title: Visiting PhD Student
+    company: Centrum Wiskunde & Informatica (CWI), Human-Centered Data Analytics (HCDA) Group
+    company_url: 'https://www.cwi.nl/'
+    location: Amsterdam, the Netherlands
+    date_start: '2022-03-20'
+    date_end: '2022-07-20'
+    description: |2-
+      Research visit carried out during the PhD programme.
 
 ---
