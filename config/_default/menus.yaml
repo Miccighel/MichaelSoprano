@@ -13,7 +13,7 @@ main:
   - name: Experience
     url: '#experience'
     weight: 3
-  - name: Bibliometric Indicators
+  - name: Bibliometrics
     url: '#metrics'
     weight: 4
   - name: Publications
@@ -28,7 +28,7 @@ main:
   - name: Teaching
     url: '#teaching'
     weight: 8
-  - name: Honors & Grants
+  - name: Honors
     url: '#honors'
     weight: 9
   - name: Contact
