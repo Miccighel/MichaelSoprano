@@ -18,9 +18,9 @@ title: Bibliometrics
 
 |                     | Google Scholar | Scopus | ACM Digital Library |
 |---------------------|----------------|--------|---------------------|
-| Articles            | 35             | 28     | 23                  |
-| Citations           | 572            | 300    | 167                 |
+| Articles            | 35             | 28     | 24                  |
+| Citations           | 577            | 302    | 168                 |
 | h-index             | 12             | 9      | --                  |
 | i10-index           | 14             | --     | --                  |
 
-*Last update: March 16, 2026*
+*Last update: March 25, 2026*
