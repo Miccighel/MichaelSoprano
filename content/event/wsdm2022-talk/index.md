@@ -35,7 +35,7 @@ image:
 #  url: https://twitter.com/georgecushen
 #url_code: ""
 #url_pdf: ""
-url_slides: "WSDM-2022_Crowd_Frame-A-Simple-and-Complete-Framework-to-Deploy-Complex-Crowdsourcing-Tasks-Off-the-shelf.pdf"
+url_slides: "https://michaelsoprano.com/talks/WSDM-2022_Crowd_Frame-A-Simple-and-Complete-Framework-to-Deploy-Complex-Crowdsourcing-Tasks-Off-the-shelf.pdf"
 url_video: "https://dl.acm.org/doi/abs/10.1145/3488560.3502182"
 
 # Markdown Slides (optional).
