@@ -35,7 +35,7 @@ image:
 #  url: https://twitter.com/georgecushen
 #url_code: ""
 #url_pdf: ""
-url_slides: "https://michaelsoprano.com/media/talks/Evaluation-of-Crowdsourced-Peer-Review-using-Synthetic-Data-and-Simulations.pdf"
+url_slides: "https://michaelsoprano.com/media/talks/IRCDL-2025_Evaluation-of-Crowdsourced-Peer-Review-using-Synthetic-Data-and-Simulations.pdf"
 #url_video: "https://dl.acm.org/doi/abs/10.1145/3488560.3502182"
 
 # Markdown Slides (optional).

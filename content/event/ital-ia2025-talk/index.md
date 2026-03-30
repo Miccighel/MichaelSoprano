@@ -21,7 +21,7 @@ image:
   caption: ''
   focal_point: Right
 
-url_slides: "https://michaelsoprano.com/media/talks/AIDME-Framework-Ital-IA.pdf"
+url_slides: "https://michaelsoprano.com/media/talks/Ital-IA-2025_AIDME-Framework.pdf"
 
 projects: []
 ---
