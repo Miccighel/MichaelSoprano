@@ -18,7 +18,7 @@ all_day: false
 # Schedule page publish date (NOT talk date).
 #publishDate: "2017-01-01T00:00:00Z"
 
-authors: [Michael Soprano]
+authors: [Michael Soprano, Sandip Modha, Kevin Roitero, Eddy Maddalena, Marco Viviani, Gabriella Pasi, Stefano Mizzaro]
 tags: [ large language models, misinformation, prisma 2020, scoping reviews, systematic reviews, truthfulness assessment ]
 
 # Is this a featured talk? (true/false)
