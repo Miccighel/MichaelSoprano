@@ -21,6 +21,7 @@ interests:
   - Human Computation
   - Crowdsourcing
   - Information Retrieval
+  - Large Language Models
 
 # Education to show in About widget
 education:
