@@ -35,7 +35,7 @@ image:
 #  url: https://twitter.com/georgecushen
 #url_code: ""
 #url_pdf: ""
-url_slides: "https://michaelsoprano.com/media/talks/CIKM-2020_The COVID-19 Infodemic.pdf"
+url_slides: "https://michaelsoprano.com/media/talks/CIKM-2020_The-COVID-19-Infodemic.pdf"
 url_video: "https://dl.acm.org/doi/10.1145/3340531.3412048"
 
 # Markdown Slides (optional).
