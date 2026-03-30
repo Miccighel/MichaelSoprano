@@ -35,7 +35,7 @@ image:
 #  url: https://twitter.com/georgecushen
 #url_code: ""
 #url_pdf: ""
-url_slides: "https://www.ital-ia2023.it/submission/96/presentation"
+url_slides: "https://michaelsoprano.com/media/posters/Ital-IA-2023_Towards-a-Conversational-Based-Agent-for-Health-Services.pdf"
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
