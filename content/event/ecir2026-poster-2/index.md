@@ -1,5 +1,5 @@
 ---
-title: "Large Language Models as Assessors: On the Impact of Relevance Scales"
+title: "Analyzing AI Evaluation Benchmarks Through Information Retrieval and Network Science"
 
 event: The 48th European Conference on Information Retrieval
 event_url: https://ecir2026.eu/
@@ -11,15 +11,15 @@ summary: "Poster Presentation - The 48th European Conference on Information Retr
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2026-03-30T13:30:00"
-date_end: "2026-03-30T14:30:00"
+date: "2026-03-30T13:31:00"
+date_end: "2026-03-30T14:31:00"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
 #publishDate: "2017-01-01T00:00:00Z"
 
-authors: [Riccardo Zamolo, Riccardo Lunardi, Michael Soprano, Gianluca Demartini, Stefano Mizzaro, Kevin Roitero]
-tags: [ relevance assessment, large language models, information retrieval evaluation]
+authors: [Gaia Simeoni, Michael Soprano, Riccardo Lunardi, Kevin Roitero, Stefano Mizzaro]
+tags: [ HITS, benchmarks, large language models]
 
 # Is this a featured talk? (true/false)
 featured: false
@@ -34,7 +34,7 @@ image:
 #  name: Follow
 #  url: https://twitter.com/georgecushen
 #url_code: ""
-url_pdf: "https://michaelsoprano.com/media/posters/LLMs-As-Assessors_ECIR-2026.pdf"
+url_pdf: "https://michaelsoprano.com/media/posters/Analyzing-AI-Eval-Benchmakrs-Through-IR_ECIR-2026.pdf"
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
