@@ -35,7 +35,7 @@ image:
 #  url: https://twitter.com/georgecushen
 #url_code: ""
 #url_pdf: ""
-url_slides: "https://docs.google.com/presentation/d/1JOFP2TaAibYcHEoJtjR5GNysGNBEgEo0j_z6JAoIr00/edit?usp=sharing"
+url_slides: "https://michaelsoprano.com/media/talks/SIGIR-2020_Can-The-Crowd-Identify-Misinformation-Objectively.pdf"
 url_video: "https://www.youtube.com/watch?v=D10EtrThvbc"
 
 # Markdown Slides (optional).

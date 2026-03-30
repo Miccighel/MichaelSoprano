@@ -34,8 +34,7 @@ image:
 #  name: Follow
 #  url: https://twitter.com/georgecushen
 #url_code: ""
-url_pdf: "https://sigir2025.dei.unipd.it/detailed-program/loadslides?paper=006f52e9102a8d3be2fe5614f42ba989"
-url_slides: "https://sigir2025.dei.unipd.it/detailed-program/paper?paper=006f52e9102a8d3be2fe5614f42ba989"
+url_slides: "https://michaelsoprano.com/media/talks/SIGIR-2025_The-Magnitude-of-Truth-On-Using-Magnitude-Estimation-for-Truthfulness-Assessment.pdf"
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
