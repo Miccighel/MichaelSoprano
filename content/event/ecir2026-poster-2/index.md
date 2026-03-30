@@ -34,7 +34,7 @@ image:
 #  name: Follow
 #  url: https://twitter.com/georgecushen
 #url_code: ""
-url_pdf: "https://michaelsoprano.com/media/posters/Analyzing-AI-Eval-Benchmakrs-Through-IR_ECIR-2026.pdf"
+url_pdf: "https://michaelsoprano.com/media/posters/Analyzing-AI-Eval-Benchmarks-Through-IR_ECIR-2026.pdf"
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
