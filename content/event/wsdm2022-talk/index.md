@@ -18,7 +18,7 @@ all_day: false
 # Schedule page publish date (NOT talk date).
 #publishDate: "2017-01-01T00:00:00Z"
 
-authors: [Michael Soprano]
+authors: [Michael Soprano, Kevin Roitero, Francesco Bombassei De Bona, Stefano Mizaro]
 tags: [crowdsourcing, framework, user behavior]
 
 # Is this a featured talk? (true/false)

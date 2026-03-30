@@ -18,7 +18,7 @@ all_day: false
 # Schedule page publish date (NOT talk date).
 #publishDate: "2017-01-01T00:00:00Z"
 
-authors: [Michael Soprano]
+authors: [Michael Soprano, Eddy Maddalena, Francesca Da Ros, Maria Elena Zuliani, Stefano Mizzaro]
 tags: [ scholarly publishing, peer review, evaluation, readersourcing ]
 
 # Is this a featured talk? (true/false)

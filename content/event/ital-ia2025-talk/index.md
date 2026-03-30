@@ -12,7 +12,7 @@ date: "2025-06-23"
 date_end: "2025-06-23"
 all_day: false
 
-authors: [Michael Soprano]
+authors: [Michael Soprano, Sandip Modha, Kevin Roitero, Eddy Maddalena, Marco Viviani, Gabriella Pasi, Stefano Mizzaro]
 tags: [AI, scoping reviews, AIDME, interpretability]
 
 featured: false

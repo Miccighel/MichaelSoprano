@@ -18,7 +18,7 @@ all_day: false
 # Schedule page publish date (NOT talk date).
 #publishDate: "2017-01-01T00:00:00Z"
 
-authors: [Michael Soprano]
+authors: [Michael Soprano, Denis Eduard Tapu, David La Barbera, Kevin Roitero, Stefano Mizzaro]
 tags: [ misinformation, crowdsourcing, fact-checking, magnitude estimation ]
 
 # Is this a featured talk? (true/false)
