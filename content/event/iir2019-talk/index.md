@@ -35,7 +35,7 @@ image:
 #  url: https://twitter.com/georgecushen
 #url_code: ""
 #url_pdf: ""
-url_slides: "https://docs.google.com/presentation/d/1F751FzwnxZjA0y0ctZy91BWEJzlCV19L9fF5OCn20Lo/edit?usp=sharing"
+url_slides: "https://michaelsoprano.com/media/posters/IIR-2019_Bias-and-Fairness-in-Effectiveness-Evaluation-by-Means-of-Network-Analysis-and-Mixture-Model.pdf"
 #url_video: ""
 
 # Markdown Slides (optional).
