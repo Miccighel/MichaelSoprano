@@ -4,7 +4,7 @@ title: "Beyond Seeing Is Believing: On Crowdsourced Detection of Audiovisual Dee
 event: The 6th Workshop on Reducing Online Misinformation through Credible Information Retrieval 
 event_url: https://romcir.disco.unimib.it/
 
-location: Padua, Italy.
+location: Delft, The Netherlands.
 
 summary: "Workshop Talk - The 6th Workshop on Reducing Online Misinformation through Credible Information Retrieval (ROMCIR 2026), held as part of The 48th European Conference on Information Retrieval (ECIR 2026). Delft, The Netherlands."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."

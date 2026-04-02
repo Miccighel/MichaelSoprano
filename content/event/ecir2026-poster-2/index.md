@@ -4,7 +4,7 @@ title: "Analyzing AI Evaluation Benchmarks Through Information Retrieval and Net
 event: The 48th European Conference on Information Retrieval
 event_url: https://ecir2026.eu/
 
-location: Padua, Italy.
+location: Delft, The Netherlands.
 
 summary: "Poster Presentation - The 48th European Conference on Information Retrieval (ECIR 2026). Delft, The Netherlands."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
