@@ -97,12 +97,8 @@ email: ""
 highlight_name: false
 ---
 
-Welcome to my personal webpage.  
-I am a Researcher at the University of Udine, affiliated with the [Social, Mobile, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/).  
-I hold a PhD in Computer Science and Mathematical and Physical Sciences.
+Welcome to my personal webpage. I am a Researcher at the University of Udine and a member of the [Social, Mobile, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/). I hold a PhD in Computer Science and Mathematical and Physical Sciences.
 
-My research interests center on Human Computation, Crowdsourcing, and Information Retrieval.  
-I am currently focusing on the use of crowdsourcing to address the growing challenge of misinformation.
+My research interests include Human Computation, Crowdsourcing, Information Retrieval, and Large Language Models. My current work focuses in particular on the use of crowdsourcing to address the growing challenge of misinformation.
 
-{{< icon name="download" pack="fas" >}} You can download my Curriculum Vitae in {{< staticref "media/CVs/Curriculum_Vitae_EN.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/CVs/Curriculum_Vitae_IT.pdf" "newtab" >}}Italian{{< /staticref >}}.  
-Feel free to also explore my {{< staticref "https://doi.org/10.48550/arXiv.2506.09221" "newtab" >}}PhD thesis{{< /staticref >}}, together with my {{< staticref "media/theses/masterThesis.pdf" "newtab" >}}Master's{{< /staticref >}}, {{< staticref "media/theses/bachelorThesis.pdf" "newtab" >}}Bachelor's{{< /staticref >}}, and {{< staticref "media/theses/highSchoolThesis.pdf" "newtab" >}}High School{{< /staticref >}} theses (in Italian).
+{{< icon name="download" pack="fas" >}} You can download my Curriculum Vitae in {{< staticref "media/CVs/Curriculum_Vitae_EN.pdf" "newtab" >}}English{{< /staticref >}} or {{< staticref "media/CVs/Curriculum_Vitae_IT.pdf" "newtab" >}}Italian{{< /staticref >}}. You can also explore my {{< staticref "https://doi.org/10.48550/arXiv.2506.09221" "newtab" >}}PhD thesis{{< /staticref >}}, together with my {{< staticref "media/theses/masterThesis.pdf" "newtab" >}}Master's{{< /staticref >}}, {{< staticref "media/theses/bachelorThesis.pdf" "newtab" >}}Bachelor's{{< /staticref >}}, and {{< staticref "media/theses/highSchoolThesis.pdf" "newtab" >}}High School{{< /staticref >}} theses (in Italian).
