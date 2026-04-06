@@ -43,34 +43,54 @@ education:
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
+# Social/Academic Networking
 social:
+  # Contact
   - icon: envelope
     icon_pack: fas
     link: '/#contact'
+
+  # Academic profiles
   - icon: orcid
     icon_pack: fab
     link: https://orcid.org/0000-0002-7337-7592
   - icon: google-scholar
     icon_pack: ai
     link: https://scholar.google.it/citations?user=ocK0qRUAAAAJ&hl=en
-  - icon: acm
+  - icon: semantic-scholar
     icon_pack: ai
-    link: https://dl.acm.org/profile/99659280921
+    link: https://www.semanticscholar.org/author/Michael-Soprano/51006308
+  - icon: scopus
+    icon_pack: ai
+    link: https://www.scopus.com/authid/detail.uri?authorId=57203392311
   - icon: dblp
     icon_pack: ai
     link: https://dblp.org/pid/222/1241.html
+  - icon: acm
+    icon_pack: ai
+    link: https://dl.acm.org/profile/99659280921
+  - icon: arxiv
+    icon_pack: ai
+    link: https://arxiv.org/a/soprano_m_1
+  - icon: osf
+    icon_pack: ai
+    link: https://osf.io/fmx3s/
   - icon: researchgate
     icon_pack: fab
     link: https://www.researchgate.net/profile/Michael-Soprano
+
+  # Professional / tech
   - icon: github
     icon_pack: fab
     link: https://github.com/Miccighel
-  - icon: twitter
-    icon_pack: fab
-    link: https://twitter.com/Miccighel_
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/michaelsoprano/
+  - icon: twitter
+    icon_pack: fab
+    link: https://twitter.com/Miccighel_
+
+  # Personal interests
   - icon: goodreads
     icon_pack: fab
     link: https://www.goodreads.com/user/show/53180193-michael-soprano
@@ -89,12 +109,12 @@ social:
   - icon: steam
     icon_pack: fab
     link: https://steamcommunity.com/id/miccighel
-
+    
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
 
 # Highlight the author in author lists? (true/false)
-highlight_name: false
+highlight_name: true
 ---
 
 Welcome to my personal webpage. I am a Researcher at the University of Udine and a member of the [Social, Mobile, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/). I hold a PhD in Computer Science and Mathematical and Physical Sciences.
