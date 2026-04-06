@@ -60,9 +60,6 @@ social:
   - icon: semantic-scholar
     icon_pack: ai
     link: https://www.semanticscholar.org/author/Michael-Soprano/51006308
-  - icon: scopus
-    icon_pack: ai
-    link: https://www.scopus.com/authid/detail.uri?authorId=57203392311
   - icon: dblp
     icon_pack: ai
     link: https://dblp.org/pid/222/1241.html
@@ -86,9 +83,6 @@ social:
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/michaelsoprano/
-  - icon: twitter
-    icon_pack: fab
-    link: https://twitter.com/Miccighel_
 
   # Personal interests
   - icon: goodreads
