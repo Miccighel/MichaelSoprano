@@ -13,7 +13,7 @@ design:
 
 - **Organizational Roles**  
   - 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (*SIGIR 2026*). **Tutorials Chair**  
-  - Workshop “AI, Misinformation and Disinformation” – *Ital-IA 2025*, Trieste, **23 Jun 2025**. **Organizer**. <https://www.ital-ia2025.it/workshop/ai-misinformation-and-disinformation.html>  
+  - Workshop “AI, Misinformation and Disinformation” – *Ital-IA 2025*, Trieste, **23 Jun 2025**. **Organizer**.  
   - 21st Italian Research Conference on Digital Libraries (*IRCDL 2025*), Udine, **20–21 Feb 2025**. **Website Chair**. <https://ircdl2025.uniud.it/>  
   - 14th Italian Information Retrieval Workshop (*IIR 2024*), Udine, **5–6 Sep 2024**. **Organizer & Website Chair**. <https://iir2024.uniud.it/>  
   - **CARE** – Conversational Agents and Responsible Ethics in Healthcare (Workshop at *EFMI STC 2023*), Turin, **27 Oct 2023**. **Organizer**  
