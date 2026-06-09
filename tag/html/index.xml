@@ -5,9 +5,9 @@
 &lt;p>Hands-on activities with cURL, Postman, and structured assignments support practical learning throughout the course.&lt;/p>
 &lt;h2 id="teacher">Teacher&lt;/h2>
 &lt;ul>
-&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Course Leader&lt;/li>
+&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Course Instructor&lt;/li>
 &lt;/ul>
-&lt;p>The course consists of 24 lectures for a total of 48 hours. Assessment is based on project work. The course is delivered in the second semester.&lt;/p>
+&lt;p>The course consists of 24 lectures for a total of 48 hours. It is delivered in the second semester. Assessment is based on the design, implementation, and discussion of a full-stack project.&lt;/p>
 &lt;h2 id="topics-covered">Topics Covered&lt;/h2>
 &lt;h3 id="web-fundamentals-and-communication">Web Fundamentals and Communication&lt;/h3>
 &lt;ul>
@@ -70,12 +70,10 @@
 &lt;li>Final integration project with full-stack CRUD operations&lt;/li>
 &lt;/ul>
 &lt;h2 id="learning-approach">Learning Approach&lt;/h2>
-&lt;ul>
-&lt;li>Hands-on activities and interactive quizzes&lt;/li>
-&lt;li>Tool-assisted exploration of HTTP, APIs, and web protocols&lt;/li>
-&lt;li>Assignments focused on frontend and backend development&lt;/li>
-&lt;li>A final project showing complete full-stack integration&lt;/li>
-&lt;/ul>
+&lt;p>The course combines conceptual explanations, practical demonstrations, and progressive hands-on activities. Students use developer tools, cURL, Postman, browser APIs, and server-side JavaScript to connect frontend interfaces with backend services.&lt;/p>
+&lt;p>Assignments and exercises gradually move from isolated examples to complete application components. The final project consolidates the main topics of the course through the implementation of a full-stack application.&lt;/p>
+&lt;h2 id="assessment">Assessment&lt;/h2>
+&lt;p>Assessment is based on a project in which students design and implement a full-stack web application. The project is discussed to assess design choices, implementation quality, and understanding of the technologies used.&lt;/p>
 &lt;h2 id="reading-material">Reading Material&lt;/h2>
 &lt;ul>
 &lt;li>J. Duckett, &lt;em>HTML &amp;amp; CSS: Design and Build Websites&lt;/em>. Wiley, 2011&lt;/li>
