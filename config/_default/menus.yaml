@@ -22,7 +22,7 @@ main:
   - name: Presentations
     url: '#presentations'
     weight: 6
-  - name: Academic Activity
+  - name: Activity
     url: '#academic_activity'
     weight: 7
   - name: Teaching
