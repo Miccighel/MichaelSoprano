@@ -6,7 +6,7 @@ event_url: https://ictir2025.cs.umass.edu/
 
 location: Padua, Italy.
 
-summary: "Poster Presentation - The 48th International ACM SIGIR Conference on Research and Development in Information Retrieval. Padua, Italy."
+summary: "Poster Presentation - The 15th International Conference on Innovative Concepts and Theories in Information Retrieval. Padua, Italy."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.
