@@ -7,7 +7,7 @@ summary: "Course in the Master's Degree in Management Engineering at the Univers
 projects: []
 
 date: "2024-08-08T11:00:00Z"
-lastmod: "2025-09-30T14:30:00Z"
+lastmod: "2026-06-09T13:00:00Z"
 draft: false
 featured: false
 
@@ -51,9 +51,9 @@ Hands-on activities with cURL, Postman, and structured assignments support pract
 
 ## Teacher
 
-- **Michael Soprano** - Course Leader
+- **Michael Soprano** - Course Instructor
 
-The course consists of 24 lectures for a total of 48 hours. Assessment is based on project work. The course is delivered in the second semester.
+The course consists of 24 lectures for a total of 48 hours. It is delivered in the second semester. Assessment is based on the design, implementation, and discussion of a full-stack project.
 
 ## Topics Covered
 
@@ -121,10 +121,13 @@ The course consists of 24 lectures for a total of 48 hours. Assessment is based 
 
 ## Learning Approach
 
-- Hands-on activities and interactive quizzes
-- Tool-assisted exploration of HTTP, APIs, and web protocols
-- Assignments focused on frontend and backend development
-- A final project showing complete full-stack integration
+The course combines conceptual explanations, practical demonstrations, and progressive hands-on activities. Students use developer tools, cURL, Postman, browser APIs, and server-side JavaScript to connect frontend interfaces with backend services.
+
+Assignments and exercises gradually move from isolated examples to complete application components. The final project consolidates the main topics of the course through the implementation of a full-stack application.
+
+## Assessment
+
+Assessment is based on a project in which students design and implement a full-stack web application. The project is discussed to assess design choices, implementation quality, and understanding of the technologies used.
 
 ## Reading Material
 
