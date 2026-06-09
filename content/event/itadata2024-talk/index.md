@@ -6,13 +6,13 @@ event_url: https://www.itadata.it/
 
 location: Pisa, Italy.
 
-summary: "Demo Presentation - The 3rd Italian Conference on Big Data and Data Science (ITADATA 2024). Pisa, Italy."
+summary: "Demo Presentation - The 3rd Italian Conference on Big Data and Data Science (ITADATA 2024). September 17, 2024, Pisa, Italy."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: "2024-09-17T11:30:00"
-date_end: "2024-09-17T09:12:30"
+date_end: "2024-09-17T12:30:00"
 all_day: false
 
 # Schedule page publish date (NOT talk date).

@@ -1,18 +1,18 @@
 ---
 title: "Bias and Fairness in Effectiveness Evaluation by Means of Network Analysis and Mixture Model"
 
-event: Italian Information Retrieval Workshop
+event: Italian Information Retrieval Workshop (IIR 2019)
 event_url: https://iir2019.dei.unipd.it/
 
-location:  Padova, Italy.
+location: Padua, Italy.
 
-summary: "Workshop Talk - Italian Information Retrieval Workshop (IIR 2019). September 16th, 2019. Padova, Italy."
+summary: "Workshop Talk - Italian Information Retrieval Workshop (IIR 2019). September 16, 2019, Padua, Italy."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: "2019-09-16"
-date_end: "2019-09-18"
+date_end: "2019-09-16"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
@@ -35,7 +35,7 @@ image:
 #  url: https://twitter.com/georgecushen
 #url_code: ""
 #url_pdf: ""
-url_slides: "https://michaelsoprano.com/talks/IIR-2019_Bias-and-Fairness-in-Effectiveness-Evaluation-by-Means-of-Network-Analysis-and-Mixture-Model.pdf"
+url_slides: "https://michaelsoprano.com/media/talks/IIR-2019_Bias-and-Fairness-in-Effectiveness-Evaluation-by-Means-of-Network-Analysis-and-Mixture-Model.pdf"
 #url_video: ""
 
 # Markdown Slides (optional).

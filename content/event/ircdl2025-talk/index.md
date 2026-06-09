@@ -6,7 +6,7 @@ event_url: https://ircdl2025.uniud.it/
 
 location: Udine, Italy.
 
-summary: "Conference Talk - 21st Conference on Information and Research Science Connecting to Digital and Library Science. Udine, Italy."
+summary: "Conference Talk - 21st Conference on Information and Research Science Connecting to Digital and Library Science (IRCDL 2025). February 20, 2025, Udine, Italy."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.
@@ -19,7 +19,7 @@ all_day: false
 #publishDate: "2017-01-01T00:00:00Z"
 
 authors: [Michael Soprano, Eddy Maddalena, Francesca Da Ros, Maria Elena Zuliani, Stefano Mizzaro]
-tags: [ scholarly publishing, peer review, evaluation, readersourcing ]
+tags: [scholarly publishing, peer review, evaluation, readersourcing]
 
 # Is this a featured talk? (true/false)
 featured: false

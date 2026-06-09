@@ -1,18 +1,18 @@
 ---
-title: "The COVID-19 Infodemic: Can The Crowd Judge Recent Misinformation Objectively?"
+title: "The COVID-19 Infodemic: Can the Crowd Judge Recent Misinformation Objectively?"
 
 event: The 29th ACM International Conference on Information and Knowledge Management
 event_url: https://www.cikm2020.org/
 
-location:  Galway, Ireland.
+location: Galway, Ireland (remote).
 
-summary: "Conference Talk - The 29th ACM International Conference on Information and Knowledge Management (CIKM 2020). October 19th, 2020. Galway, Ireland. Held remotely as a pre-recorded contribution due to the COVID-19 pandemic."
+summary: "Conference Talk - The 29th ACM International Conference on Information and Knowledge Management (CIKM 2020). October 19, 2020, Galway, Ireland (remote). Held remotely as a pre-recorded contribution due to the COVID-19 pandemic."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: "2020-10-19"
-date_end: "2020-10-23"
+date_end: "2020-10-19"
 all_day: false
 
 # Schedule page publish date (NOT talk date).

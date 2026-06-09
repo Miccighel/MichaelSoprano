@@ -1,18 +1,18 @@
 ---
 title: "Towards a Conversational-Based Agent for Health Services"
 
-event: Terzo Convegno Nazionale CINI sull'Intelligenza Artificiale
+event: 3rd National CINI Conference on Artificial Intelligence (Ital-IA 2023)
 event_url: https://www.ital-ia2023.it/
 
 location: Pisa, Italy.
 
-summary: "Workshop Talk - Terzo Convegno Nazionale CINI sull'Intelligenza Artificiale (Ital-IA 2023). May 29th, 2023. Pisa, Italy."
+summary: "Workshop Talk - Workshop “AI for Public Administration”, held as part of the 3rd National CINI Conference on Artificial Intelligence (Ital-IA 2023). May 29, 2023, Pisa, Italy."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: "2023-05-29"
-date_end: "2023-05-31"
+date_end: "2023-05-29"
 all_day: false
 
 # Schedule page publish date (NOT talk date).

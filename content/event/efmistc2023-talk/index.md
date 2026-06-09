@@ -1,12 +1,12 @@
 ---
 title: "Towards a Conversational-Based Agent for Healthcare"
 
-event: CARE - Conversational Agents and Responsible Ethics in Healthcare Workshop at the European Federation of Medical Informatics Special Topic Conference 2023
+event: Conversational Agents and Responsible Ethics in Healthcare Workshop, held as part of the European Federation of Medical Informatics Special Topic Conference 2023 (EFMI STC 2023)
 event_url: https://www.stc2023.org/
 
 location: Turin, Italy.
 
-summary: "Workshop Talk - European Federation of Medical Informatics Special Topic Conference 2023 (EFMI STC 2023). Turin, Italy."
+summary: "Workshop Talk - CARE: Conversational Agents and Responsible Ethics in Healthcare Workshop, held as part of the European Federation of Medical Informatics Special Topic Conference 2023 (EFMI STC 2023). October 26, 2023, Turin, Italy."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.
