@@ -6,7 +6,7 @@ event_url: https://ecir2026.eu/
 
 location: Delft, The Netherlands.
 
-summary: "Poster Presentation - The 48th European Conference on Information Retrieval (ECIR 2026). Delft, The Netherlands."
+summary: "Poster - The 48th European Conference on Information Retrieval (ECIR 2026). Delft, The Netherlands."
 #abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Talk start and end times.

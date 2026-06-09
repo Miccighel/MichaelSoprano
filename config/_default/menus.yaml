@@ -19,8 +19,8 @@ main:
   - name: Publications
     url: '#publications'
     weight: 5
-  - name: Talks
-    url: '#talks'
+  - name: Presentations
+    url: '#presentations'
     weight: 6
   - name: Academic Activity
     url: '#academic_activity'

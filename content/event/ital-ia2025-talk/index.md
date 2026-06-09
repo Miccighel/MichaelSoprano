@@ -1,12 +1,12 @@
 ---
 title: "AIDME: A Scalable, Interpretable Framework for AI-Aided Scoping Reviews"
 
-event: Quinto Convegno Nazionale CINI sull'Intelligenza Artificiale (Ital-IA 2025)
+event: 5th National CINI Conference on Artificial Intelligence (Ital-IA 2025)
 event_url: https://www.ital-ia2025.it/
 
 location: Trieste, Italy.
 
-summary: "Talk at the 5th National CINI Conference on Artificial Intelligence (Ital-IA 2025). June 23 2025, Trieste, Italy."
+summary: "Workshop Talk - Workshop “AI, Misinformation and Disinformation”, held as part of the 5th National CINI Conference on Artificial Intelligence (Ital-IA 2025). June 23, 2025, Trieste, Italy."
 
 date: "2025-06-23"
 date_end: "2025-06-23"
