@@ -1,8 +1,8 @@
 ---
 title: Information Analysis and Processing for Training
-subtitle: Bachelor's Degree and Master's Degree courses at the University of Udine
+subtitle: Bachelor's Degree in Sports Science and Master's Degree in Sciences and Techniques of Preventive and Adapted Physical Activities at the University of Udine
 
-summary: "Bachelor's Degree and Master's Degree courses in Information Analysis and Processing for Training"
+summary: "Courses offered within the Bachelor's Degree in Sports Science and the Master's Degree in Sciences and Techniques of Preventive and Adapted Physical Activities at the University of Udine"
 
 projects: []
 
@@ -65,6 +65,8 @@ The two courses follow a coherent progression from **understanding and represent
 ## Teacher
 
 - **Michael Soprano** - Course Instructor
+
+The two courses consist of 12 lectures for a total of 24 hours.
 
 # Bachelor's Degree Course
 

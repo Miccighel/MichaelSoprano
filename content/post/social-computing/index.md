@@ -1,8 +1,8 @@
 ---
 title: Social Computing
-subtitle: Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine
+subtitle: Bachelor's Degree in Internet of Things, Big Data, and Machine Learning at the University of Udine
 
-summary: "Course in the Bachelor's Degree in Internet of Things, Big Data & Web at the University of Udine"
+summary: "Course offered within the Bachelor's Degree in Internet of Things, Big Data, and Machine Learning at the University of Udine"
 
 projects: []
 
@@ -107,7 +107,7 @@ I contributed to the course by delivering two lectures on Crowd_Frame, a framewo
 #### Teaching Team
 
 - [Stefano Mizzaro](https://users.dimi.uniud.it/~stefano.mizzaro/ "Stefano Mizzaro") - Course Instructor
-- **Hafska Akebli** - Teaching Assistant
+- **Hafsa Akebli** - Teaching Assistant
 - **Michele Lizzit** - Teaching Assistant
 - **Michael Soprano** - Teaching Assistant
 

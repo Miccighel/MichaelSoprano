@@ -2,7 +2,7 @@
 title: Web Applications
 subtitle: Master's Degree in Management Engineering at the University of Udine
 
-summary: "Course in the Master's Degree in Management Engineering at the University of Udine"
+summary: "Course offered within the Master's Degree in Management Engineering at the University of Udine"
 
 projects: []
 
