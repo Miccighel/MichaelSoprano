@@ -49,9 +49,12 @@ design:
 - 31st ACM Conference on Hypertext and Social Media (*HT 2020*), online
 - 15th Italian Research Conference on Digital Libraries (*IRCDL 2019*), Pisa, Italy
 
-### Student Supervision and Mentoring
+### Supervision and Mentoring
 
-- **Co-supervision** of 12 MSc and 17 BSc theses, including completed and ongoing theses, as well as advanced student projects, seminars, course assignments, and internships, 2020--present
+- **Thesis supervision**: 1 BSc thesis
+- **Thesis co-supervision**: 12 MSc and 16 BSc theses
+
+*Counts include completed and ongoing theses. Additional mentoring activities include advanced student projects, seminars, course assignments, and internships.*
 
 ### Affiliations
 
