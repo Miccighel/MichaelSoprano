@@ -31,6 +31,7 @@ design:
 
 ### Reviewing Activities
 
+- 2026 Conference on Empirical Methods in Natural Language Processing (*EMNLP 2026*), Budapest, Hungary
 - 19th ACM International Conference on Web Search and Data Mining (*WSDM 2026*)
 - *Umanistica Digitale* - Italian Journal of Digital Humanities, ISSN 2532-8816, 2025. [Website](https://umanisticadigitale.unibo.it/)
 - *International Journal on Digital Libraries* (*IJDL*), 2025. [Website](https://www.springer.com/journal/799)
@@ -52,7 +53,7 @@ design:
 ### Supervision and Mentoring
 
 - **Thesis supervision**: 1 BSc thesis
-- **Thesis co-supervision**: 12 MSc and 16 BSc theses
+- **Thesis co-supervision**: 13 MSc and 16 BSc theses
 
 *Counts include completed and ongoing theses. Additional mentoring activities include advanced student projects, seminars, course assignments, and internships.*
 
