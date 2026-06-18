@@ -12,7 +12,7 @@ summary: "Workshop Talk - Workshop “AI and Disinformation”, held as part of 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: "2026-06-18T17:20:00"
-date_end: "2026-06-18T17:20:00"
+date_end: "2026-06-18T17:30:00"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
