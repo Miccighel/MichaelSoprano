@@ -23,4 +23,4 @@ title: Bibliometrics
 | h-index          |                                                                       14 | 9      | --                  |
 | i10-index        |                                                                       14 | --     | --                  |
 
-*Last update: June 16, 2026*
+*Last update: June 19, 2026*
