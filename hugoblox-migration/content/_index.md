@@ -228,4 +228,10 @@ sections:
       [michael.soprano@uniud.it](mailto:michael.soprano@uniud.it)
 
       Department of Mathematics, Computer Science and Physics (DMIF), University of Udine — Via delle Scienze 206, 33100 Udine, Italy.
+
+      <form action="https://formspree.io/f/mjvpnjeb" method="POST">
+        <p><label>Your email<br><input type="email" name="email" required></label></p>
+        <p><label>Message<br><textarea name="message" rows="6" required></textarea></label></p>
+        <button type="submit">Send message</button>
+      </form>
 ---

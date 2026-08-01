@@ -64,6 +64,17 @@ education = author_meta.dig('education', 'courses').map do |course|
   "- **#{course['course']}** — #{course['institution']} (#{course['year']})"
 end.join("\n")
 interests = author_meta['interests'].map { |interest| "- #{interest}" }.join("\n")
+contact_text = <<~MARKDOWN.strip
+  [michael.soprano@uniud.it](mailto:michael.soprano@uniud.it)
+
+  Department of Mathematics, Computer Science and Physics (DMIF), University of Udine — Via delle Scienze 206, 33100 Udine, Italy.
+
+  <form action="https://formspree.io/f/mjvpnjeb" method="POST">
+    <p><label>Your email<br><input type="email" name="email" required></label></p>
+    <p><label>Message<br><textarea name="message" rows="6" required></textarea></label></p>
+    <button type="submit">Send message</button>
+  </form>
+MARKDOWN
 
 sections = [
   {
@@ -82,7 +93,7 @@ sections = [
   { 'block' => 'markdown', 'id' => 'activity', 'content' => { 'title' => widgets['academic_activity'][0]['title'], 'text' => widgets['academic_activity'][1] } },
   { 'block' => 'collection', 'id' => 'teaching', 'content' => { 'title' => 'Teaching', 'filters' => { 'folders' => ['blog'] } }, 'design' => { 'view' => 'card' } },
   { 'block' => 'markdown', 'id' => 'honors', 'content' => { 'title' => widgets['honors'][0]['title'], 'text' => widgets['honors'][1] } },
-  { 'block' => 'markdown', 'id' => 'contact', 'content' => { 'title' => 'Contact', 'text' => "[michael.soprano@uniud.it](mailto:michael.soprano@uniud.it)\n\nDepartment of Mathematics, Computer Science and Physics (DMIF), University of Udine — Via delle Scienze 206, 33100 Udine, Italy." } }
+  { 'block' => 'markdown', 'id' => 'contact', 'content' => { 'title' => 'Contact', 'text' => contact_text } }
 ]
 
 document = { 'title' => '', 'date' => '2026-08-01', 'type' => 'landing', 'sections' => sections }
