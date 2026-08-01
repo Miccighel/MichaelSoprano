@@ -221,6 +221,20 @@ sections:
       - **Student Grant**. 29th ACM International Conference on Information and Knowledge Management (*CIKM 2020*), Galway, Ireland. Conference registration waiver provided by CIKM. Held remotely due to the COVID-19 pandemic.
       - **Student Volunteer**. 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval (*SIGIR 2020*), Xi'an, China. Conference registration waiver provided by SIGIR. Held remotely due to the COVID-19 pandemic.
 - block: markdown
+  id: topics
+  content:
+    title: Topics
+    text: "[crowdsourcing](/tags/crowdsourcing/) · [misinformation](/tags/misinformation/)
+      · [large language models](/tags/large-language-models/) · [fact-checking](/tags/fact-checking/)
+      · [peer review](/tags/peer-review/) · [truthfulness assessment](/tags/truthfulness-assessment/)
+      · [scholarly publishing](/tags/scholarly-publishing/) · [benchmarks](/tags/benchmarks/)
+      · [bias](/tags/bias/) · [explainability](/tags/explainability/) · [public administration](/tags/public-administration/)
+      · [readersourcing](/tags/readersourcing/) · [scoping reviews](/tags/scoping-reviews/)
+      · [Teaching](/tags/teaching/) · [truthfulness](/tags/truthfulness/) · [argument
+      type identification](/tags/argument-type-identification/) · [audiovisual deepfakes](/tags/audiovisual-deepfakes/)
+      · [conversational agent](/tags/conversational-agent/) · [covid-19](/tags/covid-19/)
+      · [crowdsourcing annotation](/tags/crowdsourcing-annotation/)"
+- block: markdown
   id: contact
   content:
     title: Contact

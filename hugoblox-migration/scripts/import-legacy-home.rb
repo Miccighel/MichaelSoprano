@@ -54,6 +54,22 @@ def social_markdown
   links.map { |name, url| "[#{name}](#{url})" }.join(' · ')
 end
 
+def topic_slug(topic)
+  topic.downcase.gsub(/[^a-z0-9]+/, '-').sub(/\A-/, '').sub(/-\z/, '')
+end
+
+def topics_markdown
+  counts = Hash.new(0)
+  Dir.glob(File.join(ROOT, 'hugoblox-migration', 'content', '{publications,events,blog}', '**', 'index.md')).each do |path|
+    metadata, = parse_page(path)
+    Array(metadata['tags']).each { |tag| counts[tag] += 1 }
+  end
+
+  counts.sort_by { |tag, count| [-count, tag.downcase] }.first(20)
+        .map { |tag, _count| "[#{tag}](/tags/#{topic_slug(tag)}/)" }
+        .join(' · ')
+end
+
 widgets = {}
 %w[visits experience metrics academic_activity honors].each do |name|
   widgets[name] = parse_page(File.join(LEGACY_HOME, "#{name}.md"))
@@ -93,6 +109,7 @@ sections = [
   { 'block' => 'markdown', 'id' => 'activity', 'content' => { 'title' => widgets['academic_activity'][0]['title'], 'text' => widgets['academic_activity'][1] } },
   { 'block' => 'collection', 'id' => 'teaching', 'content' => { 'title' => 'Teaching', 'filters' => { 'folders' => ['blog'] } }, 'design' => { 'view' => 'card' } },
   { 'block' => 'markdown', 'id' => 'honors', 'content' => { 'title' => widgets['honors'][0]['title'], 'text' => widgets['honors'][1] } },
+  { 'block' => 'markdown', 'id' => 'topics', 'content' => { 'title' => 'Topics', 'text' => topics_markdown } },
   { 'block' => 'markdown', 'id' => 'contact', 'content' => { 'title' => 'Contact', 'text' => contact_text } }
 ]
 
