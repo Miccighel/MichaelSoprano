@@ -1,0 +1,76 @@
+/* Keep the original Wowchemy homepage geometry while HugoBlox provides the runtime. */
+:root {
+  --legacy-surface: #282a35;
+  --legacy-link: #4f6bdc;
+}
+
+.page-wrapper,
+.page-header,
+.page-footer {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The legacy menu was deliberately dense enough to fit every section on one row. */
+#site-header .navbar {
+  flex-wrap: nowrap;
+  min-height: 70px;
+}
+
+#site-header #nav-menu {
+  flex-wrap: nowrap;
+  gap: .65rem !important;
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+
+#site-header #nav-menu > * + * { margin-left: 0 !important; }
+#site-header .navbar-brand { font-size: 1.1rem; white-space: nowrap; }
+#site-header #nav-menu .nav-link { padding: 0 !important; font-size: .86rem; }
+
+#about {
+  background: var(--legacy-surface);
+}
+
+#about #profile {
+  max-width: 1170px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 590px;
+  margin: 0 auto;
+  padding: 4.5rem 2.5rem;
+}
+
+@media (min-width: 900px) {
+  #about #profile {
+    display: grid !important;
+    grid-template-columns: 310px minmax(0, 1fr);
+    grid-template-areas:
+      "avatar bio"
+      "name bio"
+      "role bio"
+      "organization bio"
+      "links bio";
+    column-gap: 3.25rem;
+    align-items: start;
+  }
+
+  #about #profile .avatar-wrapper { grid-area: avatar; margin: 0 auto 1.5rem !important; }
+  #about #profile .text-3xl { grid-area: name; text-align: center; font-size: 2rem; }
+  #about #profile h3 { grid-area: role; text-align: center; font-size: 1.2rem; font-weight: 400; color: #aab0bd; }
+  #about #profile h3::after { content: "University of Udine"; display: block; margin-top: .45rem; color: var(--legacy-link); }
+  #about #profile .pt-2 { grid-area: bio; max-width: none; padding-top: 0; font-size: 1.2rem; line-height: 1.75; }
+  #about #profile > a { grid-area: links; justify-self: center; margin-top: 1.5rem; }
+}
+
+#about a,
+.legacy-like a { color: var(--legacy-link); }
+
+#about #profile .avatar-wrapper { width: 270px !important; height: 270px !important; }
+#about #profile .avatar { width: 270px !important; height: 270px !important; }
+
+@media (min-width: 900px) {
+  .hbb-section > .flex,
+  .hbb-section > .container {
+    max-width: 1170px;
+  }
+}

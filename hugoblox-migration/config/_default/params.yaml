@@ -14,7 +14,7 @@ hugoblox:
     colors:
       primary: indigo
   typography:
-    pack: academic
+    pack: system
   layout:
     radius: md
     spacing: comfortable

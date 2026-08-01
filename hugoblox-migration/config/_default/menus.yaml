@@ -1,19 +1,34 @@
 main:
-  - name: About
+  - name: Home
     url: /#about
     weight: 10
+  - name: Visits
+    url: /#visits
+    weight: 20
+  - name: Experience
+    url: /#experience
+    weight: 30
+  - name: Bibliometrics
+    url: /#metrics
+    weight: 40
   - name: Publications
     url: /#publications
-    weight: 20
-  - name: Talks
-    url: /#talks
-    weight: 30
+    weight: 50
+  - name: Presentations
+    url: /#presentations
+    weight: 60
   - name: Activity
     url: /#activity
-    weight: 40
+    weight: 70
   - name: Teaching
     url: /#teaching
-    weight: 50
+    weight: 80
+  - name: Honors
+    url: /#honors
+    weight: 90
   - name: Contact
     url: /#contact
-    weight: 60
+    weight: 100
+  - name: CV
+    url: /media/CVs/Curriculum_Vitae_EN.pdf
+    weight: 110

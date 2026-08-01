@@ -16,6 +16,38 @@ sections:
         size: large
         shape: circle
   - block: markdown
+    id: visits
+    content:
+      title: Visits
+      text: |-
+        ### Visiting PhD Student
+
+        **Centrum Wiskunde & Informatica (CWI), Human-Centered Data Analytics Group** — Amsterdam, the Netherlands, Mar–Jul 2022.
+
+        Research visit carried out during the PhD programme.
+  - block: markdown
+    id: experience
+    content:
+      title: Experience
+      text: |-
+        ### Postdoctoral Researcher
+
+        **Department of Mathematics, Computer Science and Physics (DMIF), University of Udine** — Jun 2025–present.
+
+        Research on information and disinformation, automatic truthfulness evaluation, detection models, and evaluation metrics.
+
+        ### Postdoctoral Researcher
+
+        **DMIF, University of Udine** — Dec 2023–May 2025.
+
+        Research activity within the PRIN 2022 project *The Measure of Truth*.
+
+        ### Research Fellow
+
+        **DMIF, University of Udine** — Jun 2018–Oct 2019.
+
+        Design, implementation, and evaluation of an alternative peer-review ecosystem.
+  - block: markdown
     id: metrics
     content:
       title: Bibliometrics
@@ -38,7 +70,7 @@ sections:
     design:
       view: citation
   - block: collection
-    id: talks
+    id: presentations
     content:
       title: Presentations
       filters:
@@ -69,6 +101,15 @@ sections:
       title: Teaching
       text: |-
         Current and recent courses include **Web Applications**, **Information Analysis and Processing for Training**, and **Social Computing** at the University of Udine.
+  - block: markdown
+    id: honors
+    content:
+      title: Honors & Grants
+      text: |-
+        - **PhD Award 2024** — University of Udine award for the best PhD thesis in the scientific area for 2023.
+        - **Student Grant** — 15th ACM WSDM 2022.
+        - **Student Grant** — 29th ACM CIKM 2020.
+        - **Student Volunteer** — 43rd ACM SIGIR 2020.
   - block: markdown
     id: contact
     content:
