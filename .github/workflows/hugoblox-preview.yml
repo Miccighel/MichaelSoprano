@@ -1,0 +1,54 @@
+name: HugoBlox preview
+
+on:
+  push:
+    branches:
+      - codex/hugo-wowchemy-upgrade
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: hugoblox-migration/go.mod
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: hugoblox-migration/pnpm-lock.yaml
+
+      - name: Install frontend dependencies
+        working-directory: hugoblox-migration
+        run: |
+          corepack enable
+          pnpm install --frozen-lockfile
+
+      - name: Set up Hugo Extended
+        uses: peaceiris/actions-hugo@v3.2.1
+        with:
+          hugo-version: '0.164.0'
+          extended: true
+
+      - name: Build HugoBlox
+        run: hugo --source hugoblox-migration --destination public --gc --minify
+
+      - name: Build search index
+        run: npx --yes pagefind@1.5.2 --site hugoblox-migration/public
+
+      - name: Upload preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hugoblox-preview
+          path: hugoblox-migration/public
+          if-no-files-found: error
+          retention-days: 14

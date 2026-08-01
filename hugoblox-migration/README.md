@@ -18,6 +18,14 @@ Hugo Extended 0.164.0 or newer:
 hugo --gc --minify
 ```
 
-The preview contains the updated profile and bibliometrics, and renders all
-legacy publications and talks. The remaining work is to convert the old front
-matter to the current HugoBlox schema.
+The preview contains the complete legacy profile, homepage sections,
+publications, talks, teaching material, and static assets. Its front matter is
+already normalised to the current HugoBlox schema; deployment promotion remains
+intentionally separate from the production site.
+
+## CI preview
+
+The `HugoBlox preview` workflow builds this directory only on the migration
+branch. It creates the Pagefind search index after Hugo builds, then uploads a
+14-day `hugoblox-preview` artifact. It intentionally does not deploy to GitHub
+Pages, so the production site and its custom domain remain unchanged.
