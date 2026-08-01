@@ -13,24 +13,23 @@ jobs:
   build-preview:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version-file: hugoblox-migration/go.mod
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
-          cache: pnpm
-          cache-dependency-path: hugoblox-migration/pnpm-lock.yaml
+          package-manager-cache: false
 
-      - name: Install frontend dependencies
+      - name: Install pnpm and frontend dependencies
         working-directory: hugoblox-migration
         run: |
-          corepack enable
+          npm install --global pnpm@10.14.0
           pnpm install --frozen-lockfile
 
       - name: Set up Hugo Extended
