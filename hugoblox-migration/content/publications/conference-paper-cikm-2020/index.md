@@ -1,6 +1,4 @@
 ---
-# Documentation: https://wowchemy.com/docs/managing-content/
-
 title: 'The COVID-19 Infodemic: Can the Crowd Judge Recent Misinformation Objectively?'
 subtitle: ''
 summary: ''
@@ -21,23 +19,13 @@ tags:
 - crowdsourcing
 categories: []
 date: '2020-10-19'
-lastmod: 2021-03-15T15:36:35+01:00
+lastmod: 2021-03-15 15:36:35.000000000 +01:00
 featured: false
 draft: false
-
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder.
-# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: ''
   focal_point: ''
   preview_only: false
-
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
 projects: []
 publishDate: '2021-03-15T14:36:35.536697Z'
 publication_types:
@@ -63,8 +51,10 @@ abstract: 'Misinformation is an ever increasing problem that is difficult to sol
   workers background / bias. We also analyze workers behavior, in terms of queries
   submitted, URLs found / selected, text justifications, and other behavioral data
   like clicks and mouse actions collected by means of an ad hoc logger.'
-publication: '*Proceedings of the 29th ACM International Conference on Information
-  and Knowledge Management. Conference Ranks: GGS A+, Core A.'
-doi: 10.1145/3340531.3412048
-#url_pdf: https://doi.org/10.1145/3340531.3412048
+publication:
+  name: "*Proceedings of the 29th ACM International Conference on Information and
+    Knowledge Management. Conference Ranks: GGS A+, Core A."
+hugoblox:
+  ids:
+    doi: 10.1145/3340531.3412048
 ---

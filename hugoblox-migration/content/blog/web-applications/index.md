@@ -1,42 +1,36 @@
 ---
 title: Web Applications
 subtitle: Master's Degree in Management Engineering at the University of Udine
-
-summary: "Course offered within the Master's Degree in Management Engineering at the University of Udine"
-
+summary: Course offered within the Master's Degree in Management Engineering at the
+  University of Udine
 projects: []
-
-date: "2024-08-08T11:00:00Z"
-lastmod: "2026-06-09T13:00:00Z"
+date: '2024-08-08T11:00:00Z'
+lastmod: '2026-06-09T13:00:00Z'
 draft: false
 featured: false
-
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)'
-  focal_point: ""
+  focal_point: ''
   placement: 2
   preview_only: false
-
 authors:
-  - admin
-
+- admin
 tags:
-  - HTML
-  - CSS
-  - DOM Manipulation
-  - JavaScript
-  - HTTP
-  - RESTful APIs
-  - Node.js
-  - Express.js
-  - SQLite
-  - Full-Stack
-  - Forms and Validation
-  - Responsive Design
-  - Teaching
-
+- HTML
+- CSS
+- DOM Manipulation
+- JavaScript
+- HTTP
+- RESTful APIs
+- Node.js
+- Express.js
+- SQLite
+- Full-Stack
+- Forms and Validation
+- Responsive Design
+- Teaching
 categories:
-  - teaching
+- teaching
 ---
 
 # Aims

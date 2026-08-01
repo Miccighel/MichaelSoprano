@@ -1,45 +1,41 @@
 ---
 title: Information Analysis and Processing for Training
-subtitle: Bachelor's Degree in Sports Science and Master's Degree in Sciences and Techniques of Preventive and Adapted Physical Activities at the University of Udine
-
-summary: "Courses offered within the Bachelor's Degree in Sports Science and the Master's Degree in Sciences and Techniques of Preventive and Adapted Physical Activities at the University of Udine"
-
+subtitle: Bachelor's Degree in Sports Science and Master's Degree in Sciences and
+  Techniques of Preventive and Adapted Physical Activities at the University of Udine
+summary: Courses offered within the Bachelor's Degree in Sports Science and the Master's
+  Degree in Sciences and Techniques of Preventive and Adapted Physical Activities
+  at the University of Udine
 projects: []
-
-date: "2024-08-07T11:00:00Z"
-lastmod: "2026-06-09T13:00:00Z"
+date: '2024-08-07T11:00:00Z'
+lastmod: '2026-06-09T13:00:00Z'
 draft: false
 featured: false
-
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)'
-  focal_point: ""
+  focal_point: ''
   placement: 2
   preview_only: false
-
 authors:
-  - admin
-
+- admin
 tags:
-  - Data Analysis
-  - Sports Science
-  - Data Science
-  - Data Mining
-  - Microsoft Excel
-  - Data Representation
-  - Data Visualization
-  - Compression
-  - Information Theory
-  - Relational Databases
-  - SQL
-  - SQLite
-  - DBeaver
-  - Teaching
-  - Spreadsheet Analysis
-  - PivotTables
-
+- Data Analysis
+- Sports Science
+- Data Science
+- Data Mining
+- Microsoft Excel
+- Data Representation
+- Data Visualization
+- Compression
+- Information Theory
+- Relational Databases
+- SQL
+- SQLite
+- DBeaver
+- Teaching
+- Spreadsheet Analysis
+- PivotTables
 categories:
-  - teaching
+- teaching
 ---
 
 # Aims

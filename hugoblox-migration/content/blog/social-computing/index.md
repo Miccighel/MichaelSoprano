@@ -1,44 +1,39 @@
 ---
 title: Social Computing
-subtitle: Bachelor's Degree in Internet of Things, Big Data, and Machine Learning at the University of Udine
-
-summary: "Course offered within the Bachelor's Degree in Internet of Things, Big Data, and Machine Learning at the University of Udine"
-
+subtitle: Bachelor's Degree in Internet of Things, Big Data, and Machine Learning
+  at the University of Udine
+summary: Course offered within the Bachelor's Degree in Internet of Things, Big Data,
+  and Machine Learning at the University of Udine
 projects: []
-
-date: "2024-08-06T11:00:00Z"
-lastmod: "2026-06-09T12:30:00Z"
+date: '2024-08-06T11:00:00Z'
+lastmod: '2026-06-09T12:30:00Z'
 draft: false
 featured: false
-
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)'
-  focal_point: ""
+  focal_point: ''
   placement: 2
   preview_only: false
-
 authors:
-  - admin
-
+- admin
 tags:
-  - Social Computing
-  - Python
-  - Jupyter
-  - Twitter API
-  - Tweepy
-  - Postman
-  - Network Analysis
-  - NetworkX
-  - Crowdsourcing
-  - Amazon Mechanical Turk
-  - Crowd_Frame
-  - Angular
-  - Toloka
-  - Prolific
-  - Teaching
-
+- Social Computing
+- Python
+- Jupyter
+- Twitter API
+- Tweepy
+- Postman
+- Network Analysis
+- NetworkX
+- Crowdsourcing
+- Amazon Mechanical Turk
+- Crowd_Frame
+- Angular
+- Toloka
+- Prolific
+- Teaching
 categories:
-  - teaching
+- teaching
 ---
 
 # Aims

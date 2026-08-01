@@ -1,6 +1,4 @@
 ---
-# Documentation: https://wowchemy.com/docs/managing-content/
-
 title: Can The Crowd Identify Misinformation Objectively? The Effects of Judgment
   Scale and Assessor's Background
 subtitle: ''
@@ -18,23 +16,13 @@ tags:
 - information credibility
 categories: []
 date: '2020-07-25'
-lastmod: 2021-03-15T15:36:36+01:00
+lastmod: 2021-03-15 15:36:36.000000000 +01:00
 featured: false
 draft: false
-
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder.
-# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: ''
   focal_point: ''
   preview_only: false
-
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
 projects: []
 publishDate: '2021-03-15T14:36:35.998652Z'
 publication_types:
@@ -52,6 +40,10 @@ abstract: 'Truthfulness judgments are a fundamental step in the process of fight
   crowd judgments, expressed on scales with various granularity levels. We also measure
   the political bias and the cognitive background of the workers, and quantify their
   effect on the reliability of the data provided by the crowd.'
-publication: '*Proceedings of the 43st International ACM SIGIR Conference on Research and Development in Information Retrieval. Conference Rank: GGS A++, Core A*.*'
-doi: 10.1145/3397271.3401112
+publication:
+  name: "*Proceedings of the 43st International ACM SIGIR Conference on Research and
+    Development in Information Retrieval. Conference Rank: GGS A++, Core A*.*"
+hugoblox:
+  ids:
+    doi: 10.1145/3397271.3401112
 ---

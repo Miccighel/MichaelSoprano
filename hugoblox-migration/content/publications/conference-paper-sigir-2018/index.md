@@ -1,6 +1,4 @@
 ---
-# Documentation: https://wowchemy.com/docs/managing-content/
-
 title: 'Effectiveness Evaluation with a Subset of Topics: A Practical Approach'
 subtitle: ''
 summary: ''
@@ -15,23 +13,13 @@ tags:
 - test collections
 categories: []
 date: '2018-07-08'
-lastmod: 2021-03-15T15:36:38+01:00
+lastmod: 2021-03-15 15:36:38.000000000 +01:00
 featured: false
 draft: false
-
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder.
-# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: ''
   focal_point: ''
   preview_only: false
-
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
 projects: []
 publishDate: '2021-03-15T14:36:38.202502Z'
 publication_types:
@@ -45,7 +33,10 @@ abstract: 'Several researchers have proposed to reduce the number of topics used
   system evaluation without relevance judgments, and by running some experiments on
   several TREC collections we show that the topics selected on the basis of those
   evaluations are indeed more informative than random topics.'
-publication: '*Proceedings of the 41st International ACM SIGIR Conference on Research
-  and Development in Information Retrieval. Conference Rank: GGS A++, Core A**'
-doi: 10.1145/3209978.3210108
+publication:
+  name: "*Proceedings of the 41st International ACM SIGIR Conference on Research and
+    Development in Information Retrieval. Conference Rank: GGS A++, Core A**"
+hugoblox:
+  ids:
+    doi: 10.1145/3209978.3210108
 ---

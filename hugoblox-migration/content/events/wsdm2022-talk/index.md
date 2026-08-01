@@ -1,54 +1,32 @@
 ---
-title: "Crowd_Frame: A Simple and Complete Framework to Deploy Complex Crowdsourcing Tasks Off-the-Shelf"
-
-event: The 15th ACM International Conference on Web Search and Data Mining
+title: 'Crowd_Frame: A Simple and Complete Framework to Deploy Complex Crowdsourcing
+  Tasks Off-the-Shelf'
 event_url: https://www.wsdm-conference.org/2022/
-
 location: Phoenix, U.S.A. (remote).
-
-summary: "Conference Talk - The 15th ACM International Conference on Web Search and Data Mining (WSDM 2022). February 23, 2022, Phoenix, U.S.A. (remote). Held remotely as a pre-recorded contribution due to the COVID-19 pandemic."
-#abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
-
-# Talk start and end times.
-#   End time can optionally be hidden by prefixing the line with `#`.
-date: "2022-02-23"
-date_end: "2022-02-23"
-all_day: false
-
-# Schedule page publish date (NOT talk date).
-#publishDate: "2017-01-01T00:00:00Z"
-
-authors: [Michael Soprano, Kevin Roitero, Francesco Bombassei De Bona, Stefano Mizzaro]
-tags: [crowdsourcing, framework, user behavior]
-
-# Is this a featured talk? (true/false)
+summary: Conference Talk - The 15th ACM International Conference on Web Search and
+  Data Mining (WSDM 2022). February 23, 2022, Phoenix, U.S.A. (remote). Held remotely
+  as a pre-recorded contribution due to the COVID-19 pandemic.
+authors:
+- Michael Soprano
+- Kevin Roitero
+- Francesco Bombassei De Bona
+- Stefano Mizzaro
+tags:
+- crowdsourcing
+- framework
+- user behavior
 featured: false
-
 image:
   caption: ''
   focal_point: Right
-
-#links:
-#- icon: twitter
-#  icon_pack: fab
-#  name: Follow
-#  url: https://twitter.com/georgecushen
-#url_code: ""
-#url_pdf: ""
-url_slides: "https://michaelsoprano.com/media/talks/WSDM-2022_Crowd_Frame-A-Simple-and-Complete-Framework-to-Deploy-Complex-Crowdsourcing-Tasks-Off-the-shelf.pdf"
-url_video: "https://dl.acm.org/doi/abs/10.1145/3488560.3502182"
-
-# Markdown Slides (optional).
-#   Associate this talk with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
-#slides: cikm2020-talk
-
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
 projects: []
+event_name: The 15th ACM International Conference on Web Search and Data Mining
+event_start: '2022-02-23'
+event_end: '2022-02-23'
+event_all_day: false
+links:
+- type: slides
+  url: https://michaelsoprano.com/media/talks/WSDM-2022_Crowd_Frame-A-Simple-and-Complete-Framework-to-Deploy-Complex-Crowdsourcing-Tasks-Off-the-shelf.pdf
+- type: video
+  url: https://dl.acm.org/doi/abs/10.1145/3488560.3502182
 ---
