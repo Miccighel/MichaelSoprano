@@ -1,0 +1,7 @@
+build:
+  hugo_version: '0.164.0'
+deploy:
+  host: none
+template:
+  id: academic-cv
+  name: Michael Soprano migration preview

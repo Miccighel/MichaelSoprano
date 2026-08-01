@@ -1,0 +1,24 @@
+imports:
+  - path: github.com/HugoBlox/kit/modules/blox
+
+mounts:
+  - source: assets
+    target: assets
+  - source: content
+    target: content
+  - source: data
+    target: data
+  - source: layouts
+    target: layouts
+  - source: static
+    target: static
+  - source: ../static
+    target: static
+  - source: ../content/publication
+    target: content/publications
+  - source: ../content/event
+    target: content/events
+  - source: ../content/post
+    target: content/blog
+  - source: ../content/authors/admin/avatar.jpg
+    target: assets/media/authors/michael-soprano.jpg

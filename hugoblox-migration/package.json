@@ -1,0 +1,10 @@
+{
+  "name": "michael-soprano-hugoblox-migration",
+  "private": true,
+  "packageManager": "pnpm@10.14.0",
+  "dependencies": {
+    "@tailwindcss/cli": "4.2.4",
+    "@tailwindcss/typography": "0.5.19",
+    "tailwindcss": "4.2.4"
+  }
+}

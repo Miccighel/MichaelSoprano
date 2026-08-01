@@ -1,0 +1,6 @@
+# Local build artefacts and dependency caches.
+.hugo_build.lock
+hugo_stats.json
+.pnpm-store/
+node_modules/
+resources/
