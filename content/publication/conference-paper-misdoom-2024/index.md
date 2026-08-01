@@ -33,7 +33,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2024-09-01T10:00:00:35.998652Z'
+publishDate: '2024-09-01T10:00:35.998652Z'
 publication_types:
 - '1'
 abstract: 'This paper explores the use of crowdsourcing to classify statement types in film reviews to assess their information quality. Employing the Argument Type Identification Procedure which uses the Periodic Table of Arguments to categorize arguments, the study aims to connect statement types to the overall argument strength and information reliability. Focusing on non-expert annotators in a crowdsourcing environment, the research assesses their reliability based on various factors including language proficiency and annotation experience. Results indicate the importance of careful annotator selection and training to achieve high inter-annotator agreement and highlight challenges in crowdsourcing statement classification for information quality assessment.'

@@ -17,7 +17,7 @@ tags:
 - large language models
 categories: []
 date: '2026-03-25'
-lastmod: 2025-03-25T04:00:00+01:00
+lastmod: 2026-03-25T04:00:00+01:00
 featured: false
 draft: false
 
@@ -35,7 +35,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2025-03-25T04:00:00:35.998652Z'
+publishDate: '2026-03-25T04:00:35.998652Z'
 publication_types:
 - '1'
 abstract: 'Traditionally, relevance judgments have relied on human annotators, but recent advances in Large Language Models (LLMs) have prompted growing interest in their use as a proxy for relevance judgments. In this setting, a key yet underexplored factor is the choice of relevance scale. Relevance scales range from binary to fine-grained ones, and their impact on the effectiveness of LLM-based judgments, the effects of scale conversions, and their role in the presence of potential data contamination remain unclear. We systematically investigate how different scales, and their conversions, affect LLMs’ ability to provide reliable relevance judgments across multiple prompting strategies and model sizes. Using a popular TREC collection, we compare model outputs with both crowd and expert annotations, analyzing alignment, stability, and signs of potential data contamination.'

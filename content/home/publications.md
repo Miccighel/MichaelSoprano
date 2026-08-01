@@ -23,19 +23,13 @@ content:
   order: desc
   # Filter on criteria
   filters:
-  tag: ''
-  category: ''
-  publication_type: ''
-  author: ''
-  exclude_featured: true
+    tag: ''
+    category: ''
+    publication_type: ''
+    author: ''
+    exclude_featured: true
 design:
-  view: 2
-# Choose a view for the listings:
-#   1 = List
-#   2 = Compact
-#   3 = Card
-#   4 = Citation (publication only)
-view: 4
+  view: 4
 ---
 
 ## [View details](./publication/)

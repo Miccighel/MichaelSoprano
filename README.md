@@ -1,37 +1,37 @@
-<p align="center"><a href="https://wowchemy.com" target="_blank" rel="noopener"><img src="https://wowchemy.com/img/logo_200px.png" alt="Wowchemy Website Builder"></a></p>
+# Michael Soprano — personal website
 
-# Academic Template for [Hugo](https://github.com/gohugoio/hugo)
+Static academic website for [michaelsoprano.com](https://michaelsoprano.com), built with Hugo and the Wowchemy Academic theme.
 
-The Hugo **Academic Resumé Template** empowers you to create your job-winning online resumé and showcase your academic publications.
+## Requirements
 
-[Check out the latest demo](https://academic-demo.netlify.app) of what you'll get in less than 10 minutes, or [view the showcase](https://wowchemy.com/user-stories/).
+- Hugo Extended 0.87.0
+- Go, to resolve the Hugo modules on the first build
 
-[**Wowchemy**](https://wowchemy.com) makes it easy to create a beautiful website for free. Edit your site in Markdown, Jupyter, or RStudio (via Blogdown), generate it with Hugo, and deploy with GitHub or Netlify. Customize anything on your site with widgets, themes, and language packs.
+## Local development
 
-- 👉 [**Get Started**](https://wowchemy.com/templates/)
-- 📚 [View the **documentation**](https://wowchemy.com/docs/)
-- 💬 [Chat with the **Wowchemy community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@wowchemy](https://twitter.com/wowchemy) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithWowchemy](https://twitter.com/search?q=(%23MadeWithWowchemy%20OR%20%23MadeWithAcademic)&src=typed_query)
-- 💡 [Request a **feature** or report a **bug** for _Wowchemy_](https://github.com/wowchemy/wowchemy-hugo-modules/issues)
-- ⬆️ **Updating Wowchemy?** View the [Update Guide](https://wowchemy.com/docs/guide/update/) and [Release Notes](https://wowchemy.com/updates/)
+```bash
+hugo server --disableFastRender --i18n-warnings
+```
 
-## Crowd-funded open-source software
+The generated site is written to `public/`, which is intentionally ignored by Git.
 
-To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.
+## Build
 
-### [❤️ Click here to unlock rewards with sponsorship](https://wowchemy.com/plans/)
+```bash
+hugo --gc --minify --cleanDestinationDir
+```
 
-## Ecosystem
+The source content lives in `content/`; static files such as CVs, slides, posters, and theses live in `static/media/`. Theme colors and fonts are configured in `data/`, while local presentation overrides are in `assets/scss/` and `layouts/`.
 
-* **[Hugo Academic CLI](https://github.com/wowchemy/hugo-academic-cli):** Automatically import publications from BibTeX
+## Deployment
 
-[![Screenshot](https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png)](https://wowchemy.com)
+Pushing to `hugo-version` runs [the GitHub Pages workflow](.github/workflows/gh-pages.yml), which builds the site and publishes the generated output to `gh-pages`.
 
-## Demo image credits
+`netlify.toml` is retained for compatibility with Netlify-based previews and the bundled Wowchemy CMS.
 
-- [Open book](https://unsplash.com/photos/J4kK8b9Fgj8)
-- [Course](https://unsplash.com/photos/JKUTrJ4vK00)
+## CV PDFs
 
-<!--
-[![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/starter-academic/readme?pixel)](https://github.com/igrigorik/ga-beacon)
--->
+The PDF sources are maintained in the sibling `../LaTeX` project. After rebuilding the CVs there, copy the final English and Italian files to:
+
+- `static/media/CVs/Curriculum_Vitae_EN.pdf`
+- `static/media/CVs/Curriculum_Vitae_IT.pdf`

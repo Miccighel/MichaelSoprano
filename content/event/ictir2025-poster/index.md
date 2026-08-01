@@ -1,5 +1,6 @@
 ---
 title: "AIDME: A Scalable, Interpretable Framework for AI-Aided Scoping Reviews"
+slug: ictir-2025-aidme-poster
 
 event: The 15th International Conference on Innovative Concepts and Theories in Information Retrieval
 event_url: https://ictir2025.cs.umass.edu/

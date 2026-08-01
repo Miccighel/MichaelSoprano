@@ -3,6 +3,7 @@
 
 # Hugo
 /resources/
+/public/
 jsconfig.json
 node_modules/
 assets/media/.DS_Store

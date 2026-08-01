@@ -45,6 +45,10 @@ disableAliases: true
 outputs:
   home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
   section: [HTML, RSS]
+outputFormats:
+  WebAppManifest:
+    mediaType: application/manifest+json
+    baseName: index
 markup:
   defaultMarkdownHandler: goldmark
   goldmark:
