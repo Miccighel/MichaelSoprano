@@ -1,0 +1,94 @@
+{{ define "main" }}
+{{ $author := index site.Data.authors "michael-soprano" }}
+{{ $profiles := "" }}
+{{ range .Params.sections }}
+  {{ if eq .id "profiles" }}{{ $profiles = .content.text }}{{ end }}
+{{ end }}
+
+<main class="legacy-home">
+  <section id="about" class="home-section legacy-about-section">
+    <div class="legacy-container legacy-about-grid">
+      <aside id="profile">
+        <img class="avatar avatar-circle" src="/media/authors/michael-soprano.jpg" alt="{{ $author.title }}">
+        <div class="portrait-title">
+          <h2>{{ $author.title }}</h2>
+          <h3>{{ $author.role }}</h3>
+          {{ with index $author.organizations 0 }}<h3><a href="{{ .url }}">{{ .name }}</a></h3>{{ end }}
+        </div>
+        <ul class="network-icon" aria-label="Academic and social profiles">
+          {{ range $author.social }}
+            {{ $icon := "●" }}
+            {{ if eq .icon "envelope" }}{{ $icon = "✉" }}{{ end }}
+            {{ if eq .icon "academicons/orcid" }}{{ $icon = "iD" }}{{ end }}
+            {{ if eq .icon "academicons/google-scholar" }}{{ $icon = "GS" }}{{ end }}
+            {{ if eq .icon "academicons/dblp" }}{{ $icon = "DB" }}{{ end }}
+            {{ if eq .icon "brands/github" }}{{ $icon = "GH" }}{{ end }}
+            {{ if eq .icon "brands/linkedin" }}{{ $icon = "in" }}{{ end }}
+            <li><a href="{{ .link }}" aria-label="{{ .icon }}">{{ $icon }}</a></li>
+          {{ end }}
+        </ul>
+        <div class="legacy-profile-links">{{ $profiles | markdownify }}</div>
+      </aside>
+
+      <div class="legacy-about-content">
+        <div class="legacy-bio">{{ $author.bio | markdownify }}</div>
+        <div class="legacy-about-details">
+          <div>
+            <h2 class="section-subheading">Interests</h2>
+            <ul class="ul-interests">{{ range $author.interests }}<li>{{ . }}</li>{{ end }}</ul>
+          </div>
+          <div>
+            <h2 class="section-subheading">Education</h2>
+            <ul class="ul-edu">
+              {{ range $author.education }}
+                <li><div class="description"><p class="course">{{ .course }}, {{ .year }}</p><p class="institution">{{ .institution }}</p></div></li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ range .Params.sections }}
+    {{ if and (ne .id "about") (ne .id "profiles") (ne .id "interests") (ne .id "education") }}
+      <section id="{{ .id }}" class="home-section legacy-home-section">
+        <div class="legacy-container legacy-section-grid">
+          <header class="section-heading"><h1>{{ .content.title }}</h1></header>
+          <div class="legacy-section-content">
+            {{ if eq .id "publications" }}
+              <div class="legacy-list">
+                {{ range where site.RegularPages "Section" "publications" }}
+                  <article class="pub-list-item view-citation">
+                    <span class="li-cite-author">{{ delimit .Params.authors ", " }}.</span>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>.
+                    {{ with .Params.publication }}{{ with .name }}<strong>{{ . }}</strong>,{{ end }}{{ end }} {{ .Date.Format "2006" }}.
+                    {{ with .Params.links }}<span class="legacy-attachments">{{ range . }}<a href="{{ .url }}">{{ upper .type }}</a>{{ end }}</span>{{ end }}
+                  </article>
+                {{ end }}
+              </div>
+              <p class="see-all"><a href="/publications/">See all publications</a></p>
+            {{ else if eq .id "presentations" }}
+              <div class="legacy-list">
+                {{ range where site.RegularPages "Section" "events" }}
+                  <article class="legacy-list-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Params.event_name }}. <strong>{{ . }}</strong>{{ end }}{{ with .Params.event_start }}, {{ time.Format "Jan 2006" . }}{{ end }}.</article>
+                {{ end }}
+              </div>
+              <p class="see-all"><a href="/talk/">See all presentations</a></p>
+            {{ else if eq .id "teaching" }}
+              <div class="legacy-list">
+                {{ range where site.RegularPages "Section" "blog" }}
+                  <article class="legacy-list-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Summary }} — {{ . | plainify }}{{ end }}</article>
+                {{ end }}
+              </div>
+              <p class="see-all"><a href="/post/">See all teaching activities</a></p>
+            {{ else }}
+              <div class="legacy-markdown">{{ .content.text | markdownify }}</div>
+            {{ end }}
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+</main>
+{{ end }}
