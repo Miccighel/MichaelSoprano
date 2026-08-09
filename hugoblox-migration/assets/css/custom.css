@@ -16,10 +16,10 @@
   --hb-color-header-bg: var(--legacy-primary);
   --hb-color-header-fg: #fff;
   --hb-font-heading: Lato, Arial, sans-serif;
-  --hb-font-body: Roboto, Arial, sans-serif;
-  --hb-font-nav: Roboto, Arial, sans-serif;
+  --hb-font-body: Lato, Arial, sans-serif;
+  --hb-font-nav: Lato, Arial, sans-serif;
   --hb-font-weight-heading: 400;
-  --hb-font-leading-body: 1.5;
+  --hb-font-leading-body: 1.65;
 }
 
 .dark {
@@ -30,9 +30,13 @@
   --hb-color-header-bg: #282a36;
 }
 
+html { font-family: Lato, Arial, sans-serif; font-size: 16.17px; line-height: 1.65; }
+body { font-family: inherit; font-size: 1rem; line-height: inherit; }
+@media screen and (min-width: 58em) { html { font-size: 21px; } }
+
 .page-wrapper,
 .page-header,
-.page-footer { font-family: Roboto, Arial, sans-serif; }
+.page-footer { font-family: Lato, Arial, sans-serif; }
 
 /* Header proportions and colours retained from the published site. */
 .page-header { box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .11); }
@@ -41,10 +45,10 @@
 #site-header .navbar-brand { color: #fff; font-size: 1.1rem; font-weight: 700; white-space: nowrap; }
 #site-header #nav-menu { gap: .65rem !important; margin-left: 1rem; white-space: nowrap; }
 #site-header #nav-menu > * + * { margin-left: 0 !important; }
-#site-header #nav-menu .nav-link { color: rgba(255, 255, 255, .85); padding: 0 !important; font-size: .86rem; }
+#site-header #nav-menu .nav-link { color: rgba(255, 255, 255, .85); padding: 0 !important; font-size: 16.17px; }
 #site-header #nav-menu .nav-link:hover { color: #fff; text-decoration: none; }
 
-.legacy-home { color: var(--legacy-text); }
+.legacy-home { color: var(--legacy-text); font-family: Lato, Arial, sans-serif; font-size: 1rem; line-height: 1.65; }
 .legacy-container { width: 100%; max-width: 1290px; margin: 0 auto; padding: 0 15px; box-sizing: border-box; }
 .legacy-home .home-section { position: relative; padding: 110px 0; background: var(--legacy-page); }
 .legacy-home .home-section:nth-of-type(even) { background: var(--legacy-alt); }
@@ -80,7 +84,7 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
 
 /* All remaining homepage blocks follow the legacy 4/8 section grid. */
 .legacy-section-grid { display: grid; grid-template-columns: minmax(0, 31%) minmax(0, 1fr); gap: 2rem; }
-.legacy-section-grid .section-heading h1 { margin: 0; font-family: Lato, Arial, sans-serif; font-size: 2.5rem; font-weight: 400; line-height: 1.2; }
+.legacy-section-grid .section-heading h1 { margin: 0; font-family: Lato, Arial, sans-serif; font-size: 2.25rem; font-weight: 400; line-height: 1.25; }
 .legacy-section-content { min-width: 0; font-size: 1rem; line-height: 1.55; }
 .legacy-markdown > :first-child { margin-top: 0; }
 .legacy-markdown h3 { margin: 0; padding: 1rem 1.25rem 0; font-family: Lato, Arial, sans-serif; font-size: 1.25rem; font-weight: 400; }
