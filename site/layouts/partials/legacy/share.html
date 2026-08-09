@@ -1,0 +1,16 @@
+{{ $url := urlquery .Permalink }}
+{{ $title := urlquery .Title }}
+{{ $twitter := printf "https://twitter.com/intent/tweet?url=%s&text=%s" $url $title | safeURL }}
+{{ $facebook := printf "https://www.facebook.com/sharer.php?u=%s&t=%s" $url $title | safeURL }}
+{{ $email := printf "mailto:?subject=%s&body=%s" $title $url | safeURL }}
+{{ $linkedin := printf "https://www.linkedin.com/shareArticle?url=%s&title=%s" $url $title | safeURL }}
+{{ $whatsapp := printf "https://wa.me/?text=%s%%20%s" $title $url | safeURL }}
+<div class="share-box" aria-label="Share this page">
+  <ul class="share">
+    <li><a href="{{ $twitter }}" target="_blank" rel="noopener" aria-label="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+    <li><a href="{{ $facebook }}" target="_blank" rel="noopener" aria-label="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+    <li><a href="{{ $email }}" aria-label="Share by email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+    <li><a href="{{ $linkedin }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+    <li><a href="{{ $whatsapp }}" target="_blank" rel="noopener" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+  </ul>
+</div>

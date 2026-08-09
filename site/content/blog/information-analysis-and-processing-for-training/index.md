@@ -7,7 +7,7 @@ summary: Courses offered within the Bachelor's Degree in Sports Science and the 
   at the University of Udine
 projects: []
 date: '2024-08-07T11:00:00Z'
-lastmod: '2026-06-09T13:00:00Z'
+lastmod: '2026-06-10T13:00:00Z'
 draft: false
 featured: false
 image:

@@ -8,7 +8,7 @@
         <div class="media-body">
           <h2 class="section-subheading article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           <div class="article-style">{{ .Params.summary }}</div>
-          <div class="stream-meta article-metadata">Michael Soprano <span class="middot-divider"></span> Last updated on {{ .Lastmod.Format "Jan 2, 2006" }} <span class="middot-divider"></span> teaching</div>
+          <div class="stream-meta article-metadata">Michael Soprano <span class="middot-divider"></span> Last updated on {{ time.Format "Jan 2, 2006" .Params.lastmod }} <span class="middot-divider"></span> teaching</div>
         </div>
       </article>
     {{ end }}

@@ -5,7 +5,7 @@ summary: Course offered within the Master's Degree in Management Engineering at 
   University of Udine
 projects: []
 date: '2024-08-08T11:00:00Z'
-lastmod: '2026-06-09T13:00:00Z'
+lastmod: '2026-06-10T13:00:00Z'
 draft: false
 featured: false
 image:

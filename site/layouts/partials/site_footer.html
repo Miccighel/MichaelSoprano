@@ -1,7 +1,15 @@
 <footer class="legacy-site-footer">
   <p><a href="/privacy/">Privacy Policy</a></p>
-  <p>© {{ now.Year }} · Powered by the <a href="https://sourcethemes.com/academic/">Academic theme</a> for <a href="https://gohugo.io/">Hugo</a>.</p>
+  <p>© {{ now.Year }} · Powered by the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>.</p>
 </footer>
+
+<div id="legacy-cite-modal" class="legacy-cite-modal" role="dialog" aria-modal="true" aria-labelledby="legacy-cite-title" hidden>
+  <div class="legacy-cite-dialog">
+    <div class="legacy-cite-header"><h2 id="legacy-cite-title">Cite</h2><button class="legacy-cite-close" type="button" aria-label="Close">×</button></div>
+    <div class="legacy-cite-body"><pre><code id="legacy-cite-code"></code></pre></div>
+    <div class="legacy-cite-footer"><button class="btn" id="legacy-cite-copy" type="button"><i class="fas fa-copy" aria-hidden="true"></i> Copy</button><a class="btn" id="legacy-cite-download" download="cite.bib"><i class="fas fa-download" aria-hidden="true"></i> Download</a></div>
+  </div>
+</div>
 
 <div id="legacy-cookie-notice" class="legacy-cookie-notice" role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent-desc" hidden>
   <span id="cookieconsent-desc" class="legacy-cookie-message">This website uses cookies to ensure you get the best experience on our website. <a aria-label="learn more about cookies" href="/privacy/" rel="noopener noreferrer nofollow" target="_blank">Learn more</a></span>
@@ -20,7 +28,14 @@
   })();
 </script>
 <script>
-  document.addEventListener('click', async event => {
+  (() => {
+    const modal = document.getElementById('legacy-cite-modal');
+    const code = document.getElementById('legacy-cite-code');
+    const copy = document.getElementById('legacy-cite-copy');
+    const download = document.getElementById('legacy-cite-download');
+    const close = () => { if (modal) modal.hidden = true; };
+
+    document.addEventListener('click', async event => {
     const navigationLink = event.target.closest('#nav-menu a');
     if (navigationLink) {
       const toggle = document.getElementById('nav-toggle');
@@ -32,12 +47,29 @@
     try {
       const response = await fetch(button.dataset.citeUrl);
       if (!response.ok) throw new Error('Citation unavailable');
-      await navigator.clipboard.writeText(await response.text());
-      const original = button.textContent;
-      button.textContent = 'Copied';
-      setTimeout(() => { button.textContent = original; }, 1600);
+      const citation = await response.text();
+      code.textContent = citation;
+      download.href = URL.createObjectURL(new Blob([citation], { type: 'application/x-bibtex' }));
+      modal.hidden = false;
     } catch (_error) {
       button.textContent = 'Unavailable';
     }
-  });
+    });
+    modal?.addEventListener('click', event => { if (event.target === modal || event.target.closest('.legacy-cite-close')) close(); });
+    copy?.addEventListener('click', async () => { await navigator.clipboard.writeText(code.textContent); copy.innerHTML = '<i class="fas fa-check" aria-hidden="true"></i> Copied'; setTimeout(() => { copy.innerHTML = '<i class="fas fa-copy" aria-hidden="true"></i> Copy'; }, 1600); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') close(); });
+  })();
+</script>
+<script>
+  (() => {
+    const links = [...document.querySelectorAll('#nav-menu a[href^="/#"]')];
+    const sections = links.map(link => document.querySelector(link.hash)).filter(Boolean);
+    if (!sections.length || !('IntersectionObserver' in window)) return;
+    const observer = new IntersectionObserver(entries => {
+      const current = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!current) return;
+      links.forEach(link => link.classList.toggle('active', link.hash === `#${current.target.id}`));
+    }, { rootMargin: '-20% 0px -65% 0px', threshold: [0, .25, .5] });
+    sections.forEach(section => observer.observe(section));
+  })();
 </script>

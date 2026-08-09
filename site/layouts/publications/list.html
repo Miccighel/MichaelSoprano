@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{ $pages := where site.RegularPages "Section" "publications" }}
+{{ $pages = sort (sort $pages "Title" "asc") "Date" "desc" }}
 <main class="legacy-archive legacy-publication-archive">
   <h1>Publications</h1>
   <div class="legacy-publication-filters" aria-label="Publication filters">
@@ -9,7 +10,7 @@
   </div>
 
   <div id="publication-archive-list" class="legacy-list publication-list">
-    {{ range $pages.ByDate.Reverse }}
+    {{ range $pages }}
       {{ $publication := . }}
       {{ $type := index .Params.publication_types 0 | default "" }}
       <article class="pub-list-item view-citation" data-title="{{ .Title | lower }}" data-authors="{{ delimit .Params.authors ", " | lower }}" data-type="{{ $type }}" data-year="{{ .Date.Format "2006" }}">

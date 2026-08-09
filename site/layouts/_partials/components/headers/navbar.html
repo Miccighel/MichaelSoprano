@@ -3,7 +3,7 @@
 {{ $showSearch := $header.search | default false }}
 <header id="site-header" class="header">
   <nav class="navbar legacy-navbar" aria-label="Primary navigation">
-    <div class="legacy-navbar-brand-wrap">
+    <div class="legacy-navbar-brand-wrap legacy-navbar-brand-desktop">
       <a class="navbar-brand" href="{{ site.Home.RelPermalink }}" title="{{ $identity.name }}">{{ $identity.name }}</a>
     </div>
 
@@ -12,6 +12,10 @@
       <svg id="show-button" viewBox="0 0 20 20" aria-hidden="true"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
       <svg id="hide-button" viewBox="0 0 20 20" aria-hidden="true"><path d="m3.4 2 14.6 14.6-1.4 1.4L2 3.4z"></path><path d="M16.6 2 2 16.6 3.4 18 18 3.4z"></path></svg>
     </label>
+
+    <div class="legacy-navbar-brand-wrap legacy-navbar-brand-mobile">
+      <a class="navbar-brand" href="{{ site.Home.RelPermalink }}" title="{{ $identity.name }}">{{ $identity.name }}</a>
+    </div>
 
     <ul id="nav-menu" class="navbar-nav legacy-navbar-menu">
       {{ range site.Menus.main }}

@@ -4,7 +4,8 @@
 
 <main class="legacy-home">
   <section id="about" class="home-section legacy-about-section">
-    <div class="legacy-container legacy-about-grid">
+    <div class="legacy-container">
+      <div class="legacy-about-grid">
       <aside id="profile">
         {{ $avatar := resources.Get "media/authors/michael-soprano.jpg" }}
         {{ $avatar = $avatar.Fill "270x270 Center" }}
@@ -43,13 +44,15 @@
           </div>
         </div>
       </div>
+      </div>
     </div>
   </section>
 
   {{ range .Params.sections }}
     {{ if and (ne .id "about") (ne .id "profiles") (ne .id "interests") (ne .id "education") }}
       <section id="{{ .id }}" class="home-section legacy-home-section">
-        <div class="legacy-container legacy-section-grid">
+        <div class="legacy-container">
+          <div class="legacy-section-grid">
           <header class="section-heading"><h1>{{ .content.title }}</h1></header>
           <div class="legacy-section-content">
             {{ if or (eq .id "visits") (eq .id "experience") }}
@@ -62,7 +65,7 @@
                     <div class="experience-rail" aria-hidden="true"><span></span></div>
                     <div class="experience-card">
                       <h2 class="exp-title">{{ $entry.title }}</h2>
-                      <h3 class="exp-company">{{ with $entry.company_url }}<a href="{{ . }}">{{ $entry.company }}</a>{{ else }}{{ $entry.company }}{{ end }}</h3>
+                      <h3 class="exp-company">{{ with $entry.company_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ $entry.company }}</a>{{ else }}{{ $entry.company }}{{ end }}</h3>
                       <p class="exp-meta">{{ time.Format "Jan 2006" $entry.date_start }} – {{ with $entry.date_end }}{{ time.Format "Jan 2006" . }}{{ else }}Present{{ end }} <span class="middot-divider"></span> {{ $entry.location }}</p>
                       <div class="exp-description">{{ $entry.description | markdownify }}</div>
                     </div>
@@ -72,9 +75,10 @@
             {{ else if eq .id "publications" }}
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "publications" }}
+              {{ $pages = sort (sort $pages "Title" "asc") "Date" "desc" }}
               <h2 class="publication-details-link"><a href="/publication/">View details</a></h2>
               <div class="legacy-list publication-list">
-                {{ range $pages.ByDate.Reverse }}
+                {{ range $pages }}
                   {{ $publication := . }}
                   <article class="pub-list-item view-citation">
                     <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
@@ -120,7 +124,7 @@
                     <div class="media-body">
                       <h2 class="section-subheading article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
                       <div class="article-style">{{ .Params.summary }}</div>
-                      <div class="stream-meta article-metadata">Michael Soprano <span class="middot-divider"></span> Last updated on {{ .Lastmod.Format "Jan 2, 2006" }} <span class="middot-divider"></span> teaching</div>
+              <div class="stream-meta article-metadata">Michael Soprano <span class="middot-divider"></span> Last updated on {{ time.Format "Jan 2, 2006" .Params.lastmod }} <span class="middot-divider"></span> teaching</div>
                     </div>
                   </article>
                 {{ end }}
@@ -155,9 +159,11 @@
                   const mapElement = document.getElementById('map');
                   if (!mapElement || typeof L === 'undefined') return;
                   const map = L.map(mapElement).setView([46.08008535022743, 13.211890024964413], 15);
-                  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                  L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibWljY2lnaGVsIiwiYSI6ImNrbWFzcjV3ZDF2MDIybnAxeTJ0MXo4MWEifQ.9e440PAeUo_ExG9Q7FEPbg', {
                     maxZoom: 19,
-                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                    tileSize: 512,
+                    zoomOffset: -1,
+                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
                   }).addTo(map);
                   L.marker([46.08008535022743, 13.211890024964413]).addTo(map);
                 })();
@@ -165,6 +171,7 @@
             {{ else }}
               <div class="legacy-markdown">{{ .content.text | markdownify }}</div>
             {{ end }}
+          </div>
           </div>
         </div>
       </section>

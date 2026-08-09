@@ -1,0 +1,26 @@
+{{ define "main" }}
+{{ $typeLabels := dict "paper-conference" "Conference paper" "article-journal" "Journal article" }}
+{{ $typeAnchors := dict "paper-conference" "1" "article-journal" "2" }}
+<div class="legacy-single legacy-publication-single pub">
+  <header class="article-container legacy-article-header">
+    <h1>{{ .Title }}</h1>
+    <div class="article-metadata">
+      <div>{{ range $index, $author := .Params.authors }}{{ if $index }}, {{ end }}<span>{{ $author }}</span>{{ end }}</div>
+      <span class="article-date">{{ .Date.Format "Jan 2006" }}</span>
+    </div>
+    {{ partial "legacy/page-buttons.html" . }}
+  </header>
+
+  <div class="article-container legacy-article-body">
+    {{ with .Params.abstract }}<h3>Abstract</h3><p class="pub-abstract">{{ . }}</p>{{ end }}
+    {{ with index .Params.publication_types 0 }}
+      <div class="legacy-detail-row"><div class="pub-row-heading">Type</div><div><a href="/publication/#{{ index $typeAnchors . | default . }}">{{ index $typeLabels . | default . }}</a></div></div>
+    {{ end }}
+    {{ with .Params.publication }}{{ with .name }}<div class="legacy-detail-row"><div class="pub-row-heading">Publication</div><div>{{ . | markdownify }}</div></div>{{ end }}{{ end }}
+    <div class="article-style">{{ .Content }}</div>
+    {{ partial "legacy/tags.html" . }}
+    {{ partial "legacy/share.html" . }}
+    {{ partial "legacy/related.html" . }}
+  </div>
+</div>
+{{ end }}
