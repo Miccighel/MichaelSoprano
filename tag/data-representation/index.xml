@@ -1,140 +1,140 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Representation | Michael Soprano</title><link>https://michaelsoprano.com/tag/data-representation/</link><atom:link href="https://michaelsoprano.com/tag/data-representation/index.xml" rel="self" type="application/rss+xml"/><description>Data Representation</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 07 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>Data Representation</title><link>https://michaelsoprano.com/tag/data-representation/</link></image><item><title>Information Analysis and Processing for Training</title><link>https://michaelsoprano.com/post/information-analysis-and-processing-for-training/</link><pubDate>Wed, 07 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/information-analysis-and-processing-for-training/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
-&lt;p>These courses address the analysis and processing of information for sport and training from two complementary perspectives. They share the same broad teaching area, but they are distinct courses offered at different degree levels and organized around different learning goals, tools, and assessment methods.&lt;/p>
-&lt;p>The &lt;strong>Bachelor&amp;rsquo;s Degree course&lt;/strong> introduces the foundations needed to work with data in sport contexts. Students learn what data are, how information is represented in digital systems, and how structured datasets can be prepared, analyzed, summarized, and communicated with spreadsheet tools.&lt;/p>
-&lt;p>The &lt;strong>Master&amp;rsquo;s Degree course&lt;/strong> develops a more structured and reproducible view of data work. Students learn how to frame data mining problems, design relational databases, implement them with a DBMS, and query them with SQL to obtain reusable datasets.&lt;/p>
-&lt;p>The two courses follow a coherent progression from &lt;strong>understanding and representing data&lt;/strong> to &lt;strong>organizing, querying, and reusing data in controlled workflows&lt;/strong>. Their shared goal is to help students transform raw data into meaningful information that can support interpretation and decision making in sport and training contexts.&lt;/p>
-&lt;h2 id="courses">Courses&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>Bachelor&amp;rsquo;s Degree Course&lt;/strong>: foundational data concepts, digital representation of information, and spreadsheet based data analysis with Microsoft Excel&lt;/li>
-&lt;li>&lt;strong>Master&amp;rsquo;s Degree Course&lt;/strong>: data mining foundations, relational database design, database implementation, and SQL querying&lt;/li>
-&lt;/ul>
-&lt;h2 id="quick-access">Quick Access&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="#bachelors-degree-course">Bachelor&amp;rsquo;s Degree Course&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#masters-degree-course">Master&amp;rsquo;s Degree Course&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="teacher">Teacher&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Course Instructor&lt;/li>
-&lt;/ul>
-&lt;p>The two courses consist of 12 lectures for a total of 24 hours.&lt;/p>
-&lt;h1 id="bachelors-degree-course">Bachelor&amp;rsquo;s Degree Course&lt;/h1>
-&lt;p>The Bachelor&amp;rsquo;s Degree course introduces the basic vocabulary and tools needed to work with data in sport and training contexts. Students first learn how to describe data, variables, and measurements. They then study how different kinds of information are represented digitally. The final part of the course focuses on Microsoft Excel as a tool for preparing, analyzing, visualizing, and summarizing structured data.&lt;/p>
-&lt;h2 id="topics-covered">Topics Covered&lt;/h2>
-&lt;h3 id="module-1---introduction-to-data-science-in-sport">Module 1 - Introduction to Data Science in Sport&lt;/h3>
-&lt;ul>
-&lt;li>Data, information, knowledge, and the DIKW pyramid in sport and training contexts&lt;/li>
-&lt;li>Structured and unstructured data from sport-related sources&lt;/li>
-&lt;li>Sensors, SportsTech, and examples of data-driven decision making in sport&lt;/li>
-&lt;li>From raw data to information through preparation, analysis, visualization, and communication&lt;/li>
-&lt;li>Tables, observations, variables, and values&lt;/li>
-&lt;li>Populations, samples, units of analysis, and levels of measurement&lt;/li>
-&lt;li>Qualitative and quantitative variables&lt;/li>
-&lt;li>Sport-related data types, including biometric, position and movement, subjective, and performance data&lt;/li>
-&lt;/ul>
-&lt;h3 id="module-2---representation-and-management-of-data">Module 2 - Representation and Management of Data&lt;/h3>
-&lt;ul>
-&lt;li>Basic computer architecture: memory, storage, peripherals, CPU, and operating system&lt;/li>
-&lt;li>Data storage in the filesystem&lt;/li>
-&lt;li>Files, folders, metadata, hierarchical organization, and paths&lt;/li>
-&lt;li>Bits, bytes, binary code, and digital encodings&lt;/li>
-&lt;li>Text: character sets, encodings, ASCII, Unicode, and UTF-8&lt;/li>
-&lt;li>Images: raster graphics, vector graphics, color representation, and main file formats&lt;/li>
-&lt;li>Sound: wave characteristics, sampling, quantization, channels, MIDI messages, and audio formats&lt;/li>
-&lt;li>Video: sequences of images, movement, frame rate, resolution, and video formats&lt;/li>
-&lt;li>The Shannon-Weaver model of communication&lt;/li>
-&lt;li>Entropy and redundancy of information&lt;/li>
-&lt;li>Why data compression is useful&lt;/li>
-&lt;li>Lossless and lossy compression&lt;/li>
-&lt;/ul>
-&lt;h3 id="module-3---data-analysis-with-microsoft-excel">Module 3 - Data Analysis with Microsoft Excel&lt;/h3>
-&lt;ul>
-&lt;li>Elements of the Excel interface, workbooks, and worksheets&lt;/li>
-&lt;li>Managing cells, rows, columns, and ranges&lt;/li>
-&lt;li>Entering, editing, deleting, and formatting data&lt;/li>
-&lt;li>Applying numeric, date, time, text, and currency formats&lt;/li>
-&lt;li>Working with contiguous, non-contiguous, and multi-sheet ranges&lt;/li>
-&lt;li>Managing rows and columns and navigating large worksheets&lt;/li>
-&lt;li>Relative, absolute, and mixed references&lt;/li>
-&lt;li>Introduction to formulas and functions&lt;/li>
-&lt;li>Formula syntax: references, operators, precedence, and common errors&lt;/li>
-&lt;li>Function syntax: arguments, result types, nesting, and basic summary functions&lt;/li>
-&lt;li>Practical exercise on Boston Marathon 2025 data, including data cleaning, derived columns, summary statistics, and a mini dashboard&lt;/li>
-&lt;li>Importing structured data from text files, including delimiters, encodings, and common import problems&lt;/li>
-&lt;li>Introduction to Power Query for importing and preparing data&lt;/li>
-&lt;li>Working with Excel tables&lt;/li>
-&lt;li>Creating, managing, and formatting charts&lt;/li>
-&lt;li>Examples with line, scatter, and area charts&lt;/li>
-&lt;li>Basic measures of correlation&lt;/li>
-&lt;li>Introduction to PivotTables and PivotCharts&lt;/li>
-&lt;li>Using PivotTables to summarize and explore Fitbit data&lt;/li>
-&lt;/ul>
-&lt;h2 id="learning-approach">Learning Approach&lt;/h2>
-&lt;p>The Bachelor&amp;rsquo;s Degree course is organized around foundational concepts and applied spreadsheet activities. Students first acquire the vocabulary needed to describe datasets, then study how different types of information are represented digitally, and finally practice data analysis in Excel through guided examples and exercises.&lt;/p>
-&lt;h2 id="assessment">Assessment&lt;/h2>
-&lt;p>The Bachelor&amp;rsquo;s Degree course is assessed through a written exam with multiple-choice questions.&lt;/p>
-&lt;h2 id="reading-material">Reading Material&lt;/h2>
-&lt;ul>
-&lt;li>Peter O&amp;rsquo;Donoghue, Lucy Holmes, &lt;em>Data Analysis in Sport&lt;/em>. Routledge Studies in Sports Performance Analysis, First edition, 2014&lt;/li>
-&lt;li>Michael Alexander, Dick Kusleika, &lt;em>Excel 365 Bible&lt;/em>. Wiley, First edition, 2022&lt;/li>
-&lt;/ul>
-&lt;h1 id="masters-degree-course">Master&amp;rsquo;s Degree Course&lt;/h1>
-&lt;p>The Master&amp;rsquo;s Degree course moves toward structured, reproducible, and technically controlled data workflows. The course connects data mining, relational modeling, database implementation, and SQL querying.&lt;/p>
-&lt;h2 id="topics-covered-1">Topics Covered&lt;/h2>
-&lt;h3 id="preparatory-recall---data-science-foundations">Preparatory Recall - Data Science Foundations&lt;/h3>
-&lt;ul>
-&lt;li>Data, information, and knowledge in reproducible data workflows&lt;/li>
-&lt;li>Sport-related data types, including biometric, movement, subjective, and performance data&lt;/li>
-&lt;li>Tables as representations of observations, variables, and values&lt;/li>
-&lt;li>Units of analysis, variables, scales of measurement, and metadata&lt;/li>
-&lt;li>Data quality, coherent types, identifiers, and first normal form&lt;/li>
-&lt;li>Privacy and protection of personal and health-related data&lt;/li>
-&lt;/ul>
-&lt;h3 id="module-1---introduction-to-data-mining">Module 1 - Introduction to Data Mining&lt;/h3>
-&lt;ul>
-&lt;li>Data science as a reproducible process from data to decision&lt;/li>
-&lt;li>Project workflow: understanding, preparation, exploration, modeling, interpretation, and deployment&lt;/li>
-&lt;li>Populations, samples, representativeness, and sampling error&lt;/li>
-&lt;li>Variables, features, targets, and units of analysis&lt;/li>
-&lt;li>Problem formulation in sport-related scenarios&lt;/li>
-&lt;li>Typical data mining tasks: classification, regression, clustering, association, anomaly detection, and time series analysis&lt;/li>
-&lt;li>Learning paradigms: supervised, unsupervised, and other basic settings&lt;/li>
-&lt;li>Baselines, training and test data, validation strategies, and evaluation on unseen data&lt;/li>
-&lt;li>Metrics for model evaluation and comparison&lt;/li>
-&lt;li>Methodological issues: missing values, outliers, temporal consistency, leakage, imbalance, and data quality&lt;/li>
-&lt;li>Interpretability, reproducibility, and documentation of modeling choices&lt;/li>
-&lt;/ul>
-&lt;h3 id="module-2---relational-databases">Module 2 - Relational Databases&lt;/h3>
-&lt;ul>
-&lt;li>Databases as persistent, coherent, and shared collections of data&lt;/li>
-&lt;li>DBMSs and the role of persistence, scale, globality, reliability, efficiency, and privacy&lt;/li>
-&lt;li>Conceptual, logical, and physical levels of database design&lt;/li>
-&lt;li>Entity-Relationship modeling: entities, attributes, relationships, cardinalities, identifiers, and constraints&lt;/li>
-&lt;li>Binary, recursive, and n-ary relationships&lt;/li>
-&lt;li>Hierarchies and alternative modeling choices in ER schemas&lt;/li>
-&lt;li>Relational model: relations, tables, tuples, attributes, domains, schemas, instances, and NULL values&lt;/li>
-&lt;li>Relational constraints: domains, primary keys, uniqueness, and referential integrity&lt;/li>
-&lt;li>Translation from ER schemas to relational schemas&lt;/li>
-&lt;li>Many-to-many, one-to-many, one-to-one, and recursive relationships in the relational model&lt;/li>
-&lt;li>Redundancy, update anomalies, insertion anomalies, and deletion anomalies&lt;/li>
-&lt;li>Normalization up to 3NF as an operational method for reducing uncontrolled redundancy&lt;/li>
-&lt;li>Practical case study on road cycling races, from requirements to ER schema and relational schema&lt;/li>
-&lt;li>SQLite as an embedded relational DBMS based on a single database file&lt;/li>
-&lt;li>DBeaver as a graphical client for exploring schemas, tables, data, and relationships&lt;/li>
-&lt;li>SQL scripts and controlled population of a database&lt;/li>
-&lt;li>DDL for schema definition: &lt;code>CREATE TABLE&lt;/code>, &lt;code>DROP TABLE&lt;/code>, &lt;code>ALTER TABLE&lt;/code>, types, keys, and constraints&lt;/li>
-&lt;li>DML for data manipulation: &lt;code>INSERT&lt;/code>, &lt;code>UPDATE&lt;/code>, and &lt;code>DELETE&lt;/code>&lt;/li>
-&lt;li>SQL queries for data retrieval: &lt;code>SELECT&lt;/code>, &lt;code>FROM&lt;/code>, &lt;code>WHERE&lt;/code>, &lt;code>ORDER BY&lt;/code>, &lt;code>LIMIT&lt;/code>, &lt;code>AS&lt;/code>, and calculated columns&lt;/li>
-&lt;li>Aggregations and grouping with &lt;code>COUNT&lt;/code>, &lt;code>MIN&lt;/code>, &lt;code>MAX&lt;/code>, &lt;code>AVG&lt;/code>, &lt;code>SUM&lt;/code>, &lt;code>GROUP BY&lt;/code>, and &lt;code>HAVING&lt;/code>&lt;/li>
-&lt;li>Joining tables to integrate information, including &lt;code>JOIN&lt;/code> and &lt;code>LEFT JOIN&lt;/code>&lt;/li>
-&lt;li>Exporting query results as reusable datasets for subsequent analysis and reporting&lt;/li>
-&lt;/ul>
-&lt;h2 id="learning-approach-1">Learning Approach&lt;/h2>
-&lt;p>The Master&amp;rsquo;s Degree course emphasizes structured and reproducible workflows. Students connect data science concepts to relational database design, SQL extraction, and reusable data preparation. The course combines conceptual modeling, database implementation, query writing, and the interpretation of database outputs as datasets for further analysis.&lt;/p>
-&lt;h2 id="assessment-1">Assessment&lt;/h2>
-&lt;p>The Master&amp;rsquo;s Degree course is assessed through a written exam with open-ended questions.&lt;/p>
-&lt;h2 id="reading-material-1">Reading Material&lt;/h2>
-&lt;ul>
-&lt;li>Ian H. Witten, Eibe Frank, Mark A. Hall, Christopher J. Pal, James R. Foulds, &lt;em>Data Mining: Practical Machine Learning Tools and Techniques&lt;/em>. Morgan Kaufmann, Fourth edition, 2016&lt;/li>
-&lt;li>Giorgio M. Di Nunzio, Emanuele Di Buccio, &lt;em>Basi di dati. Progettazione concettuale, logica e SQL&lt;/em>. Esculapio, First edition, 2017&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Representation |</title><link>https://michaelsoprano.com/tag/data-representation/</link><atom:link href="https://michaelsoprano.com/tag/data-representation/index.xml" rel="self" type="application/rss+xml"/><description>Data Representation</description><generator>HugoBlox Kit (https://hugoblox.com)</generator><language>en-US</language><lastBuildDate>Wed, 07 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu_f1d883be97be25e9.png</url><title>Data Representation</title><link>https://michaelsoprano.com/tag/data-representation/</link></image><item><title>Information Analysis and Processing for Training</title><link>https://michaelsoprano.com/post/information-analysis-and-processing-for-training/</link><pubDate>Wed, 07 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/information-analysis-and-processing-for-training/</guid><description>&lt;h1 id="aims"&gt;Aims&lt;/h1&gt;
+&lt;p&gt;These courses address the analysis and processing of information for sport and training from two complementary perspectives. They share the same broad teaching area, but they are distinct courses offered at different degree levels and organized around different learning goals, tools, and assessment methods.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Bachelor&amp;rsquo;s Degree course&lt;/strong&gt; introduces the foundations needed to work with data in sport contexts. Students learn what data are, how information is represented in digital systems, and how structured datasets can be prepared, analyzed, summarized, and communicated with spreadsheet tools.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Master&amp;rsquo;s Degree course&lt;/strong&gt; develops a more structured and reproducible view of data work. Students learn how to frame data mining problems, design relational databases, implement them with a DBMS, and query them with SQL to obtain reusable datasets.&lt;/p&gt;
+&lt;p&gt;The two courses follow a coherent progression from &lt;strong&gt;understanding and representing data&lt;/strong&gt; to &lt;strong&gt;organizing, querying, and reusing data in controlled workflows&lt;/strong&gt;. Their shared goal is to help students transform raw data into meaningful information that can support interpretation and decision making in sport and training contexts.&lt;/p&gt;
+&lt;h2 id="courses"&gt;Courses&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Bachelor&amp;rsquo;s Degree Course&lt;/strong&gt;: foundational data concepts, digital representation of information, and spreadsheet based data analysis with Microsoft Excel&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Master&amp;rsquo;s Degree Course&lt;/strong&gt;: data mining foundations, relational database design, database implementation, and SQL querying&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="quick-access"&gt;Quick Access&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#bachelors-degree-course"&gt;Bachelor&amp;rsquo;s Degree Course&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#masters-degree-course"&gt;Master&amp;rsquo;s Degree Course&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="teacher"&gt;Teacher&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Michael Soprano&lt;/strong&gt; - Course Instructor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The two courses consist of 12 lectures for a total of 24 hours.&lt;/p&gt;
+&lt;h1 id="bachelors-degree-course"&gt;Bachelor&amp;rsquo;s Degree Course&lt;/h1&gt;
+&lt;p&gt;The Bachelor&amp;rsquo;s Degree course introduces the basic vocabulary and tools needed to work with data in sport and training contexts. Students first learn how to describe data, variables, and measurements. They then study how different kinds of information are represented digitally. The final part of the course focuses on Microsoft Excel as a tool for preparing, analyzing, visualizing, and summarizing structured data.&lt;/p&gt;
+&lt;h2 id="topics-covered"&gt;Topics Covered&lt;/h2&gt;
+&lt;h3 id="module-1---introduction-to-data-science-in-sport"&gt;Module 1 - Introduction to Data Science in Sport&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Data, information, knowledge, and the DIKW pyramid in sport and training contexts&lt;/li&gt;
+&lt;li&gt;Structured and unstructured data from sport-related sources&lt;/li&gt;
+&lt;li&gt;Sensors, SportsTech, and examples of data-driven decision making in sport&lt;/li&gt;
+&lt;li&gt;From raw data to information through preparation, analysis, visualization, and communication&lt;/li&gt;
+&lt;li&gt;Tables, observations, variables, and values&lt;/li&gt;
+&lt;li&gt;Populations, samples, units of analysis, and levels of measurement&lt;/li&gt;
+&lt;li&gt;Qualitative and quantitative variables&lt;/li&gt;
+&lt;li&gt;Sport-related data types, including biometric, position and movement, subjective, and performance data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="module-2---representation-and-management-of-data"&gt;Module 2 - Representation and Management of Data&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic computer architecture: memory, storage, peripherals, CPU, and operating system&lt;/li&gt;
+&lt;li&gt;Data storage in the filesystem&lt;/li&gt;
+&lt;li&gt;Files, folders, metadata, hierarchical organization, and paths&lt;/li&gt;
+&lt;li&gt;Bits, bytes, binary code, and digital encodings&lt;/li&gt;
+&lt;li&gt;Text: character sets, encodings, ASCII, Unicode, and UTF-8&lt;/li&gt;
+&lt;li&gt;Images: raster graphics, vector graphics, color representation, and main file formats&lt;/li&gt;
+&lt;li&gt;Sound: wave characteristics, sampling, quantization, channels, MIDI messages, and audio formats&lt;/li&gt;
+&lt;li&gt;Video: sequences of images, movement, frame rate, resolution, and video formats&lt;/li&gt;
+&lt;li&gt;The Shannon-Weaver model of communication&lt;/li&gt;
+&lt;li&gt;Entropy and redundancy of information&lt;/li&gt;
+&lt;li&gt;Why data compression is useful&lt;/li&gt;
+&lt;li&gt;Lossless and lossy compression&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="module-3---data-analysis-with-microsoft-excel"&gt;Module 3 - Data Analysis with Microsoft Excel&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Elements of the Excel interface, workbooks, and worksheets&lt;/li&gt;
+&lt;li&gt;Managing cells, rows, columns, and ranges&lt;/li&gt;
+&lt;li&gt;Entering, editing, deleting, and formatting data&lt;/li&gt;
+&lt;li&gt;Applying numeric, date, time, text, and currency formats&lt;/li&gt;
+&lt;li&gt;Working with contiguous, non-contiguous, and multi-sheet ranges&lt;/li&gt;
+&lt;li&gt;Managing rows and columns and navigating large worksheets&lt;/li&gt;
+&lt;li&gt;Relative, absolute, and mixed references&lt;/li&gt;
+&lt;li&gt;Introduction to formulas and functions&lt;/li&gt;
+&lt;li&gt;Formula syntax: references, operators, precedence, and common errors&lt;/li&gt;
+&lt;li&gt;Function syntax: arguments, result types, nesting, and basic summary functions&lt;/li&gt;
+&lt;li&gt;Practical exercise on Boston Marathon 2025 data, including data cleaning, derived columns, summary statistics, and a mini dashboard&lt;/li&gt;
+&lt;li&gt;Importing structured data from text files, including delimiters, encodings, and common import problems&lt;/li&gt;
+&lt;li&gt;Introduction to Power Query for importing and preparing data&lt;/li&gt;
+&lt;li&gt;Working with Excel tables&lt;/li&gt;
+&lt;li&gt;Creating, managing, and formatting charts&lt;/li&gt;
+&lt;li&gt;Examples with line, scatter, and area charts&lt;/li&gt;
+&lt;li&gt;Basic measures of correlation&lt;/li&gt;
+&lt;li&gt;Introduction to PivotTables and PivotCharts&lt;/li&gt;
+&lt;li&gt;Using PivotTables to summarize and explore Fitbit data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="learning-approach"&gt;Learning Approach&lt;/h2&gt;
+&lt;p&gt;The Bachelor&amp;rsquo;s Degree course is organized around foundational concepts and applied spreadsheet activities. Students first acquire the vocabulary needed to describe datasets, then study how different types of information are represented digitally, and finally practice data analysis in Excel through guided examples and exercises.&lt;/p&gt;
+&lt;h2 id="assessment"&gt;Assessment&lt;/h2&gt;
+&lt;p&gt;The Bachelor&amp;rsquo;s Degree course is assessed through a written exam with multiple-choice questions.&lt;/p&gt;
+&lt;h2 id="reading-material"&gt;Reading Material&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Peter O&amp;rsquo;Donoghue, Lucy Holmes, &lt;em&gt;Data Analysis in Sport&lt;/em&gt;. Routledge Studies in Sports Performance Analysis, First edition, 2014&lt;/li&gt;
+&lt;li&gt;Michael Alexander, Dick Kusleika, &lt;em&gt;Excel 365 Bible&lt;/em&gt;. Wiley, First edition, 2022&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="masters-degree-course"&gt;Master&amp;rsquo;s Degree Course&lt;/h1&gt;
+&lt;p&gt;The Master&amp;rsquo;s Degree course moves toward structured, reproducible, and technically controlled data workflows. The course connects data mining, relational modeling, database implementation, and SQL querying.&lt;/p&gt;
+&lt;h2 id="topics-covered-1"&gt;Topics Covered&lt;/h2&gt;
+&lt;h3 id="preparatory-recall---data-science-foundations"&gt;Preparatory Recall - Data Science Foundations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Data, information, and knowledge in reproducible data workflows&lt;/li&gt;
+&lt;li&gt;Sport-related data types, including biometric, movement, subjective, and performance data&lt;/li&gt;
+&lt;li&gt;Tables as representations of observations, variables, and values&lt;/li&gt;
+&lt;li&gt;Units of analysis, variables, scales of measurement, and metadata&lt;/li&gt;
+&lt;li&gt;Data quality, coherent types, identifiers, and first normal form&lt;/li&gt;
+&lt;li&gt;Privacy and protection of personal and health-related data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="module-1---introduction-to-data-mining"&gt;Module 1 - Introduction to Data Mining&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Data science as a reproducible process from data to decision&lt;/li&gt;
+&lt;li&gt;Project workflow: understanding, preparation, exploration, modeling, interpretation, and deployment&lt;/li&gt;
+&lt;li&gt;Populations, samples, representativeness, and sampling error&lt;/li&gt;
+&lt;li&gt;Variables, features, targets, and units of analysis&lt;/li&gt;
+&lt;li&gt;Problem formulation in sport-related scenarios&lt;/li&gt;
+&lt;li&gt;Typical data mining tasks: classification, regression, clustering, association, anomaly detection, and time series analysis&lt;/li&gt;
+&lt;li&gt;Learning paradigms: supervised, unsupervised, and other basic settings&lt;/li&gt;
+&lt;li&gt;Baselines, training and test data, validation strategies, and evaluation on unseen data&lt;/li&gt;
+&lt;li&gt;Metrics for model evaluation and comparison&lt;/li&gt;
+&lt;li&gt;Methodological issues: missing values, outliers, temporal consistency, leakage, imbalance, and data quality&lt;/li&gt;
+&lt;li&gt;Interpretability, reproducibility, and documentation of modeling choices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="module-2---relational-databases"&gt;Module 2 - Relational Databases&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Databases as persistent, coherent, and shared collections of data&lt;/li&gt;
+&lt;li&gt;DBMSs and the role of persistence, scale, globality, reliability, efficiency, and privacy&lt;/li&gt;
+&lt;li&gt;Conceptual, logical, and physical levels of database design&lt;/li&gt;
+&lt;li&gt;Entity-Relationship modeling: entities, attributes, relationships, cardinalities, identifiers, and constraints&lt;/li&gt;
+&lt;li&gt;Binary, recursive, and n-ary relationships&lt;/li&gt;
+&lt;li&gt;Hierarchies and alternative modeling choices in ER schemas&lt;/li&gt;
+&lt;li&gt;Relational model: relations, tables, tuples, attributes, domains, schemas, instances, and NULL values&lt;/li&gt;
+&lt;li&gt;Relational constraints: domains, primary keys, uniqueness, and referential integrity&lt;/li&gt;
+&lt;li&gt;Translation from ER schemas to relational schemas&lt;/li&gt;
+&lt;li&gt;Many-to-many, one-to-many, one-to-one, and recursive relationships in the relational model&lt;/li&gt;
+&lt;li&gt;Redundancy, update anomalies, insertion anomalies, and deletion anomalies&lt;/li&gt;
+&lt;li&gt;Normalization up to 3NF as an operational method for reducing uncontrolled redundancy&lt;/li&gt;
+&lt;li&gt;Practical case study on road cycling races, from requirements to ER schema and relational schema&lt;/li&gt;
+&lt;li&gt;SQLite as an embedded relational DBMS based on a single database file&lt;/li&gt;
+&lt;li&gt;DBeaver as a graphical client for exploring schemas, tables, data, and relationships&lt;/li&gt;
+&lt;li&gt;SQL scripts and controlled population of a database&lt;/li&gt;
+&lt;li&gt;DDL for schema definition: &lt;code&gt;CREATE TABLE&lt;/code&gt;, &lt;code&gt;DROP TABLE&lt;/code&gt;, &lt;code&gt;ALTER TABLE&lt;/code&gt;, types, keys, and constraints&lt;/li&gt;
+&lt;li&gt;DML for data manipulation: &lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;UPDATE&lt;/code&gt;, and &lt;code&gt;DELETE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;SQL queries for data retrieval: &lt;code&gt;SELECT&lt;/code&gt;, &lt;code&gt;FROM&lt;/code&gt;, &lt;code&gt;WHERE&lt;/code&gt;, &lt;code&gt;ORDER BY&lt;/code&gt;, &lt;code&gt;LIMIT&lt;/code&gt;, &lt;code&gt;AS&lt;/code&gt;, and calculated columns&lt;/li&gt;
+&lt;li&gt;Aggregations and grouping with &lt;code&gt;COUNT&lt;/code&gt;, &lt;code&gt;MIN&lt;/code&gt;, &lt;code&gt;MAX&lt;/code&gt;, &lt;code&gt;AVG&lt;/code&gt;, &lt;code&gt;SUM&lt;/code&gt;, &lt;code&gt;GROUP BY&lt;/code&gt;, and &lt;code&gt;HAVING&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Joining tables to integrate information, including &lt;code&gt;JOIN&lt;/code&gt; and &lt;code&gt;LEFT JOIN&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Exporting query results as reusable datasets for subsequent analysis and reporting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="learning-approach-1"&gt;Learning Approach&lt;/h2&gt;
+&lt;p&gt;The Master&amp;rsquo;s Degree course emphasizes structured and reproducible workflows. Students connect data science concepts to relational database design, SQL extraction, and reusable data preparation. The course combines conceptual modeling, database implementation, query writing, and the interpretation of database outputs as datasets for further analysis.&lt;/p&gt;
+&lt;h2 id="assessment-1"&gt;Assessment&lt;/h2&gt;
+&lt;p&gt;The Master&amp;rsquo;s Degree course is assessed through a written exam with open-ended questions.&lt;/p&gt;
+&lt;h2 id="reading-material-1"&gt;Reading Material&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ian H. Witten, Eibe Frank, Mark A. Hall, Christopher J. Pal, James R. Foulds, &lt;em&gt;Data Mining: Practical Machine Learning Tools and Techniques&lt;/em&gt;. Morgan Kaufmann, Fourth edition, 2016&lt;/li&gt;
+&lt;li&gt;Giorgio M. Di Nunzio, Emanuele Di Buccio, &lt;em&gt;Basi di dati. Progettazione concettuale, logica e SQL&lt;/em&gt;. Esculapio, First edition, 2017&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

@@ -1,82 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Responsive Design | Michael Soprano</title><link>https://michaelsoprano.com/tag/responsive-design/</link><atom:link href="https://michaelsoprano.com/tag/responsive-design/index.xml" rel="self" type="application/rss+xml"/><description>Responsive Design</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 08 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>Responsive Design</title><link>https://michaelsoprano.com/tag/responsive-design/</link></image><item><title>Web Applications</title><link>https://michaelsoprano.com/post/web-applications/</link><pubDate>Thu, 08 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/web-applications/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
-&lt;p>This course introduces the foundations of full-stack web application development through two complementary areas: &lt;strong>Frontend Development&lt;/strong> and &lt;strong>Backend Development&lt;/strong>.&lt;/p>
-&lt;p>On the &lt;strong>frontend&lt;/strong>, students learn how to create structured, interactive, and accessible user interfaces using HTML, CSS, and JavaScript. Topics include semantic markup, responsive layout, form handling, client-side validation, and media embedding. Students progressively develop skills in DOM manipulation, event-driven programming, and asynchronous operations.&lt;/p>
-&lt;p>On the &lt;strong>backend&lt;/strong>, the course introduces Node.js and the Express.js framework for building RESTful services, managing middleware, and handling persistence with SQLite. By the end of the course, students are able to design and implement full-stack applications that integrate client-side interfaces with server-side logic and data storage.&lt;/p>
-&lt;p>Hands-on activities with cURL, Postman, and structured assignments support practical learning throughout the course.&lt;/p>
-&lt;h2 id="teacher">Teacher&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Course Instructor&lt;/li>
-&lt;/ul>
-&lt;p>The course consists of 24 lectures for a total of 48 hours. It is delivered in the second semester. Assessment is based on the design, implementation, and discussion of a full-stack project.&lt;/p>
-&lt;h2 id="topics-covered">Topics Covered&lt;/h2>
-&lt;h3 id="web-fundamentals-and-communication">Web Fundamentals and Communication&lt;/h3>
-&lt;ul>
-&lt;li>Architecture of the World Wide Web&lt;/li>
-&lt;li>Client-server model and user agents&lt;/li>
-&lt;li>Domain names, IP addressing, and URLs&lt;/li>
-&lt;li>The HTTP protocol and the request-response lifecycle&lt;/li>
-&lt;li>Methods, status codes, headers, and metadata&lt;/li>
-&lt;li>URL query strings and GET parameter passing&lt;/li>
-&lt;li>Data exchange with JSON&lt;/li>
-&lt;li>Practical use of cURL and Postman&lt;/li>
-&lt;/ul>
-&lt;h3 id="frontend-development">Frontend Development&lt;/h3>
-&lt;h4 id="html-structure-and-semantics">HTML: Structure and Semantics&lt;/h4>
-&lt;ul>
-&lt;li>Core syntax and document structure&lt;/li>
-&lt;li>Headings, paragraphs, and text-level semantics&lt;/li>
-&lt;li>Lists, tables, links, and images&lt;/li>
-&lt;li>The DOM and the HTML parsing model&lt;/li>
-&lt;li>Embedding external and multimedia content with &lt;code>&amp;lt;iframe&amp;gt;&lt;/code>, &lt;code>&amp;lt;video&amp;gt;&lt;/code>, and &lt;code>&amp;lt;audio&amp;gt;&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h4 id="html-forms-and-validation">HTML Forms and Validation&lt;/h4>
-&lt;ul>
-&lt;li>Input types such as text, email, number, date, checkbox, and radio&lt;/li>
-&lt;li>Structural and grouping elements in forms&lt;/li>
-&lt;li>&lt;code>&amp;lt;textarea&amp;gt;&lt;/code>, &lt;code>&amp;lt;select&amp;gt;&lt;/code>, and option handling&lt;/li>
-&lt;li>HTML5 validation attributes and input constraints&lt;/li>
-&lt;li>Form design best practices&lt;/li>
-&lt;/ul>
-&lt;h4 id="css-styling-and-layout">CSS: Styling and Layout&lt;/h4>
-&lt;ul>
-&lt;li>Basic syntax, selectors, and combinators&lt;/li>
-&lt;li>Cascading rules, specificity, and inheritance&lt;/li>
-&lt;li>The box model: margin, padding, border, sizing, and overflow&lt;/li>
-&lt;li>Typography: fonts, spacing, and line height&lt;/li>
-&lt;li>Color management and transparency&lt;/li>
-&lt;li>Responsive layout with Flexbox&lt;/li>
-&lt;li>Positioning, layout strategies, and component patterns&lt;/li>
-&lt;/ul>
-&lt;h4 id="javascript-behavior-and-interaction">JavaScript: Behavior and Interaction&lt;/h4>
-&lt;ul>
-&lt;li>Core language constructs and syntax&lt;/li>
-&lt;li>Script inclusion and module structure&lt;/li>
-&lt;li>DOM selection, traversal, and manipulation&lt;/li>
-&lt;li>Event handling and listener registration&lt;/li>
-&lt;li>Event flow: bubbling and capture&lt;/li>
-&lt;li>Asynchronous JavaScript with callbacks, promises, and the Fetch API&lt;/li>
-&lt;li>Case study: calling a public API&lt;/li>
-&lt;/ul>
-&lt;h3 id="backend-development">Backend Development&lt;/h3>
-&lt;h4 id="nodejs-and-expressjs">Node.js and Express.js&lt;/h4>
-&lt;ul>
-&lt;li>Introduction to Node.js and non-blocking I/O&lt;/li>
-&lt;li>Setting up an Express.js server&lt;/li>
-&lt;li>Defining routes and handling HTTP methods&lt;/li>
-&lt;li>Sending responses and managing request data&lt;/li>
-&lt;li>Middleware architecture and request pipelines&lt;/li>
-&lt;li>Building RESTful endpoints&lt;/li>
-&lt;li>Interfacing with SQLite for data persistence&lt;/li>
-&lt;li>Final integration project with full-stack CRUD operations&lt;/li>
-&lt;/ul>
-&lt;h2 id="learning-approach">Learning Approach&lt;/h2>
-&lt;p>The course combines conceptual explanations, practical demonstrations, and progressive hands-on activities. Students use developer tools, cURL, Postman, browser APIs, and server-side JavaScript to connect frontend interfaces with backend services.&lt;/p>
-&lt;p>Assignments and exercises gradually move from isolated examples to complete application components. The final project consolidates the main topics of the course through the implementation of a full-stack application.&lt;/p>
-&lt;h2 id="assessment">Assessment&lt;/h2>
-&lt;p>Assessment is based on a project in which students design and implement a full-stack web application. The project is discussed to assess design choices, implementation quality, and understanding of the technologies used.&lt;/p>
-&lt;h2 id="reading-material">Reading Material&lt;/h2>
-&lt;ul>
-&lt;li>J. Duckett, &lt;em>HTML &amp;amp; CSS: Design and Build Websites&lt;/em>. Wiley, 2011&lt;/li>
-&lt;li>J. Duckett, &lt;em>JavaScript &amp;amp; jQuery: Interactive Front-End Web Development&lt;/em>. Wiley, 2014&lt;/li>
-&lt;li>E. Holmes, D. Harms, &lt;em>Express in Action: Writing, Building, and Testing Node.js Applications&lt;/em>. Manning Publications, 2016&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Responsive Design |</title><link>https://michaelsoprano.com/tag/responsive-design/</link><atom:link href="https://michaelsoprano.com/tag/responsive-design/index.xml" rel="self" type="application/rss+xml"/><description>Responsive Design</description><generator>HugoBlox Kit (https://hugoblox.com)</generator><language>en-US</language><lastBuildDate>Thu, 08 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu_f1d883be97be25e9.png</url><title>Responsive Design</title><link>https://michaelsoprano.com/tag/responsive-design/</link></image><item><title>Web Applications</title><link>https://michaelsoprano.com/post/web-applications/</link><pubDate>Thu, 08 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/web-applications/</guid><description>&lt;h1 id="aims"&gt;Aims&lt;/h1&gt;
+&lt;p&gt;This course introduces the foundations of full-stack web application development through two complementary areas: &lt;strong&gt;Frontend Development&lt;/strong&gt; and &lt;strong&gt;Backend Development&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;On the &lt;strong&gt;frontend&lt;/strong&gt;, students learn how to create structured, interactive, and accessible user interfaces using HTML, CSS, and JavaScript. Topics include semantic markup, responsive layout, form handling, client-side validation, and media embedding. Students progressively develop skills in DOM manipulation, event-driven programming, and asynchronous operations.&lt;/p&gt;
+&lt;p&gt;On the &lt;strong&gt;backend&lt;/strong&gt;, the course introduces Node.js and the Express.js framework for building RESTful services, managing middleware, and handling persistence with SQLite. By the end of the course, students are able to design and implement full-stack applications that integrate client-side interfaces with server-side logic and data storage.&lt;/p&gt;
+&lt;p&gt;Hands-on activities with cURL, Postman, and structured assignments support practical learning throughout the course.&lt;/p&gt;
+&lt;h2 id="teacher"&gt;Teacher&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Michael Soprano&lt;/strong&gt; - Course Instructor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The course consists of 24 lectures for a total of 48 hours. It is delivered in the second semester. Assessment is based on the design, implementation, and discussion of a full-stack project.&lt;/p&gt;
+&lt;h2 id="topics-covered"&gt;Topics Covered&lt;/h2&gt;
+&lt;h3 id="web-fundamentals-and-communication"&gt;Web Fundamentals and Communication&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Architecture of the World Wide Web&lt;/li&gt;
+&lt;li&gt;Client-server model and user agents&lt;/li&gt;
+&lt;li&gt;Domain names, IP addressing, and URLs&lt;/li&gt;
+&lt;li&gt;The HTTP protocol and the request-response lifecycle&lt;/li&gt;
+&lt;li&gt;Methods, status codes, headers, and metadata&lt;/li&gt;
+&lt;li&gt;URL query strings and GET parameter passing&lt;/li&gt;
+&lt;li&gt;Data exchange with JSON&lt;/li&gt;
+&lt;li&gt;Practical use of cURL and Postman&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="frontend-development"&gt;Frontend Development&lt;/h3&gt;
+&lt;h4 id="html-structure-and-semantics"&gt;HTML: Structure and Semantics&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Core syntax and document structure&lt;/li&gt;
+&lt;li&gt;Headings, paragraphs, and text-level semantics&lt;/li&gt;
+&lt;li&gt;Lists, tables, links, and images&lt;/li&gt;
+&lt;li&gt;The DOM and the HTML parsing model&lt;/li&gt;
+&lt;li&gt;Embedding external and multimedia content with &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;, and &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="html-forms-and-validation"&gt;HTML Forms and Validation&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Input types such as text, email, number, date, checkbox, and radio&lt;/li&gt;
+&lt;li&gt;Structural and grouping elements in forms&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt;, and option handling&lt;/li&gt;
+&lt;li&gt;HTML5 validation attributes and input constraints&lt;/li&gt;
+&lt;li&gt;Form design best practices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="css-styling-and-layout"&gt;CSS: Styling and Layout&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic syntax, selectors, and combinators&lt;/li&gt;
+&lt;li&gt;Cascading rules, specificity, and inheritance&lt;/li&gt;
+&lt;li&gt;The box model: margin, padding, border, sizing, and overflow&lt;/li&gt;
+&lt;li&gt;Typography: fonts, spacing, and line height&lt;/li&gt;
+&lt;li&gt;Color management and transparency&lt;/li&gt;
+&lt;li&gt;Responsive layout with Flexbox&lt;/li&gt;
+&lt;li&gt;Positioning, layout strategies, and component patterns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="javascript-behavior-and-interaction"&gt;JavaScript: Behavior and Interaction&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Core language constructs and syntax&lt;/li&gt;
+&lt;li&gt;Script inclusion and module structure&lt;/li&gt;
+&lt;li&gt;DOM selection, traversal, and manipulation&lt;/li&gt;
+&lt;li&gt;Event handling and listener registration&lt;/li&gt;
+&lt;li&gt;Event flow: bubbling and capture&lt;/li&gt;
+&lt;li&gt;Asynchronous JavaScript with callbacks, promises, and the Fetch API&lt;/li&gt;
+&lt;li&gt;Case study: calling a public API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="backend-development"&gt;Backend Development&lt;/h3&gt;
+&lt;h4 id="nodejs-and-expressjs"&gt;Node.js and Express.js&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Node.js and non-blocking I/O&lt;/li&gt;
+&lt;li&gt;Setting up an Express.js server&lt;/li&gt;
+&lt;li&gt;Defining routes and handling HTTP methods&lt;/li&gt;
+&lt;li&gt;Sending responses and managing request data&lt;/li&gt;
+&lt;li&gt;Middleware architecture and request pipelines&lt;/li&gt;
+&lt;li&gt;Building RESTful endpoints&lt;/li&gt;
+&lt;li&gt;Interfacing with SQLite for data persistence&lt;/li&gt;
+&lt;li&gt;Final integration project with full-stack CRUD operations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="learning-approach"&gt;Learning Approach&lt;/h2&gt;
+&lt;p&gt;The course combines conceptual explanations, practical demonstrations, and progressive hands-on activities. Students use developer tools, cURL, Postman, browser APIs, and server-side JavaScript to connect frontend interfaces with backend services.&lt;/p&gt;
+&lt;p&gt;Assignments and exercises gradually move from isolated examples to complete application components. The final project consolidates the main topics of the course through the implementation of a full-stack application.&lt;/p&gt;
+&lt;h2 id="assessment"&gt;Assessment&lt;/h2&gt;
+&lt;p&gt;Assessment is based on a project in which students design and implement a full-stack web application. The project is discussed to assess design choices, implementation quality, and understanding of the technologies used.&lt;/p&gt;
+&lt;h2 id="reading-material"&gt;Reading Material&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;J. Duckett, &lt;em&gt;HTML &amp;amp; CSS: Design and Build Websites&lt;/em&gt;. Wiley, 2011&lt;/li&gt;
+&lt;li&gt;J. Duckett, &lt;em&gt;JavaScript &amp;amp; jQuery: Interactive Front-End Web Development&lt;/em&gt;. Wiley, 2014&lt;/li&gt;
+&lt;li&gt;E. Holmes, D. Harms, &lt;em&gt;Express in Action: Writing, Building, and Testing Node.js Applications&lt;/em&gt;. Manning Publications, 2016&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

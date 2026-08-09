@@ -1,67 +1,67 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tweepy | Michael Soprano</title><link>https://michaelsoprano.com/tag/tweepy/</link><atom:link href="https://michaelsoprano.com/tag/tweepy/index.xml" rel="self" type="application/rss+xml"/><description>Tweepy</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 06 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu4525676fb5a133c3f276d8a3d210c954_1943161_512x512_fill_lanczos_center_3.png</url><title>Tweepy</title><link>https://michaelsoprano.com/tag/tweepy/</link></image><item><title>Social Computing</title><link>https://michaelsoprano.com/post/social-computing/</link><pubDate>Tue, 06 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/social-computing/</guid><description>&lt;h1 id="aims">Aims&lt;/h1>
-&lt;p>This course introduces the foundations of social computing through two complementary perspectives: social behavior supported by computational systems, and computational systems supported by coordinated human activity. It covers both social media platforms and crowdsourcing environments, combining conceptual foundations with practical tools and hands-on activities.&lt;/p>
-&lt;p>Students are introduced to social media APIs, network analysis, crowdsourcing systems, and practical tools for experimentation and data analysis. The course is taught in Italian.&lt;/p>
-&lt;h2 id="main-topics">Main Topics&lt;/h2>
-&lt;ul>
-&lt;li>Social media APIs and data access&lt;/li>
-&lt;li>Network analysis and graph structures&lt;/li>
-&lt;li>Crowdsourcing platforms and task design&lt;/li>
-&lt;li>Practical tools such as Python, Jupyter, Postman, Angular, and Crowd_Frame&lt;/li>
-&lt;/ul>
-&lt;h2 id="teaching-team-and-contribution-by-academic-year">Teaching Team and Contribution by Academic Year&lt;/h2>
-&lt;h3 id="academic-year-20202021">Academic Year 2020/2021&lt;/h3>
-&lt;h4 id="teaching-team">Teaching Team&lt;/h4>
-&lt;ul>
-&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Course Instructor&lt;/li>
-&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Teaching Assistant&lt;/li>
-&lt;/ul>
-&lt;h4 id="my-contribution">My Contribution&lt;/h4>
-&lt;p>I contributed to the course by teaching the practical applications of the concepts introduced by Professor Stefano Mizzaro in six lectures (12 hours). The practical lectures covered social media APIs, Python-based data access, network analysis with NetworkX, and the use of Crowd_Frame for crowdsourcing task design. I also prepared and assigned course work for the students.&lt;/p>
-&lt;h3 id="academic-year-20212022">Academic Year 2021/2022&lt;/h3>
-&lt;h4 id="teaching-team-1">Teaching Team&lt;/h4>
-&lt;ul>
-&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Course Instructor&lt;/li>
-&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Teaching Assistant&lt;/li>
-&lt;/ul>
-&lt;h4 id="my-contribution-1">My Contribution&lt;/h4>
-&lt;p>I contributed to the course by teaching the practical applications of the concepts introduced by Professor Stefano Mizzaro in six lectures (12 hours). The practical lectures covered Python and REST fundamentals, social media API access, graph analysis with NetworkX, and crowdsourcing task design with Crowd_Frame. I also prepared and assigned course work for the students.&lt;/p>
-&lt;h3 id="academic-year-20222023">Academic Year 2022/2023&lt;/h3>
-&lt;h4 id="teaching-team-2">Teaching Team&lt;/h4>
-&lt;ul>
-&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Course Instructor&lt;/li>
-&lt;li>&lt;strong>David La Barbera&lt;/strong> - Teaching Assistant&lt;/li>
-&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Teaching Assistant&lt;/li>
-&lt;/ul>
-&lt;h4 id="my-contribution-2">My Contribution&lt;/h4>
-&lt;p>I contributed to the course by delivering two lectures on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (4 hours). I also prepared the second course assignment for the students.&lt;/p>
-&lt;h3 id="academic-year-20232024">Academic Year 2023/2024&lt;/h3>
-&lt;h4 id="teaching-team-3">Teaching Team&lt;/h4>
-&lt;ul>
-&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Course Instructor&lt;/li>
-&lt;li>&lt;strong>David La Barbera&lt;/strong> - Teaching Assistant&lt;/li>
-&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Teaching Assistant&lt;/li>
-&lt;/ul>
-&lt;h4 id="my-contribution-3">My Contribution&lt;/h4>
-&lt;p>I contributed to the course by delivering two lectures on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (4 hours). I also prepared the second course assignment for the students.&lt;/p>
-&lt;h3 id="academic-year-20242025">Academic Year 2024/2025&lt;/h3>
-&lt;h4 id="teaching-team-4">Teaching Team&lt;/h4>
-&lt;ul>
-&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Course Instructor&lt;/li>
-&lt;li>&lt;strong>Hafsa Akebli&lt;/strong> - Teaching Assistant&lt;/li>
-&lt;li>&lt;strong>Michele Lizzit&lt;/strong> - Teaching Assistant&lt;/li>
-&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Teaching Assistant&lt;/li>
-&lt;/ul>
-&lt;h4 id="my-contribution-4">My Contribution&lt;/h4>
-&lt;p>I contributed to the course by delivering a lecture and in-class activity on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours).&lt;/p>
-&lt;h3 id="academic-year-20252026">Academic Year 2025/2026&lt;/h3>
-&lt;h4 id="teaching-team-5">Teaching Team&lt;/h4>
-&lt;ul>
-&lt;li>&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener">Stefano Mizzaro&lt;/a> - Course Instructor&lt;/li>
-&lt;li>&lt;strong>Michael Soprano&lt;/strong> - Teaching Assistant&lt;/li>
-&lt;/ul>
-&lt;h4 id="my-contribution-5">My Contribution&lt;/h4>
-&lt;p>I contributed to the course by delivering one lecture on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours). The lecture introduced the crowdsourcing workflow, discussed the limits of platform-specific task design, and showed how Crowd_Frame can support the creation, deployment, and management of complex crowdsourcing tasks. It also included a hands-on activity on the configuration of a truthfulness assessment crowdsourcing task.&lt;/p>
-&lt;h2 id="additional-materials">Additional Materials&lt;/h2>
-&lt;ul>
-&lt;li>Crowd_Frame: &lt;a href="https://github.com/Miccighel/crowd_frame" target="_blank" rel="noopener">GitHub Repository&lt;/a>&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tweepy |</title><link>https://michaelsoprano.com/tag/tweepy/</link><atom:link href="https://michaelsoprano.com/tag/tweepy/index.xml" rel="self" type="application/rss+xml"/><description>Tweepy</description><generator>HugoBlox Kit (https://hugoblox.com)</generator><language>en-US</language><lastBuildDate>Tue, 06 Aug 2024 11:00:00 +0000</lastBuildDate><image><url>https://michaelsoprano.com/media/icon_hu_f1d883be97be25e9.png</url><title>Tweepy</title><link>https://michaelsoprano.com/tag/tweepy/</link></image><item><title>Social Computing</title><link>https://michaelsoprano.com/post/social-computing/</link><pubDate>Tue, 06 Aug 2024 11:00:00 +0000</pubDate><guid>https://michaelsoprano.com/post/social-computing/</guid><description>&lt;h1 id="aims"&gt;Aims&lt;/h1&gt;
+&lt;p&gt;This course introduces the foundations of social computing through two complementary perspectives: social behavior supported by computational systems, and computational systems supported by coordinated human activity. It covers both social media platforms and crowdsourcing environments, combining conceptual foundations with practical tools and hands-on activities.&lt;/p&gt;
+&lt;p&gt;Students are introduced to social media APIs, network analysis, crowdsourcing systems, and practical tools for experimentation and data analysis. The course is taught in Italian.&lt;/p&gt;
+&lt;h2 id="main-topics"&gt;Main Topics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Social media APIs and data access&lt;/li&gt;
+&lt;li&gt;Network analysis and graph structures&lt;/li&gt;
+&lt;li&gt;Crowdsourcing platforms and task design&lt;/li&gt;
+&lt;li&gt;Practical tools such as Python, Jupyter, Postman, Angular, and Crowd_Frame&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="teaching-team-and-contribution-by-academic-year"&gt;Teaching Team and Contribution by Academic Year&lt;/h2&gt;
+&lt;h3 id="academic-year-20202021"&gt;Academic Year 2020/2021&lt;/h3&gt;
+&lt;h4 id="teaching-team"&gt;Teaching Team&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener"&gt;Stefano Mizzaro&lt;/a&gt; - Course Instructor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Michael Soprano&lt;/strong&gt; - Teaching Assistant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="my-contribution"&gt;My Contribution&lt;/h4&gt;
+&lt;p&gt;I contributed to the course by teaching the practical applications of the concepts introduced by Professor Stefano Mizzaro in six lectures (12 hours). The practical lectures covered social media APIs, Python-based data access, network analysis with NetworkX, and the use of Crowd_Frame for crowdsourcing task design. I also prepared and assigned course work for the students.&lt;/p&gt;
+&lt;h3 id="academic-year-20212022"&gt;Academic Year 2021/2022&lt;/h3&gt;
+&lt;h4 id="teaching-team-1"&gt;Teaching Team&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener"&gt;Stefano Mizzaro&lt;/a&gt; - Course Instructor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Michael Soprano&lt;/strong&gt; - Teaching Assistant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="my-contribution-1"&gt;My Contribution&lt;/h4&gt;
+&lt;p&gt;I contributed to the course by teaching the practical applications of the concepts introduced by Professor Stefano Mizzaro in six lectures (12 hours). The practical lectures covered Python and REST fundamentals, social media API access, graph analysis with NetworkX, and crowdsourcing task design with Crowd_Frame. I also prepared and assigned course work for the students.&lt;/p&gt;
+&lt;h3 id="academic-year-20222023"&gt;Academic Year 2022/2023&lt;/h3&gt;
+&lt;h4 id="teaching-team-2"&gt;Teaching Team&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener"&gt;Stefano Mizzaro&lt;/a&gt; - Course Instructor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;David La Barbera&lt;/strong&gt; - Teaching Assistant&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Michael Soprano&lt;/strong&gt; - Teaching Assistant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="my-contribution-2"&gt;My Contribution&lt;/h4&gt;
+&lt;p&gt;I contributed to the course by delivering two lectures on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (4 hours). I also prepared the second course assignment for the students.&lt;/p&gt;
+&lt;h3 id="academic-year-20232024"&gt;Academic Year 2023/2024&lt;/h3&gt;
+&lt;h4 id="teaching-team-3"&gt;Teaching Team&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener"&gt;Stefano Mizzaro&lt;/a&gt; - Course Instructor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;David La Barbera&lt;/strong&gt; - Teaching Assistant&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Michael Soprano&lt;/strong&gt; - Teaching Assistant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="my-contribution-3"&gt;My Contribution&lt;/h4&gt;
+&lt;p&gt;I contributed to the course by delivering two lectures on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (4 hours). I also prepared the second course assignment for the students.&lt;/p&gt;
+&lt;h3 id="academic-year-20242025"&gt;Academic Year 2024/2025&lt;/h3&gt;
+&lt;h4 id="teaching-team-4"&gt;Teaching Team&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener"&gt;Stefano Mizzaro&lt;/a&gt; - Course Instructor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hafsa Akebli&lt;/strong&gt; - Teaching Assistant&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Michele Lizzit&lt;/strong&gt; - Teaching Assistant&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Michael Soprano&lt;/strong&gt; - Teaching Assistant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="my-contribution-4"&gt;My Contribution&lt;/h4&gt;
+&lt;p&gt;I contributed to the course by delivering a lecture and in-class activity on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours).&lt;/p&gt;
+&lt;h3 id="academic-year-20252026"&gt;Academic Year 2025/2026&lt;/h3&gt;
+&lt;h4 id="teaching-team-5"&gt;Teaching Team&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://users.dimi.uniud.it/~stefano.mizzaro/" title="Stefano Mizzaro" target="_blank" rel="noopener"&gt;Stefano Mizzaro&lt;/a&gt; - Course Instructor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Michael Soprano&lt;/strong&gt; - Teaching Assistant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="my-contribution-5"&gt;My Contribution&lt;/h4&gt;
+&lt;p&gt;I contributed to the course by delivering one lecture on Crowd_Frame, a framework I developed for the design and deployment of crowdsourcing tasks (2 hours). The lecture introduced the crowdsourcing workflow, discussed the limits of platform-specific task design, and showed how Crowd_Frame can support the creation, deployment, and management of complex crowdsourcing tasks. It also included a hands-on activity on the configuration of a truthfulness assessment crowdsourcing task.&lt;/p&gt;
+&lt;h2 id="additional-materials"&gt;Additional Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Crowd_Frame: &lt;a href="https://github.com/Miccighel/crowd_frame" target="_blank" rel="noopener"&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
