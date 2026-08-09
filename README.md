@@ -2,6 +2,17 @@
 
 Static academic website for [michaelsoprano.com](https://michaelsoprano.com), built with Hugo and the Wowchemy Academic theme.
 
+## HugoBlox migration branch
+
+On `codex/hugo-wowchemy-upgrade`, the canonical source of all new content is
+the `hugoblox-migration/` directory. The legacy source tree at the repository
+root is retained as a frozen reference until the migration is promoted; do not
+add new publications, events, or teaching pages there.
+
+The complete authoring workflow, content locations, validation command, and
+local build instructions are documented in
+[`hugoblox-migration/README.md`](hugoblox-migration/README.md).
+
 ## Requirements
 
 - Hugo Extended 0.87.0
@@ -31,7 +42,17 @@ Pushing to `hugo-version` runs [the GitHub Pages workflow](.github/workflows/gh-
 
 ## CV PDFs
 
-The PDF sources are maintained in the sibling `../LaTeX` project. After rebuilding the CVs there, copy the final English and Italian files to:
+The PDF sources are maintained in the sibling `../LaTeX` project. Its build
+script can compile and synchronize both website source trees in one command:
+
+```bash
+cd ../LaTeX
+./build_all.sh --sync-website ../Website
+```
+
+The resulting files are stored at:
 
 - `static/media/CVs/Curriculum_Vitae_EN.pdf`
 - `static/media/CVs/Curriculum_Vitae_IT.pdf`
+- `hugoblox-migration/static/media/CVs/Curriculum_Vitae_EN.pdf`
+- `hugoblox-migration/static/media/CVs/Curriculum_Vitae_IT.pdf`

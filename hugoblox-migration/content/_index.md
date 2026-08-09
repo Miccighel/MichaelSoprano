@@ -6,117 +6,15 @@ sections:
 - block: resume-biography
   id: about
   content:
-    username: michael-soprano
-    button:
-      text: Download CV
-      url: "/media/CVs/Curriculum_Vitae_EN.pdf"
-  design:
-    avatar:
-      size: large
-      shape: circle
-- block: markdown
-  id: profiles
-  content:
-    title: Profiles
-    text: "[Email](mailto:michael.soprano@uniud.it) · [ORCID](https://orcid.org/0000-0002-7337-7592)
-      · [Google Scholar](https://scholar.google.it/citations?user=ocK0qRUAAAAJ&hl=en)
-      · [Semantic Scholar](https://www.semanticscholar.org/author/Michael-Soprano/51006308)
-      · [DBLP](https://dblp.org/pid/222/1241.html) · [ACM Digital Library](https://dl.acm.org/profile/99659280921)
-      · [arXiv](https://arxiv.org/a/soprano_m_1) · [OSF](https://osf.io/fmx3s/) ·
-      [ResearchGate](https://www.researchgate.net/profile/Michael-Soprano) · [GitHub](https://github.com/Miccighel)
-      · [LinkedIn](https://www.linkedin.com/in/michaelsoprano/) · [Goodreads](https://www.goodreads.com/user/show/53180193-michael-soprano)
-      · [Last.fm](https://www.last.fm/it/user/Miccighel) · [Instagram](https://www.instagram.com/miccighel/)
-      · [500px](https://500px.com/p/miccighel) · [Flickr](https://www.flickr.com/photos/jooforge/)
-      · [Steam](https://steamcommunity.com/id/miccighel)"
-- block: markdown
-  id: interests
-  content:
-    title: Interests
-    text: |-
-      - Human Computation
-      - Crowdsourcing
-      - Information Retrieval
-      - Large Language Models
-- block: markdown
-  id: education
-  content:
-    title: Education
-    text: |-
-      - **PhD in Computer Science and Mathematical and Physical Sciences, Cum Laude** — University of Udine, Udine, Italy. (Nov. 2019 - Jan. 2023)
-      - **Master's Degree in Computer Science, 109/110** — University of Udine, Udine, Italy. (Mar. 2015 - Mar. 2018)
-      - **Bachelor's Degree in Web Technologies and Multimedia, 101/110** — University of Udine, Udine, Italy. (Oct. 2011 - Mar. 2015)
-      - **Technical High School Diploma in Computer Science, 77/100** — I.S.I.S. Raimondo D’Aronco, Gemona del Friuli, Italy. (Oct. 2006 - Jun. 2011)
+    title: About
 - block: markdown
   id: visits
   content:
     title: Visits
-    text: |-
-      ### Visiting PhD Student
-
-      **[Centrum Wiskunde & Informatica (CWI), Human-Centered Data Analytics (HCDA) Group](https://www.cwi.nl/)** — Amsterdam, the Netherlands, Mar 2022–Jul 2022.
-
-      Research visit carried out during the PhD programme.
 - block: markdown
   id: experience
   content:
     title: Experience
-    text: |-
-      ### Postdoctoral Researcher
-
-      **[Department of Mathematics, Computer Science and Physics (DMIF), University of Udine](https://www.dmif.uniud.it/en/)** — Udine, Italy, Jun 2025–present.
-
-      Research contract pursuant to Article 22 of Law 240/2010, under the University Regulation approved on April 30, 2025.
-      Research on information and disinformation, with a focus on the automatic evaluation of information truthfulness, experimentation with detection models, and the definition of evaluation metrics.
-
-      ### Self-employed Worker
-
-      **[Department of Economic and Statistical Sciences (DIES), University of Udine](https://dies.uniud.it/it)** — Udine, Italy, Mar 2025–May 2025.
-
-      Design, implementation, and evaluation of a conversational system for accessing regional public healthcare services.
-      Activities included prototype development, experimental evaluation, and data analysis within the interdepartmental project "Governance and Digital Public Administration".
-
-      ### Postdoctoral Researcher
-
-      **[Department of Mathematics, Computer Science and Physics (DMIF), University of Udine](https://www.dmif.uniud.it/en/)** — Udine, Italy, Dec 2023–May 2025.
-
-      Research activity within the PRIN 2022 project "The Measure of Truth: An Evaluation-Centered Machine-Human Hybrid Framework for Assessing Information Truthfulness" (Code 20227F2ZN3, CUP G53D23002800006), funded by the European Union, NextGenerationEU, PNRR M4 C2 I1.1.
-      Definition of an evaluation framework for misinformation detection systems, including the creation of labelled datasets, bias prevention, and truthfulness-oriented evaluation metrics.
-
-      ### Postdoctoral Researcher
-
-      **[Department of Economic and Statistical Sciences (DIES), University of Udine](https://dies.uniud.it/it)** — Udine, Italy, Mar 2023–Nov 2023.
-
-      Research on e-government applications based on conversational agents for the Italian public administration, with particular emphasis on the healthcare domain.
-
-      ### Self-employed Worker
-
-      **[Polytechnic Department of Engineering and Architecture (DPIA), University of Udine](https://dpia.uniud.it/it)** — Udine, Italy, Jan 2022–Mar 2022.
-
-      Development of a web application supporting the comparability and reproducibility of research results in combinatorial optimization.
-
-      ### Research Fellow
-
-      **[Department of Mathematics, Computer Science and Physics (DMIF), University of Udine](https://www.uniud.it/en)** — Udine, Italy, Jun 2018–Oct 2019.
-
-      Research project co-funded by SISSA Medialab on the design, implementation, and evaluation of an ecosystem providing an alternative to traditional peer review in scholarly publishing.
-
-      ### Self-employed Worker
-
-      **[Datamantix S.r.l.](https://datamantix.com/)** — Udine, Italy, Jun 2017–Feb 2019.
-
-      Design, development, and maintenance of several web applications and a chatbot as a full-stack developer.
-
-      ### Self-employed Worker
-
-      **[Archeido S.r.l.](https://archeido.com/)** — Udine, Italy, Aug 2017–Feb 2018.
-
-      Development, as a full-stack developer, of a web application for the management and visualization of financial assets.
-
-      ### Self-employed Worker
-
-      **Troublezine** — Udine, Italy, Nov 2015–Feb 2016.
-
-      Design, development, and maintenance of a blog on music news and events as a full-stack web developer.
 - block: markdown
   id: metrics
   content:
@@ -224,28 +122,8 @@ sections:
   id: tags
   content:
     title: Topics
-    text: "[Amazon Mechanical Turk](/tag/amazon-mechanical-turk/) · [argument type
-      identification](/tag/argument-type-identification/) · [audiovisual deepfakes](/tag/audiovisual-deepfakes/)
-      · [benchmarks](/tag/benchmarks/) · [bias](/tag/bias/) · [crowdsourcing](/tag/crowdsourcing/)
-      · [explainability](/tag/explainability/) · [fact-checking](/tag/fact-checking/)
-      · [HITS](/tag/hits/) · [large language models](/tag/large-language-models/)
-      · [misinformation](/tag/misinformation/) · [Network Analysis](/tag/network-analysis/)
-      · [peer review](/tag/peer-review/) · [public administration](/tag/public-administration/)
-      · [readersourcing](/tag/readersourcing/) · [scholarly publishing](/tag/scholarly-publishing/)
-      · [scoping reviews](/tag/scoping-reviews/) · [Teaching](/tag/teaching/) · [truthfulness](/tag/truthfulness/)
-      · [truthfulness assessment](/tag/truthfulness-assessment/)"
 - block: markdown
   id: contact
   content:
     title: Contact
-    text: |-
-      [michael.soprano@uniud.it](mailto:michael.soprano@uniud.it)
-
-      Department of Mathematics, Computer Science and Physics (DMIF), University of Udine — Via delle Scienze 206, 33100 Udine, Italy.
-
-      <form action="https://formspree.io/f/mjvpnjeb" method="POST">
-        <p><label>Your email<br><input type="email" name="email" required></label></p>
-        <p><label>Message<br><textarea name="message" rows="6" required></textarea></label></p>
-        <button type="submit">Send message</button>
-      </form>
 ---

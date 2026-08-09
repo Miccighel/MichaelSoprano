@@ -176,6 +176,10 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
 .legacy-tag-cloud { display: block; text-align: center; line-height: 1.65; }
 .legacy-tag-cloud a:hover { text-decoration: none; }
 .legacy-tag-cloud a { display: inline-block; margin: 8px 10px; }
+.legacy-tag-cloud .tag-frequency-sm { font-size: .8rem; }
+.legacy-tag-cloud .tag-frequency-md { font-size: 1.1rem; }
+.legacy-tag-cloud .tag-frequency-lg { font-size: 1.5rem; }
+.legacy-tag-cloud .tag-frequency-xl { font-size: 1.9rem; }
 .legacy-tag-cloud a[data-count="2"] { font-size: .7rem; }
 .legacy-tag-cloud a[data-count="3"] { font-size: .9158188959rem; }
 .legacy-tag-cloud a[data-count="4"] { font-size: 1.0689448394rem; }

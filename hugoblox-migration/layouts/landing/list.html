@@ -1,6 +1,6 @@
 {{ define "main" }}
-{{ $legacy := index hugo.Data "legacy-home" }}
-{{ $author := $legacy.author }}
+{{ $home := index hugo.Data "home" }}
+{{ $author := $home.author }}
 
 <main class="legacy-home">
   <section id="about" class="home-section legacy-about-section">
@@ -53,8 +53,8 @@
           <header class="section-heading"><h1>{{ .content.title }}</h1></header>
           <div class="legacy-section-content">
             {{ if or (eq .id "visits") (eq .id "experience") }}
-              {{ $entries := $legacy.experience }}
-              {{ if eq .id "visits" }}{{ $entries = $legacy.visits }}{{ end }}
+              {{ $entries := $home.experience }}
+              {{ if eq .id "visits" }}{{ $entries = $home.visits }}{{ end }}
               {{ $entries = sort $entries "date_start" "desc" }}
               <div class="experience-list">
                 {{ range $index, $entry := $entries }}
@@ -127,8 +127,13 @@
               </div>
             {{ else if eq .id "tags" }}
               <div class="legacy-tag-cloud">
-                {{ range $legacy.topics }}
-                  <a data-count="{{ .count }}" href="/tag/{{ .slug }}/">{{ .name }}</a>
+                {{ range site.Taxonomies.tags.Alphabetical }}
+                  {{ $slug := path.Base (strings.TrimSuffix "/" .Page.RelPermalink) }}
+                  {{ if or (ge .Count $home.topics.minimum_count) (in $home.topics.include $slug) }}
+                    {{ $label := .Page.Title }}
+                    {{ with index $home.topics.labels $slug }}{{ $label = . }}{{ end }}
+                    <a class="tag-frequency-{{ if ge .Count 15 }}xl{{ else if ge .Count 8 }}lg{{ else if ge .Count 4 }}md{{ else }}sm{{ end }}" data-count="{{ .Count }}" href="{{ .Page.RelPermalink }}">{{ $label }}</a>
+                  {{ end }}
                 {{ end }}
               </div>
             {{ else if eq .id "contact" }}
