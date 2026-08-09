@@ -128,7 +128,7 @@
             {{ else if eq .id "tags" }}
               <div class="legacy-tag-cloud">
                 {{ range $legacy.topics }}
-                  <a class="tag-size-{{ if ge .count 15 }}xl{{ else if ge .count 8 }}lg{{ else if ge .count 4 }}md{{ else }}sm{{ end }}" href="/tag/{{ .slug }}/">{{ .name }}</a>
+                  <a data-count="{{ .count }}" href="/tag/{{ .slug }}/">{{ .name }}</a>
                 {{ end }}
               </div>
             {{ else if eq .id "contact" }}
