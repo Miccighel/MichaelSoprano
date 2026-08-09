@@ -71,6 +71,18 @@ event date order, link structure, duplicate slugs, homepage data, and drafts.
 The preview workflow runs the same validation automatically before every CI
 build.
 
+After building the site and its search index, run the generated-site audit
+from the repository root:
+
+```bash
+ruby site/scripts/audit-build.rb
+```
+
+This second check scans every generated HTML page, verifies internal links,
+anchors, downloadable files, and search coverage, confirms that each
+publication, presentation, and teaching page was rendered exactly once, and
+compares the migrated content and bundle assets with the frozen legacy source.
+
 ## Local build
 
 Install the JavaScript dependencies once with `pnpm install`, then use Hugo
@@ -79,6 +91,8 @@ Extended 0.164.0 or newer:
 ```bash
 ./scripts/check-content.rb
 hugo --gc --minify --cleanDestinationDir
+npx --yes pagefind@1.5.2 --site public
+cd .. && ruby site/scripts/audit-build.rb
 ```
 
 The generated site is written to `public/`. Search indexing can be generated

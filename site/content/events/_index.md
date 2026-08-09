@@ -1,6 +1,8 @@
 ---
-title: Presentations
+title: Talks
 url: /event/
 cascade:
-  layout: legacy-event
+- layout: legacy-event
+  target:
+    kind: page
 ---

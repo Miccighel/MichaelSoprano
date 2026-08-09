@@ -1,5 +1,5 @@
 {{ define "main" }}
-<article class="legacy-single legacy-blog-single article">
+<article class="legacy-single legacy-blog-single article" data-pagefind-body>
   <header class="article-container legacy-article-header">
     <h1>{{ .Title }}</h1>
     {{ with .Params.subtitle }}<p class="page-subtitle">{{ replace . "'" "’" }}</p>{{ end }}
