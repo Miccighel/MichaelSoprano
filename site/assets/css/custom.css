@@ -299,7 +299,14 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
   #about #profile { margin: 0 15px; }
 }
 
-@media (max-width: 991px) {
+@media (min-width: 1200px) and (max-width: 1399px) {
+  #site-header .legacy-navbar { padding-right: 20px; padding-left: 20px; }
+  #site-header .navbar-brand { font-size: 1.1rem; }
+  #site-header #nav-menu { margin-left: 12px; }
+  #site-header #nav-menu .nav-link { padding-right: .4rem !important; padding-left: .4rem !important; font-size: 15px; }
+}
+
+@media (max-width: 1199px) {
   #site-header .legacy-navbar { flex-wrap: wrap; min-height: 50px; padding: 0 15px; }
   #site-header .legacy-navbar-brand-desktop { display: none; }
   #site-header .legacy-navbar-brand-mobile { position: absolute; left: 50%; display: block; order: 1; transform: translateX(-50%); text-align: center; }
