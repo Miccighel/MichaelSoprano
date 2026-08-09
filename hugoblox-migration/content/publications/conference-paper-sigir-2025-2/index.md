@@ -25,7 +25,7 @@ image:
 projects: []
 publishDate: '2025-07-13T06:00:35.998652Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: Assessing the truthfulness of information is a critical task in fact-checking,
   and is typically performed using binary or coarse ordinal scales (2-6 levels), though
   fine-grained scales (e.g., 100 levels) have also been explored. Magnitude Estimation

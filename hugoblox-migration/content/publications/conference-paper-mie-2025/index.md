@@ -25,7 +25,7 @@ image:
 projects: []
 publishDate: '2025-05-16T11:30:30+01:00'
 publication_types:
-- '1'
+- paper-conference
 abstract: The scholarly publishing process relies on peer review to uphold the quality
   of scientific knowledge. However, challenges such as increasing submission volumes
   and potential malicious behavior undermine its effectiveness. In this study, we

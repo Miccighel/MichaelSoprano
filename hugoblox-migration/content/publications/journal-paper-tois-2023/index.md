@@ -26,7 +26,7 @@ image:
 projects: []
 publishDate: '2021-09-15T15:00:00+01:00'
 publication_types:
-- '2'
+- article-journal
 abstract: To scale the size of Information Retrieval collections, crowdsourcing has
   become a common way to collect relevance judgments at scale. Crowdsourcing experiments
   usually employ 100-10,000 workers, but such a number is often decided in a heuristic

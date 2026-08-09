@@ -21,7 +21,7 @@ image:
 projects: []
 publishDate: '2022-07-29T15:00:00+01:00'
 publication_types:
-- '2'
+- article-journal
 abstract: 'Review scores collect users’ opinions in a simple and intuitive manner.
   However, review scores are also easily manipulable, hence they are often accompanied
   by explanations. A substantial amount of research has been devoted to ascertaining

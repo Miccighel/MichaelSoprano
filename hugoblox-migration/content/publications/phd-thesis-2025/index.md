@@ -20,7 +20,7 @@ image:
 projects: []
 publishDate: '2025-06-11T10:00:00+01:00'
 publication_types:
-- '1'
+- paper-conference
 abstract: 'The spread of online misinformation poses serious threats to democratic
   societies. Traditionally, expert fact-checkers verify the truthfulness of information
   through investigative processes. However, the volume and immediacy of online content

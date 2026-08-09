@@ -26,7 +26,7 @@ image:
 projects: []
 publishDate: '2023-08-05T15:30:30+01:00'
 publication_types:
-- '1'
+- paper-conference
 abstract: In this paper, we present our journey in exploring the use of crowdsourcing
   for fact-checking. We discuss our early experiments aimed towards the identification
   of the best possible setting for misinformation assessment using crowdsourcing.

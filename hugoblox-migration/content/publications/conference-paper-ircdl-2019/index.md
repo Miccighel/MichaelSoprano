@@ -21,7 +21,7 @@ image:
 projects: []
 publishDate: '2021-03-15T14:36:37.331078Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: This paper describes Readersourcing 2.0, an ecosystem providing an implementation
   of the Readersourcing approach proposed by Mizzaro [10]. Readersourcing is proposed
   as an alternative to the standard peer review activity that aims to exploit the

@@ -25,7 +25,7 @@ image:
 projects: []
 publishDate: '2026-03-25T04:00:35.998652Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: Traditionally, relevance judgments have relied on human annotators, but
   recent advances in Large Language Models (LLMs) have prompted growing interest in
   their use as a proxy for relevance judgments. In this setting, a key yet underexplored

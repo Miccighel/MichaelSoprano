@@ -28,7 +28,7 @@ image:
 projects: []
 publishDate: '2024-05-31T15:00:00+01:00'
 publication_types:
-- '2'
+- article-journal
 abstract: 'There is an important ongoing effort aimed to tackle misinformation and
   to perform reliable fact-checking by employing human assessors at scale, with a
   crowdsourcing-based approach. Previous studies on the feasibility of employing crowdsourcing

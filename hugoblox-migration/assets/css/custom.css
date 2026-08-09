@@ -41,13 +41,26 @@ body { font-family: inherit; font-size: 1rem; line-height: inherit; }
 
 /* Header proportions and colours retained from the published site. */
 .page-header { box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .11); }
-#site-header .navbar { min-height: 70px; flex-wrap: nowrap; background: var(--legacy-primary); }
+#site-header .navbar { background: var(--legacy-primary); }
 .dark #site-header .navbar { background: #282a36; }
+#site-header .legacy-navbar { display: flex; align-items: center; flex-wrap: nowrap; width: 100%; min-height: 70px; box-sizing: border-box; padding: 0 max(36px, calc((100vw - 1238px) / 2 + 15px)); }
+#site-header .legacy-navbar-brand-wrap { flex: 0 0 auto; }
 #site-header .navbar-brand { color: #fff; font-size: 1.1rem; font-weight: 700; white-space: nowrap; }
-#site-header #nav-menu { gap: .65rem !important; margin-left: 1rem; white-space: nowrap; }
+#site-header #nav-toggle { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
+#site-header .legacy-navbar-toggle { display: none; color: #fff; cursor: pointer; }
+#site-header .legacy-navbar-toggle svg { width: 22px; height: 22px; fill: currentColor; }
+#site-header .legacy-navbar-toggle #hide-button { display: none; }
+#site-header #nav-menu { display: flex; align-items: center; flex: 0 0 auto; gap: 0; margin: 0 0 0 21px; padding: 0; white-space: nowrap; }
 #site-header #nav-menu > * + * { margin-left: 0 !important; }
-#site-header #nav-menu .nav-link { color: rgba(255, 255, 255, .85); padding: 0 !important; font-size: 16.17px; }
+#site-header #nav-menu .nav-item { list-style: none; }
+#site-header #nav-menu .nav-link { display: block; color: rgba(255, 255, 255, .85); padding: .5rem .6rem !important; font-size: 16.17px; }
 #site-header #nav-menu .nav-link:hover { color: #fff; text-decoration: none; }
+#site-header #nav-menu .nav-link.active { color: #fff; font-weight: 700; }
+#site-header .legacy-navbar-controls { display: flex; align-items: center; flex: 0 0 auto; margin-left: auto; color: #fff; }
+#site-header .legacy-header-button { display: grid; place-items: center; min-width: 0; height: 42px; border: 0; background: transparent; color: inherit; cursor: pointer; }
+#site-header .legacy-header-button[data-search-toggle] { width: 40px; padding: 0 12px; }
+#site-header .legacy-header-button.theme-toggle { width: 18px; padding: 0; }
+#site-header .legacy-header-button:hover { color: rgba(255, 255, 255, .72); }
 
 .legacy-home { color: var(--legacy-text); font-family: Lato, Arial, sans-serif; font-size: 1rem; line-height: 1.65; }
 .legacy-container { width: 100%; max-width: 1290px; margin: 0 auto; padding: 0 15px; box-sizing: border-box; }
@@ -167,13 +180,45 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
 .page-footer { background: var(--legacy-page); color: var(--legacy-muted); }
 .page-footer footer { margin-top: 0 !important; padding-top: 2rem; }
 
+/* Keep internal content pages as focused as their legacy counterparts. */
+.page-body > .mx-auto.flex.max-w-screen-xl { max-width: none !important; justify-content: center; }
+.page-body .hb-sidebar-container, .page-body .hb-toc { display: none !important; }
+.page-body article { width: 100%; max-width: 760px; padding-right: 0 !important; }
+.page-body article > main { width: 100%; max-width: 760px !important; box-sizing: border-box; padding: 1rem 20px 0 !important; }
+.page-body article > main > h1 { font-size: 2.25rem !important; font-weight: 400 !important; line-height: 1.25 !important; }
+.page-body article > main > .mt-4.mb-16 { margin-bottom: 2rem !important; }
+.page-body article > main > .mt-4 > .text-gray-500 > span:nth-last-child(-n+2) { display: none; }
+.page-body article > main > time { display: none !important; }
+.page-body article > main > .container > .max-w-prose > div[class~="pt-12"][class~="pb-4"],
+.page-body article > main > .container > .max-w-prose > div[class~="no-prose"][class~="w-full"] { display: none !important; }
+
+/* Legacy-style internal archives. */
+.legacy-archive { width: 100%; max-width: 1140px; margin: 0 auto; padding: 55px 20px 90px; box-sizing: border-box; color: var(--legacy-text); }
+.legacy-archive > h1 { margin: 0 0 2rem; font-size: 2.25rem; font-weight: 400; line-height: 1.25; }
+.legacy-publication-filters { display: grid; grid-template-columns: minmax(220px, 1fr) 220px 180px; gap: 1rem; margin-bottom: 2.5rem; }
+.legacy-publication-filters input, .legacy-publication-filters select { width: 100%; box-sizing: border-box; padding: .55rem .7rem; border: 1px solid color-mix(in srgb, var(--legacy-text) 22%, transparent); border-radius: .2rem; background: var(--legacy-page); color: var(--legacy-text); font: inherit; }
+.legacy-archive .publication-list { gap: 1.35rem; }
+.legacy-year-group { margin-bottom: 3rem; }
+.legacy-year-group > h2 { margin: 0 0 1.5rem; font-size: 1.5rem; font-weight: 400; }
+.legacy-archive-empty { display: none; color: var(--legacy-muted); }
+
 @media (max-width: 991px) {
-  #site-header .navbar { min-height: 50px; flex-wrap: wrap; }
-  #site-header #nav-menu { white-space: normal; }
   .legacy-home .home-section { padding: 60px 0; }
   .legacy-about-grid, .legacy-section-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .legacy-about-section { padding-top: 40px !important; }
   .legacy-section-grid .section-heading h1 { font-size: 2rem; }
+}
+
+@media (max-width: 1239px) {
+  #site-header .legacy-navbar { flex-wrap: wrap; min-height: 50px; padding: 0 15px; }
+  #site-header .legacy-navbar-brand-wrap { order: 0; }
+  #site-header .legacy-navbar-controls { order: 1; margin-left: auto; }
+  #site-header .legacy-navbar-toggle { display: flex; order: 2; align-items: center; justify-content: center; width: 42px; height: 42px; }
+  #site-header #nav-menu { display: none; order: 3; align-items: stretch; flex: 0 0 100%; flex-direction: column; width: 100%; margin: 0; padding: .5rem 0 1rem; white-space: normal; }
+  #site-header #nav-menu .nav-link { padding: .35rem 0 !important; }
+  #site-header #nav-toggle:checked ~ #nav-menu { display: flex; }
+  #site-header #nav-toggle:checked + .legacy-navbar-toggle #show-button { display: none; }
+  #site-header #nav-toggle:checked + .legacy-navbar-toggle #hide-button { display: block; }
 }
 
 @media (max-width: 640px) {
@@ -184,4 +229,5 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
   .stream-image img { width: 80px; }
   .legacy-cookie-notice { align-items: stretch; flex-direction: column; padding: 16px 24px; }
   .legacy-cookie-notice button { width: 100%; }
+  .legacy-publication-filters { grid-template-columns: 1fr; }
 }

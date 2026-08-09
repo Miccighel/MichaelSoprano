@@ -29,7 +29,7 @@ image:
 projects: []
 publishDate: '2024-07-10T15:00:00+01:00'
 publication_types:
-- '2'
+- article-journal
 abstract: 'Crowdsourcing tasks have been widely used to collect a large number of
   human labels at scale. While some of these tasks are deployed by requesters and
   performed only once by crowd workers, others require the same worker to perform

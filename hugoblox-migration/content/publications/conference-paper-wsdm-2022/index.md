@@ -24,7 +24,7 @@ image:
 projects: []
 publishDate: '2022-02-15T14:36:35.998652Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: Due to their relatively low cost and ability to scale, crowdsourcing based
   approaches are widely used to collect a large amount of human annotated data. To
   this aim, multiple crowdsourcing platforms exist, where requesters can upload tasks

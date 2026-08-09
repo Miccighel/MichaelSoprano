@@ -27,7 +27,7 @@ image:
 projects: []
 publishDate: '2024-12-31T16:00:00+01:00'
 publication_types:
-- '2'
+- article-journal
 abstract: IIR 2024, the 14th Italian Information Retrieval Workshop, served as the
   annual event for the IR and RS communities both in Italy and collaborating with
   Italian research institutions. This year's event spanned two days and featured studies

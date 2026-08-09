@@ -23,7 +23,7 @@ image:
 projects: []
 publishDate: '2021-03-15T14:36:36.889530Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: Peer review is a well known mechanism exploited within the scholarly publishing
   process to ensure the quality of scientific literature. Such a mechanism, despite
   being well established and reasonable, is not free from problems, and alternative

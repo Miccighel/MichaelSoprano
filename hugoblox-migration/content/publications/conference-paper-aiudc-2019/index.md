@@ -21,7 +21,7 @@ image:
 projects: []
 publishDate: '2021-03-15T14:36:37.769985Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: We propose an alternative approach to the standard peer review activity
   that aims to exploit the otherwise lost opinions of readers of publications which
   is called Readersourcing, originally proposed by Mizzaro [1]. Such an approach can

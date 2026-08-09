@@ -24,7 +24,7 @@ image:
 projects: []
 publishDate: '2026-05-06T04:00:00+02:00'
 publication_types:
-- '1'
+- paper-conference
 abstract: Deepfakes are increasingly realistic and easy to produce, raising concerns
   about the reliability of human judgments in misinformation settings. We study audiovisual
   deepfake detection by measuring how consistently crowd workers distinguish authentic

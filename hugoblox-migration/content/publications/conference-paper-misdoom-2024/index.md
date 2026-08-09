@@ -23,7 +23,7 @@ image:
 projects: []
 publishDate: '2024-09-01T10:00:35.998652Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: This paper explores the use of crowdsourcing to classify statement types
   in film reviews to assess their information quality. Employing the Argument Type
   Identification Procedure which uses the Periodic Table of Arguments to categorize

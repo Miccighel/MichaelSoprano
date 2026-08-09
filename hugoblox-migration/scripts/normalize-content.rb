@@ -10,6 +10,16 @@ LINK_TYPES = {
   'url_slides' => 'slides',
   'url_video' => 'video'
 }.freeze
+PUBLICATION_TYPES = {
+  '1' => 'paper-conference',
+  '2' => 'article-journal',
+  '3' => 'article',
+  '4' => 'report',
+  '5' => 'book',
+  '6' => 'chapter',
+  '7' => 'thesis',
+  '8' => 'patent'
+}.freeze
 
 def update_front_matter(path, section)
   source = File.binread(path).force_encoding(Encoding::UTF_8)
@@ -20,6 +30,10 @@ def update_front_matter(path, section)
   data = data.transform_keys(&:to_s)
 
   if section == 'publications'
+    data['publication_types'] = Array(data['publication_types']).map do |type|
+      PUBLICATION_TYPES.fetch(type.to_s, type)
+    end
+
     publication = data['publication']
     data['publication'] = { 'name' => publication } if publication.is_a?(String)
 

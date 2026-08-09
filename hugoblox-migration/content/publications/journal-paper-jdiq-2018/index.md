@@ -27,7 +27,7 @@ image:
 projects: []
 publishDate: '2021-03-15T14:36:38.653339Z'
 publication_types:
-- '2'
+- article-journal
 abstract: 'Effectiveness evaluation of information retrieval systems by means of a
   test collection is a widely used methodology. However, it is rather expensive in
   terms of resources, time, and money; therefore, many researchers have proposed methods

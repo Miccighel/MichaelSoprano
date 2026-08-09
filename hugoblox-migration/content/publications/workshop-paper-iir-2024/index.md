@@ -25,7 +25,7 @@ image:
 projects: []
 publishDate: '2024-10-24T15:30:30+01:00'
 publication_types:
-- '1'
+- paper-conference
 abstract: Information retrieval effectiveness evaluation is often carried out by means
   of test collections. Many works investigated possible sources of bias in such an
   approach. We propose a systematic approach to identify bias and its causes, and

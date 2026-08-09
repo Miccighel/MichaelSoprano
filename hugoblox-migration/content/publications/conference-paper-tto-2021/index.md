@@ -20,7 +20,7 @@ preview_only: false
 projects: []
 publishDate: '2021-10-06T14:36:35.998652Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: Automated fact-checking (AFC) systems exist to combat disinformation, however
   their complexity makes them opaque to the end user, making it difficult to foster
   trust. In this paper, we introduce the E-BART model with the hope of making progress

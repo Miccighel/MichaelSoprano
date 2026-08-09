@@ -29,7 +29,7 @@ image:
 projects: []
 publishDate: '2021-03-15T14:36:35.536697Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: 'Misinformation is an ever increasing problem that is difficult to solve
   for the research community and has a negative impact on the society at large. Very
   recently, the problem has been addressed with a crowdsourcing-based approach to

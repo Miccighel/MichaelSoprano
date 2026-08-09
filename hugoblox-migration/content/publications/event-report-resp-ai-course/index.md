@@ -43,7 +43,7 @@ image:
 projects: []
 publishDate: '2024-12-31T15:00:00+01:00'
 publication_types:
-- '2'
+- article-journal
 abstract: While the concept of responsible AI is becoming more and more popular, practitioners
   and researchers may often struggle to characterize responsible practices in their
   own work. This paper presents a four-day, PhD-level course on Responsible Artificial

@@ -27,7 +27,7 @@ image:
 projects: []
 publishDate: '2021-09-15T15:00:00+01:00'
 publication_types:
-- '2'
+- article-journal
 abstract: 'Recent work has demonstrated the viability of using crowdsourcing as a
   tool for evaluating the truthfulness of public statements. Under certain conditions
   such as: (1) having a balanced set of workers with different backgrounds and cognitive

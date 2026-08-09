@@ -29,7 +29,7 @@ image:
 projects: []
 publishDate: '2025-07-18T17:00:35.998652Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: Scientific publishing is expanding rapidly across disciplines, making it
   increasingly difficult for researchers to organize, filter, and synthesize the literature.
   Systematic reviews address this challenge through structured analysis, but the early

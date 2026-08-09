@@ -27,7 +27,7 @@ image:
 projects: []
 publishDate: '2024-02-03T15:00:00+01:00'
 publication_types:
-- '2'
+- article-journal
 abstract: The increase of the amount of misinformation spread every day online is
   a huge threat to the society. Organizations and researchers are working to contrast
   this misinformation plague. In this setting, human assessors are indispensable to

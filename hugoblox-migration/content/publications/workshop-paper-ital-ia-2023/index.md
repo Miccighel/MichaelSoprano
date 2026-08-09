@@ -23,7 +23,7 @@ image:
 projects: []
 publishDate: '2023-09-20T17:40:00+01:00'
 publication_types:
-- '1'
+- paper-conference
 abstract: Conversational agents provide new modalities to access and interact with
   services and applications. Recently, they saw a backfire in their popularity, due
   to the recent advancements in language models. Such agents have been adopted in

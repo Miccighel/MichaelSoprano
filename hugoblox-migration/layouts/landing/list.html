@@ -166,20 +166,4 @@
     {{ end }}
   {{ end }}
 </main>
-<script>
-  document.addEventListener('click', async event => {
-    const button = event.target.closest('.legacy-cite');
-    if (!button) return;
-    try {
-      const response = await fetch(button.dataset.citeUrl);
-      if (!response.ok) throw new Error('Citation unavailable');
-      await navigator.clipboard.writeText(await response.text());
-      const original = button.textContent;
-      button.textContent = 'Copied';
-      setTimeout(() => { button.textContent = original; }, 1600);
-    } catch (_error) {
-      button.textContent = 'Unavailable';
-    }
-  });
-</script>
 {{ end }}

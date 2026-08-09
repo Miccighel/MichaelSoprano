@@ -26,7 +26,7 @@ image:
 projects: []
 publishDate: '2021-03-15T14:36:35.998652Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: 'Truthfulness judgments are a fundamental step in the process of fighting
   misinformation, as they are crucial to train and evaluate classifiers that automatically
   distinguish true and false statements. Usually such judgments are made by experts,

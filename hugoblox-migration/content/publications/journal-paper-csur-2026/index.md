@@ -23,7 +23,7 @@ image:
 projects: []
 publishDate: '2026-03-16T15:00:00+01:00'
 publication_types:
-- '2'
+- article-journal
 abstract: This systematic review explores the application of Large Language Models
   (LLMs) in Combinatorial Optimization (CO). We report our findings using the Preferred
   Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines. We

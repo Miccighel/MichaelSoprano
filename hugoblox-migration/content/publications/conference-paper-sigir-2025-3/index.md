@@ -26,7 +26,7 @@ image:
 projects: []
 publishDate: '2025-07-13T04:00:35.998652Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: Patient Information Leaflets (PILs) provide essential information about
   medication usage, side effects, precautions, and interactions, making them a valuable
   resource for Question Answering (QA) systems in healthcare. However, no dedicated

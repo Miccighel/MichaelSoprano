@@ -30,7 +30,7 @@ image:
 projects: []
 publishDate: '2025-04-17T15:30:30+01:00'
 publication_types:
-- '1'
+- paper-conference
 abstract: 'We investigate solution methods for the Oven Scheduling Problem (OSP),
   a parallel batch scheduling optimization problem in semiconductor manufacturing,
   using Search Trajectory Networks (STNs). STNs are a recently introduced tool to

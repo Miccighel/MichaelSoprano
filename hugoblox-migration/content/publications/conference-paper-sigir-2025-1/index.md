@@ -25,7 +25,7 @@ image:
 projects: []
 publishDate: '2025-07-13T07:00:35.998652Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: 'Evaluating the truthfulness of online content is critical for combating
   misinformation. This study examines the efficiency and effectiveness of crowdsourced
   truthfulness assessments through a comparative analysis of two approaches: one involving

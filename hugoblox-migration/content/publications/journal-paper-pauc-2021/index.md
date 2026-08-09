@@ -29,7 +29,7 @@ image:
 projects: []
 publishDate: '2021-09-15T15:00:00+01:00'
 publication_types:
-- '2'
+- article-journal
 abstract: 'Recently, the misinformation problem has been addressed with a crowdsourcing-based
   approach: to assess the truthfulness of a statement, instead of relying on a few
   experts, a crowd of non-expert is exploited. We study whether crowdsourcing is an

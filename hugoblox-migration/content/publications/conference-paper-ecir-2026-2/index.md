@@ -25,7 +25,7 @@ image:
 projects: []
 publishDate: '2026-03-25T04:00:00+01:00'
 publication_types:
-- '1'
+- paper-conference
 abstract: Many analyses have been performed on Information Retrieval (IR) evaluation
   benchmarks. Benchmarking also plays a central role in evaluating the capabilities
   of Large Language Models (LLMs). In this paper, we apply an IR approach to LLM evaluation.

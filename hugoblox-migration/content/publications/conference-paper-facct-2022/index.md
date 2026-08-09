@@ -28,7 +28,7 @@ image:
 projects: []
 publishDate: '2021-03-15T14:36:35.536697Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: Due to the increasing amount of information shared online every day, the
   need for sound and reliable ways of distinguishing between trustworthy and non-trustworthy
   information is as present as ever. One technique for performing fact-checking at

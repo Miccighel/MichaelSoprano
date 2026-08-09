@@ -23,7 +23,7 @@ image:
 projects: []
 publishDate: '2021-03-15T14:36:38.202502Z'
 publication_types:
-- '1'
+- paper-conference
 abstract: 'Several researchers have proposed to reduce the number of topics used in
   TREC-like initiatives. One research direction that has been pursued is what is the
   optimal topic subset of a given cardinality that evaluates the systems/runs in the
