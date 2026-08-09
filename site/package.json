@@ -1,5 +1,5 @@
 {
-  "name": "michael-soprano-hugoblox-migration",
+  "name": "michael-soprano-site",
   "private": true,
   "packageManager": "pnpm@10.14.0",
   "dependencies": {

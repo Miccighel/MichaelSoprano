@@ -1,4 +1,4 @@
-module github.com/Miccighel/MichaelSoprano/hugoblox-migration
+module github.com/Miccighel/MichaelSoprano/site
 
 go 1.23
 

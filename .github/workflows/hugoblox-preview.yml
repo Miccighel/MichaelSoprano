@@ -18,7 +18,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v6
         with:
-          go-version-file: hugoblox-migration/go.mod
+          go-version-file: site/go.mod
 
       - name: Set up Node.js
         uses: actions/setup-node@v5
@@ -27,7 +27,7 @@ jobs:
           package-manager-cache: false
 
       - name: Install pnpm and frontend dependencies
-        working-directory: hugoblox-migration
+        working-directory: site
         run: |
           npm install --global pnpm@10.14.0
           pnpm install --frozen-lockfile
@@ -39,18 +39,18 @@ jobs:
           extended: true
 
       - name: Validate content
-        run: ruby hugoblox-migration/scripts/check-content.rb
+        run: ruby site/scripts/check-content.rb
 
       - name: Build HugoBlox
-        run: hugo --source hugoblox-migration --destination public --gc --minify
+        run: hugo --source site --destination public --gc --minify
 
       - name: Build search index
-        run: npx --yes pagefind@1.5.2 --site hugoblox-migration/public
+        run: npx --yes pagefind@1.5.2 --site site/public
 
       - name: Upload preview artifact
         uses: actions/upload-artifact@v4
         with:
           name: hugoblox-preview
-          path: hugoblox-migration/public
+          path: site/public
           if-no-files-found: error
           retention-days: 14

@@ -1,6 +1,6 @@
 # Michael Soprano — HugoBlox website
 
-This directory is the canonical source of the HugoBlox migration. It contains
+This directory is the canonical source of the HugoBlox website. It contains
 the complete profile, homepage, publications, presentations, teaching pages,
 and static assets while the legacy production tree remains frozen at the
 repository root.
