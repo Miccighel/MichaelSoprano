@@ -1,0 +1,64 @@
+name: HugoBlox deploy
+
+on:
+  push:
+    branches:
+      - codex/hugo-wowchemy-upgrade
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hugoblox-pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: site/go.mod
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          package-manager-cache: false
+
+      - name: Install pnpm and frontend dependencies
+        working-directory: site
+        run: |
+          npm install --global pnpm@10.14.0
+          pnpm install --frozen-lockfile
+
+      - name: Set up Hugo Extended
+        uses: peaceiris/actions-hugo@v3.2.1
+        with:
+          hugo-version: '0.164.0'
+          extended: true
+
+      - name: Validate content
+        run: ruby site/scripts/check-content.rb
+
+      - name: Build HugoBlox
+        run: hugo --source site --destination public --gc --minify
+
+      - name: Build search index
+        run: npx --yes pagefind@1.5.2 --site site/public
+
+      - name: Audit generated site
+        run: ruby site/scripts/audit-build.rb
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: site/public
+          cname: michaelsoprano.com
+          force_orphan: false
