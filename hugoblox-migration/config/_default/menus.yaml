@@ -18,7 +18,7 @@ main:
     url: /#presentations
     weight: 60
   - name: Activity
-    url: /#activity
+    url: /#academic_activity
     weight: 70
   - name: Teaching
     url: /#teaching

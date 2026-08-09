@@ -32,6 +32,7 @@ def update_front_matter(path, section)
   elsif section == 'events'
     data['event_name'] = data.delete('event') if data.key?('event')
     data['event_start'] = data.delete('date') if data.key?('date')
+    data['date'] = data['event_start'] if data['event_start'] && !data.key?('date')
     data['event_end'] = data.delete('date_end') if data.key?('date_end')
     data['event_all_day'] = data.delete('all_day') if data.key?('all_day')
   end
@@ -43,7 +44,9 @@ def update_front_matter(path, section)
   end
   data['links'] = links unless links.empty?
 
-  front_matter = YAML.dump(data)
+  # Older Ruby/Psych versions serialize nil values as `key: `, which creates
+  # trailing whitespace and makes repeated imports noisy.
+  front_matter = YAML.dump(data).gsub(/:[ \t]+\n/, ":\n")
   body = source[match.end(0)..]
   File.write(path, "#{front_matter}---\n#{body}")
 end

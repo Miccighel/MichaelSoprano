@@ -29,4 +29,5 @@ event_all_day: false
 links:
 - type: slides
   url: https://michaelsoprano.com/media/talks/EFMI-STC-2023_Towards-a-Conversational-Based-Agent-for-Healthcare.pdf
+date: '2023-10-26T08:30:00'
 ---

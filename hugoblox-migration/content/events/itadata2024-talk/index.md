@@ -25,4 +25,5 @@ event_all_day: false
 links:
 - type: slides
   url: https://michaelsoprano.com/media/talks/ITADATA-2024_An-Introduction-To-Crowd_Frame.pdf
+date: '2024-09-17T11:30:00'
 ---

@@ -25,4 +25,5 @@ event_all_day: false
 links:
 - type: slides
   url: https://michaelsoprano.com/media/talks/Ital-IA-2023_Towards-a-Conversational-Based-Agent-for-Health-Services.pdf
+date: '2023-05-29'
 ---

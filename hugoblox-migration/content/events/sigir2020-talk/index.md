@@ -32,4 +32,5 @@ links:
   url: https://michaelsoprano.com/media/talks/SIGIR-2020_Can-The-Crowd-Identify-Misinformation-Objectively.pdf
 - type: video
   url: https://dl.acm.org/doi/10.1145/3397271.3401112
+date: '2020-07-25'
 ---

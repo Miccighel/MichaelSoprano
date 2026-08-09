@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;700&family=Lato:wght@300;400;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css");
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
 
 /* Visual compatibility layer: it intentionally mirrors the legacy Wowchemy site
    while leaving HugoBlox responsible for content pages, search, and the build. */
@@ -71,6 +72,8 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
 .network-icon .big-icon { font-size: 2rem; }
 .legacy-bio { font-size: 1rem; line-height: 1.65; }
 .legacy-bio p { margin: 0 0 1rem; }
+.about-heading { margin: 1rem 0 .5rem; font-family: Lato, Arial, sans-serif; font-size: 2.25rem; font-weight: 400; line-height: 1.25; }
+.legacy-bio p:nth-child(3)::before { content: "\f019"; margin-right: .45rem; font-family: "Font Awesome 5 Free"; font-weight: 900; }
 .legacy-about-details { display: grid; grid-template-columns: 1fr 1.35fr; gap: 2.5rem; margin-top: 2.25rem; }
 .section-subheading { margin: 0 0 1rem; font-family: Lato, Arial, sans-serif; font-size: 1.25rem; font-weight: 700; }
 .ul-interests { padding-left: 1.25rem; margin: 0; font-size: .9rem; }
@@ -97,11 +100,13 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
 .legacy-markdown th:first-child, .legacy-markdown td:first-child { text-align: left; }
 .legacy-markdown tbody tr:nth-child(odd) { background: color-mix(in srgb, var(--legacy-text) 5%, transparent); }
 .legacy-list { display: grid; gap: 1rem; }
+.publication-details-link { margin: 0 0 1.5rem; font-family: Lato, Arial, sans-serif; font-size: 1.75rem; font-weight: 400; }
 .pub-list-item, .legacy-list-item { position: relative; margin: 0; padding-left: 1.4rem; font-size: .94rem; line-height: 1.55; }
 .pub-list-item .pub-icon { position: absolute; left: 0; top: .28rem; color: var(--legacy-muted); }
 .pub-list-item .li-cite-author { color: var(--legacy-muted); }
 .legacy-attachments { display: block; margin-top: .35rem; font-size: .78rem; }
 .legacy-attachments a { display: inline-block; margin-right: .65rem; font-weight: 700; }
+.legacy-attachments button { margin-right: .65rem; }
 .see-all { margin: 2rem 0 0; text-transform: uppercase; font-size: .8rem; }
 
 /* Original Wowchemy experience timeline. */
@@ -143,7 +148,21 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
 .contact-list { display: grid; gap: 1rem; list-style: none; margin: 0; padding: 0; }
 .contact-list li { display: grid; grid-template-columns: 2rem 1fr; align-items: start; gap: .75rem; }
 .contact-list i { color: var(--legacy-primary); font-size: 1.55rem; text-align: center; }
+#map { width: 100%; height: 350px; margin-top: 1.5rem; background: color-mix(in srgb, var(--legacy-text) 8%, transparent); }
+.legacy-tag-cloud { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: .45rem .8rem; text-align: center; line-height: 1.25; }
+.legacy-tag-cloud a:hover { text-decoration: none; }
+.legacy-tag-cloud .tag-size-sm { font-size: .7rem; }
+.legacy-tag-cloud .tag-size-md { font-size: 1rem; }
+.legacy-tag-cloud .tag-size-lg { font-size: 1.4rem; }
+.legacy-tag-cloud .tag-size-xl { font-size: 2rem; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+.legacy-cookie-notice { position: fixed; right: 0; bottom: 0; left: 0; z-index: 10000; display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; box-sizing: border-box; padding: 16px 28.8px; background: var(--legacy-primary); color: #fff; box-shadow: 0 -.125rem .5rem rgba(0, 0, 0, .15); font-size: 16px; line-height: 1.5; }
+.legacy-cookie-notice[hidden] { display: none; }
+.legacy-cookie-message { margin: 0; }
+.legacy-cookie-notice a { color: #fff; text-decoration: underline; }
+.legacy-cookie-compliance { flex: 0 0 auto; }
+.legacy-cookie-notice button { border: 2px solid transparent; border-radius: 5px; padding: 5.76px 11.52px; background: #fff; color: var(--legacy-primary); font: inherit; font-weight: 700; cursor: pointer; }
 
 .page-footer { background: var(--legacy-page); color: var(--legacy-muted); }
 .page-footer footer { margin-top: 0 !important; padding-top: 2rem; }
@@ -163,4 +182,6 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
   .legacy-profile-links { max-width: 100%; }
   .stream-image { flex-basis: 80px; }
   .stream-image img { width: 80px; }
+  .legacy-cookie-notice { align-items: stretch; flex-direction: column; padding: 16px 24px; }
+  .legacy-cookie-notice button { width: 100%; }
 }

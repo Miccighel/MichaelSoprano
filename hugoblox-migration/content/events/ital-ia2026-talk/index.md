@@ -30,4 +30,5 @@ event_all_day: false
 links:
 - type: slides
   url: https://michaelsoprano.com/media/talks/Ital-IA-2026_Crowdsourced-Fact-Checking-for-Misinformation-A-Journey-Through-Nine-Years-of-Research.pdf
+date: '2026-06-18T17:20:00'
 ---

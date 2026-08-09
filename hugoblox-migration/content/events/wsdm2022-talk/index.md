@@ -29,4 +29,5 @@ links:
   url: https://michaelsoprano.com/media/talks/WSDM-2022_Crowd_Frame-A-Simple-and-Complete-Framework-to-Deploy-Complex-Crowdsourcing-Tasks-Off-the-shelf.pdf
 - type: video
   url: https://dl.acm.org/doi/abs/10.1145/3488560.3502182
+date: '2022-02-23'
 ---

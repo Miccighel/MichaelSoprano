@@ -1,0 +1,21 @@
+<footer class="legacy-site-footer">
+  <p><a href="/privacy/">Privacy Policy</a></p>
+  <p>© {{ now.Year }} · Powered by the <a href="https://sourcethemes.com/academic/">Academic theme</a> for <a href="https://gohugo.io/">Hugo</a>.</p>
+</footer>
+
+<div id="legacy-cookie-notice" class="legacy-cookie-notice" role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent-desc" hidden>
+  <span id="cookieconsent-desc" class="legacy-cookie-message">This website uses cookies to ensure you get the best experience on our website. <a aria-label="learn more about cookies" href="/privacy/" rel="noopener noreferrer nofollow" target="_blank">Learn more</a></span>
+  <div class="legacy-cookie-compliance"><button type="button" id="legacy-cookie-dismiss">Got it!</button></div>
+</div>
+<script>
+  (() => {
+    const notice = document.getElementById('legacy-cookie-notice');
+    const dismiss = document.getElementById('legacy-cookie-dismiss');
+    if (!notice || !dismiss) return;
+    if (localStorage.getItem('cookieconsent_status') !== 'dismiss') notice.hidden = false;
+    dismiss.addEventListener('click', () => {
+      localStorage.setItem('cookieconsent_status', 'dismiss');
+      notice.hidden = true;
+    });
+  })();
+</script>

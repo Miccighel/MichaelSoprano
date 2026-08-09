@@ -28,4 +28,5 @@ event_all_day: false
 links:
 - type: pdf
   url: https://michaelsoprano.com/media/talks/ROMCIR-2026_Beyond-Seeing-Is-Believing-On-Crowdsourced-Detection-of-Audiovisual-Deepfakes.pdf
+date: '2026-04-02T15:30:00'
 ---

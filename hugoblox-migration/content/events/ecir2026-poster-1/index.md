@@ -27,4 +27,5 @@ event_all_day: false
 links:
 - type: pdf
   url: https://michaelsoprano.com/media/posters/LLMs-As-Assessors_ECIR-2026.pdf
+date: '2026-03-30T13:30:00'
 ---

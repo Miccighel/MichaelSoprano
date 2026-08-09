@@ -149,7 +149,7 @@ sections:
   design:
     view: card
 - block: markdown
-  id: activity
+  id: academic_activity
   content:
     title: Activity
     text: |-
@@ -221,19 +221,19 @@ sections:
       - **Student Grant**. 29th ACM International Conference on Information and Knowledge Management (*CIKM 2020*), Galway, Ireland. Conference registration waiver provided by CIKM. Held remotely due to the COVID-19 pandemic.
       - **Student Volunteer**. 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval (*SIGIR 2020*), Xi'an, China. Conference registration waiver provided by SIGIR. Held remotely due to the COVID-19 pandemic.
 - block: markdown
-  id: topics
+  id: tags
   content:
     title: Topics
-    text: "[crowdsourcing](/tags/crowdsourcing/) · [misinformation](/tags/misinformation/)
-      · [large language models](/tags/large-language-models/) · [fact-checking](/tags/fact-checking/)
-      · [peer review](/tags/peer-review/) · [truthfulness assessment](/tags/truthfulness-assessment/)
-      · [scholarly publishing](/tags/scholarly-publishing/) · [benchmarks](/tags/benchmarks/)
-      · [bias](/tags/bias/) · [explainability](/tags/explainability/) · [public administration](/tags/public-administration/)
-      · [readersourcing](/tags/readersourcing/) · [scoping reviews](/tags/scoping-reviews/)
-      · [Teaching](/tags/teaching/) · [truthfulness](/tags/truthfulness/) · [argument
-      type identification](/tags/argument-type-identification/) · [audiovisual deepfakes](/tags/audiovisual-deepfakes/)
-      · [conversational agent](/tags/conversational-agent/) · [covid-19](/tags/covid-19/)
-      · [crowdsourcing annotation](/tags/crowdsourcing-annotation/)"
+    text: "[Amazon Mechanical Turk](/tag/amazon-mechanical-turk/) · [argument type
+      identification](/tag/argument-type-identification/) · [audiovisual deepfakes](/tag/audiovisual-deepfakes/)
+      · [benchmarks](/tag/benchmarks/) · [bias](/tag/bias/) · [crowdsourcing](/tag/crowdsourcing/)
+      · [explainability](/tag/explainability/) · [fact-checking](/tag/fact-checking/)
+      · [HITS](/tag/hits/) · [large language models](/tag/large-language-models/)
+      · [misinformation](/tag/misinformation/) · [Network Analysis](/tag/network-analysis/)
+      · [peer review](/tag/peer-review/) · [public administration](/tag/public-administration/)
+      · [readersourcing](/tag/readersourcing/) · [scholarly publishing](/tag/scholarly-publishing/)
+      · [scoping reviews](/tag/scoping-reviews/) · [Teaching](/tag/teaching/) · [truthfulness](/tag/truthfulness/)
+      · [truthfulness assessment](/tag/truthfulness-assessment/)"
 - block: markdown
   id: contact
   content:

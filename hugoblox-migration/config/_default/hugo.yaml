@@ -18,9 +18,12 @@ outputs:
   home: [HTML, RSS]
   section: [HTML, RSS]
 permalinks:
-  publications: '/publication/:slug/'
+  publications: '/publication/:contentbasename/'
   events: '/talk/:slug/'
   blog: '/post/:slug/'
+  tags: '/tag/:slug/'
+  categories: '/category/:slug/'
+  publication_types: '/publication-type/:slug/'
 taxonomies:
   author: authors
   tag: tags

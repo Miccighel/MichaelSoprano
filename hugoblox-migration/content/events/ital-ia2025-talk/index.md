@@ -30,4 +30,5 @@ event_all_day: false
 links:
 - type: slides
   url: https://michaelsoprano.com/media/talks/Ital-IA-2025_AIDME-Framework.pdf
+date: '2025-06-23'
 ---

@@ -28,4 +28,5 @@ event_all_day: false
 links:
 - type: slides
   url: https://michaelsoprano.com/media/talks/IRCDL-2025_Evaluation-of-Crowdsourced-Peer-Review-using-Synthetic-Data-and-Simulations.pdf
+date: '2025-02-20T14:30:00'
 ---

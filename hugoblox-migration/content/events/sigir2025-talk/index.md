@@ -28,4 +28,5 @@ event_all_day: false
 links:
 - type: slides
   url: https://michaelsoprano.com/media/talks/SIGIR-2025_The-Magnitude-of-Truth-On-Using-Magnitude-Estimation-for-Truthfulness-Assessment.pdf
+date: '2025-07-16T14:50:00'
 ---

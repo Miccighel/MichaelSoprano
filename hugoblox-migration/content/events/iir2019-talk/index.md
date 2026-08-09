@@ -25,4 +25,5 @@ event_all_day: false
 links:
 - type: slides
   url: https://michaelsoprano.com/media/talks/IIR-2019_Bias-and-Fairness-in-Effectiveness-Evaluation-by-Means-of-Network-Analysis-and-Mixture-Model.pdf
+date: '2019-09-16'
 ---

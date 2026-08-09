@@ -9,6 +9,28 @@ LEGACY_HOME = File.join(ROOT, 'content', 'home')
 TARGET = File.join(ROOT, 'hugoblox-migration', 'content', '_index.md')
 AUTHOR = File.join(ROOT, 'content', 'authors', 'admin', '_index.md')
 LEGACY_DATA = File.join(ROOT, 'hugoblox-migration', 'data', 'legacy-home.yaml')
+LEGACY_TOPICS = [
+  ['Amazon Mechanical Turk', 'amazon-mechanical-turk'],
+  ['argument type identification', 'argument-type-identification'],
+  ['audiovisual deepfakes', 'audiovisual-deepfakes'],
+  ['benchmarks', 'benchmarks'],
+  ['bias', 'bias'],
+  ['crowdsourcing', 'crowdsourcing'],
+  ['explainability', 'explainability'],
+  ['fact-checking', 'fact-checking'],
+  ['HITS', 'hits'],
+  ['large language models', 'large-language-models'],
+  ['misinformation', 'misinformation'],
+  ['Network Analysis', 'network-analysis'],
+  ['peer review', 'peer-review'],
+  ['public administration', 'public-administration'],
+  ['readersourcing', 'readersourcing'],
+  ['scholarly publishing', 'scholarly-publishing'],
+  ['scoping reviews', 'scoping-reviews'],
+  ['Teaching', 'teaching'],
+  ['truthfulness', 'truthfulness'],
+  ['truthfulness assessment', 'truthfulness-assessment']
+].freeze
 
 def parse_page(path)
   source = File.binread(path).force_encoding(Encoding::UTF_8)
@@ -59,16 +81,21 @@ def topic_slug(topic)
   topic.downcase.gsub(/[^a-z0-9]+/, '-').sub(/\A-/, '').sub(/-\z/, '')
 end
 
-def topics_markdown
+def topic_data
   counts = Hash.new(0)
   Dir.glob(File.join(ROOT, 'hugoblox-migration', 'content', '{publications,events,blog}', '**', 'index.md')).each do |path|
     metadata, = parse_page(path)
     Array(metadata['tags']).each { |tag| counts[tag] += 1 }
   end
 
-  counts.sort_by { |tag, count| [-count, tag.downcase] }.first(20)
-        .map { |tag, _count| "[#{tag}](/tags/#{topic_slug(tag)}/)" }
-        .join(' · ')
+  LEGACY_TOPICS.map do |name, slug|
+    count = counts.sum { |tag, value| topic_slug(tag) == slug ? value : 0 }
+    { 'name' => name, 'slug' => slug, 'count' => count }
+  end
+end
+
+def topics_markdown
+  topic_data.map { |topic| "[#{topic['name']}](/tag/#{topic['slug']}/)" }.join(' · ')
 end
 
 def normalize_author_body(markdown)
@@ -117,10 +144,10 @@ sections = [
   { 'block' => 'markdown', 'id' => 'metrics', 'content' => { 'title' => widgets['metrics'][0]['title'], 'text' => widgets['metrics'][1] } },
   { 'block' => 'collection', 'id' => 'publications', 'content' => { 'title' => 'Publications', 'filters' => { 'folders' => ['publications'] } }, 'design' => { 'view' => 'citation' } },
   { 'block' => 'collection', 'id' => 'presentations', 'content' => { 'title' => 'Presentations', 'filters' => { 'folders' => ['events'] } }, 'design' => { 'view' => 'card' } },
-  { 'block' => 'markdown', 'id' => 'activity', 'content' => { 'title' => widgets['academic_activity'][0]['title'], 'text' => widgets['academic_activity'][1] } },
+  { 'block' => 'markdown', 'id' => 'academic_activity', 'content' => { 'title' => widgets['academic_activity'][0]['title'], 'text' => widgets['academic_activity'][1] } },
   { 'block' => 'collection', 'id' => 'teaching', 'content' => { 'title' => 'Teaching', 'filters' => { 'folders' => ['blog'] } }, 'design' => { 'view' => 'card' } },
   { 'block' => 'markdown', 'id' => 'honors', 'content' => { 'title' => widgets['honors'][0]['title'], 'text' => widgets['honors'][1] } },
-  { 'block' => 'markdown', 'id' => 'topics', 'content' => { 'title' => 'Topics', 'text' => topics_markdown } },
+  { 'block' => 'markdown', 'id' => 'tags', 'content' => { 'title' => 'Topics', 'text' => topics_markdown } },
   { 'block' => 'markdown', 'id' => 'contact', 'content' => { 'title' => 'Contact', 'text' => contact_text } }
 ]
 
@@ -138,6 +165,7 @@ legacy_data = {
     'bio' => normalize_author_body(author_body)
   },
   'visits' => widgets['visits'][0]['experience'],
-  'experience' => widgets['experience'][0]['experience']
+  'experience' => widgets['experience'][0]['experience'],
+  'topics' => topic_data
 }
 File.write(LEGACY_DATA, YAML.dump(legacy_data))

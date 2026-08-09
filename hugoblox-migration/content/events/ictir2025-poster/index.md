@@ -33,4 +33,5 @@ event_all_day: false
 links:
 - type: pdf
   url: https://michaelsoprano.com/media/posters/AIDME-Framework_ICTIR-2025.pdf
+date: '2025-07-18T13:30:00'
 ---

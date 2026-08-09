@@ -27,4 +27,5 @@ event_all_day: false
 links:
 - type: pdf
   url: https://michaelsoprano.com/media/posters/Analyzing-AI-Eval-Benchmarks-Through-IR_ECIR-2026.pdf
+date: '2026-03-30T13:31:00'
 ---

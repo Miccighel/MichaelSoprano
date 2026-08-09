@@ -30,4 +30,5 @@ event_all_day: false
 links:
 - type: pdf
   url: https://michaelsoprano.com/media/posters/ECDP-2026_Crowdsourced-Keypoint-Matching-for-ROI-in-Cross-Stain-WSI-Registration.pdf
+date: '2026-06-18T09:00:00'
 ---

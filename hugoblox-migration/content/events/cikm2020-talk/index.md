@@ -31,4 +31,5 @@ links:
   url: https://michaelsoprano.com/media/talks/CIKM-2020_The-COVID-19-Infodemic.pdf
 - type: video
   url: https://dl.acm.org/doi/10.1145/3340531.3412048
+date: '2020-10-19'
 ---

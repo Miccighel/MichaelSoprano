@@ -6,7 +6,9 @@
   <section id="about" class="home-section legacy-about-section">
     <div class="legacy-container legacy-about-grid">
       <aside id="profile">
-        <img class="avatar avatar-circle" src="/media/authors/michael-soprano.jpg" alt="{{ $author.title }}">
+        {{ $avatar := resources.Get "media/authors/michael-soprano.jpg" }}
+        {{ $avatar = $avatar.Fill "270x270 Center" }}
+        <img class="avatar avatar-circle" src="{{ $avatar.RelPermalink }}" width="270" height="270" alt="{{ $author.title }}">
         <div class="portrait-title">
           <h2>{{ $author.title }}</h2>
           <h3>{{ $author.role }}</h3>
@@ -24,6 +26,7 @@
       </aside>
 
       <div class="legacy-about-content">
+        <h1 class="about-heading">About</h1>
         <div class="legacy-bio">{{ $author.bio | markdownify }}</div>
         <div class="legacy-about-details">
           <div>
@@ -52,6 +55,7 @@
             {{ if or (eq .id "visits") (eq .id "experience") }}
               {{ $entries := $legacy.experience }}
               {{ if eq .id "visits" }}{{ $entries = $legacy.visits }}{{ end }}
+              {{ $entries = sort $entries "date_start" "desc" }}
               <div class="experience-list">
                 {{ range $index, $entry := $entries }}
                   <article class="experience-row{{ if eq $index (sub (len $entries) 1) }} is-last{{ end }}">
@@ -68,18 +72,23 @@
             {{ else if eq .id "publications" }}
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "publications" }}
+              <h2 class="publication-details-link"><a href="/publication/">View details</a></h2>
               <div class="legacy-list publication-list">
                 {{ range $pages.ByDate.Reverse }}
+                  {{ $publication := . }}
                   <article class="pub-list-item view-citation">
                     <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
                     <span class="li-cite-author">{{ delimit .Params.authors ", " }}.</span>
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>.
-                    {{ with .Params.publication }}{{ with .name }}<strong>{{ . }}</strong>,{{ end }}{{ end }} {{ .Date.Format "2006" }}.
-                    {{ with .Params.links }}<span class="legacy-attachments">{{ range . }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}</span>{{ end }}
+                    {{ with .Params.publication }}{{ with .name }}<em>{{ strings.TrimSuffix "*" (strings.TrimPrefix "*" .) }}</em>,{{ end }}{{ end }} {{ .Date.Format "2006" }}.
+                    <span class="legacy-attachments">
+                      {{ range .Params.links }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}
+                      <button class="btn btn-outline-primary btn-sm legacy-cite" type="button" data-cite-url="{{ $publication.RelPermalink }}cite.bib">Cite</button>
+                      {{ with .Params.hugoblox }}{{ with .ids }}{{ with .doi }}<a class="btn btn-outline-primary btn-sm" href="https://doi.org/{{ . }}">DOI</a>{{ end }}{{ end }}{{ end }}
+                    </span>
                   </article>
                 {{ end }}
               </div>
-              <p class="see-all"><a href="/publications/">View details <i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
             {{ else if eq .id "presentations" }}
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "events" }}
@@ -101,7 +110,7 @@
                   </article>
                 {{ end }}
               </div>
-              <p class="see-all"><a href="/talk/">See all events <i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
+              <p class="see-all"><a href="/event/">See all events <i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
             {{ else if eq .id "teaching" }}
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "blog" }}
@@ -116,6 +125,12 @@
                   </article>
                 {{ end }}
               </div>
+            {{ else if eq .id "tags" }}
+              <div class="legacy-tag-cloud">
+                {{ range $legacy.topics }}
+                  <a class="tag-size-{{ if ge .count 15 }}xl{{ else if ge .count 8 }}lg{{ else if ge .count 4 }}md{{ else }}sm{{ end }}" href="/tag/{{ .slug }}/">{{ .name }}</a>
+                {{ end }}
+              </div>
             {{ else if eq .id "contact" }}
               <form class="legacy-contact-form" action="https://formspree.io/f/mjvpnjeb" method="POST">
                 <label><span class="sr-only">Name</span><input type="text" name="name" placeholder="Name" required></label>
@@ -128,6 +143,20 @@
                 <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Via delle Scienze 206, Udine (Italy), 33100</span></li>
                 <li><i class="fas fa-compass" aria-hidden="true"></i><span>Rizzi Building, 2° Floor, South Node, Lab SMDC (LC2-04-DE), A2 32 Room</span></li>
               </ul>
+              <div id="map" aria-label="Map showing the University of Udine"></div>
+              <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
+              <script>
+                (() => {
+                  const mapElement = document.getElementById('map');
+                  if (!mapElement || typeof L === 'undefined') return;
+                  const map = L.map(mapElement).setView([46.08008535022743, 13.211890024964413], 15);
+                  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                  }).addTo(map);
+                  L.marker([46.08008535022743, 13.211890024964413]).addTo(map);
+                })();
+              </script>
             {{ else }}
               <div class="legacy-markdown">{{ .content.text | markdownify }}</div>
             {{ end }}
@@ -137,4 +166,20 @@
     {{ end }}
   {{ end }}
 </main>
+<script>
+  document.addEventListener('click', async event => {
+    const button = event.target.closest('.legacy-cite');
+    if (!button) return;
+    try {
+      const response = await fetch(button.dataset.citeUrl);
+      if (!response.ok) throw new Error('Citation unavailable');
+      await navigator.clipboard.writeText(await response.text());
+      const original = button.textContent;
+      button.textContent = 'Copied';
+      setTimeout(() => { button.textContent = original; }, 1600);
+    } catch (_error) {
+      button.textContent = 'Unavailable';
+    }
+  });
+</script>
 {{ end }}

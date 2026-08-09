@@ -170,3 +170,64 @@ experience:
   date_end: '2016-02-25'
   description: Design, development, and maintenance of a blog on music news and events
     as a full-stack web developer.
+topics:
+- name: Amazon Mechanical Turk
+  slug: amazon-mechanical-turk
+  count: 2
+- name: argument type identification
+  slug: argument-type-identification
+  count: 2
+- name: audiovisual deepfakes
+  slug: audiovisual-deepfakes
+  count: 2
+- name: benchmarks
+  slug: benchmarks
+  count: 4
+- name: bias
+  slug: bias
+  count: 3
+- name: crowdsourcing
+  slug: crowdsourcing
+  count: 22
+- name: explainability
+  slug: explainability
+  count: 3
+- name: fact-checking
+  slug: fact-checking
+  count: 7
+- name: HITS
+  slug: hits
+  count: 3
+- name: large language models
+  slug: large-language-models
+  count: 12
+- name: misinformation
+  slug: misinformation
+  count: 15
+- name: Network Analysis
+  slug: network-analysis
+  count: 3
+- name: peer review
+  slug: peer-review
+  count: 6
+- name: public administration
+  slug: public-administration
+  count: 3
+- name: readersourcing
+  slug: readersourcing
+  count: 3
+- name: scholarly publishing
+  slug: scholarly-publishing
+  count: 5
+- name: scoping reviews
+  slug: scoping-reviews
+  count: 3
+- name: Teaching
+  slug: teaching
+  count: 3
+- name: truthfulness
+  slug: truthfulness
+  count: 3
+- name: truthfulness assessment
+  slug: truthfulness-assessment
+  count: 6
