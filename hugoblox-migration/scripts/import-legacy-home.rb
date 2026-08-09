@@ -8,6 +8,7 @@ ROOT = File.expand_path('../..', __dir__)
 LEGACY_HOME = File.join(ROOT, 'content', 'home')
 TARGET = File.join(ROOT, 'hugoblox-migration', 'content', '_index.md')
 AUTHOR = File.join(ROOT, 'content', 'authors', 'admin', '_index.md')
+LEGACY_DATA = File.join(ROOT, 'hugoblox-migration', 'data', 'legacy-home.yaml')
 
 def parse_page(path)
   source = File.binread(path).force_encoding(Encoding::UTF_8)
@@ -70,11 +71,21 @@ def topics_markdown
         .join(' · ')
 end
 
+def normalize_author_body(markdown)
+  markdown
+    .gsub(/\{\{<\s*icon[^>]*>\}\}\s*/, '')
+    .gsub(/\{\{<\s*staticref\s+"([^"]+)"\s+"newtab"\s*>\}\}(.*?)\{\{<\s*\/staticref\s*>\}\}/m) do
+      destination = Regexp.last_match(1)
+      destination = "/#{destination}" unless destination.match?(%r{\A(?:https?://|/)})
+      "[#{Regexp.last_match(2)}](#{destination})"
+    end
+end
+
 widgets = {}
 %w[visits experience metrics academic_activity honors].each do |name|
   widgets[name] = parse_page(File.join(LEGACY_HOME, "#{name}.md"))
 end
-author_meta, = parse_page(AUTHOR)
+author_meta, author_body = parse_page(AUTHOR)
 
 education = author_meta.dig('education', 'courses').map do |course|
   "- **#{course['course']}** — #{course['institution']} (#{course['year']})"
@@ -115,3 +126,18 @@ sections = [
 
 document = { 'title' => '', 'date' => '2026-08-01', 'type' => 'landing', 'sections' => sections }
 File.write(TARGET, "#{YAML.dump(document)}---\n")
+
+legacy_data = {
+  'author' => {
+    'title' => author_meta['title'],
+    'role' => author_meta['role'],
+    'organizations' => author_meta['organizations'],
+    'interests' => author_meta['interests'],
+    'education' => author_meta.dig('education', 'courses'),
+    'social' => author_meta['social'],
+    'bio' => normalize_author_body(author_body)
+  },
+  'visits' => widgets['visits'][0]['experience'],
+  'experience' => widgets['experience'][0]['experience']
+}
+File.write(LEGACY_DATA, YAML.dump(legacy_data))

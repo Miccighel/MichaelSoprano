@@ -1,0 +1,140 @@
+{{ define "main" }}
+{{ $legacy := index hugo.Data "legacy-home" }}
+{{ $author := $legacy.author }}
+
+<main class="legacy-home">
+  <section id="about" class="home-section legacy-about-section">
+    <div class="legacy-container legacy-about-grid">
+      <aside id="profile">
+        <img class="avatar avatar-circle" src="/media/authors/michael-soprano.jpg" alt="{{ $author.title }}">
+        <div class="portrait-title">
+          <h2>{{ $author.title }}</h2>
+          <h3>{{ $author.role }}</h3>
+          {{ with index $author.organizations 0 }}<h3><a href="{{ .url }}">{{ .name }}</a></h3>{{ end }}
+        </div>
+        <ul class="network-icon" aria-label="Academic and social profiles">
+          {{ range $author.social }}
+            <li>
+              <a href="{{ .link }}" aria-label="{{ .icon }}">
+                {{ if eq .icon_pack "ai" }}<i class="ai ai-{{ .icon }} big-icon" aria-hidden="true"></i>{{ else }}<i class="{{ .icon_pack }} fa-{{ .icon }} big-icon" aria-hidden="true"></i>{{ end }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </aside>
+
+      <div class="legacy-about-content">
+        <div class="legacy-bio">{{ $author.bio | markdownify }}</div>
+        <div class="legacy-about-details">
+          <div>
+            <h2 class="section-subheading">Interests</h2>
+            <ul class="ul-interests">{{ range $author.interests }}<li>{{ . }}</li>{{ end }}</ul>
+          </div>
+          <div>
+            <h2 class="section-subheading">Education</h2>
+            <ul class="ul-edu">
+              {{ range $author.education }}
+                <li><i class="fas fa-graduation-cap" aria-hidden="true"></i><div class="description"><p class="course">{{ .course }}, {{ .year }}</p><p class="institution">{{ .institution }}</p></div></li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ range .Params.sections }}
+    {{ if and (ne .id "about") (ne .id "profiles") (ne .id "interests") (ne .id "education") }}
+      <section id="{{ .id }}" class="home-section legacy-home-section">
+        <div class="legacy-container legacy-section-grid">
+          <header class="section-heading"><h1>{{ .content.title }}</h1></header>
+          <div class="legacy-section-content">
+            {{ if or (eq .id "visits") (eq .id "experience") }}
+              {{ $entries := $legacy.experience }}
+              {{ if eq .id "visits" }}{{ $entries = $legacy.visits }}{{ end }}
+              <div class="experience-list">
+                {{ range $index, $entry := $entries }}
+                  <article class="experience-row{{ if eq $index (sub (len $entries) 1) }} is-last{{ end }}">
+                    <div class="experience-rail" aria-hidden="true"><span></span></div>
+                    <div class="experience-card">
+                      <h2 class="exp-title">{{ $entry.title }}</h2>
+                      <h3 class="exp-company">{{ with $entry.company_url }}<a href="{{ . }}">{{ $entry.company }}</a>{{ else }}{{ $entry.company }}{{ end }}</h3>
+                      <p class="exp-meta">{{ time.Format "Jan 2006" $entry.date_start }} – {{ with $entry.date_end }}{{ time.Format "Jan 2006" . }}{{ else }}Present{{ end }} <span class="middot-divider"></span> {{ $entry.location }}</p>
+                      <div class="exp-description">{{ $entry.description | markdownify }}</div>
+                    </div>
+                  </article>
+                {{ end }}
+              </div>
+            {{ else if eq .id "publications" }}
+              {{ $pages := where site.Pages "Kind" "page" }}
+              {{ $pages = where $pages "Section" "publications" }}
+              <div class="legacy-list publication-list">
+                {{ range $pages.ByDate.Reverse }}
+                  <article class="pub-list-item view-citation">
+                    <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                    <span class="li-cite-author">{{ delimit .Params.authors ", " }}.</span>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>.
+                    {{ with .Params.publication }}{{ with .name }}<strong>{{ . }}</strong>,{{ end }}{{ end }} {{ .Date.Format "2006" }}.
+                    {{ with .Params.links }}<span class="legacy-attachments">{{ range . }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}</span>{{ end }}
+                  </article>
+                {{ end }}
+              </div>
+              <p class="see-all"><a href="/publications/">View details <i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
+            {{ else if eq .id "presentations" }}
+              {{ $pages := where site.Pages "Kind" "page" }}
+              {{ $pages = where $pages "Section" "events" }}
+              <div class="stream-list">
+                {{ range first 5 $pages.ByDate.Reverse }}
+                  {{ $event := . }}
+                  <article class="media stream-item">
+                    <div class="media-body">
+                      <h2 class="section-subheading article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                      <div class="article-style">{{ .Params.summary }}</div>
+                      <div class="stream-meta article-metadata">
+                        {{ with .Params.event_start }}<div>{{ time.Format "Jan 2, 2006 15:04" . }}{{ with $event.Params.event_end }} – {{ time.Format "15:04" . }}{{ end }}{{ with $event.Params.location }} <span class="middot-divider"></span> {{ . }}{{ end }}</div>{{ end }}
+                        <div>{{ delimit .Params.authors ", " }}</div>
+                      </div>
+                      {{ with .Params.links }}<div class="btn-links">{{ range . }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}</div>{{ end }}
+                    </div>
+                    {{ $image := .Resources.GetMatch "featured*" }}
+                    {{ with $image }}{{ $thumb := .Resize "150x" }}<a class="stream-image" href="{{ $event.RelPermalink }}"><img src="{{ $thumb.RelPermalink }}" width="150" alt="{{ $event.Title }}" loading="lazy"></a>{{ end }}
+                  </article>
+                {{ end }}
+              </div>
+              <p class="see-all"><a href="/talk/">See all events <i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
+            {{ else if eq .id "teaching" }}
+              {{ $pages := where site.Pages "Kind" "page" }}
+              {{ $pages = where $pages "Section" "blog" }}
+              <div class="stream-list teaching-list">
+                {{ range first 5 $pages.ByDate.Reverse }}
+                  <article class="media stream-item">
+                    <div class="media-body">
+                      <h2 class="section-subheading article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                      <div class="article-style">{{ .Params.summary }}</div>
+                      <div class="stream-meta article-metadata">Michael Soprano <span class="middot-divider"></span> Last updated on {{ .Lastmod.Format "Jan 2, 2006" }} <span class="middot-divider"></span> teaching</div>
+                    </div>
+                  </article>
+                {{ end }}
+              </div>
+            {{ else if eq .id "contact" }}
+              <form class="legacy-contact-form" action="https://formspree.io/f/mjvpnjeb" method="POST">
+                <label><span class="sr-only">Name</span><input type="text" name="name" placeholder="Name" required></label>
+                <label><span class="sr-only">Email</span><input type="email" name="email" placeholder="Email" required></label>
+                <label><span class="sr-only">Message</span><textarea name="message" rows="5" placeholder="Message" required></textarea></label>
+                <button class="btn btn-outline-primary" type="submit">Send</button>
+              </form>
+              <ul class="contact-list">
+                <li><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:michael.soprano@uniud.it">michael.soprano@uniud.it</a></li>
+                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Via delle Scienze 206, Udine (Italy), 33100</span></li>
+                <li><i class="fas fa-compass" aria-hidden="true"></i><span>Rizzi Building, 2° Floor, South Node, Lab SMDC (LC2-04-DE), A2 32 Room</span></li>
+              </ul>
+            {{ else }}
+              <div class="legacy-markdown">{{ .content.text | markdownify }}</div>
+            {{ end }}
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+</main>
+{{ end }}
