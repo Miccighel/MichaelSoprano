@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;700&family=Lato:wght@300;400;700&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css");
-@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+@import url("/vendor/fonts/fonts.css");
+@import url("/vendor/fontawesome/css/all.min.css");
+@import url("/vendor/academicons/css/academicons.min.css");
+@import url("/vendor/leaflet/leaflet.css");
 
 /* Visual compatibility layer: it intentionally mirrors the legacy Wowchemy site
    while leaving HugoBlox responsible for content pages, search, and the build. */

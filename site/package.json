@@ -2,6 +2,28 @@
   "name": "michael-soprano-site",
   "private": true,
   "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": ">=24 <25",
+    "pnpm": "10.14.0"
+  },
+  "scripts": {
+    "vendor": "ruby scripts/vendor-assets.rb"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@fortawesome/fontawesome-free",
+      "@parcel/watcher"
+    ]
+  },
+  "devDependencies": {
+    "@fontsource/lato": "5.3.0",
+    "@fontsource/roboto": "5.3.0",
+    "@fontsource/roboto-mono": "5.3.0",
+    "@fortawesome/fontawesome-free": "5.15.4",
+    "academicons": "1.9.5",
+    "leaflet": "1.9.4",
+    "pagefind": "1.5.2"
+  },
   "dependencies": {
     "@tailwindcss/cli": "4.2.4",
     "@tailwindcss/typography": "0.5.19",

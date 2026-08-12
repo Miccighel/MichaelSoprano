@@ -1,9 +1,8 @@
 # Michael Soprano — HugoBlox website
 
-This directory is the canonical source of the HugoBlox website. It contains
-the complete profile, homepage, publications, presentations, teaching pages,
-and static assets while the legacy production tree remains frozen at the
-repository root.
+This directory is the canonical and self-contained source of the HugoBlox
+website. It contains the complete profile, homepage, publications,
+presentations, teaching pages, and static assets.
 
 ## Content structure
 
@@ -81,17 +80,24 @@ ruby site/scripts/audit-build.rb
 This second check scans every generated HTML page, verifies internal links,
 anchors, downloadable files, and search coverage, confirms that each
 publication, presentation, and teaching page was rendered exactly once, and
-compares the migrated content and bundle assets with the frozen legacy source.
+checks that the rendered content is complete and searchable.
+
+A scheduled CI run also checks external links once a week. It can be run
+locally after a production build with:
+
+```bash
+ruby site/scripts/check-external-links.rb
+```
 
 ## Local build
 
-Install the JavaScript dependencies once with `pnpm install`, then use Hugo
-Extended 0.164.0 or newer:
+Use Node.js 24, pnpm 10.14.0, and Hugo Extended 0.164.0:
 
 ```bash
 ./scripts/check-content.rb
+pnpm run vendor
 hugo --gc --minify --cleanDestinationDir
-npx --yes pagefind@1.5.2 --site public
+pnpm exec pagefind --site public
 cd .. && ruby site/scripts/audit-build.rb
 ```
 
@@ -99,13 +105,17 @@ The generated site is written to `public/`. Search indexing can be generated
 after the Hugo build with:
 
 ```bash
-npx --yes pagefind@1.5.2 --site public
+pnpm exec pagefind --site public
 ```
+
+`pnpm run vendor` prepares the pinned, self-hosted fonts, icon fonts, and
+Leaflet files in `static/vendor/`. That generated directory is intentionally
+ignored by Git and must be refreshed after dependency updates.
 
 ## CV PDFs
 
 The sibling LaTeX repository builds and copies the English and Italian CVs
-directly into the correct legacy and HugoBlox static directories:
+directly into the canonical static directory:
 
 ```bash
 cd ../../LaTeX
@@ -114,7 +124,6 @@ cd ../../LaTeX
 
 ## CI preview and deployment
 
-The `HugoBlox preview` workflow validates and builds this directory on the
-migration branch, generates the Pagefind index, and uploads a 14-day preview
-artifact. It does not deploy to GitHub Pages, so the current production site
-and custom domain remain unchanged until the migration is explicitly promoted.
+The website workflow validates and builds every pull request and `master`
+update, generates the Pagefind index, and retains a short-lived preview
+artifact. Only a successful push to `master` can deploy to GitHub Pages.

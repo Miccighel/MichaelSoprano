@@ -74,8 +74,8 @@ sections:
       - 2026 Conference on Empirical Methods in Natural Language Processing (*EMNLP 2026*), Budapest, Hungary
       - 19th ACM International Conference on Web Search and Data Mining (*WSDM 2026*)
       - *Umanistica Digitale* - Italian Journal of Digital Humanities, ISSN 2532-8816, 2025. [Website](https://umanisticadigitale.unibo.it/)
-      - *International Journal on Digital Libraries* (*IJDL*), 2025. [Website](https://www.springer.com/journal/799)
-      - *Data Science and Engineering*, 2025. [Website](https://www.springer.com/journal/41019)
+      - *International Journal on Digital Libraries* (*IJDL*), 2025. [Website](https://link.springer.com/journal/799)
+      - *Data Science and Engineering*, 2025. [Website](https://link.springer.com/journal/41019)
       - *Information Processing & Management*, 2023. Review activity recorded on ORCID
       - *Scientific Reports*, 2023. [Website](https://www.nature.com/srep/)
       - 13th Italian Information Retrieval Workshop (*IIR 2023*), Pisa, Italy

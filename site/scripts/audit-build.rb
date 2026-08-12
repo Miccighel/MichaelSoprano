@@ -3,7 +3,6 @@
 
 require 'cgi'
 require 'date'
-require 'digest'
 require 'json'
 require 'pathname'
 require 'time'
@@ -11,28 +10,30 @@ require 'uri'
 require 'yaml'
 
 SITE_ROOT = File.expand_path('..', __dir__)
-REPOSITORY_ROOT = File.expand_path('..', SITE_ROOT)
 PUBLIC_ROOT = File.join(SITE_ROOT, 'public')
 PRODUCTION_HOSTS = %w[michaelsoprano.com www.michaelsoprano.com].freeze
 
 SECTIONS = {
   'publications' => {
-    legacy: 'publication',
     public: 'publication',
+    archive: 'publication',
     marker: 'legacy-publication-single',
-    shared_fields: %w[title subtitle summary authors tags categories abstract projects featured draft]
+    archive_marker: 'legacy-publication-archive',
+    item_marker: 'pub-list-item view-citation'
   },
   'events' => {
-    legacy: 'event',
     public: 'talk',
+    archive: 'event',
     marker: 'legacy-event-single',
-    shared_fields: %w[title subtitle summary authors tags categories projects featured draft]
+    archive_marker: 'legacy-event-archive',
+    item_marker: 'media stream-item'
   },
   'blog' => {
-    legacy: 'post',
     public: 'post',
+    archive: 'post',
     marker: 'legacy-blog-single',
-    shared_fields: %w[title subtitle summary authors tags categories projects featured draft]
+    archive_marker: 'legacy-blog-archive',
+    item_marker: 'media stream-item'
   }
 }.freeze
 
@@ -165,8 +166,27 @@ html_paths.each do |path|
     .gsub(/<style\b.*?<\/style>/mi, ' ')
 
   errors << "#{relative}: missing or empty <title>" unless html.match?(/<title>\s*[^<]+\s*<\/title>/i)
+  html_tag = html[/<html\b[^>]*>/i].to_s
+  errors << "#{relative}: missing document language" if !alias_page && attribute_values(html_tag, %w[lang]).all?(&:empty?)
+  has_viewport = html.scan(/<meta\b[^>]*>/i).any? do |meta|
+    attribute_values(meta, %w[name]).any? { |name| name.casecmp('viewport').zero? }
+  end
+  errors << "#{relative}: missing viewport metadata" if !alias_page && !has_viewport
   errors << "#{relative}: unresolved Hugo template expression" if html.match?(/\{\{[<%\s.]/)
   errors << "#{relative}: page has no readable content" if !alias_page && relative != '404.html' && text.length < 40
+
+  document_ids = attribute_values(html, %w[id])
+  duplicate_ids = document_ids.group_by(&:itself).select { |_id, values| values.length > 1 }.keys
+  duplicate_ids.each { |id| errors << "#{relative}: duplicate id #{id.inspect}" }
+
+  html.scan(/<img\b[^>]*>/i).each do |image|
+    errors << "#{relative}: image is missing an alt attribute" if attribute_values(image, %w[alt]).empty?
+  end
+
+  html.scan(/<a\b[^>]*\btarget\s*=\s*["']?_blank["']?[^>]*>/i).each do |anchor|
+    rel_values = attribute_values(anchor, %w[rel]).flat_map { |value| value.downcase.split }
+    errors << "#{relative}: external-window link is missing rel=noopener" unless rel_values.include?('noopener')
+  end
 
   href_references = attribute_values(link_markup, %w[href])
   references = href_references + attribute_values(link_markup, %w[src poster data-cite-url])
@@ -226,65 +246,8 @@ Dir.glob(File.join(PUBLIC_ROOT, '**', '*.css')).sort.each do |path|
 end
 
 SECTIONS.each do |section, config|
-  legacy_root = File.join(REPOSITORY_ROOT, 'content', config[:legacy])
   current_root = File.join(SITE_ROOT, 'content', section)
-  legacy_pages = Dir.glob(File.join(legacy_root, '*', 'index.md')).sort
   current_pages = Dir.glob(File.join(current_root, '*', 'index.md')).sort
-  legacy_slugs = legacy_pages.to_h { |path| [File.basename(File.dirname(path)), path] }
-  current_slugs = current_pages.to_h { |path| [File.basename(File.dirname(path)), path] }
-
-  (legacy_slugs.keys - current_slugs.keys).each { |slug| errors << "#{section}: missing migrated item #{slug}" }
-  (current_slugs.keys - legacy_slugs.keys).each { |slug| warnings << "#{section}: new item without legacy counterpart #{slug}" }
-
-  (legacy_slugs.keys & current_slugs.keys).sort.each do |slug|
-    legacy_path = legacy_slugs.fetch(slug)
-    current_path = current_slugs.fetch(slug)
-    legacy_data, legacy_body = load_page(legacy_path)
-    current_data, current_body = load_page(current_path)
-
-    config[:shared_fields].each do |field|
-      next if normalized(legacy_data[field]) == normalized(current_data[field])
-
-      errors << "#{section}/#{slug}: migrated #{field} differs from legacy source"
-    end
-    errors << "#{section}/#{slug}: migrated body differs from legacy source" unless normalized(legacy_body) == normalized(current_body)
-
-    if section == 'publications'
-      legacy_venue = legacy_data['publication']
-      current_venue = current_data.dig('publication', 'name')
-      errors << "#{section}/#{slug}: publication venue differs" unless normalized(legacy_venue) == normalized(current_venue)
-
-      legacy_doi = legacy_data['doi']
-      current_doi = current_data.dig('hugoblox', 'ids', 'doi')
-      errors << "#{section}/#{slug}: DOI differs" unless normalized(legacy_doi) == normalized(current_doi)
-    elsif section == 'events'
-      {
-        'event' => 'event_name',
-        'event_url' => 'event_url',
-        'location' => 'location',
-        'date' => 'event_start',
-        'date_end' => 'event_end',
-        'all_day' => 'event_all_day'
-      }.each do |legacy_field, current_field|
-        next if normalized(legacy_data[legacy_field]) == normalized(current_data[current_field])
-
-        errors << "#{section}/#{slug}: migrated #{current_field} differs from legacy #{legacy_field}"
-      end
-    end
-
-    legacy_assets = Dir.glob(File.join(File.dirname(legacy_path), '**', '*'), File::FNM_DOTMATCH).select { |item| File.file?(item) && File.basename(item) != 'index.md' }
-    legacy_assets.each do |legacy_asset|
-      relative_asset = Pathname.new(legacy_asset).relative_path_from(Pathname.new(File.dirname(legacy_path))).to_s
-      current_asset = File.join(File.dirname(current_path), relative_asset)
-      if !File.file?(current_asset)
-        errors << "#{section}/#{slug}: missing bundle asset #{relative_asset}"
-      elsif Digest::SHA256.file(legacy_asset) != Digest::SHA256.file(current_asset)
-        errors << "#{section}/#{slug}: bundle asset differs #{relative_asset}"
-      end
-    end
-  rescue StandardError => e
-    errors << "#{section}/#{slug}: #{e.message}"
-  end
 
   public_section_root = File.join(PUBLIC_ROOT, config[:public])
   rendered_pages = html_paths.select do |path|
@@ -352,11 +315,9 @@ if File.file?(home_html) && !File.binread(home_html).match?(/\bdata-pagefind-bod
   errors << 'index.html: homepage is excluded from the search index'
 end
 
-[
-  ['publication/index.html', 'legacy-publication-archive', 'pub-list-item view-citation', 38],
-  ['event/index.html', 'legacy-event-archive', 'media stream-item', 16],
-  ['post/index.html', 'legacy-blog-archive', 'media stream-item', 3]
-].each do |relative_path, archive_marker, item_marker, expected_items|
+SECTIONS.each do |section, config|
+  relative_path = File.join(config[:archive], 'index.html')
+  expected_items = Dir.glob(File.join(SITE_ROOT, 'content', section, '*', 'index.md')).length
   path = File.join(PUBLIC_ROOT, relative_path)
   unless File.file?(path)
     errors << "missing archive page #{relative_path}"
@@ -364,8 +325,8 @@ end
   end
 
   html = File.binread(path).force_encoding(Encoding::UTF_8)
-  errors << "#{relative_path}: wrong archive template" unless html.include?(archive_marker)
-  rendered_items = html.scan(item_marker).length
+  errors << "#{relative_path}: wrong archive template" unless html.include?(config[:archive_marker])
+  rendered_items = html.scan(config[:item_marker]).length
   errors << "#{relative_path}: rendered #{rendered_items} items, expected #{expected_items}" unless rendered_items == expected_items
 end
 
@@ -395,7 +356,7 @@ errors.uniq!
 warnings.uniq!
 
 puts "Generated site audited: #{html_paths.length} HTML pages, #{asset_paths.length} files, #{referenced_internal_paths.length} unique internal targets."
-puts "Content parity audited: #{SECTIONS.keys.map { |section| "#{Dir.glob(File.join(SITE_ROOT, 'content', section, '*', 'index.md')).length} #{section}" }.join(', ')}."
+puts "Source content audited: #{SECTIONS.keys.map { |section| "#{Dir.glob(File.join(SITE_ROOT, 'content', section, '*', 'index.md')).length} #{section}" }.join(', ')}."
 warnings.each { |warning| warn "WARNING: #{warning}" }
 
 if errors.empty?

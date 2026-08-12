@@ -1,58 +1,62 @@
 # Michael Soprano — personal website
 
-Static academic website for [michaelsoprano.com](https://michaelsoprano.com), built with Hugo and the Wowchemy Academic theme.
+Source for [michaelsoprano.com](https://michaelsoprano.com), built with HugoBlox.
+The canonical website is entirely contained in [`site/`](site/); the previous
+Wowchemy implementation remains available through the dedicated rollback
+branches and is not duplicated in the current source tree.
 
-## HugoBlox branch
+## Quick start
 
-On `codex/hugo-wowchemy-upgrade`, the canonical source of all new content is
-the `site/` directory. The legacy source tree at the repository
-root is retained as a frozen reference until the migration is promoted; do not
-add new publications, events, or teaching pages there.
+Requirements:
 
-The complete authoring workflow, content locations, validation command, and
-local build instructions are documented in
-[`site/README.md`](site/README.md).
-
-## Requirements
-
-- Hugo Extended 0.87.0
-- Go, to resolve the Hugo modules on the first build
-
-## Local development
+- Node.js 24
+- pnpm 10.14.0
+- Hugo Extended 0.164.0
+- Go, for Hugo modules
 
 ```bash
-hugo server --disableFastRender --i18n-warnings
+cd site
+pnpm install --frozen-lockfile
+pnpm run vendor
+./scripts/check-content.rb
+hugo server --disableFastRender
 ```
 
-The generated site is written to `public/`, which is intentionally ignored by Git.
+For content authoring, homepage settings, complete validation, and CV
+synchronization, see [`site/README.md`](site/README.md).
 
-## Build
+## Production build
 
 ```bash
-hugo --gc --minify --cleanDestinationDir
+cd site
+pnpm install --frozen-lockfile
+pnpm run vendor
+./scripts/check-content.rb
+hugo --destination public --gc --minify --cleanDestinationDir
+pnpm exec pagefind --site public
+cd ..
+ruby site/scripts/audit-build.rb
 ```
 
-The source content lives in `content/`; static files such as CVs, slides, posters, and theses live in `static/media/`. Theme colors and fonts are configured in `data/`, while local presentation overrides are in `assets/scss/` and `layouts/`.
+Generated files and local dependency caches are intentionally ignored by Git.
 
-## Deployment
+## Deployment and rollback
 
-Pushing to `hugo-version` runs [the GitHub Pages workflow](.github/workflows/gh-pages.yml), which builds the site and publishes the generated output to `gh-pages`.
-
-`netlify.toml` is retained for compatibility with Netlify-based previews and the bundled Wowchemy CMS.
+The validated build workflow publishes `master` to GitHub Pages. Pull requests
+and development branches run the same validation without changing production.
+The former site is preserved in `hugo-version`, and the previously published
+output is preserved in `codex/legacy-gh-pages-2026-08-09`.
+The complete recovery procedure is documented in
+[`docs/ROLLBACK.md`](docs/ROLLBACK.md).
 
 ## CV PDFs
 
-The PDF sources are maintained in the sibling `../LaTeX` project. Its build
-script can compile and synchronize both website source trees in one command:
+The LaTeX sources are maintained in the sibling `../LaTeX` repository. Build
+and synchronize both language versions with:
 
 ```bash
 cd ../LaTeX
 ./build_all.sh --sync-website ../Website
 ```
 
-The resulting files are stored at:
-
-- `static/media/CVs/Curriculum_Vitae_EN.pdf`
-- `static/media/CVs/Curriculum_Vitae_IT.pdf`
-- `site/static/media/CVs/Curriculum_Vitae_EN.pdf`
-- `site/static/media/CVs/Curriculum_Vitae_IT.pdf`
+This updates only the canonical files in `site/static/media/CVs/`.
