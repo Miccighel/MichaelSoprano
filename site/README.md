@@ -53,6 +53,8 @@ lower-frequency topics can be included in `data/home.yaml`.
 - `content/_index.md` contains the section order and the editable text for
   bibliometrics, academic activity, and honors.
 - `config/_default/menus.yaml` contains the navigation menu.
+- `assets/media/icon.png` is the favicon and default social preview image;
+  `static/favicon.ico` is its compatibility fallback.
 
 These are the only canonical homepage sources; no generated legacy data file
 or synchronization step is required.

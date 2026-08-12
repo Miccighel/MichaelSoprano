@@ -154,6 +154,16 @@ end
 html_paths = Dir.glob(File.join(PUBLIC_ROOT, '**', '*.html')).sort
 asset_paths = Dir.glob(File.join(PUBLIC_ROOT, '**', '*'), File::FNM_DOTMATCH).select { |path| File.file?(path) }
 errors << 'no generated HTML pages found' if html_paths.empty?
+errors << 'favicon.ico: missing generated compatibility favicon' unless File.file?(File.join(PUBLIC_ROOT, 'favicon.ico'))
+
+home_path = File.join(PUBLIC_ROOT, 'index.html')
+if File.file?(home_path)
+  home_html = File.binread(home_path).force_encoding(Encoding::UTF_8)
+  favicon_links = home_html.scan(/<link\b[^>]*>/i).select do |link|
+    attribute_values(link, %w[rel]).flat_map { |value| value.downcase.split }.include?('icon')
+  end
+  errors << 'index.html: missing favicon link' if favicon_links.empty?
+end
 
 referenced_internal_paths = {}
 html_paths.each do |path|

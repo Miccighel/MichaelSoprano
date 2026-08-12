@@ -35,6 +35,20 @@ errors = []
 warnings = []
 counts = {}
 
+icon_path = File.join(ROOT, 'assets', 'media', 'icon.png')
+if !File.file?(icon_path)
+  errors << 'assets/media/icon.png: missing favicon source'
+elsif File.size(icon_path).zero?
+  errors << 'assets/media/icon.png: favicon source is empty'
+end
+
+fallback_icon_path = File.join(ROOT, 'static', 'favicon.ico')
+if !File.file?(fallback_icon_path)
+  errors << 'static/favicon.ico: missing compatibility favicon'
+elsif File.size(fallback_icon_path).zero?
+  errors << 'static/favicon.ico: compatibility favicon is empty'
+end
+
 SECTIONS.each do |section, required_fields|
   paths = Dir.glob(File.join(ROOT, 'content', section, '*', 'index.md')).sort
   counts[section] = paths.length
