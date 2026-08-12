@@ -1,0 +1,42 @@
+title: ''
+baseURL: 'https://michaelsoprano.com/'
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+removePathAccents: true
+
+build:
+  writeStats: true
+enableGitInfo: true
+summaryLength: 30
+pagination:
+  pagerSize: 10
+enableEmoji: true
+enableRobotsTXT: true
+disableAliases: true
+outputs:
+  home: [HTML, RSS]
+  section: [HTML, RSS]
+permalinks:
+  publications: '/publication/:contentbasename/'
+  events: '/talk/:slug/'
+  blog: '/post/:slug/'
+  tags: '/tag/:slug/'
+  categories: '/category/:slug/'
+  publication_types: '/publication-type/:slug/'
+taxonomies:
+  author: authors
+  tag: tags
+  category: categories
+  publication_type: publication_types
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    lineNos: false
+imaging:
+  resampleFilter: lanczos
+  quality: 90
+  anchor: smart
+timeout: 600000

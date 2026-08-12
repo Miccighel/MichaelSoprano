@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ $pages := where site.RegularPages "Section" "events" }}
+<main class="legacy-archive legacy-event-archive">
+  <h1>Talks</h1>
+  {{ range ($pages.ByDate.Reverse.GroupByDate "2006") }}
+    <section class="legacy-year-group">
+      <h2>{{ .Key }}</h2>
+      <div class="stream-list">
+        {{ range .Pages }}
+          {{ $event := . }}
+          <article class="media stream-item">
+            <div class="media-body">
+              <h3 class="section-subheading article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              <div class="article-style">{{ .Params.summary }}</div>
+              <div class="stream-meta article-metadata">
+                {{ with .Params.event_start }}<div>{{ time.Format "Jan 2, 2006 15:04" . }}{{ with $event.Params.event_end }} — {{ time.Format "15:04" . }}{{ end }}{{ with $event.Params.location }} <span class="middot-divider"></span> {{ . }}{{ end }}</div>{{ end }}
+                <div>{{ delimit .Params.authors ", " }}</div>
+              </div>
+              {{ with .Params.links }}<div class="btn-links">{{ range . }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}</div>{{ end }}
+            </div>
+            {{ $image := .Resources.GetMatch "featured*" }}
+            {{ with $image }}{{ $thumb := .Resize "150x" }}<a class="stream-image" href="{{ $event.RelPermalink }}"><img src="{{ $thumb.RelPermalink }}" width="150" alt="{{ $event.Title }}" loading="lazy"></a>{{ end }}
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+</main>
+{{ end }}

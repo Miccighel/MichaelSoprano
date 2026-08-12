@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{ $pages := where site.RegularPages "Section" "blog" }}
+<main class="legacy-archive legacy-blog-archive">
+  <h1>Teaching</h1>
+  <div class="stream-list teaching-list">
+    {{ range $pages.ByDate.Reverse }}
+      <article class="media stream-item">
+        <div class="media-body">
+          <h2 class="section-subheading article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <div class="article-style">{{ .Params.summary }}</div>
+          <div class="stream-meta article-metadata">Michael Soprano <span class="middot-divider"></span> Last updated on {{ time.Format "Jan 2, 2006" .Params.lastmod }} <span class="middot-divider"></span> teaching</div>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</main>
+{{ end }}

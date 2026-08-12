@@ -1,0 +1,14 @@
+imports:
+  - path: github.com/HugoBlox/kit/modules/blox
+
+mounts:
+  - source: assets
+    target: assets
+  - source: content
+    target: content
+  - source: data
+    target: data
+  - source: layouts
+    target: layouts
+  - source: static
+    target: static

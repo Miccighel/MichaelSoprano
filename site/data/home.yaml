@@ -1,0 +1,199 @@
+---
+author:
+  title: Michael Soprano
+  role: Researcher
+  organizations:
+  - name: University of Udine
+    url: https://www.uniud.it/en
+  interests:
+  - Human Computation
+  - Crowdsourcing
+  - Information Retrieval
+  - Large Language Models
+  education:
+  - course: PhD in Computer Science and Mathematical and Physical Sciences, Cum Laude
+    institution: University of Udine, Udine, Italy.
+    year: Nov. 2019 - Jan. 2023
+  - course: Master's Degree in Computer Science, 109/110
+    institution: University of Udine, Udine, Italy.
+    year: Mar. 2015 - Mar. 2018
+  - course: Bachelor's Degree in Web Technologies and Multimedia, 101/110
+    institution: University of Udine, Udine, Italy.
+    year: Oct. 2011 - Mar. 2015
+  - course: Technical High School Diploma in Computer Science, 77/100
+    institution: I.S.I.S. Raimondo D’Aronco, Gemona del Friuli, Italy.
+    year: Oct. 2006 - Jun. 2011
+  social:
+  - icon: envelope
+    icon_pack: fas
+    link: "/#contact"
+  - icon: orcid
+    icon_pack: fab
+    link: https://orcid.org/0000-0002-7337-7592
+  - icon: google-scholar
+    icon_pack: ai
+    link: https://scholar.google.it/citations?user=ocK0qRUAAAAJ&hl=en
+  - icon: semantic-scholar
+    icon_pack: ai
+    link: https://www.semanticscholar.org/author/Michael-Soprano/51006308
+  - icon: dblp
+    icon_pack: ai
+    link: https://dblp.org/pid/222/1241.html
+  - icon: acm
+    icon_pack: ai
+    link: https://dl.acm.org/profile/99659280921
+  - icon: arxiv
+    icon_pack: ai
+    link: https://arxiv.org/a/soprano_m_1
+  - icon: osf
+    icon_pack: ai
+    link: https://osf.io/fmx3s/
+  - icon: researchgate
+    icon_pack: fab
+    link: https://www.researchgate.net/profile/Michael-Soprano
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/Miccighel
+  - icon: linkedin
+    icon_pack: fab
+    link: https://www.linkedin.com/in/michaelsoprano/
+  - icon: goodreads
+    icon_pack: fab
+    link: https://www.goodreads.com/user/show/53180193-michael-soprano
+  - icon: lastfm
+    icon_pack: fab
+    link: https://www.last.fm/it/user/Miccighel
+  - icon: instagram
+    icon_pack: fab
+    link: https://www.instagram.com/miccighel/
+  - icon: 500px
+    icon_pack: fab
+    link: https://500px.com/p/miccighel
+  - icon: flickr
+    icon_pack: fab
+    link: https://www.flickr.com/photos/jooforge/
+  - icon: steam
+    icon_pack: fab
+    link: https://steamcommunity.com/id/miccighel
+  bio: |-
+    Welcome to my personal webpage. I am a Researcher at the University of Udine and a member of the [Social, Mobile, Data & Crowd Laboratory](https://smdc.uniud.it/smdc/en/members/). I hold a PhD in Computer Science and Mathematical and Physical Sciences.
+
+    My research interests include Human Computation, Crowdsourcing, Information Retrieval, and Large Language Models. My current work focuses in particular on the use of crowdsourcing to address the growing challenge of misinformation.
+
+    You can download my Curriculum Vitae in [English](/media/CVs/Curriculum_Vitae_EN.pdf) or [Italian](/media/CVs/Curriculum_Vitae_IT.pdf). You can also explore my [PhD thesis](https://doi.org/10.48550/arXiv.2506.09221), together with my [Master's](/media/theses/masterThesis.pdf), [Bachelor's](/media/theses/bachelorThesis.pdf), and [High School](/media/theses/highSchoolThesis.pdf) theses (in Italian).
+visits:
+- title: Visiting PhD Student
+  company: Centrum Wiskunde & Informatica (CWI), Human-Centered Data Analytics (HCDA)
+    Group
+  company_url: https://www.cwi.nl/
+  location: Amsterdam, the Netherlands
+  date_start: '2022-03-20'
+  date_end: '2022-07-20'
+  description: Research visit carried out during the PhD programme.
+experience:
+- title: Postdoctoral Researcher
+  company: Department of Mathematics, Computer Science and Physics (DMIF), University
+    of Udine
+  company_url: https://www.dmif.uniud.it/en/
+  location: Udine, Italy
+  date_start: '2025-06-01'
+  description: |-
+    Research contract pursuant to Article 22 of Law 240/2010, under the University Regulation approved on April 30, 2025.
+    Research on information and disinformation, with a focus on the automatic evaluation of information truthfulness, experimentation with detection models, and the definition of evaluation metrics.
+- title: Self-employed Worker
+  company: Department of Economic and Statistical Sciences (DIES), University of Udine
+  company_url: https://dies.uniud.it/it
+  location: Udine, Italy
+  date_start: '2025-03-15'
+  date_end: '2025-05-15'
+  description: |-
+    Design, implementation, and evaluation of a conversational system for accessing regional public healthcare services.
+    Activities included prototype development, experimental evaluation, and data analysis within the interdepartmental project "Governance and Digital Public Administration".
+- title: Postdoctoral Researcher
+  company: Department of Mathematics, Computer Science and Physics (DMIF), University
+    of Udine
+  company_url: https://www.dmif.uniud.it/en/
+  location: Udine, Italy
+  date_start: '2023-12-01'
+  date_end: '2025-05-31'
+  description: |-
+    Research activity within the PRIN 2022 project "The Measure of Truth: An Evaluation-Centered Machine-Human Hybrid Framework for Assessing Information Truthfulness" (Code 20227F2ZN3, CUP G53D23002800006), funded by the European Union, NextGenerationEU, PNRR M4 C2 I1.1.
+    Definition of an evaluation framework for misinformation detection systems, including the creation of labelled datasets, bias prevention, and truthfulness-oriented evaluation metrics.
+- title: Postdoctoral Researcher
+  company: Department of Economic and Statistical Sciences (DIES), University of Udine
+  company_url: https://dies.uniud.it/it
+  location: Udine, Italy
+  date_start: '2023-03-01'
+  date_end: '2023-11-30'
+  description: Research on e-government applications based on conversational agents
+    for the Italian public administration, with particular emphasis on the healthcare
+    domain.
+- title: Self-employed Worker
+  company: Polytechnic Department of Engineering and Architecture (DPIA), University
+    of Udine
+  company_url: https://dpia.uniud.it/it
+  location: Udine, Italy
+  date_start: '2022-01-01'
+  date_end: '2022-03-15'
+  description: Development of a web application supporting the comparability and reproducibility
+    of research results in combinatorial optimization.
+- title: Research Fellow
+  company: Department of Mathematics, Computer Science and Physics (DMIF), University
+    of Udine
+  company_url: https://www.uniud.it/en
+  location: Udine, Italy
+  date_start: '2018-06-15'
+  date_end: '2019-10-30'
+  description: Research project co-funded by SISSA Medialab on the design, implementation,
+    and evaluation of an ecosystem providing an alternative to traditional peer review
+    in scholarly publishing.
+- title: Self-employed Worker
+  company: Datamantix S.r.l.
+  company_url: https://datamantix.com/
+  location: Udine, Italy
+  date_start: '2017-06-01'
+  date_end: '2019-02-25'
+  description: Design, development, and maintenance of several web applications and
+    a chatbot as a full-stack developer.
+- title: Self-employed Worker
+  company: Archeido S.r.l.
+  company_url: https://archeido.com/
+  location: Udine, Italy
+  date_start: '2017-08-01'
+  date_end: '2018-02-25'
+  description: Development, as a full-stack developer, of a web application for the
+    management and visualization of financial assets.
+- title: Self-employed Worker
+  company: Troublezine
+  location: Udine, Italy
+  date_start: '2015-11-01'
+  date_end: '2016-02-25'
+  description: Design, development, and maintenance of a blog on music news and events
+    as a full-stack web developer.
+topics:
+  minimum_count: 3
+  include:
+  - amazon-mechanical-turk
+  - argument-type-identification
+  - audiovisual-deepfakes
+  labels:
+    amazon-mechanical-turk: Amazon Mechanical Turk
+    argument-type-identification: argument type identification
+    audiovisual-deepfakes: audiovisual deepfakes
+    benchmarks: benchmarks
+    bias: bias
+    crowdsourcing: crowdsourcing
+    explainability: explainability
+    fact-checking: fact-checking
+    hits: HITS
+    large-language-models: large language models
+    misinformation: misinformation
+    network-analysis: Network Analysis
+    peer-review: peer review
+    public-administration: public administration
+    readersourcing: readersourcing
+    scholarly-publishing: scholarly publishing
+    scoping-reviews: scoping reviews
+    teaching: Teaching
+    truthfulness: truthfulness
+    truthfulness-assessment: truthfulness assessment

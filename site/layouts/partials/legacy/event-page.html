@@ -1,0 +1,20 @@
+<div class="legacy-single legacy-event-single pub" data-pagefind-body>
+  <header class="article-container legacy-article-header">
+    <h1>{{ .Title }}</h1>
+    <div class="article-metadata"><div>{{ range $index, $author := .Params.authors }}{{ if $index }}, {{ end }}<span>{{ $author }}</span>{{ end }}</div></div>
+    {{ partial "legacy/page-buttons.html" . }}
+  </header>
+
+  {{ $image := .Resources.GetMatch "featured*" }}
+  {{ with $image }}{{ $hero := .Resize "720x" }}<div class="article-header article-container featured-image-wrapper"><img src="{{ $hero.RelPermalink }}" class="featured-image" alt="{{ $.Title }}"></div>{{ end }}
+
+  <div class="article-container legacy-article-body">
+    {{ with .Params.event_start }}<div class="legacy-detail-row"><div class="pub-row-heading">Date</div><div>{{ time.Format "Jan 2, 2006 15:04" . }}{{ with $.Params.event_end }} &mdash; {{ time.Format "15:04" . }}{{ end }}</div></div>{{ end }}
+    {{ with .Params.event_name }}<div class="legacy-detail-row"><div class="pub-row-heading">Event</div><div>{{ with $.Params.event_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ . }}{{ with $.Params.event_url }}</a>{{ end }}</div></div>{{ end }}
+    {{ with .Params.location }}<div class="legacy-detail-row"><div class="pub-row-heading">Location</div><div>{{ . }}</div></div>{{ end }}
+    <div class="article-style">{{ .Content }}</div>
+    {{ partial "legacy/tags.html" . }}
+    {{ partial "legacy/share.html" . }}
+    {{ partial "legacy/related.html" . }}
+  </div>
+</div>

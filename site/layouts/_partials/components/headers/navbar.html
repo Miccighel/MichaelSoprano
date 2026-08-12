@@ -1,0 +1,46 @@
+{{ $identity := site.Params.hugoblox.identity }}
+{{ $header := site.Params.hugoblox.header }}
+{{ $showSearch := $header.search | default false }}
+<header id="site-header" class="header">
+  <nav class="navbar legacy-navbar" aria-label="Primary navigation">
+    <div class="legacy-navbar-brand-wrap legacy-navbar-brand-desktop">
+      <a class="navbar-brand" href="{{ site.Home.RelPermalink }}" title="{{ $identity.name }}">{{ $identity.name }}</a>
+    </div>
+
+    <input id="nav-toggle" type="checkbox" aria-hidden="true">
+    <label for="nav-toggle" class="legacy-navbar-toggle" aria-label="Toggle navigation">
+      <svg id="show-button" viewBox="0 0 20 20" aria-hidden="true"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
+      <svg id="hide-button" viewBox="0 0 20 20" aria-hidden="true"><path d="m3.4 2 14.6 14.6-1.4 1.4L2 3.4z"></path><path d="M16.6 2 2 16.6 3.4 18 18 3.4z"></path></svg>
+    </label>
+
+    <div class="legacy-navbar-brand-wrap legacy-navbar-brand-mobile">
+      <a class="navbar-brand" href="{{ site.Home.RelPermalink }}" title="{{ $identity.name }}">{{ $identity.name }}</a>
+    </div>
+
+    <ul id="nav-menu" class="navbar-nav legacy-navbar-menu">
+      {{ range site.Menus.main }}
+        {{ $url := .URL }}
+        {{ if eq .Name "CV" }}{{ $url = "/media/CVs/Curriculum_Vitae_EN.pdf" }}{{ end }}
+        <li class="nav-item">
+          <a class="nav-link{{ if and $.IsHome (eq .Name "Home") }} active{{ end }}" href="{{ $url | safeURL }}"{{ if findRE `^https?://` $url }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+
+    <div class="legacy-navbar-controls">
+      {{ if $showSearch }}
+        <button aria-label="Search" class="legacy-header-button" data-search-toggle>
+          <svg width="16" height="16" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8.0 45.3s-32.8 12.5-45.3.0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9.0 208S93.1.0 208 0s208 93.1 208 208zM208 352a144 144 0 100-288 144 144 0 100 288z"></path></svg>
+        </button>
+      {{ end }}
+      {{ if ($header.theme_toggle | default true) }}
+        <button class="theme-toggle legacy-header-button" accesskey="t" title="Appearance" aria-label="Display preferences">
+          <svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="block dark:hidden"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+          <svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden dark:block"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
+        </button>
+      {{ end }}
+    </div>
+  </nav>
+</header>
+
+{{ if $showSearch }}{{ partial "components/search-modal.html" . }}{{ end }}

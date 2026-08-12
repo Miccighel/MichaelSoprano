@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="legacy-single legacy-blog-single article" data-pagefind-body>
+  <header class="article-container legacy-article-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="page-subtitle">{{ replace . "'" "’" }}</p>{{ end }}
+    <div class="article-metadata">
+      <div><span class="author-highlighted">Michael Soprano</span></div>
+      <span class="article-date">Last updated on {{ time.Format "Jan 2, 2006" .Params.lastmod }}</span>
+      {{ with .GetTerms "categories" }}<span class="middot-divider"></span><span class="article-categories"><i class="fas fa-folder" aria-hidden="true"></i> {{ range $index, $category := . }}{{ if $index }}, {{ end }}<a href="{{ $category.RelPermalink }}">{{ lower $category.LinkTitle }}</a>{{ end }}</span>{{ end }}
+    </div>
+  </header>
+  <div class="article-container legacy-article-body">
+    <div class="article-style">{{ .Content }}</div>
+    {{ partial "legacy/tags.html" . }}
+    {{ partial "legacy/share.html" . }}
+    {{ partial "legacy/author-card.html" . }}
+    {{ partial "legacy/related.html" . }}
+  </div>
+</article>
+{{ end }}

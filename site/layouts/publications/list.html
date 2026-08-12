@@ -1,0 +1,65 @@
+{{ define "main" }}
+{{ $pages := where site.RegularPages "Section" "publications" }}
+{{ $pages = sort (sort $pages "Title" "asc") "Date" "desc" }}
+<main class="legacy-archive legacy-publication-archive">
+  <h1>Publications</h1>
+  <span id="1" class="sr-only" aria-hidden="true">Conference papers</span>
+  <span id="2" class="sr-only" aria-hidden="true">Journal articles</span>
+  <div class="legacy-publication-filters" aria-label="Publication filters">
+    <label><span class="sr-only">Search publications</span><input id="publication-search" type="search" placeholder="Search..."></label>
+    <label><span class="sr-only">Publication type</span><select id="publication-type-filter"><option value="">Type</option><option value="paper-conference">Conference paper</option><option value="article-journal">Journal article</option></select></label>
+    <label><span class="sr-only">Publication year</span><select id="publication-year-filter"><option value="">Date</option>{{ range ($pages.GroupByDate "2006") }}<option value="{{ .Key }}">{{ .Key }}</option>{{ end }}</select></label>
+  </div>
+
+  <div id="publication-archive-list" class="legacy-list publication-list">
+    {{ range $pages }}
+      {{ $publication := . }}
+      {{ $type := index .Params.publication_types 0 | default "" }}
+      <article class="pub-list-item view-citation" data-title="{{ .Title | lower }}" data-authors="{{ delimit .Params.authors ", " | lower }}" data-type="{{ $type }}" data-year="{{ .Date.Format "2006" }}">
+        <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <div class="li-cite-author">{{ delimit .Params.authors ", " }}</div>
+        <span class="legacy-attachments">
+          {{ range .Params.links }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}
+          <button class="btn btn-outline-primary btn-sm legacy-cite" type="button" data-cite-url="{{ $publication.RelPermalink }}cite.bib">Cite</button>
+          {{ with .Params.hugoblox }}{{ with .ids }}{{ with .doi }}<a class="btn btn-outline-primary btn-sm" href="https://doi.org/{{ . }}">DOI</a>{{ end }}{{ end }}{{ end }}
+        </span>
+      </article>
+    {{ end }}
+  </div>
+  <p id="publication-archive-empty" class="legacy-archive-empty">No publications match the selected filters.</p>
+</main>
+<script>
+  (() => {
+    const search = document.getElementById('publication-search');
+    const type = document.getElementById('publication-type-filter');
+    const year = document.getElementById('publication-year-filter');
+    const items = [...document.querySelectorAll('#publication-archive-list article')];
+    const empty = document.getElementById('publication-archive-empty');
+    if (!search || !type || !year || !empty) return;
+    const hashTypes = { '#1': 'paper-conference', '#2': 'article-journal' };
+    const filter = () => {
+      const query = search.value.trim().toLowerCase();
+      let visible = 0;
+      items.forEach(item => {
+        const matchesQuery = !query || `${item.dataset.title} ${item.dataset.authors}`.includes(query);
+        const matchesType = !type.value || item.dataset.type === type.value;
+        const matchesYear = !year.value || item.dataset.year === year.value;
+        item.hidden = !(matchesQuery && matchesType && matchesYear);
+        if (!item.hidden) visible += 1;
+      });
+      empty.style.display = visible ? 'none' : 'block';
+    };
+    search.addEventListener('input', filter);
+    type.addEventListener('change', filter);
+    year.addEventListener('change', filter);
+    const applyHashFilter = () => {
+      if (!hashTypes[window.location.hash]) return;
+      type.value = hashTypes[window.location.hash];
+      filter();
+    };
+    applyHashFilter();
+    window.addEventListener('hashchange', applyHashFilter);
+  })();
+</script>
+{{ end }}

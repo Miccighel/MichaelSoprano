@@ -1,1 +1,15 @@
+# Editors and operating systems
 .idea/
+.DS_Store
+
+# Local Hugo and JavaScript output
+/site/.hugo_build.lock
+/site/hugo_stats.json
+/site/.pnpm-store/
+/site/assets/jsconfig.json
+/site/node_modules/
+/site/resources/
+/site/public/
+/site/static/vendor/
+/site/jsconfig.json
+/.pnpm-store/
