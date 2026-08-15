@@ -1,0 +1,41 @@
+{{ $author := .author }}
+{{ $compact := .compact | default false }}
+<nav class="profile-link-groups{{ if $compact }} is-compact{{ end }}" aria-label="Academic and social profiles">
+  <ul class="network-icon profile-links-primary">
+    {{ range $author.social.primary }}
+      <li>
+        <a href="{{ .link }}" aria-label="{{ .label }}" title="{{ .label }}"{{ if findRE `^https?://` .link }} target="_blank" rel="noopener"{{ end }}>
+          {{ if eq .icon_pack "ai" }}<i class="ai ai-{{ .icon }} big-icon" aria-hidden="true"></i>{{ else }}<i class="{{ .icon_pack }} fa-{{ .icon }} big-icon" aria-hidden="true"></i>{{ end }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+  {{ if not $compact }}
+    <div class="profile-links-more">
+      <details>
+        <summary>More academic profiles <i class="fas fa-angle-down" aria-hidden="true"></i></summary>
+        <ul class="network-icon profile-links-secondary">
+          {{ range $author.social.academic }}
+            <li>
+              <a href="{{ .link }}" aria-label="{{ .label }}" title="{{ .label }}" target="_blank" rel="noopener">
+                {{ if eq .icon_pack "ai" }}<i class="ai ai-{{ .icon }} big-icon" aria-hidden="true"></i>{{ else }}<i class="{{ .icon_pack }} fa-{{ .icon }} big-icon" aria-hidden="true"></i>{{ end }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </details>
+      <details>
+        <summary>Elsewhere <i class="fas fa-angle-down" aria-hidden="true"></i></summary>
+        <ul class="network-icon profile-links-secondary">
+          {{ range $author.social.personal }}
+            <li>
+              <a href="{{ .link }}" aria-label="{{ .label }}" title="{{ .label }}" target="_blank" rel="noopener">
+                <i class="{{ .icon_pack }} fa-{{ .icon }} big-icon" aria-hidden="true"></i>
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </details>
+    </div>
+  {{ end }}
+</nav>
