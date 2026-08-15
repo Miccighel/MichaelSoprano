@@ -1,0 +1,19 @@
+<!doctype html>
+{{- $languageCode := site.Language.Locale | default "en-US" -}}
+{{- $themeMode := site.Params.hugoblox.theme.mode | default "system" -}}
+<html lang="{{ $languageCode }}" dir="ltr" data-wc-theme-default="{{ lower $themeMode }}" data-hbb-relurl="{{ "" | relURL }}">
+  {{ partial "site_head" . }}
+  <body class="bg-[var(--hb-color-background)] text-[var(--hb-color-foreground)] page-wrapper" id="top">
+    <div id="page-bg"></div>
+    <div class="page-header{{ if site.Params.hugoblox.header.sticky }} sticky top-0 z-30{{ end }}">
+      {{ partial "components/headers/navbar.html" . }}
+    </div>
+    <div class="page-body{{ if ne .Type "landing" }} my-10{{ end }}">
+      {{ block "main" . }}{{ end }}
+    </div>
+    <div class="page-footer">
+      {{ partial "site_footer" . }}
+    </div>
+    {{ partial "notification-container" . }}
+  </body>
+</html>
