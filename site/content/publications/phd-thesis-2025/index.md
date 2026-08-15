@@ -20,7 +20,7 @@ image:
 projects: []
 publishDate: '2025-06-11T10:00:00+01:00'
 publication_types:
-- paper-conference
+- thesis
 abstract: 'The spread of online misinformation poses serious threats to democratic
   societies. Traditionally, expert fact-checkers verify the truthfulness of information
   through investigative processes. However, the volume and immediacy of online content
@@ -37,7 +37,7 @@ abstract: 'The spread of online misinformation poses serious threats to democrat
   this thesis contributes to the development of more transparent, trustworthy, and
   interpretable systems for combating misinformation.'
 publication:
-  name: "*arXiv preprint 2506.09221*"
+  name: "*Revised version of the PhD thesis, defended on 22 May 2023; arXiv:2506.09221.*"
 hugoblox:
   ids:
     doi: 10.48550/arXiv.2506.09221

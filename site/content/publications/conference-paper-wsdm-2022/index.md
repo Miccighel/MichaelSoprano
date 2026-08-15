@@ -36,7 +36,7 @@ abstract: Due to their relatively low cost and ability to scale, crowdsourcing b
   make it available to researchers and practitioners.
 publication:
   name: "*Proceedings of the 15th ACM International Conference on Web Search and Data
-    Mining (WSDM 2022). Virtual Event, AZ, USA. Conference Ranks: GGS A+, Core A*"
+    Mining (WSDM 2022). Virtual Event, AZ, USA. Conference Ranks: GGS A+, Core A\\*.*"
 hugoblox:
   ids:
     doi: 10.1145/3488560.3502182

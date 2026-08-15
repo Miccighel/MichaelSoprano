@@ -41,7 +41,7 @@ abstract: 'Truthfulness judgments are a fundamental step in the process of fight
   the political bias and the cognitive background of the workers, and quantify their
   effect on the reliability of the data provided by the crowd.'
 publication:
-  name: "*Proceedings of the 43st International ACM SIGIR Conference on Research and
+  name: "*Proceedings of the 43rd International ACM SIGIR Conference on Research and
     Development in Information Retrieval. Conference Rank: GGS A++, Core A*.*"
 hugoblox:
   ids:

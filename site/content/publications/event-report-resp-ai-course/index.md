@@ -19,7 +19,7 @@ authors:
 - Riccardo Lunardi
 - Alberto Marturano
 - Zaka-Ud-Din Muhammad
-- Francesco Nascimbeni
+- Francesco Nascimben
 - Moritz Nottebaum
 - Massimiliano Pascoli
 - Mihai Horia Popescu

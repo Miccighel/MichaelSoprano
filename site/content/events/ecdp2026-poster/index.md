@@ -24,11 +24,11 @@ image:
   focal_point: Right
 projects: []
 event_name: 22nd European Congress on Digital Pathology (ECDP 2026)
-event_start: '2026-06-18T09:00:00'
-event_end: '2026-06-18T09:00:00'
-event_all_day: false
+event_start: '2026-06-18'
+event_end: '2026-06-18'
+event_all_day: true
 links:
 - type: pdf
   url: https://michaelsoprano.com/media/posters/ECDP-2026_Crowdsourced-Keypoint-Matching-for-ROI-in-Cross-Stain-WSI-Registration.pdf
-date: '2026-06-18T09:00:00'
+date: '2026-06-18'
 ---
