@@ -93,12 +93,20 @@ social:
     - label: AIR UniUD
       icon: university
       icon_pack: fas
-      link: https://air.uniud.it/handle/11390/1063616/browse?authority=rp03078&etal=-1&offset=100&order=2&rpp=20&sort_by=ASC&starts_with=&type=author
+      link: https://air.uniud.it/cris/rp/rp72660
+    - label: Kudos
+      icon: bullhorn
+      icon_pack: fas
+      link: https://www.growkudos.com/profile/michael_soprano
   personal:
     - label: Goodreads
       icon: goodreads
       icon_pack: fab
       link: https://www.goodreads.com/user/show/53180193-michael-soprano
+    - label: Anobii
+      icon: book-open
+      icon_pack: fas
+      link: https://www.anobii.com/it/jooforge/profile/activity
     - label: Last.fm
       icon: lastfm
       icon_pack: fab
