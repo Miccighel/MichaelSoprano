@@ -5,9 +5,10 @@
   <h1>Publications</h1>
   <span id="1" class="sr-only" aria-hidden="true">Conference papers</span>
   <span id="2" class="sr-only" aria-hidden="true">Journal articles</span>
+  <span id="7" class="sr-only" aria-hidden="true">Theses</span>
   <div class="legacy-publication-filters" aria-label="Publication filters">
     <label><span class="sr-only">Search publications</span><input id="publication-search" type="search" placeholder="Search..."></label>
-    <label><span class="sr-only">Publication type</span><select id="publication-type-filter"><option value="">Type</option><option value="paper-conference">Conference paper</option><option value="article-journal">Journal article</option></select></label>
+    <label><span class="sr-only">Publication type</span><select id="publication-type-filter"><option value="">Type</option><option value="paper-conference">Conference paper</option><option value="article-journal">Journal article</option><option value="thesis">Thesis</option></select></label>
     <label><span class="sr-only">Publication year</span><select id="publication-year-filter"><option value="">Date</option>{{ range ($pages.GroupByDate "2006") }}<option value="{{ .Key }}">{{ .Key }}</option>{{ end }}</select></label>
   </div>
 
@@ -37,7 +38,7 @@
     const items = [...document.querySelectorAll('#publication-archive-list article')];
     const empty = document.getElementById('publication-archive-empty');
     if (!search || !type || !year || !empty) return;
-    const hashTypes = { '#1': 'paper-conference', '#2': 'article-journal' };
+    const hashTypes = { '#1': 'paper-conference', '#2': 'article-journal', '#7': 'thesis' };
     const filter = () => {
       const query = search.value.trim().toLowerCase();
       let visible = 0;
