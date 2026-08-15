@@ -45,7 +45,7 @@ abstract: Due to the increasing amount of information shared online every day, t
   annotations. Interestingly, we find that, depending on the general judgment tendencies
   of workers, their biases may sometimes lead to more accurate judgments.
 publication:
-  name: "*Proceedings of the ACM Conference on Fairness, Accountability, and Transparency.*"
+  name: "*Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency.*"
 hugoblox:
   ids:
     doi: 10.1145/3531146.3534629

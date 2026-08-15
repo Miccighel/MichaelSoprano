@@ -22,11 +22,11 @@ image:
 projects: []
 event_name: The 48th International ACM SIGIR Conference on Research and Development
   in Information Retrieval
-event_start: '2025-07-16T14:50:00'
-event_end: '2025-07-16T14:50:00'
-event_all_day: false
+event_start: '2025-07-16'
+event_end: '2025-07-16'
+event_all_day: true
 links:
 - type: slides
   url: https://michaelsoprano.com/media/talks/SIGIR-2025_The-Magnitude-of-Truth-On-Using-Magnitude-Estimation-for-Truthfulness-Assessment.pdf
-date: '2025-07-16T14:50:00'
+date: '2025-07-16'
 ---

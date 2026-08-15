@@ -45,7 +45,7 @@ abstract: 'Crowdsourcing tasks have been widely used to collect a large number o
   and 5 best practices for crowdsourcing platforms to adequately conduct and support
   such kinds of studies. We release the survey and the data at: https://osf.io/h4du9/.'
 publication:
-  name: "*Journal Rank: Scimago (SJR) Q2 (2023).*"
+  name: "*ACM Transactions on Social Computing. Journal Rank: Scimago (SJR) Q2 (2023).*"
 hugoblox:
   ids:
     doi: 10.1145/3674884

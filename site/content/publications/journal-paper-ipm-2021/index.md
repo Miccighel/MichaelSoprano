@@ -10,6 +10,7 @@ authors:
 - Davide Ceolin
 - Damiano Spina
 - Stefano Mizzaro
+- Gianluca Demartini
 tags:
 - truthfulness
 - crowdsourcing

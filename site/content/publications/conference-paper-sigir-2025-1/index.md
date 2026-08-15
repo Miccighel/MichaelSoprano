@@ -26,20 +26,21 @@ projects: []
 publishDate: '2025-07-13T07:00:35.998652Z'
 publication_types:
 - paper-conference
-abstract: 'Evaluating the truthfulness of online content is critical for combating
-  misinformation. This study examines the efficiency and effectiveness of crowdsourced
-  truthfulness assessments through a comparative analysis of two approaches: one involving
-  full-length webpages as evidence for each claim, and another using summaries for
-  each evidence document generated with an LLM. Using an A/B testing setting, we engage
-  a diverse pool of participants tasked with evaluating the truthfulness of statements
-  under these conditions.Our analysis explores both the quality of assessments and
-  the behavioral patterns of participants. The results reveal that relying on summarized
-  evidence offers comparable accuracy and error metrics to the standard modality while
-  significantly improving efficiency. Workers in the Summary setting complete a significantly
-  higher number of assessments, reducing task duration and costs. Additionally, the
-  Summary modality maximizes internal agreement and maintains consistent reliance
-  on and perceived usefulness of evidence, demonstrating its potential to streamline
-  large-scale truthfulness evaluations.'
+abstract: 'Assessing the truthfulness of information is a critical task in fact-checking
+  and is typically performed using binary or coarse ordinal scales (2–6 levels), though
+  fine-grained scales (e.g., 100 levels) have also been explored. Magnitude Estimation
+  (ME) takes this approach further by allowing assessors to assign any value in the
+  range (0, +∞). However, it introduces challenges, including the need to aggregate
+  assessments from individuals with different interpretations of the scale. Despite
+  these challenges, successful applications in other domains suggest its potential
+  suitability for truthfulness assessment. We conduct a crowdsourcing study by collecting
+  assessments on claims sourced from the PolitiFact fact-checking organization using
+  ME. To the best of our knowledge, this is the first systematic investigation of
+  ME in the context of truthfulness assessment. Our results show that while aggregation
+  methods significantly impact assessment quality, optimal aggregation strategies
+  yield accuracy and reliability comparable to traditional scales. More importantly,
+  ME captures subtle differences in truthfulness, offering richer insights than conventional
+  coarse-grained scales.'
 publication:
   name: "*Proceedings of the 48th International ACM SIGIR Conference on Research and
     Development in Information Retrieval. Conference Rank: GGS A++, Core A*.*"

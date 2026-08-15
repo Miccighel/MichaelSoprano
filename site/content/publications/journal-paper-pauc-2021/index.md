@@ -8,6 +8,7 @@ authors:
 - Michael Soprano
 - Beatrice Portelli
 - Massimiliano De Luise
+- Damiano Spina
 - Vincenzo Della Mea
 - Giuseppe Serra
 - Stefano Mizzaro
@@ -52,7 +53,7 @@ abstract: 'Recently, the misinformation problem has been addressed with a crowds
   analysis of the statements misjudged by the crowd-workers.'
 publication:
   name: "*Personal and Ubiquitous Computing. Journal Ranks: Journal Citation Reports
-    (JCR) Q2 (2020), Scimago (SJR) Q1 (2021)."
+    (JCR) Q2 (2020), Scimago (SJR) Q1 (2021).*"
 hugoblox:
   ids:
     doi: 10.1007/s00779-021-01604-6

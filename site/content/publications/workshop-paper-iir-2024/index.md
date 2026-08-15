@@ -26,11 +26,12 @@ projects: []
 publishDate: '2024-10-24T15:30:30+01:00'
 publication_types:
 - paper-conference
-abstract: Information retrieval effectiveness evaluation is often carried out by means
-  of test collections. Many works investigated possible sources of bias in such an
-  approach. We propose a systematic approach to identify bias and its causes, and
-  to remove it, thus enforcing fairness in effectiveness evaluation by means of test
-  collections.
+abstract: This extended abstract presents results from two recent studies aimed at
+  enhancing the practical application and effectiveness of fact-checking systems.
+  The first study demonstrates the practical viability of crowdsourcing in fact-checking
+  through an experimental evaluation using political public statements. The second
+  builds on this foundation by integrating crowdsourced data with large language models
+  and proposing a hybrid system that combines human insights with AI capabilities.
 publication:
   name: "*Proceedings of the 14th Italian Information Retrieval Workshop.*"
 links:

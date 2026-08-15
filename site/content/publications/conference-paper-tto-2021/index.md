@@ -4,7 +4,6 @@ subtitle: ''
 summary: ''
 authors:
 - Erik Brand
-- Michael Soprano
 - Kevin Roitero
 - Michael Soprano
 - Gianluca Demartini

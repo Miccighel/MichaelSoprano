@@ -1,6 +1,6 @@
 ---
 title: 'The COVID-19 Infodemic: Can the Crowd Judge Recent Misinformation Objectively?'
-event_url: https://sigir.org/events/past-events/2020-2/
+event_url: https://dl.acm.org/doi/proceedings/10.1145/3340531
 location: Galway, Ireland (remote).
 summary: Conference Talk - The 29th ACM International Conference on Information and
   Knowledge Management (CIKM 2020). October 19, 2020, Galway, Ireland (remote). Held
