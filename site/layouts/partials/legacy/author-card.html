@@ -1,5 +1,5 @@
 {{ $home := index hugo.Data "home" }}
-{{ $author := $home.author }}
+{{ $author := index hugo.Data.authors "michael-soprano" }}
 {{ $avatar := resources.Get "media/authors/michael-soprano.jpg" }}
 {{ $avatar = $avatar.Fill "270x270 Center" }}
 <div class="media author-card content-widget-hr">
@@ -8,10 +8,6 @@
     <h5 class="card-title"><a href="{{ site.Home.RelPermalink }}">{{ $author.title }}</a></h5>
     <h6 class="card-subtitle">{{ $author.role }}</h6>
     <p class="card-text">Postdoctoral Researcher at the University of Udine.</p>
-    <ul class="network-icon" aria-label="Academic and social profiles">
-      {{ range $author.social }}
-        <li><a href="{{ .link }}" aria-label="{{ .icon }}"{{ if findRE `^https?://` .link }} target="_blank" rel="noopener"{{ end }}>{{ if eq .icon_pack "ai" }}<i class="ai ai-{{ .icon }}" aria-hidden="true"></i>{{ else }}<i class="{{ .icon_pack }} fa-{{ .icon }}" aria-hidden="true"></i>{{ end }}</a></li>
-      {{ end }}
-    </ul>
+    {{ partial "legacy/profile-links.html" (dict "author" $author "compact" true) }}
   </div>
 </div>

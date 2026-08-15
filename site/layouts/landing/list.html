@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $home := index hugo.Data "home" }}
-{{ $author := $home.author }}
+{{ $author := index hugo.Data.authors "michael-soprano" }}
 
 <main class="legacy-home" data-pagefind-body>
   <section id="about" class="home-section legacy-about-section">
@@ -15,15 +15,7 @@
           <h3>{{ $author.role }}</h3>
           {{ with index $author.organizations 0 }}<h3><a href="{{ .url }}">{{ .name }}</a></h3>{{ end }}
         </div>
-        <ul class="network-icon" aria-label="Academic and social profiles">
-          {{ range $author.social }}
-            <li>
-              <a href="{{ .link }}" aria-label="{{ .icon }}">
-                {{ if eq .icon_pack "ai" }}<i class="ai ai-{{ .icon }} big-icon" aria-hidden="true"></i>{{ else }}<i class="{{ .icon_pack }} fa-{{ .icon }} big-icon" aria-hidden="true"></i>{{ end }}
-              </a>
-            </li>
-          {{ end }}
-        </ul>
+        {{ partial "legacy/profile-links.html" (dict "author" $author "compact" false) }}
       </aside>
 
       <div class="legacy-about-content">

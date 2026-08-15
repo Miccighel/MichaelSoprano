@@ -103,11 +103,36 @@ end
 home_path = File.join(ROOT, 'data', 'home.yaml')
 begin
   home = YAML.safe_load(File.read(home_path), permitted_classes: [Date, Time], aliases: true) || {}
-  %w[author visits experience].each do |field|
+  %w[visits experience].each do |field|
     errors << "data/home.yaml: missing #{field}" if blank?(home[field])
   end
 rescue StandardError => e
   errors << "data/home.yaml: #{e.message}"
+end
+
+author_path = File.join(ROOT, 'data', 'authors', 'michael-soprano.yaml')
+begin
+  author = YAML.safe_load(File.read(author_path), permitted_classes: [Date, Time], aliases: true) || {}
+  %w[title role bio organizations interests education social].each do |field|
+    errors << "data/authors/michael-soprano.yaml: missing #{field}" if blank?(author[field])
+  end
+
+  social = author['social'].is_a?(Hash) ? author['social'] : {}
+  %w[primary academic personal].each do |group|
+    profiles = social[group]
+    if blank?(profiles)
+      errors << "data/authors/michael-soprano.yaml: missing social.#{group}"
+      next
+    end
+
+    Array(profiles).each_with_index do |profile, index|
+      unless profile.is_a?(Hash) && %w[label icon icon_pack link].all? { |field| !blank?(profile[field]) }
+        errors << "data/authors/michael-soprano.yaml: social.#{group}[#{index}] requires label, icon, icon_pack, and link"
+      end
+    end
+  end
+rescue StandardError => e
+  errors << "data/authors/michael-soprano.yaml: #{e.message}"
 end
 
 puts "Content checked: #{counts.map { |section, count| "#{count} #{section}" }.join(', ')}"
