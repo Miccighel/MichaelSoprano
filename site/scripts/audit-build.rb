@@ -422,6 +422,15 @@ if File.file?(home_html) && !File.binread(home_html).match?(/\bdata-pagefind-bod
   errors << 'index.html: homepage is excluded from the search index'
 end
 
+not_found_path = File.join(PUBLIC_ROOT, '404.html')
+if File.file?(not_found_path)
+  not_found_html = File.read(not_found_path)
+  errors << '404.html: wrong heading' unless html_text(not_found_html[/<h1\b[^>]*>.*?<\/h1>/mi].to_s) == 'Page not found'
+  errors << '404.html: missing Pagefind exclusion' unless not_found_html.match?(/\bdata-pagefind-ignore\b/)
+  recommendation_count = not_found_html.scan(/<li>\s*<a\b/mi).length
+  errors << "404.html: contains #{recommendation_count} recommendations, expected 10" unless recommendation_count == 10
+end
+
 SECTIONS.each do |section, config|
   relative_path = File.join(config[:archive], 'index.html')
   expected_items = Dir.glob(File.join(SITE_ROOT, 'content', section, '*', 'index.md')).length
