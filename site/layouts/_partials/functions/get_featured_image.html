@@ -1,0 +1,8 @@
+{{ $resource := (.Resources.ByType "image").GetMatch "*featured*" }}
+{{ if and (not $resource) .Params.image.filename }}
+  {{ $resource = (.Resources.ByType "image").GetMatch .Params.image.filename }}
+  {{ if not $resource }}
+    {{ $resource = resources.GetMatch (path.Join "media" .Params.image.filename) }}
+  {{ end }}
+{{ end }}
+{{ return $resource }}

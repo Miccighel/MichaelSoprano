@@ -3,7 +3,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="generator" content="Hugo Blox Kit {{ hugo.Data.hugoblox.version }}" />
+  <meta name="generator" content="Hugo {{ hugo.Version }}" />
 
   {{/* EXTENSIBILITY HOOK: HEAD-START */}}
   {{ partial "functions/get_hook" (dict "hook" "head-start" "context" .) }}
@@ -12,27 +12,11 @@
     <meta name="robots" content="noindex" />
   {{- end -}}
 
-{{/* Attempt to load superuser/person from data. */}}
-{{ $superuser_name := "" }}
-{{ $superuser_slug := "" }}
-{{ $superuser_role := "" }}
-
-{{/* Prefer is_owner flag, fallback to slug 'me' */}}
-{{ $authors := partialCached "functions/get_authors_data" . site.Language.Lang }}
-{{ range $slug, $data := $authors }}
-  {{ if and (not $superuser_slug) ($data.is_owner) }}
-    {{ $superuser_slug = $slug }}
-  {{ end }}
-{{ end }}
-{{ if and (eq $superuser_slug "") (index $authors "me") }}
-  {{ $superuser_slug = "me" }}
-{{ end }}
-
-{{ if $superuser_slug }}
-  {{ $profile := partial "functions/get_author_profile" (dict "slug" $superuser_slug) }}
-  {{ $superuser_name = $profile.title }}
-  {{ $superuser_role = $profile.role }}
-{{ end }}
+{{/* Site identity is local configuration, independent from the theme module. */}}
+{{ $identity := site.Params.identity | default dict }}
+{{ $superuser_name := $identity.name | default site.Title }}
+{{ $superuser_slug := $identity.author_slug | default "michael-soprano" }}
+{{ $superuser_role := $identity.role | default "" }}
 
 {{ $scr.Set "superuser_slug" $superuser_slug }}{{/* Set superuser globally for author rendering. */}}
 
@@ -41,8 +25,8 @@
   {{/* Generate page description. */}}
   {{ $desc := "" }}
   {{ $desc = partial "functions/get_summary" . }}
-  {{ if site.Params.hugoblox.identity.description | and (not $desc) }}
-    {{ $desc = site.Params.hugoblox.identity.description }}
+  {{ if $identity.description | and (not $desc) }}
+    {{ $desc = $identity.description }}
   {{ end }}
   {{ if not $desc }}
     {{ $desc = $superuser_role }}
@@ -122,10 +106,9 @@
   {{ $og_image := "" }}
   {{ $twitter_card := "summary_large_image" }}
 {{ if and (eq .Kind "term") (eq .Data.Singular "author") }}
-  {{/* Try data-driven avatar for author term pages */}}
+  {{/* Try the local author avatar for author term pages. */}}
   {{ $termSlug := .Data.Term | urlize }}
-  {{ $profile := partial "functions/get_author_profile" (dict "slug" $termSlug) }}
-  {{ with $profile.avatar }}
+  {{ with resources.GetMatch (printf "media/authors/%s.*" $termSlug) }}
     {{ $og_image = (.Fill "540x540 Center").Permalink }}
     {{ $twitter_card = "summary" }}
   {{ end }}
@@ -160,7 +143,7 @@
     {{ if ne $title $branding.site_title }}{{ $title = printf "%s | %s" $title $branding.site_title }}{{ end }}
   {{ end }}
   <meta property="twitter:card" content="{{ $twitter_card }}" />
-  {{ with site.Params.hugoblox.identity.social.twitter }}
+  {{ with $identity.social.twitter }}
     <meta property="twitter:site" content="@{{ . }}" />
     <meta property="twitter:creator" content="@{{ . }}" />
   {{ end }}
@@ -189,7 +172,7 @@
     {{ end }}
   {{ end }}
 
-  {{ partial "jsonld/main" (dict "page" . "summary" $desc) }}
+  {{ partial "jsonld/main" (dict "page" . "summary" $desc "image" $og_image "site_title" $branding.site_title) }}
 
   <title>{{$title}}</title>
 

@@ -5,6 +5,18 @@ appearance:
 search:
   enabled: true
 
+# Canonical site identity used by the local Hugo templates. The equivalent
+# HugoBlox keys remain below only while legacy module templates still need them.
+identity:
+  name: Michael Soprano
+  organization: University of Udine
+  role: Researcher
+  author_slug: michael-soprano
+  tagline: Researcher in Human Computation and Information Retrieval
+  description: Personal academic website of Michael Soprano, researcher at the University of Udine.
+  social:
+    twitter: Miccighel_
+
 hugoblox:
   schema: '2.0'
   identity:

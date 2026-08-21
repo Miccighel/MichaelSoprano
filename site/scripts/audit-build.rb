@@ -251,6 +251,9 @@ html_paths.each do |path|
     begin
       json_ld = json_ld_documents(html)
       errors << "#{relative}: missing JSON-LD structured data" if json_ld.empty?
+      if JSON.generate(json_ld).match?(/"(?:url|image)":null/)
+        errors << "#{relative}: JSON-LD contains a null URL or image"
+      end
     rescue JSON::ParserError => e
       errors << "#{relative}: invalid JSON-LD structured data (#{e.message})"
     end

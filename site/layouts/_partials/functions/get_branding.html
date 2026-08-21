@@ -1,0 +1,7 @@
+{{ $identity := site.Params.identity | default dict }}
+{{ $name := $identity.name | default site.Title }}
+{{ return dict
+  "name" $name
+  "site_title" ($identity.site_title | default $name)
+  "organization" ($identity.organization | default $name)
+}}
