@@ -55,7 +55,7 @@ hugoblox:
     notice: '© {year} {name}'
   content:
     math:
-      enable: true
+      enable: false
     toc:
       enable: true
     reading_time:
