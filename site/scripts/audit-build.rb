@@ -94,6 +94,45 @@ def attribute_values(markup, names)
   markup.scan(pattern).map { |double_quoted, single_quoted, unquoted| double_quoted || single_quoted || unquoted }
 end
 
+def element_attributes(html, element)
+  html.scan(/<#{Regexp.escape(element)}\b[^>]*>/i)
+end
+
+def metadata_values(html, key)
+  element_attributes(html, 'meta').each_with_object([]) do |meta, values|
+    names = attribute_values(meta, %w[name property]).map(&:downcase)
+    next unless names.include?(key.downcase)
+
+    value = attribute_values(meta, %w[content]).first
+    values << value unless value.nil?
+  end
+end
+
+def links_with_rel(html, rel)
+  element_attributes(html, 'link').select do |link|
+    attribute_values(link, %w[rel]).flat_map { |value| value.downcase.split }.include?(rel.downcase)
+  end
+end
+
+def json_ld_documents(html)
+  html.scan(/<script\b([^>]*)>(.*?)<\/script>/mi).each_with_object([]) do |(attributes, body), documents|
+    types = attribute_values(attributes, %w[type]).map(&:downcase)
+    next unless types.include?('application/ld+json')
+
+    documents << JSON.parse(body)
+  end
+end
+
+def json_ld_types(documents)
+  documents.flat_map do |document|
+    entries = document.is_a?(Array) ? document : [document]
+    entries.each_with_object([]) do |entry, types|
+      type = entry.is_a?(Hash) ? entry['@type'] : nil
+      types << type unless type.nil?
+    end
+  end.flatten
+end
+
 def html_url(path)
   relative = Pathname.new(path).relative_path_from(Pathname.new(PUBLIC_ROOT)).to_s
   return '/' if relative == 'index.html'
@@ -159,10 +198,12 @@ errors << 'favicon.ico: missing generated compatibility favicon' unless File.fil
 home_path = File.join(PUBLIC_ROOT, 'index.html')
 if File.file?(home_path)
   home_html = File.binread(home_path).force_encoding(Encoding::UTF_8)
-  favicon_links = home_html.scan(/<link\b[^>]*>/i).select do |link|
-    attribute_values(link, %w[rel]).flat_map { |value| value.downcase.split }.include?('icon')
+  errors << 'index.html: missing favicon link' if links_with_rel(home_html, 'icon').empty?
+  errors << 'index.html: missing Apple touch icon link' if links_with_rel(home_html, 'apple-touch-icon').empty?
+  rss_links = links_with_rel(home_html, 'alternate').select do |link|
+    attribute_values(link, %w[type]).any? { |type| type.casecmp('application/rss+xml').zero? }
   end
-  errors << 'index.html: missing favicon link' if favicon_links.empty?
+  errors << 'index.html: missing RSS discovery link' if rss_links.empty?
 end
 
 referenced_internal_paths = {}
@@ -184,6 +225,36 @@ html_paths.each do |path|
   errors << "#{relative}: missing viewport metadata" if !alias_page && !has_viewport
   errors << "#{relative}: unresolved Hugo template expression" if html.match?(/\{\{[<%\s.]/)
   errors << "#{relative}: page has no readable content" if !alias_page && relative != '404.html' && text.length < 40
+
+  unless alias_page
+    canonical_path = html_url(path).sub(%r{/page/\d+/$}, '/')
+    expected_canonical = "https://michaelsoprano.com#{canonical_path}"
+    canonical_urls = links_with_rel(html, 'canonical').flat_map { |link| attribute_values(link, %w[href]) }
+    errors << "#{relative}: canonical URL is #{canonical_urls.inspect}, expected #{expected_canonical.inspect}" unless canonical_urls == [expected_canonical]
+    errors << "#{relative}: missing favicon link" if links_with_rel(html, 'icon').empty?
+    errors << "#{relative}: missing Apple touch icon link" if links_with_rel(html, 'apple-touch-icon').empty?
+
+    {
+      'og:site_name' => 'Michael Soprano',
+      'og:url' => expected_canonical,
+      'twitter:site' => '@Miccighel_',
+      'twitter:creator' => '@Miccighel_'
+    }.each do |key, expected|
+      values = metadata_values(html, key)
+      errors << "#{relative}: #{key} metadata is #{values.inspect}, expected #{expected.inspect}" unless values == [expected]
+    end
+    %w[og:title og:description twitter:card].each do |key|
+      values = metadata_values(html, key)
+      errors << "#{relative}: missing or empty #{key} metadata" if values.empty? || values.any?(&:empty?)
+    end
+
+    begin
+      json_ld = json_ld_documents(html)
+      errors << "#{relative}: missing JSON-LD structured data" if json_ld.empty?
+    rescue JSON::ParserError => e
+      errors << "#{relative}: invalid JSON-LD structured data (#{e.message})"
+    end
+  end
 
   document_ids = attribute_values(html, %w[id])
   duplicate_ids = document_ids.group_by(&:itself).select { |_id, values| values.length > 1 }.keys
@@ -219,6 +290,17 @@ html_paths.each do |path|
     next if target_exists?(internal_path)
 
     errors << "#{relative}: missing internal target #{internal_path.inspect} (from #{reference.inspect})"
+  end
+
+  %w[og:image twitter:image].flat_map { |key| metadata_values(html, key) }.uniq.each do |reference|
+    internal_path = internal_reference(reference, path)
+    next if internal_path.nil?
+
+    if internal_path == :invalid
+      errors << "#{relative}: invalid social preview image URL #{reference.inspect}"
+    elsif !target_exists?(internal_path)
+      errors << "#{relative}: missing social preview image #{internal_path.inspect}"
+    end
   end
 
 
@@ -265,9 +347,20 @@ SECTIONS.each do |section, config|
   end
   errors << "#{section}: expected #{current_pages.length} rendered detail pages, found #{rendered_pages.length}" unless rendered_pages.length == current_pages.length
   rendered_pages.each do |path|
-    next if File.binread(path).match?(/\bdata-pagefind-body\b/)
+    html = File.binread(path).force_encoding(Encoding::UTF_8)
+    unless html.match?(/\bdata-pagefind-body\b/)
+      errors << "#{path.delete_prefix("#{PUBLIC_ROOT}/")}: detail page is excluded from the search index"
+    end
 
-    errors << "#{path.delete_prefix("#{PUBLIC_ROOT}/")}: detail page is excluded from the search index"
+    begin
+      expected_json_ld_type = { 'publications' => 'Article', 'events' => 'Event', 'blog' => 'BlogPosting' }.fetch(section)
+      types = json_ld_types(json_ld_documents(html))
+      unless types.include?(expected_json_ld_type)
+        errors << "#{path.delete_prefix("#{PUBLIC_ROOT}/")}: JSON-LD types #{types.inspect} do not include #{expected_json_ld_type.inspect}"
+      end
+    rescue JSON::ParserError
+      # The general per-page check reports the malformed document.
+    end
   end
 
   rendered_titles = rendered_pages.to_h do |path|
