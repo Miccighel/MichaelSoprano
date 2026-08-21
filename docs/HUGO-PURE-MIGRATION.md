@@ -41,7 +41,8 @@ pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
 ## Sequenza di lavoro
 
 1. Rendere locale il guscio globale della pagina. **Completato.**
-2. Rendere autonome ricerca e gestione del tema.
+2. Rendere autonome ricerca e gestione del tema. **Tema completato; ricerca
+   in corso.**
 3. Sostituire il `head` conservando integralmente SEO, favicon e JSON-LD.
 4. Rendere locali layout generici, tassonomie, 404, RSS e sitemap.
 5. Migrare i campi `hugoblox` verso uno schema neutro e aggiornare generatori
