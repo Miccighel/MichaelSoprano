@@ -32,23 +32,31 @@ Il progetto possiede già homepage, menu, footer e layout specifici per
 pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
 
 1. CSS di base e variabili cromatiche del tema;
-2. hook e inizializzazione degli asset residui inclusi nel `head`;
-3. layout generici, tassonomie, pagina autore, 404, RSS e sitemap;
-4. render hook e shortcode generici;
-5. alcuni campi di configurazione e front matter con namespace `hugoblox`.
+2. layout generici, tassonomie, pagina autore e pagina privacy;
+3. render hook e shortcode generici;
+4. alcuni campi di configurazione e front matter con namespace `hugoblox`.
 
 ## Sequenza di lavoro
 
 1. Rendere locale il guscio globale della pagina. **Completato.**
 2. Rendere autonome ricerca e gestione del tema. **Completato.**
 3. Sostituire il `head` conservando integralmente SEO, favicon e JSON-LD.
-   **Identità, metadati, favicon, Open Graph/Twitter, JSON-LD, caricatore delle
-   librerie e bundle principale locali; CSS e hook residui ancora da isolare.**
+   **Completato salvo il foglio Tailwind di base: identità, metadati, favicon,
+   Open Graph/Twitter, JSON-LD, token grafici, librerie e bundle sono locali.**
 4. Rendere locali layout generici, tassonomie, 404, RSS e sitemap.
+   **404, RSS, sitemap e robots completati; privacy, tassonomie e autori in
+   corso.**
 5. Migrare i campi `hugoblox` verso uno schema neutro e aggiornare generatori
    e controlli dei contenuti.
 6. Rimuovere il modulo, `go.mod`, `go.sum` e la configurazione non più usata.
 7. Ripetere audit funzionale, confronto visivo e controllo completo degli URL.
+
+## Stato del ramo
+
+La pipeline corrente produce 476 pagine HTML, 981 file, 649 destinazioni
+interne e 59 pagine indicizzate. La diminuzione rispetto alla baseline è
+intenzionale: sono stati rimossi Alpine.js e 63 asset KaTeX mai utilizzati.
+Contenuti, URL pubblici e conteggi editoriali restano invariati.
 
 ## Anomalia nota della baseline
 
