@@ -5,9 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="generator" content="Hugo {{ hugo.Version }}" />
 
-  {{/* EXTENSIBILITY HOOK: HEAD-START */}}
-  {{ partial "functions/get_hook" (dict "hook" "head-start" "context" .) }}
-
   {{ if .Params.private }}
     <meta name="robots" content="noindex" />
   {{- end -}}
@@ -43,11 +40,6 @@
   {{ $theme_config := partialCached "functions/get_theme_config" . "theme_config" }}
   {{ partial "functions/theme_generator.html" $theme_config }}
 
-  {{/* Demo Theme Pack Styles (if enabled) */}}
-  {{ if site.Params.hugoblox.header.theme_picker }}
-    {{ partial "functions/demo_theme_styles.html" (dict "typography" $theme_config.typography "layout" $theme_config.layout) }}
-  {{ end }}
-
   {{/* Tailwind CSS v4 Processing */}}
   {{/* Use templates.Defer to process CSS after all content is analyzed */}}
   {{ with (templates.Defer (dict "key" "tailwind-css")) }}
@@ -65,10 +57,6 @@
     {{- $hb_head = $hb_head | fingerprint "sha256" -}}
   {{- end -}}
   <script src="{{ $hb_head.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $hb_head.Data.Integrity }}" crossorigin="anonymous"{{ end }}></script>
-
-  {{/* Analytics & Verification */}}
-  {{/* !CACHED! All analytics and verification code is at site level */}}
-  {{ partialCached "blox-analytics/index" . }}
 
   {{/* RSS Feed */}}
   {{ $branding := partialCached "functions/get_branding" . "branding" }}
@@ -200,20 +188,11 @@
       {{ end }}
   {{ end }}
 
-  {{/* Init prior to auto-chunking/bundling scripts due to Hugo concurrency issues */}}
-  {{/* !CACHED! Initialized once at site level and then cached for each page */}}
-  {{- partialCached "init.html" . "hb_init_once" -}}
-
   {{- $js_theme := resources.Get "js/hb-theme.js" | resources.Minify -}}
   {{- $js_nav := resources.Get "js/hb-nav.js" | resources.Minify -}}
   {{- $js_sidebar := resources.Get "js/hb-sidebar.js" | resources.Minify -}}
   {{ $js_bundle_contents := slice $js_theme $js_nav $js_sidebar }}
 
-  {{/* Discover and include block-specific JavaScript */}}
-  {{- with partial "functions/get-block-scripts.html" . -}}
-    {{ $js_bundle_contents = $js_bundle_contents | append . }}
-  {{- end -}}
-  
   {{ $js_bundle := $js_bundle_contents | resources.Concat (printf "js/site-core-%s.min.js" .Lang) }}
   {{- if hugo.IsProduction -}}
     {{ $js_bundle = $js_bundle | fingerprint "sha256" }}
@@ -227,6 +206,4 @@
   {{/* Load Third-Party Libraries */}}
   {{ partial "libraries.html" . }}
 
-  {{/* EXTENSIBILITY HOOK: HEAD-END */}}
-  {{ partial "functions/get_hook" (dict "hook" "head-end" "context" .) }}
 </head>
