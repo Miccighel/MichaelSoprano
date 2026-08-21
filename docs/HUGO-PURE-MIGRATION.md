@@ -31,8 +31,8 @@ La baseline del ramo `master` al commit `fb437fc8` produce:
 Il progetto possiede già homepage, menu, footer e layout specifici per
 pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
 
-1. metadati, favicon, JSON-LD e asset inclusi nel `head`;
-2. CSS di base e variabili cromatiche del tema;
+1. CSS di base e variabili cromatiche del tema;
+2. hook e inizializzazione degli asset residui inclusi nel `head`;
 3. layout generici, tassonomie, pagina autore, 404, RSS e sitemap;
 4. render hook e shortcode generici;
 5. alcuni campi di configurazione e front matter con namespace `hugoblox`.
@@ -42,8 +42,8 @@ pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
 1. Rendere locale il guscio globale della pagina. **Completato.**
 2. Rendere autonome ricerca e gestione del tema. **Completato.**
 3. Sostituire il `head` conservando integralmente SEO, favicon e JSON-LD.
-   **Guscio, caricatore delle librerie e bundle principale locali; metadati e
-   asset in corso.**
+   **Identità, metadati, favicon, Open Graph/Twitter, JSON-LD, caricatore delle
+   librerie e bundle principale locali; CSS e hook residui ancora da isolare.**
 4. Rendere locali layout generici, tassonomie, 404, RSS e sitemap.
 5. Migrare i campi `hugoblox` verso uno schema neutro e aggiornare generatori
    e controlli dei contenuti.

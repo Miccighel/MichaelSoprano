@@ -1,0 +1,15 @@
+{{ $constraint := .constraint | default "fit" }}
+{{ $size := .size | default 36 }}
+{{ $result := dict "resource" nil "type" "" "is_svg" false }}
+{{ with resources.Get "media/logo.svg" }}
+  {{ $result = dict "resource" . "type" "image/svg+xml" "is_svg" true }}
+{{ else }}
+  {{ with resources.Get "media/logo.png" }}
+    {{ $resource := .Fit (printf "%dx%d" $size $size) }}
+    {{ if eq $constraint "max_height" }}
+      {{ $resource = .Resize (printf "x%d" $size) }}
+    {{ end }}
+    {{ $result = dict "resource" $resource "type" "image/png" "is_svg" false }}
+  {{ end }}
+{{ end }}
+{{ return $result }}

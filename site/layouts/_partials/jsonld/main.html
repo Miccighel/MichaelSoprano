@@ -1,0 +1,149 @@
+{{- $page := .page -}}
+{{- $summary := .summary | plainify -}}
+{{- $image := .image | default "" -}}
+{{- $siteTitle := .site_title | default site.Title -}}
+{{- $identity := site.Params.identity | default dict -}}
+{{- $organization := $identity.organization | default $identity.name | default $siteTitle -}}
+{{- $documents := slice -}}
+
+{{- if $page.IsHome -}}
+  {{- $documents = $documents | append (dict
+    "@context" "https://schema.org"
+    "@type" "WebSite"
+    "name" $siteTitle
+    "url" $page.Permalink
+    "description" $summary
+    "potentialAction" (dict
+      "@type" "SearchAction"
+      "target" (printf "%s?q={search_term_string}" $page.Permalink)
+      "query-input" "required name=search_term_string"
+    )
+  ) -}}
+{{- else -}}
+  {{- $authors := slice -}}
+  {{- range $page.Params.authors -}}
+    {{- $name := . -}}
+    {{- if eq (lower $name) "admin" -}}
+      {{- $name = $identity.name | default $name -}}
+    {{- end -}}
+    {{- $authors = $authors | append (dict "@type" "Person" "name" $name) -}}
+  {{- end -}}
+  {{- if and (eq (len $authors) 0) $identity.name -}}
+    {{- $authors = $authors | append (dict "@type" "Person" "name" $identity.name) -}}
+  {{- end -}}
+  {{- $authorValue := $authors -}}
+  {{- if eq (len $authors) 1 -}}
+    {{- $authorValue = index $authors 0 -}}
+  {{- end -}}
+
+  {{- if or (eq $page.Type "publications") (eq $page.Type "blog") -}}
+    {{- $articleType := cond (eq $page.Type "blog") "BlogPosting" "Article" -}}
+    {{- $article := dict
+      "@context" "https://schema.org"
+      "@type" $articleType
+      "mainEntityOfPage" (dict "@type" "WebPage" "@id" $page.Permalink)
+      "headline" $page.Title
+      "datePublished" ($page.PublishDate.Format "2006-01-02T15:04:05Z07:00")
+      "dateModified" ($page.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+      "author" $authorValue
+      "publisher" (dict "@type" "Organization" "name" $organization)
+      "description" $summary
+    -}}
+    {{- with $image -}}
+      {{- $article = merge $article (dict "image" (slice .)) -}}
+    {{- end -}}
+    {{- $documents = $documents | append $article -}}
+  {{- else if eq $page.Type "events" -}}
+    {{- $event := dict
+      "@context" "https://schema.org"
+      "@type" "Event"
+      "mainEntityOfPage" (dict "@type" "WebPage" "@id" $page.Permalink)
+      "name" $page.Title
+      "startDate" ($page.Date.Format "2006-01-02T15:04:05Z07:00")
+      "endDate" (($page.Params.date_end | default $page.Date) | time.Format "2006-01-02T15:04:05Z07:00")
+      "performer" $authorValue
+      "description" $summary
+    -}}
+    {{- with $page.Params.location -}}
+      {{- $event = merge $event (dict "location" (dict "@type" "Place" "name" .)) -}}
+    {{- end -}}
+    {{- with $image -}}
+      {{- $event = merge $event (dict "image" (slice .)) -}}
+    {{- end -}}
+    {{- $documents = $documents | append $event -}}
+  {{- end -}}
+
+  {{- if $page.IsPage -}}
+    {{- $webpage := dict
+      "@context" "https://schema.org"
+      "@id" $page.Permalink
+      "@type" "WebPage"
+      "name" $page.Title
+      "url" $page.Permalink
+      "description" $summary
+      "inLanguage" (site.Language.Locale | default "en-US")
+      "isPartOf" (dict "@id" site.Home.Permalink "@type" "WebSite" "name" $siteTitle "url" site.Home.Permalink)
+      "dateModified" ($page.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    -}}
+    {{- if not $page.Date.IsZero -}}
+      {{- $webpage = merge $webpage (dict "datePublished" ($page.Date.Format "2006-01-02T15:04:05Z07:00")) -}}
+    {{- end -}}
+    {{- with $image -}}
+      {{- $webpage = merge $webpage (dict "primaryImageOfPage" (dict "@type" "ImageObject" "url" .)) -}}
+    {{- end -}}
+    {{- $documents = $documents | append $webpage -}}
+  {{- else -}}
+    {{- $documents = $documents | append (dict
+      "@context" "https://schema.org"
+      "@id" $page.Permalink
+      "@type" "CollectionPage"
+      "name" $page.Title
+      "url" $page.Permalink
+      "description" $summary
+      "inLanguage" (site.Language.Locale | default "en-US")
+      "isPartOf" (dict "@id" site.Home.Permalink "@type" "WebSite" "name" $siteTitle "url" site.Home.Permalink)
+    ) -}}
+  {{- end -}}
+
+  {{- $items := slice (dict
+    "@type" "ListItem"
+    "position" 1
+    "name" "Home"
+    "item" (dict "@id" site.Home.Permalink "name" "Home")
+  ) -}}
+  {{- $sectionTitle := "" -}}
+  {{- $sectionURL := "" -}}
+  {{- if eq $page.Type "publications" -}}
+    {{- $sectionTitle = "Publications" -}}
+    {{- $sectionURL = ("publication/" | absURL) -}}
+  {{- else if eq $page.Type "events" -}}
+    {{- $sectionTitle = "Talks" -}}
+    {{- $sectionURL = ("event/" | absURL) -}}
+  {{- else if eq $page.Type "blog" -}}
+    {{- $sectionTitle = "Teaching" -}}
+    {{- $sectionURL = ("post/" | absURL) -}}
+  {{- end -}}
+  {{- if and $page.IsPage $sectionTitle -}}
+    {{- $items = $items | append (dict
+      "@type" "ListItem"
+      "position" 2
+      "name" $sectionTitle
+      "item" (dict "@id" $sectionURL "name" $sectionTitle)
+    ) -}}
+  {{- end -}}
+  {{- $items = $items | append (dict
+    "@type" "ListItem"
+    "position" (add (len $items) 1)
+    "name" $page.Title
+    "item" (dict "@id" $page.Permalink "name" $page.Title)
+  ) -}}
+  {{- $documents = $documents | append (dict
+    "@context" "https://schema.org"
+    "@type" "BreadcrumbList"
+    "itemListElement" $items
+  ) -}}
+{{- end -}}
+
+{{- range $documents }}
+  <script type="application/ld+json">{{ . | jsonify (dict "noHTMLEscape" true) | safeJS }}</script>
+{{- end }}
