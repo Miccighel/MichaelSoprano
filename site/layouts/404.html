@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div data-pagefind-ignore class="flex flex-col justify-center">
+  <article class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert">
+    <h1 class="lg:text-6xl">Page not found</h1>
+    <p>Perhaps you were looking for one of these?</p>
+    {{ $pages := where (where (where (where site.Pages.ByDate.Reverse "Title" "!=" "") "Kind" "in" (slice "page" "section")) "Params.private" "!=" true) "Permalink" "!=" "" }}
+    {{ if $pages }}
+      <ul>
+        {{ range first 10 $pages }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+      </ul>
+    {{ end }}
+  </article>
+</div>
+{{ end }}
