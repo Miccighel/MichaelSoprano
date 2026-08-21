@@ -35,11 +35,6 @@
   {{ end }}
   <link rel="alternate" hreflang="{{ site.Language.Locale | default "en-us" }}" href="{{ .Permalink }}" />
 
-  {{/* Hugo Blox Theme Engine Initialization */}}
-  {{/* Uses get_theme_config helper for backward-compatible config resolution */}}
-  {{ $theme_config := partialCached "functions/get_theme_config" . "theme_config" }}
-  {{ partial "functions/theme_generator.html" $theme_config }}
-
   {{/* Tailwind CSS v4 Processing */}}
   {{/* Use templates.Defer to process CSS after all content is analyzed */}}
   {{ with (templates.Defer (dict "key" "tailwind-css")) }}
@@ -163,11 +158,6 @@
   {{ partial "jsonld/main" (dict "page" . "summary" $desc "image" $og_image "site_title" $branding.site_title) }}
 
   <title>{{$title}}</title>
-
-  {{/* Typography: font loading, font families, and sizes */}}
-  {{ partial "functions/typography.html" $theme_config }}
-  {{/* Layout tokens: radius and spacing */}}
-  {{ partial "functions/layout_tokens.html" $theme_config }}
 
   {{ if .Params.design.background.image.filename }}
     {{/* See Hugo note on linking assets in styles: https://github.com/gohugoio/hugoThemes#common-permalink-issues */}}
