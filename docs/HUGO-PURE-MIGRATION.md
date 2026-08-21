@@ -42,7 +42,7 @@ pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
 1. Rendere locale il guscio globale della pagina. **Completato.**
 2. Rendere autonome ricerca e gestione del tema. **Completato.**
 3. Sostituire il `head` conservando integralmente SEO, favicon e JSON-LD.
-   **Caricatore delle librerie completato; metadati e asset in corso.**
+   **Guscio e caricatore delle librerie locali; metadati e asset in corso.**
 4. Rendere locali layout generici, tassonomie, 404, RSS e sitemap.
 5. Migrare i campi `hugoblox` verso uno schema neutro e aggiornare generatori
    e controlli dei contenuti.
