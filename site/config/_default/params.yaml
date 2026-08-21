@@ -2,6 +2,9 @@ appearance:
   theme: system
   theme_toggle: true
 
+search:
+  enabled: true
+
 hugoblox:
   schema: '2.0'
   identity:

@@ -1,7 +1,7 @@
 <!doctype html>
 {{- $languageCode := site.Language.Locale | default "en-US" -}}
 {{- $themeMode := site.Params.appearance.theme | default "system" -}}
-<html lang="{{ $languageCode }}" dir="ltr" data-wc-theme-default="{{ lower $themeMode }}" data-hbb-relurl="{{ "" | relURL }}">
+<html lang="{{ $languageCode }}" dir="ltr" data-wc-theme-default="{{ lower $themeMode }}">
   {{ partial "site_head" . }}
   <body class="bg-[var(--hb-color-background)] text-[var(--hb-color-foreground)] page-wrapper" id="top">
     <div id="page-bg"></div>
