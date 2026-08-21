@@ -83,7 +83,7 @@
   <script defer src="{{ $markmap_js.RelPermalink }}" integrity="{{ $markmap_js.Data.Integrity }}"></script>
 {{ end }}
 
-{{ if (.Page.HasShortcode "math") | or .Params.math | or site.Params.hugoblox.content.math.enable }}
+{{ if (.Page.HasShortcode "math") | or .Params.math }}
   {{ $katex_css := resources.Get "dist/lib/katex/katex.min.css" | resources.Fingerprint "sha256" }}
   <link type="text/css" rel="stylesheet" href="{{ $katex_css.RelPermalink }}" integrity="{{ $katex_css.Data.Integrity }}" />
   {{ $katex_js := resources.Get "dist/lib/katex/katex.min.js" | resources.Fingerprint "sha256" }}
