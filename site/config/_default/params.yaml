@@ -1,3 +1,7 @@
+appearance:
+  theme: system
+  theme_toggle: true
+
 hugoblox:
   schema: '2.0'
   identity:
