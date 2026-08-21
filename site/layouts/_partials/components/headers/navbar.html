@@ -1,6 +1,6 @@
 {{ $identity := site.Params.hugoblox.identity }}
 {{ $header := site.Params.hugoblox.header }}
-{{ $showSearch := $header.search | default false }}
+{{ $showSearch := site.Params.search.enabled | default false }}
 {{ $showThemeToggle := ne site.Params.appearance.theme_toggle false }}
 <header id="site-header" class="header">
   <nav class="navbar legacy-navbar" aria-label="Primary navigation">

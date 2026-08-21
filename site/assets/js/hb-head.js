@@ -60,25 +60,6 @@ window.siteTheme = {
   useSystem: useSystemTheme,
 };
 
-const relBase = root.dataset.hbbRelurl || "/";
-const normalizedRelBase = relBase.endsWith("/") ? relBase : `${relBase}/`;
-const buildAssetPath = (relativePath) => {
-  const sanitizedPath = relativePath.startsWith("/") ? relativePath.slice(1) : relativePath;
-  return `${normalizedRelBase}${sanitizedPath}`;
-};
-
-// Temporary compatibility surface for the search component. It will disappear
-// when Pagefind is migrated to the local implementation.
-window.hbb = {
-  defaultTheme,
-  relBase: normalizedRelBase,
-  assetPaths: {
-    pagefind: buildAssetPath("pagefind/pagefind.js"),
-  },
-  setDarkTheme: () => setTheme("dark"),
-  setLightTheme: () => setTheme("light"),
-};
-
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("li input[type='checkbox'][disabled]").forEach((checkbox) => {
     checkbox.parentElement?.parentElement?.classList.add("task-list");
