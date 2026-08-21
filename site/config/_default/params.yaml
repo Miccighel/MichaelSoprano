@@ -5,6 +5,9 @@ appearance:
 search:
   enabled: true
 
+header:
+  sticky: true
+
 # Canonical site identity used by the local Hugo templates. The equivalent
 # HugoBlox keys remain below only while legacy module templates still need them.
 identity:
