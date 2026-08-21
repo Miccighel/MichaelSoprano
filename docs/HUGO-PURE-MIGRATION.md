@@ -33,17 +33,16 @@ pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
 
 1. metadati, favicon, JSON-LD e asset inclusi nel `head`;
 2. CSS di base e variabili cromatiche del tema;
-3. assemblaggio delle librerie JavaScript, che carica ancora Alpine anche se
-   ricerca e tema non ne dipendono più;
-4. layout generici, tassonomie, pagina autore, 404, RSS e sitemap;
-5. render hook e shortcode generici;
-6. alcuni campi di configurazione e front matter con namespace `hugoblox`.
+3. layout generici, tassonomie, pagina autore, 404, RSS e sitemap;
+4. render hook e shortcode generici;
+5. alcuni campi di configurazione e front matter con namespace `hugoblox`.
 
 ## Sequenza di lavoro
 
 1. Rendere locale il guscio globale della pagina. **Completato.**
 2. Rendere autonome ricerca e gestione del tema. **Completato.**
 3. Sostituire il `head` conservando integralmente SEO, favicon e JSON-LD.
+   **Caricatore delle librerie completato; metadati e asset in corso.**
 4. Rendere locali layout generici, tassonomie, 404, RSS e sitemap.
 5. Migrare i campi `hugoblox` verso uno schema neutro e aggiornare generatori
    e controlli dei contenuti.
