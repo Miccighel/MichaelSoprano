@@ -1,0 +1,32 @@
+- id: on_this_page
+  translation: On this page
+
+- id: backlinks
+  translation: Backlinks
+
+- id: minute_read
+  translation: min read
+
+- id: previous
+  translation: Previous
+
+- id: next
+  translation: Next
+
+- id: edit_page
+  translation: Edit this page
+
+- id: read_more
+  translation: Read more
+
+- id: ai_insight
+  translation: AI Insight
+
+- id: difficulty
+  translation: Difficulty
+
+- id: prerequisites
+  translation: Prerequisites
+
+- id: trending
+  translation: Trending
