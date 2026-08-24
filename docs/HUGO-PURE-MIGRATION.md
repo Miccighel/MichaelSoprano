@@ -28,20 +28,19 @@ La baseline del ramo `master` al commit `fb437fc8` produce:
 
 ## Dipendenze residue da HugoBlox
 
-Il progetto possiede già homepage, menu, footer e layout specifici per
-pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
-
-1. CSS di base e variabili cromatiche del tema;
-2. alcuni parametri di configurazione con namespace `hugoblox`, ancora letti
-   dal foglio Tailwind del modulo.
+Il progetto possiede ormai localmente homepage, menu, footer, layout, funzioni,
+traduzioni, risorse JavaScript e intero albero CSS effettivamente compilato.
+Restano da eliminare il mount del modulo e i parametri di configurazione
+storici con namespace `hugoblox`, conservati temporaneamente per il collaudo
+finale senza modulo.
 
 ## Sequenza di lavoro
 
 1. Rendere locale il guscio globale della pagina. **Completato.**
 2. Rendere autonome ricerca e gestione del tema. **Completato.**
 3. Sostituire il `head` conservando integralmente SEO, favicon e JSON-LD.
-   **Completato salvo il foglio Tailwind di base: identità, metadati, favicon,
-   Open Graph/Twitter, JSON-LD, token grafici, librerie e bundle sono locali.**
+   **Completato: identità, metadati, favicon, Open Graph/Twitter, JSON-LD,
+   token grafici, librerie, bundle e foglio Tailwind di base sono locali.**
 4. Rendere locali layout generici, tassonomie, 404, RSS e sitemap.
    **404, RSS, sitemap, robots, pagina privacy, indici delle tassonomie e
    guscio delle pagine dei termini, pagine autore, renderer delle schede e
@@ -56,6 +55,8 @@ pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
    e controlli dei contenuti. **Completato: i 30 DOI usano ora
    `identifiers.doi`; generatori, template e audit sono aggiornati.**
 6. Rimuovere il modulo, `go.mod`, `go.sum` e la configurazione non più usata.
+   **In corso: CSS completo e script di navigazione sono ora locali e hanno
+   superato confronti visivi invarianti.**
 7. Ripetere audit funzionale, confronto visivo e controllo completo degli URL.
 
 ## Stato del ramo

@@ -430,6 +430,13 @@ end
   layouts/_partials/functions/get_hook.html
   layouts/_partials/components/backlinks.html
   i18n/en.yaml
+  layouts/_partials/css.html
+  layouts/_partials/tailwind_sources.html
+  assets/css/main.css
+  assets/css/config/tailwind.css
+  assets/css/config/theme.css
+  assets/js/hb-nav.js
+  assets/js/hb-sidebar.js
 ].each do |relative_path|
   errors << "missing local support file #{relative_path}" unless File.file?(File.join(SITE_ROOT, relative_path))
 end
