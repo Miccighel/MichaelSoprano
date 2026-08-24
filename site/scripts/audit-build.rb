@@ -573,6 +573,11 @@ unless local_event_dates == source_event_card_assignments
   errors << "local event-date formatter marks #{local_event_dates} of #{source_event_card_assignments} event cards"
 end
 
+local_icons = html_paths.sum do |path|
+  File.binread(path).scan(/\bdata-icon-provider=(?:["']local["']|local(?=[\s>]))/i).length
+end
+errors << 'local icon resolver is not represented in generated HTML' if local_icons.zero?
+
 expected_author_profile_resolutions = rendered_card_components + author_layout_paths.length
 local_author_profile_resolutions = html_paths.sum do |path|
   File.binread(path).scan(/\bdata-author-profile-provider=(?:["']local["']|local(?=[\s>]))/i).length
