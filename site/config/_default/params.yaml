@@ -14,8 +14,6 @@ locale:
   time_format: '15:04'
   address_format: en-us
 
-# Canonical site identity used by the local Hugo templates. The equivalent
-# HugoBlox keys remain below only while legacy module templates still need them.
 identity:
   name: Michael Soprano
   organization: University of Udine
@@ -26,61 +24,5 @@ identity:
   social:
     twitter: Miccighel_
 
-hugoblox:
-  schema: '2.0'
-  identity:
-    name: Michael Soprano
-    organization: University of Udine
-    type: person
-    tagline: Researcher in Human Computation and Information Retrieval
-    description: Personal academic website of Michael Soprano, researcher at the University of Udine.
-    social:
-      twitter: Miccighel_
-  theme:
-    mode: system
-    pack: default
-    colors:
-      primary: indigo
-  typography:
-    pack: system
-  layout:
-    radius: md
-    spacing: comfortable
-    avatar_shape: circle
-  header:
-    enable: true
-    style: navbar
-    sticky: true
-    align: left
-    search: true
-    theme_toggle: true
-    theme_picker: false
-    language_switcher: false
-  footer:
-    style: minimal
-    language_switcher: false
-    text: '<a href="/privacy/">Privacy Policy</a>'
-  copyright:
-    notice: '© {year} {name}'
-  content:
-    math:
-      enable: false
-    toc:
-      enable: true
-    reading_time:
-      enable: false
-    citations:
-      style: chicago
-  search:
-    enable: true
-  analytics:
-    google:
-      measurement_id: ''
-  repository:
-    enable: false
-  locale:
-    date_format: 'Jan 2, 2006'
-    time_format: '15:04'
-    address_format: en-us
-  privacy:
-    enable: false
+repository:
+  enabled: false

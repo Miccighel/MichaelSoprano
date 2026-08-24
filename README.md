@@ -1,10 +1,10 @@
 # Sito personale di Michael Soprano
 
 Repository privata del sito [michaelsoprano.com](https://michaelsoprano.com),
-realizzato con HugoBlox e pubblicato tramite GitHub Pages.
+realizzato con Hugo e pubblicato tramite GitHub Pages.
 
 Questo README è il promemoria operativo per la manutenzione del sito. La
-documentazione più tecnica della sola applicazione HugoBlox si trova in
+documentazione tecnica dell'applicazione Hugo si trova in
 [`site/README.md`](site/README.md).
 
 ## Regole essenziali
@@ -43,8 +43,7 @@ Servono:
 
 - Node.js 24;
 - pnpm 10.14.0;
-- Hugo Extended 0.164.0;
-- Go, per i moduli Hugo.
+- Hugo Extended 0.164.0.
 
 La prima volta, o dopo un aggiornamento delle dipendenze:
 
