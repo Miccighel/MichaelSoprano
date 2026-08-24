@@ -85,7 +85,7 @@
 .noise-texture::after {
   content: "";
   @apply absolute inset-0 pointer-events-none;
-  background-image: url("/media/textures/noise-pattern.svg");
+  background-image: url("/ui/textures/noise-pattern.svg");
   background-size: 100px 100px;
   background-repeat: repeat;
   opacity: 0.03;
@@ -237,4 +237,3 @@
   background: rgb(0 0 0 / 0.6);
   border: 1px solid rgb(255 255 255 / 0.3);
 }
-
