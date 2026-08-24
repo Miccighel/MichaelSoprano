@@ -9,6 +9,11 @@ search:
 header:
   sticky: true
 
+locale:
+  date_format: 'Jan 2, 2006'
+  time_format: '15:04'
+  address_format: en-us
+
 # Canonical site identity used by the local Hugo templates. The equivalent
 # HugoBlox keys remain below only while legacy module templates still need them.
 identity:
