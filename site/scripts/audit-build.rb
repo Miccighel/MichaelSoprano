@@ -551,6 +551,16 @@ end
 unless local_card_components == rendered_card_components
   errors << "local card renderer marks #{local_card_components} of #{rendered_card_components} rendered cards"
 end
+local_page_image_params = html_paths.sum do |path|
+  File.binread(path).scan(/\bdata-page-image-provider=(?:["']local["']|local(?=[\s>]))/i).length
+end
+unless local_page_image_params == rendered_card_components
+  errors << "local image-parameter resolver marks #{local_page_image_params} of #{rendered_card_components} rendered cards"
+end
+local_responsive_images = html_paths.sum do |path|
+  File.binread(path).scan(/\bdata-responsive-image-provider=(?:["']local["']|local(?=[\s>]))/i).length
+end
+errors << 'local responsive-image processor is not represented in generated HTML' if local_responsive_images.zero?
 
 expected_author_profile_resolutions = rendered_card_components + author_layout_paths.length
 local_author_profile_resolutions = html_paths.sum do |path|
