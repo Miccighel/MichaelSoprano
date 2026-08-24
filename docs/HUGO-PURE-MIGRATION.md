@@ -32,7 +32,7 @@ Il progetto possiede già homepage, menu, footer e layout specifici per
 pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
 
 1. CSS di base e variabili cromatiche del tema;
-2. layout generici, tassonomie e pagina autore;
+2. layout generici e pagina autore;
 3. render hook e shortcode generici;
 4. alcuni campi di configurazione e front matter con namespace `hugoblox`.
 
@@ -44,8 +44,8 @@ pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
    **Completato salvo il foglio Tailwind di base: identità, metadati, favicon,
    Open Graph/Twitter, JSON-LD, token grafici, librerie e bundle sono locali.**
 4. Rendere locali layout generici, tassonomie, 404, RSS e sitemap.
-   **404, RSS, sitemap, robots e pagina privacy completati; tassonomie e
-   autori in corso.**
+   **404, RSS, sitemap, robots, pagina privacy e indici delle tassonomie
+   completati; pagine dei termini e autori in corso.**
 5. Migrare i campi `hugoblox` verso uno schema neutro e aggiornare generatori
    e controlli dei contenuti.
 6. Rimuovere il modulo, `go.mod`, `go.sum` e la configurazione non più usata.
@@ -58,9 +58,10 @@ interne e 59 pagine indicizzate. La diminuzione rispetto alla baseline è
 intenzionale: sono stati rimossi Alpine.js e 63 asset KaTeX mai utilizzati.
 Contenuti, URL pubblici e conteggi editoriali restano invariati.
 
-## Anomalia nota della baseline
+## Normalizzazione delle tassonomie
 
-Il tag `Crowd_Frame` compare anche come `crowd_frame`. Hugo conserva lo stesso
-URL ma può scegliere una capitalizzazione diversa tra due build. La correzione
-verrà effettuata nel passaggio dedicato alle tassonomie, fissando il titolo
-pubblico senza cambiare le etichette presenti nelle pagine esistenti.
+I sette tag presenti nei sorgenti con varianti di maiuscole sono associati a
+metadati canonici. Hugo conserva gli stessi URL e le etichette delle pagine
+esistenti, ma ora genera in modo deterministico `Amazon Mechanical Turk`,
+`Crowd_Frame`, `Crowdsourcing`, `HITS`, `Network Analysis`, `Prolific` e
+`Toloka` negli indici e nelle pagine dei termini.

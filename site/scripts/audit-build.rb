@@ -447,6 +447,46 @@ else
   errors << 'missing privacy source or generated page'
 end
 
+{
+  'authors' => ['Authors', 59],
+  'categories' => ['Categories', 1],
+  'publication_types' => ['Publication_types', 3],
+  'tags' => ['Tags', 130]
+}.each do |taxonomy, (expected_title, expected_terms)|
+  relative_path = File.join(taxonomy, 'index.html')
+  path = File.join(PUBLIC_ROOT, relative_path)
+  unless File.file?(path)
+    errors << "missing taxonomy index #{relative_path}"
+    next
+  end
+
+  html = File.binread(path).force_encoding(Encoding::UTF_8)
+  heading = html_text(html[/<h1\b[^>]*>.*?<\/h1>/mi].to_s)
+  term_links = html.scan(/<a\b[^>]*class=["'][^"']*\binline-flex\b[^"']*["'][^>]*>/mi)
+  errors << "#{relative_path}: wrong local template" unless html.match?(/\bdata-local-layout=["']?taxonomy-index\b/i)
+  errors << "#{relative_path}: wrong heading #{heading.inspect}" unless heading == expected_title
+  errors << "#{relative_path}: missing Pagefind exclusion" unless html.match?(/\bdata-pagefind-ignore\b/)
+  errors << "#{relative_path}: rendered #{term_links.length} terms, expected #{expected_terms}" unless term_links.length == expected_terms
+end
+
+tags_index_path = File.join(PUBLIC_ROOT, 'tags', 'index.html')
+if File.file?(tags_index_path)
+  tags_index_html = File.binread(tags_index_path).force_encoding(Encoding::UTF_8)
+  {
+    '/tag/amazon-mechanical-turk/' => 'Amazon Mechanical Turk 2',
+    '/tag/crowd_frame/' => 'Crowd_Frame 2',
+    '/tag/crowdsourcing/' => 'Crowdsourcing 23',
+    '/tag/hits/' => 'HITS 3',
+    '/tag/network-analysis/' => 'Network Analysis 3',
+    '/tag/prolific/' => 'Prolific 2',
+    '/tag/toloka/' => 'Toloka 2'
+  }.each do |href, expected_text|
+    anchor = tags_index_html[/<a\b[^>]*\bhref\s*=\s*(?:["']#{Regexp.escape(href)}["']|#{Regexp.escape(href)}(?=[\s>]))[^>]*>.*?<\/a>/mi]
+    rendered_text = html_text(anchor.to_s)
+    errors << "tags/index.html: #{href} is labelled #{rendered_text.inspect}, expected #{expected_text.inspect}" unless rendered_text == expected_text
+  end
+end
+
 not_found_path = File.join(PUBLIC_ROOT, '404.html')
 if File.file?(not_found_path)
   not_found_html = File.read(not_found_path)
