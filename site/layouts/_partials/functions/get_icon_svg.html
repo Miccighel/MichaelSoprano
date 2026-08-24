@@ -29,10 +29,19 @@
 {{- end -}}
 
 {{- $icon := "" -}}
+{{- $local_icon_pack := index hugo.Data.icon_subset $pack -}}
+{{- $local_pack_icon := "" -}}
+{{- if $local_icon_pack -}}
+  {{- $local_pack_icon = index (index $local_icon_pack "icons") $name -}}
+{{- end -}}
 {{- $icon_pack := index hugo.Data.icons $pack -}}
 {{- $pack_icon := index (index $icon_pack "icons") $name -}}
 
-{{- if $pack_icon -}}
+{{- if $local_pack_icon -}}
+  {{- $icon_body := index $local_pack_icon "body" -}}
+  {{- $icon_size := index $local_icon_pack "height" -}}
+  {{- $icon = printf `<svg data-icon-catalog="local" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %s %s">%s</svg>` (cast.ToString $icon_size) (cast.ToString $icon_size) $icon_body -}}
+{{- else if $pack_icon -}}
   {{- if eq $pack "hb" -}}
     {{- $icon = $pack_icon -}}
   {{- else -}}
@@ -81,4 +90,3 @@
 {{- end -}}
 
 {{- return $icon -}}
-

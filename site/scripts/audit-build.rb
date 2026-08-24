@@ -577,6 +577,12 @@ local_icons = html_paths.sum do |path|
   File.binread(path).scan(/\bdata-icon-provider=(?:["']local["']|local(?=[\s>]))/i).length
 end
 errors << 'local icon resolver is not represented in generated HTML' if local_icons.zero?
+local_catalog_icons = html_paths.sum do |path|
+  File.binread(path).scan(/\bdata-icon-catalog=(?:["']local["']|local(?=[\s>]))/i).length
+end
+unless local_catalog_icons == local_icons
+  errors << "local icon catalog supplies #{local_catalog_icons} of #{local_icons} rendered resolver icons"
+end
 
 expected_author_profile_resolutions = rendered_card_components + author_layout_paths.length
 local_author_profile_resolutions = html_paths.sum do |path|
