@@ -426,6 +426,13 @@ render_link_path = File.join(SITE_ROOT, 'layouts', '_markup', 'render-link.html'
 unless File.file?(render_link_path)
   errors << 'missing local Markdown link render hook'
 end
+%w[
+  layouts/_partials/functions/get_hook.html
+  layouts/_partials/components/backlinks.html
+  i18n/en.yaml
+].each do |relative_path|
+  errors << "missing local support file #{relative_path}" unless File.file?(File.join(SITE_ROOT, relative_path))
+end
 if File.file?(home_html)
   rendered_home = File.binread(home_html).force_encoding(Encoding::UTF_8)
   unless rendered_home.match?(/<a\b[^>]*href=["']https:\/\/scholar\.google\.com\/[^"']*["'][^>]*target=(?:["']_blank["']|_blank\b)[^>]*rel=(?:["']noopener["']|noopener\b)/i)

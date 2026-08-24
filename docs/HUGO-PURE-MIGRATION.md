@@ -49,7 +49,9 @@ pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
    formattazione delle date evento, resolver SVG, catalogo minimo delle
    icone, sidebar, indice e pulsanti di condivisione della pagina Privacy
    completati. Anche il render hook dei collegamenti Markdown è locale; gli
-   altri render hook e gli shortcode del modulo non sono usati dai contenuti.**
+   altri render hook e gli shortcode del modulo non sono usati dai contenuti.
+   Loader degli hook, backlinks e traduzioni inglesi effettivamente richiamate
+   sono anch'essi locali.**
 5. Migrare i campi `hugoblox` verso uno schema neutro e aggiornare generatori
    e controlli dei contenuti. **Completato: i 30 DOI usano ora
    `identifiers.doi`; generatori, template e audit sono aggiornati.**
