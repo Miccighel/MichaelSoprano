@@ -538,6 +538,16 @@ unless rendered_author_cards == source_author_assignments
   errors << "author lists render #{rendered_author_cards} cards, expected #{source_author_assignments} source assignments"
 end
 
+paginated_paths = html_paths.select do |path|
+  File.binread(path).match?(/<a\b[^>]*\bclass=["']?page-link\b/i)
+end
+missing_local_paginator = paginated_paths.reject do |path|
+  File.binread(path).match?(/\bdata-local-component=["']?paginator\b/i)
+end
+missing_local_paginator.each do |path|
+  errors << "#{path.delete_prefix("#{PUBLIC_ROOT}/")}: wrong paginator component"
+end
+
 not_found_path = File.join(PUBLIC_ROOT, '404.html')
 if File.file?(not_found_path)
   not_found_html = File.read(not_found_path)
