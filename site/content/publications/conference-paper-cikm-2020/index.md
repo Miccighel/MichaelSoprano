@@ -54,7 +54,6 @@ abstract: 'Misinformation is an ever increasing problem that is difficult to sol
 publication:
   name: "*Proceedings of the 29th ACM International Conference on Information and
     Knowledge Management. Conference Ranks: GGS A+, Core A.*"
-hugoblox:
-  ids:
-    doi: 10.1145/3340531.3412048
+identifiers:
+  doi: 10.1145/3340531.3412048
 ---

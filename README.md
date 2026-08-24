@@ -173,7 +173,7 @@ La procedura dettagliata e i controlli per il record `CNAME` sono in
 
 - Aggiornare bibliometria e CV quando cambiano i dati.
 - Controllare gli avvisi Dependabot e aggiornare una dipendenza alla volta.
-- Dopo ogni aggiornamento di HugoBlox o delle dipendenze, rifare build, audit e
+- Dopo ogni aggiornamento di Hugo o delle dipendenze, rifare build, audit e
   controllo visivo completo.
 - Non eliminare `site/static/CNAME`, `site/assets/media/icon.png` o
   `site/static/favicon.ico`.

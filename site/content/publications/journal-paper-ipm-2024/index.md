@@ -51,7 +51,6 @@ abstract: The increase of the amount of misinformation spread every day online i
 publication:
   name: "*Information Processing & Management. Journal Ranks: Journal Citation Reports
     (JCR) Q1 (2022), Scimago (SJR) Q1 (2022).*"
-hugoblox:
-  ids:
-    doi: 10.1016/j.ipm.2024.103672
+identifiers:
+  doi: 10.1016/j.ipm.2024.103672
 ---

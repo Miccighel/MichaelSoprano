@@ -38,9 +38,8 @@ abstract: 'The spread of online misinformation poses serious threats to democrat
   interpretable systems for combating misinformation.'
 publication:
   name: "*Revised version of the PhD thesis, defended on 22 May 2023; arXiv:2506.09221.*"
-hugoblox:
-  ids:
-    doi: 10.48550/arXiv.2506.09221
+identifiers:
+  doi: 10.48550/arXiv.2506.09221
 links:
 - type: pdf
   url: https://arxiv.org/abs/2506.09221

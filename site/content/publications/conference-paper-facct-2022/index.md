@@ -46,9 +46,8 @@ abstract: Due to the increasing amount of information shared online every day, t
   of workers, their biases may sometimes lead to more accurate judgments.
 publication:
   name: "*Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency.*"
-hugoblox:
-  ids:
-    doi: 10.1145/3531146.3534629
+identifiers:
+  doi: 10.1145/3531146.3534629
 links:
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3531146.3534629

@@ -53,7 +53,6 @@ abstract: 'Recent work has demonstrated the viability of using crowdsourcing as 
 publication:
   name: "*Information Processing & Management. Journal Ranks: Journal Citation Reports
     (JCR) Q1 (2021), Scimago (SJR) Q1 (2021).*"
-hugoblox:
-  ids:
-    doi: 10.1016/j.ipm.2021.102710
+identifiers:
+  doi: 10.1016/j.ipm.2021.102710
 ---

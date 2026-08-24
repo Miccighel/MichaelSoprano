@@ -642,6 +642,23 @@ SECTIONS.each do |section, config|
   errors << "#{relative_path}: rendered #{rendered_items} items, expected #{expected_items}" unless rendered_items == expected_items
 end
 
+publication_sources = Dir.glob(File.join(SITE_ROOT, 'content', 'publications', '*', 'index.md')).sort
+doi_sources = publication_sources.each_with_object([]) do |source_path, entries|
+  source_data, = load_page(source_path)
+  doi = source_data.dig('identifiers', 'doi')
+  entries << [source_path, doi.to_s] if doi
+end
+doi_sources.each do |source_path, doi|
+  slug = File.basename(File.dirname(source_path))
+  generated_path = File.join(PUBLIC_ROOT, 'publication', slug, 'index.html')
+  generated_html = File.file?(generated_path) ? File.binread(generated_path).force_encoding(Encoding::UTF_8) : ''
+  escaped_doi = Regexp.escape("https://doi.org/#{doi}")
+  unless generated_html.match?(/<a\b[^>]*href=["']?#{escaped_doi}["'\s>][^>]*>DOI<\/a>/i)
+    errors << "publication/#{slug}/index.html: missing DOI button for #{doi}"
+  end
+end
+errors << "publication DOI inventory contains #{doi_sources.length} entries, expected 30" unless doi_sources.length == 30
+
 %w[
   media/CVs/Curriculum_Vitae_EN.pdf
   media/CVs/Curriculum_Vitae_IT.pdf

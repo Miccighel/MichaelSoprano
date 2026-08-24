@@ -53,7 +53,6 @@ abstract: 'There is an important ongoing effort aimed to tackle misinformation a
 publication:
   name: "*Information Processing & Management. Journal Ranks: Journal Citation Reports
     (JCR) Q1 (2023), Scimago (SJR) Q1 (2023).*"
-hugoblox:
-  ids:
-    doi: 10.1016/j.ipm.2024.103792
+identifiers:
+  doi: 10.1016/j.ipm.2024.103792
 ---

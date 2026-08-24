@@ -46,9 +46,8 @@ abstract: To scale the size of Information Retrieval collections, crowdsourcing 
 publication:
   name: "*ACM Transactions on Information Systems. Journal Ranks: Journal Citation
     Reports (JCR) Q1 (2021), Scimago (SJR) Q1 (2021).*"
-hugoblox:
-  ids:
-    doi: 10.1145/3597201
+identifiers:
+  doi: 10.1145/3597201
 links:
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3597201

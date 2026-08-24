@@ -34,7 +34,6 @@ abstract: This paper describes Readersourcing 2.0, an ecosystem providing an imp
   a double-blind approach.
 publication:
   name: "*Digital Libraries: Supporting Open Science*"
-hugoblox:
-  ids:
-    doi: 10.1007/978-3-030-11226-4_21
+identifiers:
+  doi: 10.1007/978-3-030-11226-4_21
 ---

@@ -37,7 +37,6 @@ abstract: This paper explores the use of crowdsourcing to classify statement typ
 publication:
   name: "*Proceedings of the 6th Multidisciplinary International Symposium on Disinformation
     in Open Online Media (MISDOOM 2024). Münster, Germany.*"
-hugoblox:
-  ids:
-    doi: 10.1007/978-3-031-71210-4_5
+identifiers:
+  doi: 10.1007/978-3-031-71210-4_5
 ---

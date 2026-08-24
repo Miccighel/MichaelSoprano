@@ -44,7 +44,6 @@ abstract: 'Review scores collect users’ opinions in a simple and intuitive man
 publication:
   name: "*Information Systems. Journal Ranks: Journal Citation Reports (JCR) Q2 (2021),
     Scimago (SJR) Q1 (2021).*"
-hugoblox:
-  ids:
-    doi: 10.1016/j.is.2022.102107
+identifiers:
+  doi: 10.1016/j.is.2022.102107
 ---

@@ -43,7 +43,6 @@ abstract: 'Truthfulness judgments are a fundamental step in the process of fight
 publication:
   name: "*Proceedings of the 43rd International ACM SIGIR Conference on Research and
     Development in Information Retrieval. Conference Rank: GGS A++, Core A*.*"
-hugoblox:
-  ids:
-    doi: 10.1145/3397271.3401112
+identifiers:
+  doi: 10.1145/3397271.3401112
 ---
