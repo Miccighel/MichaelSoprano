@@ -3,6 +3,7 @@
 
 require 'cgi'
 require 'net/http'
+require 'openssl'
 require 'pathname'
 require 'thread'
 require 'uri'
@@ -16,6 +17,12 @@ HOST_ACCEPTED_STATUSES = {
   'formspree.io' => [400],
   'www.last.fm' => [600]
 }.freeze
+KNOWN_INCOMPLETE_TLS_CHAIN_HOSTS = %w[
+  ecir2026.eu
+  iir2024.uniud.it
+  ircdl2025.uniud.it
+  smdc.uniud.it
+].freeze
 
 unless Dir.exist?(PUBLIC_ROOT)
   warn "ERROR: #{PUBLIC_ROOT} does not exist; build the site first."
@@ -66,14 +73,19 @@ end
 
 def check(uri)
   attempts = 0
-  begin
+  loop do
     attempts += 1
-    response = request(uri, :head)
-    response = request(uri, :get) if response.code.to_i == 405
-    response
-  rescue Net::OpenTimeout, Net::ReadTimeout, EOFError, Errno::ECONNRESET
-    retry if attempts < 2
-    raise
+    begin
+      response = request(uri, :head)
+      response = request(uri, :get) if response.code.to_i == 405
+      if response.code.to_i.between?(500, 599) && attempts < 2
+        sleep 1
+        next
+      end
+      return response
+    rescue Net::OpenTimeout, Net::ReadTimeout, EOFError, Errno::ECONNRESET
+      raise if attempts >= 2
+    end
   end
 end
 
@@ -83,6 +95,7 @@ queue = Queue.new
 urls.each { |url| queue << url }
 
 failures = []
+warnings = []
 mutex = Mutex.new
 workers = Array.new([WORKERS, urls.length].min) do
   Thread.new do
@@ -97,6 +110,12 @@ workers = Array.new([WORKERS, urls.length].min) do
       mutex.synchronize { failures << "#{status} #{url}" }
     rescue ThreadError
       break
+    rescue OpenSSL::SSL::SSLError => e
+      known_incomplete_chain = KNOWN_INCOMPLETE_TLS_CHAIN_HOSTS.include?(uri.host.downcase) &&
+                               e.message.include?('unable to get local issuer certificate')
+      target = known_incomplete_chain ? warnings : failures
+      label = known_incomplete_chain ? 'known incomplete TLS chain' : "#{e.class}: #{e.message}"
+      mutex.synchronize { target << "#{label} — #{url}" }
     rescue StandardError => e
       mutex.synchronize { failures << "#{e.class}: #{e.message} — #{url}" }
     end
@@ -105,8 +124,9 @@ end
 workers.each(&:join)
 
 puts "External links checked: #{urls.length}."
+warnings.sort.each { |warning| warn "WARNING: #{warning}" }
 if failures.empty?
-  puts 'External link check passed.'
+  puts "External link check passed#{warnings.empty? ? '.' : " with #{warnings.length} known TLS warning(s)."}"
 else
   failures.sort.each { |failure| warn "ERROR: #{failure}" }
   warn "External link check failed with #{failures.length} error(s)."

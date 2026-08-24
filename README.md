@@ -174,6 +174,9 @@ La procedura dettagliata e i controlli per il record `CNAME` sono in
 - Controllare gli avvisi Dependabot e aggiornare una dipendenza alla volta.
 - Dopo ogni aggiornamento di Hugo o delle dipendenze, rifare build, audit e
   controllo visivo completo.
+- Il controllo settimanale dei link tratta come avvisi soltanto le catene TLS
+  incomplete esplicitamente note; ogni altro errore continua a far fallire il
+  workflow.
 - Non eliminare `site/static/CNAME`, `site/assets/media/icon.png` o
   `site/static/favicon.ico`.
 - Conservare i rami di rollback finché la nuova versione non è stabile da
