@@ -431,6 +431,11 @@ if File.file?(privacy_source_path) && File.file?(privacy_path)
   privacy_heading = html_text(privacy_html[/<h1\b[^>]*>.*?<\/h1>/mi].to_s)
 
   errors << 'privacy/index.html: wrong local template' unless privacy_html.include?('local-privacy-single')
+  %w[sidebar toc page-sharer].each do |component|
+    unless privacy_html.match?(/\bdata-local-component=["']?#{Regexp.escape(component)}\b/i)
+      errors << "privacy/index.html: missing local #{component} component"
+    end
+  end
   errors << 'privacy/index.html: wrong heading' unless privacy_heading == normalized(privacy_data['title'])
   errors << 'privacy/index.html: page is excluded from the search index' unless privacy_html.match?(/\bdata-pagefind-body\b/)
   significant_excerpt(privacy_body)&.then do |excerpt|
