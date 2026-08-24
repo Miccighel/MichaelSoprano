@@ -45,9 +45,8 @@ abstract: Deepfakes are increasingly realistic and easy to produce, raising conc
 publication:
   name: "*6th Workshop on Reducing Online Misinformation through Credible Information
     Retrieval (ROMCIR 2026), held in conjunction with ECIR 2026.*"
-hugoblox:
-  ids:
-    doi: 10.48550/arXiv.2605.04797
+identifiers:
+  doi: 10.48550/arXiv.2605.04797
 links:
 - type: pdf
   url: https://arxiv.org/pdf/2605.04797

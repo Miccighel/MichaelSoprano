@@ -49,9 +49,8 @@ abstract: Scientific publishing is expanding rapidly across disciplines, making 
 publication:
   name: "*Proceedings of the 2025 International ACM SIGIR Conference on Innovative
     Concepts and Theories in Information Retrieval (ICTIR)*"
-hugoblox:
-  ids:
-    doi: 10.1145/3731120.3744586
+identifiers:
+  doi: 10.1145/3731120.3744586
 links:
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3731120.3744586

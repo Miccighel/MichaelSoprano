@@ -44,9 +44,8 @@ abstract: Patient Information Leaflets (PILs) provide essential information abou
 publication:
   name: "*Proceedings of the 48th International ACM SIGIR Conference on Research and
     Development in Information Retrieval. Conference Rank: GGS A++, Core A*.*"
-hugoblox:
-  ids:
-    doi: 10.1145/3726302.3730283
+identifiers:
+  doi: 10.1145/3726302.3730283
 links:
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3726302.3730283

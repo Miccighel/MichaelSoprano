@@ -45,7 +45,6 @@ abstract: 'Review scores collect users opinions in a simple and intuitive manner
 publication:
   name: "*Proceedings of the 21st International Conference on Web Engineering. Conference
     Ranks (2021): GGS B-, Core B.*"
-hugoblox:
-  ids:
-    doi: 10.1007/978-3-030-74296-6_6
+identifiers:
+  doi: 10.1007/978-3-030-74296-6_6
 ---

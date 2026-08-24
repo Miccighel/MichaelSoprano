@@ -46,7 +46,6 @@ abstract: 'We investigate solution methods for the Oven Scheduling Problem (OSP)
 publication:
   name: "*Applications of Evolutionary Computation (EvoApplications 2025)*. Conference
     Rank: GGS B."
-hugoblox:
-  ids:
-    doi: 10.1007/978-3-031-90062-4_5
+identifiers:
+  doi: 10.1007/978-3-031-90062-4_5
 ---

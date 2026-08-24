@@ -80,7 +80,7 @@
                     <span class="legacy-attachments">
                       {{ range .Params.links }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}
                       <button class="btn btn-outline-primary btn-sm legacy-cite" type="button" data-cite-url="{{ $publication.RelPermalink }}cite.bib">Cite</button>
-                      {{ with .Params.hugoblox }}{{ with .ids }}{{ with .doi }}<a class="btn btn-outline-primary btn-sm" href="https://doi.org/{{ . }}">DOI</a>{{ end }}{{ end }}{{ end }}
+                      {{ with .Params.identifiers }}{{ with .doi }}<a class="btn btn-outline-primary btn-sm" href="https://doi.org/{{ . }}">DOI</a>{{ end }}{{ end }}
                     </span>
                   </article>
                 {{ end }}

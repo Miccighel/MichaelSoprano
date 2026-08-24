@@ -40,7 +40,6 @@ abstract: Traditionally, relevance judgments have relied on human annotators, bu
 publication:
   name: "*Advances in Information Retrieval: 48th European Conference on Information
     Retrieval (ECIR 2026). Conference Rank: CORE A; GGS A-.*"
-hugoblox:
-  ids:
-    doi: 10.1007/978-3-032-21300-6_24
+identifiers:
+  doi: 10.1007/978-3-032-21300-6_24
 ---

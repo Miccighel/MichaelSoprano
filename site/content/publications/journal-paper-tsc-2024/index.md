@@ -46,9 +46,8 @@ abstract: 'Crowdsourcing tasks have been widely used to collect a large number o
   such kinds of studies. We release the survey and the data at: https://osf.io/h4du9/.'
 publication:
   name: "*ACM Transactions on Social Computing. Journal Rank: Scimago (SJR) Q2 (2023).*"
-hugoblox:
-  ids:
-    doi: 10.1145/3674884
+identifiers:
+  doi: 10.1145/3674884
 links:
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3674884

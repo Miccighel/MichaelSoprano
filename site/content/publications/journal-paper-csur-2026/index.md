@@ -38,9 +38,8 @@ abstract: This systematic review explores the application of Large Language Mode
 publication:
   name: "*ACM Computing Surveys. Journal Ranks: Journal Citation Reports (JCR) Q1
     (2024), Scimago (SJR) Q1 (2024).*"
-hugoblox:
-  ids:
-    doi: 10.1145/3801961
+identifiers:
+  doi: 10.1145/3801961
 links:
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3801961

@@ -54,9 +54,8 @@ abstract: 'Recently, the misinformation problem has been addressed with a crowds
 publication:
   name: "*Personal and Ubiquitous Computing. Journal Ranks: Journal Citation Reports
     (JCR) Q2 (2020), Scimago (SJR) Q1 (2021).*"
-hugoblox:
-  ids:
-    doi: 10.1007/s00779-021-01604-6
+identifiers:
+  doi: 10.1007/s00779-021-01604-6
 links:
 - type: pdf
   url: https://link.springer.com/content/pdf/10.1007/s00779-021-01604-6.pdf

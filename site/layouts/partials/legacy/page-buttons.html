@@ -3,13 +3,13 @@
   <div class="btn-links legacy-page-buttons">
     {{ range . }}<a class="btn btn-outline-primary btn-page-header" href="{{ .url }}" target="_blank" rel="noopener">{{ upper .type }}</a>{{ end }}
     {{ if eq $page.Section "publications" }}<button class="btn btn-outline-primary btn-page-header legacy-cite" type="button" data-cite-url="{{ $page.RelPermalink }}cite.bib">Cite</button>{{ end }}
-    {{ with $page.Params.hugoblox }}{{ with .ids }}{{ with .doi }}<a class="btn btn-outline-primary btn-page-header" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">DOI</a>{{ end }}{{ end }}{{ end }}
+    {{ with $page.Params.identifiers }}{{ with .doi }}<a class="btn btn-outline-primary btn-page-header" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">DOI</a>{{ end }}{{ end }}
   </div>
 {{ else }}
   {{ if eq $page.Section "publications" }}
     <div class="btn-links legacy-page-buttons">
       <button class="btn btn-outline-primary btn-page-header legacy-cite" type="button" data-cite-url="{{ $page.RelPermalink }}cite.bib">Cite</button>
-      {{ with $page.Params.hugoblox }}{{ with .ids }}{{ with .doi }}<a class="btn btn-outline-primary btn-page-header" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">DOI</a>{{ end }}{{ end }}{{ end }}
+      {{ with $page.Params.identifiers }}{{ with .doi }}<a class="btn btn-outline-primary btn-page-header" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">DOI</a>{{ end }}{{ end }}
     </div>
   {{ end }}
 {{ end }}

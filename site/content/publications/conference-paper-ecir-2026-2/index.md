@@ -42,7 +42,6 @@ publication:
   name: "*Advances in Information Retrieval: 48th European Conference on Information
     Retrieval (ECIR 2026), Lecture Notes in Computer Science, vol. 16484, Springer,
     Cham. Conference Rank: CORE A; GGS A-.*"
-hugoblox:
-  ids:
-    doi: 10.1007/978-3-032-21300-6_25
+identifiers:
+  doi: 10.1007/978-3-032-21300-6_25
 ---

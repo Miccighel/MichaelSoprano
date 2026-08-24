@@ -33,9 +33,9 @@ the fields required by the selected content type. Complete the placeholders,
 place any bundle assets in the same directory, and change `draft` to `false`
 when the page is ready.
 
-The most important HugoBlox fields are:
+The most important content fields are:
 
-- publication DOI: `hugoblox.ids.doi`;
+- publication DOI: `identifiers.doi`;
 - publication venue: `publication.name`;
 - downloadable resources: entries in `links` with `type` and `url`;
 - event dates: `event_start` and `event_end`;

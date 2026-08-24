@@ -38,9 +38,8 @@ abstract: IIR 2024, the 14th Italian Information Retrieval Workshop, served as t
   of Udine and the University of Milano-Bicocca and was held in Udine, Italy.
 publication:
   name: "*SIGIR Forum*"
-hugoblox:
-  ids:
-    doi: 10.1145/3722449.3722464
+identifiers:
+  doi: 10.1145/3722449.3722464
 links:
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3722449.3722464

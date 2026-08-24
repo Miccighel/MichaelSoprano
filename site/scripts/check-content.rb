@@ -73,6 +73,7 @@ SECTIONS.each do |section, required_fields|
     warnings << "#{relative_path}: still marked as draft" if data['draft'] == true
 
     if section == 'publications'
+      errors << "#{relative_path}: legacy hugoblox front matter is not allowed" if data.key?('hugoblox')
       Array(data['publication_types']).each do |publication_type|
         next if PUBLICATION_TYPES.include?(publication_type)
 
@@ -80,6 +81,13 @@ SECTIONS.each do |section, required_fields|
       end
       publication_name = data.dig('publication', 'name') if data['publication'].is_a?(Hash)
       errors << "#{relative_path}: missing publication.name" if blank?(publication_name)
+
+      identifiers = data['identifiers']
+      if identifiers && !identifiers.is_a?(Hash)
+        errors << "#{relative_path}: identifiers must be a mapping"
+      elsif identifiers&.key?('doi') && !blank?(identifiers['doi']) && identifiers['doi'].to_s !~ %r{\A10\.\d{4,9}/\S+\z}i
+        errors << "#{relative_path}: invalid identifiers.doi"
+      end
     end
 
     if section == 'events' && data['event_start'] && data['event_end']

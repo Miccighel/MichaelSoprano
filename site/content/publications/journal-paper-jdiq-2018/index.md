@@ -49,7 +49,6 @@ abstract: 'Effectiveness evaluation of information retrieval systems by means of
 publication:
   name: "*Journal of Data and Information Quality. Journal Rank: Scimago (SJR) Q2
     (2018)*"
-hugoblox:
-  ids:
-    doi: 10.1145/3239573
+identifiers:
+  doi: 10.1145/3239573
 ---

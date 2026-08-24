@@ -64,9 +64,8 @@ front_matter = case type
                    abstract: ""
                    publication:
                      name: ""
-                   hugoblox:
-                     ids:
-                       doi:
+                   identifiers:
+                     doi:
                    links: []
                    ---
 

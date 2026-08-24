@@ -36,7 +36,6 @@ abstract: >-
   responses, aiming to improve the overall performance of healthcare services.
 publication:
   name: "*Intelligent Health Systems – From Technology to Data and Knowledge.*"
-hugoblox:
-  ids:
-    doi: 10.3233/shti250434
+identifiers:
+  doi: 10.3233/shti250434
 ---

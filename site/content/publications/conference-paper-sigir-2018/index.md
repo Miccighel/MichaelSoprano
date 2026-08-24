@@ -36,7 +36,6 @@ abstract: 'Several researchers have proposed to reduce the number of topics used
 publication:
   name: "*Proceedings of the 41st International ACM SIGIR Conference on Research and
     Development in Information Retrieval. Conference Rank: GGS A++, Core A**"
-hugoblox:
-  ids:
-    doi: 10.1145/3209978.3210108
+identifiers:
+  doi: 10.1145/3209978.3210108
 ---

@@ -41,9 +41,8 @@ abstract: 'Automated fact-checking (AFC) systems exist to combat disinformation,
 publication:
   name: "*Journal of Data and Information Quality, July 2022. Journal Ranks: Journal
     Citation Reports (JCR) Q3 (2021), Scimago (SJR) Q2 (2021).*"
-hugoblox:
-  ids:
-    doi: 10.1145/3546917
+identifiers:
+  doi: 10.1145/3546917
 links:
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3546917

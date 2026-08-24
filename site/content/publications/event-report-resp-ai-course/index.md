@@ -60,9 +60,8 @@ abstract: While the concept of responsible AI is becoming more and more popular,
   AI content for information retrieval curriculum.
 publication:
   name: "*SIGIR Forum*"
-hugoblox:
-  ids:
-    doi: 10.1145/3722449.3722456
+identifiers:
+  doi: 10.1145/3722449.3722456
 links:
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3722449.3722456
