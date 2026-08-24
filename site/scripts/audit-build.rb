@@ -552,6 +552,14 @@ unless local_card_components == rendered_card_components
   errors << "local card renderer marks #{local_card_components} of #{rendered_card_components} rendered cards"
 end
 
+expected_author_profile_resolutions = rendered_card_components + author_layout_paths.length
+local_author_profile_resolutions = html_paths.sum do |path|
+  File.binread(path).scan(/\bdata-author-profile-provider=(?:["']local["']|local(?=[\s>]))/i).length
+end
+unless local_author_profile_resolutions == expected_author_profile_resolutions
+  errors << "local author resolver marks #{local_author_profile_resolutions} of #{expected_author_profile_resolutions} profile resolutions"
+end
+
 paginated_paths = html_paths.select do |path|
   File.binread(path).match?(/<a\b[^>]*\bclass=["']?page-link\b/i)
 end
