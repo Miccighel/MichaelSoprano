@@ -422,6 +422,17 @@ if File.file?(home_html) && !File.binread(home_html).match?(/\bdata-pagefind-bod
   errors << 'index.html: homepage is excluded from the search index'
 end
 
+render_link_path = File.join(SITE_ROOT, 'layouts', '_markup', 'render-link.html')
+unless File.file?(render_link_path)
+  errors << 'missing local Markdown link render hook'
+end
+if File.file?(home_html)
+  rendered_home = File.binread(home_html).force_encoding(Encoding::UTF_8)
+  unless rendered_home.match?(/<a\b[^>]*href=["']https:\/\/scholar\.google\.com\/[^"']*["'][^>]*target=(?:["']_blank["']|_blank\b)[^>]*rel=(?:["']noopener["']|noopener\b)/i)
+    errors << 'index.html: external Markdown links do not use the local safe-link behavior'
+  end
+end
+
 privacy_source_path = File.join(SITE_ROOT, 'content', 'privacy.md')
 privacy_path = File.join(PUBLIC_ROOT, 'privacy', 'index.html')
 if File.file?(privacy_source_path) && File.file?(privacy_path)
