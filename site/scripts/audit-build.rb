@@ -422,6 +422,31 @@ if File.file?(home_html) && !File.binread(home_html).match?(/\bdata-pagefind-bod
   errors << 'index.html: homepage is excluded from the search index'
 end
 
+privacy_source_path = File.join(SITE_ROOT, 'content', 'privacy.md')
+privacy_path = File.join(PUBLIC_ROOT, 'privacy', 'index.html')
+if File.file?(privacy_source_path) && File.file?(privacy_path)
+  privacy_data, privacy_body = load_page(privacy_source_path)
+  privacy_html = File.binread(privacy_path).force_encoding(Encoding::UTF_8)
+  privacy_text = html_text(privacy_html)
+  privacy_heading = html_text(privacy_html[/<h1\b[^>]*>.*?<\/h1>/mi].to_s)
+
+  errors << 'privacy/index.html: wrong local template' unless privacy_html.include?('local-privacy-single')
+  errors << 'privacy/index.html: wrong heading' unless privacy_heading == normalized(privacy_data['title'])
+  errors << 'privacy/index.html: page is excluded from the search index' unless privacy_html.match?(/\bdata-pagefind-body\b/)
+  significant_excerpt(privacy_body)&.then do |excerpt|
+    errors << 'privacy/index.html: substantive content is missing' unless privacy_text.include?(excerpt)
+  end
+
+  expected_share_links = %w[x facebook email linkedin whatsapp]
+  rendered_share_links = privacy_html.scan(/\bid=["']?share-link-([\w-]+)/i).flatten
+  unless rendered_share_links == expected_share_links
+    errors << "privacy/index.html: share links #{rendered_share_links.inspect}, expected #{expected_share_links.inspect}"
+  end
+  errors << 'privacy/index.html: missing last-updated timestamp' unless privacy_html.match?(/<time\b[^>]*>.*?Last updated on.*?<\/time>/mi)
+else
+  errors << 'missing privacy source or generated page'
+end
+
 not_found_path = File.join(PUBLIC_ROOT, '404.html')
 if File.file?(not_found_path)
   not_found_html = File.read(not_found_path)
