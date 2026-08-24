@@ -538,6 +538,20 @@ unless rendered_author_cards == source_author_assignments
   errors << "author lists render #{rendered_author_cards} cards, expected #{source_author_assignments} source assignments"
 end
 
+expected_card_components = source_term_assignments + source_author_assignments
+rendered_card_components = html_paths.sum do |path|
+  File.binread(path).scan(/\brole=(?:["']article["']|article(?=[\s>]))/i).length
+end
+local_card_components = html_paths.sum do |path|
+  File.binread(path).scan(/\bdata-local-component=(?:["']card["']|card(?=[\s>]))/i).length
+end
+unless rendered_card_components == expected_card_components
+  errors << "site renders #{rendered_card_components} cards, expected #{expected_card_components} source assignments"
+end
+unless local_card_components == rendered_card_components
+  errors << "local card renderer marks #{local_card_components} of #{rendered_card_components} rendered cards"
+end
+
 paginated_paths = html_paths.select do |path|
   File.binread(path).match?(/<a\b[^>]*\bclass=["']?page-link\b/i)
 end
