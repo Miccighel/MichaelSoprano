@@ -1,6 +1,7 @@
 appearance:
   theme: system
   theme_toggle: true
+  avatar_shape: circle
 
 search:
   enabled: true

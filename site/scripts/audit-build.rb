@@ -513,6 +513,31 @@ unless rendered_term_cards == source_term_assignments
   errors << "term lists render #{rendered_term_cards} cards, expected #{source_term_assignments} source assignments"
 end
 
+author_layout_paths = html_paths.select do |path|
+  relative = path.delete_prefix("#{PUBLIC_ROOT}/")
+  next false unless relative.start_with?('authors/')
+  next false if relative == 'authors/index.html' || relative.match?(%r{/page/1/index\.html\z})
+
+  true
+end
+missing_local_author_layout = author_layout_paths.reject do |path|
+  File.binread(path).match?(/\bdata-local-layout=["']?author-term\b/i)
+end
+missing_local_author_layout.each do |path|
+  errors << "#{path.delete_prefix("#{PUBLIC_ROOT}/")}: wrong author-term template"
+end
+
+source_author_assignments = Dir.glob(File.join(SITE_ROOT, 'content', '**', '*.md')).sum do |source_path|
+  data, = load_page(source_path)
+  Array(data['authors']).length
+end
+rendered_author_cards = author_layout_paths.sum do |path|
+  File.binread(path).scan(/\brole=(?:["']article["']|article(?=[\s>]))/i).length
+end
+unless rendered_author_cards == source_author_assignments
+  errors << "author lists render #{rendered_author_cards} cards, expected #{source_author_assignments} source assignments"
+end
+
 not_found_path = File.join(PUBLIC_ROOT, '404.html')
 if File.file?(not_found_path)
   not_found_html = File.read(not_found_path)
