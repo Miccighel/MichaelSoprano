@@ -162,9 +162,9 @@
       <div class="pt-3 border-t border-zinc-100 dark:border-zinc-800">
         <div class="flex items-center gap-3 text-xs text-zinc-500 dark:text-zinc-500 flex-wrap mb-3">
           {{ if $item.Params.authors }}
-          <div class="flex items-center gap-2 min-w-0">
-            {{ $slug := index $item.Params.authors 0 | urlize }}
-            {{ $profile := partial "functions/get_author_profile" $slug }}
+          {{ $slug := index $item.Params.authors 0 | urlize }}
+          {{ $profile := partial "functions/get_author_profile" $slug }}
+          <div class="flex items-center gap-2 min-w-0" data-author-profile-provider="{{ $profile.provider }}">
             {{ $avatar := $profile.avatar }}
             <div class="relative h-6 w-6 flex-shrink-0">
               {{ if $avatar }}

@@ -4,7 +4,7 @@
 {{ $avatar := $profile.avatar }}
 {{ $avatarShape := site.Params.appearance.avatar_shape | default "circle" }}
 
-<section class="max-w-5xl mx-auto px-6 py-10" data-local-layout="author-term">
+<section class="max-w-5xl mx-auto px-6 py-10" data-local-layout="author-term" data-author-profile-provider="{{ $profile.provider }}">
   <div class="flex flex-col sm:flex-row sm:items-center gap-6">
     <div class="flex-shrink-0">
       {{ if $avatar }}
