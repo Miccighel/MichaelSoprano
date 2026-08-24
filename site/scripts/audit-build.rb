@@ -562,6 +562,17 @@ local_responsive_images = html_paths.sum do |path|
 end
 errors << 'local responsive-image processor is not represented in generated HTML' if local_responsive_images.zero?
 
+source_event_card_assignments = Dir.glob(File.join(SITE_ROOT, 'content', 'events', '*', 'index.md')).sum do |source_path|
+  data, = load_page(source_path)
+  %w[authors categories publication_types tags].sum { |field| Array(data[field]).length }
+end
+local_event_dates = html_paths.sum do |path|
+  File.binread(path).scan(/\bdata-event-date-provider=(?:["']local["']|local(?=[\s>]))/i).length
+end
+unless local_event_dates == source_event_card_assignments
+  errors << "local event-date formatter marks #{local_event_dates} of #{source_event_card_assignments} event cards"
+end
+
 expected_author_profile_resolutions = rendered_card_components + author_layout_paths.length
 local_author_profile_resolutions = html_paths.sum do |path|
   File.binread(path).scan(/\bdata-author-profile-provider=(?:["']local["']|local(?=[\s>]))/i).length

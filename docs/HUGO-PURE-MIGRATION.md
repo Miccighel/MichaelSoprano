@@ -32,7 +32,7 @@ Il progetto possiede già homepage, menu, footer e layout specifici per
 pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
 
 1. CSS di base e variabili cromatiche del tema;
-2. funzioni condivise per date degli eventi e icone;
+2. funzioni condivise per le icone;
 3. render hook e shortcode generici;
 4. alcuni campi di configurazione e front matter con namespace `hugoblox`.
 
@@ -47,7 +47,8 @@ pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
    **404, RSS, sitemap, robots, pagina privacy, indici delle tassonomie e
    guscio delle pagine dei termini, pagine autore, renderer delle schede e
    paginatore, resolver dei profili autore e pipeline delle immagini
-   completati; funzioni condivise per date degli eventi e icone in corso.**
+   e formattazione delle date evento completati; funzioni condivise per le
+   icone in corso.**
 5. Migrare i campi `hugoblox` verso uno schema neutro e aggiornare generatori
    e controlli dei contenuti.
 6. Rimuovere il modulo, `go.mod`, `go.sum` e la configurazione non più usata.
