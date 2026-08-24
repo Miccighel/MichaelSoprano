@@ -35,6 +35,7 @@ documentazione tecnica dell'applicazione Hugo si trova in
 | Favicon e immagine social predefinita | `site/assets/media/icon.png` e fallback `site/static/favicon.ico` |
 | CV scaricabili | `site/static/media/CVs/` |
 | Presentazioni, poster, tesi e altri download | `site/static/media/` |
+| Risorse tecniche dell'interfaccia | `site/static/ui/` |
 | Stile personalizzato | `site/assets/css/custom.css` |
 
 ## Preparazione dell'ambiente
