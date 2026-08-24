@@ -14,6 +14,7 @@ WORKERS = 6
 TIMEOUT = 12
 ACCEPTED_BLOCKED_STATUSES = [401, 403, 405, 406, 409, 429, 999].freeze
 HOST_ACCEPTED_STATUSES = {
+  'dblp.org' => [503],
   'formspree.io' => [400],
   'www.last.fm' => [600]
 }.freeze
