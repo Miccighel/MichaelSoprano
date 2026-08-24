@@ -19,7 +19,7 @@
             "anchor" "Center"
             "sizes" (slice 160 240 320 480)
           ) }}
-          <img class="h-32 w-32 sm:h-40 sm:w-40 {{ if ne $avatarShape "square" }}rounded-full{{ end }}"
+          <img class="h-32 w-32 sm:h-40 sm:w-40 {{ if ne $avatarShape "square" }}rounded-full{{ end }}" data-responsive-image-provider="{{ $responsive.provider }}"
             srcset="{{ $responsive.srcset }}" sizes="160px" src="{{ $responsive.fallback.RelPermalink }}"
             width="160" height="160" alt="{{ $profile.title }}" loading="lazy">
         {{ end }}
