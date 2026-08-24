@@ -433,6 +433,16 @@ params_path = File.join(SITE_ROOT, 'config', '_default', 'params.yaml')
 if File.file?(params_path) && File.read(params_path).match?(/^hugoblox:/)
   errors << 'config/_default/params.yaml: legacy hugoblox namespace is still present'
 end
+custom_css_path = File.join(SITE_ROOT, 'assets', 'css', 'custom.css')
+if File.file?(custom_css_path)
+  custom_css = File.read(custom_css_path)
+  mobile_brand_anchored = custom_css.scan(/#site-header \.legacy-navbar-brand-mobile\s*\{[^}]+\}/).any? do |rule|
+    rule.include?('position: absolute') && rule.include?('top: 0') && rule.include?('height: 50px')
+  end
+  unless mobile_brand_anchored
+    errors << 'assets/css/custom.css: mobile navbar brand is not anchored to the header'
+  end
+end
 %w[
   layouts/_partials/functions/get_hook.html
   layouts/_partials/components/backlinks.html
