@@ -426,6 +426,13 @@ render_link_path = File.join(SITE_ROOT, 'layouts', '_markup', 'render-link.html'
 unless File.file?(render_link_path)
   errors << 'missing local Markdown link render hook'
 end
+%w[go.mod go.sum config/_default/module.yaml].each do |relative_path|
+  errors << "legacy Hugo module file is still present: #{relative_path}" if File.exist?(File.join(SITE_ROOT, relative_path))
+end
+params_path = File.join(SITE_ROOT, 'config', '_default', 'params.yaml')
+if File.file?(params_path) && File.read(params_path).match?(/^hugoblox:/)
+  errors << 'config/_default/params.yaml: legacy hugoblox namespace is still present'
+end
 %w[
   layouts/_partials/functions/get_hook.html
   layouts/_partials/components/backlinks.html
@@ -445,6 +452,7 @@ if File.file?(home_html)
   unless rendered_home.match?(/<a\b[^>]*href=["']https:\/\/scholar\.google\.com\/[^"']*["'][^>]*target=(?:["']_blank["']|_blank\b)[^>]*rel=(?:["']noopener["']|noopener\b)/i)
     errors << 'index.html: external Markdown links do not use the local safe-link behavior'
   end
+  errors << 'index.html: search attribution is not Pagefind' unless rendered_home.include?('Search by Pagefind')
 end
 
 privacy_source_path = File.join(SITE_ROOT, 'content', 'privacy.md')

@@ -1,6 +1,6 @@
-# Michael Soprano — HugoBlox website
+# Michael Soprano — Hugo website
 
-This directory is the canonical and self-contained source of the HugoBlox
+This directory is the canonical and self-contained source of the Hugo
 website. It contains the complete profile, homepage, publications,
 presentations, teaching pages, and static assets.
 
@@ -15,8 +15,8 @@ an `index.md` file and, when needed, images or downloadable files beside it.
 | Presentations and posters | `content/events/<slug>/` | `/talk/<generated-slug>/` |
 | Teaching | `content/blog/<slug>/` | `/post/<slug>/` |
 
-The source directory names follow the current HugoBlox schema. Public URLs
-retain the historical website structure through the permalink configuration.
+The source directory names form the local content schema. Public URLs retain
+the historical website structure through the permalink configuration.
 
 ## Create new content
 

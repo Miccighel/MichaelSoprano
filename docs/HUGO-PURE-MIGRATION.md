@@ -26,13 +26,12 @@ La baseline del ramo `master` al commit `fb437fc8` produce:
 - 3 contenuti didattici;
 - 59 pagine indicizzate da Pagefind.
 
-## Dipendenze residue da HugoBlox
+## Autonomia da HugoBlox
 
 Il progetto possiede ormai localmente homepage, menu, footer, layout, funzioni,
 traduzioni, risorse JavaScript e intero albero CSS effettivamente compilato.
-Restano da eliminare il mount del modulo e i parametri di configurazione
-storici con namespace `hugoblox`, conservati temporaneamente per il collaudo
-finale senza modulo.
+Il mount del modulo, i parametri di configurazione storici, `go.mod` e `go.sum`
+sono stati rimossi dopo una build completa senza modulo.
 
 ## Sequenza di lavoro
 
@@ -55,9 +54,10 @@ finale senza modulo.
    e controlli dei contenuti. **Completato: i 30 DOI usano ora
    `identifiers.doi`; generatori, template e audit sono aggiornati.**
 6. Rimuovere il modulo, `go.mod`, `go.sum` e la configurazione non più usata.
-   **In corso: CSS completo e script di navigazione sono ora locali e hanno
-   superato confronti visivi invarianti.**
+   **Completato: anche il workflow non installa più Go.**
 7. Ripetere audit funzionale, confronto visivo e controllo completo degli URL.
+   **Completato: pipeline verde, tre screenshot campione invarianti, menu e
+   ricerca interattivi, nessun errore in console.**
 
 ## Stato del ramo
 
