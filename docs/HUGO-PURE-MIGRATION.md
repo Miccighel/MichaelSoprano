@@ -46,7 +46,7 @@ pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
 4. Rendere locali layout generici, tassonomie, 404, RSS e sitemap.
    **404, RSS, sitemap, robots, pagina privacy, indici delle tassonomie e
    guscio delle pagine dei termini e pagine autore completati; componenti
-   delle schede e resolver dei profili autore in corso.**
+   delle schede e resolver dei profili autore in corso; paginatore locale.**
 5. Migrare i campi `hugoblox` verso uno schema neutro e aggiornare generatori
    e controlli dei contenuti.
 6. Rimuovere il modulo, `go.mod`, `go.sum` e la configurazione non più usata.
