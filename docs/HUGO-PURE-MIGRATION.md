@@ -32,7 +32,7 @@ Il progetto possiede già homepage, menu, footer e layout specifici per
 pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
 
 1. CSS di base e variabili cromatiche del tema;
-2. layout generici e pagina autore;
+2. componenti delle schede generiche e pagina autore;
 3. render hook e shortcode generici;
 4. alcuni campi di configurazione e front matter con namespace `hugoblox`.
 
@@ -44,8 +44,9 @@ pubblicazioni, eventi e didattica. HugoBlox fornisce ancora:
    **Completato salvo il foglio Tailwind di base: identità, metadati, favicon,
    Open Graph/Twitter, JSON-LD, token grafici, librerie e bundle sono locali.**
 4. Rendere locali layout generici, tassonomie, 404, RSS e sitemap.
-   **404, RSS, sitemap, robots, pagina privacy e indici delle tassonomie
-   completati; pagine dei termini e autori in corso.**
+   **404, RSS, sitemap, robots, pagina privacy, indici delle tassonomie e
+   guscio delle pagine dei termini completati; componenti delle schede e
+   autori in corso.**
 5. Migrare i campi `hugoblox` verso uno schema neutro e aggiornare generatori
    e controlli dei contenuti.
 6. Rimuovere il modulo, `go.mod`, `go.sum` e la configurazione non più usata.
