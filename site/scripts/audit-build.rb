@@ -487,6 +487,32 @@ if File.file?(tags_index_path)
   end
 end
 
+term_roots = %w[tag category publication-type]
+term_layout_paths = html_paths.select do |path|
+  relative = path.delete_prefix("#{PUBLIC_ROOT}/")
+  next false unless term_roots.any? { |root| relative.start_with?("#{root}/") }
+  next false if relative.match?(%r{/page/1/index\.html\z})
+
+  true
+end
+missing_local_term_layout = term_layout_paths.reject do |path|
+  File.binread(path).match?(/\bdata-local-layout=["']?term-list\b/i)
+end
+missing_local_term_layout.each do |path|
+  errors << "#{path.delete_prefix("#{PUBLIC_ROOT}/")}: wrong term-list template"
+end
+
+source_term_assignments = Dir.glob(File.join(SITE_ROOT, 'content', '**', '*.md')).sum do |source_path|
+  data, = load_page(source_path)
+  %w[categories publication_types tags].sum { |field| Array(data[field]).length }
+end
+rendered_term_cards = term_layout_paths.sum do |path|
+  File.binread(path).scan(/\brole=(?:["']article["']|article(?=[\s>]))/i).length
+end
+unless rendered_term_cards == source_term_assignments
+  errors << "term lists render #{rendered_term_cards} cards, expected #{source_term_assignments} source assignments"
+end
+
 not_found_path = File.join(PUBLIC_ROOT, '404.html')
 if File.file?(not_found_path)
   not_found_html = File.read(not_found_path)
