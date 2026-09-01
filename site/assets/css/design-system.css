@@ -451,6 +451,68 @@ body {
   box-shadow: var(--site-shadow-sm);
 }
 
+#presentations .stream-item .article-title {
+  margin-top: .6rem;
+  line-height: 1.4;
+}
+
+.presentation-row-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  color: var(--site-muted);
+  font-size: .7rem;
+  font-weight: 700;
+}
+
+.presentation-row-type {
+  padding: .28rem .5rem;
+  border-radius: 999px;
+  background: var(--site-primary-soft);
+  color: var(--site-primary-hover);
+  letter-spacing: .045em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.presentation-row-event {
+  margin: .45rem 0 0;
+  color: var(--site-muted);
+  font-size: .78rem;
+  line-height: 1.5;
+}
+
+.presentation-row-authors {
+  margin: .45rem 0 0;
+  color: var(--site-text);
+  font-size: .75rem;
+  line-height: 1.5;
+}
+
+.presentation-row-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem 1rem;
+  margin-top: .5rem;
+  color: var(--site-muted);
+  font-size: .72rem;
+  line-height: 1.4;
+}
+
+.presentation-row-details span {
+  display: inline-flex;
+  align-items: center;
+  gap: .38rem;
+}
+
+.presentation-row-details i {
+  width: .8rem;
+  color: var(--site-primary);
+  text-align: center;
+}
+
+#presentations .btn-links { margin-top: .8rem; }
+
 .legacy-contact-form input,
 .legacy-contact-form textarea,
 .legacy-publication-filters input,

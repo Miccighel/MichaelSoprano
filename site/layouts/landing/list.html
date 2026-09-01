@@ -130,15 +130,26 @@
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "events" }}
               <div class="stream-list">
-                {{ range first 5 $pages.ByDate.Reverse }}
+                {{ range first 10 $pages.ByDate.Reverse }}
                   {{ $event := . }}
                   <article class="media stream-item">
                     <div class="media-body">
+                      {{ $contribution_type := index (split .Params.summary " - ") 0 }}
+                      <div class="presentation-row-eyebrow">
+                        <span class="presentation-row-type">{{ $contribution_type }}</span>
+                        {{ with .Params.event_start }}<time datetime="{{ time.Format "2006-01-02" . }}">{{ time.Format "Jan 2, 2006" . }}</time>{{ end }}
+                      </div>
                       <h2 class="section-subheading article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-                      <div class="article-style">{{ .Params.summary }}</div>
-                      <div class="stream-meta article-metadata">
-                        {{ with .Params.event_start }}<div>{{ time.Format "Jan 2, 2006 15:04" . }}{{ with $event.Params.event_end }} – {{ time.Format "15:04" . }}{{ end }}{{ with $event.Params.location }} <span class="middot-divider"></span> {{ . }}{{ end }}</div>{{ end }}
-                        <div>{{ delimit .Params.authors ", " }}</div>
+                      <p class="presentation-row-authors">{{ delimit .Params.authors ", " }}</p>
+                      {{ with .Params.event_name }}<p class="presentation-row-event">{{ . }}</p>{{ end }}
+                      <div class="presentation-row-details">
+                        {{ with .Params.event_start }}
+                          {{ $start_time := time.Format "15:04" . }}
+                          {{ if ne $start_time "00:00" }}
+                            <span><i class="far fa-clock" aria-hidden="true"></i>{{ $start_time }}{{ with $event.Params.event_end }}{{ $end_time := time.Format "15:04" . }}{{ if ne $end_time "00:00" }}–{{ $end_time }}{{ end }}{{ end }}</span>
+                          {{ end }}
+                        {{ end }}
+                        {{ with .Params.location }}<span><i class="fas fa-location-dot" aria-hidden="true"></i>{{ strings.TrimSuffix "." . }}</span>{{ end }}
                       </div>
                       {{ with .Params.links }}<div class="btn-links">{{ range . }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}</div>{{ end }}
                     </div>
