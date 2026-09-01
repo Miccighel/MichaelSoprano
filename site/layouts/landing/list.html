@@ -72,10 +72,12 @@
               <div class="legacy-list publication-list">
                 {{ range first $homepage_limit $pages }}
                   {{ $publication := . }}
-                  <article class="pub-list-item view-citation">
-                    <span class="li-cite-author">{{ delimit .Params.authors ", " }}.</span>
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>.
-                    {{ with .Params.publication }}{{ with .name }}<em>{{ strings.TrimSuffix "*" (strings.TrimPrefix "*" .) }}</em>,{{ end }}{{ end }} {{ .Date.Format "2006" }}.
+                  <article class="pub-list-item publication-home-item view-citation">
+                    <h2 class="publication-home-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                    <div class="li-cite-author">{{ delimit .Params.authors ", " }}</div>
+                    <div class="publication-home-meta">
+                      {{ with .Params.publication }}{{ with .name }}<em>{{ strings.TrimSuffix "." (replace . "*" "") }}</em>,{{ end }}{{ end }} {{ .Date.Format "2006" }}.
+                    </div>
                     <span class="legacy-attachments">
                       {{ range .Params.links }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}
                       <button class="btn btn-outline-primary btn-sm legacy-cite" type="button" data-cite-url="{{ $publication.RelPermalink }}cite.bib">Cite</button>
