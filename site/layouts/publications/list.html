@@ -17,7 +17,6 @@
       {{ $publication := . }}
       {{ $type := index .Params.publication_types 0 | default "" }}
       <article class="pub-list-item view-citation" data-title="{{ .Title | lower }}" data-authors="{{ delimit .Params.authors ", " | lower }}" data-type="{{ $type }}" data-year="{{ .Date.Format "2006" }}">
-        <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         <div class="li-cite-author">{{ delimit .Params.authors ", " }}</div>
         <span class="legacy-attachments">

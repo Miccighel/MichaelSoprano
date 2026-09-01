@@ -73,7 +73,6 @@
                 {{ range $pages }}
                   {{ $publication := . }}
                   <article class="pub-list-item view-citation">
-                    <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
                     <span class="li-cite-author">{{ delimit .Params.authors ", " }}.</span>
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>.
                     {{ with .Params.publication }}{{ with .name }}<em>{{ strings.TrimSuffix "*" (strings.TrimPrefix "*" .) }}</em>,{{ end }}{{ end }} {{ .Date.Format "2006" }}.
