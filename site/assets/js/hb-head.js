@@ -59,22 +59,3 @@ window.siteTheme = {
   systemTheme,
   useSystem: useSystemTheme,
 };
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("li input[type='checkbox'][disabled]").forEach((checkbox) => {
-    checkbox.parentElement?.parentElement?.classList.add("task-list");
-  });
-
-  document.querySelectorAll(".task-list li").forEach((item) => {
-    const textNode = [...item.childNodes].find(
-      (node) => node.nodeType === Node.TEXT_NODE && node.textContent?.trim().length > 1,
-    );
-    if (!textNode) return;
-
-    const label = document.createElement("label");
-    textNode.after(label);
-    const checkbox = item.querySelector("input[type='checkbox']");
-    if (checkbox) label.appendChild(checkbox);
-    label.appendChild(textNode);
-  });
-});

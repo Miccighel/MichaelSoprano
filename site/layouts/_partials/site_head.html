@@ -45,6 +45,9 @@
     {{ $styles := resources.Get "css/custom.css" | minify | fingerprint "sha256" }}
     <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
   {{ end }}
+  {{ if .IsHome }}
+    <link href="/vendor/leaflet/leaflet.css" rel="stylesheet" />
+  {{ end }}
 
   {{/* Externalized init scripts for CSP-friendly head */}}
   {{- $hb_head := resources.Get "js/hb-head.js" | js.Build | resources.Minify -}}
@@ -85,7 +88,6 @@
   {{ $sharing_image := resources.GetMatch (path.Join "media" "sharing.*") }}
   {{ $featured_image := partial "functions/get_featured_image" . }}
 {{ $avatar_image := (.Resources.ByType "image").GetMatch "avatar*" }}
-  {{ $has_logo := fileExists "assets/media/logo.png" | or (fileExists "assets/media/logo.svg") }}
   {{ $og_image := "" }}
   {{ $twitter_card := "summary_large_image" }}
 {{ if and (eq .Kind "term") (eq .Data.Singular "author") }}
@@ -102,13 +104,6 @@
     {{ $og_image = $featured_image.Permalink }}
   {{ else if $sharing_image }}
     {{ $og_image = $sharing_image.Permalink }}
-  {{ else if $has_logo }}
-    {{/* !CACHED! Can safely cache this site logo variant */}}
-    {{ $logo_data := partialCached "functions/get_logo" (dict "constraint" "fit" "size" 300) "logo_og" }}
-    {{ with $logo_data.resource }}
-      {{ $og_image = .Permalink }}
-    {{ end }}
-    {{ $twitter_card = "summary" }}
   {{ else }}
     {{ $icon_og := partial "functions/get_site_icon" 512 }}
     {{ with $icon_og.resource }}
@@ -180,8 +175,7 @@
 
   {{- $js_theme := resources.Get "js/hb-theme.js" | resources.Minify -}}
   {{- $js_nav := resources.Get "js/hb-nav.js" | resources.Minify -}}
-  {{- $js_sidebar := resources.Get "js/hb-sidebar.js" | resources.Minify -}}
-  {{ $js_bundle_contents := slice $js_theme $js_nav $js_sidebar }}
+  {{ $js_bundle_contents := slice $js_theme $js_nav }}
 
   {{ $js_bundle := $js_bundle_contents | resources.Concat (printf "js/site-core-%s.min.js" .Lang) }}
   {{- if hugo.IsProduction -}}
@@ -193,7 +187,12 @@
     integrity="{{ $js_bundle.Data.Integrity }}"
   ></script>
 
-  {{/* Load Third-Party Libraries */}}
-  {{ partial "libraries.html" . }}
+  {{ if site.Params.search.enabled | default false }}
+    {{ $search_js := resources.Get "js/hb-search.js" | resources.Minify }}
+    {{- if hugo.IsProduction -}}
+      {{ $search_js = $search_js | fingerprint "sha256" }}
+    {{- end -}}
+    <script defer src="{{ $search_js.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $search_js.Data.Integrity }}" crossorigin="anonymous"{{ end }}></script>
+  {{ end }}
 
 </head>

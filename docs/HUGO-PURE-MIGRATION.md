@@ -45,11 +45,11 @@ sono stati rimossi dopo una build completa senza modulo.
    guscio delle pagine dei termini, pagine autore, renderer delle schede e
    paginatore, resolver dei profili autore e pipeline delle immagini
    formattazione delle date evento, resolver SVG, catalogo minimo delle
-   icone, sidebar, indice e pulsanti di condivisione della pagina Privacy
-   completati. Anche il render hook dei collegamenti Markdown è locale; gli
+   icone e pagina Privacy completati. La pagina Privacy usa ora un layout
+   intenzionalmente semplice, senza sidebar, indice o condivisione superflui.
+   Anche il render hook dei collegamenti Markdown è locale; gli
    altri render hook e gli shortcode del modulo non sono usati dai contenuti.
-   Loader degli hook, backlinks e traduzioni inglesi effettivamente richiamate
-   sono anch'essi locali.**
+   componenti non utilizzati sono stati rimossi.**
 5. Migrare i campi `hugoblox` verso uno schema neutro e aggiornare generatori
    e controlli dei contenuti. **Completato: i 30 DOI usano ora
    `identifiers.doi`; generatori, template e audit sono aggiornati.**
@@ -61,9 +61,10 @@ sono stati rimossi dopo una build completa senza modulo.
 
 ## Stato del ramo
 
-La pipeline corrente produce 476 pagine HTML, 981 file, 649 destinazioni
-interne e 59 pagine indicizzate. La diminuzione rispetto alla baseline è
-intenzionale: sono stati rimossi Alpine.js e 63 asset KaTeX mai utilizzati.
+La pipeline corrente con Hugo 0.165 produce 476 pagine HTML, 969 file, 650
+destinazioni interne e 59 pagine indicizzate. La diminuzione rispetto alla
+baseline è intenzionale: sono stati rimossi Alpine.js, 63 asset KaTeX e i
+componenti CSS/JavaScript generici mai utilizzati.
 Contenuti, URL pubblici e conteggi editoriali restano invariati.
 
 ## Normalizzazione delle tassonomie

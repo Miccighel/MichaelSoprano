@@ -1,7 +1,6 @@
 @import url("/vendor/fonts/fonts.css");
 @import url("/vendor/fontawesome/css/all.min.css");
 @import url("/vendor/academicons/css/academicons.min.css");
-@import url("/vendor/leaflet/leaflet.css");
 
 /* Local design tokens formerly emitted by the HugoBlox theme helpers. */
 :root {
@@ -252,12 +251,6 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
 .legacy-tag-cloud a[data-count="22"] { font-size: 1.976339443rem; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
-.legacy-cookie-notice { position: fixed; right: 0; bottom: 0; left: 0; z-index: 10000; display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; box-sizing: border-box; padding: 16px 28.8px; background: var(--legacy-primary); color: #fff; box-shadow: 0 -.125rem .5rem rgba(0, 0, 0, .15); font-size: 16px; line-height: 1.5; }
-.legacy-cookie-notice[hidden] { display: none; }
-.legacy-cookie-message { margin: 0; }
-.legacy-cookie-notice a { color: #fff; text-decoration: underline; }
-.legacy-cookie-compliance { flex: 0 0 auto; }
-.legacy-cookie-notice button { border: 2px solid transparent; border-radius: 5px; padding: 5.76px 11.52px; background: #fff; color: var(--legacy-primary); font: inherit; font-weight: 700; cursor: pointer; }
 
 .legacy-cite-modal[hidden] { display: none; }
 .legacy-cite-modal { position: fixed; inset: 0; z-index: 11000; display: grid; place-items: center; padding: 1rem; background: rgba(0, 0, 0, .5); }
@@ -345,7 +338,7 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
 .legacy-archive .publication-list { gap: 1.35rem; }
 .legacy-year-group { margin-bottom: 3rem; }
 .legacy-year-group > h2 { margin: 0 0 1.5rem; font-size: 1.5rem; font-weight: 400; }
-.legacy-archive-empty { display: none; color: var(--legacy-muted); }
+.legacy-archive-empty { color: var(--legacy-muted); }
 
 @media (max-width: 991px) {
   .legacy-home .home-section { padding: 60px 0; }
@@ -384,8 +377,6 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
   .legacy-profile-links { max-width: 100%; }
   .stream-image { flex-basis: 80px; }
   .stream-image img { width: 80px; }
-  .legacy-cookie-notice { align-items: stretch; flex-direction: column; padding: 16px 24px; }
-  .legacy-cookie-notice button { width: 100%; }
   .legacy-publication-filters { grid-template-columns: 1fr; }
   .legacy-article-header h1, .article-style h1 { font-size: 2rem; }
   .page-subtitle { font-size: 1.1rem; }

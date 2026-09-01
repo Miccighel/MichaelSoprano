@@ -17,7 +17,9 @@ documentazione tecnica dell'applicazione Hugo si trova in
 - `site/public/`, `site/resources/`, `site/static/vendor/`, `node_modules/` e
   le cache locali sono file generati: non vanno modificati né aggiunti a Git.
 - I vecchi sorgenti sono conservati nel ramo `hugo-version`; lo snapshot del
-  vecchio sito pubblicato è in `codex/legacy-gh-pages-2026-08-09`.
+  vecchio sito pubblicato è in `codex/legacy-gh-pages-2026-08-09`, mentre
+  `codex/pre-hugo-pure-deploy-2026-08-24` conserva lo stato immediatamente
+  precedente al passaggio in produzione di Hugo puro.
 - Anche se la repository è privata, password, token e credenziali non devono
   essere salvati nei file versionati.
 
@@ -44,7 +46,7 @@ Servono:
 
 - Node.js 24;
 - pnpm 10.14.0;
-- Hugo Extended 0.164.0.
+- Hugo Extended 0.165.0.
 
 La prima volta, o dopo un aggiornamento delle dipendenze:
 
@@ -125,12 +127,7 @@ L'indirizzo locale viene mostrato da Hugo, normalmente
 ```bash
 cd site
 pnpm install --frozen-lockfile
-pnpm run vendor
-./scripts/check-content.rb
-hugo --destination public --gc --minify --cleanDestinationDir
-pnpm exec pagefind --site public
-cd ..
-ruby site/scripts/audit-build.rb
+pnpm run check
 ```
 
 Facoltativamente, per controllare anche i collegamenti esterni:
@@ -139,8 +136,10 @@ Facoltativamente, per controllare anche i collegamenti esterni:
 ruby site/scripts/check-external-links.rb
 ```
 
-Il workflow GitHub ripete gli stessi controlli. Il controllo dei link esterni
-viene eseguito anche automaticamente una volta alla settimana.
+`pnpm run check` è il comando canonico usato anche dal workflow GitHub: prepara
+gli asset locali, valida i sorgenti, compila Hugo, genera l'indice Pagefind e
+controlla il sito risultante. Il controllo dei link esterni viene eseguito
+automaticamente una volta alla settimana.
 
 ## Pubblicazione
 
@@ -175,6 +174,8 @@ La procedura dettagliata e i controlli per il record `CNAME` sono in
 - Controllare gli avvisi Dependabot e aggiornare una dipendenza alla volta.
 - Dopo ogni aggiornamento di Hugo o delle dipendenze, rifare build, audit e
   controllo visivo completo.
+- Font, icone e librerie dell'interfaccia sono ospitati localmente; la mappa
+  OpenStreetMap viene caricata soltanto nella homepage.
 - Il controllo settimanale dei link tratta come avvisi soltanto le catene TLS
   incomplete esplicitamente note; ogni altro errore continua a far fallire il
   workflow.

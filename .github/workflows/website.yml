@@ -42,29 +42,17 @@ jobs:
       - name: Set up Hugo Extended
         uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
         with:
-          hugo-version: '0.164.0'
+          hugo-version: '0.165.0'
           extended: true
 
-      - name: Prepare self-hosted frontend assets
+      - name: Validate and build website
         working-directory: site
-        run: pnpm run vendor
-
-      - name: Validate source content
-        run: ruby site/scripts/check-content.rb
-
-      - name: Build website
-        run: hugo --source site --destination public --gc --minify --cleanDestinationDir
-
-      - name: Build search index
-        working-directory: site
-        run: pnpm exec pagefind --site public
-
-      - name: Audit generated website
-        run: ruby site/scripts/audit-build.rb
+        run: pnpm run check
 
       - name: Check external links
         if: github.event_name == 'schedule'
-        run: ruby site/scripts/check-external-links.rb
+        working-directory: site
+        run: pnpm run check:links
 
       - name: Upload preview artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1

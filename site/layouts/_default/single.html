@@ -1,20 +1,10 @@
 {{ define "main" }}
-<div class="mx-auto flex max-w-screen-xl local-privacy-single">
-  {{ partial "components/sidebar.html" (dict "context" . "no_sidebar" true) }}
-  {{ partial "components/toc.html" . }}
-  <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
-    <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
-      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100" data-pagefind-meta="title" data-pagefind-body>{{ .Title }}</h1>
+<div class="mx-auto flex max-w-screen-xl local-privacy-single" data-local-layout="privacy">
+  <article class="flex min-h-[calc(100vh-var(--navbar-height))] w-full min-w-0 justify-center break-words pb-8">
+    <main class="w-full min-w-0 max-w-4xl px-6 pt-4 md:px-12">
+      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100" data-pagefind-meta="title">{{ .Title }}</h1>
 
-      <div class="mt-4 mb-16">
-        <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2">
-          <span class="mx-1">·</span>
-          <span class="mx-1">{{ .ReadingTime }} {{ if eq .ReadingTime 1 }}min{{ else }}mins{{ end }} read</span>
-        </div>
-        <div class="mt-3"></div>
-      </div>
-
-      <div class="prose prose-slate lg:prose-xl dark:prose-invert" data-pagefind-body>{{ .Content }}</div>
+      <div class="prose prose-slate mt-10 max-w-none dark:prose-invert" data-pagefind-body>{{ .Content }}</div>
 
       {{ if (.Params.show_date_updated | default true) | and .Lastmod }}
         <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="{{ .Lastmod.UTC.Format "2006-01-02T15:04:05.000Z" }}">
@@ -24,12 +14,6 @@
       {{ else }}
         <div class="mt-16"></div>
       {{ end }}
-
-      <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
-        <div class="max-w-prose print:hidden">
-          {{ partial "components/page_sharer.html" . }}
-        </div>
-      </div>
     </main>
   </article>
 </div>
