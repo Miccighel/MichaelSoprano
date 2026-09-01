@@ -38,7 +38,8 @@ documentazione tecnica dell'applicazione Hugo si trova in
 | CV scaricabili | `site/static/media/CVs/` |
 | Presentazioni, poster, tesi e altri download | `site/static/media/` |
 | Risorse tecniche dell'interfaccia | `site/static/ui/` |
-| Stile personalizzato | `site/assets/css/custom.css` |
+| Fondazione visiva, token e accessibilità | `site/assets/css/design-system.css` |
+| Compatibilità con la presentazione storica | `site/assets/css/custom.css` |
 
 ## Preparazione dell'ambiente
 

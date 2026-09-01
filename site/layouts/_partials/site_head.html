@@ -45,6 +45,10 @@
     {{ $styles := resources.Get "css/custom.css" | minify | fingerprint "sha256" }}
     <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
   {{ end }}
+  {{ if fileExists "assets/css/design-system.css" }}
+    {{ $design_styles := resources.Get "css/design-system.css" | minify | fingerprint "sha256" }}
+    <link href="{{ $design_styles.RelPermalink }}" rel="stylesheet" />
+  {{ end }}
   {{ if .IsHome }}
     <link href="/vendor/leaflet/leaflet.css" rel="stylesheet" />
   {{ end }}

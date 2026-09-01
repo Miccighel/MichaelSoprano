@@ -228,6 +228,8 @@ html_paths.each do |path|
   errors << "#{relative}: page has no readable content" if !alias_page && relative != '404.html' && text.length < 40
 
   unless alias_page
+    errors << "#{relative}: missing skip-to-content link" unless html.match?(/<a\b[^>]*\bclass=(?:["'][^"']*\bskip-link\b[^"']*["']|skip-link(?=[\s>]))[^>]*\bhref=(?:["']#main-content["']|#main-content(?=[\s>]))/i)
+    errors << "#{relative}: missing main content anchor" unless html.match?(/\bid=(?:["']main-content["']|main-content(?=[\s>]))/i)
     canonical_path = html_url(path).sub(%r{/page/\d+/$}, '/')
     expected_canonical = "https://michaelsoprano.com#{canonical_path}"
     canonical_urls = links_with_rel(html, 'canonical').flat_map { |link| attribute_values(link, %w[href]) }
@@ -448,6 +450,7 @@ end
   layouts/_partials/css.html
   layouts/_partials/tailwind_sources.html
   assets/css/main.css
+  assets/css/design-system.css
   assets/css/config/tailwind.css
   assets/css/config/theme.css
   assets/js/hb-nav.js

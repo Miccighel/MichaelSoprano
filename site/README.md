@@ -117,6 +117,19 @@ Leaflet CSS and JavaScript are emitted only on the homepage. All executable
 site code is stored in `assets/js/`; templates contain only references to the
 compiled scripts.
 
+## Visual architecture
+
+`assets/css/custom.css` retains the compatibility rules for the historical
+page composition. `assets/css/design-system.css` is loaded after it and is the
+canonical layer for the evolving visual identity: semantic colours, spacing,
+type scale, radii, shadows, focus states, and responsive refinements belong
+there. Keeping these responsibilities separate makes each modernization step
+easy to compare and revert without changing the content model.
+
+Every generated page includes a keyboard-accessible skip link targeting
+`#main-content`. The generated-site audit verifies both the link and its target,
+as well as the presence of the design-system source file.
+
 ## CV PDFs
 
 The sibling LaTeX repository builds and copies the English and Italian CVs

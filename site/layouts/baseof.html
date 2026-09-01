@@ -4,11 +4,12 @@
 <html lang="{{ $languageCode }}" dir="ltr" data-wc-theme-default="{{ lower $themeMode }}">
   {{ partial "site_head" . }}
   <body class="bg-[var(--hb-color-background)] text-[var(--hb-color-foreground)] page-wrapper" id="top">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div id="page-bg"></div>
     <div class="page-header{{ if site.Params.header.sticky }} sticky top-0 z-30{{ end }}">
       {{ partial "components/headers/navbar.html" . }}
     </div>
-    <div class="page-body{{ if ne .Type "landing" }} my-10{{ end }}">
+    <div id="main-content" class="page-body{{ if ne .Type "landing" }} my-10{{ end }}" tabindex="-1">
       {{ block "main" . }}{{ end }}
     </div>
     <div class="page-footer">
