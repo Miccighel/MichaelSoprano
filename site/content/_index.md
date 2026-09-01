@@ -8,13 +8,17 @@ sections:
   content:
     title: About
 - block: markdown
-  id: visits
+  id: education
   content:
-    title: Visits
+    title: Education
 - block: markdown
   id: experience
   content:
     title: Experience
+- block: markdown
+  id: visits
+  content:
+    title: Visits
 - block: markdown
   id: metrics
   content:

@@ -10,48 +10,49 @@
         {{ $avatar := resources.Get "media/authors/michael-soprano.jpg" }}
         {{ $avatar = $avatar.Fill "270x270 Center" }}
         <img class="avatar avatar-circle" src="{{ $avatar.RelPermalink }}" width="270" height="270" alt="{{ $author.title }}">
-        <div class="portrait-title">
-          <h2>{{ $author.title }}</h2>
-          <h3>{{ $author.role }}</h3>
-          {{ with index $author.organizations 0 }}<h3><a href="{{ .url }}">{{ .name }}</a></h3>{{ end }}
-        </div>
         {{ partial "legacy/profile-links.html" (dict "author" $author "compact" false) }}
       </aside>
 
       <div class="legacy-about-content">
-        <h1 class="about-heading">About</h1>
+        <header class="about-intro">
+          <h1 class="about-name">{{ $author.title }}</h1>
+        </header>
         <div class="legacy-bio">{{ $author.bio | markdownify }}</div>
-        <div class="legacy-about-details">
-          <div>
-            <h2 class="section-subheading">Interests</h2>
-            <ul class="ul-interests">{{ range $author.interests }}<li>{{ . }}</li>{{ end }}</ul>
-          </div>
-          <div>
-            <h2 class="section-subheading">Education</h2>
-            <ul class="ul-edu">
-              {{ range $author.education }}
-                <li><i class="fas fa-graduation-cap" aria-hidden="true"></i><div class="description"><p class="course">{{ .course }}, {{ .year }}</p><p class="institution">{{ .institution }}</p></div></li>
-              {{ end }}
-            </ul>
-          </div>
-        </div>
+        <nav class="about-actions" aria-label="Primary profile actions">
+          <a class="about-action is-primary" href="/media/CVs/Curriculum_Vitae_EN.pdf"><i class="fas fa-file-download" aria-hidden="true"></i> CV · English</a>
+          <a class="about-action" href="/media/CVs/Curriculum_Vitae_IT.pdf"><i class="fas fa-file-download" aria-hidden="true"></i> CV · Italiano</a>
+          <a class="about-action" href="/publication/"><i class="fas fa-book-open" aria-hidden="true"></i> Publications</a>
+          <a class="about-action" href="#contact"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a>
+        </nav>
       </div>
       </div>
     </div>
   </section>
 
   {{ range .Params.sections }}
-    {{ if and (ne .id "about") (ne .id "profiles") (ne .id "interests") (ne .id "education") }}
+    {{ if and (ne .id "about") (ne .id "profiles") (ne .id "interests") }}
       <section id="{{ .id }}" class="home-section legacy-home-section">
         <div class="legacy-container">
           <div class="legacy-section-grid">
           <header class="section-heading"><h1>{{ .content.title }}</h1></header>
           <div class="legacy-section-content">
-            {{ if or (eq .id "visits") (eq .id "experience") }}
+            {{ if eq .id "education" }}
+              <div class="education-list">
+                {{ range $author.education }}
+                  <article class="education-row">
+                    <p class="education-period">{{ .year }}</p>
+                    <div class="education-record">
+                      <h3>{{ .course }}</h3>
+                      <p>{{ .institution }}</p>
+                    </div>
+                  </article>
+                {{ end }}
+              </div>
+            {{ else if or (eq .id "visits") (eq .id "experience") }}
               {{ $entries := $home.experience }}
               {{ if eq .id "visits" }}{{ $entries = $home.visits }}{{ end }}
               {{ $entries = sort $entries "date_start" "desc" }}
-              <div class="experience-list">
+              <div class="experience-list{{ if and (eq .id "visits") (eq (len $entries) 1) }} is-single{{ end }}">
                 {{ range $index, $entry := $entries }}
                   <article class="experience-row{{ if eq $index (sub (len $entries) 1) }} is-last{{ end }}">
                     <div class="experience-rail" aria-hidden="true"><span></span></div>

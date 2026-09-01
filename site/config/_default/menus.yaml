@@ -2,11 +2,14 @@ main:
   - name: Home
     url: /#about
     weight: 10
-  - name: Visits
-    url: /#visits
-    weight: 20
+  - name: Education
+    url: /#education
+    weight: 15
   - name: Experience
     url: /#experience
+    weight: 20
+  - name: Visits
+    url: /#visits
     weight: 30
   - name: Bibliometrics
     url: /#metrics
@@ -29,6 +32,3 @@ main:
   - name: Contact
     url: /#contact
     weight: 100
-  - name: CV
-    url: /media/CVs/Curriculum_Vitae_EN.pdf
-    weight: 110

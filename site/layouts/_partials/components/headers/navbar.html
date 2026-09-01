@@ -20,7 +20,6 @@
     <ul id="nav-menu" class="navbar-nav legacy-navbar-menu">
       {{ range site.Menus.main }}
         {{ $url := .URL }}
-        {{ if eq .Name "CV" }}{{ $url = "/media/CVs/Curriculum_Vitae_EN.pdf" }}{{ end }}
         <li class="nav-item">
           <a class="nav-link{{ if and $.IsHome (eq .Name "Home") }} active{{ end }}" href="{{ $url | safeURL }}"{{ if findRE `^https?://` $url }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
         </li>
