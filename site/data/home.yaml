@@ -88,6 +88,8 @@ experience:
   date_end: '2016-02-25'
   description: Design, development, and maintenance of a blog on music news and events
     as a full-stack web developer.
+publications:
+  homepage_limit: 10
 topics:
   minimum_count: 3
   include:

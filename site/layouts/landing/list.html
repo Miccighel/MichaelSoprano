@@ -68,9 +68,9 @@
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "publications" }}
               {{ $pages = sort (sort $pages "Title" "asc") "Date" "desc" }}
-              <h2 class="publication-details-link"><a href="/publication/">View details</a></h2>
+              {{ $homepage_limit := $home.publications.homepage_limit | default 10 }}
               <div class="legacy-list publication-list">
-                {{ range $pages }}
+                {{ range first $homepage_limit $pages }}
                   {{ $publication := . }}
                   <article class="pub-list-item view-citation">
                     <span class="li-cite-author">{{ delimit .Params.authors ", " }}.</span>
@@ -84,6 +84,7 @@
                   </article>
                 {{ end }}
               </div>
+              <p class="see-all publication-see-all"><a href="/publication/">View all {{ len $pages }} publications <i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
             {{ else if eq .id "presentations" }}
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "events" }}
