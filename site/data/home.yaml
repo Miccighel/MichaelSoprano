@@ -88,6 +88,46 @@ experience:
   date_end: '2016-02-25'
   description: Design, development, and maintenance of a blog on music news and events
     as a full-stack web developer.
+bibliometrics:
+  last_updated: September 1, 2026
+  indicators:
+  - key: publications
+    label: Publications
+  - key: citations
+    label: Citations
+  - key: h_index
+    label: h-index
+  - key: i10_index
+    label: i10-index
+  sources:
+  - name: Google Scholar
+    url: https://scholar.google.com/citations?user=ocK0qRUAAAAJ
+    values:
+      publications: 38
+      citations: 719
+      h_index: 14
+      i10_index: 15
+  - name: Scopus
+    url: https://www.scopus.com/authid/detail.uri?authorId=57203392311
+    values:
+      publications: 31
+      citations: 357
+      h_index: 9
+      i10_index: '--'
+  - name: Web of Science
+    url: https://www.webofscience.com/wos/author/record/JDD-6660-2023
+    values:
+      publications: 20
+      citations: 237
+      h_index: 9
+      i10_index: '--'
+  - name: ACM Digital Library
+    url: https://dl.acm.org/profile/99659280921
+    values:
+      publications: 26
+      citations: 194
+      h_index: '--'
+      i10_index: '--'
 publications:
   homepage_limit: 10
 topics:

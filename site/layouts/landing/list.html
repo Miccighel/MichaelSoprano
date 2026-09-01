@@ -64,6 +64,44 @@
                   </article>
                 {{ end }}
               </div>
+            {{ else if eq .id "metrics" }}
+              {{ $metrics := $home.bibliometrics }}
+              <div class="bibliometrics-block">
+                <div class="bibliometrics-table-wrap">
+                  <table class="bibliometrics-table">
+                    <caption class="sr-only">Bibliometric indicators by source</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Indicator</th>
+                        {{ range $metrics.sources }}<th scope="col"><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></th>{{ end }}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{ range $metrics.indicators }}
+                        {{ $indicator := . }}
+                        <tr>
+                          <th scope="row">{{ .label }}</th>
+                          {{ range $metrics.sources }}<td>{{ index .values $indicator.key }}</td>{{ end }}
+                        </tr>
+                      {{ end }}
+                    </tbody>
+                  </table>
+                </div>
+                <div class="bibliometrics-cards" data-pagefind-ignore>
+                  {{ range $metrics.sources }}
+                    {{ $source := . }}
+                    <article class="bibliometrics-card">
+                      <h2><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></h2>
+                      <dl>
+                        {{ range $metrics.indicators }}
+                          <div><dt>{{ .label }}</dt><dd>{{ index $source.values .key }}</dd></div>
+                        {{ end }}
+                      </dl>
+                    </article>
+                  {{ end }}
+                </div>
+                <p class="bibliometrics-updated">Last updated: {{ $metrics.last_updated }}</p>
+              </div>
             {{ else if eq .id "publications" }}
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "publications" }}

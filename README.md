@@ -80,13 +80,15 @@ configurazione dei permalink.
 
 ## Aggiornare gli indicatori bibliometrici
 
-Le cifre mostrate sul sito si trovano nella sezione `Bibliometrics` di
-`site/content/_index.md`. Aggiornare insieme:
+Le cifre mostrate sul sito si trovano nella sezione `bibliometrics` di
+`site/data/home.yaml`. Per ogni fonte aggiornare insieme:
 
-- numero di articoli;
+- numero di pubblicazioni;
 - citazioni;
 - h-index;
-- data dell'ultimo aggiornamento.
+- i10-index, quando disponibile.
+
+Aggiornare infine anche il campo `last_updated` della sezione.
 
 Se gli stessi valori compaiono nei CV, aggiornare anche i sorgenti nella
 repository sorella `../LaTeX` e rigenerare entrambi i PDF.
