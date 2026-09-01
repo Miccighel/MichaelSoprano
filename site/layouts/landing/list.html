@@ -146,18 +146,9 @@
               </ul>
               <div id="map" aria-label="Map showing the University of Udine"></div>
               <script src="/vendor/leaflet/leaflet.js"></script>
-              <script>
-                (() => {
-                  const mapElement = document.getElementById('map');
-                  if (!mapElement || typeof L === 'undefined') return;
-                  const map = L.map(mapElement).setView([46.08008535022743, 13.211890024964413], 15);
-                  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    maxZoom: 18,
-                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                  }).addTo(map);
-                  L.marker([46.08008535022743, 13.211890024964413]).addTo(map);
-                })();
-              </script>
+              {{ $map_js := resources.Get "js/contact-map.js" | resources.Minify }}
+              {{ if hugo.IsProduction }}{{ $map_js = $map_js | fingerprint "sha256" }}{{ end }}
+              <script defer src="{{ $map_js.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $map_js.Data.Integrity }}" crossorigin="anonymous"{{ end }}></script>
             {{ else }}
               <div class="legacy-markdown">{{ .content.text | markdownify }}</div>
             {{ end }}

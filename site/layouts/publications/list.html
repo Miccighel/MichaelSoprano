@@ -28,39 +28,9 @@
       </article>
     {{ end }}
   </div>
-  <p id="publication-archive-empty" class="legacy-archive-empty">No publications match the selected filters.</p>
+  <p id="publication-archive-empty" class="legacy-archive-empty" hidden>No publications match the selected filters.</p>
 </main>
-<script>
-  (() => {
-    const search = document.getElementById('publication-search');
-    const type = document.getElementById('publication-type-filter');
-    const year = document.getElementById('publication-year-filter');
-    const items = [...document.querySelectorAll('#publication-archive-list article')];
-    const empty = document.getElementById('publication-archive-empty');
-    if (!search || !type || !year || !empty) return;
-    const hashTypes = { '#1': 'paper-conference', '#2': 'article-journal', '#7': 'thesis' };
-    const filter = () => {
-      const query = search.value.trim().toLowerCase();
-      let visible = 0;
-      items.forEach(item => {
-        const matchesQuery = !query || `${item.dataset.title} ${item.dataset.authors}`.includes(query);
-        const matchesType = !type.value || item.dataset.type === type.value;
-        const matchesYear = !year.value || item.dataset.year === year.value;
-        item.hidden = !(matchesQuery && matchesType && matchesYear);
-        if (!item.hidden) visible += 1;
-      });
-      empty.style.display = visible ? 'none' : 'block';
-    };
-    search.addEventListener('input', filter);
-    type.addEventListener('change', filter);
-    year.addEventListener('change', filter);
-    const applyHashFilter = () => {
-      if (!hashTypes[window.location.hash]) return;
-      type.value = hashTypes[window.location.hash];
-      filter();
-    };
-    applyHashFilter();
-    window.addEventListener('hashchange', applyHashFilter);
-  })();
-</script>
+{{ $filters_js := resources.Get "js/publication-filters.js" | resources.Minify }}
+{{ if hugo.IsProduction }}{{ $filters_js = $filters_js | fingerprint "sha256" }}{{ end }}
+<script defer src="{{ $filters_js.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $filters_js.Data.Integrity }}" crossorigin="anonymous"{{ end }}></script>
 {{ end }}

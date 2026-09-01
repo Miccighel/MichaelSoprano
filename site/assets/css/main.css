@@ -1,20 +1,7 @@
-/* 
-  Hugo Blox Tailwind CSS v4 - Main Entry Point
-  
-  This file orchestrates all CSS imports in the correct order:
-  1. Tailwind base with configuration
-  2. Theme and color definitions
-  3. Base styles and utilities
-  4. Hugo Blox framework components
-  5. Hugo Blox module components
-  6. Safelist for dynamic classes
-*/
+/* Tailwind entry point for the local site presentation layer. */
 
 /* Tailwind CSS v4 Base */
 @import "tailwindcss";
-
-/* Dynamic sources are injected by the css.html partial */
-/* This handles both monorepo dev and end-user environments */
 
 /* Configuration */
 @import "config/tailwind.css";
@@ -23,29 +10,18 @@
 /* Base styles and utilities */
 @import "framework/base.css";
 
-/* Hugo Blox theme system (color utilities) */
+/* Local theme system */
 @import "color-utilities.css";
 
-/* Hugo Blox layout utilities (radius, spacing tokens) */
+/* Layout utilities (radius and spacing tokens) */
 @import "layout-utilities.css";
 
-/* Hugo Blox framework components */
+/* Shared framework components */
 @import "framework/components.css";
 
-/* Hugo Blox module components */
-@import "components/all.css";
-@import "views/all.css";
+/* Components used by the current templates */
+@import "components/page.css";
+@import "components/navbar.css";
 
-/* Block-specific CSS is auto-discovered from co-located style.css files */
-/* See css.html partial for the discovery mechanism */
-@import "chroma.css";
-
-/* Hugo Blox Search */
+/* Local Pagefind interface */
 @import "hb-search.css";
-
-/* Hugo Blox Animations (typewriter, scroll reveals) */
-@import "animations.css";
-
-/* Safelist for dynamic classes */
-@import "config/safelist.css";
-

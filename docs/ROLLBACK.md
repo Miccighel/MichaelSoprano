@@ -30,6 +30,11 @@ The former generated `gh-pages` output is preserved in
 `codex/legacy-gh-pages-2026-08-09`. It is an emergency reference and should
 not be used for normal content editing.
 
+The source immediately before the Hugo-only production deployment is
+preserved in `codex/pre-hugo-pure-deploy-2026-08-24`. Keep both snapshot
+branches together with `hugo-version` while the current implementation remains
+in active development.
+
 ## Custom domain
 
 The canonical source contains `site/static/CNAME`, whose content must remain

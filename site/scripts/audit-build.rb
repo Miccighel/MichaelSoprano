@@ -426,7 +426,7 @@ render_link_path = File.join(SITE_ROOT, 'layouts', '_markup', 'render-link.html'
 unless File.file?(render_link_path)
   errors << 'missing local Markdown link render hook'
 end
-%w[go.mod go.sum config/_default/module.yaml].each do |relative_path|
+%w[go.mod go.sum hugoblox.yaml config/_default/module.yaml].each do |relative_path|
   errors << "legacy Hugo module file is still present: #{relative_path}" if File.exist?(File.join(SITE_ROOT, relative_path))
 end
 params_path = File.join(SITE_ROOT, 'config', '_default', 'params.yaml')
@@ -444,8 +444,6 @@ if File.file?(custom_css_path)
   end
 end
 %w[
-  layouts/_partials/functions/get_hook.html
-  layouts/_partials/components/backlinks.html
   i18n/en.yaml
   layouts/_partials/css.html
   layouts/_partials/tailwind_sources.html
@@ -453,9 +451,23 @@ end
   assets/css/config/tailwind.css
   assets/css/config/theme.css
   assets/js/hb-nav.js
-  assets/js/hb-sidebar.js
+  assets/js/contact-map.js
+  assets/js/homepage-nav.js
+  assets/js/publication-filters.js
+  assets/js/site-citations.js
+  scripts/build-site.rb
 ].each do |relative_path|
   errors << "missing local support file #{relative_path}" unless File.file?(File.join(SITE_ROOT, relative_path))
+end
+
+Dir.glob(File.join(SITE_ROOT, 'layouts', '**', '*.html')).sort.each do |layout_path|
+  source = File.binread(layout_path).force_encoding(Encoding::UTF_8)
+  source.scan(/<script\b([^>]*)>/mi).each do |attributes|
+    markup = attributes.first.to_s
+    next if markup.match?(/\bsrc\s*=/i) || markup.match?(/\btype\s*=\s*["']application\/ld\+json["']/i)
+
+    errors << "#{layout_path.delete_prefix("#{SITE_ROOT}/")}: executable JavaScript must be stored in assets/js"
+  end
 end
 if File.file?(home_html)
   rendered_home = File.binread(home_html).force_encoding(Encoding::UTF_8)
@@ -473,10 +485,10 @@ if File.file?(privacy_source_path) && File.file?(privacy_path)
   privacy_text = html_text(privacy_html)
   privacy_heading = html_text(privacy_html[/<h1\b[^>]*>.*?<\/h1>/mi].to_s)
 
-  errors << 'privacy/index.html: wrong local template' unless privacy_html.include?('local-privacy-single')
+  errors << 'privacy/index.html: wrong local template' unless privacy_html.match?(/\bdata-local-layout=["']?privacy\b/i)
   %w[sidebar toc page-sharer].each do |component|
-    unless privacy_html.match?(/\bdata-local-component=["']?#{Regexp.escape(component)}\b/i)
-      errors << "privacy/index.html: missing local #{component} component"
+    if privacy_html.match?(/\bdata-local-component=["']?#{Regexp.escape(component)}\b/i)
+      errors << "privacy/index.html: obsolete #{component} component is still rendered"
     end
   end
   errors << 'privacy/index.html: wrong heading' unless privacy_heading == normalized(privacy_data['title'])
@@ -485,14 +497,19 @@ if File.file?(privacy_source_path) && File.file?(privacy_path)
     errors << 'privacy/index.html: substantive content is missing' unless privacy_text.include?(excerpt)
   end
 
-  expected_share_links = %w[x facebook email linkedin whatsapp]
-  rendered_share_links = privacy_html.scan(/\bid=["']?share-link-([\w-]+)/i).flatten
-  unless rendered_share_links == expected_share_links
-    errors << "privacy/index.html: share links #{rendered_share_links.inspect}, expected #{expected_share_links.inspect}"
-  end
   errors << 'privacy/index.html: missing last-updated timestamp' unless privacy_html.match?(/<time\b[^>]*>.*?Last updated on.*?<\/time>/mi)
 else
   errors << 'missing privacy source or generated page'
+end
+
+if File.file?(home_path)
+  home_source = File.binread(home_path).force_encoding(Encoding::UTF_8)
+  errors << 'index.html: missing page-specific Leaflet stylesheet' unless home_source.include?('/vendor/leaflet/leaflet.css')
+  errors << 'index.html: missing page-specific Leaflet script' unless home_source.include?('/vendor/leaflet/leaflet.js')
+end
+if File.file?(privacy_path)
+  privacy_source = File.binread(privacy_path).force_encoding(Encoding::UTF_8)
+  errors << 'privacy/index.html: Leaflet assets must be limited to the homepage' if privacy_source.include?('/vendor/leaflet/')
 end
 
 {

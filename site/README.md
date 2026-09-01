@@ -93,26 +93,29 @@ ruby site/scripts/check-external-links.rb
 
 ## Local build
 
-Use Node.js 24, pnpm 10.14.0, and Hugo Extended 0.164.0:
+Use Node.js 24, pnpm 10.14.0, and Hugo Extended 0.165.0:
 
 ```bash
-./scripts/check-content.rb
-pnpm run vendor
-hugo --gc --minify --cleanDestinationDir
-pnpm exec pagefind --site public
-cd .. && ruby site/scripts/audit-build.rb
+pnpm install --frozen-lockfile
+pnpm run check
 ```
 
-The generated site is written to `public/`. Search indexing can be generated
-after the Hugo build with:
+The generated site is written to `public/`. `pnpm run check` is the canonical
+local and CI command: it prepares vendored assets, validates the source,
+builds Hugo, generates Pagefind, and audits the result. A build without the
+final generated-site audit is also available:
 
 ```bash
-pnpm exec pagefind --site public
+pnpm run build
 ```
 
 `pnpm run vendor` prepares the pinned, self-hosted fonts, icon fonts, and
 Leaflet files in `static/vendor/`. That generated directory is intentionally
 ignored by Git and must be refreshed after dependency updates.
+
+Leaflet CSS and JavaScript are emitted only on the homepage. All executable
+site code is stored in `assets/js/`; templates contain only references to the
+compiled scripts.
 
 ## CV PDFs
 

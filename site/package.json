@@ -7,7 +7,11 @@
     "pnpm": "10.14.0"
   },
   "scripts": {
-    "vendor": "ruby scripts/vendor-assets.rb"
+    "vendor": "ruby scripts/vendor-assets.rb",
+    "check:content": "ruby scripts/check-content.rb",
+    "build": "ruby scripts/build-site.rb",
+    "check": "ruby scripts/build-site.rb --audit",
+    "check:links": "ruby scripts/check-external-links.rb"
   },
   "pnpm": {
     "ignoredBuiltDependencies": [

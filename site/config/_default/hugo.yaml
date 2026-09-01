@@ -6,7 +6,8 @@ defaultContentLanguageInSubdir: false
 removePathAccents: true
 
 build:
-  writeStats: true
+  buildStats:
+    enable: true
 enableGitInfo: true
 summaryLength: 30
 pagination:
@@ -37,6 +38,20 @@ markup:
     lineNos: false
 imaging:
   resampleFilter: lanczos
-  quality: 90
   anchor: smart
+  avif:
+    quality: 90
+  jpeg:
+    quality: 90
+  webp:
+    quality: 90
+security:
+  exec:
+    allow:
+      - '^(dart-)?sass$'
+      - '^go$'
+      - '^git$'
+      - '^node$'
+      - '^postcss$'
+      - '^tailwindcss$'
 timeout: 600000
