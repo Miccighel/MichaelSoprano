@@ -12,19 +12,27 @@
     <label><span class="sr-only">Publication year</span><select id="publication-year-filter"><option value="">Date</option>{{ range ($pages.GroupByDate "2006") }}<option value="{{ .Key }}">{{ .Key }}</option>{{ end }}</select></label>
   </div>
 
-  <div id="publication-archive-list" class="legacy-list publication-list">
-    {{ range $pages }}
-      {{ $publication := . }}
-      {{ $type := index .Params.publication_types 0 | default "" }}
-      <article class="pub-list-item view-citation" data-title="{{ .Title | lower }}" data-authors="{{ delimit .Params.authors ", " | lower }}" data-type="{{ $type }}" data-year="{{ .Date.Format "2006" }}">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        <div class="li-cite-author">{{ delimit .Params.authors ", " }}</div>
-        <span class="legacy-attachments">
-          {{ range .Params.links }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}
-          <button class="btn btn-outline-primary btn-sm legacy-cite" type="button" data-cite-url="{{ $publication.RelPermalink }}cite.bib">Cite</button>
-          {{ with .Params.identifiers }}{{ with .doi }}<a class="btn btn-outline-primary btn-sm" href="https://doi.org/{{ . }}">DOI</a>{{ end }}{{ end }}
-        </span>
-      </article>
+  <div id="publication-archive-list">
+    {{ range ($pages.GroupByDate "2006") }}
+      <section class="legacy-year-group" data-publication-year-group="{{ .Key }}">
+        <h2>{{ .Key }}</h2>
+        <div class="legacy-list publication-list">
+          {{ range .Pages }}
+            {{ $publication := . }}
+            {{ $type := index .Params.publication_types 0 | default "" }}
+            <article class="pub-list-item view-citation" data-title="{{ .Title | lower }}" data-authors="{{ delimit .Params.authors ", " | lower }}" data-type="{{ $type }}" data-year="{{ .Date.Format "2006" }}">
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              <div class="li-cite-author">{{ delimit .Params.authors ", " }}</div>
+              {{ with .Params.publication }}{{ with .name }}<div class="publication-archive-meta"><em>{{ replace . "*" "" }}</em></div>{{ end }}{{ end }}
+              <span class="legacy-attachments">
+                {{ range .Params.links }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}
+                <button class="btn btn-outline-primary btn-sm legacy-cite" type="button" data-cite-url="{{ $publication.RelPermalink }}cite.bib">Cite</button>
+                {{ with .Params.identifiers }}{{ with .doi }}<a class="btn btn-outline-primary btn-sm" href="https://doi.org/{{ . }}">DOI</a>{{ end }}{{ end }}
+              </span>
+            </article>
+          {{ end }}
+        </div>
+      </section>
     {{ end }}
   </div>
   <p id="publication-archive-empty" class="legacy-archive-empty" hidden>No publications match the selected filters.</p>

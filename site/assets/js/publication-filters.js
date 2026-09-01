@@ -3,6 +3,7 @@
   const type = document.getElementById("publication-type-filter");
   const year = document.getElementById("publication-year-filter");
   const items = [...document.querySelectorAll("#publication-archive-list article")];
+  const groups = [...document.querySelectorAll("#publication-archive-list [data-publication-year-group]")];
   const empty = document.getElementById("publication-archive-empty");
   if (!search || !type || !year || !empty) return;
 
@@ -16,6 +17,9 @@
       const matchesYear = !year.value || item.dataset.year === year.value;
       item.hidden = !(matchesQuery && matchesType && matchesYear);
       if (!item.hidden) visible += 1;
+    });
+    groups.forEach((group) => {
+      group.hidden = !group.querySelector("article:not([hidden])");
     });
     empty.hidden = visible !== 0;
   };

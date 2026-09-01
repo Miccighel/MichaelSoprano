@@ -335,6 +335,7 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
 .legacy-publication-filters { display: grid; grid-template-columns: minmax(220px, 1fr) 220px 180px; gap: 1rem; margin-bottom: 2.5rem; }
 .legacy-publication-filters input, .legacy-publication-filters select { width: 100%; box-sizing: border-box; padding: .55rem .7rem; border: 1px solid color-mix(in srgb, var(--legacy-text) 22%, transparent); border-radius: .2rem; background: var(--legacy-page); color: var(--legacy-text); font: inherit; }
 .legacy-archive .publication-list { gap: 1.35rem; }
+.publication-archive-meta { margin-top: .15rem; color: var(--legacy-text); font-size: .95rem; line-height: 1.55; }
 .legacy-year-group { margin-bottom: 3rem; }
 .legacy-year-group > h2 { margin: 0 0 1.5rem; font-size: 1.5rem; font-weight: 400; }
 .legacy-archive-empty { color: var(--legacy-muted); }
