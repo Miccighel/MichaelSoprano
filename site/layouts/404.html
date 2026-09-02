@@ -11,7 +11,15 @@
     {{ $pages := where (where (where (where site.Pages.ByDate.Reverse "Title" "!=" "") "Kind" "in" (slice "page" "section")) "Params.private" "!=" true) "Permalink" "!=" "" }}
     {{ if $pages }}
       <ul class="service-page-links">
-        {{ range first 10 $pages }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+        {{ $seenTitles := slice }}
+        {{ $recommendationCount := 0 }}
+        {{ range $pages }}
+          {{ if and (lt $recommendationCount 10) (not (in $seenTitles .Title)) }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ $seenTitles = $seenTitles | append .Title }}
+            {{ $recommendationCount = add $recommendationCount 1 }}
+          {{ end }}
+        {{ end }}
       </ul>
     {{ end }}
     </div>
