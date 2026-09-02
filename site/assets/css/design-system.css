@@ -2013,6 +2013,23 @@ body {
 
 #site-search .site-search-footer kbd { color: var(--site-text); }
 
+/* Give wide desktop screens a little more breathing room without changing
+ * the compact tablet/mobile composition. */
+@media (min-width: 1200px) {
+  .legacy-container,
+  .legacy-archive { max-width: 1280px; }
+
+  .legacy-about-grid {
+    grid-template-columns: minmax(270px, .82fr) minmax(0, 2.18fr);
+    gap: 2.75rem;
+  }
+
+  .legacy-section-grid {
+    grid-template-columns: minmax(220px, .72fr) minmax(0, 2.28fr);
+    gap: 2.5rem;
+  }
+}
+
 @media (max-width: 1199px) {
   #site-header .legacy-navbar { min-height: 54px; padding-right: 16px; padding-left: 16px; }
   #site-header .legacy-navbar-brand-mobile { height: 54px; }
