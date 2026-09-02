@@ -1,7 +1,7 @@
 {{ $related := site.RegularPages.Related . | first 5 }}
 {{ with $related }}
-  <div class="article-widget content-widget-hr">
-    <h3>Related</h3>
+  <section class="article-widget content-widget-hr related-list" aria-labelledby="related-heading">
+    <h3 id="related-heading">Related</h3>
     <ul>{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
-  </div>
+  </section>
 {{ end }}

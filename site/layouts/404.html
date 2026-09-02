@@ -1,14 +1,20 @@
 {{ define "main" }}
-<div data-pagefind-ignore class="flex flex-col justify-center">
-  <article class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert">
-    <h1 class="lg:text-6xl">Page not found</h1>
-    <p>Perhaps you were looking for one of these?</p>
+<main class="service-page service-page-404" data-pagefind-ignore>
+  <div class="service-page-inner">
+    <p class="service-page-eyebrow">404 · Not found</p>
+    <h1>Page not found</h1>
+    <p class="service-page-lead">The page you requested does not exist or may have moved.</p>
+    <a class="service-page-home" href="{{ "/" | relURL }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to home</a>
+
+    <div class="service-page-suggestions">
+      <h2>Explore the site</h2>
     {{ $pages := where (where (where (where site.Pages.ByDate.Reverse "Title" "!=" "") "Kind" "in" (slice "page" "section")) "Params.private" "!=" true) "Permalink" "!=" "" }}
     {{ if $pages }}
-      <ul>
+      <ul class="service-page-links">
         {{ range first 10 $pages }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
       </ul>
     {{ end }}
-  </article>
-</div>
+    </div>
+  </div>
+</main>
 {{ end }}

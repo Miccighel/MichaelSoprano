@@ -1,20 +1,62 @@
-<div class="legacy-single legacy-event-single pub" data-pagefind-body>
-  <header class="article-container legacy-article-header">
-    <h1>{{ .Title }}</h1>
-    <div class="article-metadata"><div>{{ range $index, $author := .Params.authors }}{{ if $index }}, {{ end }}<span>{{ $author }}</span>{{ end }}</div></div>
-    {{ partial "legacy/page-buttons.html" . }}
+{{ $page := . }}
+{{ $eventType := index (split (.Params.summary | default "Presentation") " - ") 0 }}
+<article class="legacy-single legacy-event-single event-page pub" data-pagefind-body>
+  <header class="event-hero">
+    <div class="event-hero-inner">
+      <a class="event-back-link" href="/event/"><i class="fas fa-arrow-left" aria-hidden="true"></i> All presentations</a>
+      <div class="event-hero-meta">
+        <span>{{ $eventType }}</span>
+        {{ with .Params.event_start }}<time datetime="{{ time.Format "2006-01-02T15:04:05Z07:00" . }}">{{ time.Format "Jan 2, 2006" . }}</time>{{ end }}
+      </div>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.authors }}<p class="event-authors">{{ delimit . ", " }}</p>{{ end }}
+      {{ partial "legacy/page-buttons.html" . }}
+    </div>
   </header>
 
-  {{ $image := .Resources.GetMatch "featured*" }}
-  {{ with $image }}{{ $hero := .Resize "720x" }}<div class="article-header article-container featured-image-wrapper"><img src="{{ $hero.RelPermalink }}" class="featured-image" alt="{{ $.Title }}"></div>{{ end }}
+  <div class="event-page-layout">
+    <div class="event-page-main">
+      {{ $image := .Resources.GetMatch "featured*" }}
+      {{ with $image }}{{ $hero := .Resize "1000x" }}
+        <figure class="event-preview">
+          <img src="{{ $hero.RelPermalink }}" width="{{ $hero.Width }}" height="{{ $hero.Height }}" alt="Preview of {{ $page.Title }}">
+        </figure>
+      {{ end }}
 
-  <div class="article-container legacy-article-body">
-    {{ with .Params.event_start }}<div class="legacy-detail-row"><div class="pub-row-heading">Date</div><div>{{ time.Format "Jan 2, 2006 15:04" . }}{{ with $.Params.event_end }} &mdash; {{ time.Format "15:04" . }}{{ end }}</div></div>{{ end }}
-    {{ with .Params.event_name }}<div class="legacy-detail-row"><div class="pub-row-heading">Event</div><div>{{ with $.Params.event_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ . }}{{ with $.Params.event_url }}</a>{{ end }}</div></div>{{ end }}
-    {{ with .Params.location }}<div class="legacy-detail-row"><div class="pub-row-heading">Location</div><div>{{ . }}</div></div>{{ end }}
-    <div class="article-style">{{ .Content }}</div>
-    {{ partial "legacy/tags.html" . }}
-    {{ partial "legacy/share.html" . }}
-    {{ partial "legacy/related.html" . }}
+      {{ with .Content }}<div class="article-style event-description">{{ . }}</div>{{ end }}
+      {{ partial "legacy/tags.html" . }}
+      {{ partial "legacy/share.html" . }}
+    </div>
+
+    <aside class="event-facts" aria-label="Presentation details">
+      <h2>Details</h2>
+      {{ with .Params.event_start }}
+        <div class="event-fact">
+          <span>Date</span>
+          <p>
+            {{ if $page.Params.event_all_day }}
+              <time datetime="{{ time.Format "2006-01-02" . }}">{{ time.Format "January 2, 2006" . }}</time>
+            {{ else }}
+              <time datetime="{{ time.Format "2006-01-02T15:04:05Z07:00" . }}">{{ time.Format "January 2, 2006 · 15:04" . }}</time>{{ with $page.Params.event_end }}–<time datetime="{{ time.Format "2006-01-02T15:04:05Z07:00" . }}">{{ time.Format "15:04" . }}</time>{{ end }}
+            {{ end }}
+          </p>
+        </div>
+      {{ end }}
+      {{ with .Params.event_name }}
+        <div class="event-fact">
+          <span>Event</span>
+          <p>{{ with $page.Params.event_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ . }}{{ with $page.Params.event_url }} <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>{{ end }}</p>
+        </div>
+      {{ end }}
+      {{ with .Params.location }}
+        <div class="event-fact">
+          <span>Location</span>
+          <p>{{ . }}</p>
+        </div>
+      {{ end }}
+    </aside>
   </div>
-</div>
+
+  {{ $related := site.RegularPages.Related . | first 5 }}
+  {{ with $related }}<div class="event-related">{{ partial "legacy/related.html" $ }}</div>{{ end }}
+</article>

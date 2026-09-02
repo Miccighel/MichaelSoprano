@@ -36,7 +36,7 @@ categories:
 - teaching
 ---
 
-# Aims
+## Aims
 
 This course introduces the foundations of social computing through two complementary perspectives: social behavior supported by computational systems, and computational systems supported by coordinated human activity. It covers both social media platforms and crowdsourcing environments, combining conceptual foundations with practical tools and hands-on activities.
 

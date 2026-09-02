@@ -38,7 +38,7 @@ categories:
 - teaching
 ---
 
-# Aims
+## Aims
 
 These courses address the analysis and processing of information for sport and training from two complementary perspectives. They share the same broad teaching area, but they are distinct courses offered at different degree levels and organized around different learning goals, tools, and assessment methods.
 
@@ -48,29 +48,29 @@ The **Master's Degree course** develops a more structured and reproducible view 
 
 The two courses follow a coherent progression from **understanding and representing data** to **organizing, querying, and reusing data in controlled workflows**. Their shared goal is to help students transform raw data into meaningful information that can support interpretation and decision making in sport and training contexts.
 
-## Courses
+### Courses
 
 - **Bachelor's Degree Course**: foundational data concepts, digital representation of information, and spreadsheet based data analysis with Microsoft Excel
 - **Master's Degree Course**: data mining foundations, relational database design, database implementation, and SQL querying
 
-## Quick Access
+### Quick Access
 
 - [Bachelor's Degree Course](#bachelors-degree-course)
 - [Master's Degree Course](#masters-degree-course)
 
-## Teacher
+### Teacher
 
 - **Michael Soprano** - Course Instructor
 
 The two courses consist of 12 lectures for a total of 24 hours.
 
-# Bachelor's Degree Course
+## Bachelor's Degree Course
 
 The Bachelor's Degree course introduces the basic vocabulary and tools needed to work with data in sport and training contexts. Students first learn how to describe data, variables, and measurements. They then study how different kinds of information are represented digitally. The final part of the course focuses on Microsoft Excel as a tool for preparing, analyzing, visualizing, and summarizing structured data.
 
-## Topics Covered
+### Topics Covered
 
-### Module 1 - Introduction to Data Science in Sport
+#### Module 1 - Introduction to Data Science in Sport
 
 - Data, information, knowledge, and the DIKW pyramid in sport and training contexts
 - Structured and unstructured data from sport-related sources
@@ -81,7 +81,7 @@ The Bachelor's Degree course introduces the basic vocabulary and tools needed to
 - Qualitative and quantitative variables
 - Sport-related data types, including biometric, position and movement, subjective, and performance data
 
-### Module 2 - Representation and Management of Data
+#### Module 2 - Representation and Management of Data
 
 - Basic computer architecture: memory, storage, peripherals, CPU, and operating system
 - Data storage in the filesystem
@@ -96,7 +96,7 @@ The Bachelor's Degree course introduces the basic vocabulary and tools needed to
 - Why data compression is useful
 - Lossless and lossy compression
 
-### Module 3 - Data Analysis with Microsoft Excel
+#### Module 3 - Data Analysis with Microsoft Excel
 
 - Elements of the Excel interface, workbooks, and worksheets
 - Managing cells, rows, columns, and ranges
@@ -118,26 +118,26 @@ The Bachelor's Degree course introduces the basic vocabulary and tools needed to
 - Introduction to PivotTables and PivotCharts
 - Using PivotTables to summarize and explore Fitbit data
 
-## Learning Approach
+### Learning Approach
 
 The Bachelor's Degree course is organized around foundational concepts and applied spreadsheet activities. Students first acquire the vocabulary needed to describe datasets, then study how different types of information are represented digitally, and finally practice data analysis in Excel through guided examples and exercises.
 
-## Assessment
+### Assessment
 
 The Bachelor's Degree course is assessed through a written exam with multiple-choice questions.
 
-## Reading Material
+### Reading Material
 
 - Peter O'Donoghue, Lucy Holmes, *Data Analysis in Sport*. Routledge Studies in Sports Performance Analysis, First edition, 2014
 - Michael Alexander, Dick Kusleika, *Excel 365 Bible*. Wiley, First edition, 2022
 
-# Master's Degree Course
+## Master's Degree Course
 
 The Master's Degree course moves toward structured, reproducible, and technically controlled data workflows. The course connects data mining, relational modeling, database implementation, and SQL querying.
 
-## Topics Covered
+### Topics Covered
 
-### Preparatory Recall - Data Science Foundations
+#### Preparatory Recall - Data Science Foundations
 
 - Data, information, and knowledge in reproducible data workflows
 - Sport-related data types, including biometric, movement, subjective, and performance data
@@ -146,7 +146,7 @@ The Master's Degree course moves toward structured, reproducible, and technicall
 - Data quality, coherent types, identifiers, and first normal form
 - Privacy and protection of personal and health-related data
 
-### Module 1 - Introduction to Data Mining
+#### Module 1 - Introduction to Data Mining
 
 - Data science as a reproducible process from data to decision
 - Project workflow: understanding, preparation, exploration, modeling, interpretation, and deployment
@@ -160,7 +160,7 @@ The Master's Degree course moves toward structured, reproducible, and technicall
 - Methodological issues: missing values, outliers, temporal consistency, leakage, imbalance, and data quality
 - Interpretability, reproducibility, and documentation of modeling choices
 
-### Module 2 - Relational Databases
+#### Module 2 - Relational Databases
 
 - Databases as persistent, coherent, and shared collections of data
 - DBMSs and the role of persistence, scale, globality, reliability, efficiency, and privacy
@@ -185,15 +185,15 @@ The Master's Degree course moves toward structured, reproducible, and technicall
 - Joining tables to integrate information, including `JOIN` and `LEFT JOIN`
 - Exporting query results as reusable datasets for subsequent analysis and reporting
 
-## Learning Approach
+### Learning Approach
 
 The Master's Degree course emphasizes structured and reproducible workflows. Students connect data science concepts to relational database design, SQL extraction, and reusable data preparation. The course combines conceptual modeling, database implementation, query writing, and the interpretation of database outputs as datasets for further analysis.
 
-## Assessment
+### Assessment
 
 The Master's Degree course is assessed through a written exam with open-ended questions.
 
-## Reading Material
+### Reading Material
 
 - Ian H. Witten, Eibe Frank, Mark A. Hall, Christopher J. Pal, James R. Foulds, *Data Mining: Practical Machine Learning Tools and Techniques*. Morgan Kaufmann, Fourth edition, 2016
 - Giorgio M. Di Nunzio, Emanuele Di Buccio, *Basi di dati. Progettazione concettuale, logica e SQL*. Esculapio, First edition, 2017

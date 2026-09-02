@@ -1,6 +1,14 @@
-<footer class="legacy-site-footer">
-  <p><a href="/privacy/">Privacy Policy</a></p>
-  <p>© {{ now.Year }} · Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>.</p>
+<footer id="site-footer" class="legacy-site-footer">
+  <div class="site-footer-main">
+    <div class="site-footer-identity">
+      <a class="site-footer-name" href="/">Michael Soprano</a>
+      <p>Researcher at the University of Udine.</p>
+    </div>
+    <div id="site-footer-meta" class="site-footer-bottom">
+      <p>© {{ now.Year }} Michael Soprano <span aria-hidden="true">·</span> <a href="/privacy/">Privacy</a> <span aria-hidden="true">·</span> Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a></p>
+      <a class="site-footer-top" href="#top">Back to top <i class="fas fa-arrow-up" aria-hidden="true"></i></a>
+    </div>
+  </div>
 </footer>
 
 {{ $has_citations := or .IsHome (eq .Section "publications") }}

@@ -1,0 +1,91 @@
+{{ define "main" }}
+{{ $pages := .Pages.ByDate.Reverse }}
+{{ $publications := where $pages "Section" "publications" }}
+{{ $events := where $pages "Section" "events" }}
+{{ $teaching := where $pages "Section" "blog" }}
+<main class="topic-archive" data-local-layout="tag-term" data-pagefind-ignore>
+  <header class="topic-archive-header">
+    <a class="topic-archive-back" href="/#tags"><i class="fas fa-arrow-left" aria-hidden="true"></i> All topics</a>
+    <p class="topic-archive-eyebrow">Research topic</p>
+    <h1>{{ .Title }}</h1>
+    <p class="topic-archive-summary">{{ len $pages }} related {{ if eq (len $pages) 1 }}item{{ else }}items{{ end }} across the site.</p>
+    <nav class="topic-archive-nav" aria-label="Content in this topic">
+      {{ if gt (len $publications) 0 }}<a href="#topic-publications">Publications <span>{{ len $publications }}</span></a>{{ end }}
+      {{ if gt (len $events) 0 }}<a href="#topic-presentations">Presentations <span>{{ len $events }}</span></a>{{ end }}
+      {{ if gt (len $teaching) 0 }}<a href="#topic-teaching">Teaching <span>{{ len $teaching }}</span></a>{{ end }}
+    </nav>
+  </header>
+
+  {{ if gt (len $publications) 0 }}
+    <section id="topic-publications" class="topic-group">
+      <div class="topic-group-heading">
+        <h2>Publications</h2>
+        <span>{{ len $publications }}</span>
+      </div>
+      <div class="topic-results">
+        {{ range $publications }}
+          {{ $type := index .Params.publication_types 0 | default "" }}
+          {{ $typeLabel := "Publication" }}
+          {{ if eq $type "paper-conference" }}{{ $typeLabel = "Conference paper" }}{{ end }}
+          {{ if eq $type "article-journal" }}{{ $typeLabel = "Journal article" }}{{ end }}
+          {{ if eq $type "thesis" }}{{ $typeLabel = "Thesis" }}{{ end }}
+          <article class="topic-result" data-topic-result>
+            <div class="topic-result-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006" }}</time><span>{{ $typeLabel }}</span></div>
+            <div class="topic-result-content">
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              {{ with .Params.authors }}<p class="topic-result-authors">{{ delimit . ", " }}</p>{{ end }}
+              {{ with .Params.publication }}{{ with .name }}<p class="topic-result-context"><em>{{ replace . "*" "" }}</em></p>{{ end }}{{ end }}
+              <a class="topic-result-link" href="{{ .RelPermalink }}">View publication <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if gt (len $events) 0 }}
+    <section id="topic-presentations" class="topic-group">
+      <div class="topic-group-heading">
+        <h2>Presentations</h2>
+        <span>{{ len $events }}</span>
+      </div>
+      <div class="topic-results">
+        {{ range $events }}
+          {{ $event := . }}
+          {{ $eventType := index (split (.Params.summary | default "Presentation") " - ") 0 }}
+          <article class="topic-result" data-topic-result>
+            <div class="topic-result-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006" }}</time><span>{{ $eventType }}</span></div>
+            <div class="topic-result-content">
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              {{ with .Params.authors }}<p class="topic-result-authors">{{ delimit . ", " }}</p>{{ end }}
+              {{ with .Params.event_name }}<p class="topic-result-context">{{ . }}{{ with $event.Params.location }} <span aria-hidden="true">·</span> {{ . }}{{ end }}</p>{{ end }}
+              <a class="topic-result-link" href="{{ .RelPermalink }}">View presentation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if gt (len $teaching) 0 }}
+    <section id="topic-teaching" class="topic-group">
+      <div class="topic-group-heading">
+        <h2>Teaching</h2>
+        <span>{{ len $teaching }}</span>
+      </div>
+      <div class="topic-results">
+        {{ range $teaching }}
+          <article class="topic-result" data-topic-result>
+            <div class="topic-result-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006" }}</time><span>Course</span></div>
+            <div class="topic-result-content">
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              {{ with .Params.summary }}<p class="topic-result-context">{{ . }}</p>{{ end }}
+              <a class="topic-result-link" href="{{ .RelPermalink }}">View course <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+</main>
+{{ end }}

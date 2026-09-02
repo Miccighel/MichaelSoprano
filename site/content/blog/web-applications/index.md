@@ -33,7 +33,7 @@ categories:
 - teaching
 ---
 
-# Aims
+## Aims
 
 This course introduces the foundations of full-stack web application development through two complementary areas: **Frontend Development** and **Backend Development**.
 

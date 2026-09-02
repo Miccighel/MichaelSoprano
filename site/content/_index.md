@@ -108,11 +108,23 @@ sections:
   id: honors
   content:
     title: Honors & Grants
-    text: |-
-      - **PhD Award 2024**. One of the two awards conferred by the University of Udine in the technical-scientific area for the best PhD theses completed in 2023. Thesis title: _In Crowd Veritas: Leveraging Human Intelligence to Fight Misinformation_.
-      - **Student Grant**. 15th ACM International Conference on Web Search and Data Mining (*WSDM 2022*), Phoenix, USA. Conference registration waiver provided by WSDM. Held remotely due to the COVID-19 pandemic.
-      - **Student Grant**. 29th ACM International Conference on Information and Knowledge Management (*CIKM 2020*), Galway, Ireland. Conference registration waiver provided by CIKM. Held remotely due to the COVID-19 pandemic.
-      - **Student Volunteer**. 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval (*SIGIR 2020*), Xi'an, China. Conference registration waiver provided by SIGIR. Held remotely due to the COVID-19 pandemic.
+    items:
+    - year: '2024'
+      type: Award
+      title: PhD Award 2024
+      description: 'One of the two awards conferred by the University of Udine in the technical-scientific area for the best PhD theses completed in 2023. Thesis title: *In Crowd Veritas: Leveraging Human Intelligence to Fight Misinformation*.'
+    - year: '2022'
+      type: Grant
+      title: WSDM 2022 Student Grant
+      description: 15th ACM International Conference on Web Search and Data Mining (*WSDM 2022*), Phoenix, USA. Conference registration waiver provided by WSDM. Held remotely due to the COVID-19 pandemic.
+    - year: '2020'
+      type: Grant
+      title: CIKM 2020 Student Grant
+      description: 29th ACM International Conference on Information and Knowledge Management (*CIKM 2020*), Galway, Ireland. Conference registration waiver provided by CIKM. Held remotely due to the COVID-19 pandemic.
+    - year: '2020'
+      type: Service
+      title: SIGIR 2020 Student Volunteer
+      description: "43rd International ACM SIGIR Conference on Research and Development in Information Retrieval (*SIGIR 2020*), Xi'an, China. Conference registration waiver provided by SIGIR. Held remotely due to the COVID-19 pandemic."
 - block: markdown
   id: tags
   content:

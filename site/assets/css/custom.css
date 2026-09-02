@@ -225,32 +225,6 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
 .btn:hover { background: var(--legacy-primary); color: #fff !important; text-decoration: none !important; }
 .btn-sm { padding: 5px 8.4px; font-size: 14px; }
 
-/* Contact form and contact details match the two-column legacy widget. */
-.legacy-contact-form { display: block; margin: 0; }
-.legacy-contact-form label { display: block; margin: 0 0 1rem; }
-.legacy-contact-form input, .legacy-contact-form textarea { width: 100%; box-sizing: border-box; padding: .375rem .75rem; border: 1px solid #ced4da; border-radius: .25rem; background: var(--legacy-page); color: var(--legacy-text); font: inherit; line-height: 1.5; }
-.legacy-contact-form textarea { resize: vertical; }
-.legacy-contact-form .btn { padding: .5rem 1rem; font-size: .8rem; line-height: .72rem; border-radius: .3rem; }
-.contact-list { display: block; list-style: none; margin: 0 0 1rem 66px; padding: 0; }
-.contact-list li { position: relative; display: list-item; margin: 0 0 .3rem; padding: .8rem 0 0; }
-.contact-list i { position: absolute; left: -2.5rem; top: 1rem; width: 2rem; color: var(--legacy-primary); font-size: 1.5rem; text-align: center; }
-#map { width: 100%; height: 350px; margin: 0; background: #ddd; }
-.legacy-tag-cloud { display: block; text-align: center; line-height: 1.65; }
-.legacy-tag-cloud a:hover { text-decoration: none; }
-.legacy-tag-cloud a { display: inline-block; margin: 8px 10px; }
-.legacy-tag-cloud .tag-frequency-sm { font-size: .8rem; }
-.legacy-tag-cloud .tag-frequency-md { font-size: 1.1rem; }
-.legacy-tag-cloud .tag-frequency-lg { font-size: 1.5rem; }
-.legacy-tag-cloud .tag-frequency-xl { font-size: 1.9rem; }
-.legacy-tag-cloud a[data-count="2"] { font-size: .7rem; }
-.legacy-tag-cloud a[data-count="3"] { font-size: .9158188959rem; }
-.legacy-tag-cloud a[data-count="4"] { font-size: 1.0689448394rem; }
-.legacy-tag-cloud a[data-count="5"] { font-size: 1.1877185487rem; }
-.legacy-tag-cloud a[data-count="6"] { font-size: 1.2847637353rem; }
-.legacy-tag-cloud a[data-count="7"] { font-size: 1.3668142715rem; }
-.legacy-tag-cloud a[data-count="12"] { font-size: 1.6537085747rem; }
-.legacy-tag-cloud a[data-count="15"] { font-size: 1.772482284rem; }
-.legacy-tag-cloud a[data-count="22"] { font-size: 1.976339443rem; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 
@@ -265,10 +239,6 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
 .legacy-cite-body pre { margin: 0; padding: 1rem; overflow: auto; background: var(--legacy-alt); font: .7rem/1.5 "Roboto Mono", monospace; white-space: pre-wrap; }
 .legacy-cite-footer { justify-content: flex-end; gap: .5rem; border-top: 1px solid rgba(0, 0, 0, .15); }
 .legacy-cite-footer .btn { margin: 0; }
-
-.page-footer { background: var(--legacy-page); color: var(--legacy-muted); }
-.page-footer { padding-bottom: 1rem; }
-.page-footer footer { margin-top: 4rem !important; padding-top: 0; }
 
 /* Legacy single-page composition for publications, talks, and teaching pages. */
 .page-body.my-10 { margin-top: 0 !important; margin-bottom: 0 !important; }

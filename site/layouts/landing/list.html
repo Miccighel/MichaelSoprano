@@ -162,54 +162,112 @@
             {{ else if eq .id "teaching" }}
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "blog" }}
-              <div class="stream-list teaching-list">
-                {{ range first 5 $pages.ByDate.Reverse }}
-                  <article class="media stream-item">
-                    <div class="media-body">
-                      <h2 class="section-subheading article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-                      <div class="article-style">{{ .Params.summary }}</div>
-              <div class="stream-meta article-metadata">Michael Soprano <span class="middot-divider"></span> Last updated on {{ time.Format "Jan 2, 2006" .Params.lastmod }} <span class="middot-divider"></span> teaching</div>
+              {{ $pages = sort $pages "Title" "asc" }}
+              <div class="teaching-list">
+                {{ range $pages }}
+                  <article class="teaching-item">
+                    <div class="teaching-item-content">
+                      <div class="teaching-item-eyebrow">
+                        <span><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>Course</span>
+                        <time datetime="{{ time.Format "2006-01-02" .Params.lastmod }}">Updated {{ time.Format "Jan 2, 2006" .Params.lastmod }}</time>
+                      </div>
+                      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                      {{ with .Params.subtitle }}<p>{{ . }}</p>{{ end }}
                     </div>
+                    <a class="teaching-item-link" href="{{ .RelPermalink }}">Course details <i class="fas fa-angle-right" aria-hidden="true"></i></a>
                   </article>
                 {{ end }}
               </div>
             {{ else if eq .id "tags" }}
-              <div class="legacy-tag-cloud">
-                {{ range site.Taxonomies.tags.Alphabetical }}
+              {{ $topics := slice }}
+              {{ range site.Taxonomies.tags.Alphabetical }}
                   {{ $slug := path.Base (strings.TrimSuffix "/" .Page.RelPermalink) }}
                   {{ if or (ge .Count $home.topics.minimum_count) (in $home.topics.include $slug) }}
+                    {{ $topics = $topics | append . }}
+                  {{ end }}
+              {{ end }}
+              {{ $topics = sort $topics "Count" "desc" }}
+              <nav class="topics-list" aria-label="Research topics">
+                {{ range $topics }}
+                    {{ $slug := path.Base (strings.TrimSuffix "/" .Page.RelPermalink) }}
                     {{ $label := .Page.Title }}
                     {{ with index $home.topics.labels $slug }}{{ $label = . }}{{ end }}
-                    <a class="tag-frequency-{{ if ge .Count 15 }}xl{{ else if ge .Count 8 }}lg{{ else if ge .Count 4 }}md{{ else }}sm{{ end }}" data-count="{{ .Count }}" href="{{ .Page.RelPermalink }}">{{ $label }}</a>
-                  {{ end }}
+                    <a class="topic-link" href="{{ .Page.RelPermalink }}">
+                      <span>{{ $label }}</span>
+                      <span class="topic-count" aria-label="{{ .Count }} items">{{ .Count }}</span>
+                    </a>
                 {{ end }}
-              </div>
+              </nav>
             {{ else if eq .id "academic_activity" }}
               {{ $activity_sections := split .content.text "### " }}
-              <div class="activity-grid">
+              <div class="activity-list">
                 {{ range after 1 $activity_sections }}
                   {{ $lines := split . "\n" }}
                   {{ $heading := index $lines 0 }}
                   {{ $body := delimit (after 1 $lines) "\n" }}
-                  <section class="activity-card{{ if eq $heading "Reviewing Activities" }} is-wide{{ end }}">
+                  <section class="activity-group">
                     <h2>{{ $heading }}</h2>
-                    <div class="activity-card-content">{{ $body | markdownify }}</div>
+                    <div class="activity-group-content">{{ $body | markdownify }}</div>
                   </section>
                 {{ end }}
               </div>
+            {{ else if eq .id "honors" }}
+              <div class="honors-list">
+                {{ range .content.items }}
+                  <article class="honor-row">
+                    <div class="honor-meta">
+                      <time datetime="{{ .year }}">{{ .year }}</time>
+                      <span>{{ .type }}</span>
+                    </div>
+                    <div class="honor-content">
+                      <h2>{{ .title }}</h2>
+                      <div>{{ .description | markdownify }}</div>
+                    </div>
+                  </article>
+                {{ end }}
+              </div>
             {{ else if eq .id "contact" }}
-              <form class="legacy-contact-form" action="https://formspree.io/f/mjvpnjeb" method="POST">
-                <label><span class="sr-only">Name</span><input type="text" name="name" placeholder="Name" required></label>
-                <label><span class="sr-only">Email</span><input type="email" name="email" placeholder="Email" required></label>
-                <label><span class="sr-only">Message</span><textarea name="message" rows="5" placeholder="Message" required></textarea></label>
-                <button class="btn btn-outline-primary" type="submit">Send</button>
-              </form>
-              <ul class="contact-list">
-                <li><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:michael.soprano@uniud.it">michael.soprano@uniud.it</a></li>
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Via delle Scienze 206, Udine (Italy), 33100</span></li>
-                <li><i class="fas fa-compass" aria-hidden="true"></i><span>Rizzi Building, 2° Floor, South Node, Lab SMDC (LC2-04-DE), A2 32 Room</span></li>
-              </ul>
-              <div id="map" aria-label="Map showing the University of Udine"></div>
+              <div class="contact-layout">
+                <div class="contact-details">
+                  <h2>Get in touch</h2>
+                  <p class="contact-intro">For research collaborations, teaching, academic service, or other professional enquiries, send me a message or contact me directly.</p>
+                  <ul class="contact-list">
+                    <li>
+                      <span class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                      <div><strong>Email</strong><a href="mailto:michael.soprano@uniud.it">michael.soprano@uniud.it</a></div>
+                    </li>
+                    <li>
+                      <span class="contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                      <div><strong>Address</strong><span>Via delle Scienze 206, 33100 Udine, Italy</span></div>
+                    </li>
+                    <li>
+                      <span class="contact-icon"><i class="fas fa-compass" aria-hidden="true"></i></span>
+                      <div><strong>Office</strong><span>Rizzi Building, 2° Floor, South Node, Lab SMDC (LC2-04-DE), Room A2 32</span></div>
+                    </li>
+                  </ul>
+                </div>
+
+                <form class="legacy-contact-form" action="https://formspree.io/f/mjvpnjeb" method="POST">
+                  <div class="contact-form-heading">
+                    <h2>Send a message</h2>
+                    <p>All fields are required.</p>
+                  </div>
+                  <div class="contact-form-fields">
+                    <label><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
+                    <label><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+                    <label class="contact-message-field"><span>Message</span><textarea name="message" rows="6" required></textarea></label>
+                  </div>
+                  <button class="btn btn-outline-primary" type="submit"><i class="fas fa-paper-plane" aria-hidden="true"></i> Send message</button>
+                </form>
+              </div>
+
+              <div class="contact-map-block">
+                <div class="contact-map-heading">
+                  <div><h2>Office location</h2><p>University of Udine · Rizzi Building</p></div>
+                  <a href="https://www.openstreetmap.org/?mlat=46.080085&amp;mlon=13.211890#map=16/46.080085/13.211890" target="_blank" rel="noopener">Open map <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+                <div id="map" aria-label="Map showing the University of Udine"></div>
+              </div>
               <script src="/vendor/leaflet/leaflet.js"></script>
               {{ $map_js := resources.Get "js/contact-map.js" | resources.Minify }}
               {{ if hugo.IsProduction }}{{ $map_js = $map_js | fingerprint "sha256" }}{{ end }}

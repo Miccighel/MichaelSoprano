@@ -564,17 +564,30 @@ term_layout_paths = html_paths.select do |path|
   true
 end
 missing_local_term_layout = term_layout_paths.reject do |path|
-  File.binread(path).match?(/\bdata-local-layout=["']?term-list\b/i)
+  relative = path.delete_prefix("#{PUBLIC_ROOT}/")
+  expected_layout = relative.start_with?('tag/') ? 'tag-term' : 'term-list'
+  File.binread(path).match?(/\bdata-local-layout=["']?#{Regexp.escape(expected_layout)}\b/i)
 end
 missing_local_term_layout.each do |path|
   errors << "#{path.delete_prefix("#{PUBLIC_ROOT}/")}: wrong term-list template"
 end
 
+source_tag_assignments = Dir.glob(File.join(SITE_ROOT, 'content', '**', '*.md')).sum do |source_path|
+  data, = load_page(source_path)
+  Array(data['tags']).length
+end
+rendered_tag_results = term_layout_paths.select { |path| path.delete_prefix("#{PUBLIC_ROOT}/").start_with?('tag/') }.sum do |path|
+  File.binread(path).scan(/\bdata-topic-result\b/i).length
+end
+unless rendered_tag_results == source_tag_assignments
+  errors << "tag pages render #{rendered_tag_results} results, expected #{source_tag_assignments} source assignments"
+end
+
 source_term_assignments = Dir.glob(File.join(SITE_ROOT, 'content', '**', '*.md')).sum do |source_path|
   data, = load_page(source_path)
-  %w[categories publication_types tags].sum { |field| Array(data[field]).length }
+  %w[categories publication_types].sum { |field| Array(data[field]).length }
 end
-rendered_term_cards = term_layout_paths.sum do |path|
+rendered_term_cards = term_layout_paths.reject { |path| path.delete_prefix("#{PUBLIC_ROOT}/").start_with?('tag/') }.sum do |path|
   File.binread(path).scan(/\brole=(?:["']article["']|article(?=[\s>]))/i).length
 end
 unless rendered_term_cards == source_term_assignments
@@ -632,7 +645,7 @@ errors << 'local responsive-image processor is not represented in generated HTML
 
 source_event_card_assignments = Dir.glob(File.join(SITE_ROOT, 'content', 'events', '*', 'index.md')).sum do |source_path|
   data, = load_page(source_path)
-  %w[authors categories publication_types tags].sum { |field| Array(data[field]).length }
+  %w[authors categories publication_types].sum { |field| Array(data[field]).length }
 end
 local_event_dates = html_paths.sum do |path|
   File.binread(path).scan(/\bdata-event-date-provider=(?:["']local["']|local(?=[\s>]))/i).length
