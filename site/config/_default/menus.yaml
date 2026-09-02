@@ -29,6 +29,9 @@ main:
   - name: Honors
     url: /#honors
     weight: 90
+  - name: Topics
+    url: /#tags
+    weight: 95
   - name: Contact
     url: /#contact
     weight: 100
