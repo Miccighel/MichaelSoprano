@@ -513,6 +513,62 @@ body {
 
 #presentations .btn-links { margin-top: .8rem; }
 
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.activity-card {
+  min-width: 0;
+  padding: 1.1rem;
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius-md);
+  background: var(--site-surface);
+  box-shadow: var(--site-shadow-sm);
+}
+
+.activity-card.is-wide { grid-column: 1 / -1; }
+
+.activity-card h2 {
+  margin: 0;
+  padding-bottom: .7rem;
+  border-bottom: 1px solid var(--site-border);
+  color: var(--site-text);
+  font-size: 1rem;
+  line-height: 1.3;
+  letter-spacing: -.015em;
+}
+
+.activity-card-content {
+  color: var(--site-text);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+.activity-card-content ul {
+  margin: .8rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.activity-card-content li { padding-left: .15rem; }
+.activity-card-content li + li { margin-top: .65rem; }
+
+.activity-card-content p {
+  margin: .8rem 0 0;
+  color: var(--site-muted);
+}
+
+.activity-card.is-wide ul {
+  columns: 2 260px;
+  column-gap: 2rem;
+}
+
+.activity-card.is-wide li {
+  break-inside: avoid;
+  margin-bottom: .65rem;
+}
+
 .legacy-contact-form input,
 .legacy-contact-form textarea,
 .legacy-publication-filters input,
@@ -609,6 +665,9 @@ body {
   .about-name { font-size: clamp(2.45rem, 14vw, 3.35rem); }
   .about-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .about-action { justify-content: center; }
+  .activity-grid { grid-template-columns: 1fr; }
+  .activity-card.is-wide { grid-column: auto; }
+  .activity-card.is-wide ul { columns: auto; }
   .education-row { grid-template-columns: 1fr; gap: .2rem; }
   .legacy-section-grid .section-heading h1,
   .about-heading { font-size: 1.85rem; }

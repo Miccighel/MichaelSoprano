@@ -184,6 +184,19 @@
                   {{ end }}
                 {{ end }}
               </div>
+            {{ else if eq .id "academic_activity" }}
+              {{ $activity_sections := split .content.text "### " }}
+              <div class="activity-grid">
+                {{ range after 1 $activity_sections }}
+                  {{ $lines := split . "\n" }}
+                  {{ $heading := index $lines 0 }}
+                  {{ $body := delimit (after 1 $lines) "\n" }}
+                  <section class="activity-card{{ if eq $heading "Reviewing Activities" }} is-wide{{ end }}">
+                    <h2>{{ $heading }}</h2>
+                    <div class="activity-card-content">{{ $body | markdownify }}</div>
+                  </section>
+                {{ end }}
+              </div>
             {{ else if eq .id "contact" }}
               <form class="legacy-contact-form" action="https://formspree.io/f/mjvpnjeb" method="POST">
                 <label><span class="sr-only">Name</span><input type="text" name="name" placeholder="Name" required></label>
