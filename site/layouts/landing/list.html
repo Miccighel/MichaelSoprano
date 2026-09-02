@@ -14,9 +14,7 @@
       </aside>
 
       <div class="legacy-about-content">
-        <header class="about-intro">
-          <h1 class="about-name">{{ $author.title }}</h1>
-        </header>
+        <h1 class="sr-only">{{ $author.title }}</h1>
         <div class="legacy-bio">{{ $author.bio | markdownify }}</div>
         <nav class="about-actions" aria-label="Primary profile actions">
           <a class="about-action is-primary" href="/media/CVs/Curriculum_Vitae_EN.pdf"><i class="fas fa-file-download" aria-hidden="true"></i> CV · English</a>
