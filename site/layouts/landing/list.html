@@ -245,7 +245,7 @@
                   </ul>
                 </div>
 
-                <form class="legacy-contact-form" action="https://formspree.io/f/mjvpnjeb" method="POST" data-contact-form>
+                <form class="legacy-contact-form" action="https://formspree.io/f/mjvpnjeb" method="POST">
                   <div class="contact-form-heading">
                     <h2>Send a message</h2>
                     <p>All fields are required.</p>
@@ -256,8 +256,7 @@
                     <label><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
                     <label class="contact-message-field"><span>Message</span><textarea name="message" rows="6" required></textarea></label>
                   </div>
-                  <button class="btn btn-outline-primary" type="submit" data-contact-submit><i class="fas fa-paper-plane" aria-hidden="true"></i> Send message</button>
-                  <p class="contact-form-status" data-contact-form-status role="status" aria-live="polite" hidden></p>
+                  <button class="btn btn-outline-primary" type="submit"><i class="fas fa-paper-plane" aria-hidden="true"></i> Send message</button>
                 </form>
               </div>
 
@@ -272,9 +271,6 @@
               {{ $map_js := resources.Get "js/contact-map.js" | resources.Minify }}
               {{ if hugo.IsProduction }}{{ $map_js = $map_js | fingerprint "sha256" }}{{ end }}
               <script defer src="{{ $map_js.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $map_js.Data.Integrity }}" crossorigin="anonymous"{{ end }}></script>
-              {{ $contact_js := resources.Get "js/contact-form.js" | resources.Minify }}
-              {{ if hugo.IsProduction }}{{ $contact_js = $contact_js | fingerprint "sha256" }}{{ end }}
-              <script defer src="{{ $contact_js.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $contact_js.Data.Integrity }}" crossorigin="anonymous"{{ end }}></script>
             {{ else }}
               <div class="legacy-markdown">{{ .content.text | markdownify }}</div>
             {{ end }}
