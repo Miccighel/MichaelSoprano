@@ -37,7 +37,7 @@ documentazione tecnica dell'applicazione Hugo si trova in
 | Favicon e immagine social predefinita | `site/assets/media/icon.png` e fallback `site/static/favicon.ico` |
 | CV scaricabili | `site/static/media/CVs/` |
 | Presentazioni, poster, tesi e altri download | `site/static/media/` |
-| Risorse tecniche dell'interfaccia | `site/static/ui/` |
+| Risorse tecniche dell'interfaccia (generate localmente) | `site/static/vendor/` |
 | Fondazione visiva, token e accessibilità | `site/assets/css/design-system.css` |
 | Compatibilità con la presentazione storica | `site/assets/css/custom.css` |
 
@@ -106,6 +106,21 @@ Il comando compila le versioni italiana e inglese e copia i PDF direttamente
 in `site/static/media/CVs/`. Prima del commit conviene aprire entrambi i file e
 controllare data, metriche, impaginazione e numero di pagine.
 
+## Modulo di contatto
+
+Il modulo usa un POST HTML diretto a Formspree (`mjvpnjeb`), sia in locale
+sia in produzione. Dopo l'invio, Formspree gestisce la conferma e l'eventuale
+CAPTCHA configurato nel suo pannello. I campi obbligatori e il campo anti-spam
+`_gotcha` funzionano anche senza JavaScript.
+
+Se l'invio fallisce soltanto dal dominio pubblico, controllare nel pannello
+Formspree l'eventuale impostazione **Restrict to Domain**: il valore corretto
+è `michaelsoprano.com`, senza protocollo e senza `www`. Verificare anche
+l'attivazione del modulo, la destinazione email e i limiti dell'account.
+Per il collaudo completo dopo il deploy, inviare un messaggio dal sito pubblico,
+completare l'eventuale CAPTCHA e verificare la ricezione nella casella destinataria;
+la sola build non dimostra la consegna dell'email.
+
 ## Anteprima locale
 
 ```bash
@@ -136,7 +151,7 @@ pnpm run check
 Facoltativamente, per controllare anche i collegamenti esterni:
 
 ```bash
-ruby site/scripts/check-external-links.rb
+ruby scripts/check-external-links.rb
 ```
 
 `pnpm run check` è il comando canonico usato anche dal workflow GitHub: prepara

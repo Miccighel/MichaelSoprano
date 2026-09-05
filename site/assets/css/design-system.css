@@ -1038,16 +1038,6 @@ body {
   border: 0 !important;
 }
 
-.contact-form-status {
-  margin: .75rem 0 0;
-  color: var(--site-muted);
-  font-size: .7rem;
-  line-height: 1.45;
-}
-
-.contact-form-status[data-state="success"] { color: var(--site-primary-hover); }
-.contact-form-status[data-state="error"] { color: #b42318; }
-
 .legacy-contact-form input:focus,
 .legacy-contact-form textarea:focus,
 .legacy-publication-filters input:focus,
