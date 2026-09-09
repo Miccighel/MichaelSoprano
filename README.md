@@ -28,7 +28,8 @@ documentazione tecnica dell'applicazione Hugo si trova in
 | Cosa | File o cartella |
 | --- | --- |
 | Profilo, interessi, formazione, esperienza e link social | `site/data/home.yaml` |
-| Bibliometria, attività accademica, premi e ordine della home | `site/content/_index.md` |
+| Bibliometria (copia generata dai sorgenti CV) | `site/data/bibliometrics.json` |
+| Attività accademica, premi e ordine della home | `site/content/_index.md` |
 | Menu principale | `site/config/_default/menus.yaml` |
 | Pubblicazioni | `site/content/publications/` |
 | Presentazioni e poster | `site/content/events/` |
@@ -80,18 +81,19 @@ configurazione dei permalink.
 
 ## Aggiornare gli indicatori bibliometrici
 
-Le cifre mostrate sul sito si trovano nella sezione `bibliometrics` di
-`site/data/home.yaml`. Per ogni fonte aggiornare insieme:
+La fonte unica è `../LaTeX/data/bibliometrics.json`. La copia nel sito è
+generata: non modificarla manualmente. Per ogni fonte aggiornare insieme:
 
 - numero di pubblicazioni;
 - citazioni;
 - h-index;
 - i10-index, quando disponibile.
 
-Aggiornare infine anche il campo `last_updated` della sezione.
+Aggiornare anche `checked_on`, `last_updated` e `last_updated_it` con la stessa
+data di verifica. Le date vengono controllate automaticamente.
 
-Se gli stessi valori compaiono nei CV, aggiornare anche i sorgenti nella
-repository sorella `../LaTeX` e rigenerare entrambi i PDF.
+Eseguire il comando di sincronizzazione qui sotto: genera la bibliometria
+LaTeX, compila entrambi i CV e copia dati e PDF nel sito, senza commit o deploy.
 
 ## Aggiornare i CV
 
@@ -103,7 +105,12 @@ cd ../LaTeX
 ```
 
 Il comando compila le versioni italiana e inglese e copia i PDF direttamente
-in `site/static/media/CVs/`. Prima del commit conviene aprire entrambi i file e
+in `site/static/media/CVs/`, insieme a `site/data/bibliometrics.json` e al
+manifest di integrità `site/data/cv-sync.json`. La build del sito controlla
+le impronte SHA-256: un PDF o un dato modificato fuori dalla sincronizzazione
+blocca la build. Non serve accedere all'altra repository durante il deploy.
+Questo verifica la coerenza dell'esportazione, non la correttezza delle
+metriche sui servizi esterni. Prima del commit conviene aprire entrambi i file e
 controllare data, metriche, impaginazione e numero di pagine.
 
 ## Modulo di contatto
@@ -194,9 +201,9 @@ La procedura dettagliata e i controlli per il record `CNAME` sono in
   controllo visivo completo.
 - Font, icone e librerie dell'interfaccia sono ospitati localmente; la mappa
   OpenStreetMap viene caricata soltanto nella homepage.
-- Il controllo settimanale dei link tratta come avvisi soltanto le catene TLS
-  incomplete esplicitamente note; ogni altro errore continua a far fallire il
-  workflow.
+- Il controllo settimanale segnala separatamente i link non verificabili
+  (ad esempio HTTP 403/429) e le catene TLS incomplete esplicitamente note.
+  Non li considera verificati; gli altri errori fanno fallire il workflow.
 - Non eliminare `site/static/CNAME`, `site/assets/media/icon.png` o
   `site/static/favicon.ico`.
 - Conservare i rami di rollback finché la nuova versione non è stabile da
