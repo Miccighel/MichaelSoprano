@@ -89,7 +89,7 @@ experience:
   description: Design, development, and maintenance of a blog on music news and events
     as a full-stack web developer.
 bibliometrics:
-  last_updated: September 1, 2026
+  last_updated: September 7, 2026
   indicators:
   - key: publications
     label: Publications
@@ -111,7 +111,7 @@ bibliometrics:
     url: https://www.scopus.com/authid/detail.uri?authorId=57203392311
     values:
       publications: 31
-      citations: 357
+      citations: 360
       h_index: 9
       i10_index: '--'
   - name: Web of Science
@@ -125,7 +125,7 @@ bibliometrics:
     url: https://dl.acm.org/profile/99659280921
     values:
       publications: 26
-      citations: 194
+      citations: 196
       h_index: '--'
       i10_index: '--'
 publications:

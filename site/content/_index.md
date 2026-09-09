@@ -48,7 +48,6 @@ sections:
     text: |-
       ### Organizational Roles
 
-      - 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (*SIGIR 2026*). **Tutorials Chair**
       - Workshop “AI, Misinformation and Disinformation”, held as part of the 5th National CINI Conference on Artificial Intelligence (*Ital-IA 2025*), Trieste, 23 Jun 2025. **Organizer**
       - 21st Italian Research Conference on Digital Libraries (*IRCDL 2025*), Udine, 20--21 Feb 2025. **Website Chair**. [Website](https://ircdl2025.uniud.it/)
       - 14th Italian Information Retrieval Workshop (*IIR 2024*), Udine, 5--6 Sep 2024. **Organizer and Website Chair**. [Website](https://iir2024.uniud.it/)
@@ -57,6 +56,7 @@ sections:
 
       ### Program Committee Memberships
 
+      - 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (*SIGIR 2026*). **Program Committee Member**
       - 15th Italian Information Retrieval Workshop (*IIR 2025*), Cagliari, 3--5 Sep 2025. *Full and Short Papers tracks*
       - 12th AAAI Conference on Human Computation and Crowdsourcing (*HCOMP 2024*), Pittsburgh, PA, USA. *Full Papers track*
       - 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (*SIGIR 2024*), Washington, DC, USA. *Full and Short Papers tracks*
