@@ -64,7 +64,7 @@
                 {{ end }}
               </div>
             {{ else if eq .id "metrics" }}
-              {{ $metrics := $home.bibliometrics }}
+              {{ $metrics := hugo.Data.bibliometrics }}
               <div class="bibliometrics-block">
                 <div class="bibliometrics-table-wrap">
                   <table class="bibliometrics-table">

@@ -106,7 +106,11 @@ workers = Array.new([WORKERS, urls.length].min) do
       response = check(uri)
       status = response.code.to_i
       host_accepted = HOST_ACCEPTED_STATUSES.fetch(uri.host.downcase, []).include?(status)
-      next if status.between?(200, 399) || ACCEPTED_BLOCKED_STATUSES.include?(status) || host_accepted
+      next if status.between?(200, 399)
+      if ACCEPTED_BLOCKED_STATUSES.include?(status) || host_accepted
+        mutex.synchronize { warnings << "not verified (HTTP #{status}, access restricted or host-specific response) — #{url}" }
+        next
+      end
 
       mutex.synchronize { failures << "#{status} #{url}" }
     rescue ThreadError
@@ -127,7 +131,7 @@ workers.each(&:join)
 puts "External links checked: #{urls.length}."
 warnings.sort.each { |warning| warn "WARNING: #{warning}" }
 if failures.empty?
-  puts "External link check passed#{warnings.empty? ? '.' : " with #{warnings.length} known TLS warning(s)."}"
+  puts "External link check passed#{warnings.empty? ? '.' : " with #{warnings.length} unverified link(s); see warnings."}"
 else
   failures.sort.each { |failure| warn "ERROR: #{failure}" }
   warn "External link check failed with #{failures.length} error(s)."
