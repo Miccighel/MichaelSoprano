@@ -519,7 +519,7 @@ end
   'authors' => ['Authors', 59],
   'categories' => ['Categories', 1],
   'publication_types' => ['Publication_types', 3],
-  'tags' => ['Tags', 130]
+  'tags' => ['Tags', 133]
 }.each do |taxonomy, (expected_title, expected_terms)|
   relative_path = File.join(taxonomy, 'index.html')
   path = File.join(PUBLIC_ROOT, relative_path)
@@ -739,7 +739,7 @@ if File.file?(rss_path)
     rss_title = rss.elements['rss/channel/title']&.text.to_s.strip
     rss_items = rss.get_elements('rss/channel/item')
     errors << 'index.xml: RSS channel title is missing' if rss_title.empty?
-    errors << "index.xml: RSS contains #{rss_items.length} items, expected 58" unless rss_items.length == 58
+    errors << "index.xml: RSS contains #{rss_items.length} items, expected 60" unless rss_items.length == 60
     errors << 'index.xml: legacy HugoBlox generator is still present' if File.read(rss_path).include?('HugoBlox')
   rescue REXML::ParseException => e
     errors << "index.xml: invalid RSS XML (#{e.message})"
@@ -754,7 +754,7 @@ if File.file?(sitemap_path)
     sitemap_source = File.read(sitemap_path)
     REXML::Document.new(sitemap_source)
     sitemap_urls = sitemap_source.scan(/<url>/).length
-    errors << "sitemap.xml: contains #{sitemap_urls} URLs, expected 259" unless sitemap_urls == 259
+    errors << "sitemap.xml: contains #{sitemap_urls} URLs, expected 264" unless sitemap_urls == 264
   rescue REXML::ParseException => e
     errors << "sitemap.xml: invalid XML (#{e.message})"
   end

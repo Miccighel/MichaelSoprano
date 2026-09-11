@@ -34,7 +34,7 @@
         <div class="event-fact">
           <span>Date</span>
           <p>
-            {{ if $page.Params.event_all_day }}
+            {{ if or $page.Params.event_all_day $page.Params.event_time_unknown }}
               <time datetime="{{ time.Format "2006-01-02" . }}">{{ time.Format "January 2, 2006" . }}</time>
             {{ else }}
               <time datetime="{{ time.Format "2006-01-02T15:04:05Z07:00" . }}">{{ time.Format "January 2, 2006 · 15:04" . }}</time>{{ with $page.Params.event_end }}–<time datetime="{{ time.Format "2006-01-02T15:04:05Z07:00" . }}">{{ time.Format "15:04" . }}</time>{{ end }}
