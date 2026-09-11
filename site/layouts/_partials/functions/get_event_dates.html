@@ -1,6 +1,6 @@
 {{ $startDate := .Params.event_start | default .Date }}
 {{ $endDate := .Params.event_end | default .Params.date_end }}
-{{ $allDay := .Params.event_all_day | default .Params.all_day }}
+{{ $allDay := or (.Params.event_all_day | default .Params.all_day) .Params.event_time_unknown }}
 {{ $dateFormat := site.Params.locale.date_format | default ":date_long" }}
 {{ $timeFormat := site.Params.locale.time_format | default "3:04 PM" }}
 
@@ -9,12 +9,13 @@
 {{ if not $allDay }}{{ $parts = $parts | append (time.Format $timeFormat $start) }}{{ end }}
 
 {{ if $endDate }}
-  {{ $parts = $parts | append "&mdash;" }}
   {{ $end := time $endDate }}
-  {{ if not (and (eq $start.Year $end.Year) (eq $start.Month $end.Month) (eq $start.Day $end.Day)) }}
-    {{ $parts = $parts | append (time.Format $dateFormat $end) }}
+  {{ $sameDay := and (eq $start.Year $end.Year) (eq $start.Month $end.Month) (eq $start.Day $end.Day) }}
+  {{ if or (not $allDay) (not $sameDay) }}
+    {{ $parts = $parts | append "&mdash;" }}
+    {{ if not $sameDay }}{{ $parts = $parts | append (time.Format $dateFormat $end) }}{{ end }}
+    {{ if not $allDay }}{{ $parts = $parts | append (time.Format $timeFormat $end) }}{{ end }}
   {{ end }}
-  {{ if not $allDay }}{{ $parts = $parts | append (time.Format $timeFormat $end) }}{{ end }}
 {{ end }}
 
 {{ return (dict "provider" "local" "text" ((delimit $parts " ") | safeHTML)) }}

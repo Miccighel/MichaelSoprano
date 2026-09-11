@@ -79,6 +79,11 @@ Le nuove pagine entrano automaticamente negli archivi e nelle raccolte della
 homepage. Gli URL pubblici storici restano compatibili grazie alla
 configurazione dei permalink.
 
+Per un evento di cui si conosce la data ma non l'orario, usare date nel formato
+`YYYY-MM-DD` e `event_time_unknown: true`. Questo nasconde gli orari senza
+descrivere il contributo come un evento di un'intera giornata. L'eventuale durata
+confermata può essere riportata nel testo della pagina.
+
 ## Aggiornare gli indicatori bibliometrici
 
 La fonte unica è `../LaTeX/data/bibliometrics.json`. La copia nel sito è

@@ -143,7 +143,7 @@
                       <div class="presentation-row-details">
                         {{ with .Params.event_start }}
                           {{ $start_time := time.Format "15:04" . }}
-                          {{ if ne $start_time "00:00" }}
+                          {{ if and (ne $start_time "00:00") (not $event.Params.event_all_day) (not $event.Params.event_time_unknown) }}
                             <span><i class="far fa-clock" aria-hidden="true"></i>{{ $start_time }}{{ with $event.Params.event_end }}{{ $end_time := time.Format "15:04" . }}{{ if ne $end_time "00:00" }}–{{ $end_time }}{{ end }}{{ end }}</span>
                           {{ end }}
                         {{ end }}
