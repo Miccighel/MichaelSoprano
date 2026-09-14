@@ -1,5 +1,5 @@
 ---
-title: 'A caccia di fake news (PCTO Summer Camp 2025)'
+title: 'A Caccia di Fake News (PCTO Summer Camp 2025)'
 location: University of Udine, Udine, Italy.
 summary: School outreach seminar - PCTO Summer Camp Informatica & Intelligenza Artificiale 2025, University of Udine.
 authors:

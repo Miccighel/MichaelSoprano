@@ -105,7 +105,7 @@
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "publications" }}
               {{ $pages = sort (sort $pages "Title" "asc") "Date" "desc" }}
-              {{ $homepage_limit := $home.publications.homepage_limit | default 10 }}
+              {{ $homepage_limit := $home.publications.homepage_limit | default 15 }}
               <div class="legacy-list publication-list">
                 {{ range first $homepage_limit $pages }}
                   {{ $publication := . }}
@@ -127,8 +127,9 @@
             {{ else if eq .id "presentations" }}
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "events" }}
+              {{ $homepage_limit := $home.presentations.homepage_limit | default 15 }}
               <div class="stream-list">
-                {{ range first 10 $pages.ByDate.Reverse }}
+                {{ range first $homepage_limit $pages.ByDate.Reverse }}
                   {{ $event := . }}
                   <article class="media stream-item">
                     <div class="media-body">

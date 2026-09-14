@@ -478,6 +478,16 @@ if File.file?(home_html)
     errors << 'index.html: external Markdown links do not use the local safe-link behavior'
   end
   errors << 'index.html: search attribution is not Pagefind' unless rendered_home.include?('Search by Pagefind')
+
+  home_data = YAML.safe_load(File.read(File.join(SITE_ROOT, 'data', 'home.yaml')), aliases: true)
+  { 'publications' => 'publications', 'presentations' => 'events' }.each do |section_id, content_section|
+    limit = home_data.dig(section_id, 'homepage_limit') || 15
+    available = Dir.glob(File.join(SITE_ROOT, 'content', content_section, '*', 'index.md')).length
+    expected = [limit, available].min
+    section_html = rendered_home[/<section\b[^>]*\bid=(?:["']#{section_id}["']|#{section_id}(?=[\s>]))[^>]*>(.*?)<\/section>/mi, 1].to_s
+    actual = section_html.scan(/<article\b/i).length
+    errors << "index.html: #{section_id} renders #{actual} items, expected #{expected}" unless actual == expected
+  end
 end
 
 privacy_source_path = File.join(SITE_ROOT, 'content', 'privacy.md')
