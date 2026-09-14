@@ -1,5 +1,5 @@
 ---
-title: 'A caccia di fake news (PCTO Summer Camp 2026)'
+title: 'A Caccia di Fake News (PCTO Summer Camp 2026)'
 event_url: https://dmif.uniud.it/it/territorio-societa/pls-e-scuole/campus-informatica-2026
 location: University of Udine, Udine, Italy.
 summary: School outreach seminar - PCTO Summer Camp Informatica & Intelligenza Artificiale 2026, University of Udine.

@@ -75,6 +75,15 @@ Ogni comando crea una cartella con un `index.md` già strutturato. Compilare i
 campi, aggiungere nella stessa cartella eventuali immagini o allegati e
 impostare `draft: false` quando il contenuto è pronto.
 
+Per i titoli di pubblicazioni e presentazioni, conservare la grafia originale
+del contributo (slide, poster o pubblicazione), incluse maiuscole, sigle e nomi
+propri. Usare lo stesso titolo nel sito e nei CV; non applicare trasformazioni
+automatiche in title case. Esempio: `A Caccia di Fake News`.
+
+La homepage mostra fino a 15 pubblicazioni e 15 presentazioni, con accesso agli
+archivi completi. I limiti sono configurati in `site/data/home.yaml`, tramite
+`publications.homepage_limit` e `presentations.homepage_limit`.
+
 Le nuove pagine entrano automaticamente negli archivi e nelle raccolte della
 homepage. Gli URL pubblici storici restano compatibili grazie alla
 configurazione dei permalink.
