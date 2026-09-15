@@ -1,6 +1,6 @@
 # Sito personale di Michael Soprano
 
-Repository privata del sito [michaelsoprano.com](https://michaelsoprano.com),
+Sorgenti del sito [michaelsoprano.com](https://michaelsoprano.com),
 realizzato con Hugo e pubblicato tramite GitHub Pages.
 
 Questo README è il promemoria operativo per la manutenzione del sito. La
@@ -16,23 +16,20 @@ documentazione tecnica dell'applicazione Hugo si trova in
   request solo dopo il superamento del controllo **Validate and build**.
 - `site/public/`, `site/resources/`, `site/static/vendor/`, `node_modules/` e
   le cache locali sono file generati: non vanno modificati né aggiunti a Git.
-- I vecchi sorgenti sono conservati nel ramo `hugo-version`; lo snapshot del
-  vecchio sito pubblicato è in `codex/legacy-gh-pages-2026-08-09`, mentre
-  `codex/pre-hugo-pure-deploy-2026-08-24` conserva lo stato immediatamente
-  precedente al passaggio in produzione di Hugo puro.
-- Anche se la repository è privata, password, token e credenziali non devono
-  essere salvati nei file versionati.
+- La repository è pubblica: non salvare password, token o credenziali nei file
+  versionati.
 
 ## Dove modificare cosa
 
 | Cosa | File o cartella |
 | --- | --- |
-| Profilo, interessi, formazione, esperienza e link social | `site/data/home.yaml` |
+| Biografia, interessi, formazione e link social | `site/data/authors/michael-soprano.yaml` |
+| Esperienza, visite, topics e limiti delle raccolte in home | `site/data/home.yaml` |
 | Bibliometria (copia generata dai sorgenti CV) | `site/data/bibliometrics.json` |
 | Attività accademica, premi e ordine della home | `site/content/_index.md` |
 | Menu principale | `site/config/_default/menus.yaml` |
 | Pubblicazioni | `site/content/publications/` |
-| Presentazioni e poster | `site/content/events/` |
+| Presentazioni, poster e seminari divulgativi | `site/content/events/` |
 | Didattica e altri post | `site/content/blog/` |
 | Immagine personale | `site/assets/media/authors/michael-soprano.jpg` |
 | Favicon e immagine social predefinita | `site/assets/media/icon.png` e fallback `site/static/favicon.ico` |
@@ -49,6 +46,8 @@ Servono:
 - Node.js 24;
 - pnpm 10.14.0;
 - Hugo Extended 0.165.0.
+
+Gli script di validazione e build richiedono anche Ruby.
 
 La prima volta, o dopo un aggiornamento delle dipendenze:
 
@@ -152,7 +151,9 @@ hugo server --disableFastRender
 ```
 
 L'indirizzo locale viene mostrato da Hugo, normalmente
-`http://localhost:1313/`. Controllare almeno:
+`http://localhost:1313/`. Per verificare anche la ricerca con un indice aggiornato,
+eseguire `pnpm run check` e servire la cartella `public/`: Hugo server non
+rigenera l'indice Pagefind. Controllare almeno:
 
 - homepage e menu desktop/mobile;
 - ricerca;
@@ -177,8 +178,8 @@ ruby scripts/check-external-links.rb
 
 `pnpm run check` è il comando canonico usato anche dal workflow GitHub: prepara
 gli asset locali, valida i sorgenti, compila Hugo, genera l'indice Pagefind e
-controlla il sito risultante. Il controllo dei link esterni viene eseguito
-automaticamente una volta alla settimana.
+controlla il sito risultante. Il controllo dei link esterni resta facoltativo
+e manuale: non viene eseguito dal workflow GitHub.
 
 ## Pubblicazione
 
@@ -194,18 +195,8 @@ automaticamente una volta alla settimana.
 Solo un push a `master` può avviare il normale deploy di produzione. I branch
 di lavoro e le pull request non modificano il sito pubblico.
 
-## Ripristino del vecchio sito
-
-Il ripristino non richiede di riscrivere `master`:
-
-1. aprire **Actions** su GitHub;
-2. scegliere **Legacy rollback**;
-3. avviare manualmente il workflow da `master`;
-4. attendere il deploy `github-pages`;
-5. verificare sito e dominio personalizzato.
-
-La procedura dettagliata e i controlli per il record `CNAME` sono in
-[`docs/ROLLBACK.md`](docs/ROLLBACK.md).
+Le procedure di ripristino, i riferimenti ai rami storici e i controlli del
+dominio sono in [`docs/ROLLBACK.md`](docs/ROLLBACK.md).
 
 ## Manutenzione periodica
 
@@ -213,12 +204,5 @@ La procedura dettagliata e i controlli per il record `CNAME` sono in
 - Controllare gli avvisi Dependabot e aggiornare una dipendenza alla volta.
 - Dopo ogni aggiornamento di Hugo o delle dipendenze, rifare build, audit e
   controllo visivo completo.
-- Font, icone e librerie dell'interfaccia sono ospitati localmente; la mappa
-  OpenStreetMap viene caricata soltanto nella homepage.
-- Il controllo settimanale segnala separatamente i link non verificabili
-  (ad esempio HTTP 403/429) e le catene TLS incomplete esplicitamente note.
-  Non li considera verificati; gli altri errori fanno fallire il workflow.
 - Non eliminare `site/static/CNAME`, `site/assets/media/icon.png` o
   `site/static/favicon.ico`.
-- Conservare i rami di rollback finché la nuova versione non è stabile da
-  tempo sufficiente.

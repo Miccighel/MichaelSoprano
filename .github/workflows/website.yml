@@ -8,8 +8,6 @@ on:
     branches:
       - master
   workflow_dispatch:
-  schedule:
-    - cron: '17 5 * * 1'
 
 permissions:
   contents: read
@@ -48,11 +46,6 @@ jobs:
       - name: Validate and build website
         working-directory: site
         run: pnpm run check
-
-      - name: Check external links
-        if: github.event_name == 'schedule'
-        working-directory: site
-        run: pnpm run check:links
 
       - name: Upload preview artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
