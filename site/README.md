@@ -1,147 +1,75 @@
-# Michael Soprano — Hugo website
+# Michael Soprano — Hugo source
 
-This directory is the canonical and self-contained source of the Hugo
-website. It contains the complete profile, homepage, publications,
-presentations, teaching pages, and static assets.
+This directory contains the canonical website source. Setup, content creation,
+CV synchronization, contact-form troubleshooting, and deployment instructions
+are in the [repository README](../README.md).
 
-## Content structure
+All commands below run from this directory.
 
-Content is stored as Hugo page bundles. Every item has its own directory with
-an `index.md` file and, when needed, images or downloadable files beside it.
+## Source structure
 
-| Content | Source directory | Public URL |
+Content uses Hugo page bundles: each item has an `index.md` and optional images
+or attachments. Public URLs are defined in `config/_default/hugo.yaml`.
+
+| Content | Source | Public URL |
 | --- | --- | --- |
-| Publications | `content/publications/<slug>/` | `/publication/<slug>/` |
-| Presentations and posters | `content/events/<slug>/` | `/talk/<generated-slug>/` |
-| Teaching | `content/blog/<slug>/` | `/post/<slug>/` |
+| Publications | `content/publications/<directory>/` | `/publication/<directory>/` |
+| Presentations, posters, and outreach | `content/events/<directory>/` | `/talk/<slug>/` |
+| Teaching and posts | `content/blog/<directory>/` | `/post/<slug>/` |
 
-The source directory names form the local content schema. Public URLs retain
-the historical website structure through the permalink configuration.
+Key fields are `identifiers.doi`, `publication.name`, resource `links` entries
+with `type` and `url`, `event_start`, `event_end`, and the ordering `date`.
+Use the content generator documented in the root README for complete examples.
 
-## Create new content
+Homepage sources:
 
-Run the content generator from this directory:
+- `data/authors/michael-soprano.yaml`: biography, education, interests, profiles.
+- `data/home.yaml`: experience, visits, collection limits, and topic settings.
+- `content/_index.md`: section order, headings, academic activity, and honors.
+- `data/bibliometrics.json`: generated metrics, synchronized from the CV repo.
+- `data/cv-sync.json`: generated integrity manifest for metrics and CV PDFs.
+- `config/_default/menus.yaml`: navigation.
 
-```bash
-./scripts/new-content.rb publication my-new-paper
-./scripts/new-content.rb event conference-name-2027
-./scripts/new-content.rb teaching new-course
-```
+New content is included automatically in the relevant collections and archives.
+The homepage topic threshold and explicit inclusions are configured in
+`data/home.yaml` under `topics`.
 
-The generator creates the correct directory and a draft `index.md` containing
-the fields required by the selected content type. Complete the placeholders,
-place any bundle assets in the same directory, and change `draft` to `false`
-when the page is ready.
-
-The most important content fields are:
-
-- publication DOI: `identifiers.doi`;
-- publication venue: `publication.name`;
-- downloadable resources: entries in `links` with `type` and `url`;
-- event dates: `event_start` and `event_end`;
-- page date used for ordering: `date`.
-
-New publications, events, teaching pages, and tags are automatically included
-in the homepage collections and archives. Topics with at least three associated
-pages automatically appear in the homepage topic cloud; historically important
-lower-frequency topics can be included in `data/home.yaml`.
-
-## Edit the homepage
-
-- `data/home.yaml` contains the profile, social links, interests, education,
-  visits, and professional experience.
-- `content/_index.md` contains the section order and the editable text for
-  bibliometrics, academic activity, and honors.
-- `config/_default/menus.yaml` contains the navigation menu.
-- `assets/media/icon.png` is the favicon and default social preview image;
-  `static/favicon.ico` is its compatibility fallback.
-
-These are the only canonical homepage sources; no generated legacy data file
-or synchronization step is required.
-
-## Validate content
-
-Before building, run:
+## Build and checks
 
 ```bash
-./scripts/check-content.rb
-```
-
-The validator checks required front matter, supported publication types,
-event date order, link structure, duplicate slugs, homepage data, and drafts.
-The preview workflow runs the same validation automatically before every CI
-build.
-
-After building the site and its search index, run the generated-site audit
-from the repository root:
-
-```bash
-ruby site/scripts/audit-build.rb
-```
-
-This second check scans every generated HTML page, verifies internal links,
-anchors, downloadable files, and search coverage, confirms that each
-publication, presentation, and teaching page was rendered exactly once, and
-checks that the rendered content is complete and searchable.
-
-A scheduled CI run also checks external links once a week. It can be run
-locally after a production build with:
-
-```bash
-ruby site/scripts/check-external-links.rb
-```
-
-## Local build
-
-Use Node.js 24, pnpm 10.14.0, and Hugo Extended 0.165.0:
-
-```bash
-pnpm install --frozen-lockfile
 pnpm run check
 ```
 
-The generated site is written to `public/`. `pnpm run check` is the canonical
-local and CI command: it prepares vendored assets, validates the source,
-builds Hugo, generates Pagefind, and audits the result. A build without the
-final generated-site audit is also available:
+This is the canonical local and CI command. It tests and verifies CV sync,
+prepares local vendor assets, validates content, builds Hugo, generates the
+Pagefind search index, and audits the output in `public/`.
 
-```bash
-pnpm run build
-```
+The audit checks internal links, anchors, downloads, search coverage, content
+completeness, collection limits, and accessibility basics such as the skip link.
 
-`pnpm run vendor` prepares the pinned, self-hosted fonts, icon fonts, and
-Leaflet files in `static/vendor/`. That generated directory is intentionally
-ignored by Git and must be refreshed after dependency updates.
+Individual commands, useful while debugging:
 
-Leaflet CSS and JavaScript are emitted only on the homepage. All executable
-site code is stored in `assets/js/`; templates contain only references to the
-compiled scripts.
+| Command | Purpose |
+| --- | --- |
+| `pnpm run check:content` | Validate source content without rebuilding |
+| `pnpm run build` | Build and index without the final generated-site audit |
+| `ruby scripts/audit-build.rb` | Audit an existing production build |
+| `pnpm run vendor` | Refresh generated fonts, icons, and Leaflet assets |
+| `pnpm run check:links` | Optionally check external links after building |
 
-## Visual architecture
+External link checks are manual only, not part of CI. Unverifiable responses
+such as HTTP 403/429 are reported separately; other failures return a nonzero
+exit status. TLS verification remains enabled.
 
-`assets/css/custom.css` retains the compatibility rules for the historical
-page composition. `assets/css/design-system.css` is loaded after it and is the
-canonical layer for the evolving visual identity: semantic colours, spacing,
-type scale, radii, shadows, focus states, and responsive refinements belong
-there. Keeping these responsibilities separate makes each modernization step
-easy to compare and revert without changing the content model.
+## Frontend architecture
 
-Every generated page includes a keyboard-accessible skip link targeting
-`#main-content`. The generated-site audit verifies both the link and its target,
-as well as the presence of the design-system source file.
+`assets/css/custom.css` contains the historical layout rules.
+`assets/css/design-system.css` loads afterward and defines the visual system:
+colours, typography, spacing, focus states, and responsive adjustments.
 
-## CV PDFs
+Site scripts live in `assets/js/`. Fonts, icon fonts, and Leaflet are generated
+from pinned dependencies into `static/vendor/`; do not edit or commit that
+directory. Leaflet assets are loaded only on the homepage.
 
-The sibling LaTeX repository builds and copies the English and Italian CVs
-directly into the canonical static directory:
-
-```bash
-cd ../../LaTeX
-./build_all.sh --sync-website ../Website
-```
-
-## CI preview and deployment
-
-The website workflow validates and builds every pull request and `master`
-update, generates the Pagefind index, and retains a short-lived preview
-artifact. Only a successful push to `master` can deploy to GitHub Pages.
+Hugo's development server does not regenerate the Pagefind index. Run a full
+build and serve `public/` when verifying search behaviour.
