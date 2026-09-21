@@ -57,6 +57,7 @@ sections:
       ### Program Committee Memberships
 
       - 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (*SIGIR 2026*). **Program Committee Member**
+      - 16th Italian Information Retrieval Workshop (*IIR 2026*), Rome, 12--14 Nov 2026. *Full and Short Papers tracks*
       - 15th Italian Information Retrieval Workshop (*IIR 2025*), Cagliari, 3--5 Sep 2025. *Full and Short Papers tracks*
       - 12th AAAI Conference on Human Computation and Crowdsourcing (*HCOMP 2024*), Pittsburgh, PA, USA. *Full Papers track*
       - 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (*SIGIR 2024*), Washington, DC, USA. *Full and Short Papers tracks*
