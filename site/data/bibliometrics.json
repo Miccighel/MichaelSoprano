@@ -1,7 +1,7 @@
 {
-  "checked_on": "2026-09-14",
-  "last_updated": "September 14, 2026",
-  "last_updated_it": "14 settembre 2026",
+  "checked_on": "2026-09-21",
+  "last_updated": "September 21, 2026",
+  "last_updated_it": "21 settembre 2026",
   "indicators": [
     {"key": "publications", "label": "Publications"},
     {"key": "citations", "label": "Citations"},
@@ -9,9 +9,9 @@
     {"key": "i10_index", "label": "i10-index"}
   ],
   "sources": [
-    {"name": "Google Scholar", "url": "https://scholar.google.com/citations?user=ocK0qRUAAAAJ", "values": {"publications": 38, "citations": 725, "h_index": 14, "i10_index": 15}},
-    {"name": "Scopus", "url": "https://www.scopus.com/authid/detail.uri?authorId=57203392311", "values": {"publications": 31, "citations": 361, "h_index": 9, "i10_index": "--"}},
+    {"name": "Google Scholar", "url": "https://scholar.google.com/citations?user=ocK0qRUAAAAJ", "values": {"publications": 38, "citations": 726, "h_index": 14, "i10_index": 15}},
+    {"name": "Scopus", "url": "https://www.scopus.com/authid/detail.uri?authorId=57203392311", "values": {"publications": 31, "citations": 360, "h_index": 9, "i10_index": "--"}},
     {"name": "Web of Science", "cv_name": "Web of Science (Core Collection)", "url": "https://www.webofscience.com/wos/author/record/JDD-6660-2023", "values": {"publications": 22, "citations": 246, "h_index": 9, "i10_index": "--"}},
-    {"name": "ACM Digital Library", "url": "https://dl.acm.org/profile/99659280921", "values": {"publications": 26, "citations": 197, "h_index": "--", "i10_index": "--"}}
+    {"name": "ACM Digital Library", "url": "https://dl.acm.org/profile/99659280921", "values": {"publications": 26, "citations": 198, "h_index": "--", "i10_index": "--"}}
   ]
 }
