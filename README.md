@@ -14,7 +14,7 @@ documentazione tecnica dell'applicazione Hugo si trova in
   convalidato e poi pubblicato automaticamente.
 - Le modifiche vanno preparate in un ramo separato e unite tramite pull
   request solo dopo il superamento del controllo **Validate and build**.
-- `site/public/`, `site/resources/`, `site/static/vendor/`, `node_modules/` e
+- `site/public/`, `site/resources/`, `site/static/vendor/`, `site/node_modules/` e
   le cache locali sono file generati: non vanno modificati né aggiunti a Git.
 - La repository è pubblica: non salvare password, token o credenziali nei file
   versionati.
@@ -45,9 +45,12 @@ Servono:
 
 - Node.js 24;
 - pnpm 10.14.0;
-- Hugo Extended 0.165.0.
+- Hugo Extended 0.165.0;
+- `pdfinfo` di Poppler, per controllare i link nei CV durante `pnpm run check`.
 
 Gli script di validazione e build richiedono anche Ruby.
+Su macOS, se `pdfinfo` manca, si può installare con `brew install poppler`.
+Il workflow GitHub installa Poppler automaticamente.
 
 La prima volta, o dopo un aggiornamento delle dipendenze:
 
@@ -83,9 +86,9 @@ La homepage mostra fino a 15 pubblicazioni e 15 presentazioni, con accesso agli
 archivi completi. I limiti sono configurati in `site/data/home.yaml`, tramite
 `publications.homepage_limit` e `presentations.homepage_limit`.
 
-Le nuove pagine entrano automaticamente negli archivi e nelle raccolte della
-homepage. Gli URL pubblici storici restano compatibili grazie alla
-configurazione dei permalink.
+Una volta impostato `draft: false`, le nuove pagine entrano automaticamente
+negli archivi e nelle raccolte della homepage. Gli URL pubblici storici
+restano compatibili grazie alla configurazione dei permalink.
 
 Per un evento di cui si conosce la data ma non l'orario, usare date nel formato
 `YYYY-MM-DD` e `event_time_unknown: true`. Questo nasconde gli orari senza
@@ -110,7 +113,7 @@ LaTeX, compila entrambi i CV e copia dati e PDF nel sito, senza commit o deploy.
 
 ## Aggiornare i CV
 
-Dalla repository LaTeX:
+Dalla cartella principale di questa repository:
 
 ```bash
 cd ../LaTeX
@@ -125,6 +128,9 @@ blocca la build. Non serve accedere all'altra repository durante il deploy.
 Questo verifica la coerenza dell'esportazione, non la correttezza delle
 metriche sui servizi esterni. Prima del commit conviene aprire entrambi i file e
 controllare data, metriche, impaginazione e numero di pagine.
+Se cambiano i sorgenti dei CV, pubblicare prima la relativa pull request nella
+repository LaTeX (ramo `main`), poi quella del sito (ramo `master`) con i PDF
+sincronizzati. La build del sito non ricompila i CV.
 
 ## Modulo di contatto
 
@@ -178,8 +184,12 @@ ruby scripts/check-external-links.rb
 
 `pnpm run check` è il comando canonico usato anche dal workflow GitHub: prepara
 gli asset locali, valida i sorgenti, compila Hugo, genera l'indice Pagefind e
-controlla il sito risultante. Il controllo dei link esterni resta facoltativo
-e manuale: non viene eseguito dal workflow GitHub.
+controlla il sito risultante. Legge inoltre i collegamenti incorporati nei due
+PDF dei CV e verifica che quelli verso `michaelsoprano.com` corrispondano a
+risorse locali, rispettando le maiuscole dei percorsi. Il controllo usa
+`pdfinfo` (Poppler). I link verso altri domini non sono verificati in questo
+passaggio; il controllo dei link esterni delle pagine HTML resta facoltativo e
+manuale, fuori dal workflow GitHub.
 
 ## Pubblicazione
 

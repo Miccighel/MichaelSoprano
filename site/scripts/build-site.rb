@@ -10,6 +10,7 @@ PAGEFIND = File.join(SITE_ROOT, 'node_modules', '.bin', 'pagefind')
 commands = [
   [RUBY, File.join(SITE_ROOT, 'scripts', 'test-cv-sync.rb')],
   [RUBY, File.join(SITE_ROOT, 'scripts', 'check-cv-sync.rb')],
+  [RUBY, File.join(SITE_ROOT, 'scripts', 'test-cv-pdf-links.rb')],
   [RUBY, File.join(SITE_ROOT, 'scripts', 'vendor-assets.rb')],
   [RUBY, File.join(SITE_ROOT, 'scripts', 'check-content.rb')],
   [
@@ -22,7 +23,10 @@ commands = [
   [PAGEFIND, '--site', File.join(SITE_ROOT, 'public')]
 ]
 
-commands << [RUBY, File.join(SITE_ROOT, 'scripts', 'audit-build.rb')] if ARGV.delete('--audit')
+if ARGV.delete('--audit')
+  commands << [RUBY, File.join(SITE_ROOT, 'scripts', 'check-cv-pdf-links.rb')]
+  commands << [RUBY, File.join(SITE_ROOT, 'scripts', 'audit-build.rb')]
+end
 abort "Unknown argument(s): #{ARGV.join(' ')}" unless ARGV.empty?
 
 commands.each do |command|
