@@ -42,7 +42,11 @@ pnpm run check
 
 This is the canonical local and CI command. It tests and verifies CV sync,
 prepares local vendor assets, validates content, builds Hugo, generates the
-Pagefind search index, and audits the output in `public/`.
+Pagefind search index, and audits the output in `public/`. It also uses
+Poppler's `pdfinfo` to inspect the links embedded in both CV PDFs and checks
+that links back to this site's files match the generated paths exactly,
+including filename case. Install Poppler locally before running the check;
+the GitHub workflow installs it automatically.
 
 The audit checks internal links, anchors, downloads, search coverage, content
 completeness, collection limits, and accessibility basics such as the skip link.
@@ -53,6 +57,7 @@ Individual commands, useful while debugging:
 | --- | --- |
 | `pnpm run check:content` | Validate source content without rebuilding |
 | `pnpm run build` | Build and index without the final generated-site audit |
+| `ruby scripts/check-cv-pdf-links.rb` | Check site-hosted links in the CV PDFs after building |
 | `ruby scripts/audit-build.rb` | Audit an existing production build |
 | `pnpm run vendor` | Refresh generated fonts, icons, and Leaflet assets |
 | `pnpm run check:links` | Optionally check external links after building |
