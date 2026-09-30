@@ -8,20 +8,13 @@
 
     <div class="service-page-suggestions">
       <h2>Explore the site</h2>
-    {{ $pages := where (where (where (where site.Pages.ByDate.Reverse "Title" "!=" "") "Kind" "in" (slice "page" "section")) "Params.private" "!=" true) "Permalink" "!=" "" }}
-    {{ if $pages }}
       <ul class="service-page-links">
-        {{ $seenTitles := slice }}
-        {{ $recommendationCount := 0 }}
-        {{ range $pages }}
-          {{ if and (lt $recommendationCount 10) (not (in $seenTitles .Title)) }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-            {{ $seenTitles = $seenTitles | append .Title }}
-            {{ $recommendationCount = add $recommendationCount 1 }}
-          {{ end }}
-        {{ end }}
+        <li><a href="{{ site.Home.RelPermalink }}#publications">Publications</a></li>
+        <li><a href="{{ site.Home.RelPermalink }}#presentations">Presentations</a></li>
+        <li><a href="{{ site.Home.RelPermalink }}#teaching">Teaching</a></li>
+        <li><a href="{{ site.Home.RelPermalink }}#tags">Topics</a></li>
+        <li><a href="{{ site.Home.RelPermalink }}#contact">Contact</a></li>
       </ul>
-    {{ end }}
     </div>
   </div>
 </main>
