@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{ $pages := where site.RegularPages "Section" "blog" }}
+{{ $pages = where $pages "Params.course_hidden" "ne" true }}
 <main class="legacy-archive legacy-blog-archive">
   <h1>Teaching</h1>
   <div class="stream-list teaching-list">

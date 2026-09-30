@@ -66,6 +66,7 @@ end
 def html_text(html)
   CGI.unescapeHTML(
     html
+      .gsub(/&(?:rsquo|lsquo);/, "'")
       .gsub(/<script\b.*?<\/script>/mi, ' ')
       .gsub(/<style\b.*?<\/style>/mi, ' ')
       .gsub(/<[^>]+>/, ' ')
@@ -408,7 +409,7 @@ SECTIONS.each do |section, config|
     complete_candidate = candidates.any? do |candidate|
       rendered_html = File.binread(candidate).force_encoding(Encoding::UTF_8)
       rendered_text = html_text(rendered_html)
-      rendered_source = CGI.unescapeHTML(rendered_html).gsub(/\s+/, ' ')
+      rendered_source = CGI.unescapeHTML(rendered_html.gsub(/&(?:rsquo|lsquo);/, "'")).gsub(/\s+/, ' ')
       expected_excerpts.all? do |excerpt|
         rendered_text.include?(excerpt) || rendered_source.include?(excerpt)
       end
@@ -704,7 +705,10 @@ end
 
 SECTIONS.each do |section, config|
   relative_path = File.join(config[:archive], 'index.html')
-  expected_items = Dir.glob(File.join(SITE_ROOT, 'content', section, '*', 'index.md')).length
+  source_paths = Dir.glob(File.join(SITE_ROOT, 'content', section, '*', 'index.md'))
+  expected_items = source_paths.count do |source_path|
+    section != 'blog' || load_page(source_path).first['course_hidden'] != true
+  end
   path = File.join(PUBLIC_ROOT, relative_path)
   unless File.file?(path)
     errors << "missing archive page #{relative_path}"
@@ -749,7 +753,8 @@ if File.file?(rss_path)
     rss_title = rss.elements['rss/channel/title']&.text.to_s.strip
     rss_items = rss.get_elements('rss/channel/item')
     errors << 'index.xml: RSS channel title is missing' if rss_title.empty?
-    errors << "index.xml: RSS contains #{rss_items.length} items, expected 60" unless rss_items.length == 60
+    expected_rss_items = 57 + Dir.glob(File.join(SITE_ROOT, 'content', 'blog', '*', 'index.md')).length
+    errors << "index.xml: RSS contains #{rss_items.length} items, expected #{expected_rss_items}" unless rss_items.length == expected_rss_items
     errors << 'index.xml: legacy HugoBlox generator is still present' if File.read(rss_path).include?('HugoBlox')
   rescue REXML::ParseException => e
     errors << "index.xml: invalid RSS XML (#{e.message})"
@@ -764,7 +769,8 @@ if File.file?(sitemap_path)
     sitemap_source = File.read(sitemap_path)
     REXML::Document.new(sitemap_source)
     sitemap_urls = sitemap_source.scan(/<url>/).length
-    errors << "sitemap.xml: contains #{sitemap_urls} URLs, expected 264" unless sitemap_urls == 264
+    expected_sitemap_urls = 261 + Dir.glob(File.join(SITE_ROOT, 'content', 'blog', '*', 'index.md')).length
+    errors << "sitemap.xml: contains #{sitemap_urls} URLs, expected #{expected_sitemap_urls}" unless sitemap_urls == expected_sitemap_urls
   rescue REXML::ParseException => e
     errors << "sitemap.xml: invalid XML (#{e.message})"
   end

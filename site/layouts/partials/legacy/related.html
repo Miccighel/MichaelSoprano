@@ -1,4 +1,4 @@
-{{ $related := site.RegularPages.Related . | first 5 }}
+{{ $related := where (site.RegularPages.Related .) "Params.course_hidden" "ne" true | first 5 }}
 {{ with $related }}
   <section class="article-widget content-widget-hr related-list" aria-labelledby="related-heading">
     <h3 id="related-heading">Related</h3>

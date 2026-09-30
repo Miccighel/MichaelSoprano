@@ -86,9 +86,20 @@ La homepage mostra fino a 15 pubblicazioni e 15 presentazioni, con accesso agli
 archivi completi. I limiti sono configurati in `site/data/home.yaml`, tramite
 `publications.homepage_limit` e `presentations.homepage_limit`.
 
-Una volta impostato `draft: false`, le nuove pagine entrano automaticamente
+Una volta impostato `draft: false`, le nuove pagine principali entrano automaticamente
 negli archivi e nelle raccolte della homepage. Gli URL pubblici storici
 restano compatibili grazie alla configurazione dei permalink.
+
+Per una nuova edizione di un insegnamento, mantenere il programma generale nella
+pagina principale e creare una pagina annuale in `site/content/blog/` con
+`course_parent` (URL della pagina principale), `course_edition` (per esempio
+`2026/2027`), `course_hidden: true` e un `url` stabile nella forma
+`/post/<corso>/2026-2027/`. La pagina annuale compare automaticamente nel
+selettore degli anni del corso, ma non come corso indipendente nella homepage o
+nell'archivio Teaching. Lasciare tag e categoria sulla sola pagina principale,
+per non moltiplicare artificialmente i conteggi dei Topics. Separare contenuti
+e ore che variano per anno; non attribuire retroattivamente un nuovo programma
+alle edizioni precedenti.
 
 Per un evento di cui si conosce la data ma non l'orario, usare date nel formato
 `YYYY-MM-DD` e `event_time_unknown: true`. Questo nasconde gli orari senza

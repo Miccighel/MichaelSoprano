@@ -161,6 +161,7 @@
             {{ else if eq .id "teaching" }}
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "blog" }}
+              {{ $pages = where $pages "Params.course_hidden" "ne" true }}
               {{ $pages = sort $pages "Title" "asc" }}
               <div class="teaching-list">
                 {{ range $pages }}
