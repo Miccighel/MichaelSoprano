@@ -30,3 +30,9 @@
   {{ if hugo.IsProduction }}{{ $home_nav_js = $home_nav_js | fingerprint "sha256" }}{{ end }}
   <script defer src="{{ $home_nav_js.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $home_nav_js.Data.Integrity }}" crossorigin="anonymous"{{ end }}></script>
 {{ end }}
+
+{{ if eq .Layout "citation-history" }}
+  {{ $chart_js := resources.Get "js/citation-explorer.js" | resources.Minify }}
+  {{ if hugo.IsProduction }}{{ $chart_js = $chart_js | fingerprint "sha256" }}{{ end }}
+  <script type="module" src="{{ $chart_js.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $chart_js.Data.Integrity }}" crossorigin="anonymous"{{ end }}></script>
+{{ end }}

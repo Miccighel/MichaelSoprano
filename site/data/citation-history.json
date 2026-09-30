@@ -1,0 +1,31 @@
+[
+  {
+    "from": "2026-09-25",
+    "to": "2026-09-30",
+    "source": "Google Scholar",
+    "source_url": "https://scholar.google.com/citations?user=ocK0qRUAAAAJ",
+    "previous_total": 727,
+    "current_total": 730,
+    "delta": 3,
+    "changes": [
+      {
+        "id": "-f6ydRqryjwC",
+        "title": "Large Language Models for Combinatorial Optimization: A Systematic Review",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A-f6ydRqryjwC",
+        "previous": 55,
+        "current": 57,
+        "delta": 2
+      },
+      {
+        "id": "qxL8FJ1GzNcC",
+        "title": "Cognitive Biases in Fact-Checking and Their Countermeasures: A Review",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AqxL8FJ1GzNcC",
+        "previous": 99,
+        "current": 100,
+        "delta": 1
+      }
+    ],
+    "added": [],
+    "removed": []
+  }
+]

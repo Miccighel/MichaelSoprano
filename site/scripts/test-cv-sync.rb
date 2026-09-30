@@ -14,7 +14,7 @@ class CvSyncTest < Minitest::Test
     @root = Dir.mktmpdir('cv-sync-test-')
     FileUtils.mkdir_p(File.join(@root, 'scripts'))
     FileUtils.cp(File.join(__dir__, 'check-cv-sync.rb'), File.join(@root, 'scripts/check-cv-sync.rb'))
-    files = %w[data/bibliometrics.json static/media/CVs/Curriculum_Vitae_EN.pdf static/media/CVs/Curriculum_Vitae_IT.pdf]
+    files = %w[data/bibliometrics.json data/citation-history.json data/citation-series.json static/media/CVs/Curriculum_Vitae_EN.pdf static/media/CVs/Curriculum_Vitae_IT.pdf]
     hashes = files.to_h do |path|
       full = File.join(@root, path)
       FileUtils.mkdir_p(File.dirname(full))
@@ -43,6 +43,16 @@ class CvSyncTest < Minitest::Test
 
   def test_changed_metrics_fail
     File.write(File.join(@root, 'data/bibliometrics.json'), 'changed')
+    refute run_check
+  end
+
+  def test_changed_history_fails
+    File.write(File.join(@root, 'data/citation-history.json'), 'changed')
+    refute run_check
+  end
+
+  def test_changed_series_fails
+    File.write(File.join(@root, 'data/citation-series.json'), 'changed')
     refute run_check
   end
 

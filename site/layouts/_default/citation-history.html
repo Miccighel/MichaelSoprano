@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ $data := index hugo.Data "citation-series" }}
+{{ $papers := slice }}
+{{ range $data.papers }}{{ $papers = $papers | append (dict "id" .id "title" .title "url" .url "annual" .annual) }}{{ end }}
+{{ $export := resources.FromString "data/annual-citations.json" (dict "schema" 1 "papers" $papers | jsonify) }}
+<main class="citation-explorer legacy-container" data-pagefind-body>
+  <header class="citation-explorer-header">
+    <a href="/#metrics">← Bibliometrics</a>
+    <h1 data-pagefind-meta="title">{{ .Title }}</h1>
+    <span class="citation-source-label">Google Scholar</span>
+  </header>
+  <section class="citation-dashboard" aria-label="Interactive citation history" data-citation-explorer data-series-url="{{ $export.RelPermalink }}">
+    <p class="citation-context" id="citation-context" role="status" hidden></p>
+    <p class="citation-selected-title" id="citation-selected-title" role="status" hidden></p>
+    <div class="citation-chart" id="citation-chart" tabindex="-1"></div>
+    <section class="citation-line-legend" aria-labelledby="citation-publications-heading">
+      <div class="citation-legend-heading"><h2 id="citation-publications-heading">Publications</h2><button type="button" id="citation-reset" disabled>Show all lines</button></div>
+      <div class="citation-legend-controls">
+        <div><input type="search" id="citation-search" aria-label="Search publications by title" placeholder="Search by title…" autocomplete="off"></div>
+        <div><label class="citation-search-label" for="citation-sort">Sort by</label><select id="citation-sort"><option value="alphabetical">Title A–Z</option><option value="ascending">Citations: low to high</option><option value="descending">Citations: high to low</option></select></div>
+      </div>
+      <p id="citation-search-status" class="citation-search-status" role="status" aria-live="polite"></p>
+      <div class="citation-legend" id="citation-legend" aria-label="Publication legend"></div>
+    </section>
+    <div class="citation-tooltip" id="citation-tooltip" role="tooltip" hidden></div>
+    <noscript><p>The interactive chart requires JavaScript.</p></noscript>
+  </section>
+</main>
+{{ end }}
