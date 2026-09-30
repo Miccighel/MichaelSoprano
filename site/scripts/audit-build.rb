@@ -699,8 +699,18 @@ if File.file?(not_found_path)
   not_found_html = File.read(not_found_path)
   errors << '404.html: wrong heading' unless html_text(not_found_html[/<h1\b[^>]*>.*?<\/h1>/mi].to_s) == 'Page not found'
   errors << '404.html: missing Pagefind exclusion' unless not_found_html.match?(/\bdata-pagefind-ignore\b/)
-  recommendation_count = not_found_html.scan(/<li>\s*<a\b/mi).length
-  errors << "404.html: contains #{recommendation_count} recommendations, expected 10" unless recommendation_count == 10
+  recommendations = not_found_html.scan(/<li>\s*<a\b([^>]*)>(.*?)<\/a>\s*<\/li>/mi)
+  expected_recommendations = {
+    'Publications' => '/#publications',
+    'Presentations' => '/#presentations',
+    'Teaching' => '/#teaching',
+    'Topics' => '/#tags',
+    'Contact' => '/#contact'
+  }
+  actual_recommendations = recommendations.to_h do |attributes, label|
+    [html_text(label), attribute_values(attributes, %w[href]).first]
+  end
+  errors << '404.html: incorrect site recommendations' unless actual_recommendations == expected_recommendations
 end
 
 SECTIONS.each do |section, config|

@@ -154,7 +154,7 @@ body {
 .legacy-container { max-width: 1180px; padding-right: 24px; padding-left: 24px; }
 
 .legacy-home .home-section {
-  padding: 88px 0;
+  padding: 64px 0;
   background: var(--site-background);
 }
 
@@ -1617,7 +1617,7 @@ body {
 
 .course-parent-link { margin-left: 1.2rem; }
 .course-editions {
-  margin: 0 0 2.25rem;
+  margin: 0 0 1.5rem;
   padding: 1.15rem 1.35rem;
   border: 1px solid var(--site-border);
   border-radius: 12px;
@@ -1651,7 +1651,7 @@ body {
 
 .course-content h1,
 .course-content h2 {
-  margin: 2.5rem 0 .85rem;
+  margin: 1.75rem 0 .85rem;
   color: var(--site-text);
   font-size: 1.65rem;
   font-weight: 700;
@@ -1660,7 +1660,7 @@ body {
 }
 
 .course-content h3 {
-  margin: 2rem 0 .65rem;
+  margin: 1.5rem 0 .65rem;
   color: var(--site-text);
   font-size: 1.2rem;
   font-weight: 700;
@@ -1681,7 +1681,7 @@ body {
 .course-content li + li { margin-top: .2rem; }
 
 .course-footer {
-  margin-top: 3.5rem;
+  margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid var(--site-border);
 }
@@ -2116,7 +2116,7 @@ body {
 }
 
 @media (max-width: 991px) {
-  .legacy-home .home-section { padding: 64px 0; }
+  .legacy-home .home-section { padding: 48px 0; }
   .legacy-about-grid,
   .legacy-section-grid { grid-template-columns: 1fr; gap: 1.75rem; }
   .legacy-section-grid > .section-heading { text-align: left; }

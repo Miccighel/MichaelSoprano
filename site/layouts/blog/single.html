@@ -24,7 +24,7 @@
         {{ $courses := where site.RegularPages "Params.course_overview" true }}
         {{ if gt (len $courses) 1 }}
           <nav class="course-switcher" aria-label="Other courses">
-            <details>
+            <details open>
               <summary>Other courses <i class="fas fa-chevron-down" aria-hidden="true"></i></summary>
               <ul>
                 {{ range sort $courses "Title" }}
