@@ -546,7 +546,7 @@ body {
 
 .honor-row {
   display: grid;
-  grid-template-columns: 100px minmax(0, 1fr);
+  grid-template-columns: 112px minmax(0, 1fr);
   gap: 1.5rem;
   padding: 1.2rem 0;
   border-bottom: 1px solid var(--site-border);
