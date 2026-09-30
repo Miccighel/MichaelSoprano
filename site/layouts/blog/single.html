@@ -3,7 +3,8 @@
   <header class="course-hero">
     <div class="course-hero-inner">
       <a class="course-back-link" href="/#teaching"><i class="fas fa-arrow-left" aria-hidden="true"></i> Teaching</a>
-      <p class="course-kicker"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Course page</p>
+      {{ with .Params.course_parent }}<a class="course-back-link course-parent-link" href="{{ . }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> Course overview</a>{{ end }}
+      <p class="course-kicker"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> {{ with .Params.course_edition }}Academic year {{ . }}{{ else }}Course overview{{ end }}</p>
       <h1>{{ .Title }}</h1>
       {{ with .Params.subtitle }}<p class="course-subtitle">{{ replace . "'" "’" }}</p>{{ end }}
       <div class="course-meta" aria-label="Course page information">
@@ -17,9 +18,35 @@
     <aside class="course-sidebar" aria-label="Page navigation">
       <p class="course-sidebar-title">On this page</p>
       {{ .TableOfContents }}
+      {{ if or .Params.course_overview .Params.course_parent }}
+        {{ $currentCourse := .RelPermalink }}
+        {{ with .Params.course_parent }}{{ $currentCourse = . }}{{ end }}
+        {{ $courses := where site.RegularPages "Params.course_overview" true }}
+        {{ if gt (len $courses) 1 }}
+          <nav class="course-switcher" aria-label="Other courses">
+            <details>
+              <summary>Other courses <i class="fas fa-chevron-down" aria-hidden="true"></i></summary>
+              <ul>
+                {{ range sort $courses "Title" }}
+                  {{ if ne .RelPermalink $currentCourse }}<li><a href="{{ .RelPermalink }}">{{ with .Params.course_nav_label }}{{ . }}{{ else }}{{ .Title }}{{ end }}</a></li>{{ end }}
+                {{ end }}
+              </ul>
+            </details>
+          </nav>
+        {{ end }}
+      {{ end }}
     </aside>
 
     <div class="course-main">
+      {{ $editions := where site.RegularPages "Params.course_parent" .RelPermalink }}
+      {{ with $editions }}
+        <nav class="course-editions" aria-label="Course editions">
+          <h2>Academic years</h2>
+          <div class="course-edition-links">
+            {{ range sort . "Params.course_edition" "desc" }}<a href="{{ .RelPermalink }}">{{ .Params.course_edition }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>{{ end }}
+          </div>
+        </nav>
+      {{ end }}
       <div class="article-style course-content">{{ .Content }}</div>
       <footer class="course-footer">
         {{ partial "legacy/tags.html" . }}

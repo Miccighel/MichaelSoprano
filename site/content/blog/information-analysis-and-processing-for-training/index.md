@@ -7,7 +7,8 @@ summary: Courses offered within the Bachelor's Degree in Sports Science and the 
   at the University of Udine
 projects: []
 date: '2024-08-07T11:00:00Z'
-lastmod: '2026-06-10T13:00:00Z'
+lastmod: '2026-09-29T15:08:00+02:00'
+course_hidden: true
 draft: false
 featured: false
 image:
@@ -40,6 +41,8 @@ categories:
 
 ## Aims
 
+This is an archived combined overview. The Bachelor's and Master's modules are distinct courses and now have separate pages for **every edition taught by Michael Soprano**: [Bachelor's Degree in Sports Science](/post/information-analysis-for-training-bachelors/) and [Master's Degree in Preventive and Adapted Physical Activities](/post/information-analysis-for-training-masters/). The Bachelor's Degree course pages begin in 2024/2025; the Master's Degree course pages begin in 2025/2026. The material below is a historical overview, not an exact syllabus for each year.
+
 These courses address the analysis and processing of information for sport and training from two complementary perspectives. They share the same broad teaching area, but they are distinct courses offered at different degree levels and organized around different learning goals, tools, and assessment methods.
 
 The **Bachelor's Degree course** introduces the foundations needed to work with data in sport contexts. Students learn what data are, how information is represented in digital systems, and how structured datasets can be prepared, analyzed, summarized, and communicated with spreadsheet tools.
@@ -62,7 +65,7 @@ The two courses follow a coherent progression from **understanding and represent
 
 - **Michael Soprano** - Course Instructor
 
-The two courses consist of 12 lectures for a total of 24 hours.
+Michael Soprano taught 24 hours in the Bachelor's Degree course in both 2024/2025 and 2025/2026, and 24 hours in the Master's Degree course in 2025/2026. See the separate course pages for the individual editions.
 
 ## Bachelor's Degree Course
 

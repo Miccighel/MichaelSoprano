@@ -17,6 +17,15 @@ or attachments. Public URLs are defined in `config/_default/hugo.yaml`.
 | Presentations, posters, and outreach | `content/events/<directory>/` | `/talk/<slug>/` |
 | Teaching and posts | `content/blog/<directory>/` | `/post/<slug>/` |
 
+Teaching pages support a parent/edition structure. An edition has
+`course_parent: /post/<course>/`, `course_edition: '2026/2027'`,
+`course_hidden: true`, and an explicit `url: /post/<course>/2026-2027/`.
+The single page layout builds the navigation by academic year from these fields.
+Hidden editions remain directly addressable and searchable but are omitted from
+the Teaching homepage and archive; a retained legacy overview can use the same
+`course_hidden` flag without becoming an edition. Keep tags and categories on
+the parent course only so annual pages do not inflate topic counts.
+
 Key fields are `identifiers.doi`, `publication.name`, resource `links` entries
 with `type` and `url`, `event_start`, `event_end`, and the ordering `date`.
 Use the content generator documented in the root README for complete examples.

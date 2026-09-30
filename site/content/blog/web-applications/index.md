@@ -5,7 +5,7 @@ summary: Course offered within the Master's Degree in Management Engineering at 
   University of Udine
 projects: []
 date: '2024-08-08T11:00:00Z'
-lastmod: '2026-06-10T13:00:00Z'
+lastmod: '2026-09-29T15:32:00+02:00'
 draft: false
 featured: false
 image:
@@ -31,9 +31,10 @@ tags:
 - Teaching
 categories:
 - teaching
+course_overview: true
 ---
 
-## Aims
+## About the course
 
 This course introduces the foundations of full-stack web application development through two complementary areas: **Frontend Development** and **Backend Development**.
 
@@ -43,13 +44,15 @@ On the **backend**, the course introduces Node.js and the Express.js framework f
 
 Hands-on activities with cURL, Postman, and structured assignments support practical learning throughout the course.
 
-## Teacher
+## Teaching
 
 - **Michael Soprano** - Course Instructor
 
 The course consists of 24 lectures for a total of 48 hours. It is delivered in the second semester. Assessment is based on the design, implementation, and discussion of a full-stack project.
 
-## Topics Covered
+The editions listed above provide details for each year, including any changes to the teaching schedule or assessment.
+
+## Topics
 
 ### Web Fundamentals and Communication
 
@@ -113,7 +116,7 @@ The course consists of 24 lectures for a total of 48 hours. It is delivered in t
 - Interfacing with SQLite for data persistence
 - Final integration project with full-stack CRUD operations
 
-## Learning Approach
+## Learning approach
 
 The course combines conceptual explanations, practical demonstrations, and progressive hands-on activities. Students use developer tools, cURL, Postman, browser APIs, and server-side JavaScript to connect frontend interfaces with backend services.
 
@@ -123,7 +126,7 @@ Assignments and exercises gradually move from isolated examples to complete appl
 
 Assessment is based on a project in which students design and implement a full-stack web application. The project is discussed to assess design choices, implementation quality, and understanding of the technologies used.
 
-## Reading Material
+## Materials
 
 - J. Duckett, *HTML & CSS: Design and Build Websites*. Wiley, 2011
 - J. Duckett, *JavaScript & jQuery: Interactive Front-End Web Development*. Wiley, 2014
