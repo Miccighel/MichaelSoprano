@@ -756,6 +756,10 @@ errors << "publication DOI inventory contains #{doi_sources.length} entries, exp
   errors << "missing downloadable file #{relative_path}" unless File.file?(absolute_path) && File.size(absolute_path).positive?
 end
 
+standalone_page_count = Dir.glob(File.join(SITE_ROOT, 'content', '*.md')).count do |path|
+  File.basename(path) != '_index.md'
+end
+
 rss_path = File.join(PUBLIC_ROOT, 'index.xml')
 if File.file?(rss_path)
   begin
@@ -763,7 +767,7 @@ if File.file?(rss_path)
     rss_title = rss.elements['rss/channel/title']&.text.to_s.strip
     rss_items = rss.get_elements('rss/channel/item')
     errors << 'index.xml: RSS channel title is missing' if rss_title.empty?
-    expected_rss_items = 57 + Dir.glob(File.join(SITE_ROOT, 'content', 'blog', '*', 'index.md')).length
+    expected_rss_items = 56 + standalone_page_count + Dir.glob(File.join(SITE_ROOT, 'content', 'blog', '*', 'index.md')).length
     errors << "index.xml: RSS contains #{rss_items.length} items, expected #{expected_rss_items}" unless rss_items.length == expected_rss_items
     errors << 'index.xml: legacy HugoBlox generator is still present' if File.read(rss_path).include?('HugoBlox')
   rescue REXML::ParseException => e
@@ -779,7 +783,7 @@ if File.file?(sitemap_path)
     sitemap_source = File.read(sitemap_path)
     REXML::Document.new(sitemap_source)
     sitemap_urls = sitemap_source.scan(/<url>/).length
-    expected_sitemap_urls = 261 + Dir.glob(File.join(SITE_ROOT, 'content', 'blog', '*', 'index.md')).length
+    expected_sitemap_urls = 260 + standalone_page_count + Dir.glob(File.join(SITE_ROOT, 'content', 'blog', '*', 'index.md')).length
     errors << "sitemap.xml: contains #{sitemap_urls} URLs, expected #{expected_sitemap_urls}" unless sitemap_urls == expected_sitemap_urls
   rescue REXML::ParseException => e
     errors << "sitemap.xml: invalid XML (#{e.message})"
@@ -803,7 +807,7 @@ if File.file?(pagefind_entry_path)
     indexed_pages = pagefind_entry.fetch('languages', {}).values.sum { |language| language.fetch('page_count', 0).to_i }
     expected_indexed_pages = SECTIONS.keys.sum do |section|
       Dir.glob(File.join(SITE_ROOT, 'content', section, '*', 'index.md')).length
-    end + 2 # Homepage and privacy page.
+    end + 1 + standalone_page_count # Homepage and standalone content pages.
     errors << "search index contains #{indexed_pages} pages, expected #{expected_indexed_pages}" unless indexed_pages == expected_indexed_pages
   rescue JSON::ParserError => e
     errors << "invalid Pagefind index metadata: #{e.message}"

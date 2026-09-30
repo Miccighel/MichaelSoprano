@@ -117,7 +117,39 @@ generata: non modificarla manualmente. Per ogni fonte aggiornare insieme:
 - i10-index, quando disponibile.
 
 Aggiornare anche `checked_on`, `last_updated` e `last_updated_it` con la stessa
-data di verifica. Le date vengono controllate automaticamente.
+data dell'ultimo aggiornamento. Ogni fonte conserva anche il proprio
+`checked_on`: se non è accessibile, lascia invariati valori e data di verifica.
+Il sito e i CV segnalano le fonti con una verifica meno recente.
+
+Per Google Scholar conservare una rilevazione completa in
+`../LaTeX/data/scholar-citations-YYYY-MM-DD.json`, senza sostituire quelle
+precedenti. Il file contiene `checked_on`, `source`, `profile_id`,
+`citation_counts_by_article_id` (anche gli zeri) e `article_titles`.
+Usare gli ID degli articoli, non la posizione nell'elenco. Il totale deve
+corrispondere alle metriche Scholar della stessa data.
+
+La sincronizzazione genera `site/data/citation-history.json`: confronta
+le rilevazioni consecutive della stessa fonte, include aumenti e diminuzioni,
+e distingue articoli aggiunti o rimossi. Il riepilogo è disponibile sotto
+la tabella delle metriche, in “Latest citation changes”. Sono differenze tra
+rilevazioni, non date di pubblicazione delle citazioni. La raccolta resta
+manuale: il confronto e la presentazione sono automatici, non lo scraping.
+
+La pagina `/citation-history/` usa `site/data/citation-series.json`, generato
+dalla stessa sincronizzazione. Mostra la somma cumulata delle citazioni annuali di Scholar.
+Il grafico mostra una linea per paper,
+evidenziabile passando sul titolo o sulla linea; i tooltip dei punti mostrano cumulato,
+anno e conteggio annuale, anche con tastiera o tocco. La legenda permette di cercare
+un titolo, ordinare alfabeticamente o per cumulato crescente/decrescente,
+mantenere evidenziata la sua linea e ripristinare la vista completa.
+La somma non viene corretta per coincidere con il totale del profilo, che può differire.
+I valori recuperati dai CV sono in `../LaTeX/data/bibliometrics-history.json`,
+con data del documento e commit di provenienza. Quelli annuali si conservano
+in `../LaTeX/data/scholar-annual-YYYY-MM-DD.json`: sono una lettura attuale
+dell'indicizzazione per anno, non vecchie rilevazioni. Gli anni assenti non
+vengono riempiti con zeri; l'anno corrente è parziale.
+La generazione conserva anche i totali correnti nell'archivio per non perderli
+all'aggiornamento successivo. Non modificare a mano gli esportati del sito.
 
 Eseguire il comando di sincronizzazione qui sotto: genera la bibliometria
 LaTeX, compila entrambi i CV e copia dati e PDF nel sito, senza commit o deploy.
@@ -132,7 +164,8 @@ cd ../LaTeX
 ```
 
 Il comando compila le versioni italiana e inglese e copia i PDF direttamente
-in `site/static/media/CVs/`, insieme a `site/data/bibliometrics.json` e al
+in `site/static/media/CVs/`, insieme a `site/data/bibliometrics.json`,
+`site/data/citation-history.json`, `site/data/citation-series.json` e al
 manifest di integrità `site/data/cv-sync.json`. La build del sito controlla
 le impronte SHA-256: un PDF o un dato modificato fuori dalla sincronizzazione
 blocca la build. Non serve accedere all'altra repository durante il deploy.

@@ -1,0 +1,1482 @@
+{
+  "schema": 1,
+  "totals": [
+    {
+      "name": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=ocK0qRUAAAAJ",
+      "points": [
+        {
+          "date": "2025-06-27",
+          "citations": 416,
+          "kind": "cv_revision",
+          "provenance": "1bdee43:main.tex"
+        },
+        {
+          "date": "2025-09-12",
+          "citations": 485,
+          "kind": "cv_revision",
+          "provenance": "040255e:main.tex"
+        },
+        {
+          "date": "2026-01-26",
+          "citations": 550,
+          "kind": "cv_revision",
+          "provenance": "f18adc1:main.tex"
+        },
+        {
+          "date": "2026-05-13",
+          "citations": 621,
+          "kind": "cv_revision",
+          "provenance": "961c7bb:main.tex"
+        },
+        {
+          "date": "2026-06-09",
+          "citations": 650,
+          "kind": "cv_revision",
+          "provenance": "06c6258:main.tex"
+        },
+        {
+          "date": "2026-09-01",
+          "citations": 719,
+          "kind": "cv_revision",
+          "provenance": "23fa356:main.tex"
+        },
+        {
+          "date": "2026-09-07",
+          "citations": 719,
+          "kind": "verified",
+          "provenance": "99ef4de:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-12",
+          "citations": 720,
+          "kind": "verified",
+          "provenance": "315942f:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-14",
+          "citations": 725,
+          "kind": "verified",
+          "provenance": "7a5a13a:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-21",
+          "citations": 726,
+          "kind": "verified",
+          "provenance": "bef8a38:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-25",
+          "citations": 727,
+          "kind": "verified",
+          "provenance": "22dc332:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 730,
+          "kind": "verified",
+          "provenance": "data/bibliometrics.json"
+        }
+      ]
+    },
+    {
+      "name": "Scopus",
+      "url": "https://www.scopus.com/authid/detail.uri?authorId=57203392311",
+      "points": [
+        {
+          "date": "2025-06-27",
+          "citations": 221,
+          "kind": "cv_revision",
+          "provenance": "1bdee43:main.tex"
+        },
+        {
+          "date": "2025-09-12",
+          "citations": 265,
+          "kind": "cv_revision",
+          "provenance": "040255e:main.tex"
+        },
+        {
+          "date": "2026-01-26",
+          "citations": 294,
+          "kind": "cv_revision",
+          "provenance": "f18adc1:main.tex"
+        },
+        {
+          "date": "2026-05-13",
+          "citations": 312,
+          "kind": "cv_revision",
+          "provenance": "961c7bb:main.tex"
+        },
+        {
+          "date": "2026-06-09",
+          "citations": 331,
+          "kind": "cv_revision",
+          "provenance": "06c6258:main.tex"
+        },
+        {
+          "date": "2026-09-01",
+          "citations": 357,
+          "kind": "cv_revision",
+          "provenance": "23fa356:main.tex"
+        },
+        {
+          "date": "2026-09-07",
+          "citations": 360,
+          "kind": "verified",
+          "provenance": "99ef4de:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-12",
+          "citations": 361,
+          "kind": "verified",
+          "provenance": "315942f:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-14",
+          "citations": 361,
+          "kind": "verified",
+          "provenance": "7a5a13a:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-21",
+          "citations": 360,
+          "kind": "verified",
+          "provenance": "bef8a38:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-25",
+          "citations": 361,
+          "kind": "verified",
+          "provenance": "22dc332:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 363,
+          "kind": "verified",
+          "provenance": "data/bibliometrics.json"
+        }
+      ]
+    },
+    {
+      "name": "Web of Science",
+      "url": "https://www.webofscience.com/wos/author/record/JDD-6660-2023",
+      "points": [
+        {
+          "date": "2026-09-01",
+          "citations": 237,
+          "kind": "cv_revision",
+          "provenance": "23fa356:main.tex"
+        },
+        {
+          "date": "2026-09-07",
+          "citations": 237,
+          "kind": "verified",
+          "provenance": "99ef4de:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-12",
+          "citations": 245,
+          "kind": "verified",
+          "provenance": "315942f:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-14",
+          "citations": 246,
+          "kind": "verified",
+          "provenance": "7a5a13a:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-21",
+          "citations": 246,
+          "kind": "verified",
+          "provenance": "bef8a38:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-25",
+          "citations": 247,
+          "kind": "verified",
+          "provenance": "22dc332:data/bibliometrics.json"
+        }
+      ]
+    },
+    {
+      "name": "ACM Digital Library",
+      "url": "https://dl.acm.org/profile/99659280921",
+      "points": [
+        {
+          "date": "2025-06-27",
+          "citations": 127,
+          "kind": "cv_revision",
+          "provenance": "1bdee43:main.tex"
+        },
+        {
+          "date": "2025-09-12",
+          "citations": 148,
+          "kind": "cv_revision",
+          "provenance": "040255e:main.tex"
+        },
+        {
+          "date": "2026-01-26",
+          "citations": 161,
+          "kind": "cv_revision",
+          "provenance": "f18adc1:main.tex"
+        },
+        {
+          "date": "2026-05-13",
+          "citations": 175,
+          "kind": "cv_revision",
+          "provenance": "961c7bb:main.tex"
+        },
+        {
+          "date": "2026-06-09",
+          "citations": 179,
+          "kind": "cv_revision",
+          "provenance": "06c6258:main.tex"
+        },
+        {
+          "date": "2026-09-01",
+          "citations": 194,
+          "kind": "cv_revision",
+          "provenance": "23fa356:main.tex"
+        },
+        {
+          "date": "2026-09-07",
+          "citations": 196,
+          "kind": "verified",
+          "provenance": "99ef4de:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-12",
+          "citations": 197,
+          "kind": "verified",
+          "provenance": "315942f:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-14",
+          "citations": 197,
+          "kind": "verified",
+          "provenance": "7a5a13a:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-21",
+          "citations": 198,
+          "kind": "verified",
+          "provenance": "bef8a38:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-25",
+          "citations": 201,
+          "kind": "verified",
+          "provenance": "22dc332:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 203,
+          "kind": "verified",
+          "provenance": "data/bibliometrics.json"
+        }
+      ]
+    }
+  ],
+  "papers": [
+    {
+      "id": "KlAtU1dfN6UC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 21
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 21
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 21,
+        "years": [
+          {
+            "year": 2022,
+            "citations": 2
+          },
+          {
+            "year": 2023,
+            "citations": 3
+          },
+          {
+            "year": 2024,
+            "citations": 4
+          },
+          {
+            "year": 2025,
+            "citations": 11
+          },
+          {
+            "year": 2026,
+            "citations": 1
+          }
+        ]
+      },
+      "title": "A Neural Model to Jointly Predict and Explain Truthfulness of Statements",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AKlAtU1dfN6UC"
+    },
+    {
+      "id": "hC7cP41nSMkC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 0
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 0
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": null,
+        "years": []
+      },
+      "title": "Agent-Based Healthcare Chatbots for Regional System Services: A Case Study in the Friuli-Venezia Giulia Region",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AhC7cP41nSMkC"
+    },
+    {
+      "id": "HDshCWvjkbEC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 0
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 0
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": null,
+        "years": []
+      },
+      "title": "AIDME: A Scalable, Interpretable Framework for AI-Aided Scoping Reviews",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AHDshCWvjkbEC"
+    },
+    {
+      "id": "e5wmG9Sq2KIC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 0
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 0
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": null,
+        "years": []
+      },
+      "title": "Analyzing AI Evaluation Benchmarks Through Information Retrieval and Network Science",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3Ae5wmG9Sq2KIC"
+    },
+    {
+      "id": "ufrVoPGSRksC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 14
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 14
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 14,
+        "years": [
+          {
+            "year": 2021,
+            "citations": 1
+          },
+          {
+            "year": 2022,
+            "citations": 2
+          },
+          {
+            "year": 2023,
+            "citations": 5
+          },
+          {
+            "year": 2024,
+            "citations": 1
+          },
+          {
+            "year": 2025,
+            "citations": 3
+          },
+          {
+            "year": 2026,
+            "citations": 2
+          }
+        ]
+      },
+      "title": "Assessing the Quality of Online Reviews using Formal Argumentation Theory",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AufrVoPGSRksC"
+    },
+    {
+      "id": "_Qo2XoVZTnwC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 1
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 1
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 1,
+        "years": [
+          {
+            "year": 2026,
+            "citations": 1
+          }
+        ]
+      },
+      "title": "Beyond Seeing Is Believing: On Crowdsourced Detection of Audiovisual Deepfakes",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A_Qo2XoVZTnwC"
+    },
+    {
+      "id": "zYLM7Y9cAGgC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 3
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 3
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 3,
+        "years": [
+          {
+            "year": 2020,
+            "citations": 2
+          },
+          {
+            "year": 2026,
+            "citations": 1
+          }
+        ]
+      },
+      "title": "Bias and Fairness in Effectiveness Evaluation by Means of Network Analysis and Mixture Models",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AzYLM7Y9cAGgC"
+    },
+    {
+      "id": "UeHWp8X0CEIC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 94
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 94
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 94,
+        "years": [
+          {
+            "year": 2020,
+            "citations": 6
+          },
+          {
+            "year": 2021,
+            "citations": 13
+          },
+          {
+            "year": 2022,
+            "citations": 20
+          },
+          {
+            "year": 2023,
+            "citations": 14
+          },
+          {
+            "year": 2024,
+            "citations": 16
+          },
+          {
+            "year": 2025,
+            "citations": 21
+          },
+          {
+            "year": 2026,
+            "citations": 3
+          }
+        ]
+      },
+      "title": "Can The Crowd Identify Misinformation Objectively? The Effects of Judgment Scale and Assessor's Background",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AUeHWp8X0CEIC"
+    },
+    {
+      "id": "hqOjcs7Dif8C",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 44
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 44
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 44,
+        "years": [
+          {
+            "year": 2022,
+            "citations": 9
+          },
+          {
+            "year": 2023,
+            "citations": 9
+          },
+          {
+            "year": 2024,
+            "citations": 8
+          },
+          {
+            "year": 2025,
+            "citations": 10
+          },
+          {
+            "year": 2026,
+            "citations": 6
+          }
+        ]
+      },
+      "title": "Can The Crowd Judge Truthfulness? A Longitudinal Study on Recent Misinformation About COVID-19",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AhqOjcs7Dif8C"
+    },
+    {
+      "id": "qxL8FJ1GzNcC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 99
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 100
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 100,
+        "years": [
+          {
+            "year": 2023,
+            "citations": 2
+          },
+          {
+            "year": 2024,
+            "citations": 15
+          },
+          {
+            "year": 2025,
+            "citations": 47
+          },
+          {
+            "year": 2026,
+            "citations": 33
+          }
+        ]
+      },
+      "title": "Cognitive Biases in Fact-Checking and Their Countermeasures: A Review",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AqxL8FJ1GzNcC"
+    },
+    {
+      "id": "3fE2CSJIrl8C",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 16
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 16
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 16,
+        "years": [
+          {
+            "year": 2022,
+            "citations": 4
+          },
+          {
+            "year": 2023,
+            "citations": 4
+          },
+          {
+            "year": 2024,
+            "citations": 3
+          },
+          {
+            "year": 2025,
+            "citations": 3
+          },
+          {
+            "year": 2026,
+            "citations": 1
+          }
+        ]
+      },
+      "title": "Crowd_Frame: A Simple and Complete Framework to Deploy Complex Crowdsourcing Tasks Off-the-shelf",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A3fE2CSJIrl8C"
+    },
+    {
+      "id": "4DMP91E08xMC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 48
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 48
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 48,
+        "years": [
+          {
+            "year": 2024,
+            "citations": 3
+          },
+          {
+            "year": 2025,
+            "citations": 25
+          },
+          {
+            "year": 2026,
+            "citations": 19
+          }
+        ]
+      },
+      "title": "Crowdsourced Fact-Checking: Does it Actually Work?",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A4DMP91E08xMC"
+    },
+    {
+      "id": "IjCSPb-OGe4C",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 1
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 1
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 1,
+        "years": [
+          {
+            "year": 2025,
+            "citations": 1
+          }
+        ]
+      },
+      "title": "Crowdsourcing Peer Review in the Digital Humanities?",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AIjCSPb-OGe4C"
+    },
+    {
+      "id": "qjMakFHDy7sC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 5
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 5
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 5,
+        "years": [
+          {
+            "year": 2019,
+            "citations": 1
+          },
+          {
+            "year": 2020,
+            "citations": 1
+          },
+          {
+            "year": 2024,
+            "citations": 1
+          },
+          {
+            "year": 2025,
+            "citations": 1
+          }
+        ]
+      },
+      "title": "Crowdsourcing Peer Review: As We May Do",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AqjMakFHDy7sC"
+    },
+    {
+      "id": "9ZlFYXVOiuMC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 0
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 0
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": null,
+        "years": []
+      },
+      "title": "Crowdsourcing Statement Classification to Enhance Information Quality Prediction",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A9ZlFYXVOiuMC"
+    },
+    {
+      "id": "YOwf2qJgpHMC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 14
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 14
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 14,
+        "years": [
+          {
+            "year": 2022,
+            "citations": 5
+          },
+          {
+            "year": 2023,
+            "citations": 4
+          },
+          {
+            "year": 2024,
+            "citations": 1
+          },
+          {
+            "year": 2025,
+            "citations": 4
+          }
+        ]
+      },
+      "title": "E-BART: Jointly Predicting and Explaining Truthfulness",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AYOwf2qJgpHMC"
+    },
+    {
+      "id": "2osOgNQ5qMEC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 5
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 5
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 5,
+        "years": [
+          {
+            "year": 2020,
+            "citations": 2
+          },
+          {
+            "year": 2021,
+            "citations": 2
+          },
+          {
+            "year": 2026,
+            "citations": 1
+          }
+        ]
+      },
+      "title": "Effectiveness Evaluation with a Subset of Topics: A Practical Approach",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A2osOgNQ5qMEC"
+    },
+    {
+      "id": "ZeXyd9-uunAC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 10
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 10
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 10,
+        "years": [
+          {
+            "year": 2024,
+            "citations": 1
+          },
+          {
+            "year": 2025,
+            "citations": 2
+          },
+          {
+            "year": 2026,
+            "citations": 7
+          }
+        ]
+      },
+      "title": "Efficiency and Effectiveness of LLM-Based Summarization of Evidence in Crowdsourced Fact-Checking",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AZeXyd9-uunAC"
+    },
+    {
+      "id": "QIV2ME_5wuYC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 2
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 2
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 2,
+        "years": [
+          {
+            "year": 2025,
+            "citations": 2
+          }
+        ]
+      },
+      "title": "Enhancing Fact-Checking: From Crowdsourced Validation to Integration with Large Language Models",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AQIV2ME_5wuYC"
+    },
+    {
+      "id": "IWHjjKOFINEC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 1
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 1
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 1,
+        "years": [
+          {
+            "year": 2026,
+            "citations": 1
+          }
+        ]
+      },
+      "title": "Evaluation of Crowdsourced Peer Review using Synthetic Data and Simulations",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AIWHjjKOFINEC"
+    },
+    {
+      "id": "4TOpqqG69KYC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 4
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 4
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 4,
+        "years": [
+          {
+            "year": 2024,
+            "citations": 2
+          },
+          {
+            "year": 2025,
+            "citations": 2
+          }
+        ]
+      },
+      "title": "Fact-Checking at Scale with Crowdsourcing: Experiments and Lessons Learned",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A4TOpqqG69KYC"
+    },
+    {
+      "id": "Tyk-4Ss8FVUC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 3
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 3
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 3,
+        "years": [
+          {
+            "year": 2019,
+            "citations": 1
+          },
+          {
+            "year": 2025,
+            "citations": 1
+          },
+          {
+            "year": 2026,
+            "citations": 1
+          }
+        ]
+      },
+      "title": "HITS Hits Readersourcing: Validating Peer Review Alternatives using Network Analysis",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3ATyk-4Ss8FVUC"
+    },
+    {
+      "id": "_kc_bZDykSQC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 14
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 14
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 14,
+        "years": [
+          {
+            "year": 2023,
+            "citations": 2
+          },
+          {
+            "year": 2024,
+            "citations": 4
+          },
+          {
+            "year": 2025,
+            "citations": 6
+          },
+          {
+            "year": 2026,
+            "citations": 2
+          }
+        ]
+      },
+      "title": "How Many Crowd Workers Do I Need? On Statistical Power When Crowdsourcing Relevance Judgments",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A_kc_bZDykSQC"
+    },
+    {
+      "id": "aqlVkmm33-oC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 0
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 0
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": null,
+        "years": []
+      },
+      "title": "In Crowd Veritas: Leveraging Human Intelligence To Fight Misinformation",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AaqlVkmm33-oC"
+    },
+    {
+      "id": "R3hNpaxXUhUC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 1
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 1
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 1,
+        "years": [
+          {
+            "year": 2026,
+            "citations": 1
+          }
+        ]
+      },
+      "title": "Large Language Models as Assessors: On the Impact of Relevance Scales",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AR3hNpaxXUhUC"
+    },
+    {
+      "id": "-f6ydRqryjwC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 55
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 57
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 57,
+        "years": [
+          {
+            "year": 2025,
+            "citations": 11
+          },
+          {
+            "year": 2026,
+            "citations": 46
+          }
+        ]
+      },
+      "title": "Large Language Models for Combinatorial Optimization: A Systematic Review",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A-f6ydRqryjwC"
+    },
+    {
+      "id": "mVmsd5A6BfQC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 9
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 9
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 9,
+        "years": [
+          {
+            "year": 2023,
+            "citations": 1
+          },
+          {
+            "year": 2025,
+            "citations": 5
+          },
+          {
+            "year": 2026,
+            "citations": 3
+          }
+        ]
+      },
+      "title": "Longitudinal Loyalty: Understanding the Barriers to Running Longitudinal Studies on Crowdsourcing Platforms",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AmVmsd5A6BfQC"
+    },
+    {
+      "id": "hFOr9nPyWt4C",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 3
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 3
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 3,
+        "years": [
+          {
+            "year": 2026,
+            "citations": 3
+          }
+        ]
+      },
+      "title": "PILs of knowledge: a synthetic benchmark for evaluating question answering systems in healthcare",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AhFOr9nPyWt4C"
+    },
+    {
+      "id": "L8Ckcad2t8MC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 0
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 0
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": null,
+        "years": []
+      },
+      "title": "Report on the 14th Italian Information Retrieval Workshop (IIR 2024)",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AL8Ckcad2t8MC"
+    },
+    {
+      "id": "7PzlFSSx8tAC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 2
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 2
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 2,
+        "years": [
+          {
+            "year": 2025,
+            "citations": 2
+          }
+        ]
+      },
+      "title": "Report on the Hands-On PhD Course on Responsible AI from the Lens of an Information Access Researcher",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A7PzlFSSx8tAC"
+    },
+    {
+      "id": "9yKSN-GCB0IC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 8
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 8
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 8,
+        "years": [
+          {
+            "year": 2019,
+            "citations": 1
+          },
+          {
+            "year": 2020,
+            "citations": 3
+          },
+          {
+            "year": 2021,
+            "citations": 1
+          },
+          {
+            "year": 2023,
+            "citations": 2
+          },
+          {
+            "year": 2025,
+            "citations": 1
+          }
+        ]
+      },
+      "title": "Reproduce and Improve: An Evolutionary Approach to Select a Few Good Topics for Information Retrieval Evaluation",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A9yKSN-GCB0IC"
+    },
+    {
+      "id": "qUcmZB5y_30C",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 0
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 0
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": null,
+        "years": []
+      },
+      "title": "Search Trajectory Networks Applied to a Real-World Parallel Batch Scheduling Problem",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AqUcmZB5y_30C"
+    },
+    {
+      "id": "Y0pCki6q_DkC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 68
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 68
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 68,
+        "years": [
+          {
+            "year": 2020,
+            "citations": 4
+          },
+          {
+            "year": 2021,
+            "citations": 9
+          },
+          {
+            "year": 2022,
+            "citations": 17
+          },
+          {
+            "year": 2023,
+            "citations": 13
+          },
+          {
+            "year": 2024,
+            "citations": 8
+          },
+          {
+            "year": 2025,
+            "citations": 13
+          },
+          {
+            "year": 2026,
+            "citations": 3
+          }
+        ]
+      },
+      "title": "The COVID-19 Infodemic: Can the Crowd Judge Recent Misinformation Objectively?",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AY0pCki6q_DkC"
+    },
+    {
+      "id": "kNdYIx-mwKoC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 58
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 58
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 58,
+        "years": [
+          {
+            "year": 2022,
+            "citations": 2
+          },
+          {
+            "year": 2023,
+            "citations": 16
+          },
+          {
+            "year": 2024,
+            "citations": 11
+          },
+          {
+            "year": 2025,
+            "citations": 18
+          },
+          {
+            "year": 2026,
+            "citations": 11
+          }
+        ]
+      },
+      "title": "The Effects of Crowd Worker Biases in Fact-Checking Tasks",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AkNdYIx-mwKoC"
+    },
+    {
+      "id": "mB3voiENLucC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 1
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 1
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 1,
+        "years": [
+          {
+            "year": 2026,
+            "citations": 1
+          }
+        ]
+      },
+      "title": "The Magnitude of Truth: On Using Magnitude Estimation for Truthfulness Assessment",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AmB3voiENLucC"
+    },
+    {
+      "id": "0EnyYjriUFMC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 100
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 100
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 100,
+        "years": [
+          {
+            "year": 2021,
+            "citations": 1
+          },
+          {
+            "year": 2022,
+            "citations": 20
+          },
+          {
+            "year": 2023,
+            "citations": 18
+          },
+          {
+            "year": 2024,
+            "citations": 17
+          },
+          {
+            "year": 2025,
+            "citations": 34
+          },
+          {
+            "year": 2026,
+            "citations": 9
+          }
+        ]
+      },
+      "title": "The Many Dimensions of Truthfulness: Crowdsourcing Misinformation Assessments on a Multidimensional Scale",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A0EnyYjriUFMC"
+    },
+    {
+      "id": "M3ejUd6NZC8C",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 5
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 5
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 5,
+        "years": [
+          {
+            "year": 2024,
+            "citations": 2
+          },
+          {
+            "year": 2025,
+            "citations": 3
+          }
+        ]
+      },
+      "title": "Towards a Conversational-Based Agent for Health Services",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AM3ejUd6NZC8C"
+    },
+    {
+      "id": "Zph67rFs4hoC",
+      "snapshots": [
+        {
+          "date": "2026-09-25",
+          "citations": 18
+        },
+        {
+          "date": "2026-09-30",
+          "citations": 18
+        }
+      ],
+      "annual": {
+        "checked_on": "2026-09-30",
+        "total": 18,
+        "years": [
+          {
+            "year": 2023,
+            "citations": 5
+          },
+          {
+            "year": 2024,
+            "citations": 4
+          },
+          {
+            "year": 2025,
+            "citations": 4
+          },
+          {
+            "year": 2026,
+            "citations": 4
+          }
+        ]
+      },
+      "title": "Transparent Assessment of Information Quality of Online Reviews using Formal Argumentation Theory",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AZph67rFs4hoC"
+    }
+  ]
+}

@@ -99,6 +99,35 @@
                     </article>
                   {{ end }}
                 </div>
+                <div class="citation-actions">
+                <a class="citation-explore-link" href="/citation-history/"><i class="fas fa-chart-line citation-action-icon" aria-hidden="true"></i><span class="citation-action-copy"><span>Explore citation trends</span><small>Google Scholar · Cumulative citations</small></span><i class="fas fa-arrow-right citation-action-arrow" aria-hidden="true"></i></a>
+                {{ with index hugo.Data "citation-history" }}
+                  <details class="citation-history">
+                    <summary><i class="fas fa-history citation-action-icon" aria-hidden="true"></i><span class="citation-action-copy"><span>Latest citation changes</span><small>Google Scholar</small></span><i class="fas fa-chevron-down citation-action-arrow" aria-hidden="true"></i></summary>
+                    {{ range first 1 . }}
+                      <section class="citation-history-period">
+                        <h3>{{ time.Format "Jan 2, 2006" .from }} – {{ time.Format "Jan 2, 2006" .to }}</h3>
+                        <p class="citation-history-total"><a href="{{ .source_url }}" target="_blank" rel="noopener">{{ .source }}</a>: {{ .previous_total }} → {{ .current_total }} citations ({{ if gt .delta 0 }}+{{ end }}{{ .delta }})</p>
+                        {{ with .changes }}
+                          <ul class="citation-change-list">
+                            {{ range . }}
+                              <li><a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a><span class="citation-change-count">{{ .previous }} → {{ .current }} <strong>({{ if gt .delta 0 }}+{{ end }}{{ .delta }})</strong></span></li>
+                            {{ end }}
+                          </ul>
+                        {{ else }}<p>No count changes among papers present in both checks.</p>{{ end }}
+                        {{ with .added }}
+                          <p>Added to the profile since the previous check:</p>
+                          <ul>{{ range . }}<li><a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a> · {{ .current }} citations</li>{{ end }}</ul>
+                        {{ end }}
+                        {{ with .removed }}
+                          <p>No longer listed in the profile:</p>
+                          <ul>{{ range . }}<li><a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a> · {{ .previous }} citations at the previous check</li>{{ end }}</ul>
+                        {{ end }}
+                      </section>
+                    {{ end }}
+                  </details>
+                {{ end }}
+                </div>
                 <p class="bibliometrics-updated">Last updated: {{ $metrics.last_updated }}</p>
               </div>
             {{ else if eq .id "publications" }}
