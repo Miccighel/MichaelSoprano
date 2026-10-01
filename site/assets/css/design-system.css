@@ -171,7 +171,7 @@ body {
     radial-gradient(circle at 12% 12%, color-mix(in srgb, var(--site-primary) 8%, transparent), transparent 32rem),
     var(--site-background) !important;
 }
-.legacy-about-grid { grid-template-columns: minmax(250px, .82fr) minmax(0, 2.18fr); gap: 2.25rem; }
+.legacy-about-grid { grid-template-columns: minmax(210px, .72fr) minmax(0, 2.28fr); gap: 2rem; }
 
 #about #profile {
   margin: 0;
@@ -185,8 +185,10 @@ body {
 #about .legacy-about-content { padding-top: .1rem; }
 
 #about .avatar {
-  width: 230px !important;
-  height: 230px !important;
+  width: min(230px, 100%) !important;
+  height: auto !important;
+  aspect-ratio: 1;
+  object-fit: cover;
   border: 5px solid var(--site-surface);
   box-shadow: 0 0 0 1px var(--site-border), 0 12px 30px rgba(20, 28, 48, .14);
 }
@@ -2300,8 +2302,8 @@ input::placeholder, textarea::placeholder { color: var(--site-muted); opacity: 1
   .legacy-archive { max-width: 1380px; }
 
   .legacy-about-grid {
-    grid-template-columns: minmax(270px, .82fr) minmax(0, 2.18fr);
-    gap: 2.75rem;
+    grid-template-columns: minmax(220px, .72fr) minmax(0, 2.28fr);
+    gap: 2.5rem;
   }
 
   .legacy-section-grid {
