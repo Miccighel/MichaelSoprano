@@ -12,7 +12,9 @@
   <section class="citation-dashboard" aria-label="Interactive citation history" data-citation-explorer data-series-url="{{ $export.RelPermalink }}">
     <p class="citation-context" id="citation-context" role="status" hidden></p>
     <p class="citation-selected-title" id="citation-selected-title" role="status" hidden></p>
-    <div class="citation-chart" id="citation-chart" tabindex="-1"></div>
+    <p id="citation-keyboard-help" class="sr-only">Use Left and Right to move between years, Up and Down to move between publications, Home and End for the first and last year. Press Enter to select a publication, Escape to dismiss its tooltip, and Tab to leave the chart.</p>
+    <p id="citation-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    <div class="citation-chart" id="citation-chart" tabindex="0" role="group" aria-label="Google Scholar cumulative citation chart" aria-describedby="citation-keyboard-help"></div>
     <section class="citation-line-legend" aria-labelledby="citation-publications-heading">
       <div class="citation-legend-heading"><h2 id="citation-publications-heading">Publications</h2><button type="button" id="citation-reset" disabled>Show all lines</button></div>
       <div class="citation-legend-controls">

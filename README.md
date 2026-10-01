@@ -142,6 +142,9 @@ evidenziabile passando sul titolo o sulla linea; i tooltip dei punti mostrano cu
 anno e conteggio annuale, anche con tastiera o tocco. La legenda permette di cercare
 un titolo, ordinare alfabeticamente o per cumulato crescente/decrescente,
 mantenere evidenziata la sua linea e ripristinare la vista completa.
+Il grafico ha un solo ingresso con Tab: frecce sinistra/destra per gli anni,
+su/giù per i paper, Home/End per gli estremi, Enter per la selezione ed Escape
+per chiudere il tooltip. Tab permette sempre di proseguire ai controlli successivi.
 La somma non viene corretta per coincidere con il totale del profilo, che può differire.
 I valori recuperati dai CV sono in `../LaTeX/data/bibliometrics-history.json`,
 con data del documento e commit di provenienza. Quelli annuali si conservano
@@ -175,6 +178,20 @@ controllare data, metriche, impaginazione e numero di pagine.
 Se cambiano i sorgenti dei CV, pubblicare prima la relativa pull request nella
 repository LaTeX (ramo `main`), poi quella del sito (ramo `master`) con i PDF
 sincronizzati. La build del sito non ricompila i CV.
+
+## Controllare le citazioni BibTeX
+
+`node site/scripts/audit-bibliography.mjs` confronta i file `cite.bib` delle
+pubblicazioni con `../LaTeX/bibliography.bib`; aggiungendo `--crossref` confronta
+anche i metadati pubblici associati ai DOI. Produce JSON senza modificare i
+file. Le differenze sono candidati da verificare, non errori da correggere
+automaticamente: nomi composti, numeri di articolo e date online o del fascicolo
+richiedono interpretazione. Il controllo di rete non fa parte della build.
+Il report iniziale e i suoi limiti sono in
+[`docs/BIBLIOGRAPHY-REVIEW-2026-10-01.md`](docs/BIBLIOGRAPHY-REVIEW-2026-10-01.md).
+
+La finestra Cite evidenzia la sintassi con elementi di testo sicuri; copia e
+download mantengono il BibTeX originale, senza cambiare i metadati.
 
 ## Modulo di contatto
 
@@ -234,6 +251,17 @@ risorse locali, rispettando le maiuscole dei percorsi. Il controllo usa
 `pdfinfo` (Poppler). I link verso altri domini non sono verificati in questo
 passaggio; il controllo dei link esterni delle pagine HTML resta facoltativo e
 manuale, fuori dal workflow GitHub.
+
+La tipografia usa due scale condivise per metadati (`.875rem`) ed etichette
+accessorie (`.75rem`), e una dimensione di base in `rem` che rispetta le
+preferenze del browser. Gli annunci del grafico sono esposti tramite una
+regione live non visibile, senza reintrodurre note nella pagina.
+
+La build esegue anche `scripts/test-interactions.mjs`: test DOM con jsdom per
+menu mobile e dropdown, ricerca (con il caricamento di Pagefind simulato),
+filtri e interazioni del grafico. Non sostituiscono un controllo nel browser:
+geometria, contrasto, touch e funzionamento dell'indice Pagefind reale restano
+da verificare in anteprima. Non introducono dipendenze nel sito pubblicato.
 
 ## Pubblicazione
 

@@ -2,7 +2,17 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {readFile} from "node:fs/promises";
 const source = await readFile(new URL("../assets/js/citation-explorer.js", import.meta.url), "utf8");
-const {cumulativeSeries, plotBounds, tooltipPosition, legendOrder, citationTicks} = await import("data:text/javascript;base64," + Buffer.from(source).toString("base64"));
+const {cumulativeSeries, plotBounds, tooltipPosition, legendOrder, citationTicks, keyboardPoint} = await import("data:text/javascript;base64," + Buffer.from(source).toString("base64"));
+
+test('keyboard navigation skips unavailable papers, keeps nearest year and clamps endpoints', () => {
+  const series=[{points:[{x:2022},{x:2026}]},{points:[]},{points:[{x:2025}]}];
+  assert.deepEqual(keyboardPoint(series,null,undefined,2),{series:2,point:0});
+  assert.deepEqual(keyboardPoint(series,{series:0,point:1},'ArrowDown'),{series:2,point:0});
+  assert.deepEqual(keyboardPoint(series,{series:2,point:0},'ArrowUp'),{series:0,point:1});
+  assert.deepEqual(keyboardPoint(series,{series:0,point:0},'ArrowLeft'),{series:0,point:0});
+  assert.deepEqual(keyboardPoint(series,{series:0,point:0},'End'),{series:0,point:1});
+  assert.equal(keyboardPoint([{points:[]}],null,'Home'),null);
+});
 
 test('citation ticks use round values and cover the largest count', () => {
   assert.deepEqual(citationTicks(99), [0,25,50,75,100]);

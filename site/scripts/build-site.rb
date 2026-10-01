@@ -9,6 +9,7 @@ PAGEFIND = File.join(SITE_ROOT, 'node_modules', '.bin', 'pagefind')
 
 commands = [
   ['node', '--test', File.join(SITE_ROOT, 'scripts', 'test-citation-explorer.mjs')],
+  ['node', '--test', File.join(SITE_ROOT, 'scripts', 'test-interactions.mjs')],
   [RUBY, File.join(SITE_ROOT, 'scripts', 'test-cv-sync.rb')],
   [RUBY, File.join(SITE_ROOT, 'scripts', 'check-cv-sync.rb')],
   [RUBY, File.join(SITE_ROOT, 'scripts', 'test-cv-pdf-links.rb')],
