@@ -7,9 +7,9 @@
   <span id="2" class="sr-only" aria-hidden="true">Journal articles</span>
   <span id="7" class="sr-only" aria-hidden="true">Theses</span>
   <div class="legacy-publication-filters" aria-label="Publication filters">
-    <label><span class="sr-only">Search publications</span><input id="publication-search" type="search" placeholder="Search..."></label>
+    <label><span class="sr-only">Search publications</span><input id="publication-search" type="search" placeholder="Search publications…"></label>
     <label><span class="sr-only">Publication type</span><select id="publication-type-filter"><option value="">Type</option><option value="paper-conference">Conference paper</option><option value="article-journal">Journal article</option><option value="thesis">Thesis</option></select></label>
-    <label><span class="sr-only">Publication year</span><select id="publication-year-filter"><option value="">Date</option>{{ range ($pages.GroupByDate "2006") }}<option value="{{ .Key }}">{{ .Key }}</option>{{ end }}</select></label>
+    <label><span class="sr-only">Publication year</span><select id="publication-year-filter"><option value="">Year</option>{{ range ($pages.GroupByDate "2006") }}<option value="{{ .Key }}">{{ .Key }}</option>{{ end }}</select></label>
   </div>
 
   <div id="publication-archive-list">

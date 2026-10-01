@@ -30,6 +30,22 @@ export function citationTicks(maximum) {
   return Array.from({length: Math.ceil(maximum / integerStep) + 1}, (_, i) => i * integerStep);
 }
 
+export function keyboardPoint(series, current, key, selected = null) {
+  const available = series.map((s, index) => index).filter(index => series[index].points.length);
+  if (!available.length) return null;
+  let index = current?.series ?? (available.includes(selected) ? selected : available[0]);
+  let point = Math.min(current?.point ?? series[index].points.length - 1, series[index].points.length - 1);
+  if (key === 'ArrowUp' || key === 'ArrowDown') {
+    const year = series[index].points[point].x;
+    index = available[Math.max(0, Math.min(available.length - 1, available.indexOf(index) + (key === 'ArrowDown' ? 1 : -1)))];
+    point = series[index].points.reduce((nearest, p, i, points) => Math.abs(p.x-year) < Math.abs(points[nearest].x-year) ? i : nearest, 0);
+  } else if (key === 'ArrowLeft') point = Math.max(0, point - 1);
+  else if (key === 'ArrowRight') point = Math.min(series[index].points.length - 1, point + 1);
+  else if (key === 'Home') point = 0;
+  else if (key === 'End') point = series[index].points.length - 1;
+  return {series:index, point};
+}
+
 export function legendOrder(series, order = 'alphabetical') {
   return series.map((s,index) => ({s,index})).sort((a,b) => {
     const hasCitations = s => (s.points.at(-1)?.y ?? 0) > 0;
@@ -81,6 +97,7 @@ async function initialize(root) {
   const reset = root.querySelector("#citation-reset");
   const selectedTitle = root.querySelector('#citation-selected-title');
   let selected = null;
+  let keyboard = null;
   const hideTooltip = () => { tooltip.hidden = true; };
   function showTooltip(point, s, p) {
     tooltip.replaceChildren();
@@ -90,6 +107,9 @@ async function initialize(root) {
     const detail = document.createElement('span');
     detail.textContent = p.year + ' · ' + p.raw + ' received that year' + (p.year === Number(s.annual.checked_on.slice(0,4)) ? ' · Partial year' : '');
     tooltip.append(name, value, detail); tooltip.hidden = false;
+    if (document.activeElement === chart) {
+      root.querySelector('#citation-announcement').textContent = s.name + '. ' + value.textContent + '. ' + detail.textContent;
+    }
     const anchor = point.getBoundingClientRect(), box = tooltip.getBoundingClientRect();
     const viewportWidth = document.documentElement.clientWidth;
     const viewportHeight = document.documentElement.clientHeight;
@@ -105,7 +125,10 @@ async function initialize(root) {
   root.addEventListener('keydown', event => { if (event.key === 'Escape') hideTooltip(); });
   function render() {
     const series = cumulativeSeries(data);
-    const color = index => `hsl(${(index * 137.508 + 235) % 360} 55% 44%)`;
+    const color = index => {
+      const hue = (index * 137.508 + 235) % 360;
+      return `light-dark(hsl(${hue} 55% 36%), hsl(${hue} 55% 72%))`;
+    };
     const highlight = index => {
       const active = index ?? selected;
       chart.querySelectorAll('[data-series]').forEach(el => {
@@ -118,6 +141,30 @@ async function initialize(root) {
       selectedTitle.textContent = selected === null ? '' : series[selected].name;
       legend.querySelectorAll('.citation-view-chart').forEach(button => { button.hidden = Number(button.dataset.seriesIndex) !== selected; });
     };
+    const selectSeries = index => {
+      selected = selected === index ? null : index;
+      reset.disabled = selected === null;
+      legend.querySelectorAll('button[aria-pressed]').forEach(button => button.setAttribute('aria-pressed', String(Number(button.parentElement.dataset.seriesIndex) === selected)));
+      highlight(null); updateSelection();
+    };
+    const inspectKeyboardPoint = key => {
+      keyboard = keyboardPoint(series, keyboard, key, selected);
+      if (!keyboard) return;
+      const point = chart.querySelector(`[data-series="${keyboard.series}"][data-point="${keyboard.point}"]`);
+      if (!point) return;
+      chart.setAttribute('aria-activedescendant', point.id);
+      highlight(keyboard.series);
+      showTooltip(point, series[keyboard.series], series[keyboard.series].points[keyboard.point]);
+    };
+    chart.addEventListener('focus', () => { keyboard = null; inspectKeyboardPoint(); });
+    chart.addEventListener('blur', () => { hideTooltip(); highlight(null); chart.removeAttribute('aria-activedescendant'); });
+    chart.addEventListener('keydown', event => {
+      if (['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(event.key)) {
+        event.preventDefault(); inspectKeyboardPoint(event.key);
+      } else if (event.key === 'Enter' && keyboard) {
+        event.preventDefault(); selectSeries(keyboard.series);
+      } else if (event.key === 'Escape') { hideTooltip(); highlight(null); }
+    });
     const filterLegend = () => {
       const query = search.value.trim().toLocaleLowerCase();
       let count = 0;
@@ -155,10 +202,7 @@ async function initialize(root) {
       link.append(swatch,title,count);
       for (const event of ['pointerenter','focus']) link.addEventListener(event, () => { hideTooltip(); highlight(index); });
       link.addEventListener('click', () => {
-        selected = selected === index ? null : index; reset.disabled = selected === null;
-        legend.querySelectorAll('button[aria-pressed]').forEach(button => button.setAttribute('aria-pressed',String(button === link && selected !== null)));
-        highlight(null);
-        updateSelection();
+        selectSeries(index);
       });
       for (const event of ['pointerleave','blur']) link.addEventListener(event, () => highlight(null));
       item.append(link);
@@ -186,7 +230,7 @@ async function initialize(root) {
     if (!bounds) { context.textContent = "No annual citation data available."; context.hidden = false; return; }
     function drawChart() {
     hideTooltip(); chart.replaceChildren();
-    const width = Math.max(280, chart.clientWidth), height = width < 600 ? 300 : 340, left = 38, right = 16, top = 24, bottom = 40;
+    const width = Math.max(220, chart.clientWidth), height = width < 600 ? 300 : 340, left = 38, right = 22, top = 24, bottom = 40;
     const yTicks = citationTicks(Math.max(...series.flatMap(s => s.points.map(p => p.y))));
     bounds.maxY = yTicks.at(-1) || 1;
     const x = n => left + (n - bounds.minX) / (bounds.maxX - bounds.minX) * (width - left - right);
@@ -198,7 +242,7 @@ async function initialize(root) {
       svg.append(svgElement("text", {x:left-10,y:y(value)+4,"text-anchor":"end",class:"citation-axis"}, String(Math.round(value))));
     }
     const distinct = [...new Set(series.flatMap(s => s.points.map(p => p.x)))].sort((a,b) => a-b);
-    const yearStride = Math.max(1, Math.ceil(distinct.length / Math.max(2, Math.floor((width-left-right) / 45))));
+    const yearStride = Math.max(1, Math.ceil(distinct.length / Math.max(2, Math.floor((width-left-right) / 60))));
     for (const [i, value] of distinct.entries()) if (i === distinct.length-1 || (i % yearStride === 0 && (i === 0 || distinct.length-1-i >= yearStride))) svg.append(svgElement("text", {
       x:x(value),y:height-16,"text-anchor":"middle",class:"citation-axis"
     }, String(value)));
@@ -206,7 +250,7 @@ async function initialize(root) {
       if (s.points.length > 1) {
         const line = svgElement("polyline", {
           points:s.points.map(p => x(p.x) + "," + y(p.y)).join(" "),class:"citation-line", 'data-series':index,
-          tabindex:0, role:'img', 'aria-label':s.name
+          tabindex:-1, role:'img', 'aria-label':s.name
         });
         line.style.stroke = color(index);
         line.append(svgElement('title', {}, s.name));
@@ -214,13 +258,16 @@ async function initialize(root) {
         for (const event of ['pointerleave','blur']) line.addEventListener(event, () => highlight(null));
         svg.append(line);
       }
-      s.points.forEach(p => {
+      s.points.forEach((p, pointIndex) => {
         const label = s.name + " · " + p.year + " · " + p.y + " cumulative citations · " + p.raw + " received that year"
           + (p.year === Number(s.annual.checked_on.slice(0,4)) ? " · Partial year" : "");
         let point;
         point = svgElement("circle", {cx:x(p.x),cy:y(p.y),r:3.5});
         point.setAttribute("class", "citation-point");
-        point.setAttribute("tabindex", "0"); point.setAttribute("role", "img"); point.setAttribute("aria-label",label);
+        point.id = `citation-point-${index}-${pointIndex}`;
+        point.dataset.point = pointIndex;
+        point.setAttribute('tabindex','-1');
+        point.setAttribute("role", "img"); point.setAttribute("aria-label",label);
         point.setAttribute('aria-describedby','citation-tooltip');
         point.dataset.series = index;
         point.style.stroke = color(index); point.style.fill = color(index);
@@ -231,6 +278,7 @@ async function initialize(root) {
     });
     chart.append(svg);
     highlight(null);
+    if (document.activeElement === chart) inspectKeyboardPoint();
     }
     drawChart();
     new ResizeObserver(drawChart).observe(chart);

@@ -15,9 +15,9 @@
 {{ if $has_citations }}
   <div id="legacy-cite-modal" class="legacy-cite-modal" role="dialog" aria-modal="true" aria-labelledby="legacy-cite-title" hidden>
     <div class="legacy-cite-dialog">
-      <div class="legacy-cite-header"><h2 id="legacy-cite-title">Cite</h2><button class="legacy-cite-close" type="button" aria-label="Close">×</button></div>
-      <div class="legacy-cite-body"><pre><code id="legacy-cite-code"></code></pre></div>
-      <div class="legacy-cite-footer"><button class="btn" id="legacy-cite-copy" type="button"><i class="fas fa-copy" aria-hidden="true"></i> Copy</button><a class="btn" id="legacy-cite-download" download="cite.bib"><i class="fas fa-download" aria-hidden="true"></i> Download</a></div>
+      <div class="legacy-cite-header"><div><h2 id="legacy-cite-title">Cite this publication</h2><p>BibTeX</p></div><button class="legacy-cite-close" type="button" aria-label="Close citation dialog">×</button></div>
+      <div class="legacy-cite-body" tabindex="0" role="region" aria-label="BibTeX citation"><pre><code id="legacy-cite-code"></code></pre></div>
+      <div class="legacy-cite-footer"><span id="legacy-cite-status" class="sr-only" role="status"></span><button class="btn" id="legacy-cite-copy" type="button"><i class="fas fa-copy" aria-hidden="true"></i> Copy BibTeX</button><a class="btn" id="legacy-cite-download" download="cite.bib"><i class="fas fa-download" aria-hidden="true"></i> Download .bib</a></div>
     </div>
   </div>
   {{ $citations_js := resources.Get "js/site-citations.js" | resources.Minify }}

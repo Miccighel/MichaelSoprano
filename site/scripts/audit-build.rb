@@ -530,7 +530,7 @@ end
   'authors' => ['Authors', 59],
   'categories' => ['Categories', 1],
   'publication_types' => ['Publication_types', 3],
-  'tags' => ['Tags', 133]
+  'tags' => ['Tags', 134]
 }.each do |taxonomy, (expected_title, expected_terms)|
   relative_path = File.join(taxonomy, 'index.html')
   path = File.join(PUBLIC_ROOT, relative_path)
@@ -554,7 +554,7 @@ if File.file?(tags_index_path)
   {
     '/tag/amazon-mechanical-turk/' => 'Amazon Mechanical Turk 2',
     '/tag/crowd_frame/' => 'Crowd_Frame 2',
-    '/tag/crowdsourcing/' => 'Crowdsourcing 23',
+    '/tag/crowdsourcing/' => 'Crowdsourcing 24',
     '/tag/hits/' => 'HITS 3',
     '/tag/network-analysis/' => 'Network Analysis 3',
     '/tag/prolific/' => 'Prolific 2',
@@ -767,7 +767,7 @@ if File.file?(rss_path)
     rss_title = rss.elements['rss/channel/title']&.text.to_s.strip
     rss_items = rss.get_elements('rss/channel/item')
     errors << 'index.xml: RSS channel title is missing' if rss_title.empty?
-    expected_rss_items = 56 + standalone_page_count + Dir.glob(File.join(SITE_ROOT, 'content', 'blog', '*', 'index.md')).length
+    expected_rss_items = SECTIONS.keys.sum { |section| Dir.glob(File.join(SITE_ROOT, 'content', section, '*', 'index.md')).length } + standalone_page_count
     errors << "index.xml: RSS contains #{rss_items.length} items, expected #{expected_rss_items}" unless rss_items.length == expected_rss_items
     errors << 'index.xml: legacy HugoBlox generator is still present' if File.read(rss_path).include?('HugoBlox')
   rescue REXML::ParseException => e
@@ -783,7 +783,7 @@ if File.file?(sitemap_path)
     sitemap_source = File.read(sitemap_path)
     REXML::Document.new(sitemap_source)
     sitemap_urls = sitemap_source.scan(/<url>/).length
-    expected_sitemap_urls = 260 + standalone_page_count + Dir.glob(File.join(SITE_ROOT, 'content', 'blog', '*', 'index.md')).length
+    expected_sitemap_urls = 262 + standalone_page_count + Dir.glob(File.join(SITE_ROOT, 'content', 'blog', '*', 'index.md')).length
     errors << "sitemap.xml: contains #{sitemap_urls} URLs, expected #{expected_sitemap_urls}" unless sitemap_urls == expected_sitemap_urls
   rescue REXML::ParseException => e
     errors << "sitemap.xml: invalid XML (#{e.message})"
