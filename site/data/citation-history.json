@@ -1,5 +1,42 @@
 [
   {
+    "from": "2026-09-30",
+    "to": "2026-10-02",
+    "source": "Google Scholar",
+    "source_url": "https://scholar.google.com/citations?user=ocK0qRUAAAAJ",
+    "previous_total": 730,
+    "current_total": 733,
+    "delta": 3,
+    "changes": [
+      {
+        "id": "4DMP91E08xMC",
+        "title": "Crowdsourced Fact-Checking: Does it Actually Work?",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A4DMP91E08xMC",
+        "previous": 48,
+        "current": 49,
+        "delta": 1
+      },
+      {
+        "id": "-f6ydRqryjwC",
+        "title": "Large Language Models for Combinatorial Optimization: A Systematic Review",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A-f6ydRqryjwC",
+        "previous": 57,
+        "current": 58,
+        "delta": 1
+      },
+      {
+        "id": "kNdYIx-mwKoC",
+        "title": "The Effects of Crowd Worker Biases in Fact-Checking Tasks",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AkNdYIx-mwKoC",
+        "previous": 58,
+        "current": 59,
+        "delta": 1
+      }
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
     "from": "2026-09-25",
     "to": "2026-09-30",
     "source": "Google Scholar",
