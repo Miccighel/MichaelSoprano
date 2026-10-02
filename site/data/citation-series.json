@@ -76,6 +76,12 @@
           "citations": 730,
           "kind": "verified",
           "provenance": "data/bibliometrics.json"
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 733,
+          "kind": "verified",
+          "provenance": "data/bibliometrics.json"
         }
       ]
     },
@@ -154,6 +160,12 @@
           "citations": 363,
           "kind": "verified",
           "provenance": "data/bibliometrics.json"
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 363,
+          "kind": "verified",
+          "provenance": "data/bibliometrics.json"
         }
       ]
     },
@@ -196,6 +208,12 @@
           "citations": 247,
           "kind": "verified",
           "provenance": "22dc332:data/bibliometrics.json"
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 251,
+          "kind": "verified",
+          "provenance": "data/bibliometrics.json"
         }
       ]
     },
@@ -274,6 +292,12 @@
           "citations": 203,
           "kind": "verified",
           "provenance": "data/bibliometrics.json"
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 204,
+          "kind": "verified",
+          "provenance": "data/bibliometrics.json"
         }
       ]
     }
@@ -288,6 +312,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 21
+        },
+        {
+          "date": "2026-10-02",
           "citations": 21
         }
       ],
@@ -330,6 +358,10 @@
         {
           "date": "2026-09-30",
           "citations": 0
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 0
         }
       ],
       "annual": {
@@ -349,6 +381,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 0
+        },
+        {
+          "date": "2026-10-02",
           "citations": 0
         }
       ],
@@ -370,6 +406,10 @@
         {
           "date": "2026-09-30",
           "citations": 0
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 0
         }
       ],
       "annual": {
@@ -389,6 +429,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 14
+        },
+        {
+          "date": "2026-10-02",
           "citations": 14
         }
       ],
@@ -435,6 +479,10 @@
         {
           "date": "2026-09-30",
           "citations": 1
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 1
         }
       ],
       "annual": {
@@ -459,6 +507,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 3
+        },
+        {
+          "date": "2026-10-02",
           "citations": 3
         }
       ],
@@ -488,6 +540,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 94
+        },
+        {
+          "date": "2026-10-02",
           "citations": 94
         }
       ],
@@ -538,6 +594,10 @@
         {
           "date": "2026-09-30",
           "citations": 44
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 44
         }
       ],
       "annual": {
@@ -579,6 +639,10 @@
         {
           "date": "2026-09-30",
           "citations": 100
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 100
         }
       ],
       "annual": {
@@ -615,6 +679,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 16
+        },
+        {
+          "date": "2026-10-02",
           "citations": 16
         }
       ],
@@ -657,11 +725,15 @@
         {
           "date": "2026-09-30",
           "citations": 48
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 49
         }
       ],
       "annual": {
-        "checked_on": "2026-09-30",
-        "total": 48,
+        "checked_on": "2026-10-02",
+        "total": 49,
         "years": [
           {
             "year": 2024,
@@ -673,7 +745,7 @@
           },
           {
             "year": 2026,
-            "citations": 19
+            "citations": 20
           }
         ]
       },
@@ -689,6 +761,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 1
+        },
+        {
+          "date": "2026-10-02",
           "citations": 1
         }
       ],
@@ -714,6 +790,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 5
+        },
+        {
+          "date": "2026-10-02",
           "citations": 5
         }
       ],
@@ -752,6 +832,10 @@
         {
           "date": "2026-09-30",
           "citations": 0
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 0
         }
       ],
       "annual": {
@@ -771,6 +855,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 14
+        },
+        {
+          "date": "2026-10-02",
           "citations": 14
         }
       ],
@@ -809,6 +897,10 @@
         {
           "date": "2026-09-30",
           "citations": 5
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 5
         }
       ],
       "annual": {
@@ -841,6 +933,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 10
+        },
+        {
+          "date": "2026-10-02",
           "citations": 10
         }
       ],
@@ -875,6 +971,10 @@
         {
           "date": "2026-09-30",
           "citations": 2
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 2
         }
       ],
       "annual": {
@@ -900,6 +1000,10 @@
         {
           "date": "2026-09-30",
           "citations": 1
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 1
         }
       ],
       "annual": {
@@ -924,6 +1028,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 4
+        },
+        {
+          "date": "2026-10-02",
           "citations": 4
         }
       ],
@@ -953,6 +1061,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 3
+        },
+        {
+          "date": "2026-10-02",
           "citations": 3
         }
       ],
@@ -986,6 +1098,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 14
+        },
+        {
+          "date": "2026-10-02",
           "citations": 14
         }
       ],
@@ -1024,6 +1140,10 @@
         {
           "date": "2026-09-30",
           "citations": 0
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 0
         }
       ],
       "annual": {
@@ -1043,6 +1163,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 1
+        },
+        {
+          "date": "2026-10-02",
           "citations": 1
         }
       ],
@@ -1069,11 +1193,15 @@
         {
           "date": "2026-09-30",
           "citations": 57
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 58
         }
       ],
       "annual": {
-        "checked_on": "2026-09-30",
-        "total": 57,
+        "checked_on": "2026-10-02",
+        "total": 58,
         "years": [
           {
             "year": 2025,
@@ -1081,7 +1209,7 @@
           },
           {
             "year": 2026,
-            "citations": 46
+            "citations": 47
           }
         ]
       },
@@ -1097,6 +1225,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 9
+        },
+        {
+          "date": "2026-10-02",
           "citations": 9
         }
       ],
@@ -1131,6 +1263,10 @@
         {
           "date": "2026-09-30",
           "citations": 3
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 3
         }
       ],
       "annual": {
@@ -1156,6 +1292,10 @@
         {
           "date": "2026-09-30",
           "citations": 0
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 0
         }
       ],
       "annual": {
@@ -1175,6 +1315,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 2
+        },
+        {
+          "date": "2026-10-02",
           "citations": 2
         }
       ],
@@ -1200,6 +1344,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 8
+        },
+        {
+          "date": "2026-10-02",
           "citations": 8
         }
       ],
@@ -1242,6 +1390,10 @@
         {
           "date": "2026-09-30",
           "citations": 0
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 0
         }
       ],
       "annual": {
@@ -1261,6 +1413,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 68
+        },
+        {
+          "date": "2026-10-02",
           "citations": 68
         }
       ],
@@ -1311,11 +1467,15 @@
         {
           "date": "2026-09-30",
           "citations": 58
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 59
         }
       ],
       "annual": {
-        "checked_on": "2026-09-30",
-        "total": 58,
+        "checked_on": "2026-10-02",
+        "total": 59,
         "years": [
           {
             "year": 2022,
@@ -1335,7 +1495,7 @@
           },
           {
             "year": 2026,
-            "citations": 11
+            "citations": 12
           }
         ]
       },
@@ -1351,6 +1511,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 1
+        },
+        {
+          "date": "2026-10-02",
           "citations": 1
         }
       ],
@@ -1376,6 +1540,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 100
+        },
+        {
+          "date": "2026-10-02",
           "citations": 100
         }
       ],
@@ -1422,6 +1590,10 @@
         {
           "date": "2026-09-30",
           "citations": 5
+        },
+        {
+          "date": "2026-10-02",
+          "citations": 5
         }
       ],
       "annual": {
@@ -1450,6 +1622,10 @@
         },
         {
           "date": "2026-09-30",
+          "citations": 18
+        },
+        {
+          "date": "2026-10-02",
           "citations": 18
         }
       ],
