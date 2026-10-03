@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="210" viewBox="0 0 300 210">
+  <rect width="300" height="210" rx="16" fill="#f0f6ff"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="24" y="29" font-size="13" font-weight="700" letter-spacing="1" fill="#095bdb">ICTIR 2025 · POSTER</text>
+    <g font-size="25" font-weight="700" fill="#095bdb">
+      <text x="24" y="66">AIDME</text>
+      <text x="24" y="96">AI-aided reviews</text>
+    </g>
+    <g stroke="#7ba4df" stroke-width="3" fill="none"><path d="M78 152H113M186 152H219"/></g><g fill="#fff" stroke="#77a3e4" stroke-width="2"><rect x="25" y="125" width="53" height="54" rx="8"/><rect x="113" y="125" width="73" height="54" rx="8"/><rect x="219" y="125" width="56" height="54" rx="8"/></g><g stroke="#095bdb" stroke-width="3"><path d="M39 139H65M39 149H65M39 159H58"/></g><text x="150" y="160" text-anchor="middle" font-weight="700" font-size="23" fill="#095bdb">AI</text><g fill="#095bdb"><circle cx="234" cy="141" r="4"/><circle cx="260" cy="144" r="4"/><circle cx="247" cy="163" r="4"/></g><path d="M234 141L260 144L247 163Z" stroke="#095bdb" stroke-width="2" fill="none"/>
+  </g>
+</svg>
