@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="210" viewBox="0 0 300 210">
+  <rect width="300" height="210" rx="16" fill="#fff"/>
+  <rect x="22" y="22" width="44" height="5" rx="2.5" fill="#bf24dc"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#151822">
+    <text x="22" y="68" font-size="30" font-weight="700">Intelligenza</text>
+    <text x="22" y="104" font-size="30" font-weight="700">Artificiale e salute</text>
+    <text x="22" y="152" font-size="19">Eddy Maddalena</text>
+    <text x="22" y="179" font-size="19">Michael Soprano</text>
+  </g>
+</svg>

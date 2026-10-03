@@ -1,0 +1,8 @@
+{{ $event := . }}
+{{ $image := .Resources.GetMatch "thumbnail*" }}
+{{ if not $image }}{{ $image = .Resources.GetMatch "featured*" }}{{ end }}
+{{ with $image }}
+  {{ $thumb := . }}
+  {{ if ne .MediaType.SubType "svg" }}{{ $thumb = .Resize "300x" }}{{ end }}
+  <a class="stream-image" href="{{ $event.RelPermalink }}"><img src="{{ $thumb.RelPermalink }}" width="150" alt="{{ $event.Title }}" loading="lazy"></a>
+{{ end }}

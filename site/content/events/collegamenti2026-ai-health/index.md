@@ -18,6 +18,8 @@ event_all_day: false
 links:
 - type: programme
   url: https://festivalcollegamenti.it/collegamenti2026/programma/45/intelligenza-artificiale-e-salute/
+- type: festival guests
+  url: https://festivalcollegamenti.it/collegamenti2026/ospiti/
 date: '2026-10-01T12:00:00+02:00'
 ---
 

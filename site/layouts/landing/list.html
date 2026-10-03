@@ -181,8 +181,7 @@
                       </div>
                       {{ with .Params.links }}<div class="btn-links">{{ range . }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}</div>{{ end }}
                     </div>
-                    {{ $image := .Resources.GetMatch "featured*" }}
-                    {{ with $image }}{{ $thumb := .Resize "150x" }}<a class="stream-image" href="{{ $event.RelPermalink }}"><img src="{{ $thumb.RelPermalink }}" width="150" alt="{{ $event.Title }}" loading="lazy"></a>{{ end }}
+                    {{ partial "legacy/event-thumbnail.html" . }}
                   </article>
                 {{ end }}
               </div>
