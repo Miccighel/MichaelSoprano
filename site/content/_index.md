@@ -139,7 +139,7 @@ sections:
       - Thesis supervision\
         2 BSc theses
       - Thesis co-supervision\
-        14 MSc and 17 BSc theses
+        14 MSc and 18 BSc theses
       - Advanced laboratory co-supervision\
         19 projects
 
