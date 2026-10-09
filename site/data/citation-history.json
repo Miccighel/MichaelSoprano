@@ -1,5 +1,50 @@
 [
   {
+    "from": "2026-10-05",
+    "to": "2026-10-09",
+    "source": "Google Scholar",
+    "source_url": "https://scholar.google.com/citations?user=ocK0qRUAAAAJ",
+    "previous_total": 736,
+    "current_total": 741,
+    "delta": 5,
+    "changes": [
+      {
+        "id": "qxL8FJ1GzNcC",
+        "title": "Cognitive Biases in Fact-Checking and Their Countermeasures: A Review",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AqxL8FJ1GzNcC",
+        "previous": 101,
+        "current": 103,
+        "delta": 2
+      },
+      {
+        "id": "_kc_bZDykSQC",
+        "title": "How Many Crowd Workers Do I Need? On Statistical Power When Crowdsourcing Relevance Judgments",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A_kc_bZDykSQC",
+        "previous": 14,
+        "current": 15,
+        "delta": 1
+      },
+      {
+        "id": "-f6ydRqryjwC",
+        "title": "Large Language Models for Combinatorial Optimization: A Systematic Review",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A-f6ydRqryjwC",
+        "previous": 59,
+        "current": 60,
+        "delta": 1
+      },
+      {
+        "id": "mVmsd5A6BfQC",
+        "title": "Longitudinal Loyalty: Understanding the Barriers to Running Longitudinal Studies on Crowdsourcing Platforms",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AmVmsd5A6BfQC",
+        "previous": 9,
+        "current": 10,
+        "delta": 1
+      }
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
     "from": "2026-10-03",
     "to": "2026-10-05",
     "source": "Google Scholar",
