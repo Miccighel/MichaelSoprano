@@ -48,6 +48,8 @@ publication:
 identifiers:
   doi: 10.48550/arXiv.2605.04797
 links:
+- type: materials
+  url: https://doi.org/10.17605/OSF.IO/9RJ28
 - type: pdf
   url: https://arxiv.org/pdf/2605.04797
 ---

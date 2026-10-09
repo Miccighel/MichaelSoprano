@@ -49,6 +49,10 @@ publication:
 identifiers:
   doi: 10.1145/3597201
 links:
+- type: materials
+  url: https://github.com/KevinRoitero/how-many-crowd-workers
+- type: code
+  url: https://github.com/Miccighel/Crowd-Size-Gen-EA
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3597201
 ---

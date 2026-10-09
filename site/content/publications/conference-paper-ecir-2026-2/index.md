@@ -44,4 +44,7 @@ publication:
     Cham. Conference Rank: CORE A; GGS A-.*"
 identifiers:
   doi: 10.1007/978-3-032-21300-6_25
+links:
+- type: dataset
+  url: https://doi.org/10.17605/OSF.IO/X2H6A
 ---

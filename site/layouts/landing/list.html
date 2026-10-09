@@ -145,7 +145,7 @@
                       {{ with .Params.publication }}{{ with .name }}<em>{{ strings.TrimSuffix "." (replace . "*" "") }}</em>,{{ end }}{{ end }} {{ .Date.Format "2006" }}.
                     </div>
                     <span class="legacy-attachments">
-                      {{ range .Params.links }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}
+                      {{ range .Params.links }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ partial "legacy/resource-label.html" .type }}</a>{{ end }}
                       <button class="btn btn-outline-primary btn-sm legacy-cite" type="button" data-cite-url="{{ $publication.RelPermalink }}cite.bib">Cite</button>
                       {{ with .Params.identifiers }}{{ with .doi }}<a class="btn btn-outline-primary btn-sm" href="https://doi.org/{{ . }}">DOI</a>{{ end }}{{ end }}
                     </span>
@@ -179,7 +179,7 @@
                         {{ end }}
                         {{ with .Params.location }}<span><i class="fas fa-location-dot" aria-hidden="true"></i>{{ strings.TrimSuffix "." . }}</span>{{ end }}
                       </div>
-                      {{ with .Params.links }}<div class="btn-links">{{ range . }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}</div>{{ end }}
+                      {{ with .Params.links }}<div class="btn-links">{{ range . }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ partial "legacy/resource-label.html" .type }}</a>{{ end }}</div>{{ end }}
                     </div>
                     {{ partial "legacy/event-thumbnail.html" . }}
                   </article>
@@ -215,17 +215,24 @@
                   {{ end }}
               {{ end }}
               {{ $topics = sort $topics "Count" "desc" }}
-              <nav class="topics-list" aria-label="Research topics">
+              {{ range $group := slice "Research" "Teaching" }}
+              <section class="topics-group" aria-labelledby="topics-{{ lower $group }}">
+                <h3 id="topics-{{ lower $group }}">{{ $group }}</h3>
+                <nav class="topics-list" aria-label="{{ $group }} topics">
                 {{ range $topics }}
                     {{ $slug := path.Base (strings.TrimSuffix "/" .Page.RelPermalink) }}
-                    {{ $label := .Page.Title }}
-                    {{ with index $home.topics.labels $slug }}{{ $label = . }}{{ end }}
+                    {{ $isTeaching := in $home.topics.teaching $slug }}
+                    {{ if eq $isTeaching (eq $group "Teaching") }}
+                    {{ $label := partial "legacy/topic-label.html" (dict "slug" $slug "fallback" .Page.Title) }}
                     <a class="topic-link" href="{{ .Page.RelPermalink }}">
                       <span>{{ $label }}</span>
-                      <span class="topic-count" aria-label="{{ .Count }} items">{{ .Count }}</span>
+                      <span class="topic-count" aria-label="{{ .Count }} {{ if eq .Count 1 }}item{{ else }}items{{ end }}">{{ .Count }}</span>
                     </a>
+                    {{ end }}
                 {{ end }}
-              </nav>
+                </nav>
+              </section>
+              {{ end }}
             {{ else if eq .id "academic_activity" }}
               {{ $activity_sections := split (printf "\n%s" .content.text) "\n### " }}
               <div class="activity-list">

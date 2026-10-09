@@ -56,4 +56,7 @@ publication:
     Knowledge Management. Conference Ranks: GGS A+, Core A.*"
 identifiers:
   doi: 10.1145/3340531.3412048
+links:
+- type: dataset
+  url: https://github.com/KevinRoitero/crowdsourcingTruthfulness
 ---

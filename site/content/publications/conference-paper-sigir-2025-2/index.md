@@ -47,6 +47,8 @@ publication:
 identifiers:
   doi: 10.1145/3726302.3729960
 links:
+- type: dataset
+  url: https://doi.org/10.17605/OSF.IO/BNFXM
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3726302.3729960
 ---

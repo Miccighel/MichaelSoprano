@@ -1,7 +1,7 @@
 {{ $related := where (site.RegularPages.Related .) "Params.course_hidden" "ne" true | first 5 }}
 {{ with $related }}
-  <section class="article-widget content-widget-hr related-list" aria-labelledby="related-heading">
+  <section class="article-widget content-widget-hr related-list" aria-labelledby="related-heading" data-pagefind-ignore>
     <h3 id="related-heading">Related</h3>
-    <ul>{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
+    <ul>{{ range . }}<li><p class="related-item-meta">{{ partial "legacy/content-kind.html" . }} · {{ .Date.Format "2006" }}</p><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
   </section>
 {{ end }}

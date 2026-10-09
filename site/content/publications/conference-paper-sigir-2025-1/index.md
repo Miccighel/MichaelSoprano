@@ -47,6 +47,8 @@ publication:
 identifiers:
   doi: 10.1145/3726302.3730091
 links:
+- type: materials
+  url: https://doi.org/10.17605/OSF.IO/YUX42
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3726302.3730091
 ---

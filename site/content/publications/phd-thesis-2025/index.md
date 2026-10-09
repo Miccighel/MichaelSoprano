@@ -41,6 +41,10 @@ publication:
 identifiers:
   doi: 10.48550/arXiv.2506.09221
 links:
+- type: materials
+  url: https://doi.org/10.17605/OSF.IO/JR6VC
+- type: code
+  url: https://github.com/Miccighel/Crowd_Frame
 - type: pdf
   url: https://arxiv.org/abs/2506.09221
 ---

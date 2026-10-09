@@ -45,4 +45,9 @@ publication:
     Development in Information Retrieval. Conference Rank: GGS A++, Core A*.*"
 identifiers:
   doi: 10.1145/3397271.3401112
+links:
+- type: dataset
+  url: https://github.com/KevinRoitero/crowdsourcingTruthfulness
+- type: code
+  url: https://github.com/KevinRoitero/PairwiseAgreement
 ---

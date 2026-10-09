@@ -1,0 +1,23 @@
+# Explicit, confirmed presentation-to-paper relationships; both directions use this list.
+- event: cikm2020-talk
+  publication: conference-paper-cikm-2020
+- event: wsdm2022-talk
+  publication: conference-paper-wsdm-2022
+- event: sigir2025-talk
+  publication: conference-paper-sigir-2025-1
+- event: ital-ia2023-talk
+  publication: workshop-paper-ital-ia-2023
+- event: ictir2025-poster
+  publication: conference-paper-ictir2025
+- event: ital-ia2025-talk
+  publication: conference-paper-ictir2025
+- event: ecir2026-poster-1
+  publication: conference-paper-ecir-2026-1
+- event: ecir2026-poster-2
+  publication: conference-paper-ecir-2026-2
+- event: romcir2026-talk
+  publication: preprint-romcir-2026
+- event: sigir2020-talk
+  publication: conference-paper-sigir-2020
+- event: ircdl2025-talk
+  publication: conference-paper-ircdl-2025

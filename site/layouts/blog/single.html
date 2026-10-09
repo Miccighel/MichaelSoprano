@@ -1,5 +1,5 @@
 {{ define "main" }}
-<article class="legacy-single legacy-blog-single course-page" data-pagefind-body>
+<article class="legacy-single legacy-blog-single course-page" data-pagefind-body data-pagefind-meta="kind:Course">
   <header class="course-hero">
     <div class="course-hero-inner">
       <a class="course-back-link" href="/#teaching"><i class="fas fa-arrow-left" aria-hidden="true"></i> Teaching</a>
@@ -15,7 +15,7 @@
   </header>
 
   <div class="course-layout">
-    <aside class="course-sidebar" aria-label="Page navigation">
+    <aside class="course-sidebar" aria-label="Page navigation" data-pagefind-ignore>
       <p class="course-sidebar-title">On this page</p>
       {{ .TableOfContents }}
       {{ if or .Params.course_overview .Params.course_parent }}
@@ -40,7 +40,7 @@
     <div class="course-main">
       {{ $editions := where site.RegularPages "Params.course_parent" .RelPermalink }}
       {{ with $editions }}
-        <nav class="course-editions" aria-label="Course editions">
+        <nav class="course-editions" aria-label="Course editions" data-pagefind-ignore>
           <h2>Academic years</h2>
           <div class="course-edition-links">
             {{ range sort . "Params.course_edition" "desc" }}<a href="{{ .RelPermalink }}">{{ .Params.course_edition }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>{{ end }}
@@ -48,7 +48,7 @@
         </nav>
       {{ end }}
       <div class="article-style course-content">{{ .Content }}</div>
-      <footer class="course-footer">
+      <footer class="course-footer" data-pagefind-ignore>
         {{ partial "legacy/tags.html" . }}
         {{ partial "legacy/share.html" . }}
         {{ partial "legacy/related.html" . }}

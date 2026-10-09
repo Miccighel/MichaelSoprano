@@ -1,12 +1,12 @@
 {{ $page := . }}
 {{ $eventType := index (split (.Params.summary | default "Presentation") " - ") 0 }}
-<article class="legacy-single legacy-event-single event-page pub" data-pagefind-body>
+<article class="legacy-single legacy-event-single event-page pub" data-pagefind-body data-pagefind-meta="kind:Presentation">
   <header class="event-hero">
     <div class="event-hero-inner">
-      <a class="event-back-link" href="/event/"><i class="fas fa-arrow-left" aria-hidden="true"></i> All presentations</a>
+      <a class="event-back-link" href="/event/" data-pagefind-ignore><i class="fas fa-arrow-left" aria-hidden="true"></i> All presentations</a>
       <div class="event-hero-meta">
         <span>{{ $eventType }}</span>
-        {{ with .Params.event_start }}<time datetime="{{ time.Format "2006-01-02T15:04:05Z07:00" . }}">{{ time.Format "Jan 2, 2006" . }}</time>{{ end }}
+        {{ with .Params.event_start }}<time datetime="{{ time.Format "2006-01-02T15:04:05Z07:00" . }}" data-pagefind-meta="year:{{ time.Format "2006" . }}">{{ time.Format "Jan 2, 2006" . }}</time>{{ end }}
       </div>
       <h1>{{ .Title }}</h1>
       {{ with .Params.authors }}<p class="event-authors">{{ delimit . ", " }}</p>{{ end }}
@@ -24,11 +24,12 @@
       {{ end }}
 
       {{ with .Content }}<div class="article-style event-description">{{ . }}</div>{{ end }}
+      {{ partial "legacy/presentation-publications.html" . }}
       {{ partial "legacy/tags.html" . }}
       {{ partial "legacy/share.html" . }}
     </div>
 
-    <aside class="event-facts" aria-label="Presentation details">
+    <aside class="event-facts" aria-label="Presentation details" data-pagefind-ignore>
       <h2>Details</h2>
       {{ with .Params.event_start }}
         <div class="event-fact">

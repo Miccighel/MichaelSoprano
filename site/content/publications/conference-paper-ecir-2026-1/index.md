@@ -42,4 +42,7 @@ publication:
     Retrieval (ECIR 2026). Conference Rank: CORE A; GGS A-.*"
 identifiers:
   doi: 10.1007/978-3-032-21300-6_24
+links:
+- type: materials
+  url: https://doi.org/10.17605/OSF.IO/XKVM6
 ---

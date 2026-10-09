@@ -57,6 +57,8 @@ publication:
 identifiers:
   doi: 10.1007/s00779-021-01604-6
 links:
+- type: dataset
+  url: https://github.com/KevinRoitero/crowdsourcingTruthfulness
 - type: pdf
   url: https://link.springer.com/content/pdf/10.1007/s00779-021-01604-6.pdf
 ---

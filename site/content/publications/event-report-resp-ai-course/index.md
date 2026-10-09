@@ -63,6 +63,8 @@ publication:
 identifiers:
   doi: 10.1145/3722449.3722456
 links:
+- type: materials
+  url: https://osf.io/8swmv/
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3722449.3722456
 ---

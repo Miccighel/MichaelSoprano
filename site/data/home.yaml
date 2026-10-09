@@ -93,6 +93,10 @@ publications:
 presentations:
   homepage_limit: 15
 topics:
+  teaching:
+  - teaching
+  - sports-science
+  - data-analysis
   minimum_count: 3
   include:
   - amazon-mechanical-turk
@@ -110,12 +114,14 @@ topics:
     hits: HITS
     large-language-models: large language models
     misinformation: misinformation
-    network-analysis: Network Analysis
+    network-analysis: network analysis
     peer-review: peer review
     public-administration: public administration
     readersourcing: readersourcing
     scholarly-publishing: scholarly publishing
     scoping-reviews: scoping reviews
-    teaching: Teaching
+    teaching: teaching
+    sports-science: sports science
+    data-analysis: data analysis
     truthfulness: truthfulness
     truthfulness-assessment: truthfulness assessment

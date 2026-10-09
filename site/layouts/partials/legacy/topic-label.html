@@ -1,0 +1,3 @@
+{{- $label := .fallback -}}
+{{- with index hugo.Data.home.topics.labels .slug -}}{{- $label = . -}}{{- end -}}
+{{- return $label -}}

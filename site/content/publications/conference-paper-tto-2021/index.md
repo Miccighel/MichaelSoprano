@@ -36,6 +36,8 @@ abstract: Automated fact-checking (AFC) systems exist to combat disinformation, 
 publication:
   name: "*Proceedings of the 2021 Truth and Trust Online Conference*"
 links:
+- type: code
+  url: https://github.com/CR380R/E-BART
 - type: pdf
   url: https://air.uniud.it/retrieve/e27ce0ca-113d-055e-e053-6605fe0a7873/TTO2021_Predicting_and_Explaining_Truthfulness.pdf
 ---
