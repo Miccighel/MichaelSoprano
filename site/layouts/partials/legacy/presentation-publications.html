@@ -1,0 +1,35 @@
+{{- $page := . -}}
+{{- $matches := slice -}}
+{{- range hugo.Data.presentation_publications -}}
+  {{- $event := site.GetPage (printf "/events/%s" .event) -}}
+  {{- $publication := site.GetPage (printf "/publications/%s" .publication) -}}
+  {{- if or (not $event) (not $publication) -}}
+    {{- errorf "Invalid presentation/publication relationship: %s -> %s" .event .publication -}}
+  {{- else if eq $page.RelPermalink $event.RelPermalink -}}
+    {{- $matches = $matches | append $publication -}}
+  {{- else if eq $page.RelPermalink $publication.RelPermalink -}}
+    {{- $matches = $matches | append $event -}}
+  {{- end -}}
+{{- end -}}
+{{- with $matches -}}
+<section class="related-list" aria-labelledby="associated-materials-heading" data-pagefind-ignore>
+  <h3 id="associated-materials-heading">{{ if eq $page.Section "publications" }}{{ if eq (len .) 1 }}Presentation{{ else }}Presentations{{ end }}{{ else }}Associated publication{{ end }}</h3>
+  <ul>
+    {{ range sort . "Date" "desc" }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ if eq .Section "events" }}
+      <span> · {{ .Date.Format "Jan 2006" }}</span>
+      {{ with .Params.links }}
+      <div class="btn-links">
+        {{ range . }}{{ if in (slice "slides" "pdf" "video") .type }}
+        <a class="btn btn-outline-primary" href="{{ .url }}" target="_blank" rel="noopener">{{ partial "legacy/resource-label.html" .type }}</a>
+        {{ end }}{{ end }}
+      </div>
+      {{ end }}
+      {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{- end -}}

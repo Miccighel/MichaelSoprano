@@ -6,8 +6,9 @@
 <main class="topic-archive" data-local-layout="tag-term" data-pagefind-ignore>
   <header class="topic-archive-header">
     <a class="topic-archive-back" href="/#tags"><i class="fas fa-arrow-left" aria-hidden="true"></i> All topics</a>
-    <p class="topic-archive-eyebrow">Research topic</p>
-    <h1>{{ .Title }}</h1>
+    {{ $slug := path.Base (strings.TrimSuffix "/" .RelPermalink) }}
+    <p class="topic-archive-eyebrow">{{ if in hugo.Data.home.topics.teaching $slug }}Teaching{{ else }}Research{{ end }} topic</p>
+    <h1>{{ partial "legacy/topic-label.html" (dict "slug" $slug "fallback" .Title) }}</h1>
     <p class="topic-archive-summary">{{ len $pages }} related {{ if eq (len $pages) 1 }}item{{ else }}items{{ end }} across the site.</p>
     <nav class="topic-archive-nav" aria-label="Content in this topic">
       {{ if gt (len $publications) 0 }}<a href="#topic-publications">Publications <span>{{ len $publications }}</span></a>{{ end }}

@@ -25,10 +25,12 @@ export function cumulativeSeries(data) {
 
 export function pointDetail(s, p) {
   if (p.kind === 'reported') return 'Reported total · ' + dateLabel(p.date)
+    + ' · Annual counts checked ' + dateLabel(s.annual.checked_on)
     + ' · Annual counts sum to ' + p.annualSum + (p.difference === 0 ? ' (matches total)' : ' · Difference: '
     + (p.difference > 0 ? '+' : '') + p.difference + ' (not assigned to a year)');
   return p.year + ' · ' + p.raw + ' received that year'
-    + (p.year === Number(s.annual.checked_on.slice(0,4)) ? ' · Partial year' : '');
+    + (p.year === Number(s.annual.checked_on.slice(0,4)) ? ' · Partial year' : '')
+    + ' · Annual counts checked ' + dateLabel(s.annual.checked_on);
 }
 
 export function plotBounds(series) {
@@ -44,7 +46,8 @@ export function plotBounds(series) {
 export function citationTicks(maximum) {
   const rough = Math.max(1, maximum) / 4;
   const magnitude = 10 ** Math.floor(Math.log10(rough));
-  const step = [1, 2, 2.5, 5, 10].map(n => n * magnitude).find(n => n >= rough);
+  const step = [1, 2, 2.5, 5, 10].map(n => n * magnitude)
+    .reduce((best, candidate) => Math.abs(candidate - rough) < Math.abs(best - rough) ? candidate : best);
   const integerStep = Math.max(1, step);
   return Array.from({length: Math.ceil(maximum / integerStep) + 1}, (_, i) => i * integerStep);
 }
@@ -233,7 +236,7 @@ async function initialize(root) {
       const note = document.createElement("span");
       const sum = s.points.filter(p => p.kind !== 'reported').reduce((total, p) => total + p.raw, 0);
       note.textContent = s.points.length
-        ? "Checked " + dateLabel(s.reported?.date ?? s.annual.checked_on) + " · Annual counts sum: " + sum + (s.reported ? " · Reported total: " + s.reported.citations : "")
+        ? "Annual counts checked " + dateLabel(s.annual.checked_on) + " · Annual counts sum: " + sum + (s.reported ? " · Reported total: " + s.reported.citations + " · Total checked " + dateLabel(s.reported.date) : "")
         : "No annual series reported";
       link.title = note.textContent;
       legend.append(item);
@@ -296,7 +299,7 @@ async function initialize(root) {
         point.setAttribute('aria-describedby','citation-tooltip');
         point.dataset.series = index;
         point.style.stroke = color(index); point.style.fill = color(index);
-        if (p.kind === 'reported') { point.setAttribute('r','5'); point.style.fill = 'var(--color-surface, Canvas)'; point.style.strokeWidth = '2'; }
+        if (p.kind === 'reported') { point.setAttribute('r','5'); point.style.fill = 'var(--site-surface)'; point.style.strokeWidth = '2'; }
         for (const event of ["pointerenter","focus","click"]) point.addEventListener(event, () => { highlight(index); showTooltip(point,s,p); });
         for (const event of ['pointerleave','blur']) point.addEventListener(event, () => { hideTooltip(); highlight(null); });
         svg.append(point);

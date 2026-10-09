@@ -36,4 +36,13 @@ publication:
   name: "*Digital Libraries: Supporting Open Science*"
 identifiers:
   doi: 10.1007/978-3-030-11226-4_21
+links:
+- type: RS Server
+  url: https://doi.org/10.5281/zenodo.1442630
+- type: RS Rate
+  url: https://doi.org/10.5281/zenodo.1442599
+- type: RS PDF
+  url: https://doi.org/10.5281/zenodo.1442597
+- type: documentation
+  url: https://doi.org/10.5281/zenodo.1443371
 ---

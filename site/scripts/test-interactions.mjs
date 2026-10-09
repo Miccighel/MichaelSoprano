@@ -106,12 +106,32 @@ test('publication filters combine title, author, type and year and expose empty 
   assert.equal(d.querySelectorAll('article:not([hidden])').length,2);
 });
 
+test('publication reset clears filters, legacy hash and restores all results', async t => {
+  const dom = await fixture(`<input id="publication-search"><select id="publication-type-filter"><option value=""></option><option value="article-journal">Journal</option></select><select id="publication-year-filter"><option value=""></option><option value="2025">2025</option></select><button id="publication-filter-reset" hidden>Clear filters</button><p id="publication-result-count" role="status"></p><div id="publication-archive-list"><section data-publication-year-group><article data-title="alpha" data-authors="soprano" data-type="article-journal" data-year="2025"></article><article data-title="beta" data-authors="other" data-type="paper-conference" data-year="2026"></article></section></div><p id="publication-archive-empty" hidden></p>`);
+  t.after(() => dom.window.close());
+  const {window:w}=dom,d=w.document;
+  w.history.replaceState(null,'','/publication/#2');
+  w.eval(await source('publication-filters.js'));
+  const reset=d.querySelector('#publication-filter-reset'), count=d.querySelector('#publication-result-count');
+  assert.equal(count.textContent,'1 of 2 publications');
+  assert.equal(reset.hidden,false);
+  const search=d.querySelector('#publication-search');
+  search.value='missing'; search.dispatchEvent(new w.Event('input'));
+  assert.equal(count.textContent,'0 of 2 publications');
+  reset.click();
+  assert.equal(count.textContent,'2 of 2 publications');
+  assert.equal(reset.hidden,true);
+  assert.equal(d.querySelector('#publication-archive-empty').hidden,true);
+  assert.equal(w.location.hash,'');
+  assert.equal(d.activeElement,search);
+});
+
 test('search opens, shows results, handles navigation and Escape, restores focus', async t => {
-  const dom = await fixture(`<button data-search-toggle>Search</button><div id="site-search" hidden data-pagefind-url="/pagefind/pagefind.js"><button data-search-close>Close</button><input id="site-search-input"><template id="site-search-result-template"><a><h3></h3><p></p></a></template><div id="site-search-results"></div><p data-search-intro></p><p data-search-loading class="hidden"></p><p data-search-empty class="hidden"></p><p data-search-error class="hidden"></p><p data-search-status></p></div>`);
+  const dom = await fixture(`<button data-search-toggle>Search</button><div id="site-search" hidden data-pagefind-url="/pagefind/pagefind.js"><button data-search-close>Close</button><input id="site-search-input"><template id="site-search-result-template"><a><span class="site-search-result-meta" hidden></span><h3></h3><p></p></a></template><div id="site-search-results"></div><p data-search-intro></p><p data-search-loading class="hidden"></p><p data-search-empty class="hidden"></p><p data-search-error class="hidden"></p><p data-search-status></p></div>`);
   t.after(() => dom.window.close());
   const {window:w}=dom,d=w.document;
   // Stub only the external Pagefind module; run the actual interaction code.
-  w.__loadPagefind=async () => ({init:async()=>{},search:async query=>({results: query === 'missing' ? [] : ['Alpha','Beta'].map(title=>({data:async()=>({url:'#',meta:{title},excerpt:'Example'})}))})});
+  w.__loadPagefind=async () => ({init:async()=>{},search:async query=>({results: query === 'missing' ? [] : ['Alpha','Beta'].map(title=>({data:async()=>({url:'#',meta:{title,kind:'Publication',year:'2026'},excerpt:'Example'})}))})});
   w.eval((await source('hb-search.js')).replace('import(modal.dataset.pagefindUrl)','window.__loadPagefind()'));
   d.dispatchEvent(new w.Event('DOMContentLoaded'));
   const toggle=d.querySelector('[data-search-toggle]'); toggle.focus(); toggle.click();
@@ -119,9 +139,13 @@ test('search opens, shows results, handles navigation and Escape, restores focus
   const input=d.querySelector('input'); assert.equal(d.activeElement,input);
   input.value='alpha'; input.dispatchEvent(new w.Event('input'));
   await eventually(()=>assert.equal(d.querySelectorAll('#site-search-results a').length,2));
+  assert.equal(input.getAttribute('aria-expanded'),'true');
+  assert.equal(d.querySelector('.site-search-result-meta').textContent,'Publication · 2026');
+  assert.equal(d.querySelector('.site-search-result-meta').hidden,false);
   key(w,input,'ArrowDown'); assert.equal(input.getAttribute('aria-activedescendant'),'site-search-result-1');
   input.value='missing'; input.dispatchEvent(new w.Event('input'));
   await eventually(()=>assert.equal(d.querySelector('[data-search-status]').textContent,'No results found.'));
+  assert.equal(input.getAttribute('aria-expanded'),'false');
   key(w,input,'Escape'); assert.equal(d.querySelector('#site-search').hidden,true);
   assert.equal(d.activeElement,toggle);
   key(w,d,'k',{ctrlKey:true}); assert.equal(d.querySelector('#site-search').hidden,false);

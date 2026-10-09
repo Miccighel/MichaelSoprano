@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     selectedIndex = -1;
     resultsElement.replaceChildren();
     input.removeAttribute("aria-activedescendant");
+    input.setAttribute("aria-expanded", "false");
   };
 
   const selectResult = (index) => {
@@ -59,6 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const title = link.querySelector("h3");
     title.innerHTML = data.meta?.title || "Untitled";
+    const metadata = link.querySelector(".site-search-result-meta");
+    if (metadata) {
+      metadata.textContent = [data.meta?.kind, data.meta?.year].filter(Boolean).join(" · ");
+      metadata.hidden = !metadata.textContent;
+    }
 
     const excerpt = link.querySelector("p");
     excerpt.innerHTML = data.excerpt || "";
@@ -108,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (currentRequest !== requestId) return;
 
       const elements = data.map(createResult);
+      input.setAttribute("aria-expanded", String(elements.length > 0));
       resultsElement.replaceChildren(...elements);
       results = elements;
 

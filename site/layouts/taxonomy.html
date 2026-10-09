@@ -15,7 +15,7 @@
         {{- $count := .Count -}}
         {{- with site.GetPage (printf "/%s/%s" $type $name) }}
           <a href="{{ .RelPermalink }}" class="topic-index-link inline-flex items-center">
-            {{ .Title }}
+            {{ if eq $type "tags" }}{{ partial "legacy/topic-label.html" (dict "slug" (path.Base (strings.TrimSuffix "/" .RelPermalink)) "fallback" .Title) }}{{ else }}{{ .Title }}{{ end }}
             <span class="topic-index-count inline-flex items-center justify-center">{{ $count }}</span>
           </a>
         {{- end -}}

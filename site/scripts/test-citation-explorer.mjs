@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {readFile} from "node:fs/promises";
 const source = await readFile(new URL("../assets/js/citation-explorer.js", import.meta.url), "utf8");
-const {cumulativeSeries, plotBounds, tooltipPosition, legendOrder, citationTicks, keyboardPoint} = await import("data:text/javascript;base64," + Buffer.from(source).toString("base64"));
+const {cumulativeSeries, plotBounds, tooltipPosition, legendOrder, citationTicks, keyboardPoint, pointDetail} = await import("data:text/javascript;base64," + Buffer.from(source).toString("base64"));
 
 test('keyboard navigation skips unavailable papers, keeps nearest year and clamps endpoints', () => {
   const series=[{points:[{x:2022},{x:2026}]},{points:[]},{points:[{x:2025}]}];
@@ -16,9 +16,19 @@ test('keyboard navigation skips unavailable papers, keeps nearest year and clamp
 
 test('citation ticks use round values and cover the largest count', () => {
   assert.deepEqual(citationTicks(99), [0,25,50,75,100]);
+  assert.deepEqual(citationTicks(103), [0,25,50,75,100,125]);
   assert.deepEqual(citationTicks(0), [0]);
   assert.deepEqual(citationTicks(3), [0,1,2,3]);
   assert.ok(citationTicks(730).at(-1) >= 730);
+});
+
+test('tooltip distinguishes annual verification from the latest total verification', () => {
+  const [s]=cumulativeSeries({papers:[{title:'A',annual:{checked_on:'2026-09-30',total:10,years:[{year:2026,citations:10}]},snapshots:[{date:'2026-10-09',citations:12}]}]});
+  assert.match(pointDetail(s,s.points[0]),/Annual counts checked Sep 30, 2026/);
+  const detail=pointDetail(s,s.points.at(-1));
+  assert.match(detail,/Reported total · Oct 9, 2026/);
+  assert.match(detail,/Annual counts checked Sep 30, 2026/);
+  assert.match(detail,/Difference: \+2 \(not assigned to a year\)/);
 });
 
 const data = {totals:[{name:"Scholar",url:"https://scholar.google.com",points:[

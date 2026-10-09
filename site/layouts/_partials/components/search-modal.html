@@ -24,10 +24,13 @@
           <input
             id="site-search-input"
             type="search"
-            placeholder="Search publications, talks, courses..."
+            placeholder="Search publications, presentations, courses…"
             class="site-search-input"
             aria-label="Search this website"
             aria-controls="site-search-results"
+            role="combobox"
+            aria-haspopup="listbox"
+            aria-expanded="false"
             aria-autocomplete="list"
             autocomplete="off"
           >
@@ -55,6 +58,7 @@
       <div class="site-search-results-wrap">
         <template id="site-search-result-template">
           <a class="site-search-result" role="option" aria-selected="false">
+            <span class="site-search-result-meta" hidden></span>
             <h3></h3>
             <p></p>
           </a>

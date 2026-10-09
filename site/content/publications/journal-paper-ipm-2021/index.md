@@ -55,4 +55,7 @@ publication:
     (JCR) Q1 (2021), Scimago (SJR) Q1 (2021).*"
 identifiers:
   doi: 10.1016/j.ipm.2021.102710
+links:
+- type: dataset
+  url: https://github.com/KevinRoitero/crowdsourcingTruthfulness
 ---

@@ -5,7 +5,7 @@
 {{ $email := printf "mailto:?subject=%s&body=%s" $title $url | safeURL }}
 {{ $linkedin := printf "https://www.linkedin.com/shareArticle?url=%s&title=%s" $url $title | safeURL }}
 {{ $whatsapp := printf "https://wa.me/?text=%s%%20%s" $title $url | safeURL }}
-<div class="share-box" aria-label="Share this page">
+<div class="share-box" aria-label="Share this page" data-pagefind-ignore>
   <ul class="share">
     <li><a href="{{ $x }}" target="_blank" rel="noopener" aria-label="Share on X"><i class="fab fa-x-twitter" aria-hidden="true"></i></a></li>
     <li><a href="{{ $facebook }}" target="_blank" rel="noopener" aria-label="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>

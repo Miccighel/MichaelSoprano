@@ -554,9 +554,9 @@ if File.file?(tags_index_path)
   {
     '/tag/amazon-mechanical-turk/' => 'Amazon Mechanical Turk 2',
     '/tag/crowd_frame/' => 'Crowd_Frame 2',
-    '/tag/crowdsourcing/' => 'Crowdsourcing 24',
+    '/tag/crowdsourcing/' => 'crowdsourcing 24',
     '/tag/hits/' => 'HITS 3',
-    '/tag/network-analysis/' => 'Network Analysis 3',
+    '/tag/network-analysis/' => 'network analysis 3',
     '/tag/prolific/' => 'Prolific 2',
     '/tag/toloka/' => 'Toloka 2'
   }.each do |href, expected_text|

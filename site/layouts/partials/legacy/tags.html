@@ -1,5 +1,5 @@
 {{ with .Params.tags }}
-  <div class="article-tags">
-    {{ range . }}<a class="badge badge-light" href="/tag/{{ . | urlize }}/">{{ . }}</a>{{ end }}
+  <div class="article-tags" data-pagefind-ignore>
+    {{ range . }}<a class="badge badge-light" href="/tag/{{ . | urlize }}/">{{ partial "legacy/topic-label.html" (dict "slug" (. | urlize) "fallback" .) }}</a>{{ end }}
   </div>
 {{ end }}

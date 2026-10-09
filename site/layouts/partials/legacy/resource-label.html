@@ -1,0 +1,3 @@
+{{- $type := lower . -}}
+{{- $labels := dict "pdf" "PDF" "doi" "DOI" "materials" "Materials" "code" "Code" "dataset" "Dataset" "documentation" "Documentation" "slides" "Slides" "video" "Video" "rs server" "RS Server" "rs rate" "RS Rate" "rs pdf" "RS PDF" -}}
+{{- return (index $labels $type | default (title .)) -}}

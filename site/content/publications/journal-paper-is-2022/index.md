@@ -46,4 +46,7 @@ publication:
     Scimago (SJR) Q1 (2021).*"
 identifiers:
   doi: 10.1016/j.is.2022.102107
+links:
+- type: code
+  url: https://github.com/davideceolin/FAReviews
 ---

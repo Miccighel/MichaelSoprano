@@ -49,6 +49,8 @@ publication:
 identifiers:
   doi: 10.1145/3674884
 links:
+- type: materials
+  url: https://osf.io/h4du9/
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3674884
 ---

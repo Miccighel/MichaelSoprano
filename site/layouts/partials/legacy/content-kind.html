@@ -1,0 +1,2 @@
+{{- $labels := dict "publications" "Publication" "events" "Presentation" "blog" "Course" -}}
+{{- return (index $labels .Section | default "Page") -}}

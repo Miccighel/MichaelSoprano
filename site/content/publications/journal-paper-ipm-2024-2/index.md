@@ -55,4 +55,7 @@ publication:
     (JCR) Q1 (2023), Scimago (SJR) Q1 (2023).*"
 identifiers:
   doi: 10.1016/j.ipm.2024.103792
+links:
+- type: materials
+  url: https://osf.io/j7as8/
 ---

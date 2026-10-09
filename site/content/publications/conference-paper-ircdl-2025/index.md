@@ -40,6 +40,8 @@ publication:
   name: "*Proceedings of the 21st Conference on Information and Research Science Connecting
     to Digital and Library Science.*"
 links:
+- type: materials
+  url: https://osf.io/kwv47/
 - type: pdf
   url: https://ceur-ws.org/Vol-3937/paper8.pdf
 ---

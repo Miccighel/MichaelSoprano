@@ -11,6 +11,10 @@
     <label><span class="sr-only">Publication type</span><select id="publication-type-filter"><option value="">Type</option><option value="paper-conference">Conference paper</option><option value="article-journal">Journal article</option><option value="thesis">Thesis</option></select></label>
     <label><span class="sr-only">Publication year</span><select id="publication-year-filter"><option value="">Year</option>{{ range ($pages.GroupByDate "2006") }}<option value="{{ .Key }}">{{ .Key }}</option>{{ end }}</select></label>
   </div>
+  <div class="publication-filter-summary">
+    <p id="publication-result-count" role="status" aria-live="polite" aria-atomic="true">{{ len $pages }} publications</p>
+    <button id="publication-filter-reset" type="button" class="btn btn-outline-primary" hidden>Clear filters</button>
+  </div>
 
   <div id="publication-archive-list">
     {{ range ($pages.GroupByDate "2006") }}
@@ -21,11 +25,11 @@
             {{ $publication := . }}
             {{ $type := index .Params.publication_types 0 | default "" }}
             <article class="pub-list-item view-citation" data-title="{{ .Title | lower }}" data-authors="{{ delimit .Params.authors ", " | lower }}" data-type="{{ $type }}" data-year="{{ .Date.Format "2006" }}">
-              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              <h3 class="publication-archive-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
               <div class="li-cite-author">{{ delimit .Params.authors ", " }}</div>
               {{ with .Params.publication }}{{ with .name }}<div class="publication-archive-meta"><em>{{ replace . "*" "" }}</em></div>{{ end }}{{ end }}
               <span class="legacy-attachments">
-                {{ range .Params.links }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ upper .type }}</a>{{ end }}
+                {{ range .Params.links }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ partial "legacy/resource-label.html" .type }}</a>{{ end }}
                 <button class="btn btn-outline-primary btn-sm legacy-cite" type="button" data-cite-url="{{ $publication.RelPermalink }}cite.bib">Cite</button>
                 {{ with .Params.identifiers }}{{ with .doi }}<a class="btn btn-outline-primary btn-sm" href="https://doi.org/{{ . }}">DOI</a>{{ end }}{{ end }}
               </span>
