@@ -28,10 +28,28 @@ const data = {totals:[{name:"Scholar",url:"https://scholar.google.com",points:[
   {date:"2026-09-25",citations:5},{date:"2026-09-30",citations:4}
 ],annual:{checked_on:"2026-09-30",total:5,years:[{year:2024,citations:1},{year:2026,citations:3}]}}]};
 
-test("cumulative series sums reported counts without inventing years or matching the profile total", () => {
+test("matching latest total does not duplicate an annual point", () => {
   const [series] = cumulativeSeries(data);
   assert.deepEqual(series.points.map(p=>[p.x,p.y,p.raw]),[[2024,1,1],[2026,4,3]]);
   assert.equal(series.annual.total,5);
+});
+
+test('latest total reconciles a discrepancy without changing any annual count', () => {
+  const annual={checked_on:'2026-10-09',total:103,years:[{year:2023,citations:2},{year:2024,citations:15},{year:2025,citations:47},{year:2026,citations:36}]};
+  const [s]=cumulativeSeries({papers:[{title:'Cognitive Biases',annual}]});
+  assert.deepEqual(s.points.map(p=>p.y),[2,17,64,100,103]);
+  assert.equal(s.points.at(-1).difference,3);
+  assert.equal(s.points.at(-2).raw,36);
+  assert.equal(annual.years.at(-1).citations,36);
+});
+
+test('newer snapshots take precedence, including downward corrections; stale ones do not', () => {
+  const paper={title:'A',annual:{checked_on:'2026-10-05',total:10,years:[{year:2026,citations:10}]}};
+  const [s]=cumulativeSeries({papers:[{...paper,snapshots:[{date:'2026-10-09',citations:9}]}]});
+  assert.deepEqual(s.points.map(p=>p.y),[10,9]);
+  assert.equal(s.points.at(-1).difference,-1);
+  const [stale]=cumulativeSeries({papers:[{...paper,snapshots:[{date:'2026-09-01',citations:8}]}]});
+  assert.deepEqual(stale.points.map(p=>p.y),[10]);
 });
 test("missing annual data remains unavailable rather than synthesized from snapshots", () => {
   const series = cumulativeSeries({papers:[{title:"Missing",snapshots:[{citations:5}],annual:null}]});

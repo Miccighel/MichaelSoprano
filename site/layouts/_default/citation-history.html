@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $data := index hugo.Data "citation-series" }}
 {{ $papers := slice }}
-{{ range $data.papers }}{{ $papers = $papers | append (dict "id" .id "title" .title "url" .url "annual" .annual) }}{{ end }}
+{{ range $data.papers }}{{ $papers = $papers | append (dict "id" .id "title" .title "url" .url "annual" .annual "snapshots" (last 1 .snapshots)) }}{{ end }}
 {{ $export := resources.FromString "data/annual-citations.json" (dict "schema" 1 "papers" $papers | jsonify) }}
 <main class="citation-explorer legacy-container" data-pagefind-body>
   <header class="citation-explorer-header">
