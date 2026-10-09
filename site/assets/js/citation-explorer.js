@@ -1,15 +1,34 @@
-// Cumulative sums of reported annual counts; never adjusted to profile totals.
+// Preserve annual sums; show the latest reported total as a distinct observation.
 export function cumulativeSeries(data) {
   return data.papers.map(paper => {
     let cumulative = 0;
+    const points = [...(paper.annual?.years ?? [])].sort((a,b) => a.year - b.year).map(p => {
+      cumulative += p.citations;
+      return {...p, x:p.year, y:cumulative, raw:p.citations};
+    });
+    const snapshot = [...(paper.snapshots ?? [])].filter(p => p.date && Number.isFinite(p.citations))
+      .sort((a,b) => a.date.localeCompare(b.date)).at(-1);
+    const reported = (snapshot && snapshot.date >= (paper.annual?.checked_on ?? '') ? snapshot : null) ?? (Number.isFinite(paper.annual?.total) && paper.annual?.checked_on
+      ? {date:paper.annual.checked_on, citations:paper.annual.total} : null);
+    if (points.length && reported && reported.date >= (paper.annual.checked_on ?? '')) {
+      const year = Number(reported.date.slice(0,4));
+      if (year >= points.at(-1).x && (reported.citations !== cumulative || year > points.at(-1).x)) {
+        points.push({x:year, year, y:reported.citations, kind:'reported', date:reported.date,
+          annualSum:cumulative, difference:reported.citations-cumulative});
+      }
+    }
     return {
-      name: paper.title, url: paper.url, annual: paper.annual,
-      points: [...(paper.annual?.years ?? [])].sort((a,b) => a.year - b.year).map(p => {
-        cumulative += p.citations;
-        return {...p, x:p.year, y:cumulative, raw:p.citations};
-      })
+      name: paper.title, url: paper.url, annual: paper.annual, reported, points
     };
   });
+}
+
+export function pointDetail(s, p) {
+  if (p.kind === 'reported') return 'Reported total · ' + dateLabel(p.date)
+    + ' · Annual counts sum to ' + p.annualSum + (p.difference === 0 ? ' (matches total)' : ' · Difference: '
+    + (p.difference > 0 ? '+' : '') + p.difference + ' (not assigned to a year)');
+  return p.year + ' · ' + p.raw + ' received that year'
+    + (p.year === Number(s.annual.checked_on.slice(0,4)) ? ' · Partial year' : '');
 }
 
 export function plotBounds(series) {
@@ -103,9 +122,9 @@ async function initialize(root) {
     tooltip.replaceChildren();
     const name = document.createElement('strong'); name.textContent = s.name;
     const value = document.createElement('span'); value.className = 'citation-tooltip-value';
-    value.textContent = p.y + ' cumulative citations';
+    value.textContent = p.y + (p.kind === 'reported' ? ' total citations' : ' cumulative citations');
     const detail = document.createElement('span');
-    detail.textContent = p.year + ' · ' + p.raw + ' received that year' + (p.year === Number(s.annual.checked_on.slice(0,4)) ? ' · Partial year' : '');
+    detail.textContent = pointDetail(s, p);
     tooltip.append(name, value, detail); tooltip.hidden = false;
     if (document.activeElement === chart) {
       root.querySelector('#citation-announcement').textContent = s.name + '. ' + value.textContent + '. ' + detail.textContent;
@@ -198,7 +217,7 @@ async function initialize(root) {
       const title = document.createElement('span'); title.textContent = s.name; title.className = 'citation-publication-title';
       const count = document.createElement('span'); count.className = 'citation-publication-count';
       count.textContent = s.points.length ? String(s.points.at(-1).y) : 'No data';
-      count.setAttribute('aria-label', s.points.length ? s.points.at(-1).y + ' cumulative citations' : 'Annual data unavailable');
+      count.setAttribute('aria-label', s.points.length ? s.points.at(-1).y + ' total citations' : 'Annual data unavailable');
       link.append(swatch,title,count);
       for (const event of ['pointerenter','focus']) link.addEventListener(event, () => { hideTooltip(); highlight(index); });
       link.addEventListener('click', () => {
@@ -212,9 +231,9 @@ async function initialize(root) {
       viewChart.addEventListener('click', () => { chart.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',block:'center'}); chart.focus({preventScroll:true}); });
       item.append(viewChart);
       const note = document.createElement("span");
-      const sum = s.points.reduce((total, p) => total + p.raw, 0);
+      const sum = s.points.filter(p => p.kind !== 'reported').reduce((total, p) => total + p.raw, 0);
       note.textContent = s.points.length
-        ? "Checked " + dateLabel(s.annual.checked_on) + " · Cumulative sum: " + sum + (s.annual.total !== null ? " · Reported total: " + s.annual.total : "")
+        ? "Checked " + dateLabel(s.reported?.date ?? s.annual.checked_on) + " · Annual counts sum: " + sum + (s.reported ? " · Reported total: " + s.reported.citations : "")
         : "No annual series reported";
       link.title = note.textContent;
       legend.append(item);
@@ -249,7 +268,7 @@ async function initialize(root) {
     series.forEach((s, index) => {
       if (s.points.length > 1) {
         const line = svgElement("polyline", {
-          points:s.points.map(p => x(p.x) + "," + y(p.y)).join(" "),class:"citation-line", 'data-series':index,
+          points:s.points.filter(p => p.kind !== 'reported').map(p => x(p.x) + "," + y(p.y)).join(" "),class:"citation-line", 'data-series':index,
           tabindex:-1, role:'img', 'aria-label':s.name
         });
         line.style.stroke = color(index);
@@ -257,10 +276,16 @@ async function initialize(root) {
         for (const event of ['pointerenter','focus']) line.addEventListener(event, () => highlight(index));
         for (const event of ['pointerleave','blur']) line.addEventListener(event, () => highlight(null));
         svg.append(line);
+        const last = s.points.at(-1), previous = s.points.at(-2);
+        if (last.kind === 'reported') {
+          const connector = svgElement('line', {x1:x(previous.x), y1:y(previous.y), x2:x(last.x), y2:y(last.y),
+            'stroke-dasharray':'3 3', 'data-series':index, 'aria-hidden':'true'});
+          connector.style.stroke = color(index);
+          svg.append(connector);
+        }
       }
       s.points.forEach((p, pointIndex) => {
-        const label = s.name + " · " + p.year + " · " + p.y + " cumulative citations · " + p.raw + " received that year"
-          + (p.year === Number(s.annual.checked_on.slice(0,4)) ? " · Partial year" : "");
+        const label = s.name + " · " + p.y + " citations · " + pointDetail(s, p);
         let point;
         point = svgElement("circle", {cx:x(p.x),cy:y(p.y),r:3.5});
         point.setAttribute("class", "citation-point");
@@ -271,6 +296,7 @@ async function initialize(root) {
         point.setAttribute('aria-describedby','citation-tooltip');
         point.dataset.series = index;
         point.style.stroke = color(index); point.style.fill = color(index);
+        if (p.kind === 'reported') { point.setAttribute('r','5'); point.style.fill = 'var(--color-surface, Canvas)'; point.style.strokeWidth = '2'; }
         for (const event of ["pointerenter","focus","click"]) point.addEventListener(event, () => { highlight(index); showTooltip(point,s,p); });
         for (const event of ['pointerleave','blur']) point.addEventListener(event, () => { hideTooltip(); highlight(null); });
         svg.append(point);
