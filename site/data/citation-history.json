@@ -1,5 +1,42 @@
 [
   {
+    "from": "2026-10-09",
+    "to": "2026-10-13",
+    "source": "Google Scholar",
+    "source_url": "https://scholar.google.com/citations?user=ocK0qRUAAAAJ",
+    "previous_total": 741,
+    "current_total": 744,
+    "delta": 3,
+    "changes": [
+      {
+        "id": "UeHWp8X0CEIC",
+        "title": "Can The Crowd Identify Misinformation Objectively? The Effects of Judgment Scale and Assessor's Background",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AUeHWp8X0CEIC",
+        "previous": 94,
+        "current": 95,
+        "delta": 1
+      },
+      {
+        "id": "4DMP91E08xMC",
+        "title": "Crowdsourced Fact-Checking: Does it Actually Work?",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A4DMP91E08xMC",
+        "previous": 49,
+        "current": 50,
+        "delta": 1
+      },
+      {
+        "id": "-f6ydRqryjwC",
+        "title": "Large Language Models for Combinatorial Optimization: A Systematic Review",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A-f6ydRqryjwC",
+        "previous": 60,
+        "current": 61,
+        "delta": 1
+      }
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
     "from": "2026-10-05",
     "to": "2026-10-09",
     "source": "Google Scholar",
