@@ -48,6 +48,10 @@ sections:
     text: |-
       ### Organizational Roles
 
+      #### 2027
+
+      - Reducing Online Misinformation through Credible Information Retrieval (*ROMCIR 2027*), ECIR 2027, Southampton, United Kingdom. **Organizer**.
+
       #### 2025
 
       - Workshop “AI, Misinformation and Disinformation”, held as part of the 5th National CINI Conference on Artificial Intelligence (*Ital-IA 2025*), Trieste, 23 Jun 2025. **Organizer**
