@@ -3,14 +3,14 @@
 ## Normal deployment
 
 1. Update the canonical source in `site/` on a development branch.
-2. Open a pull request to `master` and wait for the `Website / Validate and
+2. Open a pull request to `main` and wait for the `Website / Validate and
    build` check to pass.
 3. Merge the pull request. The same validated build is uploaded to GitHub
    Pages automatically.
 4. Verify the homepage, search, CV downloads, publications, presentations,
    teaching pages, and the custom domain.
 
-Only a push to `master` can trigger the normal production deployment.
+Only a push to `main` can trigger the normal production deployment.
 
 ## Restore the former website
 
@@ -18,11 +18,16 @@ The legacy source is preserved in `hugo-version`. To restore it:
 
 1. Open the Actions tab on GitHub.
 2. Select **Legacy rollback**.
-3. Choose **Run workflow** from `master`.
+3. Choose **Run workflow** from `main`.
 4. Wait for the protected `github-pages` deployment to complete.
 5. Verify `https://michaelsoprano.com/` and the custom domain setting.
 
-This operation rebuilds the preserved source and does not rewrite `master`.
+This operation rebuilds the preserved source and does not rewrite `main`.
+
+The production branch was renamed from `master` to `main` on October 23,
+2026. Both the normal deployment and legacy rollback share the `main`
+concurrency group, and the `github-pages` environment permits deployment
+from `main`. The legacy snapshot branches below retain their original names.
 
 ## Restore a previously generated snapshot
 

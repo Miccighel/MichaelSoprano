@@ -1,5 +1,9 @@
 # Migrazione conservativa a Hugo
 
+Documento storico della migrazione. Il ramo di produzione, allora chiamato
+`master`, è stato rinominato in `main` il 23 ottobre 2026; i riferimenti seguenti
+descrivono lo stato originale. Per le procedure attuali vedere `ROLLBACK.md`.
+
 La migrazione rimuove progressivamente HugoBlox senza modificare contenuti,
 URL pubblici o presentazione del sito. Il ramo di produzione `master` resta
 invariato fino alla verifica completa del risultato.

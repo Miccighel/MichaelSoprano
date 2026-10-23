@@ -10,7 +10,7 @@ documentazione tecnica dell'applicazione Hugo si trova in
 ## Regole essenziali
 
 - La sorgente attuale e canonica è tutta dentro `site/`.
-- `master` è il ramo di produzione: ogni aggiornamento unito lì viene
+- `main` è il ramo di produzione: ogni aggiornamento unito lì viene
   convalidato e poi pubblicato automaticamente.
 - Le modifiche vanno preparate in un ramo separato e unite tramite pull
   request solo dopo il superamento del controllo **Validate and build**.
@@ -176,7 +176,7 @@ Questo verifica la coerenza dell'esportazione, non la correttezza delle
 metriche sui servizi esterni. Prima del commit conviene aprire entrambi i file e
 controllare data, metriche, impaginazione e numero di pagine.
 Se cambiano i sorgenti dei CV, pubblicare prima la relativa pull request nella
-repository LaTeX (ramo `main`), poi quella del sito (ramo `master`) con i PDF
+repository LaTeX (ramo `main`), poi quella del sito (ramo `main`) con i PDF
 sincronizzati. La build del sito non ricompila i CV.
 
 ## Controllare le citazioni BibTeX
@@ -267,14 +267,14 @@ da verificare in anteprima. Non introducono dipendenze nel sito pubblicato.
 
 1. Creare un ramo di lavoro con prefisso `codex/` o un altro nome descrittivo.
 2. Fare commit e push delle modifiche.
-3. Aprire una pull request verso `master`.
+3. Aprire una pull request verso `main`.
 4. Attendere che **Website / Validate and build** sia verde.
 5. Controllare l'artefatto `site-preview`, se serve un'ultima verifica.
 6. Unire la pull request: il deploy su GitHub Pages parte automaticamente.
 7. Verificare homepage, ricerca, CV, pagine interne, favicon e dominio
    `michaelsoprano.com`.
 
-Solo un push a `master` può avviare il normale deploy di produzione. I branch
+Solo un push a `main` può avviare il normale deploy di produzione. I branch
 di lavoro e le pull request non modificano il sito pubblico.
 
 Le procedure di ripristino, i riferimenti ai rami storici e i controlli del
