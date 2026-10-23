@@ -7,7 +7,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: pages-refs/heads/master
+  group: pages-refs/heads/main
   cancel-in-progress: false
 
 jobs:
