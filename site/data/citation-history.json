@@ -1,5 +1,66 @@
 [
   {
+    "from": "2026-10-23",
+    "to": "2026-10-27",
+    "source": "Google Scholar",
+    "source_url": "https://scholar.google.com/citations?user=ocK0qRUAAAAJ",
+    "previous_total": 751,
+    "current_total": 758,
+    "delta": 7,
+    "changes": [
+      {
+        "id": "kNdYIx-mwKoC",
+        "title": "The Effects of Crowd Worker Biases in Fact-Checking Tasks",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AkNdYIx-mwKoC",
+        "previous": 59,
+        "current": 61,
+        "delta": 2
+      },
+      {
+        "id": "qxL8FJ1GzNcC",
+        "title": "Cognitive Biases in Fact-Checking and Their Countermeasures: A Review",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AqxL8FJ1GzNcC",
+        "previous": 105,
+        "current": 106,
+        "delta": 1
+      },
+      {
+        "id": "4DMP91E08xMC",
+        "title": "Crowdsourced Fact-Checking: Does it Actually Work?",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A4DMP91E08xMC",
+        "previous": 52,
+        "current": 53,
+        "delta": 1
+      },
+      {
+        "id": "ZeXyd9-uunAC",
+        "title": "Efficiency and Effectiveness of LLM-Based Summarization of Evidence in Crowdsourced Fact-Checking",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AZeXyd9-uunAC",
+        "previous": 10,
+        "current": 11,
+        "delta": 1
+      },
+      {
+        "id": "-f6ydRqryjwC",
+        "title": "Large Language Models for Combinatorial Optimization: A Systematic Review",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A-f6ydRqryjwC",
+        "previous": 64,
+        "current": 65,
+        "delta": 1
+      },
+      {
+        "id": "0EnyYjriUFMC",
+        "title": "The Many Dimensions of Truthfulness: Crowdsourcing Misinformation Assessments on a Multidimensional Scale",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A0EnyYjriUFMC",
+        "previous": 100,
+        "current": 101,
+        "delta": 1
+      }
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
     "from": "2026-10-22",
     "to": "2026-10-23",
     "source": "Google Scholar",
