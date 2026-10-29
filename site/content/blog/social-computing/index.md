@@ -6,7 +6,7 @@ summary: Course offered within the Bachelor's Degree in Internet of Things, Big 
   and Machine Learning at the University of Udine
 projects: []
 date: '2024-08-06T11:00:00Z'
-lastmod: '2026-09-29T15:32:00+02:00'
+lastmod: '2026-10-29'
 draft: false
 featured: false
 image:
