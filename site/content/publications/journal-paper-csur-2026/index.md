@@ -43,4 +43,6 @@ identifiers:
 links:
 - type: pdf
   url: https://dl.acm.org/doi/pdf/10.1145/3801961
+- type: preprint
+  url: https://arxiv.org/abs/2507.03637
 ---

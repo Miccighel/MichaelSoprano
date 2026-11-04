@@ -61,4 +61,6 @@ links:
   url: https://github.com/KevinRoitero/crowdsourcingTruthfulness
 - type: pdf
   url: https://link.springer.com/content/pdf/10.1007/s00779-021-01604-6.pdf
+- type: preprint
+  url: https://arxiv.org/abs/2107.11755
 ---
