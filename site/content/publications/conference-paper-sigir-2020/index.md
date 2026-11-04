@@ -46,6 +46,8 @@ publication:
 identifiers:
   doi: 10.1145/3397271.3401112
 links:
+- type: preprint
+  url: https://arxiv.org/abs/2005.06915
 - type: dataset
   url: https://github.com/KevinRoitero/crowdsourcingTruthfulness
 - type: code

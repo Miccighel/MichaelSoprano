@@ -56,6 +56,8 @@ publication:
 identifiers:
   doi: 10.1016/j.ipm.2021.102710
 links:
+- type: preprint
+  url: https://arxiv.org/abs/2108.01222
 - type: dataset
   url: https://github.com/KevinRoitero/crowdsourcingTruthfulness
 ---
