@@ -106,7 +106,7 @@
                     <summary><i class="fas fa-history citation-action-icon" aria-hidden="true"></i><span class="citation-action-copy"><span>Latest citation changes</span><small>Google Scholar</small></span><i class="fas fa-chevron-down citation-action-arrow" aria-hidden="true"></i></summary>
                     {{ range first 1 . }}
                       <section class="citation-history-period">
-                        <h3>{{ time.Format "Jan 2, 2006" .from }} – {{ time.Format "Jan 2, 2006" .to }}</h3>
+                        <h3>{{ time.Format "Jan 2, 2006" .from }}{{ if ne .from .to }} – {{ time.Format "Jan 2, 2006" .to }}{{ end }}</h3>
                         <p class="citation-history-total"><a href="{{ .source_url }}" target="_blank" rel="noopener">{{ .source }}</a>: {{ .previous_total }} → {{ .current_total }} citations ({{ if gt .delta 0 }}+{{ end }}{{ .delta }})</p>
                         {{ with .changes }}
                           <ul class="citation-change-list">
