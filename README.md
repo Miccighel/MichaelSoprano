@@ -128,6 +128,12 @@ precedenti. Il file contiene `checked_on`, `source`, `profile_id`,
 Usare gli ID degli articoli, non la posizione nell'elenco. Il totale deve
 corrispondere alle metriche Scholar della stessa data.
 
+Per una seconda verifica nella stessa giornata, conservare la prima rilevazione
+e usare nei sorgenti CV i file `scholar-citations-YYYY-MM-DDTHHMMSSZ.json` e
+`scholar-annual-YYYY-MM-DDTHHMMSSZ.json`, con l'orario UTC effettivo in
+`checked_at` anche sulla fonte aggiornata di `bibliometrics.json`. Lo storico
+mantiene entrambe le rilevazioni e il grafico usa quella più recente.
+
 La sincronizzazione genera `site/data/citation-history.json`: confronta
 le rilevazioni consecutive della stessa fonte, include aumenti e diminuzioni,
 e distingue articoli aggiunti o rimossi. Il riepilogo è disponibile sotto

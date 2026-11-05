@@ -22,6 +22,19 @@ test('citation ticks use round values and cover the largest count', () => {
   assert.ok(citationTicks(730).at(-1) >= 730);
 });
 
+test('intraday checks choose the newest snapshot and do not override newer annual data', () => {
+  const day='2026-11-04';
+  const paper={title:'A',annual:{checked_on:day,checked_at:day+'T14:00:00Z',total:67,years:[{year:2026,citations:65}]}};
+  const [s]=cumulativeSeries({papers:[{...paper,snapshots:[
+    {date:day,checked_at:day+'T15:00:00Z',citations:66},
+    {date:day,checked_at:day+'T13:00:00Z',citations:68},
+    {date:day,citations:69}]}]});
+  assert.equal(s.reported.citations,66);
+  assert.deepEqual(s.points.map(p=>p.y),[65,66]);
+  const [stale]=cumulativeSeries({papers:[{...paper,snapshots:[{date:day,checked_at:day+'T13:00:00Z',citations:68}]}]});
+  assert.equal(stale.reported.citations,67);
+});
+
 test('tooltip distinguishes annual verification from the latest total verification', () => {
   const [s]=cumulativeSeries({papers:[{title:'A',annual:{checked_on:'2026-09-30',total:10,years:[{year:2026,citations:10}]},snapshots:[{date:'2026-10-09',citations:12}]}]});
   assert.match(pointDetail(s,s.points[0]),/Annual counts checked Sep 30, 2026/);

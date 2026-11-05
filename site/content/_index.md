@@ -141,11 +141,11 @@ sections:
       ### Supervision and Mentoring
 
       - Thesis supervision\
-        2 BSc theses
+        3 BSc theses: 2 in Engineering and 1 in Sport Science
       - Thesis co-supervision\
-        14 MSc and 19 BSc theses
+        14 MSc and 19 BSc theses in Computer Science
       - Advanced laboratory co-supervision\
-        19 projects
+        19 projects in Computer Science
 
       *Counts include completed and ongoing activities.*
 

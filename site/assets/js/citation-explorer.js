@@ -1,5 +1,6 @@
 // Preserve annual sums; show the latest reported total as a distinct observation.
 export function cumulativeSeries(data) {
+  const observedAt = p => p?.checked_at ?? p?.date ?? p?.checked_on ?? '';
   return data.papers.map(paper => {
     let cumulative = 0;
     const points = [...(paper.annual?.years ?? [])].sort((a,b) => a.year - b.year).map(p => {
@@ -7,10 +8,10 @@ export function cumulativeSeries(data) {
       return {...p, x:p.year, y:cumulative, raw:p.citations};
     });
     const snapshot = [...(paper.snapshots ?? [])].filter(p => p.date && Number.isFinite(p.citations))
-      .sort((a,b) => a.date.localeCompare(b.date)).at(-1);
-    const reported = (snapshot && snapshot.date >= (paper.annual?.checked_on ?? '') ? snapshot : null) ?? (Number.isFinite(paper.annual?.total) && paper.annual?.checked_on
-      ? {date:paper.annual.checked_on, citations:paper.annual.total} : null);
-    if (points.length && reported && reported.date >= (paper.annual.checked_on ?? '')) {
+      .sort((a,b) => observedAt(a).localeCompare(observedAt(b))).at(-1);
+    const reported = (snapshot && observedAt(snapshot) >= observedAt(paper.annual) ? snapshot : null) ?? (Number.isFinite(paper.annual?.total) && paper.annual?.checked_on
+      ? {date:paper.annual.checked_on, checked_at:paper.annual.checked_at, citations:paper.annual.total} : null);
+    if (points.length && reported && observedAt(reported) >= observedAt(paper.annual)) {
       const year = Number(reported.date.slice(0,4));
       if (year >= points.at(-1).x && (reported.citations !== cumulative || year > points.at(-1).x)) {
         points.push({x:year, year, y:reported.citations, kind:'reported', date:reported.date,
