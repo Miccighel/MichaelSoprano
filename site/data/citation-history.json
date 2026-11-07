@@ -1,6 +1,52 @@
 [
   {
     "from": "2026-11-04",
+    "to": "2026-11-07",
+    "from_at": "2026-11-04T14:08:06Z",
+    "source": "Google Scholar",
+    "source_url": "https://scholar.google.com/citations?user=ocK0qRUAAAAJ",
+    "previous_total": 760,
+    "current_total": 764,
+    "delta": 4,
+    "changes": [
+      {
+        "id": "UeHWp8X0CEIC",
+        "title": "Can The Crowd Identify Misinformation Objectively? The Effects of Judgment Scale and Assessor's Background",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AUeHWp8X0CEIC",
+        "previous": 95,
+        "current": 96,
+        "delta": 1
+      },
+      {
+        "id": "qxL8FJ1GzNcC",
+        "title": "Cognitive Biases in Fact-Checking and Their Countermeasures: A Review",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AqxL8FJ1GzNcC",
+        "previous": 106,
+        "current": 107,
+        "delta": 1
+      },
+      {
+        "id": "4DMP91E08xMC",
+        "title": "Crowdsourced Fact-Checking: Does it Actually Work?",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A4DMP91E08xMC",
+        "previous": 53,
+        "current": 54,
+        "delta": 1
+      },
+      {
+        "id": "Y0pCki6q_DkC",
+        "title": "The COVID-19 Infodemic: Can the Crowd Judge Recent Misinformation Objectively?",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AY0pCki6q_DkC",
+        "previous": 68,
+        "current": 69,
+        "delta": 1
+      }
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "from": "2026-11-04",
     "to": "2026-11-04",
     "to_at": "2026-11-04T14:08:06Z",
     "source": "Google Scholar",

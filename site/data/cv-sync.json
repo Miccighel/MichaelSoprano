@@ -1,10 +1,10 @@
 {
   "schema": 1,
   "files": {
-    "static/media/CVs/Curriculum_Vitae_EN.pdf": "79611f1406d6f8895e56397be87a54df9ffa8fd7584b11365cf6f962498a2934",
-    "static/media/CVs/Curriculum_Vitae_IT.pdf": "b4bff5df2dc8aa897a35204b6aab347383d02458c77ebcc1e872d734d3151cba",
-    "data/bibliometrics.json": "3d93640989d709b5f24cf54c168e9cafcc2a43f8f713e85d69be5d12bc63ef9f",
-    "data/citation-history.json": "f60d67deb19c531a43d1e36db22cbf0509353e38b08d18543ba8c6df42e2a279",
-    "data/citation-series.json": "35ac3a5118407c408ed33461f3c4abf1c01419225d4f638ef33f138665f3ee86"
+    "static/media/CVs/Curriculum_Vitae_EN.pdf": "919c275d9768663871ada21531bc016e279eb2deb095157a19001f49957ed3b6",
+    "static/media/CVs/Curriculum_Vitae_IT.pdf": "e4b7c1950c9457310ecf88e0fe0aeed4485bf773414f2727b91da5dee3fc57d9",
+    "data/bibliometrics.json": "7508fbb4a93c583f62c7f2c1b5db7ad1a1f29c6df806a62c4e368b013bcc57cf",
+    "data/citation-history.json": "0e6d025b8fdb6d7e1c3a7a9612f0e99b3bacfec3665d04efac5251fa0235896c",
+    "data/citation-series.json": "7efa53b76b2451a63c263283f0638db5f592d60ddef6a25cc3e27994972e1502"
   }
 }
