@@ -1,5 +1,26 @@
 [
   {
+    "from": "2026-11-07",
+    "to": "2026-11-09",
+    "source": "Google Scholar",
+    "source_url": "https://scholar.google.com/citations?user=ocK0qRUAAAAJ",
+    "previous_total": 764,
+    "current_total": 765,
+    "delta": 1,
+    "changes": [
+      {
+        "id": "-f6ydRqryjwC",
+        "title": "Large Language Models for Combinatorial Optimization: A Systematic Review",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A-f6ydRqryjwC",
+        "previous": 67,
+        "current": 68,
+        "delta": 1
+      }
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
     "from": "2026-11-04",
     "to": "2026-11-07",
     "from_at": "2026-11-04T14:08:06Z",
