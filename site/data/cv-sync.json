@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "files": {
-    "static/media/CVs/Curriculum_Vitae_EN.pdf": "2acb0603bd9727e459e00aa08e68eae627a2e514c16bc5ac733fce05a665d081",
-    "static/media/CVs/Curriculum_Vitae_IT.pdf": "b585a29bed416e89e54ccb927aa7b30961d65a77d6108a90d2e48cd07e715c54",
+    "static/media/CVs/Curriculum_Vitae_EN.pdf": "d50f3cffeec0949a32198467fea5418e493c65c1dee32a81b6def1c73e4407ee",
+    "static/media/CVs/Curriculum_Vitae_IT.pdf": "448d8520854a264792000d32f207477587ae07ea37c99ec295077367a6edda27",
     "data/bibliometrics.json": "619a8b9f794a9fc1ca0351dad502931c4048bc4ca61848ae4296c762acd2b3e9",
     "data/citation-history.json": "8bc47b772c3af6c5a3570a7db132b707c8801d29b7cdcf50658e8d91ea2ef727",
     "data/citation-series.json": "ebc1b2fc006a7a612b0056edcb2c95716ac27dc560d2ac10fbafb4af75332c22"
