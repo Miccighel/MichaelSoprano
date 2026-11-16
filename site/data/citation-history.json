@@ -1,5 +1,34 @@
 [
   {
+    "from": "2026-11-09",
+    "to": "2026-11-16",
+    "source": "Google Scholar",
+    "source_url": "https://scholar.google.com/citations?user=ocK0qRUAAAAJ",
+    "previous_total": 765,
+    "current_total": 768,
+    "delta": 3,
+    "changes": [
+      {
+        "id": "-f6ydRqryjwC",
+        "title": "Large Language Models for Combinatorial Optimization: A Systematic Review",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A-f6ydRqryjwC",
+        "previous": 68,
+        "current": 70,
+        "delta": 2
+      },
+      {
+        "id": "kNdYIx-mwKoC",
+        "title": "The Effects of Crowd Worker Biases in Fact-Checking Tasks",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AkNdYIx-mwKoC",
+        "previous": 61,
+        "current": 62,
+        "delta": 1
+      }
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
     "from": "2026-11-07",
     "to": "2026-11-09",
     "source": "Google Scholar",
