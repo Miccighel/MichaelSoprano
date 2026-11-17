@@ -50,7 +50,7 @@ sections:
 
       #### 2027
 
-      - Reducing Online Misinformation through Credible Information Retrieval (*ROMCIR 2027*), ECIR 2027, Southampton, United Kingdom. **Organizer**.
+      - [Reducing Online Misinformation through Credible Information Retrieval (*ROMCIR 2027*)](https://romcir.disco.unimib.it/2027-edition/2027-workshop/organizing-committee/), ECIR 2027, Southampton, United Kingdom. **Organizer**.
 
       #### 2025
 
@@ -96,6 +96,12 @@ sections:
       #### 2021
 
       - Third Symposium on Biases in Human Computation and Crowdsourcing (*BHCC 2021*), online. **Program Committee Member**
+
+      ### Editorial Roles
+
+      #### 2026
+
+      - [Human Reasoning and Large Language Models: Alignments and Divergences](https://www.sciencedirect.com/special-issue/337537/human-reasoning-and-large-language-models-alignments-and-divergences), special issue of *Information Processing & Management* (Elsevier). **Guest Editor**.
 
       ### Reviewing Activities
 
