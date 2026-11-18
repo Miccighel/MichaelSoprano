@@ -1,12 +1,13 @@
 {{- $related := where (site.RegularPages.Related .) "Params.course_hidden" "ne" true -}}
+{{- $isEvent := eq .Section "events" -}}
 {{- if in (slice "events" "publications") .Section -}}
   {{- range partialCached "legacy/associated-pages.html" . .RelPermalink -}}
     {{- $related = where $related "RelPermalink" "ne" .RelPermalink -}}
   {{- end -}}
 {{- end -}}
 {{- with first 5 $related -}}
-  <section class="article-widget content-widget-hr related-list" aria-labelledby="related-heading" data-pagefind-ignore>
-    <h3 id="related-heading">Related</h3>
+  <section class="article-widget content-widget-hr related-list{{ if $isEvent }} event-index-row{{ end }}" aria-labelledby="related-heading" data-pagefind-ignore>
+    {{ if $isEvent }}<h2 id="related-heading">Related</h2>{{ else }}<h3 id="related-heading">Related</h3>{{ end }}
     <ul>{{ range . }}<li><p class="related-item-meta">{{ partial "legacy/content-kind.html" . }} · {{ .Date.Format "2006" }}</p><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
   </section>
 {{- end -}}

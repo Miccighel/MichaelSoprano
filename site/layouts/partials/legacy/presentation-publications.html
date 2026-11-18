@@ -1,7 +1,11 @@
 {{- $page := . -}}
 {{- with partialCached "legacy/associated-pages.html" $page $page.RelPermalink -}}
-<section class="related-list" aria-labelledby="associated-materials-heading" data-pagefind-ignore>
-  <h3 id="associated-materials-heading">{{ if eq $page.Section "publications" }}{{ if eq (len .) 1 }}Presentation{{ else }}Presentations{{ end }}{{ else }}{{ if eq (len .) 1 }}Associated publication{{ else }}Associated publications{{ end }}{{ end }}</h3>
+<section class="related-list{{ if eq $page.Section "events" }} event-index-row{{ end }}" aria-labelledby="associated-materials-heading" data-pagefind-ignore>
+  {{ if eq $page.Section "events" }}
+    <h2 id="associated-materials-heading">{{ if eq (len .) 1 }}Associated publication{{ else }}Associated publications{{ end }}</h2>
+  {{ else }}
+    <h3 id="associated-materials-heading">{{ if eq (len .) 1 }}Presentation{{ else }}Presentations{{ end }}</h3>
+  {{ end }}
   <ul>
     {{ range . }}
     <li>
