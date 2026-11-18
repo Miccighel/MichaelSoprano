@@ -58,6 +58,5 @@
     </aside>
   </div>
 
-  {{ $related := site.RegularPages.Related . | first 5 }}
-  {{ with $related }}<div class="event-related">{{ partial "legacy/related.html" $ }}</div>{{ end }}
+  {{ with partial "legacy/related.html" . }}<div class="event-related">{{ . }}</div>{{ end }}
 </article>

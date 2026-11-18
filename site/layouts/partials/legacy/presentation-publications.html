@@ -1,32 +1,20 @@
 {{- $page := . -}}
-{{- $matches := slice -}}
-{{- range hugo.Data.presentation_publications -}}
-  {{- $event := site.GetPage (printf "/events/%s" .event) -}}
-  {{- $publication := site.GetPage (printf "/publications/%s" .publication) -}}
-  {{- if or (not $event) (not $publication) -}}
-    {{- errorf "Invalid presentation/publication relationship: %s -> %s" .event .publication -}}
-  {{- else if eq $page.RelPermalink $event.RelPermalink -}}
-    {{- $matches = $matches | append $publication -}}
-  {{- else if eq $page.RelPermalink $publication.RelPermalink -}}
-    {{- $matches = $matches | append $event -}}
-  {{- end -}}
-{{- end -}}
-{{- with $matches -}}
+{{- with partialCached "legacy/associated-pages.html" $page $page.RelPermalink -}}
 <section class="related-list" aria-labelledby="associated-materials-heading" data-pagefind-ignore>
-  <h3 id="associated-materials-heading">{{ if eq $page.Section "publications" }}{{ if eq (len .) 1 }}Presentation{{ else }}Presentations{{ end }}{{ else }}Associated publication{{ end }}</h3>
+  <h3 id="associated-materials-heading">{{ if eq $page.Section "publications" }}{{ if eq (len .) 1 }}Presentation{{ else }}Presentations{{ end }}{{ else }}{{ if eq (len .) 1 }}Associated publication{{ else }}Associated publications{{ end }}{{ end }}</h3>
   <ul>
-    {{ range sort . "Date" "desc" }}
+    {{ range . }}
     <li>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ if eq .Section "events" }}
-      <span> · {{ .Date.Format "Jan 2006" }}</span>
-      {{ with .Params.links }}
+      <strong>{{ .Title }}</strong> · <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
       <div class="resource-actions">
-        {{ range . }}{{ if in (slice "slides" "pdf" "video") .type }}
-        <a href="{{ .url }}" target="_blank" rel="noopener">{{ partial "legacy/resource-label.html" .type }}</a>
+        <a href="{{ .RelPermalink }}" aria-label="Event details: {{ .Title }}">Event details</a>
+        {{ range .Params.links }}{{ if in (slice "slides" "pdf" "video") .type }}
+        <a href="{{ .url }}" target="_blank" rel="noopener">{{ partial "legacy/resource-label.html" .type }}{{ if and (eq .type "slides") (findRE `(?i)\.pdf([?#]|$)` .url) }} (PDF){{ end }}</a>
         {{ end }}{{ end }}
       </div>
-      {{ end }}
+      {{ else }}
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
     </li>
     {{ end }}
