@@ -21,9 +21,9 @@
       {{ if eq .Section "events" }}
       <span> · {{ .Date.Format "Jan 2006" }}</span>
       {{ with .Params.links }}
-      <div class="btn-links">
+      <div class="resource-actions">
         {{ range . }}{{ if in (slice "slides" "pdf" "video") .type }}
-        <a class="btn btn-outline-primary" href="{{ .url }}" target="_blank" rel="noopener">{{ partial "legacy/resource-label.html" .type }}</a>
+        <a href="{{ .url }}" target="_blank" rel="noopener">{{ partial "legacy/resource-label.html" .type }}</a>
         {{ end }}{{ end }}
       </div>
       {{ end }}

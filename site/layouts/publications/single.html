@@ -14,7 +14,7 @@
       <h1>{{ .Title }}</h1>
       {{ with .Params.subtitle }}<p class="publication-subtitle">{{ . }}</p>{{ end }}
       {{ with .Params.authors }}<p class="publication-authors">{{ delimit . ", " }}</p>{{ end }}
-      {{ partial "legacy/page-buttons.html" . }}
+      {{ partial "legacy/publication-actions.html" (dict "page" . "newTab" true) }}
     </div>
   </header>
 

@@ -1,9 +1,10 @@
 (() => {
   const modal = document.getElementById("legacy-cite-modal");
   const code = document.getElementById("legacy-cite-code");
+  const paper = document.getElementById("legacy-cite-paper");
   const copy = document.getElementById("legacy-cite-copy");
   const download = document.getElementById("legacy-cite-download");
-  if (!modal || !code || !copy || !download) return;
+  if (!modal || !code || !copy || !download || !paper) return;
 
   // Build text nodes, never interpret citation contents as HTML.
   const highlightCitation = citation => {
@@ -58,6 +59,7 @@
 
       const citation = await response.text();
       highlightCitation(citation);
+      paper.textContent = button.dataset.citeTitle;
       if (downloadUrl) URL.revokeObjectURL(downloadUrl);
       downloadUrl = URL.createObjectURL(new Blob([citation], { type: "application/x-bibtex" }));
       download.href = downloadUrl;

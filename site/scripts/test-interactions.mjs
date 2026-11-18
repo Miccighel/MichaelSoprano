@@ -36,7 +36,7 @@ function key(window, target, name, options = {}) {
 }
 
 test('citation dialog copies BibTeX, traps focus and restores its trigger on Escape', async t => {
-  const dom = await fixture(`<button class="legacy-cite" data-cite-url="/cite.bib">Cite</button><div id="legacy-cite-modal" hidden><button class="legacy-cite-close">Close</button><div tabindex="0"><code id="legacy-cite-code"></code></div><button id="legacy-cite-copy">Copy BibTeX</button><a id="legacy-cite-download">Download .bib</a><span id="legacy-cite-status" role="status"></span></div>`);
+  const dom = await fixture(`<button class="legacy-cite" data-cite-title="Evidence &amp; evaluation" data-cite-url="/cite.bib">Cite</button><div id="legacy-cite-modal" hidden><p id="legacy-cite-paper"></p><button class="legacy-cite-close">Close</button><div tabindex="0"><code id="legacy-cite-code"></code></div><button id="legacy-cite-copy">Copy BibTeX</button><a id="legacy-cite-download">Download .bib</a><span id="legacy-cite-status" role="status"></span></div>`);
   t.after(()=>dom.window.close());
   const {window:w}=dom, d=w.document;
   const citation='@article{example,\n  title = {Text <script>not HTML</script>},\n  year = {2026}\n}';
@@ -49,6 +49,7 @@ test('citation dialog copies BibTeX, traps focus and restores its trigger on Esc
   const trigger=d.querySelector('.legacy-cite'), modal=d.querySelector('#legacy-cite-modal');
   trigger.focus(); trigger.click(); await tick();
   assert.equal(modal.hidden,false);
+  assert.equal(d.querySelector('#legacy-cite-paper').textContent,'Evidence & evaluation');
   assert.equal(d.activeElement.id,'legacy-cite-copy');
   assert.equal(d.querySelector('#legacy-cite-code').textContent,citation);
   assert.equal(d.querySelector('#legacy-cite-code script'),null);

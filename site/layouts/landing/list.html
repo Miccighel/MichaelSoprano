@@ -6,15 +6,11 @@
   <section id="about" class="home-section legacy-about-section">
     <div class="legacy-container">
       <div class="legacy-about-grid">
-      <aside id="profile">
-        {{ $avatar := resources.Get "media/authors/michael-soprano.jpg" }}
-        {{ $avatar = $avatar.Fill "270x270 Center" }}
-        <img class="avatar avatar-circle" src="{{ $avatar.RelPermalink }}" width="270" height="270" alt="{{ $author.title }}">
-        {{ partial "legacy/profile-links.html" (dict "author" $author "compact" false) }}
-      </aside>
-
       <div class="legacy-about-content">
-        <h1 class="sr-only">{{ $author.title }}</h1>
+        <header class="profile-masthead">
+          <p class="profile-imprint">Research &amp; teaching{{ with index $author.organizations 0 }} <span aria-hidden="true">/</span> {{ .name }}{{ end }}</p>
+          <h1>{{ $author.title }}</h1>
+        </header>
         <div class="legacy-bio">{{ $author.bio | markdownify }}</div>
         <nav class="about-actions" aria-label="Primary profile actions">
           <a class="about-action is-primary" href="/media/CVs/Curriculum_Vitae_EN.pdf"><i class="fas fa-file-download" aria-hidden="true"></i> CV · English</a>
@@ -23,6 +19,12 @@
           <a class="about-action" href="#contact"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a>
         </nav>
       </div>
+      <aside id="profile" aria-label="Portrait and profiles">
+        {{ $avatar := resources.Get "media/authors/michael-soprano.jpg" }}
+        {{ $avatar = $avatar.Fill "400x400 Center" }}
+        <img class="avatar" src="{{ $avatar.RelPermalink }}" width="400" height="400" alt="{{ $author.title }}">
+        {{ partial "legacy/profile-links.html" (dict "author" $author "compact" false) }}
+      </aside>
       </div>
     </div>
   </section>
@@ -135,23 +137,23 @@
               {{ $pages = where $pages "Section" "publications" }}
               {{ $pages = sort (sort $pages "Title" "asc") "Date" "desc" }}
               {{ $homepage_limit := $home.publications.homepage_limit | default 15 }}
-              <div class="legacy-list publication-list">
-                {{ range first $homepage_limit $pages }}
-                  {{ $publication := . }}
-                  <article class="pub-list-item publication-home-item view-citation">
-                    <h3 class="publication-home-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                    <div class="li-cite-author">{{ delimit .Params.authors ", " }}</div>
-                    <div class="publication-home-meta">
-                      {{ with .Params.publication }}{{ with .name }}<em>{{ strings.TrimSuffix "." (replace . "*" "") }}</em>,{{ end }}{{ end }} {{ .Date.Format "2006" }}.
-                    </div>
-                    <span class="legacy-attachments">
-                      {{ range .Params.links }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ partial "legacy/resource-label.html" .type }}</a>{{ end }}
-                      <button class="btn btn-outline-primary btn-sm legacy-cite" type="button" data-cite-url="{{ $publication.RelPermalink }}cite.bib">Cite</button>
-                      {{ with .Params.identifiers }}{{ with .doi }}<a class="btn btn-outline-primary btn-sm" href="https://doi.org/{{ . }}">DOI</a>{{ end }}{{ end }}
-                    </span>
-                  </article>
-                {{ end }}
-              </div>
+              {{ range ((first $homepage_limit $pages).GroupByDate "2006") }}
+                <div class="publication-index-year" role="group" aria-labelledby="home-pubs-{{ .Key }}">
+                  <h3 class="publication-year-label" id="home-pubs-{{ .Key }}">{{ .Key }}</h3>
+                  <div class="legacy-list publication-list">
+                    {{ range .Pages }}
+                      <article class="pub-list-item publication-home-item view-citation">
+                        <h4 class="publication-home-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+                        <div class="li-cite-author">{{ delimit .Params.authors ", " }}</div>
+                        <div class="publication-home-meta">
+                          {{ with .Params.publication }}{{ with .name }}<em>{{ strings.TrimSuffix "." (replace . "*" "") }}</em>.{{ end }}{{ end }}
+                        </div>
+                        {{ partial "legacy/publication-actions.html" (dict "page" . "newTab" false) }}
+                      </article>
+                    {{ end }}
+                  </div>
+                </div>
+              {{ end }}
               <p class="see-all publication-see-all"><a href="/publication/">View all {{ len $pages }} publications <i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
             {{ else if eq .id "presentations" }}
               {{ $pages := where site.Pages "Kind" "page" }}
@@ -179,7 +181,7 @@
                         {{ end }}
                         {{ with .Params.location }}<span><i class="fas fa-location-dot" aria-hidden="true"></i>{{ strings.TrimSuffix "." . }}</span>{{ end }}
                       </div>
-                      {{ with .Params.links }}<div class="btn-links">{{ range . }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ partial "legacy/resource-label.html" .type }}</a>{{ end }}</div>{{ end }}
+                      {{ with .Params.links }}<div class="resource-actions">{{ range . }}<a href="{{ .url }}">{{ partial "legacy/resource-label.html" .type }}</a>{{ end }}</div>{{ end }}
                     </div>
                     {{ partial "legacy/event-thumbnail.html" . }}
                   </article>

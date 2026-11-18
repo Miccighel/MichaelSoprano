@@ -16,7 +16,7 @@
                 {{ with .Params.event_start }}<div>{{ time.Format "Jan 2, 2006" . }}{{ if not (or $event.Params.event_all_day $event.Params.event_time_unknown) }} {{ time.Format "15:04" . }}{{ with $event.Params.event_end }} — {{ time.Format "15:04" . }}{{ end }}{{ end }}{{ with $event.Params.location }} <span class="middot-divider"></span> {{ . }}{{ end }}</div>{{ end }}
                 <div>{{ delimit .Params.authors ", " }}</div>
               </div>
-              {{ with .Params.links }}<div class="btn-links">{{ range . }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ partial "legacy/resource-label.html" .type }}</a>{{ end }}</div>{{ end }}
+              {{ with .Params.links }}<div class="resource-actions">{{ range . }}<a href="{{ .url }}">{{ partial "legacy/resource-label.html" .type }}</a>{{ end }}</div>{{ end }}
             </div>
             {{ partial "legacy/event-thumbnail.html" . }}
           </article>
