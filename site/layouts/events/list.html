@@ -1,25 +1,17 @@
 {{ define "main" }}
 {{ $pages := where site.RegularPages "Section" "events" }}
+{{ $years := $pages.ByDate.Reverse.GroupByDate "2006" }}
 <main class="legacy-archive legacy-event-archive">
   <h1>Presentations</h1>
-  {{ range ($pages.ByDate.Reverse.GroupByDate "2006") }}
-    <section class="legacy-year-group">
-      <h2>{{ .Key }}</h2>
+  {{ if gt (len $years) 1 }}<nav class="event-year-nav" aria-label="Presentations by year"><span>Browse by year</span>
+    {{ range $years }}<a href="#events-{{ .Key }}">{{ .Key }}</a>{{ end }}
+  </nav>{{ end }}
+  {{ range $years }}
+    <section class="legacy-year-group index-year" aria-labelledby="events-{{ .Key }}">
+      <h2 class="index-year-label" id="events-{{ .Key }}">{{ .Key }}</h2>
       <div class="stream-list">
         {{ range .Pages }}
-          {{ $event := . }}
-          <article class="media stream-item">
-            <div class="media-body">
-              <h3 class="section-subheading article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-              <div class="article-style">{{ .Params.summary }}</div>
-              <div class="stream-meta event-archive-meta">
-                {{ with .Params.event_start }}<div>{{ time.Format "Jan 2, 2006" . }}{{ if not (or $event.Params.event_all_day $event.Params.event_time_unknown) }} {{ time.Format "15:04" . }}{{ with $event.Params.event_end }} — {{ time.Format "15:04" . }}{{ end }}{{ end }}{{ with $event.Params.location }} <span class="middot-divider"></span> {{ . }}{{ end }}</div>{{ end }}
-                <div>{{ delimit .Params.authors ", " }}</div>
-              </div>
-              {{ with .Params.links }}<div class="resource-actions">{{ range . }}<a href="{{ .url }}">{{ partial "legacy/resource-label.html" .type }}</a>{{ end }}</div>{{ end }}
-            </div>
-            {{ partial "legacy/event-thumbnail.html" . }}
-          </article>
+          {{ partial "legacy/event-row.html" (dict "event" . "archive" true) }}
         {{ end }}
       </div>
     </section>

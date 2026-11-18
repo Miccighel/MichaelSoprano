@@ -18,8 +18,8 @@
 
   <div id="publication-archive-list">
     {{ range ($pages.GroupByDate "2006") }}
-      <section class="legacy-year-group publication-index-year" data-publication-year-group="{{ .Key }}" aria-labelledby="pubs-{{ .Key }}">
-        <h2 class="publication-year-label" id="pubs-{{ .Key }}">{{ .Key }}</h2>
+      <section class="legacy-year-group index-year" data-publication-year-group="{{ .Key }}" aria-labelledby="pubs-{{ .Key }}">
+        <h2 class="index-year-label" id="pubs-{{ .Key }}">{{ .Key }}</h2>
         <div class="legacy-list publication-list">
           {{ range .Pages }}
             {{ $type := index .Params.publication_types 0 | default "" }}

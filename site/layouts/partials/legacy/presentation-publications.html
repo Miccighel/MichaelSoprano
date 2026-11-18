@@ -10,7 +10,7 @@
       <div class="resource-actions">
         <a href="{{ .RelPermalink }}" aria-label="Event details: {{ .Title }}">Event details</a>
         {{ range .Params.links }}{{ if in (slice "slides" "pdf" "video") .type }}
-        <a href="{{ .url }}" target="_blank" rel="noopener">{{ partial "legacy/resource-label.html" .type }}{{ if and (eq .type "slides") (findRE `(?i)\.pdf([?#]|$)` .url) }} (PDF){{ end }}</a>
+        <a href="{{ .url }}" target="_blank" rel="noopener">{{ partial "legacy/event-resource-label.html" . }}</a>
         {{ end }}{{ end }}
       </div>
       {{ else }}

@@ -138,8 +138,8 @@
               {{ $pages = sort (sort $pages "Title" "asc") "Date" "desc" }}
               {{ $homepage_limit := $home.publications.homepage_limit | default 15 }}
               {{ range ((first $homepage_limit $pages).GroupByDate "2006") }}
-                <div class="publication-index-year" role="group" aria-labelledby="home-pubs-{{ .Key }}">
-                  <h3 class="publication-year-label" id="home-pubs-{{ .Key }}">{{ .Key }}</h3>
+                <div class="index-year" role="group" aria-labelledby="home-pubs-{{ .Key }}">
+                  <h3 class="index-year-label" id="home-pubs-{{ .Key }}">{{ .Key }}</h3>
                   <div class="legacy-list publication-list">
                     {{ range .Pages }}
                       <article class="pub-list-item publication-home-item view-citation">
@@ -161,30 +161,7 @@
               {{ $homepage_limit := $home.presentations.homepage_limit | default 15 }}
               <div class="stream-list">
                 {{ range first $homepage_limit $pages.ByDate.Reverse }}
-                  {{ $event := . }}
-                  <article class="media stream-item">
-                    <div class="media-body">
-                      {{ $contribution_type := index (split .Params.summary " - ") 0 }}
-                      <div class="presentation-row-eyebrow">
-                        <span class="presentation-row-type">{{ $contribution_type }}</span>
-                        {{ with .Params.event_start }}<time datetime="{{ time.Format "2006-01-02" . }}">{{ time.Format "Jan 2, 2006" . }}</time>{{ end }}
-                      </div>
-                      <h3 class="section-subheading article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                      <p class="presentation-row-authors">{{ delimit .Params.authors ", " }}</p>
-                      {{ with .Params.event_name }}<p class="presentation-row-event">{{ . }}</p>{{ end }}
-                      <div class="presentation-row-details">
-                        {{ with .Params.event_start }}
-                          {{ $start_time := time.Format "15:04" . }}
-                          {{ if and (ne $start_time "00:00") (not $event.Params.event_all_day) (not $event.Params.event_time_unknown) }}
-                            <span><i class="far fa-clock" aria-hidden="true"></i>{{ $start_time }}{{ with $event.Params.event_end }}{{ $end_time := time.Format "15:04" . }}{{ if ne $end_time "00:00" }}–{{ $end_time }}{{ end }}{{ end }}</span>
-                          {{ end }}
-                        {{ end }}
-                        {{ with .Params.location }}<span><i class="fas fa-location-dot" aria-hidden="true"></i>{{ strings.TrimSuffix "." . }}</span>{{ end }}
-                      </div>
-                      {{ with .Params.links }}<div class="resource-actions">{{ range . }}<a href="{{ .url }}">{{ partial "legacy/resource-label.html" .type }}</a>{{ end }}</div>{{ end }}
-                    </div>
-                    {{ partial "legacy/event-thumbnail.html" . }}
-                  </article>
+                  {{ partial "legacy/event-row.html" (dict "event" . "archive" false) }}
                 {{ end }}
               </div>
               <p class="see-all"><a href="/event/">See all events <i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
