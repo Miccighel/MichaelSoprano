@@ -34,7 +34,7 @@ SECTIONS = {
     archive: 'post',
     marker: 'legacy-blog-single',
     archive_marker: 'legacy-blog-archive',
-    item_marker: 'media stream-item'
+    item_marker: /<article\b[^>]*\bclass=["']?teaching-item\b/i
   }
 }.freeze
 

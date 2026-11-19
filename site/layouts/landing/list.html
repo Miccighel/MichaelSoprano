@@ -172,17 +172,7 @@
               {{ $pages = sort $pages "Title" "asc" }}
               <div class="teaching-list">
                 {{ range $pages }}
-                  <article class="teaching-item">
-                    <div class="teaching-item-content">
-                      <div class="teaching-item-eyebrow">
-                        <span><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>Course</span>
-                        <time datetime="{{ time.Format "2006-01-02" .Params.lastmod }}">Updated {{ time.Format "Jan 2, 2006" .Params.lastmod }}</time>
-                      </div>
-                      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                      {{ with .Params.subtitle }}<p>{{ . }}</p>{{ end }}
-                    </div>
-                    <a class="teaching-item-link" href="{{ .RelPermalink }}">Course details <i class="fas fa-angle-right" aria-hidden="true"></i></a>
-                  </article>
+                  {{ partial "legacy/course-row.html" (dict "page" . "archive" false) }}
                 {{ end }}
               </div>
             {{ else if eq .id "tags" }}
