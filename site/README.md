@@ -26,6 +26,14 @@ the Teaching homepage and archive; a retained legacy overview can use the same
 `course_hidden` flag without becoming an edition. Keep tags and categories on
 the parent course only so annual pages do not inflate topic counts.
 
+Set `course_updated` to the date of the latest editorial review. On teaching
+pages it takes priority over the Git date in the page header and sitemap.
+
+Tags are displayed as Topics in Title Case. In source content, use lowercase
+for ordinary terms and the exact spelling in `data/topics.yaml` for names,
+technologies and acronyms. When combining topics, update the affected content and add
+the former URLs as aliases in the canonical term's `content/tags/<slug>/_index.md`.
+
 Key fields are `identifiers.doi`, `publication.name`, resource `links` entries
 with `type` and `url`, `event_start`, `event_end`, and the ordering `date`.
 Use the content generator documented in the root README for complete examples.
@@ -68,7 +76,7 @@ Individual commands, useful while debugging:
 | `pnpm run build` | Build and index without the final generated-site audit |
 | `ruby scripts/check-cv-pdf-links.rb` | Check site-hosted links in the CV PDFs after building |
 | `ruby scripts/audit-build.rb` | Audit an existing production build |
-| `pnpm run vendor` | Refresh generated fonts, icons, and Leaflet assets |
+| `pnpm run vendor` | Refresh generated fonts and icons |
 | `pnpm run check:links` | Optionally check external links after building |
 
 External link checks are manual only, not part of CI. Unverifiable responses
@@ -81,9 +89,9 @@ exit status. TLS verification remains enabled.
 `assets/css/design-system.css` loads afterward and defines the visual system:
 colours, typography, spacing, focus states, and responsive adjustments.
 
-Site scripts live in `assets/js/`. Fonts, icon fonts, and Leaflet are generated
+Site scripts live in `assets/js/`. Fonts and icon fonts are generated
 from pinned dependencies into `static/vendor/`; do not edit or commit that
-directory. Leaflet assets are loaded only on the homepage.
+directory. The homepage embeds a lazy-loaded Google Map and provides a separate directions link.
 
 Hugo's development server does not regenerate the Pagefind index. Run a full
 build and serve `public/` when verifying search behaviour.

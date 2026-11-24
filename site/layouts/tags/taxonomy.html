@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{ $topics := slice }}
+{{ range .Data.Terms.Alphabetical }}
+  {{ $label := partial "legacy/topic-label.html" (dict "slug" (path.Base (strings.TrimSuffix "/" .Page.RelPermalink)) "fallback" .Page.Title) }}
+  {{ $topic := .Page }}
+  {{ $aliases := slice }}
+  {{ range $topic.Aliases }}{{ $aliases = $aliases | append (path.Base .) }}{{ end }}
+  {{ $topics = $topics | append (dict "label" $label "key" (lower $label) "initial" (upper (substr $label 0 1)) "url" $topic.RelPermalink "count" .Count "aliases" $aliases) }}
+{{ end }}
+{{ $topics = sort $topics "key" }}
+{{ $letters := slice }}
+{{ range $topics }}{{ $letters = $letters | append .initial }}{{ end }}
+{{ $letters = uniq $letters }}
+<main class="topic-index topic-directory" data-pagefind-ignore data-local-layout="taxonomy-index">
+  <header class="topic-index-header">
+    <a class="topic-archive-back" href="/#tags"><i class="fas fa-arrow-left" aria-hidden="true"></i> Featured topics</a>
+    <h1>All topics</h1>
+    <p class="topic-index-summary">{{ len $topics }} topics across publications, presentations and teaching. The number beside each topic is its item count.</p>
+    <div class="topic-filter" role="search" aria-label="Filter topics" hidden>
+      <label for="topic-query">Find a topic</label>
+      <div class="topic-filter-controls">
+        <input id="topic-query" type="search" placeholder="e.g. Peer Review" autocomplete="off">
+        <button type="button" data-topic-clear hidden>Clear</button>
+      </div>
+      <p class="topic-filter-status" data-topic-status role="status"></p>
+    </div>
+    <nav class="topic-letters" aria-label="Jump to a letter">
+      {{ range $letters }}<a href="#topics-{{ . | urlize }}">{{ . }}</a>{{ end }}
+    </nav>
+  </header>
+  {{ range $letters }}
+    <section class="topic-letter-group" aria-labelledby="topics-{{ . | urlize }}">
+      <h2 id="topics-{{ . | urlize }}">{{ . }}</h2>
+      <ul>{{ range where $topics "initial" . }}<li{{ with .aliases }} data-topic-aliases="{{ delimit . "|" }}"{{ end }}><a class="topic-directory-link" href="{{ .url }}"><span>{{ .label }}</span> <span class="topic-directory-count">{{ .count }}</span></a></li>{{ end }}</ul>
+    </section>
+  {{ end }}
+</main>
+{{ $filter := resources.Get "js/topic-filter.js" | resources.Minify }}
+{{ if hugo.IsProduction }}{{ $filter = $filter | fingerprint "sha256" }}{{ end }}
+<script defer src="{{ $filter.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $filter.Data.Integrity }}" crossorigin="anonymous"{{ end }}></script>
+{{ end }}

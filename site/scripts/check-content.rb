@@ -35,6 +35,11 @@ errors = []
 warnings = []
 counts = {}
 
+topic_labels = YAML.safe_load_file(File.join(ROOT, 'data', 'topics.yaml')).fetch('labels')
+legacy_topic_slugs = Dir.glob(File.join(ROOT, 'content', 'tags', '*', '_index.md')).flat_map do |path|
+  Array(load_page(path)['aliases']).map { |url| url.split('/').last }
+end
+
 icon_path = File.join(ROOT, 'assets', 'media', 'icon.png')
 if !File.file?(icon_path)
   errors << 'assets/media/icon.png: missing favicon source'
@@ -71,6 +76,19 @@ SECTIONS.each do |section, required_fields|
     end
 
     warnings << "#{relative_path}: still marked as draft" if data['draft'] == true
+
+    tags = Array(data['tags'])
+    errors << "#{relative_path}: duplicate topics" unless tags.uniq.length == tags.length
+    tags.each do |tag|
+      unless tag.is_a?(String) && !tag.strip.empty?
+        errors << "#{relative_path}: topics must be nonempty strings"
+        next
+      end
+      key = tag.downcase.split.join('-')
+      expected = topic_labels.fetch(key, tag.downcase.split.join(' '))
+      errors << "#{relative_path}: use topic #{expected.inspect} instead of #{tag.inspect}" unless tag == expected
+      errors << "#{relative_path}: #{tag.inspect} is a retired topic" if legacy_topic_slugs.include?(key)
+    end
 
     if section == 'publications'
       errors << "#{relative_path}: legacy hugoblox front matter is not allowed" if data.key?('hugoblox')

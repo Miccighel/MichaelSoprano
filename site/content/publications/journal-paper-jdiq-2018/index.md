@@ -9,10 +9,10 @@ authors:
 - Andrea Brunello
 - Stefano Mizzaro
 tags:
-- topic selection strategy
+- topic selection
 - evolutionary algorithms
 - reproducibility
-- test collection
+- test collections
 - few topics
 - topic sets
 categories: []

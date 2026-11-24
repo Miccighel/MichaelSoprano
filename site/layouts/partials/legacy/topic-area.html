@@ -1,0 +1,11 @@
+{{- $pages := .Pages -}}
+{{- $teaching := where $pages "Section" "blog" -}}
+{{- $area := "Research" -}}
+{{- if $teaching -}}
+  {{- if eq (len $teaching) (len $pages) -}}
+    {{- $area = "Teaching" -}}
+  {{- else -}}
+    {{- $area = "Research & Teaching" -}}
+  {{- end -}}
+{{- end -}}
+{{- return $area -}}

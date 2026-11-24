@@ -78,17 +78,42 @@ async function eventually(assertion) {
 }
 
 test('mobile navigation closes after choosing a section; dropdown supports keyboard', async t => {
-  const dom = await fixture(`<header class="page-header"></header><input id="nav-toggle" type="checkbox" checked><nav id="nav-menu"><a href="/#teaching">Teaching</a></nav><section id="teaching"></section><div class="nav-dropdown"><a class="nav-link" role="button" href="#" aria-expanded="false">More</a></div>`);
+  const dom = await fixture(`<header class="page-header"></header><button id="nav-toggle" aria-expanded="false">Navigation menu</button><nav id="nav-menu"><a href="/#teaching">Teaching</a></nav><section id="teaching"></section><div class="nav-dropdown"><a class="nav-link" role="button" href="#" aria-expanded="false">More</a></div>`);
   t.after(() => dom.window.close());
   const {window:w} = dom, d=w.document;
   w.eval(await source('homepage-nav.js'));
   w.eval(await source('hb-nav.js'));
   w.dispatchEvent(new w.Event('DOMContentLoaded'));
+  const menuButton=d.querySelector('#nav-toggle');
+  menuButton.click();
+  assert.equal(menuButton.getAttribute('aria-expanded'),'true');
+  d.querySelector('#nav-menu a').focus();
+  key(w,d.activeElement,'Escape');
+  assert.equal(d.activeElement,menuButton);
+  assert.equal(menuButton.getAttribute('aria-expanded'),'false');
+  menuButton.click();
   d.querySelector('#nav-menu a').click();
-  assert.equal(d.querySelector('#nav-toggle').checked,false);
+  assert.equal(menuButton.getAttribute('aria-expanded'),'false');
   const toggle=d.querySelector('.nav-link');
   key(w,toggle,'Enter'); assert.equal(toggle.getAttribute('aria-expanded'),'true');
   key(w,toggle,'Escape'); assert.equal(toggle.getAttribute('aria-expanded'),'false');
+});
+
+test('homepage navigation follows reading position and selects Contact at the end of the page', async t => {
+  const dom=await fixture('<nav id="nav-menu"><a href="/#tags">Topics</a><a href="/#contact">Contact</a></nav><section id="tags"></section><section id="contact"></section>');
+  t.after(()=>dom.window.close());
+  const {window:w}=dom,d=w.document,root=d.documentElement;
+  Object.defineProperties(root,{clientHeight:{value:1200},scrollHeight:{value:3200}});
+  d.querySelector('#tags').getBoundingClientRect=()=>({top:1500-w.scrollY});
+  d.querySelector('#contact').getBoundingClientRect=()=>({top:2350-w.scrollY});
+  w.scrollY=1800;
+  w.eval(await source('homepage-nav.js'));
+  const selected=()=>[...d.querySelectorAll('#nav-menu a.active[aria-current="location"]')].map(a=>a.hash);
+  await eventually(()=>assert.deepEqual(selected(),['#tags']));
+  w.scrollY=2000; w.dispatchEvent(new w.Event('scroll'));
+  await eventually(()=>assert.deepEqual(selected(),['#contact']));
+  w.scrollY=1800; w.dispatchEvent(new w.Event('scroll'));
+  await eventually(()=>assert.deepEqual(selected(),['#tags']));
 });
 
 test('publication filters combine title, author, type and year and expose empty state', async t => {
@@ -101,6 +126,17 @@ test('publication filters combine title, author, type and year and expose empty 
   d.querySelector('#publication-year-filter').value='2025';
   d.querySelector('#publication-year-filter').dispatchEvent(new w.Event('change'));
   assert.equal(d.querySelectorAll('[data-publication-year-group]:not([hidden])').length,1);
+  const type=d.querySelector('#publication-type-filter');
+  type.value='article-journal'; type.dispatchEvent(new w.Event('change'));
+  assert.equal(w.location.search,'?q=soprano&year=2025&type=article-journal');
+  const reopened=await fixture(dom.serialize());
+  t.after(()=>reopened.window.close());
+  reopened.window.history.replaceState(null,'',w.location.pathname+w.location.search);
+  reopened.window.eval(await source('publication-filters.js'));
+  const rd=reopened.window.document;
+  assert.deepEqual([...rd.querySelectorAll('input, select')].map(el=>el.value),['soprano','article-journal','2025']);
+  assert.equal(rd.querySelectorAll('article:not([hidden])').length,1);
+  type.value=''; type.dispatchEvent(new w.Event('change'));
   search.value='absent'; search.dispatchEvent(new w.Event('input'));
   assert.equal(d.querySelector('#publication-archive-empty').hidden,false);
   search.value=''; d.querySelector('#publication-year-filter').value=''; search.dispatchEvent(new w.Event('input'));
@@ -111,41 +147,122 @@ test('publication reset clears filters, legacy hash and restores all results', a
   const dom = await fixture(`<input id="publication-search"><select id="publication-type-filter"><option value=""></option><option value="article-journal">Journal</option></select><select id="publication-year-filter"><option value=""></option><option value="2025">2025</option></select><button id="publication-filter-reset" hidden>Clear filters</button><p id="publication-result-count" role="status"></p><div id="publication-archive-list"><section data-publication-year-group><article data-title="alpha" data-authors="soprano" data-type="article-journal" data-year="2025"></article><article data-title="beta" data-authors="other" data-type="paper-conference" data-year="2026"></article></section></div><p id="publication-archive-empty" hidden></p>`);
   t.after(() => dom.window.close());
   const {window:w}=dom,d=w.document;
-  w.history.replaceState(null,'','/publication/#2');
+  w.history.replaceState(null,'','/publication/?q=alpha#2');
   w.eval(await source('publication-filters.js'));
   const reset=d.querySelector('#publication-filter-reset'), count=d.querySelector('#publication-result-count');
   assert.equal(count.textContent,'1 of 2 publications');
+  assert.equal(d.querySelector('#publication-search').value,'alpha');
+  assert.equal(d.querySelector('#publication-type-filter').value,'article-journal');
   assert.equal(reset.hidden,false);
   const search=d.querySelector('#publication-search');
   search.value='missing'; search.dispatchEvent(new w.Event('input'));
   assert.equal(count.textContent,'0 of 2 publications');
   reset.click();
-  assert.equal(count.textContent,'2 of 2 publications');
+  assert.equal(count.textContent,'2 publications');
   assert.equal(reset.hidden,true);
   assert.equal(d.querySelector('#publication-archive-empty').hidden,true);
   assert.equal(w.location.hash,'');
+  assert.equal(w.location.search,'');
   assert.equal(d.activeElement,search);
 });
 
+test('publication search combines venue, year, author and punctuation-insensitive title words', async t => {
+  const dom=await fixture('<input id="publication-search"><select id="publication-type-filter"></select><select id="publication-year-filter"></select><div id="publication-archive-list"><article data-title="Fact–Checking" data-authors="José Silva" data-year="2025"><div class="publication-archive-meta">ACM SIGIR</div></article></div><p id="publication-archive-empty" hidden></p>');
+  t.after(()=>dom.window.close());
+  const {window:w}=dom,d=w.document,input=d.querySelector('input');
+  w.eval(await source('publication-filters.js'));
+  for(const [q,expected] of [['SIGIR 2025',true],['fact checking',true],['silva fact-checking',true],['Jose SIGIR',true],['SIGIR 2024',false]]){
+    input.value=q; input.dispatchEvent(new w.Event('input'));
+    assert.equal(!d.querySelector('article').hidden,expected,q);
+  }
+});
+
+test('publication returns to filtered results only from the same archive', async t => {
+  const js=await source('publication-return.js');
+  const original='/publication/';
+  const cases=[
+    ['https://michaelsoprano.com/publication/?q=peer+review&type=paper-conference&year=2025&extra=no', '/publication/?q=peer+review&type=paper-conference&year=2025'],
+    ['https://michaelsoprano.com/publication/', original],
+    ['https://michaelsoprano.com/tag/peer-review/?q=peer', original],
+    ['https://other.example/publication/?q=peer', original],
+    [undefined, original],
+  ];
+  for (const [referrer,expected] of cases) {
+    const dom=new JSDOM('<a href="/publication/" data-publication-return><span>All publications</span></a>',{url:'https://michaelsoprano.com/publication/paper/',referrer,runScripts:'outside-only'});
+    t.after(()=>dom.window.close());
+    const {window:w}=dom;
+    w.eval(js);
+    const link=w.document.querySelector('a'), url=new URL(link.href);
+    assert.equal(url.pathname+url.search,expected,referrer);
+    assert.equal(link.textContent,expected===original?'All publications':'Back to results');
+  }
+});
+
+test('topic filter matches aliases and hides empty letter groups, with a shareable query', async t => {
+  const dom=await fixture('<main class="topic-directory"><div class="topic-filter" hidden><input id="topic-query"><button data-topic-clear hidden>Clear</button><p data-topic-status role="status"></p></div><nav class="topic-letters"><a href="#topics-a">A</a><a href="#topics-c">C</a></nav><section class="topic-letter-group" aria-labelledby="topics-a"><h2 id="topics-a">A</h2><ul><li data-topic-aliases="ai"><a class="topic-directory-link"><span>Artificial Intelligence</span><span>3</span></a></li></ul></section><section class="topic-letter-group" aria-labelledby="topics-c"><h2 id="topics-c">C</h2><ul><li data-topic-aliases="cognitive-bias"><a class="topic-directory-link"><span>Cognitive Biases</span><span>2</span></a></li><li><a class="topic-directory-link"><span>Crowd_Frame</span><span>2</span></a></li></ul></section></main>');
+  t.after(()=>dom.window.close());
+  const {window:w}=dom,d=w.document,input=d.querySelector('#topic-query');
+  const names=()=>[...d.querySelectorAll('.topic-letter-group li:not([hidden]) a > span:first-child')].map(a=>a.textContent);
+  const letters=()=>[...d.querySelectorAll('.topic-letters a:not([hidden])')].map(a=>a.textContent);
+  const set=value=>{input.value=value; input.dispatchEvent(new w.Event('input'));};
+  w.history.replaceState(null,'','/tags/?q=AI');
+  w.eval(await source('topic-filter.js'));
+  assert.equal(d.querySelector('.topic-filter').hidden,false);
+  assert.deepEqual(names(),['Artificial Intelligence']);
+  assert.deepEqual(letters(),['A']);
+  assert.equal(d.querySelector('[data-topic-status]').textContent,'1 of 3 topics');
+  set('CROWD frame');
+  assert.deepEqual(names(),['Crowd_Frame']);
+  assert.deepEqual(letters(),['C']);
+  assert.equal(new URL(w.location.href).searchParams.get('q'),'CROWD frame');
+  set('cognítive bias');
+  assert.deepEqual(names(),['Cognitive Biases']);
+  set('not there');
+  assert.ok(d.querySelector('.topic-letters').hidden);
+  assert.equal(d.querySelector('[data-topic-status]').textContent,'No topics match.');
+  d.querySelector('[data-topic-clear]').click();
+  assert.deepEqual(letters(),['A','C']);
+  assert.equal(names().length,3);
+  assert.equal(w.location.search,'');
+  assert.equal(d.activeElement,input);
+});
+
 test('search opens, shows results, handles navigation and Escape, restores focus', async t => {
-  const dom = await fixture(`<button data-search-toggle>Search</button><div id="site-search" hidden data-pagefind-url="/pagefind/pagefind.js"><button data-search-close>Close</button><input id="site-search-input"><template id="site-search-result-template"><a><span class="site-search-result-meta" hidden></span><h3></h3><p></p></a></template><div id="site-search-results"></div><p data-search-intro></p><p data-search-loading class="hidden"></p><p data-search-empty class="hidden"></p><p data-search-error class="hidden"></p><p data-search-status></p></div>`);
+  const markup=await readFile(new URL('../layouts/_partials/components/search-modal.html',import.meta.url),'utf8');
+  const dom=await fixture('<button data-search-toggle>Search</button>'+markup);
   t.after(() => dom.window.close());
   const {window:w}=dom,d=w.document;
   // Stub only the external Pagefind module; run the actual interaction code.
-  w.__loadPagefind=async () => ({init:async()=>{},search:async query=>({results: query === 'missing' ? [] : ['Alpha','Beta'].map(title=>({data:async()=>({url:'#',meta:{title,kind:'Publication',year:'2026'},excerpt:'Example'})}))})});
+  w.__loadPagefind=async () => ({init:async()=>{},search:async query=>({results: query === 'missing' ? [] : Array.from({length:16},(_,i)=>({data:async()=>({url:'#'+i,meta:{title:'Paper '+i,kind:'Publication',year:'2026',venue:'Test journal',summary:'Abstract text'},excerpt:'Repeated title'})}))})});
   w.eval((await source('hb-search.js')).replace('import(modal.dataset.pagefindUrl)','window.__loadPagefind()'));
   d.dispatchEvent(new w.Event('DOMContentLoaded'));
   const toggle=d.querySelector('[data-search-toggle]'); toggle.focus(); toggle.click();
   assert.equal(d.querySelector('#site-search').hidden,false);
   const input=d.querySelector('input'); assert.equal(d.activeElement,input);
   input.value='alpha'; input.dispatchEvent(new w.Event('input'));
-  await eventually(()=>assert.equal(d.querySelectorAll('#site-search-results a').length,2));
+  await eventually(()=>assert.equal(d.querySelectorAll('#site-search-results a').length,10));
+  const more=d.querySelector('[data-search-more]');
+  assert.equal(more.textContent,'Show 6 more');
+  assert.equal(d.querySelector('[data-search-status]').textContent,'Showing 10 of 16 results.');
+  assert.equal(d.querySelector('.site-search-result-venue').textContent,'Test journal');
+  assert.equal(d.querySelector('.site-search-result p').textContent,'Abstract text');
   assert.equal(input.getAttribute('aria-expanded'),'true');
   assert.equal(d.querySelector('.site-search-result-meta').textContent,'Publication · 2026');
   assert.equal(d.querySelector('.site-search-result-meta').hidden,false);
   key(w,input,'ArrowDown'); assert.equal(input.getAttribute('aria-activedescendant'),'site-search-result-1');
+  more.click();
+  await eventually(()=>assert.equal(d.querySelectorAll('#site-search-results a').length,16));
+  assert.equal(d.activeElement,input);
+  assert.equal(input.getAttribute('aria-activedescendant'),'site-search-result-10');
+  assert.ok([...d.querySelectorAll('#site-search-results a')].every(link=>link.tabIndex === -1));
+  assert.equal(more.hidden,true);
+  input.focus();
   input.value='missing'; input.dispatchEvent(new w.Event('input'));
   await eventually(()=>assert.equal(d.querySelector('[data-search-status]').textContent,'No results found.'));
+  const empty=d.querySelector('[data-search-empty]');
+  assert.ok(!empty.classList.contains('hidden'));
+  assert.doesNotMatch(empty.textContent,/no results found/i);
+  assert.equal(empty.querySelector('a').getAttribute('href'),'/tags/');
   assert.equal(input.getAttribute('aria-expanded'),'false');
   key(w,input,'Escape'); assert.equal(d.querySelector('#site-search').hidden,true);
   assert.equal(d.activeElement,toggle);

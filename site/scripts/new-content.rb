@@ -102,7 +102,7 @@ front_matter = case type
                    authors:
                      - admin
                    tags:
-                     - Teaching
+                     - teaching
                    categories:
                      - teaching
                    date: "#{today}T09:00:00Z"

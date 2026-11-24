@@ -9,7 +9,7 @@ authors:
 - Davide Ceolin
 tags:
 - crowdsourcing annotation
-- information quality assessment
+- information quality
 - argument type identification
 categories: []
 date: '2024-09-01'

@@ -1,4 +1,8 @@
 {{- $page := .page -}}
+{{- $pageTitle := $page.Title -}}
+{{- if and (eq $page.Kind "term") (eq $page.Data.Singular "tag") -}}
+  {{- $pageTitle = partial "legacy/topic-label.html" (dict "slug" (path.Base (strings.TrimSuffix "/" $page.RelPermalink)) "fallback" $page.Title) -}}
+{{- end -}}
 {{- $summary := .summary | plainify -}}
 {{- $image := .image | default "" -}}
 {{- $siteTitle := .site_title | default site.Title -}}
@@ -97,7 +101,7 @@
       "@context" "https://schema.org"
       "@id" $page.Permalink
       "@type" "CollectionPage"
-      "name" $page.Title
+      "name" $pageTitle
       "url" $page.Permalink
       "description" $summary
       "inLanguage" (site.Language.Locale | default "en-US")
@@ -134,8 +138,8 @@
   {{- $items = $items | append (dict
     "@type" "ListItem"
     "position" (add (len $items) 1)
-    "name" $page.Title
-    "item" (dict "@id" $page.Permalink "name" $page.Title)
+    "name" $pageTitle
+    "item" (dict "@id" $page.Permalink "name" $pageTitle)
   ) -}}
   {{- $documents = $documents | append (dict
     "@context" "https://schema.org"

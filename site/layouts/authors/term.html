@@ -4,10 +4,12 @@
 {{ $avatar := $profile.avatar }}
 {{ $avatarShape := site.Params.appearance.avatar_shape | default "circle" }}
 
-<section class="max-w-5xl mx-auto px-6 py-10" data-local-layout="author-term" data-author-profile-provider="{{ $profile.provider }}">
+<main class="topic-archive secondary-archive" data-local-layout="author-term" data-author-profile-provider="{{ $profile.provider }}" data-pagefind-ignore>
+  <header class="topic-archive-header">
+  <a class="topic-archive-back" href="{{ .Parent.RelPermalink }}">← All authors</a>
   <div class="flex flex-col sm:flex-row sm:items-center gap-6">
-    <div class="flex-shrink-0">
-      {{ if $avatar }}
+    {{ if $avatar }}
+      <div class="flex-shrink-0">
         {{ if not (reflect.IsImageResourceProcessable $avatar) }}
           <img class="h-32 w-32 sm:h-40 sm:w-40 {{ if ne $avatarShape "square" }}rounded-full{{ end }}"
             src="{{ $avatar.RelPermalink }}" width="160" height="160" alt="{{ $profile.title }}" loading="lazy">
@@ -23,16 +25,12 @@
             srcset="{{ $responsive.srcset }}" sizes="160px" src="{{ $responsive.fallback.RelPermalink }}"
             width="160" height="160" alt="{{ $profile.title }}" loading="lazy">
         {{ end }}
-      {{ else }}
-        <div class="h-32 w-32 sm:h-40 sm:w-40 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center">
-          {{ partial "functions/get_icon" (dict "name" "hero/user" "attributes" "class=\"h-12 w-12 text-gray-400\"") }}
-        </div>
-      {{ end }}
-    </div>
+      </div>
+    {{ end }}
 
     <div class="space-y-2">
       <div class="flex items-center gap-2">
-        <h1 class="text-3xl sm:text-4xl font-bold">{{ $profile.title }}</h1>
+        <h1>{{ $profile.title }}</h1>
         {{ with $profile.status }}
           {{ with .icon }}<span class="text-2xl" aria-hidden="true">{{ . }}</span>{{ end }}
         {{ end }}
@@ -60,26 +58,7 @@
       {{ end }}
     </div>
   </div>
-</section>
-
-{{ $view := "card" }}
-{{ $block := . }}
-{{ $paginator := .Paginate .Pages.ByDate.Reverse }}
-{{ $config := dict
-  "columns" 2
-  "len" (len $paginator.Pages)
-  "fill_image" true
-  "show_date" true
-  "show_read_time" true
-  "show_read_more" true
-}}
-
-<div class="flex flex-col items-center px-6">
-  {{ partial "functions/render_view" (dict "fragment" "start" "page" $block "item" . "view" $view "config" $config) }}
-  {{ range $index, $item := $paginator.Pages }}
-    {{ partial "functions/render_view" (dict "page" . "item" . "view" $view "index" $index "config" $config) }}
-  {{ end }}
-  {{ partial "functions/render_view" (dict "fragment" "end" "page" $block "item" . "view" $view) }}
-  {{ partial "components/paginator" . }}
-</div>
+  </header>
+  {{ partial "legacy/archive-rows.html" . }}
+</main>
 {{ end }}

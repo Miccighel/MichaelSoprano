@@ -15,7 +15,7 @@ authors:
 tags:
 - digital pathology
 - whole slide imaging
-- registration
+- image registration
 - feature matching
 - crowdsourcing
 featured: false

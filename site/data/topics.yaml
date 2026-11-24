@@ -1,0 +1,31 @@
+# Exact spellings for names, technologies and acronyms.
+labels:
+  aidme: AIDME
+  amazon-mechanical-turk: Amazon Mechanical Turk
+  angular: Angular
+  covid-19: COVID-19
+  crowd_frame: Crowd_Frame
+  css: CSS
+  dbeaver: DBeaver
+  dom-manipulation: DOM Manipulation
+  express.js: Express.js
+  hits: HITS
+  html: HTML
+  http: HTTP
+  javascript: JavaScript
+  jupyter: Jupyter
+  microsoft-excel: Microsoft Excel
+  networkx: NetworkX
+  node.js: Node.js
+  pivottables: PivotTables
+  postman: Postman
+  prisma-2020: PRISMA 2020
+  prolific: Prolific
+  python: Python
+  restful-apis: RESTful APIs
+  sql: SQL
+  sqlite: SQLite
+  toloka: Toloka
+  trec: TREC
+  tweepy: Tweepy
+  twitter-api: Twitter API

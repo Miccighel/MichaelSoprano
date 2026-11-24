@@ -10,9 +10,13 @@
     {{ range . }}
     <li>
       {{ if eq .Section "events" }}
-      <strong>{{ .Title }}</strong> · <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+      {{ $type := index (split (.Params.summary | default "Presentation") " - ") 0 }}
+      {{ $start := .Params.event_start | default .Date }}
+      <p class="related-item-meta">{{ $type }} · <time datetime="{{ time.Format "2006-01-02" $start }}">{{ time.Format "Jan 2, 2006" $start }}</time></p>
+      <strong>{{ .Title }}</strong>
+      {{ with .Params.event_name }}<p class="related-item-venue">{{ . }}</p>{{ end }}
       <div class="resource-actions">
-        <a href="{{ .RelPermalink }}" aria-label="Event details: {{ .Title }}">Event details</a>
+        <a href="{{ .RelPermalink }}" aria-label="Event details: {{ $type }}{{ with .Params.event_name }}, {{ . }}{{ end }}, {{ time.Format "Jan 2, 2006" $start }} — {{ .Title }}">Event details</a>
         {{ range .Params.links }}{{ if in (slice "slides" "pdf" "video") .type }}
         <a href="{{ .url }}" target="_blank" rel="noopener">{{ partial "legacy/event-resource-label.html" . }}</a>
         {{ end }}{{ end }}

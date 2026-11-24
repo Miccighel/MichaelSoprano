@@ -1,5 +1,79 @@
 [
   {
+    "from": "2026-11-20",
+    "to": "2026-11-23",
+    "source": "Google Scholar",
+    "source_url": "https://scholar.google.com/citations?user=ocK0qRUAAAAJ",
+    "previous_total": 770,
+    "current_total": 779,
+    "delta": 9,
+    "changes": [
+      {
+        "id": "-f6ydRqryjwC",
+        "title": "Large Language Models for Combinatorial Optimization: A Systematic Review",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A-f6ydRqryjwC",
+        "previous": 72,
+        "current": 76,
+        "delta": 4
+      },
+      {
+        "id": "4DMP91E08xMC",
+        "title": "Crowdsourced Fact-Checking: Does it Actually Work?",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A4DMP91E08xMC",
+        "previous": 54,
+        "current": 56,
+        "delta": 2
+      },
+      {
+        "id": "hqOjcs7Dif8C",
+        "title": "Can The Crowd Judge Truthfulness? A Longitudinal Study on Recent Misinformation About COVID-19",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AhqOjcs7Dif8C",
+        "previous": 44,
+        "current": 45,
+        "delta": 1
+      },
+      {
+        "id": "0EnyYjriUFMC",
+        "title": "The Many Dimensions of Truthfulness: Crowdsourcing Misinformation Assessments on a Multidimensional Scale",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A0EnyYjriUFMC",
+        "previous": 101,
+        "current": 102,
+        "delta": 1
+      },
+      {
+        "id": "M3ejUd6NZC8C",
+        "title": "Towards a Conversational-Based Agent for Health Services",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3AM3ejUd6NZC8C",
+        "previous": 5,
+        "current": 6,
+        "delta": 1
+      }
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
+    "from": "2026-11-16",
+    "to": "2026-11-20",
+    "source": "Google Scholar",
+    "source_url": "https://scholar.google.com/citations?user=ocK0qRUAAAAJ",
+    "previous_total": 768,
+    "current_total": 770,
+    "delta": 2,
+    "changes": [
+      {
+        "id": "-f6ydRqryjwC",
+        "title": "Large Language Models for Combinatorial Optimization: A Systematic Review",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&user=ocK0qRUAAAAJ&citation_for_view=ocK0qRUAAAAJ%3A-f6ydRqryjwC",
+        "previous": 70,
+        "current": 72,
+        "delta": 2
+      }
+    ],
+    "added": [],
+    "removed": []
+  },
+  {
     "from": "2026-11-09",
     "to": "2026-11-16",
     "source": "Google Scholar",

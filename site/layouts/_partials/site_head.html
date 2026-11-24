@@ -49,9 +49,6 @@
     {{ $design_styles := resources.Get "css/design-system.css" | minify | fingerprint "sha256" }}
     <link href="{{ $design_styles.RelPermalink }}" rel="stylesheet" />
   {{ end }}
-  {{ if .IsHome }}
-    <link href="/vendor/leaflet/leaflet.css" rel="stylesheet" />
-  {{ end }}
 
   {{/* Externalized init scripts for CSP-friendly head */}}
   {{- $hb_head := resources.Get "js/hb-head.js" | js.Build | resources.Minify -}}
@@ -122,6 +119,9 @@
     {{ $title = replace . "{brand}" $branding.site_title }}
   {{ else }}
     {{ $title = .Title | default $branding.site_title }}
+    {{ if and (eq .Kind "term") (eq .Data.Singular "tag") }}
+      {{ $title = partial "legacy/topic-label.html" (dict "slug" (path.Base (strings.TrimSuffix "/" .RelPermalink)) "fallback" .Title) }}
+    {{ end }}
     {{ if ne $title $branding.site_title }}{{ $title = printf "%s | %s" $title $branding.site_title }}{{ end }}
   {{ end }}
   <meta property="twitter:card" content="{{ $twitter_card }}" />

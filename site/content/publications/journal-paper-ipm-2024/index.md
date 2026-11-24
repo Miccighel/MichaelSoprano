@@ -11,7 +11,7 @@ authors:
 - Gianluca Demartini
 - Stefano Mizzaro
 tags:
-- cognitive bias
+- cognitive biases
 - misinformation
 - fact-checking
 - truthfulness assessment

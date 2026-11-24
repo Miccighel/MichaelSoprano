@@ -6,6 +6,6 @@
     {{ if .archive }}{{ with $course.Params.summary }}<p>{{ . }}</p>{{ end }}{{ end }}
   </div>
   {{ range first 1 (partial "legacy/course-editions.html" $course) }}
-    <a class="teaching-item-link" href="{{ .RelPermalink }}" aria-label="{{ $course.Title }}: {{ .Params.course_edition }} edition">{{ .Params.course_edition }} edition <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    <a class="teaching-item-link" href="{{ .RelPermalink }}" aria-label="Latest edition: {{ $course.Title }}"><span>Latest edition</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
   {{ end }}
 </article>

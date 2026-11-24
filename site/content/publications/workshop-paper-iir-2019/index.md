@@ -8,7 +8,7 @@ authors:
 - Kevin Roitero
 - Stefano Mizzaro
 tags:
-- test collection
+- test collections
 - bias
 - fairness
 - network analysis

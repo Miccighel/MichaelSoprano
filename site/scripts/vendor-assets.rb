@@ -40,9 +40,4 @@ academicons_root = File.join(MODULE_ROOT, 'academicons')
 copy(File.join(academicons_root, 'css', 'academicons.min.css'), File.join(VENDOR_ROOT, 'academicons', 'css', 'academicons.min.css'))
 copy(File.join(academicons_root, 'fonts'), File.join(VENDOR_ROOT, 'academicons', 'fonts'))
 
-leaflet_root = File.join(MODULE_ROOT, 'leaflet', 'dist')
-copy(File.join(leaflet_root, 'leaflet.css'), File.join(VENDOR_ROOT, 'leaflet', 'leaflet.css'))
-copy(File.join(leaflet_root, 'leaflet.js'), File.join(VENDOR_ROOT, 'leaflet', 'leaflet.js'))
-copy(File.join(leaflet_root, 'images'), File.join(VENDOR_ROOT, 'leaflet', 'images'))
-
 puts "Vendored frontend assets prepared in #{VENDOR_ROOT}."

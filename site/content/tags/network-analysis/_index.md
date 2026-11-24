@@ -1,3 +1,3 @@
 ---
-title: Network Analysis
+title: network analysis
 ---

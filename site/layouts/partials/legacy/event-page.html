@@ -5,7 +5,12 @@
   <a class="event-back-link" href="/event/" data-pagefind-ignore><i class="fas fa-arrow-left" aria-hidden="true"></i> All presentations</a>
   <div class="event-spread{{ if $image }} has-preview{{ end }}">
     <header class="event-heading event-hero">
-      <p class="event-imprint">{{ $eventType }}</p>
+      {{ $resource := "" }}
+      {{ range .Params.links }}
+        {{ $label := partial "legacy/event-resource-label.html" . }}
+        {{ if in (slice "Slides" "Slides (PDF)" "Poster (PDF)") $label }}{{ $resource = $label }}{{ end }}
+      {{ end }}
+      <p class="event-imprint"{{ with $resource }} data-pagefind-meta="resource[data-resource]" data-resource="{{ . }}"{{ end }}>{{ $eventType }}</p>
       <h1>{{ .Title }}</h1>
       {{ with .Params.authors }}<p class="event-authors">{{ delimit . ", " }}</p>{{ end }}
       {{ partial "legacy/page-buttons.html" . }}
@@ -14,7 +19,7 @@
       <h2 id="event-details-heading">Event details</h2>
       <dl>
         {{ with .Params.event_name }}
-          <div class="event-venue"><dt>Event</dt><dd>{{ if and $page.Params.event_url (not (where $page.Params.links "url" $page.Params.event_url)) }}<a href="{{ $page.Params.event_url }}" target="_blank" rel="noopener">{{ . }}</a>{{ else }}{{ . }}{{ end }}</dd></div>
+          <div class="event-venue"><dt>Event</dt><dd data-pagefind-meta="venue">{{ if and $page.Params.event_url (not (where $page.Params.links "url" $page.Params.event_url)) }}<a href="{{ $page.Params.event_url }}" target="_blank" rel="noopener">{{ . }}</a>{{ else }}{{ . }}{{ end }}</dd></div>
         {{ end }}
         {{ with .Params.event_start }}
           <div><dt>Date</dt><dd><time datetime="{{ time.Format "2006-01-02" . }}" data-pagefind-meta="year:{{ time.Format "2006" . }}">{{ time.Format "Jan 2, 2006" . }}</time>{{ with partial "legacy/event-time-range.html" $page }} <span class="event-clock">{{ . }}</span>{{ end }}</dd></div>

@@ -6,17 +6,36 @@
         <a class="course-back-link" href="/#teaching">Teaching</a>
         {{ with .Params.course_parent }}<span aria-hidden="true">/</span><a class="course-back-link" href="{{ . }}">Course overview</a>{{ end }}
       </nav>
-      <p class="course-kicker">{{ if .Params.course_edition }}Course edition{{ else }}Course overview{{ end }}</p>
+      {{ $courseType := cond .Params.course_edition "Edition" (cond .Params.course_overview "Overview" "Archive") }}
+      <p class="course-kicker" data-pagefind-meta="resource[data-resource]" data-resource="{{ $courseType }}">{{ if eq $courseType "Archive" }}Archived overview{{ else if eq $courseType "Edition" }}Course edition{{ else }}Course overview{{ end }}</p>
       <h1>{{ .Title }}</h1>
       {{ with .Params.subtitle }}<p class="course-subtitle">{{ replace . "'" "’" }}</p>{{ end }}
       <div class="course-meta" aria-label="Course page information">
-        {{ with .Params.lastmod }}<span>Updated <time datetime="{{ time.Format "2006-01-02" . }}">{{ time.Format "Jan 2, 2006" . }}</time></span>{{ end }}
+        {{ if not .Lastmod.IsZero }}<span>Updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "Jan 2, 2006" }}</time></span>{{ end }}
       </div>
       {{ $page := . }}
       {{ with partial "legacy/course-editions.html" . }}
         <nav class="course-editions" aria-label="Academic years" data-pagefind-ignore>
-          <span>Academic years</span>
-          <ul>{{ range . }}<li>{{ if eq .RelPermalink $page.RelPermalink }}<span aria-current="page">{{ .Params.course_edition }}</span>{{ else }}<a href="{{ .RelPermalink }}">{{ .Params.course_edition }}</a>{{ end }}</li>{{ end }}</ul>
+          <span class="editions-wide">Academic years</span>
+          <ul class="editions-wide">{{ range . }}<li>{{ partial "legacy/edition-link.html" (dict "edition" . "page" $page) }}</li>{{ end }}</ul>
+          <div class="editions-compact">
+            {{ $featuredEdition := index . 0 }}
+            {{ $featuredLabel := "Latest edition" }}
+            {{ $otherLabel := "Previous editions" }}
+            {{ if $page.Params.course_edition }}
+              {{ $featuredEdition = $page }}
+              {{ $featuredLabel = "This edition" }}
+              {{ $otherLabel = "Other editions" }}
+            {{ end }}
+            <span>{{ $featuredLabel }}</span>
+            <ul><li>{{ partial "legacy/edition-link.html" (dict "edition" $featuredEdition "page" $page) }}</li></ul>
+            {{ with where . "RelPermalink" "ne" $featuredEdition.RelPermalink }}
+              <details>
+                <summary>{{ $otherLabel }}</summary>
+                <ul>{{ range . }}<li>{{ partial "legacy/edition-link.html" (dict "edition" . "page" $page) }}</li>{{ end }}</ul>
+              </details>
+            {{ end }}
+          </div>
         </nav>
       {{ end }}
     </div>

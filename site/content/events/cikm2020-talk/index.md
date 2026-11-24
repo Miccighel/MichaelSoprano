@@ -16,7 +16,7 @@ authors:
 - Stefano Mizzaro
 - Gianluca Demartini
 tags:
-- covid-19
+- COVID-19
 - crowdsourcing
 featured: false
 image:

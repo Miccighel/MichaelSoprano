@@ -17,7 +17,7 @@ tags:
 - truthfulness
 - crowdsourcing
 - misinformation
-- covid
+- COVID-19
 categories: []
 date: '2021-09-16'
 lastmod: 2021-09-15 15:00:00.000000000 +01:00
