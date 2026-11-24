@@ -1,0 +1,11 @@
+{{ $course := .page }}
+<article class="teaching-item">
+  <div class="teaching-item-content">
+    {{ if .archive }}<h2><a href="{{ $course.RelPermalink }}">{{ $course.Title }}</a></h2>{{ else }}<h3><a href="{{ $course.RelPermalink }}">{{ $course.Title }}</a></h3>{{ end }}
+    {{ with $course.Params.subtitle }}<p>{{ . }}</p>{{ end }}
+    {{ if .archive }}{{ with $course.Params.summary }}<p>{{ . }}</p>{{ end }}{{ end }}
+  </div>
+  {{ range first 1 (partial "legacy/course-editions.html" $course) }}
+    <a class="teaching-item-link" href="{{ .RelPermalink }}" aria-label="Latest edition: {{ $course.Title }}"><span>Latest edition</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+  {{ end }}
+</article>

@@ -10,11 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const emptyElement = modal.querySelector("[data-search-empty]");
   const errorElement = modal.querySelector("[data-search-error]");
   const statusElement = modal.querySelector("[data-search-status]");
+  const more = modal.querySelector("[data-search-more]");
+  const pageSize = 10;
   const toggleButtons = [...document.querySelectorAll("[data-search-toggle]")];
   const closeButtons = [...modal.querySelectorAll("[data-search-close]")];
 
   let pagefindPromise;
   let results = [];
+  let matches = [];
   let selectedIndex = -1;
   let requestId = 0;
   let debounceTimer;
@@ -31,6 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const clearResults = () => {
+    matches = [];
+    more.hidden = true;
+    more.disabled = false;
     results = [];
     selectedIndex = -1;
     resultsElement.replaceChildren();
@@ -38,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     input.setAttribute("aria-expanded", "false");
   };
 
-  const selectResult = (index) => {
+  const selectResult = (index, scroll = true) => {
     if (!results.length) return;
     selectedIndex = (index + results.length) % results.length;
 
@@ -50,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const selectedResult = results[selectedIndex];
     input.setAttribute("aria-activedescendant", selectedResult.id);
-    selectedResult.scrollIntoView({ block: "nearest" });
+    if (scroll) selectedResult.scrollIntoView({ block: "nearest" });
   };
 
   const createResult = (data, index) => {
@@ -59,17 +65,24 @@ document.addEventListener("DOMContentLoaded", () => {
     link.href = data.url;
 
     const title = link.querySelector("h3");
-    title.innerHTML = data.meta?.title || "Untitled";
+    title.textContent = data.meta?.title || "Untitled";
     const metadata = link.querySelector(".site-search-result-meta");
     if (metadata) {
-      metadata.textContent = [data.meta?.kind, data.meta?.year].filter(Boolean).join(" · ");
+      metadata.textContent = [data.meta?.kind, data.meta?.year, data.meta?.resource].filter(Boolean).join(" · ");
       metadata.hidden = !metadata.textContent;
     }
 
     const excerpt = link.querySelector("p");
-    excerpt.innerHTML = data.excerpt || "";
+    const venue = link.querySelector(".site-search-result-venue");
+    venue.textContent = data.meta?.venue || "";
+    venue.hidden = !venue.textContent;
+    if (data.meta?.kind === "Publication" || data.meta?.kind === "Presentation") {
+      excerpt.textContent = data.meta?.summary || "";
+    } else {
+      excerpt.innerHTML = data.excerpt || "";
+    }
 
-    link.addEventListener("mouseenter", () => selectResult(index));
+    link.addEventListener("mouseenter", () => selectResult(index, false));
     link.addEventListener("focus", () => selectResult(index));
     link.addEventListener("click", closeSearch);
     return link;
@@ -89,6 +102,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     return pagefindPromise;
   };
+
+  const appendBatch = async (currentRequest) => {
+    const start = results.length;
+    more.disabled = true;
+    const data = await Promise.all(matches.slice(start, start + pageSize).map(hit => hit.data()));
+    if (currentRequest !== requestId) return;
+    const elements = data.map((item, index) => createResult(item, start + index));
+    resultsElement.append(...elements);
+    results.push(...elements);
+    const remaining = matches.length - results.length;
+    more.textContent = `Show ${Math.min(pageSize, remaining)} more`;
+    more.hidden = !remaining;
+    more.disabled = false;
+    const total = matches.length;
+    setStatus(remaining ? `Showing ${results.length} of ${total} results.` : `${total} result${total === 1 ? "" : "s"} found.`);
+    input.setAttribute("aria-expanded", "true");
+    if (!start) selectResult(0);
+    else {
+      input.focus({ preventScroll: true });
+      selectResult(start);
+    }
+  };
+
+  more.addEventListener("click", async () => {
+    const id = requestId;
+    try { await appendBatch(id); }
+    catch {
+      if (id !== requestId) return;
+      more.disabled = false;
+      setStatus("Could not load more results. Please try again.");
+    }
+  });
 
   const runSearch = async () => {
     const query = input.value.trim();
@@ -110,17 +155,10 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const pagefind = await loadPagefind();
       const search = await pagefind.search(query);
-      const data = await Promise.all(search.results.slice(0, 10).map((result) => result.data()));
       if (currentRequest !== requestId) return;
-
-      const elements = data.map(createResult);
-      input.setAttribute("aria-expanded", String(elements.length > 0));
-      resultsElement.replaceChildren(...elements);
-      results = elements;
-
-      if (results.length) {
-        selectResult(0);
-        setStatus(`${results.length} results found.`);
+      matches = search.results;
+      if (matches.length) {
+        await appendBatch(currentRequest);
       } else {
         emptyElement.classList.remove("hidden");
         setStatus("No results found.");
@@ -137,6 +175,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const scheduleSearch = () => {
     window.clearTimeout(debounceTimer);
+    requestId += 1;
+    clearResults();
+    setStatus("");
     debounceTimer = window.setTimeout(runSearch, 250);
   };
 
@@ -189,18 +230,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.key === "Escape") {
       event.preventDefault();
       closeSearch();
-    } else if (event.key === "ArrowDown" && results.length) {
+    } else if (["ArrowDown", "ArrowUp"].includes(event.key) && results.length &&
+               (event.target === input || results.includes(event.target))) {
       event.preventDefault();
-      selectResult(selectedIndex + 1);
-    } else if (event.key === "ArrowUp" && results.length) {
-      event.preventDefault();
-      selectResult(selectedIndex - 1);
-    } else if (event.key === "Enter" && selectedIndex >= 0) {
+      selectResult(selectedIndex + (event.key === "ArrowDown" ? 1 : -1));
+      if (event.target !== input) results[selectedIndex].focus();
+    } else if (event.key === "Enter" && event.target === input && selectedIndex >= 0) {
       event.preventDefault();
       results[selectedIndex].click();
     } else if (event.key === "Tab") {
       const focusable = [...modal.querySelectorAll("input, a[href], button:not([disabled])")].filter(
-        (element) => !element.hidden && element.getClientRects().length,
+        (element) => element.tabIndex >= 0 && !element.hidden && element.getClientRects().length,
       );
       if (!focusable.length) return;
       const first = focusable[0];

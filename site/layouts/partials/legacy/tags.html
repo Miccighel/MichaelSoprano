@@ -1,5 +1,5 @@
-{{ with .Params.tags }}
+{{ with .GetTerms "tags" }}
   <div class="article-tags" data-pagefind-ignore>
-    {{ range . }}<a class="badge badge-light" href="/tag/{{ . | urlize }}/">{{ partial "legacy/topic-label.html" (dict "slug" (. | urlize) "fallback" .) }}</a>{{ end }}
+    {{ range . }}<a class="badge badge-light" href="{{ .RelPermalink }}">{{ partial "legacy/topic-label.html" (dict "slug" (path.Base (strings.TrimSuffix "/" .RelPermalink)) "fallback" .Title) }}</a>{{ end }}
   </div>
 {{ end }}

@@ -1,0 +1,10 @@
+{{- /* Date-only records have no clock time, even when event_all_day is false. */ -}}
+{{- $clock := `[T ]\d{2}:\d{2}` -}}
+{{- $range := "" -}}
+{{- if and .Params.event_start (not .Params.event_all_day) (not .Params.event_time_unknown) (findRE $clock (string .Params.event_start)) -}}
+  {{- $range = time.Format "15:04" .Params.event_start -}}
+  {{- with .Params.event_end -}}
+    {{- if findRE $clock (string .) -}}{{- $range = printf "%s–%s" $range (time.Format "15:04" .) -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $range -}}

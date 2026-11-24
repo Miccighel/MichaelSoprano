@@ -3,10 +3,10 @@
 {{ $typeAnchors := dict "paper-conference" "1" "article-journal" "2" "thesis" "7" }}
 {{ $type := index .Params.publication_types 0 | default "" }}
 {{ $typeLabel := index $typeLabels $type | default "Publication" }}
-<article class="legacy-single legacy-publication-single publication-page pub" data-pagefind-body data-pagefind-meta="kind:Publication">
-  <header class="publication-hero">
+<main class="legacy-single legacy-publication-single publication-page pub" data-pagefind-body data-pagefind-meta="kind:Publication">
+  <header class="publication-hero"{{ with .Params.publication.name }} data-pagefind-meta="venue[data-venue]" data-venue="{{ . | markdownify | plainify }}"{{ end }}>
     <div class="publication-hero-inner">
-      <a class="publication-back-link" href="/publication/" data-pagefind-ignore><i class="fas fa-arrow-left" aria-hidden="true"></i> All publications</a>
+      <a class="publication-back-link" href="/publication/" data-pagefind-ignore data-publication-return><i class="fas fa-arrow-left" aria-hidden="true"></i> <span>All publications</span></a>
       <div class="publication-hero-meta">
         <span>{{ $typeLabel }}</span>
         <time datetime="{{ .Date.Format "2006-01-02" }}" data-pagefind-meta="year:{{ .Date.Format "2006" }}">{{ .Date.Format "Jan 2006" }}</time>
@@ -14,7 +14,8 @@
       <h1>{{ .Title }}</h1>
       {{ with .Params.subtitle }}<p class="publication-subtitle">{{ . }}</p>{{ end }}
       {{ with .Params.authors }}<p class="publication-authors">{{ delimit . ", " }}</p>{{ end }}
-      {{ partial "legacy/page-buttons.html" . }}
+      {{ with .Params.publication.name }}<div class="publication-venue-inline"><span>Published in:</span> {{ . | markdownify }}</div>{{ end }}
+      {{ partial "legacy/publication-actions.html" (dict "page" . "newTab" true) }}
     </div>
   </header>
 
@@ -23,7 +24,7 @@
       {{ with .Params.abstract }}
         <section class="publication-abstract">
           <h2>Abstract</h2>
-          <p>{{ . }}</p>
+          <p data-pagefind-meta="summary[data-summary]" data-summary="{{ . | plainify | truncate 220 }}">{{ . }}</p>
         </section>
       {{ end }}
       {{ with .Content }}<div class="article-style publication-description">{{ . }}</div>{{ end }}
@@ -41,7 +42,7 @@
         </div>
       {{ end }}
       {{ with .Params.publication }}{{ with .name }}
-        <div class="publication-fact">
+        <div class="publication-fact publication-venue-aside">
           <span>Published in</span>
           <div>{{ . | markdownify }}</div>
         </div>
@@ -55,7 +56,9 @@
     </aside>
   </div>
 
-  {{ $related := site.RegularPages.Related . | first 5 }}
-  {{ with $related }}<div class="publication-related">{{ partial "legacy/related.html" $ }}</div>{{ end }}
-</article>
+  {{ with partial "legacy/related.html" . }}<div class="publication-related">{{ . }}</div>{{ end }}
+</main>
+{{ $publicationReturn := resources.Get "js/publication-return.js" | resources.Minify }}
+{{ if hugo.IsProduction }}{{ $publicationReturn = $publicationReturn | fingerprint "sha256" }}{{ end }}
+<script defer src="{{ $publicationReturn.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $publicationReturn.Data.Integrity }}" crossorigin="anonymous"{{ end }}></script>
 {{ end }}

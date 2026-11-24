@@ -11,7 +11,7 @@ authors:
 - Vincenzo Della Mea
 - Stefano Mizzaro
 tags:
-- conversational agent
+- conversational agents
 - public administration
 featured: false
 image:

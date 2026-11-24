@@ -1,0 +1,1 @@
+{{ if eq .edition.RelPermalink .page.RelPermalink }}<span aria-current="page">{{ .edition.Params.course_edition }}</span>{{ else }}<a href="{{ .edition.RelPermalink }}">{{ .edition.Params.course_edition }}</a>{{ end }}

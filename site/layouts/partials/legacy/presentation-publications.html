@@ -1,32 +1,28 @@
 {{- $page := . -}}
-{{- $matches := slice -}}
-{{- range hugo.Data.presentation_publications -}}
-  {{- $event := site.GetPage (printf "/events/%s" .event) -}}
-  {{- $publication := site.GetPage (printf "/publications/%s" .publication) -}}
-  {{- if or (not $event) (not $publication) -}}
-    {{- errorf "Invalid presentation/publication relationship: %s -> %s" .event .publication -}}
-  {{- else if eq $page.RelPermalink $event.RelPermalink -}}
-    {{- $matches = $matches | append $publication -}}
-  {{- else if eq $page.RelPermalink $publication.RelPermalink -}}
-    {{- $matches = $matches | append $event -}}
-  {{- end -}}
-{{- end -}}
-{{- with $matches -}}
-<section class="related-list" aria-labelledby="associated-materials-heading" data-pagefind-ignore>
-  <h3 id="associated-materials-heading">{{ if eq $page.Section "publications" }}{{ if eq (len .) 1 }}Presentation{{ else }}Presentations{{ end }}{{ else }}Associated publication{{ end }}</h3>
+{{- with partialCached "legacy/associated-pages.html" $page $page.RelPermalink -}}
+<section class="related-list{{ if eq $page.Section "events" }} event-index-row{{ end }}" aria-labelledby="associated-materials-heading" data-pagefind-ignore>
+  {{ if eq $page.Section "events" }}
+    <h2 id="associated-materials-heading">{{ if eq (len .) 1 }}Associated publication{{ else }}Associated publications{{ end }}</h2>
+  {{ else }}
+    <h3 id="associated-materials-heading">{{ if eq (len .) 1 }}Presentation{{ else }}Presentations{{ end }}</h3>
+  {{ end }}
   <ul>
-    {{ range sort . "Date" "desc" }}
+    {{ range . }}
     <li>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ if eq .Section "events" }}
-      <span> · {{ .Date.Format "Jan 2006" }}</span>
-      {{ with .Params.links }}
-      <div class="btn-links">
-        {{ range . }}{{ if in (slice "slides" "pdf" "video") .type }}
-        <a class="btn btn-outline-primary" href="{{ .url }}" target="_blank" rel="noopener">{{ partial "legacy/resource-label.html" .type }}</a>
+      {{ $type := index (split (.Params.summary | default "Presentation") " - ") 0 }}
+      {{ $start := .Params.event_start | default .Date }}
+      <p class="related-item-meta">{{ $type }} · <time datetime="{{ time.Format "2006-01-02" $start }}">{{ time.Format "Jan 2, 2006" $start }}</time></p>
+      <strong>{{ .Title }}</strong>
+      {{ with .Params.event_name }}<p class="related-item-venue">{{ . }}</p>{{ end }}
+      <div class="resource-actions">
+        <a href="{{ .RelPermalink }}" aria-label="Event details: {{ $type }}{{ with .Params.event_name }}, {{ . }}{{ end }}, {{ time.Format "Jan 2, 2006" $start }} — {{ .Title }}">Event details</a>
+        {{ range .Params.links }}{{ if in (slice "slides" "pdf" "video") .type }}
+        <a href="{{ .url }}" target="_blank" rel="noopener">{{ partial "legacy/event-resource-label.html" . }}</a>
         {{ end }}{{ end }}
       </div>
-      {{ end }}
+      {{ else }}
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
     </li>
     {{ end }}

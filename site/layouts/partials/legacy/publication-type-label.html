@@ -1,0 +1,1 @@
+{{ return (index (dict "paper-conference" "Conference papers" "article-journal" "Journal articles" "thesis" "Theses") .Data.Term | default .Title) }}

@@ -1,0 +1,24 @@
+{{ $pager := .Paginate .Pages.ByDate.Reverse }}
+<div class="topic-results">
+  {{ range $pager.Pages }}
+    <article class="topic-result" data-archive-result>
+      <div class="topic-result-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006" }}</time>
+        <span>{{ partial "legacy/content-kind.html" . }}</span>
+      </div>
+      <div class="topic-result-content">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ if ne .Section "blog" }}{{ with .Params.authors }}<p class="topic-result-authors">{{ delimit . ", " }}</p>{{ end }}{{ end }}
+        {{ if eq .Section "events" }}
+          {{ $dates := partial "functions/get_event_dates.html" . }}
+          <p class="topic-result-context" data-event-date-provider="{{ $dates.provider }}">{{ .Params.event_name }}{{ with .Params.event_name }} · {{ end }}{{ $dates.text }}</p>
+        {{ else if eq .Section "publications" }}
+          {{ with .Params.publication.name }}<p class="topic-result-context">{{ . | markdownify }}</p>{{ end }}
+        {{ else }}
+          {{ with .Params.subtitle | default .Params.summary }}<p class="topic-result-context">{{ . | markdownify }}</p>{{ end }}
+        {{ end }}
+      </div>
+    </article>
+  {{ end }}
+</div>
+{{ partial "components/paginator" . }}

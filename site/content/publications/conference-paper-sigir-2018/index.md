@@ -8,7 +8,7 @@ authors:
 - Stefano Mizzaro
 tags:
 - topic selection
-- trec
+- TREC
 - few topics
 - test collections
 categories: []

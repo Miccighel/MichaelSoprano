@@ -1,11 +1,12 @@
-<footer id="site-footer" class="legacy-site-footer">
+<footer id="site-footer" class="legacy-site-footer legacy-container">
   <div class="site-footer-main">
     <div class="site-footer-identity">
       <a class="site-footer-name" href="/">Michael Soprano</a>
       <p>Researcher at the University of Udine.</p>
     </div>
     <div id="site-footer-meta" class="site-footer-bottom">
-      <p>© {{ now.Year }} Michael Soprano <span aria-hidden="true">·</span> <a href="/privacy/">Privacy</a> <span aria-hidden="true">·</span> Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a></p>
+      <small>© {{ now.Year }}</small>
+      <a href="/privacy/">Privacy</a>
       <a class="site-footer-top" href="#top">Back to top <i class="fas fa-arrow-up" aria-hidden="true"></i></a>
     </div>
   </div>
@@ -13,11 +14,11 @@
 
 {{ $has_citations := or .IsHome (eq .Section "publications") }}
 {{ if $has_citations }}
-  <div id="legacy-cite-modal" class="legacy-cite-modal" role="dialog" aria-modal="true" aria-labelledby="legacy-cite-title" hidden>
+  <div id="legacy-cite-modal" class="legacy-cite-modal" role="dialog" aria-modal="true" aria-labelledby="legacy-cite-title" aria-describedby="legacy-cite-paper" hidden>
     <div class="legacy-cite-dialog">
-      <div class="legacy-cite-header"><div><h2 id="legacy-cite-title">Cite this publication</h2><p>BibTeX</p></div><button class="legacy-cite-close" type="button" aria-label="Close citation dialog">×</button></div>
+      <div class="legacy-cite-header"><div><h2 id="legacy-cite-title">BibTeX citation</h2><p id="legacy-cite-paper"></p></div><button class="legacy-cite-close" type="button" aria-label="Close citation dialog">×</button></div>
       <div class="legacy-cite-body" tabindex="0" role="region" aria-label="BibTeX citation"><pre><code id="legacy-cite-code"></code></pre></div>
-      <div class="legacy-cite-footer"><span id="legacy-cite-status" class="sr-only" role="status"></span><button class="btn" id="legacy-cite-copy" type="button"><i class="fas fa-copy" aria-hidden="true"></i> Copy BibTeX</button><a class="btn" id="legacy-cite-download" download="cite.bib"><i class="fas fa-download" aria-hidden="true"></i> Download .bib</a></div>
+      <div class="legacy-cite-footer resource-actions"><span id="legacy-cite-status" class="sr-only" role="status"></span><button class="index-button" id="legacy-cite-copy" type="button"><i class="fas fa-copy" aria-hidden="true"></i> Copy BibTeX</button><a id="legacy-cite-download" download="cite.bib">Download .bib</a></div>
     </div>
   </div>
   {{ $citations_js := resources.Get "js/site-citations.js" | resources.Minify }}

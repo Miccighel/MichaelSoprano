@@ -10,7 +10,7 @@ authors:
 tags:
 - peer review
 - network analysis
-- hits
+- HITS
 categories: []
 date: '2019-07-25'
 lastmod: 2021-03-15 15:36:37.000000000 +01:00

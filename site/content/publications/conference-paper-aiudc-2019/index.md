@@ -36,5 +36,5 @@ publication:
   name: "*AIUCD 2019 - Book of Abstracts: Teaching and Research in Digital Humanities' Era*"
 links:
 - type: pdf
-  url: http://aiucd2019.uniud.it/wp-content/uploads/2020/03/AIUCD2019-BoA_DEF.pdf
+  url: https://amsacta.unibo.it/id/eprint/6361/3/AIUCD2019%20BoA_DEF.pdf#page=253
 ---

@@ -1,11 +1,10 @@
 ---
 title: Web Applications
 subtitle: Master's Degree in Management Engineering at the University of Udine
-summary: Course offered within the Master's Degree in Management Engineering at the
-  University of Udine
+summary: Students build a web application and learn how its interface, server and database work together.
 projects: []
 date: '2024-08-08T11:00:00Z'
-lastmod: '2026-10-29'
+course_updated: '2026-11-24'
 draft: false
 featured: false
 image:
@@ -25,10 +24,10 @@ tags:
 - Node.js
 - Express.js
 - SQLite
-- Full-Stack
-- Forms and Validation
-- Responsive Design
-- Teaching
+- full-stack
+- forms and validation
+- responsive design
+- teaching
 categories:
 - teaching
 course_overview: true
@@ -36,97 +35,31 @@ course_overview: true
 
 ## About the course
 
-This course introduces the foundations of full-stack web application development through two complementary areas: **Frontend Development** and **Backend Development**.
+What happens when someone submits a form? The browser sends the input, the server checks it, and the application stores the data and shows the result. Web Applications uses familiar interactions like this to teach students how to build the whole application, from the page people use to the database behind it.
 
-On the **frontend**, students learn how to create structured, interactive, and accessible user interfaces using HTML, CSS, and JavaScript. Topics include semantic markup, responsive layout, form handling, client-side validation, and media embedding. Students progressively develop skills in DOM manipulation, event-driven programming, and asynchronous operations.
-
-On the **backend**, the course introduces Node.js and the Express.js framework for building RESTful services, managing middleware, and handling persistence with SQLite. By the end of the course, students are able to design and implement full-stack applications that integrate client-side interfaces with server-side logic and data storage.
-
-Hands-on activities with cURL, Postman, and structured assignments support practical learning throughout the course.
+The course is listed as *Applicazioni Web* in the university catalogue.
 
 ## Teaching
 
-- **Michael Soprano** - Course Instructor
+I teach the course in the second semester, with 24 lectures and 48 hours in total. I use short exercises to show what each part does on its own before students bring the parts together in a project.
 
-The course consists of 24 lectures for a total of 48 hours. It is delivered in the second semester. Assessment is based on the design, implementation, and discussion of a full-stack project.
+## Programme
 
-The editions listed above provide details for each year, including any changes to the teaching schedule or assessment.
-
-## Topics
-
-### Web Fundamentals and Communication
-
-- Architecture of the World Wide Web
-- Client-server model and user agents
-- Domain names, IP addressing, and URLs
-- The HTTP protocol and the request-response lifecycle
-- Methods, status codes, headers, and metadata
-- URL query strings and GET parameter passing
-- Data exchange with JSON
-- Practical use of cURL and Postman
-
-### Frontend Development
-
-#### HTML: Structure and Semantics
-
-- Core syntax and document structure
-- Headings, paragraphs, and text-level semantics
-- Lists, tables, links, and images
-- The DOM and the HTML parsing model
-- Embedding external and multimedia content with `<iframe>`, `<video>`, and `<audio>`
-
-#### HTML Forms and Validation
-
-- Input types such as text, email, number, date, checkbox, and radio
-- Structural and grouping elements in forms
-- `<textarea>`, `<select>`, and option handling
-- HTML5 validation attributes and input constraints
-- Form design best practices
-
-#### CSS: Styling and Layout
-
-- Basic syntax, selectors, and combinators
-- Cascading rules, specificity, and inheritance
-- The box model: margin, padding, border, sizing, and overflow
-- Typography: fonts, spacing, and line height
-- Color management and transparency
-- Responsive layout with Flexbox
-- Positioning, layout strategies, and component patterns
-
-#### JavaScript: Behavior and Interaction
-
-- Core language constructs and syntax
-- Script inclusion and module structure
-- DOM selection, traversal, and manipulation
-- Event handling and listener registration
-- Event flow: bubbling and capture
-- Asynchronous JavaScript with callbacks, promises, and the Fetch API
-- Case study: calling a public API
-
-### Backend Development
-
-#### Node.js and Express.js
-
-- Introduction to Node.js and non-blocking I/O
-- Setting up an Express.js server
-- Defining routes and handling HTTP methods
-- Sending responses and managing request data
-- Middleware architecture and request pipelines
-- Building RESTful endpoints
-- Interfacing with SQLite for data persistence
-- Final integration project with full-stack CRUD operations
-
-## Learning approach
-
-The course combines conceptual explanations, practical demonstrations, and progressive hands-on activities. Students use developer tools, cURL, Postman, browser APIs, and server-side JavaScript to connect frontend interfaces with backend services.
-
-Assignments and exercises gradually move from isolated examples to complete application components. The final project consolidates the main topics of the course through the implementation of a full-stack application.
+- **Web architecture and HTTP.** Read URLs and trace the requests and responses exchanged by a browser and a server. Use cURL and Postman to inspect headers, status codes and data sent as JSON.
+- **HTML and CSS.** Give a page a meaningful structure, label form controls and use the browser’s input validation. Use the cascade and the box model to control how elements look and fit together, then adapt the layout to different screen widths.
+- **JavaScript in the browser.** Respond to clicks and form submissions, fetch data from an API and update the page without reloading it.
+- **Express and SQLite.** Define routes in Express, check the data received from the browser and return useful responses. Store and query records in SQLite so they remain available after the server restarts.
 
 ## Assessment
 
-Assessment is based on a project in which students design and implement a full-stack web application. The project is discussed to assess design choices, implementation quality, and understanding of the technologies used.
+Students design and build a web application, then demonstrate it and explain their choices in an oral discussion. The project brief varies by edition:
+
+- **A collection of your choice ([2024/2025](/post/web-applications/2024-2025/#assessment)).** Students chose what to catalogue and built an application to create, browse, edit and delete records.
+- **ConversAI ([2025/2026](/post/web-applications/2025-2026/#assessment)).** Students built a chat application that stored conversations in SQLite and generated simulated replies without using an external AI service.
 
 ## Materials
+
+In recent editions, slides, recordings, sample code and exercises were shared in the course group on Microsoft Teams. Suggested reading:
 
 - J. Duckett, *HTML & CSS: Design and Build Websites*. Wiley, 2011
 - J. Duckett, *JavaScript & jQuery: Interactive Front-End Web Development*. Wiley, 2014

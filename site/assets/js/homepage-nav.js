@@ -1,24 +1,35 @@
 (() => {
-  document.addEventListener("click", (event) => {
-    if (!event.target.closest('#nav-menu a[href^="/#"]')) return;
-    const toggle = document.getElementById("nav-toggle");
-    if (toggle) toggle.checked = false;
-  });
-
   const links = [...document.querySelectorAll('#nav-menu a[href^="/#"]')];
-  const sections = links.map((link) => document.querySelector(link.hash)).filter(Boolean);
-  if (!sections.length || !("IntersectionObserver" in window)) return;
+  const sections = links.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
+  if (!sections.length) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const current = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (!current) return;
-      links.forEach((link) => link.classList.toggle("active", link.hash === `#${current.target.id}`));
-    },
-    { rootMargin: "-20% 0px -65% 0px", threshold: [0, 0.25, 0.5] },
-  );
-
-  sections.forEach((section) => observer.observe(section));
+  let active;
+  let frame;
+  const update = () => {
+    frame = undefined;
+    const root = document.documentElement;
+    const anchorOffset = (parseFloat(getComputedStyle(root).scrollPaddingTop) || 0)
+      + (parseFloat(getComputedStyle(sections[0]).scrollMarginTop) || 0);
+    const line = Math.max(anchorOffset + 1, root.clientHeight * 0.22);
+    // The final section cannot always reach the reading line above the footer.
+    const atEnd = window.scrollY > 0 && root.scrollHeight - root.clientHeight - window.scrollY <= 2;
+    const current = atEnd ? sections[sections.length - 1]
+      : sections.findLast(section => section.getBoundingClientRect().top <= line) || sections[0];
+    if (current === active) return;
+    active = current;
+    for (const link of links) {
+      const selected = link.hash === `#${current.id}`;
+      link.classList.toggle("active", selected);
+      if (selected) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    }
+  };
+  const schedule = () => {
+    if (frame === undefined) frame = requestAnimationFrame(update);
+  };
+  window.addEventListener("scroll", schedule, { passive: true });
+  window.addEventListener("resize", schedule);
+  window.addEventListener("pageshow", schedule);
+  window.addEventListener("load", schedule);
+  schedule();
 })();

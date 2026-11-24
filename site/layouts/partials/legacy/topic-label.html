@@ -1,3 +1,3 @@
-{{- $label := .fallback -}}
-{{- with index hugo.Data.home.topics.labels .slug -}}{{- $label = . -}}{{- end -}}
+{{- $label := title (lower .fallback) -}}
+{{- with index hugo.Data.topics.labels .slug -}}{{- $label = . -}}{{- end -}}
 {{- return $label -}}

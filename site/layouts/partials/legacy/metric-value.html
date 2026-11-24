@@ -1,0 +1,1 @@
+{{- if eq (string .) "--" -}}<span class="metric-unavailable" aria-hidden="true">—</span><span class="sr-only">Not reported</span>{{- else -}}{{ . }}{{- end -}}

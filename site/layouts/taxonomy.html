@@ -3,9 +3,11 @@
   <div class="topic-index-inner">
     <header class="topic-index-header">
       <p class="topic-archive-eyebrow">Browse the research</p>
-      <h1>{{ .Title }}</h1>
+      <h1>{{ if eq .Type "publication_types" }}Publication types{{ else }}{{ .Title }}{{ end }}</h1>
       {{ with .Content }}<div class="topic-index-intro">{{ . }}</div>{{ end }}
-      <p class="topic-index-summary">{{ len .Data.Terms }} topics across publications, presentations and teaching.</p>
+      {{ $count := len .Data.Terms }}
+      {{ $labels := dict "authors" (slice "author" "authors") "categories" (slice "category" "categories") "publication_types" (slice "publication type" "publication types") }}
+      {{ with index $labels .Type }}<p class="topic-index-summary">{{ $count }} {{ index . (cond (eq $count 1) 0 1) }}.</p>{{ end }}
     </header>
 
     <div class="topic-index-grid">
@@ -15,7 +17,7 @@
         {{- $count := .Count -}}
         {{- with site.GetPage (printf "/%s/%s" $type $name) }}
           <a href="{{ .RelPermalink }}" class="topic-index-link inline-flex items-center">
-            {{ if eq $type "tags" }}{{ partial "legacy/topic-label.html" (dict "slug" (path.Base (strings.TrimSuffix "/" .RelPermalink)) "fallback" .Title) }}{{ else }}{{ .Title }}{{ end }}
+            {{ if eq $type "tags" }}{{ partial "legacy/topic-label.html" (dict "slug" (path.Base (strings.TrimSuffix "/" .RelPermalink)) "fallback" .Title) }}{{ else if eq $type "publication_types" }}{{ partial "legacy/publication-type-label.html" . }}{{ else }}{{ .Title }}{{ end }}
             <span class="topic-index-count inline-flex items-center justify-center">{{ $count }}</span>
           </a>
         {{- end -}}

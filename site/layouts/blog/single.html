@@ -1,16 +1,43 @@
 {{ define "main" }}
-<article class="legacy-single legacy-blog-single course-page" data-pagefind-body data-pagefind-meta="kind:Course">
+<main class="legacy-single legacy-blog-single course-page" data-pagefind-body data-pagefind-meta="kind:Course">
   <header class="course-hero">
     <div class="course-hero-inner">
-      <a class="course-back-link" href="/#teaching"><i class="fas fa-arrow-left" aria-hidden="true"></i> Teaching</a>
-      {{ with .Params.course_parent }}<a class="course-back-link course-parent-link" href="{{ . }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> Course overview</a>{{ end }}
-      <p class="course-kicker"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> {{ with .Params.course_edition }}Academic year {{ . }}{{ else }}Course overview{{ end }}</p>
+      <nav class="course-path" aria-label="Course navigation" data-pagefind-ignore>
+        <a class="course-back-link" href="/#teaching">Teaching</a>
+        {{ with .Params.course_parent }}<span aria-hidden="true">/</span><a class="course-back-link" href="{{ . }}">Course overview</a>{{ end }}
+      </nav>
+      {{ $courseType := cond .Params.course_edition "Edition" (cond .Params.course_overview "Overview" "Archive") }}
+      <p class="course-kicker" data-pagefind-meta="resource[data-resource]" data-resource="{{ $courseType }}">{{ if eq $courseType "Archive" }}Archived overview{{ else if eq $courseType "Edition" }}Course edition{{ else }}Course overview{{ end }}</p>
       <h1>{{ .Title }}</h1>
       {{ with .Params.subtitle }}<p class="course-subtitle">{{ replace . "'" "’" }}</p>{{ end }}
       <div class="course-meta" aria-label="Course page information">
-        <span><i class="fas fa-user" aria-hidden="true"></i> Michael Soprano</span>
-        <span><i class="fas fa-clock-rotate-left" aria-hidden="true"></i> Updated {{ time.Format "Jan 2, 2006" .Params.lastmod }}</span>
+        {{ if not .Lastmod.IsZero }}<span>Updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "Jan 2, 2006" }}</time></span>{{ end }}
       </div>
+      {{ $page := . }}
+      {{ with partial "legacy/course-editions.html" . }}
+        <nav class="course-editions" aria-label="Academic years" data-pagefind-ignore>
+          <span class="editions-wide">Academic years</span>
+          <ul class="editions-wide">{{ range . }}<li>{{ partial "legacy/edition-link.html" (dict "edition" . "page" $page) }}</li>{{ end }}</ul>
+          <div class="editions-compact">
+            {{ $featuredEdition := index . 0 }}
+            {{ $featuredLabel := "Latest edition" }}
+            {{ $otherLabel := "Previous editions" }}
+            {{ if $page.Params.course_edition }}
+              {{ $featuredEdition = $page }}
+              {{ $featuredLabel = "This edition" }}
+              {{ $otherLabel = "Other editions" }}
+            {{ end }}
+            <span>{{ $featuredLabel }}</span>
+            <ul><li>{{ partial "legacy/edition-link.html" (dict "edition" $featuredEdition "page" $page) }}</li></ul>
+            {{ with where . "RelPermalink" "ne" $featuredEdition.RelPermalink }}
+              <details>
+                <summary>{{ $otherLabel }}</summary>
+                <ul>{{ range . }}<li>{{ partial "legacy/edition-link.html" (dict "edition" . "page" $page) }}</li>{{ end }}</ul>
+              </details>
+            {{ end }}
+          </div>
+        </nav>
+      {{ end }}
     </div>
   </header>
 
@@ -24,7 +51,7 @@
         {{ $courses := where site.RegularPages "Params.course_overview" true }}
         {{ if gt (len $courses) 1 }}
           <nav class="course-switcher" aria-label="Other courses">
-            <details open>
+            <details>
               <summary>Other courses <i class="fas fa-chevron-down" aria-hidden="true"></i></summary>
               <ul>
                 {{ range sort $courses "Title" }}
@@ -38,15 +65,6 @@
     </aside>
 
     <div class="course-main">
-      {{ $editions := where site.RegularPages "Params.course_parent" .RelPermalink }}
-      {{ with $editions }}
-        <nav class="course-editions" aria-label="Course editions" data-pagefind-ignore>
-          <h2>Academic years</h2>
-          <div class="course-edition-links">
-            {{ range sort . "Params.course_edition" "desc" }}<a href="{{ .RelPermalink }}">{{ .Params.course_edition }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>{{ end }}
-          </div>
-        </nav>
-      {{ end }}
       <div class="article-style course-content">{{ .Content }}</div>
       <footer class="course-footer" data-pagefind-ignore>
         {{ partial "legacy/tags.html" . }}
@@ -56,5 +74,5 @@
       </footer>
     </div>
   </div>
-</article>
+</main>
 {{ end }}

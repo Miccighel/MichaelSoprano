@@ -1,0 +1,2 @@
+{{- $overview := .Params.course_parent | default .RelPermalink -}}
+{{- return (sort (where site.RegularPages "Params.course_parent" $overview) "Params.course_edition" "desc") -}}

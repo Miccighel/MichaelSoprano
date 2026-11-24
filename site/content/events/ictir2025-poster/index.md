@@ -16,7 +16,7 @@ authors:
 tags:
 - large language models
 - misinformation
-- prisma 2020
+- PRISMA 2020
 - scoping reviews
 - systematic reviews
 - truthfulness assessment
