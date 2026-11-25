@@ -14,6 +14,9 @@
     "check:links": "ruby scripts/check-external-links.rb"
   },
   "pnpm": {
+    "overrides": {
+      "@tailwindcss/typography@0.5.20>postcss-selector-parser": "6.1.5"
+    },
     "ignoredBuiltDependencies": [
       "@fortawesome/fontawesome-free",
       "@parcel/watcher"
