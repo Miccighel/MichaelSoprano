@@ -507,6 +507,7 @@ if File.file?(home_html)
     errors << 'index.html: external Markdown links do not use the local safe-link behavior'
   end
   errors << 'index.html: search attribution is not Pagefind' unless rendered_home.include?('Search by Pagefind')
+  errors << 'index.html: whitespace before punctuation after a link' if rendered_home.match?(%r{</a>\s+[.,;:](?=\s|<|\z)}i)
 
   home_data = YAML.safe_load(File.read(File.join(SITE_ROOT, 'data', 'home.yaml')), aliases: true)
   { 'publications' => 'publications', 'presentations' => 'events' }.each do |section_id, content_section|
@@ -534,6 +535,7 @@ if File.file?(privacy_source_path) && File.file?(privacy_path)
     end
   end
   errors << 'privacy/index.html: wrong heading' unless privacy_heading == normalized(privacy_data['title'])
+  errors << 'privacy/index.html: whitespace before punctuation after a link' if privacy_html.match?(%r{</a>\s+[.,;:](?=\s|<|\z)}i)
   errors << 'privacy/index.html: page is excluded from the search index' unless privacy_html.match?(/\bdata-pagefind-body\b/)
   significant_excerpt(privacy_body)&.then do |excerpt|
     errors << 'privacy/index.html: substantive content is missing' unless privacy_text.include?(excerpt)
@@ -589,6 +591,8 @@ end
 tags_index_path = File.join(PUBLIC_ROOT, 'tags', 'index.html')
 if File.file?(tags_index_path)
   tags_index_html = File.binread(tags_index_path).force_encoding(Encoding::UTF_8)
+  title = html_text(tags_index_html[/<title>.*?<\/title>/mi].to_s)
+  errors << "tags/index.html: unexpected browser title #{title.inspect}" unless title == 'All topics | Michael Soprano'
   {
     '/tag/amazon-mechanical-turk/' => 'Amazon Mechanical Turk 2',
     '/tag/artificial-intelligence/' => 'Artificial Intelligence 3',
@@ -653,8 +657,15 @@ missing_local_term_layout.each do |path|
 end
 
 source_tag_assignments = source_tags.length
-rendered_tag_results = term_layout_paths.select { |path| path.delete_prefix("#{PUBLIC_ROOT}/").start_with?('tag/') }.sum do |path|
+topic_term_paths = term_layout_paths.select { |path| path.delete_prefix("#{PUBLIC_ROOT}/").start_with?('tag/') }
+rendered_tag_results = topic_term_paths.sum do |path|
   html = File.read(path)
+  relative = path.delete_prefix("#{PUBLIC_ROOT}/")
+  index_roots = html.scan(/<[^>]+\bdata-pagefind-body\b[^>]*>/i)
+  unless index_roots.length == 1 && index_roots.first.match?(/\A<h1\b/i) &&
+         index_roots.first.include?('kind:Topic') && index_roots.first.include?('topicTitle[data-topic-key]')
+    errors << "#{relative}: search must index only the topic heading, with Topic metadata and an exact title filter"
+  end
   sections = element_attributes(html, 'section').flat_map { |section| attribute_values(section, %w[id]) }
   has_teaching = sections.include?('topic-teaching')
   has_research = sections.intersect?(%w[topic-publications topic-presentations])
@@ -879,7 +890,7 @@ if File.file?(pagefind_entry_path)
     indexed_pages = pagefind_entry.fetch('languages', {}).values.sum { |language| language.fetch('page_count', 0).to_i }
     expected_indexed_pages = SECTIONS.keys.sum do |section|
       Dir.glob(File.join(SITE_ROOT, 'content', section, '*', 'index.md')).length
-    end + 1 + standalone_page_count # Homepage and standalone content pages.
+    end + 1 + standalone_page_count + topic_term_paths.length
     errors << "search index contains #{indexed_pages} pages, expected #{expected_indexed_pages}" unless indexed_pages == expected_indexed_pages
   rescue JSON::ParserError => e
     errors << "invalid Pagefind index metadata: #{e.message}"

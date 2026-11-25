@@ -1,4 +1,21 @@
 (() => {
+  const groups = document.querySelectorAll("#about .profile-links-more > details");
+  if (groups.length) {
+    // Match the breakpoint where the portrait and bio switch to one column.
+    const compact = window.matchMedia("(max-width: 991px)");
+    const updateProfileGroups = () => {
+      for (const group of groups) {
+        const summary = group.querySelector("summary");
+        if (compact.matches && group.contains(document.activeElement) && document.activeElement !== summary) {
+          summary?.focus({ preventScroll: true });
+        }
+        group.open = !compact.matches;
+      }
+    };
+    updateProfileGroups();
+    compact.addEventListener("change", updateProfileGroups);
+  }
+
   const links = [...document.querySelectorAll('#nav-menu a[href^="/#"]')];
   const sections = links.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
   if (!sections.length) return;

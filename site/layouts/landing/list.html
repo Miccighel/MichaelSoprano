@@ -8,7 +8,7 @@
       <div class="legacy-about-grid">
       <div class="legacy-about-content">
         <header class="profile-masthead">
-          <p class="profile-imprint">Research &amp; teaching{{ with index $author.organizations 0 }} <span aria-hidden="true">/</span> {{ .name }}{{ end }}</p>
+          <p class="profile-imprint">Research &amp; teaching{{ with index $author.organizations 0 }} <span class="profile-imprint-separator" aria-hidden="true">/</span> <span class="profile-imprint-affiliation">{{ .name }}</span>{{ end }}</p>
           <h1>{{ $author.title }}</h1>
         </header>
         <div class="legacy-bio">{{ $author.bio | markdownify }}</div>
@@ -161,7 +161,7 @@
                   </div>
                 </div>
               {{ end }}
-              <p class="see-all publication-see-all"><a href="/publication/">View all {{ len $pages }} publications <i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
+              <p class="see-all publication-see-all"><a href="/publication/"><span>View all {{ len $pages }} publications</span><i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
             {{ else if eq .id "presentations" }}
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "events" }}
@@ -171,7 +171,7 @@
                   {{ partial "legacy/event-row.html" (dict "event" . "archive" false) }}
                 {{ end }}
               </div>
-              <p class="see-all"><a href="/event/">See all events <i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
+              <p class="see-all"><a href="/event/"><span>See all presentations</span><i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
             {{ else if eq .id "teaching" }}
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "blog" }}
@@ -209,7 +209,7 @@
                 </nav>
               </section>
               {{ end }}
-              <p class="see-all"><a href="/tags/">Browse all {{ len site.Taxonomies.tags }} topics <i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
+              <p class="see-all"><a href="/tags/"><span>Browse all {{ len site.Taxonomies.tags }} topics</span><i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
             {{ else if eq .id "academic_activity" }}
               {{ $activity_sections := split (printf "\n%s" .content.text) "\n### " }}
               <div class="activity-list">

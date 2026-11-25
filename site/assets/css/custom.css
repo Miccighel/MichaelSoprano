@@ -95,6 +95,7 @@ body { font-family: inherit; font-size: 1rem; line-height: inherit; }
 #site-header .legacy-navbar-brand-mobile { display: none; }
 #site-header .navbar-brand { color: #fff; font-size: 1.2rem; font-weight: 700; white-space: nowrap; }
 #site-header .legacy-navbar-toggle { display: none; color: #fff; cursor: pointer; }
+#site-header .legacy-nav-backdrop { display: none; }
 #site-header .legacy-navbar-toggle svg { width: 22px; height: 22px; fill: currentColor; }
 #site-header .legacy-navbar-toggle #hide-button { display: none; }
 #site-header #nav-menu { display: flex; align-items: center; flex: 0 0 auto; gap: 0; margin: 0 0 0 21px; padding: 0; white-space: nowrap; }
@@ -136,14 +137,15 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
 .profile-link-groups ul.network-icon { margin-top: 0; }
 .profile-links-primary { max-width: 270px; }
 .profile-links-more { width: 100%; max-width: 270px; margin: .8rem auto 0; color: var(--legacy-muted); text-align: left; }
-.profile-links-more details { border-top: 1px solid color-mix(in srgb, var(--legacy-text) 14%, transparent); }
-.profile-links-more details:last-child { border-bottom: 1px solid color-mix(in srgb, var(--legacy-text) 14%, transparent); }
-.profile-links-more summary { display: flex; align-items: center; justify-content: space-between; padding: .45rem .15rem; cursor: pointer; font-size: .76rem; line-height: 1.3; list-style: none; }
+.profile-links-more details { border-top: 1px solid var(--site-border); }
+.profile-links-more details:last-child { border-bottom: 1px solid var(--site-border); }
+.profile-links-more summary { display: flex; align-items: center; justify-content: space-between; gap: .6rem; min-height: 44px; padding: .45rem .15rem; cursor: pointer; color: var(--site-primary); font-size: var(--site-font-meta); font-weight: 700; line-height: 1.3; list-style: none; }
+.profile-links-more summary:hover { color: var(--site-primary-hover); }
 .profile-links-more summary::-webkit-details-marker { display: none; }
 .profile-links-more summary i { transition: transform 150ms ease-in-out; }
 .profile-links-more details[open] summary i { transform: rotate(180deg); }
-.profile-links-secondary { gap: 8px !important; padding: .2rem 0 .7rem !important; }
-.profile-links-secondary a { width: 1.65rem; height: 1.65rem; }
+ul.network-icon.profile-links-secondary { display: flex; justify-content: flex-start; gap: .25rem; padding: 0 0 .5rem; }
+.profile-links-secondary a { width: 1.5rem; height: 1.85rem; }
 .profile-links-secondary .big-icon { font-size: 1.4rem; }
 .profile-link-groups.is-compact { margin-top: .75rem; }
 .legacy-bio { display: flow-root; padding-bottom: 0; font-size: 1rem; line-height: 1.65; }
@@ -188,7 +190,7 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
 .publication-home-meta { margin-top: .1rem; color: var(--legacy-text); font-size: .95rem; line-height: 1.55; }
 .legacy-attachments { display: block; margin: 0; padding-top: 10px; font-size: 1rem; }
 .legacy-attachments a { display: inline-block; font-weight: 400; }
-.see-all { margin: 2rem 0 0; text-transform: uppercase; font-size: .8rem; }
+.see-all { margin: 1.4rem 0 0; }
 
 /* Original Wowchemy experience timeline. */
 .experience-list { display: grid; }
@@ -338,7 +340,7 @@ ul.network-icon { display: inline-flex; justify-content: center; flex-wrap: wrap
   #site-header .legacy-navbar-toggle:focus-visible { outline: 2px solid currentColor; outline-offset: 1px; }
   #site-header #nav-menu { display: none; order: 3; align-items: stretch; flex: 0 0 100%; flex-direction: column; width: 100%; margin: 0; padding: .5rem 0 1rem; white-space: normal; }
   #site-header #nav-menu .nav-link { padding: .35rem 0 !important; }
-  #site-header #nav-toggle[aria-expanded="true"] ~ #nav-menu { display: flex; max-height: calc(100dvh - 54px); overflow-y: auto; }
+  #site-header #nav-toggle[aria-expanded="true"] ~ #nav-menu { display: flex; }
   #site-header #nav-toggle[aria-expanded="true"] #show-button { display: none; }
   #site-header #nav-toggle[aria-expanded="true"] #hide-button { display: block; }
   .legacy-home .home-section { scroll-margin-top: 50px; }

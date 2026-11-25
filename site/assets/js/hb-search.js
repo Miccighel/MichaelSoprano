@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let requestId = 0;
   let debounceTimer;
   let previouslyFocused;
+  let drawerToggle;
   let previousBodyOverflow = "";
 
   const setLoading = (loading) => {
@@ -76,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const venue = link.querySelector(".site-search-result-venue");
     venue.textContent = data.meta?.venue || "";
     venue.hidden = !venue.textContent;
-    if (data.meta?.kind === "Publication" || data.meta?.kind === "Presentation") {
+    if (["Publication", "Presentation", "Topic"].includes(data.meta?.kind)) {
       excerpt.textContent = data.meta?.summary || "";
     } else {
       excerpt.innerHTML = data.excerpt || "";
@@ -154,9 +155,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const pagefind = await loadPagefind();
-      const search = await pagefind.search(query);
+      const topicTitle = query.replace(/\s+/g, " ").toLowerCase();
+      const [search, exactTopics] = await Promise.all([
+        pagefind.search(query),
+        pagefind.search(null, { filters: { topicTitle } }),
+      ]);
       if (currentRequest !== requestId) return;
-      matches = search.results;
+      const exactTopicIds = new Set(exactTopics.results.map(hit => hit.id));
+      matches = [...exactTopics.results, ...search.results.filter(hit => !exactTopicIds.has(hit.id))];
       if (matches.length) {
         await appendBatch(currentRequest);
       } else {
@@ -181,9 +187,13 @@ document.addEventListener("DOMContentLoaded", () => {
     debounceTimer = window.setTimeout(runSearch, 250);
   };
 
-  function openSearch(prefilledQuery = "") {
+  function openSearch(prefilledQuery = "", trigger = document.activeElement) {
     if (!modal.hidden) return;
-    previouslyFocused = document.activeElement;
+    previouslyFocused = trigger;
+    const navToggle = document.getElementById("nav-toggle");
+    drawerToggle = navToggle?.getAttribute("aria-expanded") === "true" && trigger?.closest("#nav-menu")
+      ? navToggle
+      : null;
     previousBodyOverflow = document.body.style.overflow;
     modal.hidden = false;
     document.body.style.overflow = "hidden";
@@ -208,13 +218,19 @@ document.addEventListener("DOMContentLoaded", () => {
     errorElement.classList.add("hidden");
     setLoading(false);
     setStatus("");
-    previouslyFocused?.focus();
+    // Moving focus into search closes the mobile drawer, hiding its links.
+    for (const target of [drawerToggle, previouslyFocused, ...toggleButtons]) {
+      if (!target?.isConnected || target === document.body) continue;
+      target.focus({ preventScroll: true });
+      if (document.activeElement === target) break;
+    }
+    previouslyFocused = drawerToggle = null;
   }
 
   toggleButtons.forEach((button) => {
     button.setAttribute("aria-controls", modal.id);
     button.setAttribute("aria-expanded", "false");
-    button.addEventListener("click", () => openSearch(button.dataset.searchQuery || ""));
+    button.addEventListener("click", () => openSearch(button.dataset.searchQuery || "", button));
   });
   closeButtons.forEach((button) => button.addEventListener("click", closeSearch));
   input.addEventListener("input", scheduleSearch);

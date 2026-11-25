@@ -77,26 +77,78 @@ async function eventually(assertion) {
   }
 }
 
-test('mobile navigation closes after choosing a section; dropdown supports keyboard', async t => {
-  const dom = await fixture(`<header class="page-header"></header><button id="nav-toggle" aria-expanded="false">Navigation menu</button><nav id="nav-menu"><a href="/#teaching">Teaching</a></nav><section id="teaching"></section><div class="nav-dropdown"><a class="nav-link" role="button" href="#" aria-expanded="false">More</a></div>`);
+test('mobile navigation overlay closes on Escape, backdrop, link selection and focus leaving', async t => {
+  const dom = await fixture(`<header class="page-header"><nav><button id="nav-toggle" aria-expanded="false">Navigation menu</button><ul id="nav-menu"><li><a href="/#teaching">Teaching</a></li></ul><div class="legacy-nav-backdrop" aria-hidden="true"></div></nav></header><main><section id="teaching"></section><button id="outside">Outside</button></main><div class="nav-dropdown"><a class="nav-link" role="button" href="#" aria-expanded="false">More</a></div>`);
   t.after(() => dom.window.close());
   const {window:w} = dom, d=w.document;
   w.eval(await source('homepage-nav.js'));
   w.eval(await source('hb-nav.js'));
   w.dispatchEvent(new w.Event('DOMContentLoaded'));
   const menuButton=d.querySelector('#nav-toggle');
+  const menu=d.querySelector('#nav-menu');
+  const link=menu.querySelector('a');
+  const assertOpen=expected => {
+    assert.equal(menuButton.getAttribute('aria-expanded'),String(expected));
+    assert.equal(d.documentElement.classList.contains('nav-overlay-open'),expected);
+  };
   menuButton.click();
-  assert.equal(menuButton.getAttribute('aria-expanded'),'true');
-  d.querySelector('#nav-menu a').focus();
+  assertOpen(true);
+  menu.click();
+  assertOpen(true);
+  link.focus();
   key(w,d.activeElement,'Escape');
   assert.equal(d.activeElement,menuButton);
-  assert.equal(menuButton.getAttribute('aria-expanded'),'false');
+  assertOpen(false);
   menuButton.click();
-  d.querySelector('#nav-menu a').click();
-  assert.equal(menuButton.getAttribute('aria-expanded'),'false');
+  link.focus();
+  d.querySelector('.legacy-nav-backdrop').click();
+  assertOpen(false);
+  assert.equal(d.activeElement,menuButton);
+  menuButton.click();
+  link.click();
+  assertOpen(false);
+  menuButton.click();
+  d.querySelector('#outside').focus();
+  assertOpen(false);
+  menuButton.click();
+  menuButton.style.display='none';
+  w.dispatchEvent(new w.Event('resize'));
+  assertOpen(false);
   const toggle=d.querySelector('.nav-link');
   key(w,toggle,'Enter'); assert.equal(toggle.getAttribute('aria-expanded'),'true');
   key(w,toggle,'Escape'); assert.equal(toggle.getAttribute('aria-expanded'),'false');
+});
+
+test('profile disclosures follow the portrait layout and remain individually toggleable', async t => {
+  const dom = await fixture('<section id="about"><div class="profile-links-more"><details><summary>More academic profiles</summary><a href="#profile">Profile</a></details><details><summary>Elsewhere</summary></details></div></section><details id="unrelated"><summary>Unrelated</summary></details>');
+  t.after(() => dom.window.close());
+  const {window:w} = dom, d=w.document;
+  const compact = new w.EventTarget();
+  compact.matches = true;
+  w.matchMedia = query => {
+    assert.equal(query, '(max-width: 991px)');
+    return compact;
+  };
+  const groups = [...d.querySelectorAll('#about details')];
+  const states = () => groups.map(group => group.open);
+  const resize = matches => {
+    compact.matches = matches;
+    compact.dispatchEvent(new w.Event('change'));
+  };
+  w.eval(await source('homepage-nav.js'));
+  assert.deepEqual(states(), [false, false]);
+  groups[0].querySelector('summary').click();
+  assert.deepEqual(states(), [true, false]);
+  resize(false);
+  assert.deepEqual(states(), [true, true]);
+  groups[1].querySelector('summary').click();
+  w.dispatchEvent(new w.Event('resize'));
+  assert.deepEqual(states(), [true, false]);
+  groups[0].querySelector('a').focus();
+  resize(true);
+  assert.deepEqual(states(), [false, false]);
+  assert.equal(d.activeElement, groups[0].querySelector('summary'));
+  assert.equal(d.querySelector('#unrelated').open, false);
 });
 
 test('homepage navigation follows reading position and selects Contact at the end of the page', async t => {
@@ -229,11 +281,20 @@ test('topic filter matches aliases and hides empty letter groups, with a shareab
 
 test('search opens, shows results, handles navigation and Escape, restores focus', async t => {
   const markup=await readFile(new URL('../layouts/_partials/components/search-modal.html',import.meta.url),'utf8');
-  const dom=await fixture('<button data-search-toggle>Search</button>'+markup);
+  const dom=await fixture(`<header class="page-header"><nav><button id="nav-toggle" aria-expanded="false">Menu</button><ul id="nav-menu"><li><a href="/publication/">Publications</a></li></ul><button data-search-toggle>Search</button></nav></header>`+markup);
   t.after(() => dom.window.close());
   const {window:w}=dom,d=w.document;
   // Stub only the external Pagefind module; run the actual interaction code.
-  w.__loadPagefind=async () => ({init:async()=>{},search:async query=>({results: query === 'missing' ? [] : Array.from({length:16},(_,i)=>({data:async()=>({url:'#'+i,meta:{title:'Paper '+i,kind:'Publication',year:'2026',venue:'Test journal',summary:'Abstract text'},excerpt:'Repeated title'})}))})});
+  const topic={id:'topic',data:async()=>({url:'/tag/peer-review/',meta:{title:'Peer Review',kind:'Topic',summary:'4 related items across the site.'}})};
+  const papers=Array.from({length:16},(_,i)=>({id:'paper-'+i,data:async()=>({url:'#'+i,meta:{title:'Paper '+i,kind:'Publication',year:'2026',venue:'Test journal',summary:'Abstract text'},excerpt:'Repeated title'})}));
+  w.__loadPagefind=async () => ({
+    init:async()=>{},
+    search:async (query, options)=>({results:
+      query === null ? (options.filters.topicTitle === 'peer review' ? [topic] : []) :
+      query === 'missing' ? [] : query.includes('Peer') ? [...papers, topic] : papers}),
+  });
+  w.eval(await source('hb-nav.js'));
+  w.dispatchEvent(new w.Event('DOMContentLoaded'));
   w.eval((await source('hb-search.js')).replace('import(modal.dataset.pagefindUrl)','window.__loadPagefind()'));
   d.dispatchEvent(new w.Event('DOMContentLoaded'));
   const toggle=d.querySelector('[data-search-toggle]'); toggle.focus(); toggle.click();
@@ -256,6 +317,12 @@ test('search opens, shows results, handles navigation and Escape, restores focus
   assert.equal(input.getAttribute('aria-activedescendant'),'site-search-result-10');
   assert.ok([...d.querySelectorAll('#site-search-results a')].every(link=>link.tabIndex === -1));
   assert.equal(more.hidden,true);
+  input.value='Peer   Review'; input.dispatchEvent(new w.Event('input'));
+  await eventually(()=>assert.equal(d.querySelector('#site-search-results a')?.getAttribute('href'),'/tag/peer-review/'));
+  assert.equal(d.querySelector('.site-search-result-meta').textContent,'Topic');
+  assert.equal(d.querySelector('.site-search-result p').textContent,'4 related items across the site.');
+  assert.equal(d.querySelector('[data-search-status]').textContent,'Showing 10 of 17 results.');
+  assert.equal(input.getAttribute('aria-activedescendant'),'site-search-result-0');
   input.focus();
   input.value='missing'; input.dispatchEvent(new w.Event('input'));
   await eventually(()=>assert.equal(d.querySelector('[data-search-status]').textContent,'No results found.'));
@@ -266,7 +333,14 @@ test('search opens, shows results, handles navigation and Escape, restores focus
   assert.equal(input.getAttribute('aria-expanded'),'false');
   key(w,input,'Escape'); assert.equal(d.querySelector('#site-search').hidden,true);
   assert.equal(d.activeElement,toggle);
-  key(w,d,'k',{ctrlKey:true}); assert.equal(d.querySelector('#site-search').hidden,false);
+  const menu=d.querySelector('#nav-toggle');
+  const menuLink=d.querySelector('#nav-menu a');
+  menu.click(); menuLink.focus();
+  key(w,menuLink,'k',{ctrlKey:true});
+  assert.equal(d.querySelector('#site-search').hidden,false);
+  assert.equal(menu.getAttribute('aria-expanded'),'false');
+  key(w,input,'Escape');
+  assert.equal(d.activeElement,menu);
 });
 
 test('chart has one keyboard entry, arrow navigation, tooltips, selection, sorting and reset', async t => {
