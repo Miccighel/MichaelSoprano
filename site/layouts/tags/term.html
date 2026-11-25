@@ -3,13 +3,16 @@
 {{ $publications := where $pages "Section" "publications" }}
 {{ $events := where $pages "Section" "events" }}
 {{ $teaching := where $pages "Section" "blog" }}
-<main class="topic-archive" data-local-layout="tag-term" data-pagefind-ignore>
+{{ $slug := path.Base (strings.TrimSuffix "/" .RelPermalink) }}
+{{ $label := partial "legacy/topic-label.html" (dict "slug" $slug "fallback" .Title) }}
+{{ $count := len $pages }}
+{{ $summary := printf "%d related %s across the site." $count (cond (eq $count 1) "item" "items") }}
+<main class="topic-archive" data-local-layout="tag-term">
   <header class="topic-archive-header">
     <a class="topic-archive-back" href="/tags/"><i class="fas fa-arrow-left" aria-hidden="true"></i> All topics</a>
-    {{ $slug := path.Base (strings.TrimSuffix "/" .RelPermalink) }}
     <p class="topic-archive-eyebrow">{{ partial "legacy/topic-area.html" . }} topic</p>
-    <h1>{{ partial "legacy/topic-label.html" (dict "slug" $slug "fallback" .Title) }}</h1>
-    <p class="topic-archive-summary">{{ len $pages }} related {{ if eq (len $pages) 1 }}item{{ else }}items{{ end }} across the site.</p>
+    <h1 data-pagefind-body data-pagefind-meta="kind:Topic" data-pagefind-filter="topicTitle[data-topic-key]" data-topic-key="{{ lower $label }}"><span data-pagefind-meta="summary[data-topic-summary]" data-topic-summary="{{ $summary }}">{{ $label }}</span></h1>
+    <p class="topic-archive-summary">{{ $summary }}</p>
     {{ if or (and $publications $events) (and $teaching (or $publications $events)) }}
     <nav class="topic-archive-nav" aria-label="Content in this topic">
       {{ if gt (len $publications) 0 }}<a href="#topic-publications">Publications <span>{{ len $publications }}</span></a>{{ end }}

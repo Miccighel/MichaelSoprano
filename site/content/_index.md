@@ -50,7 +50,7 @@ sections:
 
       #### 2027
 
-      - [Reducing Online Misinformation through Credible Information Retrieval (*ROMCIR 2027*)](https://romcir.disco.unimib.it/2027-edition/2027-workshop/organizing-committee/), ECIR 2027, Southampton, United Kingdom. **Organizer**.
+      - [Reducing Online Misinformation through Credible Information Retrieval (*ROMCIR 2027*)](https://romcir.disco.unimib.it/), ECIR 2027, Southampton, United Kingdom. **Organizer**.
 
       #### 2025
 
