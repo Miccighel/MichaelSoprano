@@ -54,8 +54,8 @@ sections:
 
       #### 2025
 
-      - Workshop “AI, Misinformation and Disinformation”, held as part of the 5th National CINI Conference on Artificial Intelligence (*Ital-IA 2025*), Trieste, 23 Jun 2025. **Organizer**
-      - [21st Italian Research Conference on Digital Libraries (*IRCDL 2025*)](https://ircdl2025.uniud.it/), Udine, 20--21 Feb 2025. **Website Chair**.
+      - Workshop “AI, Misinformation and Disinformation”, held as part of the 5th National CINI Conference on Artificial Intelligence (*Ital-IA 2025*), Trieste, 23 Jun 2025. **Organizer and Program Committee Member**
+      - [21st Conference on Information and Research Science Connecting to Digital and Library Science (*IRCDL 2025*)](https://ircdl2025.uniud.it/), Udine, 20--21 Feb 2025. **Website Chair**.
 
       #### 2024
 
@@ -73,7 +73,7 @@ sections:
 
       #### 2026
 
-      - 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (*SIGIR 2026*). **Program Committee Member**
+      - 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (*SIGIR 2026*), Melbourne, Australia. **Program Committee Member**
       - 16th Italian Information Retrieval Workshop (*IIR 2026*), Rome, 12--14 Nov 2026. *Full and Short Papers tracks*
 
       #### 2025
@@ -95,7 +95,7 @@ sections:
 
       #### 2021
 
-      - Third Symposium on Biases in Human Computation and Crowdsourcing (*BHCC 2021*), online. **Program Committee Member**
+      - Third Symposium on Biases in Human Computation and Crowdsourcing (*BHCC 2021*), Delft, Netherlands (online). **Program Committee Member**
 
       ### Editorial Roles
 
@@ -105,10 +105,14 @@ sections:
 
       ### Reviewing Activities
 
+      #### 2027
+
+      - [The ACM Web Conference (*WWW 2027*)](https://www2027.thewebconf.org/), Dublin, Ireland
+
       #### 2026
 
       - 2026 Conference on Empirical Methods in Natural Language Processing (*EMNLP 2026*), Budapest, Hungary
-      - 19th ACM International Conference on Web Search and Data Mining (*WSDM 2026*)
+      - 19th ACM International Conference on Web Search and Data Mining (*WSDM 2026*), Boise, Idaho, USA
 
       #### 2025
 
@@ -131,7 +135,6 @@ sections:
 
       #### 2021
 
-      - Third Symposium on Biases in Human Computation and Crowdsourcing (*BHCC 2021*), Delft, Netherlands, online
       - 30th ACM International Conference on Information and Knowledge Management (*CIKM 2021*), online
       - 32nd ACM Conference on Hypertext and Social Media (*HT 2021*), online
 
