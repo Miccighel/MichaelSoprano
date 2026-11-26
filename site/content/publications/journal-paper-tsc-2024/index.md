@@ -14,9 +14,9 @@ tags:
 - crowdsourcing platforms
 - surveys
 - online sampling
-- amazon mechanical turk
-- prolific
-- toloka
+- Amazon Mechanical Turk
+- Prolific
+- Toloka
 categories: []
 date: '2024-07-10'
 lastmod: 2024-07-10 15:00:00.000000000 +01:00

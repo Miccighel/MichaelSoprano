@@ -1,0 +1,17 @@
+{{- $label := .Page.Title -}}
+{{- if and (eq .Page.Kind "term") (eq .Page.Data.Singular "tag") -}}
+  {{- $label = partial "legacy/topic-label.html" (dict "slug" (path.Base (strings.TrimSuffix "/" .Page.RelPermalink)) "fallback" $label) -}}
+{{- end -}}
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale | default "en-US" }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ $label }}</title>
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta http-equiv="refresh" content="0; url={{ .Page.RelPermalink }}">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <p>This page has moved to <a href="{{ .Page.RelPermalink }}">{{ $label }}</a>.</p>
+</body>
+</html>

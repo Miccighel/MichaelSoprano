@@ -15,7 +15,7 @@ tags:
 - ordinal classification
 - infodemic
 - information behavior
-- covid-19
+- COVID-19
 - crowdsourcing
 categories: []
 date: '2020-10-19'

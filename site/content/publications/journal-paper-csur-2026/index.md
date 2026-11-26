@@ -8,7 +8,7 @@ authors:
 - Luca Di Gaspero
 - Kevin Roitero
 tags:
-- systematic review
+- systematic reviews
 - large language models
 - combinatorial optimization
 categories: []

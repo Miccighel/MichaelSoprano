@@ -3,6 +3,7 @@ title: Can The Crowd Identify Misinformation Objectively? The Effects of Judgmen
   Scale and Assessor’s Background
 event_url: https://sigir.org/sigir2020/
 location: Xi'an, China (remote).
+event_note: Held remotely as a pre-recorded contribution due to the COVID-19 pandemic.
 summary: Conference Talk - The 43rd International ACM SIGIR Conference on Research
   and Development in Information Retrieval (SIGIR 2020). July 27, 2020, Xi'an, China
   (remote). Held remotely as a pre-recorded contribution due to the COVID-19 pandemic.

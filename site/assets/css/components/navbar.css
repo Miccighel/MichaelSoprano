@@ -28,19 +28,6 @@
   @apply cursor-pointer;
 }
 
-/* navbar toggler */
-input#nav-toggle:checked + label #show-button {
-  @apply hidden;
-}
-
-input#nav-toggle:checked + label #hide-button {
-  @apply block;
-}
-
-input#nav-toggle:checked ~ #nav-menu {
-  @apply block;
-}
-
 #site-header.header {
   background-color: var(--hb-color-header-bg);
   color: var(--hb-color-header-fg);

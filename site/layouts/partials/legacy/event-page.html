@@ -1,63 +1,50 @@
 {{ $page := . }}
 {{ $eventType := index (split (.Params.summary | default "Presentation") " - ") 0 }}
-<article class="legacy-single legacy-event-single event-page pub" data-pagefind-body data-pagefind-meta="kind:Presentation">
-  <header class="event-hero">
-    <div class="event-hero-inner">
-      <a class="event-back-link" href="/event/" data-pagefind-ignore><i class="fas fa-arrow-left" aria-hidden="true"></i> All presentations</a>
-      <div class="event-hero-meta">
-        <span>{{ $eventType }}</span>
-        {{ with .Params.event_start }}<time datetime="{{ time.Format "2006-01-02T15:04:05Z07:00" . }}" data-pagefind-meta="year:{{ time.Format "2006" . }}">{{ time.Format "Jan 2, 2006" . }}</time>{{ end }}
-      </div>
+{{ $image := .Resources.GetMatch "featured*" }}
+<main class="legacy-single legacy-event-single event-page" data-pagefind-body data-pagefind-meta="kind:Presentation">
+  <a class="event-back-link" href="/event/" data-pagefind-ignore><i class="fas fa-arrow-left" aria-hidden="true"></i> All presentations</a>
+  <div class="event-spread{{ if $image }} has-preview{{ end }}">
+    <header class="event-heading event-hero">
+      {{ $resource := "" }}
+      {{ range .Params.links }}
+        {{ $label := partial "legacy/event-resource-label.html" . }}
+        {{ if in (slice "Slides" "Slides (PDF)" "Poster (PDF)") $label }}{{ $resource = $label }}{{ end }}
+      {{ end }}
+      <p class="event-imprint"{{ with $resource }} data-pagefind-meta="resource[data-resource]" data-resource="{{ . }}"{{ end }}>{{ $eventType }}</p>
       <h1>{{ .Title }}</h1>
       {{ with .Params.authors }}<p class="event-authors">{{ delimit . ", " }}</p>{{ end }}
       {{ partial "legacy/page-buttons.html" . }}
-    </div>
-  </header>
-
-  <div class="event-page-layout">
-    <div class="event-page-main">
-      {{ $image := .Resources.GetMatch "featured*" }}
-      {{ with $image }}{{ $hero := .Resize "1000x" }}
-        <figure class="event-preview">
-          <img src="{{ $hero.RelPermalink }}" width="{{ $hero.Width }}" height="{{ $hero.Height }}" alt="Preview of {{ $page.Title }}">
-        </figure>
-      {{ end }}
-
-      {{ with .Content }}<div class="article-style event-description">{{ . }}</div>{{ end }}
-      {{ partial "legacy/presentation-publications.html" . }}
-      {{ partial "legacy/tags.html" . }}
-      {{ partial "legacy/share.html" . }}
-    </div>
-
-    <aside class="event-facts" aria-label="Presentation details" data-pagefind-ignore>
-      <h2>Details</h2>
-      {{ with .Params.event_start }}
-        <div class="event-fact">
-          <span>Date</span>
-          <p>
-            {{ if or $page.Params.event_all_day $page.Params.event_time_unknown }}
-              <time datetime="{{ time.Format "2006-01-02" . }}">{{ time.Format "January 2, 2006" . }}</time>
-            {{ else }}
-              <time datetime="{{ time.Format "2006-01-02T15:04:05Z07:00" . }}">{{ time.Format "January 2, 2006 · 15:04" . }}</time>{{ with $page.Params.event_end }}–<time datetime="{{ time.Format "2006-01-02T15:04:05Z07:00" . }}">{{ time.Format "15:04" . }}</time>{{ end }}
-            {{ end }}
-          </p>
-        </div>
-      {{ end }}
-      {{ with .Params.event_name }}
-        <div class="event-fact">
-          <span>Event</span>
-          <p>{{ with $page.Params.event_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ . }}{{ with $page.Params.event_url }} <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>{{ end }}</p>
-        </div>
-      {{ end }}
-      {{ with .Params.location }}
-        <div class="event-fact">
-          <span>Location</span>
-          <p>{{ . }}</p>
-        </div>
-      {{ end }}
-    </aside>
+    </header>
+    <section class="event-index-row event-facts" aria-labelledby="event-details-heading">
+      <h2 id="event-details-heading">Event details</h2>
+      <dl>
+        {{ with .Params.event_name }}
+          <div class="event-venue"><dt>Event</dt><dd data-pagefind-meta="venue">{{ if and $page.Params.event_url (not (where $page.Params.links "url" $page.Params.event_url)) }}<a href="{{ $page.Params.event_url }}" target="_blank" rel="noopener">{{ . }}</a>{{ else }}{{ . }}{{ end }}</dd></div>
+        {{ end }}
+        {{ with .Params.event_start }}
+          <div><dt>Date</dt><dd><time datetime="{{ time.Format "2006-01-02" . }}" data-pagefind-meta="year:{{ time.Format "2006" . }}">{{ time.Format "Jan 2, 2006" . }}</time>{{ with partial "legacy/event-time-range.html" $page }} <span class="event-clock">{{ . }}</span>{{ end }}</dd></div>
+        {{ end }}
+        {{ with .Params.location }}<div><dt>Location</dt><dd>{{ . }}</dd></div>{{ end }}
+        {{ with .Params.event_note }}<div class="event-format"><dt>Format</dt><dd>{{ . }}</dd></div>{{ end }}
+      </dl>
+    </section>
+    {{ with $image }}{{ $preview := .Fit "840x600" }}
+      <figure class="event-preview">
+        <img src="{{ $preview.RelPermalink }}" width="{{ $preview.Width }}" height="{{ $preview.Height }}" alt="Preview of {{ $page.Title }}">
+      </figure>
+    {{ end }}
   </div>
 
-  {{ $related := site.RegularPages.Related . | first 5 }}
-  {{ with $related }}<div class="event-related">{{ partial "legacy/related.html" $ }}</div>{{ end }}
-</article>
+  {{ with .Content }}
+    <section class="event-index-row" aria-labelledby="event-about-heading">
+      <h2 id="event-about-heading">About this event</h2>
+      <div class="article-style event-description">{{ . }}</div>
+    </section>
+  {{ end }}
+  {{ partial "legacy/presentation-publications.html" . }}
+  {{ partial "legacy/related.html" . }}
+  <footer class="event-tools" data-pagefind-ignore>
+    {{ partial "legacy/tags.html" . }}
+    {{ partial "legacy/share.html" . }}
+  </footer>
+</main>

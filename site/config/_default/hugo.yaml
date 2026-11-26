@@ -9,12 +9,13 @@ build:
   buildStats:
     enable: true
 enableGitInfo: true
+frontmatter:
+  lastmod: ['course_updated', ':git', 'lastmod', 'modified', 'date', 'publishdate', 'pubdate', 'published']
 summaryLength: 30
 pagination:
   pagerSize: 10
 enableEmoji: true
 enableRobotsTXT: true
-disableAliases: true
 outputs:
   home: [HTML, RSS]
   section: [HTML, RSS]

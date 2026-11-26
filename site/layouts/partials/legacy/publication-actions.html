@@ -1,0 +1,11 @@
+{{- $paper := .page -}}
+{{- $newTab := .newTab -}}
+<div class="resource-actions" data-pagefind-ignore>
+  {{ range $paper.Params.links }}
+    <a href="{{ .url }}"{{ if $newTab }} target="_blank" rel="noopener"{{ end }}>{{ partial "legacy/resource-label.html" .type }}</a>
+  {{ end }}
+  {{ with $paper.Params.identifiers }}{{ with .doi }}
+    <a href="https://doi.org/{{ . }}"{{ if $newTab }} target="_blank" rel="noopener"{{ end }}>DOI</a>
+  {{ end }}{{ end }}
+  <button class="index-button legacy-cite" type="button" aria-haspopup="dialog" aria-label="Cite {{ $paper.Title }}" data-cite-title="{{ $paper.Title }}" data-cite-url="{{ $paper.RelPermalink }}cite.bib">Cite</button>
+</div>

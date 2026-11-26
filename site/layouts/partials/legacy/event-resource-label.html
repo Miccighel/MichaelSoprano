@@ -1,0 +1,10 @@
+{{- $link := . -}}
+{{- $label := partial "legacy/resource-label.html" $link.type -}}
+{{- if findRE `(?i)\.pdf([?#]|$)` $link.url -}}
+  {{- if or (eq $link.type "slides") (and (eq $link.type "pdf") (in $link.url "/media/talks/")) -}}
+    {{- $label = "Slides (PDF)" -}}
+  {{- else if and (eq $link.type "pdf") (in $link.url "/media/posters/") -}}
+    {{- $label = "Poster (PDF)" -}}
+  {{- end -}}
+{{- end -}}
+{{- return $label -}}

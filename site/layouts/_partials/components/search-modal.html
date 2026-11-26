@@ -24,7 +24,7 @@
           <input
             id="site-search-input"
             type="search"
-            placeholder="Search publications, presentations, courses…"
+            placeholder="Search this website…"
             class="site-search-input"
             aria-label="Search this website"
             aria-controls="site-search-results"
@@ -55,21 +55,23 @@
         </div>
       </div>
 
+      <p class="site-search-count" role="status" data-search-status></p>
       <div class="site-search-results-wrap">
         <template id="site-search-result-template">
-          <a class="site-search-result" role="option" aria-selected="false">
+          <a class="site-search-result" role="option" aria-selected="false" tabindex="-1">
             <span class="site-search-result-meta" hidden></span>
             <h3></h3>
+            <div class="site-search-result-venue" hidden></div>
             <p></p>
           </a>
         </template>
 
         <div data-search-intro class="site-search-intro" aria-hidden="true"><p>Search publications, presentations, teaching and topics.</p></div>
         <div id="site-search-results" role="listbox" aria-label="Search results"></div>
+        <button type="button" data-search-more aria-controls="site-search-results" hidden></button>
 
         <div data-search-empty class="site-search-message hidden">
-          <h3>No results found</h3>
-          <p>Try a different search term.</p>
+          <p>Try a different search term or <a href="/tags/">browse all topics</a>.</p>
         </div>
 
         <div data-search-error class="site-search-message hidden" role="alert">
@@ -85,5 +87,4 @@
     </div>
   </section>
 
-  <p class="sr-only" aria-live="polite" data-search-status></p>
 </div>

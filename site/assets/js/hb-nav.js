@@ -9,6 +9,36 @@ const applyScrollPadding = () => {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("nav-toggle");
+  const menu = document.getElementById("nav-menu");
+  if (button && menu) {
+    const navigation = button.closest("nav");
+    const backdrop = navigation?.querySelector(".legacy-nav-backdrop");
+    const isOpen = () => button.getAttribute("aria-expanded") === "true";
+    const setOpen = open => {
+      button.setAttribute("aria-expanded", String(open));
+      document.documentElement.classList.toggle("nav-overlay-open", open);
+    };
+    button.addEventListener("click", () => setOpen(!isOpen()));
+    document.addEventListener("click", event => {
+      if (!isOpen() || button.contains(event.target)) return;
+      if (menu.contains(event.target) && !event.target.closest("a")) return;
+      setOpen(false);
+      if (backdrop?.contains(event.target)) button.focus({ preventScroll: true });
+    });
+    document.addEventListener("focusin", event => {
+      if (isOpen() && navigation && !navigation.contains(event.target)) setOpen(false);
+    });
+    document.addEventListener("keydown", event => {
+      if (event.key !== "Escape" || !isOpen()) return;
+      setOpen(false);
+      button.focus();
+    });
+    window.addEventListener("resize", () => {
+      if (isOpen() && getComputedStyle(button).display === "none") setOpen(false);
+      applyScrollPadding();
+    });
+  }
   const dropdownMenus = document.querySelectorAll(".nav-dropdown > .nav-link[role='button']");
 
   dropdownMenus.forEach((toggler) => {

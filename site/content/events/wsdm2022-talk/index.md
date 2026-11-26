@@ -3,6 +3,7 @@ title: 'Crowd_Frame: A Simple and Complete Framework to Deploy Complex Crowdsour
   Tasks Off-the-Shelf'
 event_url: https://www.wsdm-conference.org/2022/
 location: Phoenix, U.S.A. (remote).
+event_note: Held remotely as a pre-recorded contribution due to the COVID-19 pandemic.
 summary: Conference Talk - The 15th ACM International Conference on Web Search and
   Data Mining (WSDM 2022). February 23, 2022, Phoenix, U.S.A. (remote). Held remotely
   as a pre-recorded contribution due to the COVID-19 pandemic.

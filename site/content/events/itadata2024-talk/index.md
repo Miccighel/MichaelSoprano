@@ -12,7 +12,7 @@ tags:
 - demo
 - human computation
 - crowdsourcing
-- crowd_frame
+- Crowd_Frame
 featured: false
 image:
   caption: ''

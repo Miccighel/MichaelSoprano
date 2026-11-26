@@ -14,6 +14,9 @@
     "check:links": "ruby scripts/check-external-links.rb"
   },
   "pnpm": {
+    "overrides": {
+      "@tailwindcss/typography@0.5.20>postcss-selector-parser": "6.1.5"
+    },
     "ignoredBuiltDependencies": [
       "@fortawesome/fontawesome-free",
       "@parcel/watcher"
@@ -26,7 +29,6 @@
     "@fortawesome/fontawesome-free": "7.3.1",
     "academicons": "1.9.5",
     "jsdom": "30.1.3",
-    "leaflet": "1.9.4",
     "pagefind": "1.5.2"
   },
   "dependencies": {

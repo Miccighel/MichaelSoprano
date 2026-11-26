@@ -34,7 +34,7 @@ SECTIONS = {
     archive: 'post',
     marker: 'legacy-blog-single',
     archive_marker: 'legacy-blog-archive',
-    item_marker: 'media stream-item'
+    item_marker: /<article\b[^>]*\bclass=["']?teaching-item\b/i
   }
 }.freeze
 
@@ -355,6 +355,9 @@ SECTIONS.each do |section, config|
   errors << "#{section}: expected #{current_pages.length} rendered detail pages, found #{rendered_pages.length}" unless rendered_pages.length == current_pages.length
   rendered_pages.each do |path|
     html = File.binread(path).force_encoding(Encoding::UTF_8)
+    if section == 'publications' && element_attributes(html, 'main').length != 1
+      errors << "#{path.delete_prefix("#{PUBLIC_ROOT}/")}: publication detail must expose exactly one main landmark"
+    end
     unless html.match?(/\bdata-pagefind-body\b/)
       errors << "#{path.delete_prefix("#{PUBLIC_ROOT}/")}: detail page is excluded from the search index"
     end
@@ -420,6 +423,32 @@ SECTIONS.each do |section, config|
   end
 end
 
+association_sections = {}
+html_paths.select { |path| html_url(path).match?(%r{\A/(?:publication|talk)/[^/]+/\z}) }.each do |path|
+  html = File.read(path)
+  associated = html[/<section\b[^>]*\baria-labelledby=["']?associated-materials-heading\b[^>]*>.*?<\/section>/mi]
+  next unless associated
+
+  source_url = html_url(path)
+  related = html[/<section\b[^>]*\baria-labelledby=["']?related-heading\b[^>]*>.*?<\/section>/mi].to_s
+  links = element_attributes(associated, 'a')
+  targets = links.flat_map { |link| attribute_values(link, %w[href]) }.grep(%r{\A/(?:publication|talk)/})
+  repeated = targets & attribute_values(related, %w[href])
+  errors << "#{source_url}: related list repeats associated pages #{repeated.join(', ')}" unless repeated.empty?
+  errors << "#{source_url}: duplicate associated page" unless targets.uniq == targets
+  association_sections[source_url] = targets
+
+  event_labels = links.flat_map { |link| attribute_values(link, %w[aria-label]) }.grep(/\AEvent details:/)
+  errors << "#{source_url}: event detail links are indistinguishable" unless event_labels.uniq == event_labels
+end
+association_sections.each do |source_url, targets|
+  targets.each do |target|
+    errors << "#{source_url}: association to #{target} is not reciprocal" unless association_sections.fetch(target, []).include?(source_url)
+  end
+end
+expected_associations = YAML.safe_load_file(File.join(SITE_ROOT, 'data', 'presentation_publications.yaml')).length
+errors << 'presentation/publication links do not match the confirmed pair count' unless association_sections.values.sum(&:length) == expected_associations * 2
+
 home_html = File.join(PUBLIC_ROOT, 'index.html')
 if File.file?(home_html) && !File.binread(home_html).match?(/\bdata-pagefind-body\b/)
   errors << 'index.html: homepage is excluded from the search index'
@@ -455,7 +484,6 @@ end
   assets/css/config/tailwind.css
   assets/css/config/theme.css
   assets/js/hb-nav.js
-  assets/js/contact-map.js
   assets/js/homepage-nav.js
   assets/js/publication-filters.js
   assets/js/site-citations.js
@@ -479,6 +507,7 @@ if File.file?(home_html)
     errors << 'index.html: external Markdown links do not use the local safe-link behavior'
   end
   errors << 'index.html: search attribution is not Pagefind' unless rendered_home.include?('Search by Pagefind')
+  errors << 'index.html: whitespace before punctuation after a link' if rendered_home.match?(%r{</a>\s+[.,;:](?=\s|<|\z)}i)
 
   home_data = YAML.safe_load(File.read(File.join(SITE_ROOT, 'data', 'home.yaml')), aliases: true)
   { 'publications' => 'publications', 'presentations' => 'events' }.each do |section_id, content_section|
@@ -506,6 +535,7 @@ if File.file?(privacy_source_path) && File.file?(privacy_path)
     end
   end
   errors << 'privacy/index.html: wrong heading' unless privacy_heading == normalized(privacy_data['title'])
+  errors << 'privacy/index.html: whitespace before punctuation after a link' if privacy_html.match?(%r{</a>\s+[.,;:](?=\s|<|\z)}i)
   errors << 'privacy/index.html: page is excluded from the search index' unless privacy_html.match?(/\bdata-pagefind-body\b/)
   significant_excerpt(privacy_body)&.then do |excerpt|
     errors << 'privacy/index.html: substantive content is missing' unless privacy_text.include?(excerpt)
@@ -518,19 +548,25 @@ end
 
 if File.file?(home_path)
   home_source = File.binread(home_path).force_encoding(Encoding::UTF_8)
-  errors << 'index.html: missing page-specific Leaflet stylesheet' unless home_source.include?('/vendor/leaflet/leaflet.css')
-  errors << 'index.html: missing page-specific Leaflet script' unless home_source.include?('/vendor/leaflet/leaflet.js')
+  map_frame = home_source.scan(/<iframe\b[^>]*>/i).find { |tag| attribute_values(tag, %w[src]).any? { |src| src.start_with?('https://www.google.com/maps?') } }.to_s
+  errors << 'index.html: missing lazily loaded, labelled Google Map' unless attribute_values(map_frame, %w[loading]) == ['lazy'] && attribute_values(map_frame, %w[title]).any? { |title| !title.empty? }
+  errors << 'index.html: missing Google Maps directions link' unless home_source.include?('https://www.google.com/maps/dir/?')
 end
 if File.file?(privacy_path)
   privacy_source = File.binread(privacy_path).force_encoding(Encoding::UTF_8)
-  errors << 'privacy/index.html: Leaflet assets must be limited to the homepage' if privacy_source.include?('/vendor/leaflet/')
+  errors << 'privacy/index.html: embedded map must be limited to the homepage' if privacy_source.match?(/<iframe\b[^>]*google\.com\/maps/i)
+end
+
+source_tags = Dir.glob(File.join(SITE_ROOT, 'content', '**', '*.md')).flat_map do |source_path|
+  data, = load_page(source_path)
+  Array(data['tags'])
 end
 
 {
   'authors' => ['Authors', 59],
   'categories' => ['Categories', 1],
-  'publication_types' => ['Publication_types', 3],
-  'tags' => ['Tags', 134]
+  'publication_types' => ['Publication types', 3],
+  'tags' => ['All topics', source_tags.uniq.length]
 }.each do |taxonomy, (expected_title, expected_terms)|
   relative_path = File.join(taxonomy, 'index.html')
   path = File.join(PUBLIC_ROOT, relative_path)
@@ -541,7 +577,11 @@ end
 
   html = File.binread(path).force_encoding(Encoding::UTF_8)
   heading = html_text(html[/<h1\b[^>]*>.*?<\/h1>/mi].to_s)
-  term_links = html.scan(/<a\b[^>]*class=["'][^"']*\binline-flex\b[^"']*["'][^>]*>/mi)
+  term_links = if taxonomy == 'tags'
+                 html.scan(/<a\b[^>]*\bhref=["']?\/tag\//i)
+               else
+                 html.scan(/<a\b[^>]*class=["'][^"']*\binline-flex\b[^"']*["'][^>]*>/mi)
+               end
   errors << "#{relative_path}: wrong local template" unless html.match?(/\bdata-local-layout=["']?taxonomy-index\b/i)
   errors << "#{relative_path}: wrong heading #{heading.inspect}" unless heading == expected_title
   errors << "#{relative_path}: missing Pagefind exclusion" unless html.match?(/\bdata-pagefind-ignore\b/)
@@ -551,13 +591,24 @@ end
 tags_index_path = File.join(PUBLIC_ROOT, 'tags', 'index.html')
 if File.file?(tags_index_path)
   tags_index_html = File.binread(tags_index_path).force_encoding(Encoding::UTF_8)
+  title = html_text(tags_index_html[/<title>.*?<\/title>/mi].to_s)
+  errors << "tags/index.html: unexpected browser title #{title.inspect}" unless title == 'All topics | Michael Soprano'
   {
     '/tag/amazon-mechanical-turk/' => 'Amazon Mechanical Turk 2',
+    '/tag/artificial-intelligence/' => 'Artificial Intelligence 3',
+    '/tag/cognitive-biases/' => 'Cognitive Biases 2',
+    '/tag/conversational-agents/' => 'Conversational Agents 3',
+    '/tag/covid-19/' => 'COVID-19 3',
     '/tag/crowd_frame/' => 'Crowd_Frame 2',
-    '/tag/crowdsourcing/' => 'crowdsourcing 24',
+    '/tag/crowdsourcing/' => 'Crowdsourcing 24',
+    '/tag/dom-manipulation/' => 'DOM Manipulation 1',
     '/tag/hits/' => 'HITS 3',
-    '/tag/network-analysis/' => 'network analysis 3',
+    '/tag/network-analysis/' => 'Network Analysis 3',
+    '/tag/prisma-2020/' => 'PRISMA 2020 2',
     '/tag/prolific/' => 'Prolific 2',
+    '/tag/systematic-reviews/' => 'Systematic Reviews 3',
+    '/tag/test-collections/' => 'Test Collections 3',
+    '/tag/trec/' => 'TREC 1',
     '/tag/toloka/' => 'Toloka 2'
   }.each do |href, expected_text|
     anchor = tags_index_html[/<a\b[^>]*\bhref\s*=\s*(?:["']#{Regexp.escape(href)}["']|#{Regexp.escape(href)}(?=[\s>]))[^>]*>.*?<\/a>/mi]
@@ -566,11 +617,33 @@ if File.file?(tags_index_path)
   end
 end
 
+topic_alias_paths = Dir.glob(File.join(SITE_ROOT, 'content', 'tags', '*', '_index.md')).flat_map do |path|
+  data, = load_page(path)
+  target = "/tag/#{File.basename(File.dirname(path))}/"
+  Array(data['aliases']).map do |alias_url|
+    relative = File.join(alias_url.delete_prefix('/'), 'index.html')
+    redirect_path = File.join(PUBLIC_ROOT, relative)
+    if File.file?(redirect_path)
+      html = File.read(redirect_path)
+      refresh = element_attributes(html, 'meta').find { |meta| attribute_values(meta, %w[http-equiv]).include?('refresh') }
+      unless refresh && attribute_values(refresh, %w[content]) == ["0; url=#{target}"]
+        errors << "#{relative}: missing redirect to #{target}"
+      end
+      canonical = links_with_rel(html, 'canonical').flat_map { |link| attribute_values(link, %w[href]) }
+      errors << "#{relative}: wrong redirect canonical URL" unless canonical == ["https://michaelsoprano.com#{target}"]
+    else
+      errors << "#{relative}: missing topic redirect"
+    end
+    relative
+  end
+end
+
 term_roots = %w[tag category publication-type]
 term_layout_paths = html_paths.select do |path|
   relative = path.delete_prefix("#{PUBLIC_ROOT}/")
   next false unless term_roots.any? { |root| relative.start_with?("#{root}/") }
   next false if relative.match?(%r{/page/1/index\.html\z})
+  next false if topic_alias_paths.include?(relative)
 
   true
 end
@@ -583,12 +656,29 @@ missing_local_term_layout.each do |path|
   errors << "#{path.delete_prefix("#{PUBLIC_ROOT}/")}: wrong term-list template"
 end
 
-source_tag_assignments = Dir.glob(File.join(SITE_ROOT, 'content', '**', '*.md')).sum do |source_path|
-  data, = load_page(source_path)
-  Array(data['tags']).length
-end
-rendered_tag_results = term_layout_paths.select { |path| path.delete_prefix("#{PUBLIC_ROOT}/").start_with?('tag/') }.sum do |path|
-  File.binread(path).scan(/\bdata-topic-result\b/i).length
+source_tag_assignments = source_tags.length
+topic_term_paths = term_layout_paths.select { |path| path.delete_prefix("#{PUBLIC_ROOT}/").start_with?('tag/') }
+rendered_tag_results = topic_term_paths.sum do |path|
+  html = File.read(path)
+  relative = path.delete_prefix("#{PUBLIC_ROOT}/")
+  index_roots = html.scan(/<[^>]+\bdata-pagefind-body\b[^>]*>/i)
+  unless index_roots.length == 1 && index_roots.first.match?(/\A<h1\b/i) &&
+         index_roots.first.include?('kind:Topic') && index_roots.first.include?('topicTitle[data-topic-key]')
+    errors << "#{relative}: search must index only the topic heading, with Topic metadata and an exact title filter"
+  end
+  sections = element_attributes(html, 'section').flat_map { |section| attribute_values(section, %w[id]) }
+  has_teaching = sections.include?('topic-teaching')
+  has_research = sections.intersect?(%w[topic-publications topic-presentations])
+  expected_area = if has_teaching && has_research
+                    'Research & Teaching topic'
+                  elsif has_teaching
+                    'Teaching topic'
+                  else
+                    'Research topic'
+                  end
+  eyebrow = html[/<p\b[^>]*\bclass=["']?topic-archive-eyebrow\b[^>]*>.*?<\/p>/mi].to_s
+  errors << "#{path.delete_prefix("#{PUBLIC_ROOT}/")}: expected #{expected_area.inspect}" unless html_text(eyebrow) == expected_area
+  html.scan(/\bdata-topic-result\b/i).length
 end
 unless rendered_tag_results == source_tag_assignments
   errors << "tag pages render #{rendered_tag_results} results, expected #{source_tag_assignments} source assignments"
@@ -598,11 +688,12 @@ source_term_assignments = Dir.glob(File.join(SITE_ROOT, 'content', '**', '*.md')
   data, = load_page(source_path)
   %w[categories publication_types].sum { |field| Array(data[field]).length }
 end
-rendered_term_cards = term_layout_paths.reject { |path| path.delete_prefix("#{PUBLIC_ROOT}/").start_with?('tag/') }.sum do |path|
-  File.binread(path).scan(/\brole=(?:["']article["']|article(?=[\s>]))/i).length
+secondary_term_paths = term_layout_paths.reject { |path| path.delete_prefix("#{PUBLIC_ROOT}/").start_with?('tag/') }
+rendered_term_rows = secondary_term_paths.sum do |path|
+  File.binread(path).scan(/<article\b[^>]*\bdata-archive-result\b/i).length
 end
-unless rendered_term_cards == source_term_assignments
-  errors << "term lists render #{rendered_term_cards} cards, expected #{source_term_assignments} source assignments"
+unless rendered_term_rows == source_term_assignments
+  errors << "term lists render #{rendered_term_rows} rows, expected #{source_term_assignments} source assignments"
 end
 
 author_layout_paths = html_paths.select do |path|
@@ -623,31 +714,24 @@ source_author_assignments = Dir.glob(File.join(SITE_ROOT, 'content', '**', '*.md
   data, = load_page(source_path)
   Array(data['authors']).length
 end
-rendered_author_cards = author_layout_paths.sum do |path|
-  File.binread(path).scan(/\brole=(?:["']article["']|article(?=[\s>]))/i).length
+rendered_author_rows = author_layout_paths.sum do |path|
+  File.binread(path).scan(/<article\b[^>]*\bdata-archive-result\b/i).length
 end
-unless rendered_author_cards == source_author_assignments
-  errors << "author lists render #{rendered_author_cards} cards, expected #{source_author_assignments} source assignments"
+unless rendered_author_rows == source_author_assignments
+  errors << "author lists render #{rendered_author_rows} rows, expected #{source_author_assignments} source assignments"
 end
 
-expected_card_components = source_term_assignments + source_author_assignments
-rendered_card_components = html_paths.sum do |path|
-  File.binread(path).scan(/\brole=(?:["']article["']|article(?=[\s>]))/i).length
-end
-local_card_components = html_paths.sum do |path|
-  File.binread(path).scan(/\bdata-local-component=(?:["']card["']|card(?=[\s>]))/i).length
-end
-unless rendered_card_components == expected_card_components
-  errors << "site renders #{rendered_card_components} cards, expected #{expected_card_components} source assignments"
-end
-unless local_card_components == rendered_card_components
-  errors << "local card renderer marks #{local_card_components} of #{rendered_card_components} rendered cards"
-end
-local_page_image_params = html_paths.sum do |path|
-  File.binread(path).scan(/\bdata-page-image-provider=(?:["']local["']|local(?=[\s>]))/i).length
-end
-unless local_page_image_params == rendered_card_components
-  errors << "local image-parameter resolver marks #{local_page_image_params} of #{rendered_card_components} rendered cards"
+(secondary_term_paths + author_layout_paths).group_by { |path| path.sub(%r{(?:/page/\d+)?/index\.html\z}, '') }.each do |archive, paths|
+  urls = paths.flat_map do |path|
+    html = File.binread(path)
+    html.scan(/<article\b[^>]*\bdata-archive-result\b[^>]*>(.*?)<\/article>/mi).flatten.map do |row|
+      errors << "#{path}: unexpected image in text row" if row.match?(/<img\b/i)
+      url = row[/<h2>\s*<a\b[^>]*\bhref=["']?([^\s"'>]+)/i, 1]
+      errors << "#{path}: missing row title link" unless url
+      url
+    end
+  end
+  errors << "#{archive}: duplicate results across pages" unless urls.uniq.length == urls.length
 end
 local_responsive_images = html_paths.sum do |path|
   File.binread(path).scan(/\bdata-responsive-image-provider=(?:["']local["']|local(?=[\s>]))/i).length
@@ -668,7 +752,6 @@ end
 local_icons = html_paths.sum do |path|
   File.binread(path).scan(/\bdata-icon-provider=(?:["']local["']|local(?=[\s>]))/i).length
 end
-errors << 'local icon resolver is not represented in generated HTML' if local_icons.zero?
 local_catalog_icons = html_paths.sum do |path|
   File.binread(path).scan(/\bdata-icon-catalog=(?:["']local["']|local(?=[\s>]))/i).length
 end
@@ -676,7 +759,7 @@ unless local_catalog_icons == local_icons
   errors << "local icon catalog supplies #{local_catalog_icons} of #{local_icons} rendered resolver icons"
 end
 
-expected_author_profile_resolutions = rendered_card_components + author_layout_paths.length
+expected_author_profile_resolutions = author_layout_paths.length
 local_author_profile_resolutions = html_paths.sum do |path|
   File.binread(path).scan(/\bdata-author-profile-provider=(?:["']local["']|local(?=[\s>]))/i).length
 end
@@ -783,7 +866,7 @@ if File.file?(sitemap_path)
     sitemap_source = File.read(sitemap_path)
     REXML::Document.new(sitemap_source)
     sitemap_urls = sitemap_source.scan(/<url>/).length
-    expected_sitemap_urls = 262 + standalone_page_count + Dir.glob(File.join(SITE_ROOT, 'content', 'blog', '*', 'index.md')).length
+    expected_sitemap_urls = 128 + source_tags.uniq.length + standalone_page_count + Dir.glob(File.join(SITE_ROOT, 'content', 'blog', '*', 'index.md')).length
     errors << "sitemap.xml: contains #{sitemap_urls} URLs, expected #{expected_sitemap_urls}" unless sitemap_urls == expected_sitemap_urls
   rescue REXML::ParseException => e
     errors << "sitemap.xml: invalid XML (#{e.message})"
@@ -807,7 +890,7 @@ if File.file?(pagefind_entry_path)
     indexed_pages = pagefind_entry.fetch('languages', {}).values.sum { |language| language.fetch('page_count', 0).to_i }
     expected_indexed_pages = SECTIONS.keys.sum do |section|
       Dir.glob(File.join(SITE_ROOT, 'content', section, '*', 'index.md')).length
-    end + 1 + standalone_page_count # Homepage and standalone content pages.
+    end + 1 + standalone_page_count + topic_term_paths.length
     errors << "search index contains #{indexed_pages} pages, expected #{expected_indexed_pages}" unless indexed_pages == expected_indexed_pages
   rescue JSON::ParserError => e
     errors << "invalid Pagefind index metadata: #{e.message}"

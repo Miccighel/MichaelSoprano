@@ -50,7 +50,7 @@ sections:
 
       #### 2027
 
-      - [Reducing Online Misinformation through Credible Information Retrieval (*ROMCIR 2027*)](https://romcir.disco.unimib.it/2027-edition/2027-workshop/organizing-committee/), ECIR 2027, Southampton, United Kingdom. **Organizer**.
+      - [Reducing Online Misinformation through Credible Information Retrieval (*ROMCIR 2027*)](https://romcir.disco.unimib.it/), ECIR 2027, Southampton, United Kingdom. **Organizer**.
 
       #### 2025
 
@@ -147,7 +147,7 @@ sections:
       ### Supervision and Mentoring
 
       - Thesis supervision\
-        3 BSc theses: 2 in Engineering and 1 in Sport Science
+        3 BSc theses: 2 in Engineering and 1 in Physical Activity and Sport Science
       - Thesis co-supervision\
         14 MSc and 19 BSc theses in Computer Science
       - Advanced laboratory co-supervision\

@@ -14,7 +14,7 @@ authors:
 - Gabriella Pasi
 - Stefano Mizzaro
 tags:
-- AI
+- artificial intelligence
 - scoping reviews
 - AIDME
 - interpretability

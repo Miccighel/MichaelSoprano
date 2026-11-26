@@ -11,7 +11,7 @@ authors:
 - Stefano Mizzaro
 - Tetsuya Sakai
 tags:
-- relevance judgments
+- relevance assessment
 - statistical analysis
 - crowdsourcing
 categories: []

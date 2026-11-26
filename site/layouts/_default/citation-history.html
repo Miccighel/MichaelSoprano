@@ -5,24 +5,33 @@
 {{ $export := resources.FromString "data/annual-citations.json" (dict "schema" 1 "papers" $papers | jsonify) }}
 <main class="citation-explorer legacy-container" data-pagefind-body>
   <header class="citation-explorer-header">
-    <a href="/#metrics">← Bibliometrics</a>
+    <a class="event-back-link" href="/#metrics"><i class="fas fa-arrow-left" aria-hidden="true"></i> Bibliometrics</a>
+    <p class="event-imprint">Google Scholar</p>
     <h1 data-pagefind-meta="title">{{ .Title }}</h1>
-    <span class="citation-source-label">Google Scholar</span>
+    <p class="citation-intro">Each line tracks one publication’s cumulative citations by year.</p>
+    <div class="citation-chart-links">
+      <a href="#citation-search">Find a publication</a>
+      {{ range where hugo.Data.bibliometrics.sources "name" "Google Scholar" }}<a href="{{ .url }}">Google Scholar profile</a>{{ end }}
+    </div>
   </header>
   <section class="citation-dashboard" aria-label="Interactive citation history" data-citation-explorer data-series-url="{{ $export.RelPermalink }}">
     <p class="citation-context" id="citation-context" role="status" hidden></p>
     <p class="citation-selected-title" id="citation-selected-title" role="status" hidden></p>
-    <p id="citation-keyboard-help" class="sr-only">Use Left and Right to move between years, Up and Down to move between publications, Home and End for the first and last year. Press Enter to select a publication, Escape to dismiss its tooltip, and Tab to leave the chart.</p>
     <p id="citation-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
     <div class="citation-chart" id="citation-chart" tabindex="0" role="group" aria-label="Google Scholar cumulative citation chart" aria-describedby="citation-keyboard-help citation-marker-legend"></div>
     <ul class="citation-marker-legend" id="citation-marker-legend" aria-label="Chart markers">
       <li><span class="citation-marker annual" aria-hidden="true"></span>Sum of annual counts</li>
       <li><span class="citation-marker reported" aria-hidden="true"></span>Latest Scholar total</li>
     </ul>
+    <details class="citation-guide">
+      <summary>How to read the chart</summary>
+      <p>Filled dots add up the citations received through each year. An open circle marks a separately checked Scholar total when it differs from the sum or was checked in a later year. Select a point to see its count and verification date.</p>
+      <p id="citation-keyboard-help">With the chart focused, use Left and Right to move through years and Up and Down to switch publications. Home and End jump to the first and last points. Enter highlights the publication; Escape closes the tooltip.</p>
+    </details>
     <section class="citation-line-legend" aria-labelledby="citation-publications-heading">
-      <div class="citation-legend-heading"><h2 id="citation-publications-heading">Publications</h2><button type="button" id="citation-reset" disabled>Show all lines</button></div>
+      <div class="citation-legend-heading"><h2 id="citation-publications-heading">Publications</h2><button type="button" id="citation-reset" disabled>Clear highlight</button></div>
       <div class="citation-legend-controls">
-        <div><input type="search" id="citation-search" aria-label="Search publications by title" placeholder="Search by title…" autocomplete="off"></div>
+        <div><label class="citation-search-label" for="citation-search">Find by title</label><input type="search" id="citation-search" placeholder="Search publications…" autocomplete="off"></div>
         <div><label class="citation-search-label" for="citation-sort">Sort by</label><select id="citation-sort"><option value="alphabetical">Title A–Z</option><option value="ascending">Citations: low to high</option><option value="descending">Citations: high to low</option></select></div>
       </div>
       <p id="citation-search-status" class="citation-search-status" role="status" aria-live="polite"></p>

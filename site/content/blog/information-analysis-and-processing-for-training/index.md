@@ -1,13 +1,13 @@
 ---
 title: Information Analysis and Processing for Training
-subtitle: Bachelor's Degree in Sports Science and Master's Degree in Sciences and
-  Techniques of Preventive and Adapted Physical Activities at the University of Udine
-summary: Courses offered within the Bachelor's Degree in Sports Science and the Master's
-  Degree in Sciences and Techniques of Preventive and Adapted Physical Activities
+subtitle: Bachelor's Degree in Physical Activity and Sport Science and Master's Degree in
+  Science in Preventive and Adapted Physical Activity at the University of Udine
+summary: Courses offered within the Bachelor's Degree in Physical Activity and Sport Science and the Master's
+  Degree in Science in Preventive and Adapted Physical Activity
   at the University of Udine
 projects: []
 date: '2024-08-07T11:00:00Z'
-lastmod: '2026-09-29T15:08:00+02:00'
+course_updated: '2026-11-24'
 course_hidden: true
 draft: false
 featured: false
@@ -19,21 +19,21 @@ image:
 authors:
 - admin
 tags:
-- Data Analysis
-- Sports Science
-- Data Science
-- Data Mining
+- data analysis
+- sports science
+- data science
+- data mining
 - Microsoft Excel
-- Data Representation
-- Data Visualization
-- Compression
-- Information Theory
-- Relational Databases
+- data representation
+- data visualization
+- compression
+- information theory
+- relational databases
 - SQL
 - SQLite
 - DBeaver
-- Teaching
-- Spreadsheet Analysis
+- teaching
+- spreadsheet analysis
 - PivotTables
 categories:
 - teaching
@@ -41,7 +41,7 @@ categories:
 
 ## Aims
 
-This is an archived combined overview. The Bachelor's and Master's modules are distinct courses and now have separate pages for **every edition taught by Michael Soprano**: [Bachelor's Degree in Sports Science](/post/information-analysis-for-training-bachelors/) and [Master's Degree in Preventive and Adapted Physical Activities](/post/information-analysis-for-training-masters/). The Bachelor's Degree course pages begin in 2024/2025; the Master's Degree course pages begin in 2025/2026. The material below is a historical overview, not an exact syllabus for each year.
+This is an archived combined overview. The Bachelor's and Master's modules are distinct courses and now have separate pages for **every edition taught by Michael Soprano**: [Bachelor's Degree in Physical Activity and Sport Science](/post/information-analysis-for-training-bachelors/) and [Master's Degree in Science in Preventive and Adapted Physical Activity](/post/information-analysis-for-training-masters/). The Bachelor's Degree course pages begin in 2024/2025; the Master's Degree course pages begin in 2025/2026. The material below is a historical overview, not an exact syllabus for each year.
 
 These courses address the analysis and processing of information for sport and training from two complementary perspectives. They share the same broad teaching area, but they are distinct courses offered at different degree levels and organized around different learning goals, tools, and assessment methods.
 

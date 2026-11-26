@@ -6,15 +6,11 @@
   <section id="about" class="home-section legacy-about-section">
     <div class="legacy-container">
       <div class="legacy-about-grid">
-      <aside id="profile">
-        {{ $avatar := resources.Get "media/authors/michael-soprano.jpg" }}
-        {{ $avatar = $avatar.Fill "270x270 Center" }}
-        <img class="avatar avatar-circle" src="{{ $avatar.RelPermalink }}" width="270" height="270" alt="{{ $author.title }}">
-        {{ partial "legacy/profile-links.html" (dict "author" $author "compact" false) }}
-      </aside>
-
       <div class="legacy-about-content">
-        <h1 class="sr-only">{{ $author.title }}</h1>
+        <header class="profile-masthead">
+          <p class="profile-imprint">Research &amp; teaching{{ with index $author.organizations 0 }} <span class="profile-imprint-separator" aria-hidden="true">/</span> <span class="profile-imprint-affiliation">{{ .name }}</span>{{ end }}</p>
+          <h1>{{ $author.title }}</h1>
+        </header>
         <div class="legacy-bio">{{ $author.bio | markdownify }}</div>
         <nav class="about-actions" aria-label="Primary profile actions">
           <a class="about-action is-primary" href="/media/CVs/Curriculum_Vitae_EN.pdf"><i class="fas fa-file-download" aria-hidden="true"></i> CV · English</a>
@@ -23,6 +19,12 @@
           <a class="about-action" href="#contact"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a>
         </nav>
       </div>
+      <aside id="profile" aria-label="Portrait and profiles">
+        {{ $avatar := resources.Get "media/authors/michael-soprano.jpg" }}
+        {{ $avatar = $avatar.Fill "400x400 Center" }}
+        <img class="avatar" src="{{ $avatar.RelPermalink }}" width="400" height="400" alt="{{ $author.title }}">
+        {{ partial "legacy/profile-links.html" (dict "author" $author "compact" false) }}
+      </aside>
       </div>
     </div>
   </section>
@@ -71,16 +73,16 @@
                     <caption class="sr-only">Bibliometric indicators by source</caption>
                     <thead>
                       <tr>
-                        <th scope="col">Indicator</th>
-                        {{ range $metrics.sources }}<th scope="col"><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></th>{{ end }}
+                        <th scope="col">Source</th>
+                        {{ range $metrics.indicators }}<th scope="col">{{ .label }}</th>{{ end }}
                       </tr>
                     </thead>
                     <tbody>
-                      {{ range $metrics.indicators }}
-                        {{ $indicator := . }}
+                      {{ range $metrics.sources }}
+                        {{ $source := . }}
                         <tr>
-                          <th scope="row">{{ .label }}</th>
-                          {{ range $metrics.sources }}<td>{{ index .values $indicator.key }}</td>{{ end }}
+                          <th scope="row"><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></th>
+                          {{ range $metrics.indicators }}<td>{{ partial "legacy/metric-value.html" (index $source.values .key) }}</td>{{ end }}
                         </tr>
                       {{ end }}
                     </tbody>
@@ -93,17 +95,17 @@
                       <h3><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></h3>
                       <dl>
                         {{ range $metrics.indicators }}
-                          <div><dt>{{ .label }}</dt><dd>{{ index $source.values .key }}</dd></div>
+                          <div><dt>{{ .label }}</dt><dd>{{ partial "legacy/metric-value.html" (index $source.values .key) }}</dd></div>
                         {{ end }}
                       </dl>
                     </article>
                   {{ end }}
                 </div>
                 <div class="citation-actions">
-                <a class="citation-explore-link" href="/citation-history/"><i class="fas fa-chart-line citation-action-icon" aria-hidden="true"></i><span class="citation-action-copy"><span>Explore citation trends</span><small>Google Scholar · Cumulative citations</small></span><i class="fas fa-arrow-right citation-action-arrow" aria-hidden="true"></i></a>
+                <a class="citation-explore-link" href="/citation-history/"><span>Google Scholar citation history</span><i class="fas fa-arrow-right citation-action-arrow" aria-hidden="true"></i></a>
                 {{ with index hugo.Data "citation-history" }}
                   <details class="citation-history">
-                    <summary><i class="fas fa-history citation-action-icon" aria-hidden="true"></i><span class="citation-action-copy"><span>Latest citation changes</span><small>Google Scholar</small></span><i class="fas fa-chevron-down citation-action-arrow" aria-hidden="true"></i></summary>
+                    <summary><span>Latest changes</span><i class="fas fa-chevron-down citation-action-arrow" aria-hidden="true"></i></summary>
                     {{ range first 1 . }}
                       <section class="citation-history-period">
                         <h3>{{ time.Format "Jan 2, 2006" .from }}{{ if ne .from .to }} – {{ time.Format "Jan 2, 2006" .to }}{{ end }}</h3>
@@ -127,65 +129,49 @@
                     {{ end }}
                   </details>
                 {{ end }}
-                </div>
                 <p class="bibliometrics-updated">Last updated: {{ $metrics.last_updated }}</p>
+                </div>
               </div>
             {{ else if eq .id "publications" }}
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "publications" }}
               {{ $pages = sort (sort $pages "Title" "asc") "Date" "desc" }}
               {{ $homepage_limit := $home.publications.homepage_limit | default 15 }}
-              <div class="legacy-list publication-list">
-                {{ range first $homepage_limit $pages }}
-                  {{ $publication := . }}
-                  <article class="pub-list-item publication-home-item view-citation">
-                    <h3 class="publication-home-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                    <div class="li-cite-author">{{ delimit .Params.authors ", " }}</div>
-                    <div class="publication-home-meta">
-                      {{ with .Params.publication }}{{ with .name }}<em>{{ strings.TrimSuffix "." (replace . "*" "") }}</em>,{{ end }}{{ end }} {{ .Date.Format "2006" }}.
-                    </div>
-                    <span class="legacy-attachments">
-                      {{ range .Params.links }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ partial "legacy/resource-label.html" .type }}</a>{{ end }}
-                      <button class="btn btn-outline-primary btn-sm legacy-cite" type="button" data-cite-url="{{ $publication.RelPermalink }}cite.bib">Cite</button>
-                      {{ with .Params.identifiers }}{{ with .doi }}<a class="btn btn-outline-primary btn-sm" href="https://doi.org/{{ . }}">DOI</a>{{ end }}{{ end }}
-                    </span>
-                  </article>
-                {{ end }}
-              </div>
-              <p class="see-all publication-see-all"><a href="/publication/">View all {{ len $pages }} publications <i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
+              <form class="home-publication-search" action="/publication/" method="get" role="search" aria-label="Publication archive">
+                <label for="home-publication-query">Search all {{ len $pages }} publications</label>
+                <div>
+                  <input id="home-publication-query" name="q" type="search" placeholder="Title, author, venue or year">
+                  <button class="index-button" type="submit">Search</button>
+                </div>
+              </form>
+              {{ range ((first $homepage_limit $pages).GroupByDate "2006") }}
+                <div class="index-year" role="group" aria-labelledby="home-pubs-{{ .Key }}">
+                  <h3 class="index-year-label" id="home-pubs-{{ .Key }}">{{ .Key }}</h3>
+                  <div class="legacy-list publication-list">
+                    {{ range .Pages }}
+                      <article class="pub-list-item publication-home-item view-citation">
+                        <h4 class="publication-home-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+                        <div class="li-cite-author">{{ delimit .Params.authors ", " }}</div>
+                        <div class="publication-home-meta">
+                          {{ with .Params.publication }}{{ with .name }}<em>{{ strings.TrimSuffix "." (replace . "*" "") }}</em>.{{ end }}{{ end }}
+                        </div>
+                        {{ partial "legacy/publication-actions.html" (dict "page" . "newTab" false) }}
+                      </article>
+                    {{ end }}
+                  </div>
+                </div>
+              {{ end }}
+              <p class="see-all publication-see-all"><a href="/publication/"><span>View all {{ len $pages }} publications</span><i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
             {{ else if eq .id "presentations" }}
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "events" }}
               {{ $homepage_limit := $home.presentations.homepage_limit | default 15 }}
               <div class="stream-list">
                 {{ range first $homepage_limit $pages.ByDate.Reverse }}
-                  {{ $event := . }}
-                  <article class="media stream-item">
-                    <div class="media-body">
-                      {{ $contribution_type := index (split .Params.summary " - ") 0 }}
-                      <div class="presentation-row-eyebrow">
-                        <span class="presentation-row-type">{{ $contribution_type }}</span>
-                        {{ with .Params.event_start }}<time datetime="{{ time.Format "2006-01-02" . }}">{{ time.Format "Jan 2, 2006" . }}</time>{{ end }}
-                      </div>
-                      <h3 class="section-subheading article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                      <p class="presentation-row-authors">{{ delimit .Params.authors ", " }}</p>
-                      {{ with .Params.event_name }}<p class="presentation-row-event">{{ . }}</p>{{ end }}
-                      <div class="presentation-row-details">
-                        {{ with .Params.event_start }}
-                          {{ $start_time := time.Format "15:04" . }}
-                          {{ if and (ne $start_time "00:00") (not $event.Params.event_all_day) (not $event.Params.event_time_unknown) }}
-                            <span><i class="far fa-clock" aria-hidden="true"></i>{{ $start_time }}{{ with $event.Params.event_end }}{{ $end_time := time.Format "15:04" . }}{{ if ne $end_time "00:00" }}–{{ $end_time }}{{ end }}{{ end }}</span>
-                          {{ end }}
-                        {{ end }}
-                        {{ with .Params.location }}<span><i class="fas fa-location-dot" aria-hidden="true"></i>{{ strings.TrimSuffix "." . }}</span>{{ end }}
-                      </div>
-                      {{ with .Params.links }}<div class="btn-links">{{ range . }}<a class="btn btn-outline-primary btn-sm" href="{{ .url }}">{{ partial "legacy/resource-label.html" .type }}</a>{{ end }}</div>{{ end }}
-                    </div>
-                    {{ partial "legacy/event-thumbnail.html" . }}
-                  </article>
+                  {{ partial "legacy/event-row.html" (dict "event" . "archive" false) }}
                 {{ end }}
               </div>
-              <p class="see-all"><a href="/event/">See all events <i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
+              <p class="see-all"><a href="/event/"><span>See all presentations</span><i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
             {{ else if eq .id "teaching" }}
               {{ $pages := where site.Pages "Kind" "page" }}
               {{ $pages = where $pages "Section" "blog" }}
@@ -193,17 +179,7 @@
               {{ $pages = sort $pages "Title" "asc" }}
               <div class="teaching-list">
                 {{ range $pages }}
-                  <article class="teaching-item">
-                    <div class="teaching-item-content">
-                      <div class="teaching-item-eyebrow">
-                        <span><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>Course</span>
-                        <time datetime="{{ time.Format "2006-01-02" .Params.lastmod }}">Updated {{ time.Format "Jan 2, 2006" .Params.lastmod }}</time>
-                      </div>
-                      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                      {{ with .Params.subtitle }}<p>{{ . }}</p>{{ end }}
-                    </div>
-                    <a class="teaching-item-link" href="{{ .RelPermalink }}">Course details <i class="fas fa-angle-right" aria-hidden="true"></i></a>
-                  </article>
+                  {{ partial "legacy/course-row.html" (dict "page" . "archive" false) }}
                 {{ end }}
               </div>
             {{ else if eq .id "tags" }}
@@ -221,7 +197,7 @@
                 <nav class="topics-list" aria-label="{{ $group }} topics">
                 {{ range $topics }}
                     {{ $slug := path.Base (strings.TrimSuffix "/" .Page.RelPermalink) }}
-                    {{ $isTeaching := in $home.topics.teaching $slug }}
+                    {{ $isTeaching := eq (partial "legacy/topic-area.html" .Page) "Teaching" }}
                     {{ if eq $isTeaching (eq $group "Teaching") }}
                     {{ $label := partial "legacy/topic-label.html" (dict "slug" $slug "fallback" .Page.Title) }}
                     <a class="topic-link" href="{{ .Page.RelPermalink }}">
@@ -233,6 +209,7 @@
                 </nav>
               </section>
               {{ end }}
+              <p class="see-all"><a href="/tags/"><span>Browse all {{ len site.Taxonomies.tags }} topics</span><i class="fas fa-angle-right" aria-hidden="true"></i></a></p>
             {{ else if eq .id "academic_activity" }}
               {{ $activity_sections := split (printf "\n%s" .content.text) "\n### " }}
               <div class="activity-list">
@@ -265,51 +242,35 @@
               </div>
             {{ else if eq .id "contact" }}
               <div class="contact-layout">
-                <div class="contact-details">
-                  <h3>Get in touch</h3>
-                  <p class="contact-intro">For collaborations, teaching, academic service, or other enquiries, send me a message or contact me directly.</p>
-                  <ul class="contact-list">
-                    <li>
-                      <span class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
-                      <div><strong>Email</strong><a href="mailto:michael.soprano@uniud.it">michael.soprano@uniud.it</a></div>
-                    </li>
-                    <li>
-                      <span class="contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
-                      <div><strong>Address</strong><span>Via delle Scienze 206, 33100 Udine, Italy</span></div>
-                    </li>
-                    <li>
-                      <span class="contact-icon"><i class="fas fa-compass" aria-hidden="true"></i></span>
-                      <div><strong>Office</strong><span>Rizzi Building, 2° Floor, South Node, Lab SMDC (LC2-04-DE), Room A2 32</span></div>
-                    </li>
-                  </ul>
+                {{ $officeCoords := "46.080085,13.211890" }}
+                <div class="contact-email">
+                  <h3>Email</h3>
+                  <a href="mailto:michael.soprano@uniud.it">michael.soprano@uniud.it</a>
                 </div>
+                <section class="contact-office" aria-labelledby="contact-office-title">
+                  <h3 id="contact-office-title">Office</h3>
+                  <address>
+                    <p>University of Udine · Rizzi Building<br>Via delle Scienze 206, 33100 Udine, Italy</p>
+                    <p>Second floor, South Node<br>Lab SMDC (LC2-04-DE), Room A2 32</p>
+                  </address>
+                  <a href="https://www.google.com/maps/dir/?api=1&amp;destination={{ $officeCoords }}" target="_blank" rel="noopener">Directions in Google Maps</a>
+                </section>
+                <iframe class="contact-office-map" src="https://www.google.com/maps?q={{ $officeCoords }}&amp;z=16&amp;output=embed" title="Google Maps: Rizzi Building, University of Udine" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-                <form class="legacy-contact-form" action="https://formspree.io/f/mjvpnjeb" method="POST">
+                <form class="legacy-contact-form" aria-labelledby="contact-form-title" action="https://formspree.io/f/mjvpnjeb" method="POST">
                   <div class="contact-form-heading">
-                    <h3>Send a message</h3>
+                    <h3 id="contact-form-title">Send a message</h3>
                     <p>All fields are required.</p>
                   </div>
                   <input class="contact-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
                   <div class="contact-form-fields">
                     <label><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
                     <label><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
-                    <label class="contact-message-field"><span>Message</span><textarea name="message" rows="6" required></textarea></label>
+                    <label class="contact-message-field"><span>Message</span><textarea name="message" rows="4" required></textarea></label>
                   </div>
-                  <button class="btn btn-outline-primary" type="submit"><i class="fas fa-paper-plane" aria-hidden="true"></i> Send message</button>
+                  <button class="btn btn-outline-primary" type="submit">Send message</button>
                 </form>
               </div>
-
-              <div class="contact-map-block">
-                <div class="contact-map-heading">
-                  <div><h3>Office location</h3><p>University of Udine · Rizzi Building</p></div>
-                  <a href="https://www.openstreetmap.org/?mlat=46.080085&amp;mlon=13.211890#map=16/46.080085/13.211890" target="_blank" rel="noopener">Open map <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-                </div>
-                <div id="map" aria-label="Map showing the University of Udine"></div>
-              </div>
-              <script src="/vendor/leaflet/leaflet.js"></script>
-              {{ $map_js := resources.Get "js/contact-map.js" | resources.Minify }}
-              {{ if hugo.IsProduction }}{{ $map_js = $map_js | fingerprint "sha256" }}{{ end }}
-              <script defer src="{{ $map_js.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $map_js.Data.Integrity }}" crossorigin="anonymous"{{ end }}></script>
             {{ else }}
               <div class="legacy-markdown">{{ .content.text | markdownify }}</div>
             {{ end }}

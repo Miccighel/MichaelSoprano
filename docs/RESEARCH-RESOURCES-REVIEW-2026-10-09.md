@@ -10,7 +10,7 @@ Labels: **Dataset** for data-focused releases (including tabular results, corpor
 
 | Publication | Evidence | Resources / outcome |
 | --- | --- | --- |
-| Crowdsourcing Peer Review in the Digital Humanities? | [PDF / author copy](http://aiucd2019.uniud.it/wp-content/uploads/2020/03/AIUCD2019-BoA_DEF.pdf) | No clearly attributable separate data/code release located |
+| Crowdsourcing Peer Review in the Digital Humanities? | [Book of abstracts](https://amsacta.unibo.it/id/eprint/6361/) | No clearly attributable separate data/code release located |
 | The COVID-19 Infodemic: Can the Crowd Judge Recent Misinformation Objectively? | [PDF / author copy](https://air.uniud.it/retrieve/e27ce0c9-f288-055e-e053-6605fe0a7873/3340531.3412048.pdf) | [dataset](https://github.com/KevinRoitero/crowdsourcingTruthfulness) |
 | Large Language Models as Assessors: On the Impact of Relevance Scales | User-supplied author PDF: `_ECIR_2026__Relevance_LLMs_Scale_Effect.pdf`, page 2 | [materials](https://doi.org/10.17605/OSF.IO/XKVM6); inspected archive includes Python source, analysis notebooks, prompts, scales and outputs |
 | Analyzing AI Evaluation Benchmarks Through Information Retrieval and Network Science | User-supplied author PDF: `_ECIR_2026__HITS_Hits_Benchmarks.pdf`, page 2 | [dataset](https://doi.org/10.17605/OSF.IO/X2H6A); paper declares code/results/supplementary materials, but the inspected destination exposes CSV and pickle data, not code |

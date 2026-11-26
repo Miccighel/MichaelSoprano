@@ -1,0 +1,24 @@
+{{ $dateFormat := cond .archive "Jan 2" "Jan 2, 2006" }}
+{{ with .event }}
+  <article class="media stream-item">
+    <div class="media-body">
+      <div class="presentation-row-eyebrow">
+        <span class="presentation-row-type">{{ index (split (.Params.summary | default "Presentation") " - ") 0 }}</span>
+        {{ with .Params.event_start }}<time datetime="{{ time.Format "2006-01-02" . }}">{{ time.Format $dateFormat . }}</time>{{ end }}
+      </div>
+      <h3 class="section-subheading article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      {{ with .Params.authors }}<p class="presentation-row-authors">{{ delimit . ", " }}</p>{{ end }}
+      {{ with .Params.event_name }}<p class="presentation-row-event">{{ . }}</p>{{ end }}
+      {{ $clock := partial "legacy/event-time-range.html" . }}
+      {{ if or $clock .Params.location }}
+        <div class="presentation-row-details">
+          {{ with $clock }}<span><i class="far fa-clock" aria-hidden="true"></i>{{ . }}</span>{{ end }}
+          {{ with .Params.location }}<span><i class="fas fa-location-dot" aria-hidden="true"></i>{{ strings.TrimSuffix "." . }}</span>{{ end }}
+        </div>
+      {{ end }}
+      {{ with .Params.event_note }}<p class="presentation-row-event">{{ . }}</p>{{ end }}
+      {{ with .Params.links }}<div class="resource-actions">{{ range . }}<a href="{{ .url }}">{{ partial "legacy/event-resource-label.html" . }}</a>{{ end }}</div>{{ end }}
+    </div>
+    {{ partial "legacy/event-thumbnail.html" . }}
+  </article>
+{{ end }}
