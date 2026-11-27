@@ -83,8 +83,8 @@ front_matter = case type
                    event_name: ""
                    event_url: ""
                    location: ""
-                   event_start: "#{today}T09:00:00"
-                   event_end: "#{today}T10:00:00"
+                   event_start: "#{today}"
+                   event_end: "#{today}"
                    event_all_day: false
                    date: "#{today}T09:00:00"
                    draft: true

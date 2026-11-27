@@ -12,7 +12,7 @@ tags:
 - information quality
 - argument type identification
 categories: []
-date: '2024-09-01'
+date: '2024-08-31'
 lastmod: 2024-09-01 10:00:00.000000000 +01:00
 featured: false
 draft: false

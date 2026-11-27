@@ -82,6 +82,12 @@ del contributo (slide, poster o pubblicazione), incluse maiuscole, sigle e nomi
 propri. Usare lo stesso titolo nel sito e nei CV; non applicare trasformazioni
 automatiche in title case. Esempio: `A Caccia di Fake News`.
 
+Per i paper, `date` è la data bibliografica mostrata sul sito; `publishDate`
+serve a programmare la pubblicazione della pagina, non a datare il paper.
+Per gli eventi, `event_start` e `event_end` usano la data locale del luogo
+dell'evento. Aggiungere l'orario con il relativo fuso, ad esempio
+`2026-10-04T10:00:00+02:00`. Se l'orario non è noto, usare solo `YYYY-MM-DD`.
+
 La homepage mostra fino a 15 pubblicazioni e 15 presentazioni, con accesso agli
 archivi completi. I limiti sono configurati in `site/data/home.yaml`, tramite
 `publications.homepage_limit` e `presentations.homepage_limit`.

@@ -24,8 +24,8 @@ image:
 projects: []
 event_name: Workshop "AI and Disinformation", held as part of the 6th National CINI
   Conference on Artificial Intelligence (Ital-IA 2026)
-event_start: '2026-06-18T17:20:00'
-event_end: '2026-06-18T17:30:00'
+event_start: '2026-06-18T17:20:00+02:00'
+event_end: '2026-06-18T17:30:00+02:00'
 event_all_day: false
 links:
 - type: slides

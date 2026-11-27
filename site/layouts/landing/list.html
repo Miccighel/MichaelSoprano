@@ -44,6 +44,7 @@
                     <div class="education-record">
                       <h3>{{ .course }}</h3>
                       <p>{{ .institution }}</p>
+                      {{ with .note }}<p>{{ . }}</p>{{ end }}
                     </div>
                   </article>
                 {{ end }}

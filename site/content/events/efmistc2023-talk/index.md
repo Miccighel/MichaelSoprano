@@ -23,8 +23,8 @@ projects: []
 event_name: Conversational Agents and Responsible Ethics in Healthcare Workshop, held
   as part of the European Federation of Medical Informatics Special Topic Conference
   2023 (EFMI STC 2023)
-event_start: '2023-10-27T08:30:00'
-event_end: '2023-10-27T09:10:00'
+event_start: '2023-10-27T08:30:00+02:00'
+event_end: '2023-10-27T09:10:00+02:00'
 event_all_day: false
 links:
 - type: slides

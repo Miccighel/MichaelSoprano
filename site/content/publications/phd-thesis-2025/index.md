@@ -9,7 +9,7 @@ tags:
 - cognitive biases
 - automated fact-checking
 categories: []
-date: '2025-06-11'
+date: '2025-06-10'
 lastmod: 2025-06-11 10:00:00.000000000 +01:00
 featured: false
 draft: false

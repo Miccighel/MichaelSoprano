@@ -27,8 +27,8 @@ image:
 projects: []
 event_name: The 15th International Conference on Innovative Concepts and Theories
   in Information Retrieval
-event_start: '2025-07-18T13:30:00'
-event_end: '2025-07-18T15:30:00'
+event_start: '2025-07-18T13:30:00+02:00'
+event_end: '2025-07-18T15:30:00+02:00'
 event_all_day: false
 links:
 - type: pdf

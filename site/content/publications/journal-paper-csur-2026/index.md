@@ -12,8 +12,7 @@ tags:
 - large language models
 - combinatorial optimization
 categories: []
-date: '2026-03-16'
-lastmod: 2024-03-16 15:00:00.000000000 +01:00
+date: '2026-04-21'
 featured: false
 draft: false
 image:
@@ -21,7 +20,6 @@ image:
   focal_point: ''
   preview_only: false
 projects: []
-publishDate: '2026-03-16T15:00:00+01:00'
 publication_types:
 - article-journal
 abstract: This systematic review explores the application of Large Language Models
@@ -36,7 +34,7 @@ abstract: This systematic review explores the application of Large Language Mode
   for evaluating LLMs in CO, and the field of application. Finally, we identify future
   directions for leveraging LLMs in this field.
 publication:
-  name: "*ACM Computing Surveys. Journal Ranks: Journal Citation Reports (JCR) Q1
+  name: "*ACM Computing Surveys (August 2026 issue). Journal Ranks: Journal Citation Reports (JCR) Q1
     (2024), Scimago (SJR) Q1 (2024).*"
 identifiers:
   doi: 10.1145/3801961

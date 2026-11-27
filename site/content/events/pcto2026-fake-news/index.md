@@ -16,8 +16,8 @@ image:
   focal_point: Center
 projects: []
 event_name: PCTO Summer Camp Informatica & Intelligenza Artificiale 2026
-event_start: '2026-09-10T15:15:00'
-event_end: '2026-09-10T16:00:00'
+event_start: '2026-09-10T15:15:00+02:00'
+event_end: '2026-09-10T16:00:00+02:00'
 event_all_day: false
 links:
 - type: slides

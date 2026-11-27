@@ -21,8 +21,8 @@ image:
   focal_point: Right
 projects: []
 event_name: The 48th European Conference on Information Retrieval
-event_start: '2026-03-30T13:30:00'
-event_end: '2026-03-30T14:30:00'
+event_start: '2026-03-30T13:30:00+02:00'
+event_end: '2026-03-30T14:30:00+02:00'
 event_all_day: false
 links:
 - type: pdf

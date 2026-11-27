@@ -19,8 +19,8 @@ image:
   focal_point: Right
 projects: []
 event_name: The 3rd Italian Conference on Big Data and Data Science
-event_start: '2024-09-17T11:30:00'
-event_end: '2024-09-17T12:30:00'
+event_start: '2024-09-17T11:30:00+02:00'
+event_end: '2024-09-17T12:30:00+02:00'
 event_all_day: false
 links:
 - type: slides
