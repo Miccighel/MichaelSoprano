@@ -22,8 +22,8 @@ image:
 projects: []
 event_name: 21st Conference on Information and Research Science Connecting to Digital
   and Library Science
-event_start: '2025-02-20T14:20:00'
-event_end: '2025-02-20T14:40:00'
+event_start: '2025-02-20T14:20:00+01:00'
+event_end: '2025-02-20T14:40:00+01:00'
 event_all_day: false
 links:
 - type: slides

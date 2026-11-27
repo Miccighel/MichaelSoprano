@@ -110,9 +110,23 @@ SECTIONS.each do |section, required_fields|
 
     if section == 'events' && data['event_start'] && data['event_end']
       begin
-        start_time = Time.parse(data['event_start'].to_s)
-        end_time = Time.parse(data['event_end'].to_s)
-        errors << "#{relative_path}: event_end precedes event_start" if end_time < start_time
+        event_dates = %w[event_start event_end].map do |field|
+          value = data.fetch(field).to_s
+          if value.match?(/\A\d{4}-\d{2}-\d{2}\z/)
+            Date.iso8601(value)
+          else
+            unless value.match?(/(?:Z|[+-]\d{2}:\d{2})\z/)
+              errors << "#{relative_path}: #{field} needs a time zone offset"
+            end
+            Time.iso8601(value)
+          end
+        end
+        start_time, end_time = event_dates
+        if start_time.class != end_time.class
+          errors << "#{relative_path}: event_start and event_end must use the same precision"
+        elsif end_time < start_time
+          errors << "#{relative_path}: event_end precedes event_start"
+        end
       rescue ArgumentError
         errors << "#{relative_path}: invalid event_start or event_end"
       end

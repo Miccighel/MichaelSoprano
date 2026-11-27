@@ -3,7 +3,7 @@ title: Information Analysis and Processing for Training (Master's Degree, 2026/2
 subtitle: Science in Preventive and Adapted Physical Activity · University of Udine
 summary: Data quality, relational database design and SQL for sport, with examples from football and road cycling.
 date: '2026-09-28T10:00:00+02:00'
-course_updated: '2026-11-24'
+course_updated: '2026-11-27'
 draft: false
 url: /post/information-analysis-for-training-masters/2026-2027/
 course_parent: /post/information-analysis-for-training-masters/
@@ -19,7 +19,7 @@ I start with a question about training logs: does one row represent an athlete, 
 - **Degree:** Master's Degree in Science in Preventive and Adapted Physical Activity, University of Udine
 - **Course:** *Sistemi di Analisi ed Elaborazione delle Informazioni per l'Allenamento* (MM2542)
 - **Part of the integrated course:** *Discipline Motorie 1*
-- **Instructor:** Michael Soprano
+- **Instructor:** Michael Soprano, also chair of the integrated course
 - **Workload:** 3 CFU, 24 teaching hours
 - **Period:** 5 November to 17 December 2026, first teaching period of the first year
 - **Language:** Italian

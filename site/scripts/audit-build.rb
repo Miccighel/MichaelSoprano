@@ -395,6 +395,35 @@ SECTIONS.each do |section, config|
     data, body = load_page(source_path)
     title = normalized(data['title'])
     candidates = rendered_titles.select { |_path, rendered_title| rendered_title == title }.keys
+    expected_dates = case section
+                     when 'publications'
+                       { 'datePublished' => normalized(data.fetch('date'))[0, 10] }
+                     when 'events'
+                       dates = {
+                         'startDate' => normalized(data.fetch('event_start')),
+                         'endDate' => normalized(data.fetch('event_end'))
+                       }
+                       data['event_all_day'] || data['event_time_unknown'] ? dates.transform_values { |value| value[0, 10] } : dates
+                     end
+    if expected_dates
+      schema_type = section == 'publications' ? 'Article' : 'Event'
+      matches_dates = candidates.any? do |candidate|
+        rendered_html = File.binread(candidate).force_encoding(Encoding::UTF_8)
+        json_ld_documents(rendered_html).any? do |document|
+          next false unless document.is_a?(Hash) && document['@type'] == schema_type
+          next false unless document.slice(*expected_dates.keys) == expected_dates
+
+          section != 'publications' ||
+            metadata_values(rendered_html, 'article:published_time').map { |value| value[0, 10] } == [expected_dates['datePublished']]
+        end
+      rescue JSON::ParserError
+        false # Already reported by the general JSON-LD check.
+      end
+      unless matches_dates
+        errors << "#{source_path.delete_prefix("#{SITE_ROOT}/")}: rendered #{schema_type} dates must match #{expected_dates.inspect}"
+      end
+    end
+
     expected_excerpts = [
       significant_excerpt(body),
       significant_excerpt(data['abstract']),

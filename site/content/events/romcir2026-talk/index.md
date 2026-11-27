@@ -22,8 +22,8 @@ image:
 projects: []
 event_name: The 6th Workshop on Reducing Online Misinformation through Credible Information
   Retrieval
-event_start: '2026-04-02T15:30:00'
-event_end: '2026-04-02T15:50:00'
+event_start: '2026-04-02T15:30:00+02:00'
+event_end: '2026-04-02T15:50:00+02:00'
 event_all_day: false
 links:
 - type: pdf

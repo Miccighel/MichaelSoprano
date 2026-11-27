@@ -16,7 +16,7 @@ experience:
   location: Udine, Italy
   date_start: '2025-06-01'
   description: |-
-    Research contract pursuant to Article 22 of Law 240/2010, under the University Regulation approved on April 30, 2025.
+    Research contract pursuant to Article 22 of Law 240/2010, under the University regulation issued by Rector's Decree no. 308 of 7 May 2025.
     Research on information and disinformation, with a focus on the automatic evaluation of information truthfulness, experimentation with detection models, and the definition of evaluation metrics.
 - title: Self-employed Worker
   company: Department of Economic and Statistical Sciences (DIES), University of Udine
@@ -71,8 +71,8 @@ experience:
   location: Udine, Italy
   date_start: '2017-06-01'
   date_end: '2019-02-25'
-  description: Design, development, and maintenance of several web applications and
-    a chatbot as a full-stack developer.
+  description: Separate freelance assignments designing, developing, and maintaining
+    web applications and a chatbot as a full stack developer.
 - title: Self-employed Worker
   company: Archeido S.r.l.
   company_url: https://archeido.com/

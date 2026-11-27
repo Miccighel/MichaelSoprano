@@ -42,12 +42,16 @@
 
   {{- if or (eq $page.Type "publications") (eq $page.Type "blog") -}}
     {{- $articleType := cond (eq $page.Type "blog") "BlogPosting" "Article" -}}
+    {{- $published := $page.PublishDate.Format "2006-01-02T15:04:05Z07:00" -}}
+    {{- if eq $page.Type "publications" -}}
+      {{- $published = $page.Date.Format "2006-01-02" -}}
+    {{- end -}}
     {{- $article := dict
       "@context" "https://schema.org"
       "@type" $articleType
       "mainEntityOfPage" (dict "@type" "WebPage" "@id" $page.Permalink)
       "headline" $page.Title
-      "datePublished" ($page.PublishDate.Format "2006-01-02T15:04:05Z07:00")
+      "datePublished" $published
       "dateModified" ($page.Lastmod.Format "2006-01-02T15:04:05Z07:00")
       "author" $authorValue
       "publisher" (dict "@type" "Organization" "name" $organization)
@@ -58,13 +62,19 @@
     {{- end -}}
     {{- $documents = $documents | append $article -}}
   {{- else if eq $page.Type "events" -}}
+    {{- $start := string $page.Params.event_start -}}
+    {{- $end := string $page.Params.event_end -}}
+    {{- if or $page.Params.event_all_day $page.Params.event_time_unknown -}}
+      {{- $start = substr $start 0 10 -}}
+      {{- $end = substr $end 0 10 -}}
+    {{- end -}}
     {{- $event := dict
       "@context" "https://schema.org"
       "@type" "Event"
       "mainEntityOfPage" (dict "@type" "WebPage" "@id" $page.Permalink)
       "name" $page.Title
-      "startDate" ($page.Date.Format "2006-01-02T15:04:05Z07:00")
-      "endDate" (($page.Params.date_end | default $page.Date) | time.Format "2006-01-02T15:04:05Z07:00")
+      "startDate" $start
+      "endDate" $end
       "performer" $authorValue
       "description" $summary
     -}}
